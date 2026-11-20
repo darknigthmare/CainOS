@@ -1,0 +1,390 @@
+{
+  "schema": "encore-catalog-canvas-summary/v1",
+  "createdAt": "2026-11-20T10:57:02.839383+00:00",
+  "method": "Production Canvas2D modules executed under native Skia, separately for each appearance.",
+  "counts": {
+    "appearances": 10,
+    "expectedActions": 90,
+    "actions": 90,
+    "stances": 10,
+    "drawChecks": 200,
+    "portraits": 10,
+    "expectedPortraits": 10,
+    "missing": 0
+  },
+  "complete": true,
+  "runs": [
+    {
+      "id": "jaxsuitpomni",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "jaxsuitpomni",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/jaxsuitpomni",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:35.357503+00:00",
+        "endedAt": "2026-11-20T10:56:37.633748+00:00",
+        "elapsedSeconds": 2.276,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/jaxsuitpomni/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/jaxsuitpomni/character-canvas-review.json"
+    },
+    {
+      "id": "noirribbit",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "noirribbit",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/noirribbit",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:37.634286+00:00",
+        "endedAt": "2026-11-20T10:56:39.763207+00:00",
+        "elapsedSeconds": 2.129,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/noirribbit/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/noirribbit/character-canvas-review.json"
+    },
+    {
+      "id": "kaufmosuitribbit",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "kaufmosuitribbit",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/kaufmosuitribbit",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:39.766279+00:00",
+        "endedAt": "2026-11-20T10:56:42.150749+00:00",
+        "elapsedSeconds": 2.385,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/kaufmosuitribbit/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/kaufmosuitribbit/character-canvas-review.json"
+    },
+    {
+      "id": "intermissioncaine",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "intermissioncaine",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/intermissioncaine",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:42.153459+00:00",
+        "endedAt": "2026-11-20T10:56:45.115946+00:00",
+        "elapsedSeconds": 2.963,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/intermissioncaine/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/intermissioncaine/character-canvas-review.json"
+    },
+    {
+      "id": "showtimepomni",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "showtimepomni",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/showtimepomni",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:45.117123+00:00",
+        "endedAt": "2026-11-20T10:56:47.502715+00:00",
+        "elapsedSeconds": 2.386,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/showtimepomni/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/showtimepomni/character-canvas-review.json"
+    },
+    {
+      "id": "bowlingpinragatha",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "bowlingpinragatha",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/bowlingpinragatha",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:47.504369+00:00",
+        "endedAt": "2026-11-20T10:56:49.679658+00:00",
+        "elapsedSeconds": 2.176,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/bowlingpinragatha/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/bowlingpinragatha/character-canvas-review.json"
+    },
+    {
+      "id": "ringmastercaine",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "ringmastercaine",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/ringmastercaine",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:49.686376+00:00",
+        "endedAt": "2026-11-20T10:56:52.010717+00:00",
+        "elapsedSeconds": 2.324,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/ringmastercaine/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/ringmastercaine/character-canvas-review.json"
+    },
+    {
+      "id": "strongmanorbsman",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "strongmanorbsman",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/strongmanorbsman",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:52.014890+00:00",
+        "endedAt": "2026-11-20T10:56:56.744117+00:00",
+        "elapsedSeconds": 4.729,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/strongmanorbsman/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/strongmanorbsman/character-canvas-review.json"
+    },
+    {
+      "id": "stagehandbubble",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "stagehandbubble",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/stagehandbubble",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:56.748001+00:00",
+        "endedAt": "2026-11-20T10:56:59.637172+00:00",
+        "elapsedSeconds": 2.889,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/stagehandbubble/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/stagehandbubble/character-canvas-review.json"
+    },
+    {
+      "id": "bugtamerkinger",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--introduced-on",
+          "2026-11-20",
+          "--appearance",
+          "bugtamerkinger",
+          "--output",
+          "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/review/bugtamerkinger",
+          "--report",
+          "docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T10:56:59.638713+00:00",
+        "endedAt": "2026-11-20T10:57:02.837615+00:00",
+        "elapsedSeconds": 3.199,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-next-20261120/review/bugtamerkinger/render.log"
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-next-20261120/review/bugtamerkinger/character-canvas-review.json"
+    }
+  ],
+  "sources": {
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "tests/combat-costume-additions.test.mjs": "3bcc5f0019273cf6453f50ca3b51c32753f97aa8bfcc5d74893551a4250eb460",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "limitations": [
+    "Not a browser test or frame-by-frame animation review.",
+    "Visual fidelity is reviewed separately against the named merchandise reference."
+  ]
+}

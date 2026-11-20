@@ -1,0 +1,48 @@
+{
+  "id": "abstractingqueenie-jump",
+  "appearanceId": "abstractingqueenie",
+  "introducedOn": "2026-11-20",
+  "slot": "jump",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+  "sourceGenerationId": "exec-38a116e1-f477-496a-b84e-1cf27fb68332",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: jumping evasively. Whole queen chess body lifted in a compact airborne tilt toward screen-right; both small floating hands raised outward for balance, full robe/base floating with a modest natural flare. Preserve solid chess anatomy; no knees, feet, underside limbs, floor or shadow. Generous clear transparent space around the airborne character.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-38a116e1-f477-496a-b84e-1cf27fb68332.png",
+  "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1637961,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    78,
+    40,
+    925,
+    1354
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Reviewed against the approved selection and complete official reference: the complete chess body is airborne with a modest diagonal tilt and lifted hem, both white floating palms raised outward. No legs, feet or underside limbs have been introduced. Viewer-left normal eye, viewer-right crystal half and base eye, burgundy ermine robe and full margins are preserved.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/poses/abstractingqueenie/jump.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+  ]
+}

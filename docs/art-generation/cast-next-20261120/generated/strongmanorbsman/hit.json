@@ -1,0 +1,65 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "strongmanorbsman",
+  "slot": "hit",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:38:07.974065+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the accepted game selection and the strict design lock for proportions, shape, colours, shading and every prop. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: STRONGMAN ORBSMAN from the official Side Show merchandise. One blue-violet character made entirely of connected polished rounded spheres: large head, smaller round torso and pelvis, two arms of spheres ending in two spherical hands without fingers, two legs of spheres ending in rounded feet. Two huge white eyes with black pupils, thick black eyebrows and small mint sweat drops. No mouth, clothing or human musculature. Preserve the official ball topology. One single silver barbell with exactly TWO big red spherical weights, one at each end, carried by the two round hands. Keep the entire bar and both red weights inside the frame. POSE: HIT / REACTION: surprised loss of balance, head and torso lean slightly backward while facing screen RIGHT, both hands hold the barbell close across the waist and feet splay to recover; no impact, injury or effects.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "bytes": 602038
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-624c00de-76c2-4cb1-b9a0-3c44e71e5cac",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-624c00de-76c2-4cb1-b9a0-3c44e71e5cac.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.png",
+  "targetFile": "assets/encore/poses/strongmanorbsman/hit.png",
+  "sha256": "52cef98fbb62e57e13f5ac6c01bcb141f4f94e7ae74ce1f169f8d92085ec5cdd",
+  "bytes": 920170,
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 995826,
+  "alpha12Bounds": [
+    121,
+    57,
+    1069,
+    1263
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Surprised right-facing backward lean with one foot lifted and the other bracing. Barbell is retained close at waist, two round hands and both red weights visible; eyebrow expression changes naturally. No injury, impact effect, new anatomy or clipping."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

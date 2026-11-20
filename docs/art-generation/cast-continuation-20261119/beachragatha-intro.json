@@ -1,0 +1,33 @@
+{
+  "id": "beachragatha-intro",
+  "appearanceId": "beachragatha",
+  "slot": "intro",
+  "file": "assets/encore/poses/beachragatha/intro.png",
+  "sourceGenerationId": "exec-77b44848-1624-49b3-ae26-ab64e6bdc7a2",
+  "method": "image_gen.imagegen",
+  "prompt": "One individual transparent RGBA 2D fighting-game sprite of Swimmer Ragatha. Repose the approved single character in reference1, retaining exact adult cloth-doll proportions, red yarn bob, blue button eye at viewer-left and normal eye at viewer-right, orange triangle nose, beige cloth face and limbs, periwinkle swimsuit top and matching bandana bow with pink flower, bright pink HORSE swim ring worn around waist with white muzzle and purple mane/tail, no horn, rounded bare cloth doll feet and mitten hands. Clean detailed 2D cel shading with dark outlines. Preserve all costume details and the full float in every pose. Complete body including head bow, float, limbs and feet inside generous transparent margins. No scene, floor, shadow, background, water, splashes, glow, aura, lettering, watermark, extra person or separate prop. Pose: entrance gesture facing screen right, taking one gentle step forward, one hand waves near face and the other steadies the swim ring, welcoming smile.",
+  "referencePaths": [
+    "assets/encore/selection/beachragatha.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series"
+  ],
+  "sha256": "c5c1046395836c3d03074ddddb03a53a3b4baf6051d14dcf8b32fa4e3766fe02",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    61,
+    13,
+    904,
+    1502
+  ],
+  "bytes": 1884842,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu. Bouée cheval conservée, sans corne ; deux bras et deux jambes de chiffon."
+}

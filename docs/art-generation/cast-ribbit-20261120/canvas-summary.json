@@ -1,0 +1,110 @@
+{
+  "schema": "encore-ribbit-canvas-summary/v1",
+  "complete": true,
+  "counts": {
+    "appearances": 2,
+    "actions": 18,
+    "stances": 2,
+    "drawChecks": 40,
+    "portraits": 2,
+    "missing": 0
+  },
+  "runs": [
+    {
+      "id": "animeribbit",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--appearance",
+          "animeribbit",
+          "--output",
+          "/workspace/scratch/f726dc7a5ad2/CainOS/docs/art-generation/cast-ribbit-20261120/review/animeribbit",
+          "--report",
+          "docs/COMBAT_RIBBIT_CONTINUATION_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T12:40:03.427064+00:00",
+        "endedAt": "2026-11-20T12:40:06.046746+00:00",
+        "elapsedSeconds": 2.62,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-ribbit-20261120/review/animeribbit/render.log",
+        "sources": {
+          "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+          "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+          "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+          "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+          "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+          "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+          "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+        }
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-ribbit-20261120/review/animeribbit/character-canvas-review.json"
+    },
+    {
+      "id": "jaxsuitribbit",
+      "run": {
+        "command": [
+          "node",
+          "scripts/render-combat-character-review.mjs",
+          "--costume-additions",
+          "--appearance",
+          "jaxsuitribbit",
+          "--output",
+          "/workspace/scratch/f726dc7a5ad2/CainOS/docs/art-generation/cast-ribbit-20261120/review/jaxsuitribbit",
+          "--report",
+          "docs/COMBAT_RIBBIT_CONTINUATION_2026-11-20.md"
+        ],
+        "startedAt": "2026-11-20T12:40:06.051257+00:00",
+        "endedAt": "2026-11-20T12:40:09.105236+00:00",
+        "elapsedSeconds": 3.054,
+        "exitCode": 0,
+        "log": "docs/art-generation/cast-ribbit-20261120/review/jaxsuitribbit/render.log",
+        "sources": {
+          "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+          "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+          "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+          "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+          "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+          "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+          "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+        }
+      },
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "report": "docs/art-generation/cast-ribbit-20261120/review/jaxsuitribbit/character-canvas-review.json"
+    }
+  ],
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+  },
+  "method": "Production Canvas2D renderer under native Skia; no browser interaction."
+}

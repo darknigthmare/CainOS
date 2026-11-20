@@ -135,7 +135,8 @@ try {
   rejected.stats = { matches: 900, wins: 900, losses: 0, bestSurvival: 10, damage: 999999 };
   rejected.program.variantId = 'jaxfather';
   await page.locator('#import-profile').setInputFiles({ name: 'invalid-checkpoint-profile.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(rejected)) });
-  await page.waitForFunction(() => !document.querySelector('#toast').hidden && /apparence/i.test(document.querySelector('#toast').textContent), null, { polling: 50 });
+  const rejectionMessage = 'Le point de reprise ne correspond pas aux résultats du programme.';
+  await page.waitForFunction(message => !document.querySelector('#toast').hidden && document.querySelector('#toast').textContent === message, rejectionMessage, { polling: 50 });
   assert.equal(await page.locator('#confirm-import').count(), 0);
   assert.deepEqual(await profile(), beforeImport);
   assert.deepEqual(await persisted(), storedBeforeImport);

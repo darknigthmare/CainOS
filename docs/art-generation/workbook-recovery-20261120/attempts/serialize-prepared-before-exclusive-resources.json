@@ -1,0 +1,24 @@
+{
+  "phase": "serialize-prepared",
+  "returnCode": -9,
+  "elapsedSeconds": 4.417272364997189,
+  "maximumRSSKiB": 445852,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=176",
+    "--max-semi-space-size=1",
+    "--optimize-for-size",
+    "--no-wasm-tier-up",
+    "--expose-gc",
+    "/tmp/cainos-workbook-recovery-20261120-t60p1y52/builder.mjs",
+    "--repo-root",
+    "/workspace/scratch/5f5114b49696/CainOS",
+    "--output-dir",
+    "/workspace/scratch/5f5114b49696/outputs/encore-workbook-recovery-20261120",
+    "--confirmed-runtime",
+    "--serialize-prepared"
+  ],
+  "environmentOverrides": {
+    "MALLOC_ARENA_MAX": "2"
+  }
+}

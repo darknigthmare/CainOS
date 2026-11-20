@@ -1,0 +1,11 @@
+{
+  "appearanceId": "ptocaine",
+  "slot": "attack",
+  "prompt": "Use case: stylized-concept. Produce ONE new, separate full-body PNG action drawing of PTO Caine for the existing Encore 2D fighting game, with a genuinely transparent background. Reference 1 is the accepted selection illustration: keep its exact identity, standing-game proportions, palette, mint-green sunglasses with yellow translucent lenses, two eye colors under the tint, red denture with white teeth, black top hat and red band, red tailcoat and dark lapels, white shirt front with dark buttons, black bow tie, white cuffed gloves, black trousers and shoes. Reference 2 is the official PTO Caine product, authoritative for the mint/yellow glasses and worn costume only. Use the same crisp dark outlines and polished cel shading as reference 1. Do not copy the original selection pose. ACTION: LIGHT ATTACK: face RIGHT, lunge forward into one clean straight punch with the forward white-gloved fist extended horizontally right, the other glove guarding near the chest, legs in a clear long lunge. Entire fist and both shoes visible. No impact flash or speed lines. Frame the entire single character with clear transparent margins on every side. No chair, glass, cane, beach, ground shadow, oval platform, background, checkerboard, caption, text, watermark, sticker border, duplicate body parts or extra characters. Preserve all native transparency; no glow around the character.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root"
+}

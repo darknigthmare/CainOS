@@ -1,0 +1,62 @@
+{
+  "schema": "encore-recovered-props-integration/v1",
+  "assets": [
+    {
+      "id": "haunted-lamppost",
+      "source": "art/sources/recovered-local-props-20261119/haunted-lamppost.png",
+      "file": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+      "sha256": "643cb5e4ad7e47ff3f4e98b6702d87d82a33ade5a2dde2b1ab6f93557a78315a",
+      "bytes": 1329877,
+      "stageId": "gaslightwharf",
+      "method": "byte-identical copy of recovered native PNG"
+    },
+    {
+      "id": "circus-ticket-dispenser",
+      "source": "art/sources/recovered-local-props-20261119/circus-ticket-dispenser.png",
+      "file": "assets/encore/props/showgrounds/ticket-dispenser.png",
+      "sha256": "7517f5c81ba184da71ee4a89d0629431f7dd6a78dd1dc930ef4776be807ddd61",
+      "bytes": 1189952,
+      "stageId": "showgrounds",
+      "method": "byte-identical copy of recovered native PNG"
+    },
+    {
+      "id": "blue-hologram-pedestal",
+      "source": "art/sources/recovered-local-props-20261119/blue-hologram-pedestal.png",
+      "file": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+      "sha256": "d5728ddf5647786f2c9920ade40fc40de762d1c9a7e4ca9b7c0ed3c34fedc09b",
+      "bytes": 1060878,
+      "stageId": "gameoverse",
+      "method": "byte-identical copy of recovered native PNG"
+    },
+    {
+      "id": "pastel-turnstile",
+      "source": "art/sources/recovered-local-props-20261119/pastel-turnstile.png",
+      "file": "assets/encore/props/parkplanet/garden-turnstile.png",
+      "sha256": "c2dc9947705cab924dfa0180f33bc3012bd9b94c4bbb459b8bccefe6201e4130",
+      "bytes": 983163,
+      "stageId": "parkplanet",
+      "method": "byte-identical copy of recovered native PNG"
+    },
+    {
+      "id": "vintage-brass-microphone",
+      "source": "art/sources/recovered-local-props-20261119/vintage-brass-microphone.png",
+      "file": "assets/encore/props/littledaisy/jazz-microphone.png",
+      "sha256": "ca69aafcdff0395ad7f1daf0974fb54079b579015b2bfec0b7871d57bce050f6",
+      "bytes": 1260782,
+      "stageId": "littledaisy",
+      "method": "byte-identical copy of recovered native PNG"
+    },
+    {
+      "id": "bamboo-bell",
+      "source": "art/sources/recovered-local-props-20261119/bamboo-bell.png",
+      "file": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+      "sha256": "11e58a3c0734a1ee46368fd8630bb97b905bbdcd30492f3a51d77d7a23a9980c",
+      "bytes": 1663958,
+      "stageId": "simpleflipisland",
+      "method": "byte-identical copy of recovered native PNG"
+    }
+  ],
+  "count": 6,
+  "bytes": 7488610,
+  "scope": "Original fan-game props recovered in the previous pass; no new image generation and no canonical episode claim."
+}

@@ -19,16 +19,21 @@ function damage(slot = 'light') {
   return { type: 'damage', frame: 240, actor: 0, target: 1, amount: 300, blocked: false, slot };
 }
 
-test('every playable artist owns a dedicated stage beside the twelve shared series arenas', () => {
+test('every playable artist owns a dedicated arrangement beside the shared and crossover arenas', () => {
   assert.equal(FIGHTERS.length, 54);
-  assert.equal(STAGES.length, 12);
-  assert.equal(sharedStageIds.size, 12);
+  assert.equal(sharedStageIds.size, STAGES.length);
+  for (const id of ['bigtop','candy','manor','spudsy','cellar','void','lake','training','gloink','kingdom','grounds','backstage',
+    'silicacity','portaurora','coppernine','gaslightwharf','parkplanet','gameoverse','littledaisy','showgrounds','simpleflipisland']) {
+    assert.ok(sharedStageIds.has(id), id + ': shared arena retained');
+  }
   for (const stage of STAGES) assert.equal(stage.dedicatedTo, undefined, stage.id);
   assert.equal(DEDICATED_STAGES.length, FIGHTERS.length);
   assert.equal(ALL_STAGES.length, STAGES.length + DEDICATED_STAGES.length);
   assert.equal(new Set(ALL_STAGES.map(stage => stage.id)).size, ALL_STAGES.length);
+  const sourceThemes = {ep1:'bigtop',ep2:'candy',ep3:'manor',ep4:'spudsy',cainos:'lake',adaptation:'training'};
   for (const fighter of FIGHTERS) {
     const stage = getDedicatedStage(fighter.id);
+    assert.equal(stage.theme, sourceThemes[fighter.loreSource] || 'bigtop', fighter.id + ': source episode scenery');
     assert.ok(stage, fighter.id + ': dedicated stage');
     assert.equal(stage.dedicatedTo, fighter.id);
     assert.equal(stage.id, 'home-' + fighter.id);

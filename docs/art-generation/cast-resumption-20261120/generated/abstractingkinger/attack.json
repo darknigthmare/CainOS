@@ -1,0 +1,77 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingkinger",
+  "slot": "attack",
+  "id": "abstractingkinger-attack",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/attack.png",
+  "targetFile": "assets/encore/poses/abstractingkinger/attack.png",
+  "sourceGenerationId": "exec-617728a0-e5a8-4651-8fc8-97563f2b7625",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-617728a0-e5a8-4651-8fc8-97563f2b7625.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING KINGER. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall beige king chess piece with cross crown, one normal bulging blue-iris eye, purple floor-length robe with white black-spotted ermine. Opposing head/crown side is dark angular crystal with large concentric pastel eye and extra embedded eyes; two WHITE FLOATING HANDS with crystal cuffs, asymmetrical crystal robe base. Absolutely no human face, mouth, arms inside sleeves, legs or feet. Preserve exact normal/abstract side pattern. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: FAST ATTACK toward screen RIGHT: chess torso leans forward while one floating white hand thrusts straight forward in a clear palm strike, other hand remains near chest. Robe base trails behind. No projectile, target or effect.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedKinger.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedKinger.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "3bd68b08f964e029caf73fcb9313c93a4f1b340ea02b1cc80c8514fe41541ef7",
+      "bytes": 2854111,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Right-facing forward chess-body lean with a separate white palm thrust ahead and the other hand retained near the torso.",
+      "Tall beige normal side and blue eye, opposing crystal eyes, cross crown and purple ermine robe preserved.",
+      "Exactly two floating white hands with crystal cuffs; no arms, feet, projectile or added object; full crown and base visible."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1378,
+    1142
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    16,
+    12,
+    1353,
+    1133
+  ],
+  "fullyTransparentPixels": 1046612,
+  "sha256": "3e7b75b4c608e8e1a4e1259d3264cd35723fc84909b56ae922f76fb0992c5582",
+  "bytes": 1043693,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:36:39.548505+00:00",
+  "alpha12BoundsThreshold": "alpha >= 12"
+}

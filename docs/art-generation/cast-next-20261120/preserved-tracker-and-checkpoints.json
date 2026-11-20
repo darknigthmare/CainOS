@@ -1,0 +1,42 @@
+{
+  "baseCommit": "6ea3e8041f71789f858ed724ceeb49a3e5efacff",
+  "newWorkbookExportAttempted": false,
+  "files": [
+    {
+      "file": "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+      "sha256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+      "bytes": 751648,
+      "unchanged": true
+    },
+    {
+      "file": "docs/combat-tracker-data.json",
+      "sha256": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+      "bytes": 4426869,
+      "unchanged": true
+    },
+    {
+      "file": "docs/combat-workbook-verification.json",
+      "sha256": "8bf3a4ba676c4e7db7050757a0517b3d461186df6c01d7e65c7f743dddc55b4c",
+      "bytes": 102781,
+      "unchanged": true
+    },
+    {
+      "file": "docs/combat-qa-evidence-0.7.0.json",
+      "sha256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+      "bytes": 588368,
+      "unchanged": true
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+      "sha256": "2ca4585a5e30eba98e9f044e40d637ef38d5a52912c09890efb85d503985cbe9",
+      "bytes": 317320,
+      "unchanged": true
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/generation-completion.json",
+      "sha256": "e37a904483f63c7f36a2363d4cacd1d185f5f9ab42ec88c59c0974609ceea1d1",
+      "bytes": 77160,
+      "unchanged": true
+    }
+  ]
+}

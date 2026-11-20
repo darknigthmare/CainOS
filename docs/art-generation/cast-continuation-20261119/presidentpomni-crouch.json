@@ -1,0 +1,33 @@
+{
+  "id": "presidentpomni-crouch",
+  "appearanceId": "presidentpomni",
+  "slot": "crouch",
+  "file": "assets/encore/poses/presidentpomni/crouch.png",
+  "sourceGenerationId": "exec-c361381e-8157-4acb-8066-008da3ef49ca",
+  "method": "image_gen.imagegen",
+  "prompt": "One individual transparent RGBA 2D fighting-game sprite of President Pomni. Repose the single approved character in reference1, retaining exact muted blue pantsuit/jacket/lapels, white shirt, pale gray tie, white gloves, black rounded shoes, large white face, brown bob, segmented red-and-blue jester hat with yellow band and both pompons, pinwheel eyes and crisp black outline/cel shading. Preserve same head/body proportions and character identity. Entire full body including hat, hands and feet clearly inside transparent margins, no scenery, floor, background, glow, aura, lettering, labels, speed trails, extra figure or props. Pose: deep crouching low guard facing right, both knees deeply bent, one knee close to floor level, torso leaning forward, gloved fists close to chest, alert expression; no floor is drawn.",
+  "referencePaths": [
+    "assets/encore/selection/presidentpomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+  ],
+  "sha256": "3b011540f0da67e611156945e3498db9aeddb953c40d19bd475053ec11cc67ac",
+  "dimensions": [
+    1142,
+    1378
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    109,
+    65,
+    1106,
+    1338
+  ],
+  "bytes": 1129774,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu."
+}

@@ -1,17 +1,21 @@
-import { FIGHTERS, STAGES, ALL_STAGES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, getFighter, getReplayFighter, getStage, getDedicatedStage } from './data.mjs';
+import { CROSSOVER_VISITS, visitCostumes, visitIllustration } from './crossover-visits.mjs';
+import { CROSSOVER_SERIES, CROSSOVER_STYLES, crossoverStylesFor, matchesCostumeFilter } from './crossovers.mjs';
+import { FIGHTERS, STAGES, ALL_STAGES, COSTUMES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, equipCostume as costume, getFighter, getReplayFighter, getStage, getDedicatedStage } from './data.mjs';
 import { getFidelitySources } from './fidelity.mjs';
 import { CombatEngine, FIXED_DT } from './engine.mjs';
 import { CombatRenderer, drawPortrait } from './render.mjs';
+import { archiveSelectionParts, warmCombatPoses } from './illustrations.mjs';
 import { InputController } from './input.mjs';
 import { BINDING_ACTIONS, DEFAULT_BINDINGS, rebindAction, formatBinding, keyLabel } from './bindings.mjs';
-import { createProgram, programEncounter, recordProgramResult, retryProgram } from './progression.mjs';
+import { createProgram, programEncounter, programTournamentRival, recordProgramResult, retryProgram } from './progression.mjs';
 import { STORY_NOTICE, getStoryRoute, getStoryEnding, getStoryBrief, getStoryRival } from './stories.mjs';
 import { createStoryPresentation, stepStoryPresentation, skipStoryPresentation, storyPresentationMarkup, paintStoryPresentation } from './story-presentation.mjs';
-import { TOURNAMENT_NOTICE, getTournamentLore, getTournamentRival } from './tournament-lore.mjs';
+import { TOURNAMENT_NOTICE, getTournamentLore } from './tournament-lore.mjs';
 import { CombatAudio, selectCombatCue } from './audio.mjs';
 import { menuItems, rememberFocus, restoreFocus, moveMenuFocus, navigateKeyboardGroup } from './menu-navigation.mjs';
 import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
 import { selectMatchFinisher, selectMatchFriendship } from './finishers.mjs';
+import { loadFinisherBackdrop } from './render-finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
 import { fighterReadout, fighterMarkers } from './readability.mjs';
@@ -106,7 +110,7 @@ function setScreen(next) {
   screen = next; currentObserver?.disconnect();
   main.classList.toggle('combat-main', next === 'fight');
   document.querySelectorAll('.masthead [data-nav]').forEach(button => {
-    const selected = button.dataset.nav === next || button.dataset.nav === 'home' && ['select','fight','challenges'].includes(next);
+    const selected = button.dataset.nav === next || button.dataset.nav === 'home' && ['select','fight','challenges','visits'].includes(next);
     button.classList.toggle('active', selected);
     if (selected) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current');
   });
@@ -143,11 +147,11 @@ function closeDialog() {
 }
 function title(eyebrow, heading, description='') { return `<div class="page-title"><span class="ticket-label">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(heading)}</h1>${description ? `<p>${escapeHTML(description)}</p>` : ''}</div>`; }
 async function paintPortrait(canvas) {
-  const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
-  // Full combat definitions provide the animated original appearance.
+  const item = COSTUMES.find(f => f.id === canvas.dataset.portrait) || ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
+  // Keep the selected costume's identity when loading its portrait.
   const fighter = FIGHTERS.find(f => f.id === item.id) || item;
   try {
-    if (!await drawPortrait(canvas, fighter)) throw new Error('Portrait indisponible');
+    if (!await drawPortrait(canvas, fighter, { selection: ['select', 'home', 'archives'].includes(screen) })) throw new Error('Portrait indisponible');
   } catch { canvas.setAttribute('aria-label', `${fighter.name} — illustration indisponible`); }
 }
 function portraits() {
@@ -158,14 +162,37 @@ function portraits() {
     nodes.forEach(node => currentObserver.observe(node));
   } else nodes.forEach(load);
 }
-function portraitMarkup(id, className='', width=200, height=230) { return `<canvas class="${className}" width="${width}" height="${height}" data-portrait="${escapeHTML(id)}" role="img" aria-label="${escapeHTML(FIGHTERS.find(f=>f.id===id)?.name || ARCHIVE.find(f=>f.id===id)?.name || id)}"></canvas>`; }
+function portraitMarkup(id, className='', width=200, height=230) { return `<canvas class="${className}" width="${width}" height="${height}" data-portrait="${escapeHTML(id)}" role="img" aria-label="${escapeHTML(FIGHTERS.find(f=>f.id===id)?.name || ARCHIVE.find(f=>f.id===id)?.name || COSTUMES.find(f=>f.id===id)?.name || id)}"></canvas>`; }
+
+function archivePortraitMarkup(item) {
+  const parts = archiveSelectionParts(item.id);
+  if (!parts.length) return portraitMarkup(item.id);
+  return `<div class="archive-portrait-parts">${parts.map(part => `<figure><img src="${escapeHTML(part.src)}" alt="${escapeHTML(part.label)}" width="100" height="180" loading="lazy" decoding="async"><figcaption>${escapeHTML(part.label)}</figcaption></figure>`).join('')}</div>`;
+}
 
 function renderHome() {
   active = null; controls.clear(); setScreen('home');
   main.innerHTML = `${profileRecoveryMarkup()}<section class="hero"><div class="hero-copy"><span class="ticket-label">CAINOS PRÉSENTE · ENTRÉE LIBRE</span><h1>LE SPECTACLE<em>RECOMMENCE.</em></h1><p>Les mêmes visages. De nouvelles rivalités.<br>Entre dans l’arène et invente ton prochain grand numéro.</p><div class="hero-bottom"><button class="primary" data-mode="versus">ENTRER EN SCÈNE &nbsp; ↗</button><div class="hero-stats"><span><b>${FIGHTERS.length}</b>ARTISTES</span><span><b>${STAGES.length}</b>ARÈNES</span><span><b>${MODES.length}</b>MODES</span></div></div></div><div class="hero-poster" aria-label="Pomni contre Jax"><span class="poster-title">THE AMAZING DIGITAL CIRCUS</span><span class="poster-star a" aria-hidden="true">✧</span><span class="poster-star b" aria-hidden="true">✦</span>${portraitMarkup('pomni','poster-art first',300,350)}${portraitMarkup('jax','poster-art second',300,350)}<span class="poster-vs">VS</span><span class="poster-badge">LE GRAND DUEL</span></div></section>
-    ${checkpointBanner()}<section aria-labelledby="modes-title"><div class="section-heading"><h2 id="modes-title">Choisis ton numéro</h2><span>LE RIDEAU NE TOMBE JAMAIS</span></div><div class="modes-grid">${MODES.map(m=>`<button class="mode-card" data-mode="${m.id}"><span class="eyebrow">${m.eyebrow}</span><span class="mode-icon" aria-hidden="true">${m.icon}</span><h3>${m.name}</h3><p>${m.description}</p><span class="card-label">${m.label}</span><span class="mode-arrow" aria-hidden="true">↗</span></button>`).join('')}<div class="mode-card replay-card"><span class="eyebrow">LES ARCHIVES DU SPECTACLE</span><span class="mode-icon" aria-hidden="true">▷</span><h3>Revoir la dernière scène</h3><p>Ton dernier duel enregistré, image par image.</p><div class="replay-actions"><button data-action="last-replay">Revoir</button><button data-action="import-replay">Importer</button><button data-action="export-replay">Exporter</button></div></div></div></section>`;
+    ${checkpointBanner()}<section aria-labelledby="modes-title"><div class="section-heading"><h2 id="modes-title">Choisis ton numéro</h2><button class="secondary" data-action="visits">Escales GLITCH ↗</button></div><div class="modes-grid">${MODES.map(m=>`<button class="mode-card" data-mode="${m.id}"><span class="eyebrow">${m.eyebrow}</span><span class="mode-icon" aria-hidden="true">${m.icon}</span><h3>${m.name}</h3><p>${m.description}</p><span class="card-label">${m.label}</span><span class="mode-arrow" aria-hidden="true">↗</span></button>`).join('')}<div class="mode-card replay-card"><span class="eyebrow">LES ARCHIVES DU SPECTACLE</span><span class="mode-icon" aria-hidden="true">▷</span><h3>Revoir la dernière scène</h3><p>Ton dernier duel enregistré, image par image.</p><div class="replay-actions"><button data-action="last-replay">Revoir</button><button data-action="import-replay">Importer</button><button data-action="export-replay">Exporter</button></div></div></div></section>`;
   portraits();
 }
+function renderVisits(world = CROSSOVER_VISITS[0].world) {
+  const visit = CROSSOVER_VISITS.find(entry => entry.world === world);
+  if (!visit) return;
+  closeDialog(); active = null; controls.clear(); setScreen('visits');
+  const label = id => CROSSOVER_SERIES.find(series => series.id === id).name;
+  const buttons = CROSSOVER_VISITS.map(entry => `<button type="button" class="secondary" data-visit="${entry.world}" aria-pressed="${entry === visit}">${escapeHTML(label(entry.world))}</button>`).join('');
+  const names = visit.fighters.map(id => getFighter(id).name).join(' / ');
+  main.innerHTML = `${title('RENCONTRES INVITÉES', 'Escales GLITCH', 'Choisis une escale et joue son duel pour découvrir l’épilogue.')}<div class="visits-layout"><div class="visits-menu" data-menu-group role="group" aria-label="Choisir un univers">${buttons}</div><section class="visit-card" aria-labelledby="visit-title"><img class="visit-art" src="${visitIllustration(world, 'intro')}" alt="Prologue illustré de ${escapeHTML(visit.title)}"><div class="visit-copy"><span class="eyebrow">${escapeHTML(getStage(visit.stage).name)}</span><h2 id="visit-title">${escapeHTML(visit.title)}</h2><p>${escapeHTML(visit.intro)}</p><p class="small-note">${escapeHTML(names)} · Rencontre originale d’Encore</p><button class="primary" data-play-visit="${world}">Jouer le duel</button></div></section></div>`;
+}
+
+function playVisit(world) {
+  const visit = CROSSOVER_VISITS.find(entry => entry.world === world);
+  if (!visit) return;
+  selection = { ...selection, mode: 'versus', side: 0, fighters: [...visit.fighters], variants: visitCostumes(visit), stage: visit.stage };
+  return startMatch({ mode: 'versus', visit });
+}
+
 function chooseMode(mode) {
   if (!MODES.some(m=>m.id===mode)) return;
   selection.mode = mode; selection.side = 0;
@@ -186,17 +213,42 @@ function renderSelect() {
     <div class="pick-header"><h2>Les artistes</h2><div class="pick-side"><button data-side="0" class="${selection.side===0?'active':''}">JOUEUR 1</button>${single?'':`<button data-side="1" class="${selection.side===1?'active':''}">${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</button>`}</div></div>
     <div class="roster">${FIGHTERS.map(f=>`<button class="fighter-card ${selection.fighters[0]===f.id?'selected':''} ${!single&&selection.fighters[1]===f.id?'rival':''}" data-fighter="${f.id}" aria-label="Choisir ${escapeHTML(f.name)}" aria-pressed="${selection.fighters[selection.side]===f.id}">${portraitMarkup(f.id)}<strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small>${selection.fighters[0]===f.id?'<span class="fighter-chip">J1</span>':!single&&selection.fighters[1]===f.id?'<span class="fighter-chip p2">J2</span>':''}</button>`).join('')}</div>
     <div class="selection-summary">${selectionArtist(0)}<div class="selection-vs" aria-hidden="true">VS</div>${single?`<div class="selection-program"><h3>${selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin'}</h3><p>Une succession de défis préparée par Caine.</p></div>`:selectionArtist(1)}</div>
-    ${selection.mode==='story'?storyLibraryMarkup(selected[0].id):''}<div class="selection-controls"><label class="field"><span>APPARENCE JOUEUR 1</span><select id="variant-0">${variantOptions(0)}</select></label>${single?'':`<label class="field"><span>APPARENCE ${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><select id="variant-1">${variantOptions(1)}</select></label>`}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
-    <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE ${String(i+1).padStart(2,'0')}</span></button>`).join('')}${homeStages.map(stage=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE DÉDIÉE · ${escapeHTML(getFighter(stage.dedicatedTo).name)}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">Les apparences proviennent des archives de CainOS. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
-  new CombatRenderer($('#stage-preview')).render(null,{stage:previewStage,reducedMotion:true});
+    ${selection.mode==='story'?storyLibraryMarkup(selected[0].id):''}<div class="selection-controls">${costumePicker(selected[0], 'variant-0', 'Apparence joueur 1', selection.variants[0])}${single ? '' : costumePicker(selected[1], 'variant-1', selection.mode === 'local' ? 'Apparence joueur 2' : 'Apparence adversaire', selection.variants[1])}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
+    <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>${stage.series ? escapeHTML(CROSSOVER_SERIES.find(series=>series.id===stage.series)?.name || stage.series) : 'SCÈNE '+String(i+1).padStart(2,'0')}</span></button>`).join('')}${homeStages.map(stage=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE DÉDIÉE · ${escapeHTML(getFighter(stage.dedicatedTo).name)}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">La garde-robe réunit les archives de CainOS et les tenues crossover créées pour Encore. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
+  new CombatRenderer($('#stage-preview')).previewStage(previewStage);
   portraits();
 }
-function variantOptions(side) {
-  return `<option value="">Apparence originale</option>` + VARIANTS.filter(v=>v.fighterId===selection.fighters[side]).map(v=>`<option value="${v.id}" ${selection.variants[side]===v.id?'selected':''}>${escapeHTML(v.name)} · archive</option>`).join('');
+const costumeFilters = new Map();
+
+function costumeOptions(fighter, selected, original, filter) {
+  const choices = [{ id: original, name: 'Apparence originale' }, ...COSTUMES.filter(item => item.fighterId === fighter.id)];
+  const visible = choices.filter(item => matchesCostumeFilter(item, filter.series, filter.style));
+  const current = choices.find(item => item.id === selected);
+  const option = item => `<option value="${item.id}" ${item.id === selected ? 'selected' : ''}>${escapeHTML(item.name)}</option>`;
+  const retained = current && !visible.includes(current) ? `<optgroup label="Tenue sélectionnée">${option(current)}</optgroup>` : '';
+  return retained + visible.map(option).join('');
 }
+
+function interpretationOptions(filter) {
+  const names = [['', 'Toutes les interprétations'], ...crossoverStylesFor(filter.series, filter.fighter).map(key => [key, CROSSOVER_STYLES[key]])];
+  return names.map(([value, name]) => `<option value="${value}" ${filter.style === value ? 'selected' : ''}>${escapeHTML(name)}</option>`).join('');
+}
+
+function costumePicker(fighter, id, label, selected, original = '') {
+  const saved = costumeFilters.get(id);
+  const filter = saved?.fighter === fighter.id ? saved : { fighter: fighter.id, series: '', style: '' };
+  costumeFilters.set(id, filter);
+  const option = (value, name, current) => `<option value="${value}" ${current === value ? 'selected' : ''}>${escapeHTML(name)}</option>`;
+  return `<div class="costume-picker" data-costume-picker="${id}" data-owner="${fighter.id}" data-original="${original}">
+    <label class="field"><span>${escapeHTML(label)}</span><select id="${id}">${costumeOptions(fighter, selected, original, filter)}</select></label>
+    <details class="costume-filters" ${filter.series || filter.style ? 'open' : ''}><summary>Filtrer les tenues</summary>
+    <label class="field"><span>Univers</span><select data-costume-filter="series">${option('','Tous les univers',filter.series)}${option('circus','The Amazing Digital Circus',filter.series)}${CROSSOVER_SERIES.map(item => option(item.id,item.name,filter.series)).join('')}</select></label>
+    <label class="field"><span>Interprétation</span><select data-costume-filter="style" ${filter.series === 'circus' ? 'disabled' : ''}>${interpretationOptions(filter)}</select></label></details></div>`;
+}
+
 function selectionArtist(side) {
   const fighter = getFighter(selection.fighters[side]);
-  const appearance = VARIANTS.find(v=>v.id===selection.variants[side] && v.fighterId===fighter.id) || fighter;
+  const appearance = COSTUMES.find(v=>v.id===selection.variants[side] && v.fighterId===fighter.id) || fighter;
   return `<div class="selected-artist" data-selection-artist="${side}" data-appearance-id="${appearance.id}">${portraitMarkup(appearance.id,'selected-portrait',240,280)}<div><span class="eyebrow">${side===0?'JOUEUR 1':selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><h3>${escapeHTML(fighter.name)}</h3><p class="selected-costume">${escapeHTML(appearance===fighter?'Apparence originale':appearance.name)}</p><p>${escapeHTML(fighter.role)} · 10 techniques</p><button class="text-button" data-appearance="${appearance.id}" aria-label="Comparer l’apparence de ${escapeHTML(fighter.name)}">Voir la tenue ↗</button></div></div>`;
 }
 function refreshSelectionArtist(side) {
@@ -208,17 +260,12 @@ function refreshSelectionArtist(side) {
   const target = main.querySelector(`[data-selection-artist="${side}"] canvas`);
   if (target) void paintPortrait(target);
 }
-function costume(fighter, id) {
-  const variant = VARIANTS.find(v=>v.id===id && v.fighterId===fighter.id);
-  return variant ? { ...fighter, sprite:variant.sprite, animation:variant.animation || null, visual:{...fighter.visual,...variant.visual}, costume:id } : fighter;
-}
 async function showAppearance(id, restoreSelect=false) {
-  const variant = VARIANTS.find(v=>v.id===id);
+  const variant = COSTUMES.find(v=>v.id===id);
   const fighter = variant ? getFighter(variant.fighterId) : FIGHTERS.find(f=>f.id===id);
   if (!fighter) return;
   const appearance = variant || fighter;
-  const choices = [fighter,...VARIANTS.filter(v=>v.fighterId===fighter.id)];
-  showDialog(`<span class="ticket-label">LA GARDE-ROBE</span><h2 id="modal-title">Les apparences de ${escapeHTML(fighter.name)}</h2><label class="field wardrobe-field"><span>APPARENCE À COMPARER</span><select id="wardrobe-variant">${choices.map(item=>`<option value="${item.id}" ${item.id===appearance.id?'selected':''}>${escapeHTML(item===fighter?'Apparence originale':item.name)}</option>`).join('')}</select></label><div class="wardrobe-labels"><span>Apparence originale</span><span>${escapeHTML(variant?.name || 'Apparence originale')}</span></div><canvas id="wardrobe-preview" data-appearance-id="${appearance.id}" role="img" aria-label="Comparaison à la même échelle : ${escapeHTML(fighter.name)} et ${escapeHTML(variant?.name || 'son apparence originale')}"></canvas><p id="wardrobe-load" class="small-note" role="status">Préparation des illustrations…</p><p class="small-note">Les deux apparences sont montrées à l’échelle utilisée dans l’arène. Changer de tenue conserve les mêmes techniques.</p>${fidelityDetails(appearance.fidelity,'Repères de cette apparence','costume-fidelity')}${costumeReviewDetails(appearance.fidelity?.assetReview)}<div class="modal-actions"><button class="primary" data-try-appearance="${appearance.id}">Essayer en entraînement</button><button class="secondary" data-action="close-modal">Fermer</button></div>`);
+  showDialog(`<span class="ticket-label">LA GARDE-ROBE</span><h2 id="modal-title">Les apparences de ${escapeHTML(fighter.name)}</h2>${costumePicker(fighter, 'wardrobe-variant', 'Apparence à comparer', appearance.id, fighter.id)}<div class="wardrobe-labels"><span>Apparence originale</span><span>${escapeHTML(variant?.name || 'Apparence originale')}</span></div><canvas id="wardrobe-preview" data-appearance-id="${appearance.id}" role="img" aria-label="Comparaison à la même échelle : ${escapeHTML(fighter.name)} et ${escapeHTML(variant?.name || 'son apparence originale')}"></canvas><p id="wardrobe-load" class="small-note" role="status">Préparation des illustrations…</p><p class="small-note">Les deux apparences sont montrées à l’échelle utilisée dans l’arène. Changer de tenue conserve les mêmes techniques.</p>${fidelityDetails(appearance.fidelity,'Repères de cette apparence','costume-fidelity')}${costumeReviewDetails(appearance.fidelity?.assetReview)}<div class="modal-actions"><button class="primary" data-try-appearance="${appearance.id}">Essayer en entraînement</button><button class="secondary" data-action="close-modal">Fermer</button></div>`);
   modal.classList.add('wardrobe-dialog');
   if (restoreSelect) $('#wardrobe-variant')?.focus({preventScroll:true});
   const target = $('#wardrobe-preview'), message = $('#wardrobe-load');
@@ -253,7 +300,7 @@ async function showFinisherGallery(fighterId, finisherId = '', variantId = '') {
   const choices = FINISHER_CATALOG.filter(item => item.fighterId === base.id);
   const definition = choices.find(item => item.id === finisherId) || choices[0];
   if (!definition) throw new Error('Aucune finale pour cet artiste.');
-  const costumes = VARIANTS.filter(item => item.fighterId === base.id);
+  const costumes = COSTUMES.filter(item => item.fighterId === base.id);
   const selectedCostume = costumes.some(item => item.id === variantId) ? variantId : '';
   const fighter = costume(base, selectedCostume);
   const opponent = FIGHTERS.find(item => item.id !== base.id);
@@ -261,7 +308,7 @@ async function showFinisherGallery(fighterId, finisherId = '', variantId = '') {
   showDialog('<span class="ticket-label">LES FINALES DE SPECTACLE</span><h2 id="modal-title">' + escapeHTML(base.name) + '</h2>' +
     '<p class="small-note">' + escapeHTML(FINISHER_NOTICE) + '</p>' +
     '<div class="finale-choices" aria-label="Choisir une finale">' + choices.map(item => '<button class="secondary" data-finale-id="' + item.id + '" data-finale-artist="' + base.id + '" aria-pressed="' + (item.id === definition.id) + '">' + escapeHTML(item.title) + '</button>').join('') + '</div>' +
-    '<label class="finale-costume">Tenue <select id="finale-costume"><option value="">Apparence originale</option>' + costumes.map(item => '<option value="' + item.id + '"' + (selectedCostume === item.id ? ' selected' : '') + '>' + escapeHTML(item.name) + '</option>').join('') + '</select></label>' +
+    costumePicker(base, 'finale-costume', 'Tenue', selectedCostume) +
     '<canvas id="finale-preview" width="1280" height="720" role="img" aria-label="' + escapeHTML(definition.title + ' — aperçu sans combat ni récompense.') + '"></canvas>' +
     '<div class="finale-reader-copy" aria-live="polite"><h3 id="finale-beat-title">Préparation de la scène…</h3><p id="finale-beat-copy"></p></div>' +
     '<div class="modal-actions"><button class="primary" data-action="finale-toggle">Pause</button><button class="secondary" data-action="finale-replay">Rejouer la scène</button><button class="secondary" data-action="close-modal">Fermer</button></div>', { finale: true });
@@ -284,7 +331,7 @@ function renderArchives() {
   setScreen('archives');
   const matching = ARCHIVE.filter(item=>(`${item.name} ${item.id}`.toLocaleLowerCase('fr').includes(archiveQuery.toLocaleLowerCase('fr'))) && (archiveFilter==='all'||archiveFilter==='playable'&&FIGHTERS.some(f=>f.id===item.id)||archiveFilter==='variant'&&VARIANTS.some(v=>v.id===item.id)||archiveFilter==='archive'&&!FIGHTERS.some(f=>f.id===item.id)&&!VARIANTS.some(v=>v.id===item.id)));
   const pages=Math.max(1,Math.ceil(matching.length/24)); archivePage=Math.min(archivePage,pages-1);
-  main.innerHTML=`${title('LA MÉMOIRE DU CIRQUE','Les archives de CainOS',`${ARCHIVE.length} apparences inventoriées, dont ${FIGHTERS.length} combattants et ${VARIANTS.length} variantes d’apparence. Les fiches d’archive ne deviennent pas automatiquement des combattants.`)}<div class="toolbar"><input type="search" id="archive-search" value="${escapeHTML(archiveQuery)}" placeholder="Chercher un personnage ou une variante…" aria-label="Rechercher dans les archives"><select id="archive-filter" aria-label="Filtrer les archives">${[['all','Toutes les apparences'],['playable','Combattants jouables'],['variant','Costumes de combattants'],['archive','Archives à adapter']].map(([id,name])=>`<option value="${id}" ${archiveFilter===id?'selected':''}>${name}</option>`).join('')}</select><span class="small-note">${matching.length} résultats</span></div><div class="archive-grid">${matching.slice(archivePage*24,archivePage*24+24).map(item=>`<article class="archive-card" data-archive-id="${item.id}">${portraitMarkup(item.id)}<h3>${escapeHTML(item.name)}</h3><p>${escapeHTML(item.provenance)}</p><span class="badge ${FIGHTERS.some(f=>f.id===item.id)?'success':''}">${FIGHTERS.some(f=>f.id===item.id)?'COMBATTANT':VARIANTS.some(v=>v.id===item.id)?'APPARENCE':'ARCHIVE'}</span>${item.baseFighterId?`<button class="text-button archive-appearance" data-appearance="${item.id}" aria-label="Voir ${escapeHTML(item.name)} dans la garde-robe">Voir la tenue ↗</button>`:''}</article>`).join('')||'<p class="empty-state">Aucune apparition ne correspond à cette recherche.</p>'}</div><div class="toolbar"><button class="secondary" data-page="-1" ${archivePage===0?'disabled':''}>← Précédent</button><span class="small-note">Page ${archivePage+1} / ${pages}</span><button class="secondary" data-page="1" ${archivePage===pages-1?'disabled':''}>Suivant →</button></div>`;
+  main.innerHTML=`${title('LA MÉMOIRE DU CIRQUE','Les archives de CainOS',`${ARCHIVE.length} apparences inventoriées, dont ${FIGHTERS.length} combattants et ${VARIANTS.length} variantes d’apparence. Les fiches d’archive ne deviennent pas automatiquement des combattants.`)}<div class="toolbar"><input type="search" id="archive-search" value="${escapeHTML(archiveQuery)}" placeholder="Chercher un personnage ou une variante…" aria-label="Rechercher dans les archives"><select id="archive-filter" aria-label="Filtrer les archives">${[['all','Toutes les apparences'],['playable','Combattants jouables'],['variant','Costumes de combattants'],['archive','Archives à adapter']].map(([id,name])=>`<option value="${id}" ${archiveFilter===id?'selected':''}>${name}</option>`).join('')}</select><span class="small-note">${matching.length} résultats</span></div><div class="archive-grid">${matching.slice(archivePage*24,archivePage*24+24).map(item=>`<article class="archive-card" data-archive-id="${item.id}">${archivePortraitMarkup(item)}<h3>${escapeHTML(item.name)}</h3><p>${escapeHTML(item.provenance)}</p><span class="badge ${FIGHTERS.some(f=>f.id===item.id)?'success':''}">${FIGHTERS.some(f=>f.id===item.id)?'COMBATTANT':VARIANTS.some(v=>v.id===item.id)?'APPARENCE':'ARCHIVE'}</span>${item.baseFighterId?`<button class="text-button archive-appearance" data-appearance="${item.id}" aria-label="Voir ${escapeHTML(item.name)} dans la garde-robe">Voir la tenue ↗</button>`:''}</article>`).join('')||'<p class="empty-state">Aucune apparition ne correspond à cette recherche.</p>'}</div><div class="toolbar"><button class="secondary" data-page="-1" ${archivePage===0?'disabled':''}>← Précédent</button><span class="small-note">Page ${archivePage+1} / ${pages}</span><button class="secondary" data-page="1" ${archivePage===pages-1?'disabled':''}>Suivant →</button></div>`;
   portraits();
 }
 function renderSettings() {
@@ -464,12 +511,13 @@ async function startMatch(options={}) {
   const initialHealth = config?.initialHealth || encounter?.initialHealth || [10000,10000];
   engine.state.fighters.forEach((f,i)=>{f.life=initialHealth[i];});
   if (challenge) engine.setTraining({dummy:challenge.dummy,freeMeter:true,freeResource:true,autoheal:true});
-  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,tournamentPending:mode==='tournament'&&!!run&&run.index===0&&run.results.length===0&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false,finisher:null};
+  active = {engine,fighters,stage,mode,visit:options.visit,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,tournamentPending:mode==='tournament'&&!!run&&run.index===0&&run.results.length===0&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false,finisher:null};
   if (active.storyPending||active.tournamentPending) engine.pause();
   renderFight(); const match = active;
   $('#announcement').innerHTML = '<strong>LE RIDEAU SE LÈVE</strong><span>Préparation des artistes…</span>';
   const load = await active.renderer.preload(fighters,[stage]);
   if (active !== match) return;
+  void warmCombatPoses(fighters, () => active === match);
   active.ready = true; active.announcement = null; accumulator = 0; previousTime = performance.now();
   if (load?.errors?.length) toast('Certaines illustrations sont indisponibles. Le combat reste accessible avec un repère visuel.');
   if (active.storyPending) showStoryScene();
@@ -501,7 +549,7 @@ function renderStoryReader() {
   showDialog(storyPresentationMarkup(presentation,{leaveLabel}),{story:true});
   modal.scrollTop = 0;
   modal.querySelector('.story-actions .primary')?.focus({preventScroll:true});
-  void paintStoryPresentation(modal,presentation.panels[presentation.index]);
+  void paintStoryPresentation(modal,presentation.panels[presentation.index],presentation.fighterId);
 }
 function moveStoryReader(delta) {
   if (!storyReader) return;
@@ -522,17 +570,24 @@ function skipStoryReader() {
   else leaveStoryReader();
 }
 function bracketMarkup(run) {
-  const rivalId = getTournamentRival(run.playerId);
+  const rivalId = programTournamentRival(run);
   const name = id => id ? `${escapeHTML(getFighter(id).name)}${id===rivalId?' <b class="rival-mark">◆</b>':''}` : 'À déterminer';
-  return `<div class="tournament-bracket">${run.tournament.rounds.map(round=>`<section><h3>${escapeHTML(round.label)}</h3>${round.matches.map(match=>`<article class="bracket-match ${match.a===run.playerId||match.b===run.playerId?'player-match':''} ${match.a===rivalId||match.b===rivalId?'rival-match':''}"><span class="${match.winner===match.a?'winner':''}">${name(match.a)}${match.a===run.playerId?' · TOI':''}</span><span class="${match.winner===match.b?'winner':''}">${name(match.b)}${match.b===run.playerId?' · TOI':''}</span><small>${match.method==='simulated'?'Résultat CPU simulé':match.method==='played'?'Duel joué':'Rencontre à venir'}</small></article>`).join('')}</section>`).join('')}</div>${run.tournament.champion?`<p class="bracket-champion">✦ ${name(run.tournament.champion)} remporte la coupe.</p>`:''}`;
+  return `<div class="tournament-bracket">${run.tournament.rounds.map(round=>`<section><h3>${escapeHTML(round.label)}</h3>${round.matches.map(match=>`<article class="bracket-match ${match.a===run.playerId||match.b===run.playerId?'player-match':''} ${rivalId&&(match.a===rivalId||match.b===rivalId)?'rival-match':''}"><span class="${match.winner===match.a?'winner':''}">${name(match.a)}${match.a===run.playerId?' · TOI':''}</span><span class="${match.winner===match.b?'winner':''}">${name(match.b)}${match.b===run.playerId?' · TOI':''}</span><small>${match.method==='simulated'?'Résultat CPU simulé':match.method==='played'?'Duel joué':'Rencontre à venir'}</small></article>`).join('')}</section>`).join('')}</div>${run.tournament.champion?`<p class="bracket-champion">✦ ${name(run.tournament.champion)} remporte la coupe.</p>`:''}`;
 }
 function showTournamentIntro() {
   const run = active?.run;
   if (!run || run.mode !== 'tournament' || run.index !== 0 || run.results.length) return;
   const lore = getTournamentLore(run.playerId);
   if (!lore) return;
+  const rivalId = programTournamentRival(run);
+  const intro = rivalId ? lore.intro : {
+    title: 'La coupe du cirque',
+    summary: 'Le tirage de ce tournoi est conservé. Remporte tes trois rencontres pour gagner la coupe ; les vainqueurs du tableau déterminent tes prochains adversaires.',
+    dialogue: [],
+  };
+  const rivalNote = rivalId ? `${getFighter(rivalId).name} attend dans l’autre moitié du tableau` : 'Les prochains adversaires suivent les résultats du tableau';
   active.engine.pause(); controls.clear();
-  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">${escapeHTML(lore.intro.title)}</h2><p class="story-intro">${escapeHTML(lore.intro.summary)}</p><div class="story-dialogue">${lore.intro.dialogue.map(line=>`<blockquote><strong>${escapeHTML(line.speaker)}</strong><p>${escapeHTML(line.text)}</p></blockquote>`).join('')}</div><p class="small-note">${lore.wins} duels joués · ${escapeHTML(getFighter(lore.rivalId).name)} attend dans l’autre moitié du tableau · ${escapeHTML(TOURNAMENT_NOTICE)}</p><div class="modal-actions"><button class="primary" data-action="resume">ENTRER EN SCÈNE</button><button class="secondary" data-action="bracket">Voir le tableau</button></div>`);
+  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">${escapeHTML(intro.title)}</h2><p class="story-intro">${escapeHTML(intro.summary)}</p>${intro.dialogue.length?`<div class="story-dialogue">${intro.dialogue.map(line=>`<blockquote><strong>${escapeHTML(line.speaker)}</strong><p>${escapeHTML(line.text)}</p></blockquote>`).join('')}</div>`:''}<p class="small-note">${lore.wins} duels joués · ${escapeHTML(rivalNote)} · ${escapeHTML(TOURNAMENT_NOTICE)}</p><div class="modal-actions"><button class="primary" data-action="resume">ENTRER EN SCÈNE</button><button class="secondary" data-action="bracket">Voir le tableau</button></div>`);
 }
 function tournamentEndingMarkup(playerId) {
   const lore = getTournamentLore(playerId);
@@ -550,7 +605,8 @@ function showBracket() {
   if (!active?.run?.tournament) return;
   if (!active.finished) { active.engine.pause(); controls.clear(); }
   const run = active.pendingNext || active.run;
-  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">Le tableau du tournoi</h2><p class="small-note">Tes rencontres se jouent dans l’arène. Les autres résultats sont simulés à partir du tirage du tournoi. Ton rival ◆ est placé dans l’autre moitié du tableau : la coupe passe par lui.</p>${bracketMarkup(run)}<div class="modal-actions"><button class="primary" data-action="${active.finished?'result-screen':'resume'}">${active.finished?'Revenir au résultat':'Reprendre le duel'}</button></div>`);
+  const rivalNote = programTournamentRival(run) ? ' Ton rival ◆ est placé dans l’autre moitié du tableau : la coupe passe par lui.' : '';
+  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">Le tableau du tournoi</h2><p class="small-note">Tes rencontres se jouent dans l’arène. Les autres résultats sont simulés à partir du tirage du tournoi.${rivalNote}</p>${bracketMarkup(run)}<div class="modal-actions"><button class="primary" data-action="${active.finished?'result-screen':'resume'}">${active.finished?'Revenir au résultat':'Reprendre le duel'}</button></div>`);
 }
 
 function updateHUD() {
@@ -637,7 +693,7 @@ function loop(now) {
   else if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished&&phase==='matchOver'))active.presentationElapsed+=dt;
   if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished))active.ambientElapsed+=dt;
   if(active.finished&&!active.replay&&phase==='matchOver'&&!active.resultPresented&&active.presentationElapsed>=(active.finisher&&!profile.settings.reducedMotion&&!reducedMotionPreference.matches?active.finisher.durationFrames/60:2.2))renderMatchResult();
-  active.renderer.render(active.engine.state,{stage:active.stage,finisher:active.finisher&&!active.resultPresented?active.finisher:null,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
+  active.renderer.render(active.engine.state,{stage:active.stage,finisher:active.finisher&&!active.resultPresented?active.finisher:null,finisherBackdrop:active.finisherBackdrop,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
 }
 function storeReplay() {
   if(!active.recordFrames||active.recordFrames>=72000)return false;
@@ -668,7 +724,12 @@ function finishMatch() {
   profile.history = profile.history.slice(0,12); persist(); syncAudio(); sound(won?'win':'lose');
   active.presentationPhase='matchOver'; active.presentationElapsed=0;
   $('.arena-wrap').classList.toggle('finishing',!!active.finisher);
-  if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+(active.finisher.presentation==='friendship'?' — numéro d’amitié.':' — finale de spectacle.')+' Le résultat du duel est déjà enregistré.');
+  if (active.finisher) {
+    const match = active;
+    $('#arena').setAttribute('aria-label', match.finisher.title+(match.finisher.presentation==='friendship'?' — numéro d’amitié.':' — finale de spectacle.')+' Le résultat du duel est déjà enregistré.');
+    // The result and skip button remain available while the illustrated set loads.
+    void loadFinisherBackdrop(match.finisher).then(backdrop => { if (active === match && !match.resultPresented) match.finisherBackdrop = backdrop; });
+  }
   const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-stage').append(skip); skip.focus({preventScroll:true});
 }
 function renderMatchResult() {
@@ -680,12 +741,14 @@ function renderMatchResult() {
     active.storyEndingPresented = true;
     openStoryReader(run.playerId,'epilogue','result'); return;
   }
+  const visit = active.visit;
+  const visitEnding = visit && won ? `<section class="visit-result" aria-label="Épilogue de l’escale"><img class="visit-art" src="${visitIllustration(visit.world, 'ending')}" alt="Épilogue illustré de ${escapeHTML(visit.title)}"><h3>${escapeHTML(visit.title)} · Épilogue</h3><p>${escapeHTML(visit.ending)}</p></section>` : '';
   const titleText = active.mode==='local' ? (active.engine.state.winner>=0?`${active.fighters[active.engine.state.winner].name} remporte le duel`:'Le duel se termine sur une égalité') : won ? 'Le public en redemande.' : 'Un autre numéro t’attend.';
   const ending = completed && active.mode==='story' ? `<section class="story-ending"><h3>Épilogue · ${escapeHTML(getStoryRoute(run.playerId).title)}</h3><p>${escapeHTML(getStoryEnding(run.playerId))}</p><span class="small-note">${escapeHTML(STORY_NOTICE)}</span><button class="secondary" data-action="story-ending-result">Relire les trois tableaux</button></section>` : completed && active.mode==='tournament' ? tournamentEndingMarkup(run.playerId) : '';
   showDialog(`<span class="ticket-label">${won?'RAPPEL !':'FIN DE L’ACTE'}</span><h2 id="modal-title">${escapeHTML(titleText)}</h2>
     <p class="result-copy">${run?`${run.index+1}/${run.opponents.length} rencontres. `:''}${continuing?'La prochaine scène est prête et sauvegardée.':completed?'Le programme est terminé. Une médaille a été ajoutée au profil.':run&&['tournament','survival'].includes(active.mode)?'Ce parcours est terminé. Rejouer démarre une nouvelle tentative.':active.replaySaved?'Le duel a été enregistré dans les replays locaux.':'Le duel est terminé. Son replay n’a pas pu être conservé.'}${continuing&&active.mode==='survival'?` Santé au prochain duel : ${number(next.health)}.`:''}</p>
-    ${resultStats(active.stats[0])}${ending}
-    <div class="modal-actions">${continuing?'<button class="primary" data-action="next-fight">SCÈNE SUIVANTE ↗</button>':'<button class="primary" data-action="rematch">REJOUER</button>'}${run?.tournament?'<button class="secondary" data-action="bracket">Voir le tableau</button>':''}<button class="secondary" data-action="select-again">Changer d’affiche</button><button class="secondary" data-action="home">Accueil</button></div>`);
+    ${resultStats(active.stats[0])}${ending}${visitEnding}
+    <div class="modal-actions">${continuing?'<button class="primary" data-action="next-fight">SCÈNE SUIVANTE ↗</button>':'<button class="primary" data-action="rematch">REJOUER</button>'}${run?.tournament?'<button class="secondary" data-action="bracket">Voir le tableau</button>':''}${visit ? '<button class="secondary" data-action="visits">Autres escales</button>' : ''}<button class="secondary" data-action="select-again">Changer d’affiche</button><button class="secondary" data-action="home">Accueil</button></div>`);
 }
 
 function resultStats(stat){return `<div class="result-stats"><div><b>${number(stat.damage)}</b>DÉGÂTS</div><div><b>${stat.hits}</b>IMPACTS</div><div><b>${stat.combo}</b>MEILLEUR COMBO</div></div>`;}
@@ -762,6 +825,8 @@ async function handleClick(event){
     if(button.dataset.bindAction){captureBinding(button);return;}
     if(button.dataset.nav){navigate(button.dataset.nav);return;}
     if(button.dataset.leave){completeNavigation(button.dataset.leave);return;}
+    if(button.dataset.visit){renderVisits(button.dataset.visit);return;}
+    if(button.dataset.playVisit){await playVisit(button.dataset.playVisit);return;}
     if(button.dataset.mode){chooseMode(button.dataset.mode);return;}
     if(button.dataset.challenge){selection.challenge=button.dataset.challenge;selection.mode='challenge';selection.side=0;renderSelect();return;}
     if(button.dataset.side){selection.side=Number(button.dataset.side);renderSelect();return;}
@@ -774,7 +839,7 @@ async function handleClick(event){
     if(button.dataset.page){archivePage+=Number(button.dataset.page);renderArchives();return;}
     if(button.dataset.appearance){await showAppearance(button.dataset.appearance);return;}
     if(button.dataset.tryAppearance){
-      const variant=VARIANTS.find(v=>v.id===button.dataset.tryAppearance);
+      const variant=COSTUMES.find(v=>v.id===button.dataset.tryAppearance);
       const fighter=variant?getFighter(variant.fighterId):FIGHTERS.find(f=>f.id===button.dataset.tryAppearance);
       if(!fighter)return;
       selection.fighters[0]=fighter.id;selection.variants[0]=variant?.id||'';selection.mode='training';selection.side=0;
@@ -783,6 +848,7 @@ async function handleClick(event){
     switch(button.dataset.action){
       case 'finale-toggle':finisherGallery?.toggle();break;
       case 'finale-replay':finisherGallery?.replay();break;
+      case 'visits':renderVisits(active?.visit?.world);break;
       case 'start':await requestStart();break;
       case 'start-new':await startMatch();break;
       case 'resume-program':if(profile.program)await startMatch({mode:profile.program.mode,run:profile.program});break;
@@ -812,7 +878,7 @@ async function handleClick(event){
       case 'home':closeDialog();renderHome();break;
       case 'select-again':closeDialog();active=null;renderSelect();break;
       case 'challenges':closeDialog();active=null;renderChallenges();break;
-      case 'rematch':{const run=active.pendingNext?.status==='eliminated'?retryProgram(active.pendingNext):null;await startMatch({mode:active.mode,run});break;}
+      case 'rematch':{const run=active.pendingNext?.status==='eliminated'?retryProgram(active.pendingNext):null;await startMatch({mode:active.mode,run,visit:active.visit});break;}
       case 'next-fight':if(active.pendingNext?.status==='active')await startMatch({mode:active.mode,run:active.pendingNext});break;
       case 'reset-training':resetTraining();break;
       case 'training-freeze':if(active?.training){active.training.setFrozen(!active.training.frozen);active.engine.pause(active.training.frozen);accumulator=0;controls.clear();updateTrainingHUD();syncAudio();}break;
@@ -863,6 +929,20 @@ document.addEventListener('keydown',event=>{
 document.addEventListener('change',event=>{
   const target=event.target;
   if(target.dataset.setting){const key=target.dataset.setting;const value=target.type==='checkbox'?target.checked:['seconds','rounds','volume','musicVolume','ambienceVolume'].includes(key)?Number(target.value):target.value;profile.settings=cleanSettings({...profile.settings,[key]:value});persist();applySettings();if(key==='layout'){renderSettings();$('[data-setting="layout"]').focus();}return;}
+  if (target.dataset.costumeFilter) {
+    const picker = target.closest('[data-costume-picker]');
+    const id = picker.dataset.costumePicker, select = picker.querySelector('#' + id);
+    const filter = costumeFilters.get(id);
+    filter[target.dataset.costumeFilter] = target.value;
+    const style = picker.querySelector('[data-costume-filter="style"]');
+    style.disabled = filter.series === 'circus';
+    if (target.dataset.costumeFilter === 'series') {
+      if (!crossoverStylesFor(filter.series, filter.fighter).includes(filter.style)) filter.style = '';
+      style.innerHTML = interpretationOptions(filter);
+    }
+    select.innerHTML = costumeOptions(getFighter(picker.dataset.owner), select.value, picker.dataset.original, filter);
+    return;
+  }
   if(target.id.startsWith('variant-')){const side=Number(target.id.at(-1));selection.variants[side]=target.value;refreshSelectionArtist(side);}
   if(target.id==='finale-costume'&&finisherGallery){const entry=finisherGallery.entry;void showFinisherGallery(entry.fighterId,entry.id,target.value).catch(error=>toast(error.message));return;}
   if(target.id==='wardrobe-variant'){void showAppearance(target.value,true).catch(()=>toast('Cette apparence ne peut pas être affichée.'));return;}

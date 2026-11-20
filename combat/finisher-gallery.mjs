@@ -1,5 +1,7 @@
 import { CombatEngine, ENGINE_RULES_VERSION } from './engine.mjs';
 import { CombatRenderer } from './render.mjs';
+import { loadFighterIllustration } from './illustrations.mjs';
+import { loadFinisherBackdrop } from './render-finishers.mjs';
 import { sampleFinisherPresentation } from './finishers.mjs';
 
 /** A separate non-playing scene: never receives the active match or a profile. */
@@ -17,8 +19,16 @@ export class FinisherGallery {
     this.lastSignature = ''; this.lastDraw = '';
   }
   async prepare() {
-    const result = await this.renderer.preload(this.fighters, [this.stage]);
+    const [result, backdrop] = await Promise.all([
+      this.renderer.preload(this.fighters),
+      loadFinisherBackdrop(this.entry),
+      loadFighterIllustration('poses', this.fighters[0], 'victory'),
+      loadFighterIllustration('poses', this.fighters[1], 'defeat'),
+    ]);
     if (this.disposed) return result;
+    if (!backdrop) await this.renderer.preload([], [this.stage]);
+    if (this.disposed) return result;
+    this.backdrop = backdrop;
     this.ready = true; this.previous = null;
     return result;
   }
@@ -54,7 +64,7 @@ export class FinisherGallery {
     }
     const drawSignature = [Math.floor(this.frame), !!reducedMotion].join(':');
     if (this.lastDraw !== drawSignature) {
-      this.renderer.render(this.state, { stage: this.stage, finisher: this.entry, presentationFrame: this.frame, ambientFrame: 0, reducedMotion });
+      this.renderer.render(this.state, { stage: this.stage, finisher: this.entry, finisherBackdrop: this.backdrop, presentationFrame: this.frame, ambientFrame: 0, reducedMotion });
       this.lastDraw = drawSignature;
     }
   }

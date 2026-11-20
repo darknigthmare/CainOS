@@ -1,0 +1,221 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T12:40:06.810Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": null,
+  "appearanceId": "jaxsuitribbit",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1",
+    "scripts/render-combat-character-review.mjs": "bfc9872f4a7cc4ea099280eebb087385d5cb9fd24c113c6ddee9eb88fbd20754"
+  },
+  "actions": [
+    {
+      "id": "jaxsuitribbit",
+      "pose": "intro",
+      "file": "assets/encore/poses/jaxsuitribbit/intro.png",
+      "sha256": "53d6d7de00d4dc280b114994c92416c32865b3cee57795b31cb33009dbe8c2d6",
+      "bytes": 1527810,
+      "visibleBounds": {
+        "x": 49,
+        "y": 14,
+        "width": 336,
+        "height": 615
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "attack",
+      "file": "assets/encore/poses/jaxsuitribbit/attack.png",
+      "sha256": "cbb158de826e07c094cfaa0b10d62e36cdbc72789a3a2efabd2651f599c2faef",
+      "bytes": 1313447,
+      "visibleBounds": {
+        "x": 144,
+        "y": 9,
+        "width": 351,
+        "height": 412
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "hit",
+      "file": "assets/encore/poses/jaxsuitribbit/hit.png",
+      "sha256": "000e8a444c8410990062be8ab55592fd96014e2b8fca98020e003d7cde2bcf6b",
+      "bytes": 757260,
+      "visibleBounds": {
+        "x": 87,
+        "y": 28,
+        "width": 359,
+        "height": 596
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "walk",
+      "file": "assets/encore/poses/jaxsuitribbit/walk.png",
+      "sha256": "39a95be67a703a669314975d707b8dcfb4de7f5a95df66fe2ad783d5809974e6",
+      "bytes": 755965,
+      "visibleBounds": {
+        "x": 103,
+        "y": 16,
+        "width": 388,
+        "height": 609
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "jump",
+      "file": "assets/encore/poses/jaxsuitribbit/jump.png",
+      "sha256": "64bada3b7a3bd9cc242b7b9e7f2f5f56019a05a09e0f15ab00e49026fe29bd09",
+      "bytes": 762207,
+      "visibleBounds": {
+        "x": 61,
+        "y": 12,
+        "width": 451,
+        "height": 618
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "crouch",
+      "file": "assets/encore/poses/jaxsuitribbit/crouch.png",
+      "sha256": "e1c91767578431812cbcade9eba732e8b04806f40593cfcb7a07444b0fe816a6",
+      "bytes": 916157,
+      "visibleBounds": {
+        "x": 75,
+        "y": 28,
+        "width": 449,
+        "height": 591
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "victory",
+      "file": "assets/encore/poses/jaxsuitribbit/victory.png",
+      "sha256": "338bfe7c63943e51e0688a8e1724c9bf498ebbc97f4c568a52b13fce67abd103",
+      "bytes": 778772,
+      "visibleBounds": {
+        "x": 97,
+        "y": 6,
+        "width": 350,
+        "height": 628
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "defeat",
+      "file": "assets/encore/poses/jaxsuitribbit/defeat.png",
+      "sha256": "7b4249e4e8f2e9bf94617e4c9e44028c9f9baf28f20c87421b41dddd08f415df",
+      "bytes": 843919,
+      "visibleBounds": {
+        "x": 86,
+        "y": 31,
+        "width": 423,
+        "height": 585
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitribbit",
+      "pose": "heavy",
+      "file": "assets/encore/poses/jaxsuitribbit/heavy.png",
+      "sha256": "c9163abcd105483c0a3dd6a5b6956375548d2fd98372260fe7fe9961e802dd72",
+      "bytes": 1457490,
+      "visibleBounds": {
+        "x": 37,
+        "y": 8,
+        "width": 530,
+        "height": 413
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "jaxsuitribbit",
+      "file": "assets/encore/stance/jaxsuitribbit.png",
+      "sha256": "90c39f39629cdf4fe037cf97ca66cce3e189c91c1e879e02661955cba65bc0ff",
+      "bytes": 720809,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "jaxsuitribbit",
+      "archiveId": null,
+      "file": "assets/encore/selection/jaxsuitribbit.png",
+      "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+      "bytes": 1485535,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-jaxsuitribbit.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

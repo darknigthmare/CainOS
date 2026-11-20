@@ -1,0 +1,38 @@
+{
+  "id": "bodyguardzooble-walk",
+  "appearanceId": "bodyguardzooble",
+  "slot": "walk",
+  "file": "assets/encore/poses/bodyguardzooble/walk.png",
+  "sourceGenerationId": "exec-63827051-c08b-4c2b-8200-8ff199cd529a",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-692bea6b-54c6-4a30-a80e-3cf256646f85.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Correct ONLY the two arms in image 1, the walking sprite. Image 2 is the anatomical reference. Image 1 mistakenly swapped the arm shoulder attachments. Restore the yellow articulated rod arm with yellow elbow and yellow hand to the LEFT edge of the torso in the image; restore the green spring upper arm, pink spherical elbow, pink-white striped lower rod and green C-claw to the RIGHT edge of the torso. Show the left yellow hand on the left of the torso and the right green C-claw on its right; keep this simple and readable without crossing the torso. Do NOT change the walking legs, body, head, sunglasses, antennas, wing, chest triangle, proportions or 2D art. One full character, all tips visible. Genuine transparent RGBA background; no glow, scene, shadow, text or extra body parts. Preserve all anatomy except correcting the arm sides.",
+  "sha256": "8e0368aac2e159f8871c4d45eb7e7abda4abb0c172fa194192eaba0fcadc3e2f",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    90,
+    10,
+    963,
+    1466
+  ],
+  "bytes": 1523656,
+  "visualReview": "Targeted arm-side correction inspected; yellow arm restored to image left, green spring/pincer arm to image right. Whole walking silhouette preserved.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

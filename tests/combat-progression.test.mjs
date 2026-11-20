@@ -6,7 +6,7 @@ import { STORY_NOTICE, STORY_ROUTES, getStoryRoute, getStoryScene, getStoryEndin
 import { getTournamentRival } from '../combat/tournament-lore.mjs';
 import {
   PROGRAM_KEY, PROGRAM_MODES, SURVIVAL_RECOVERY,
-  createProgram, programEncounter, recordProgramResult, validateProgram,
+  createProgram, programEncounter, programTournamentRival, recordProgramResult, validateProgram,
   retryProgram, readProgram, saveProgram,
 } from '../combat/progression.mjs';
 
@@ -222,6 +222,8 @@ test('each tournament seeds the authored rival in the opposite half and reaches 
     for (const seed of [0, 1, 7, 20261022, 4294967295]) {
       const initial = make('tournament', fighter.id, { seed });
       const participants = initial.tournament.participants;
+      assert.equal(programTournamentRival(initial), rivalId);
+      assert.equal(programTournamentRival(clone(initial)), rivalId, 'JSON reload recovers the authored rival rule');
       assert.notEqual(participants.indexOf(fighter.id) < 4, participants.indexOf(rivalId) < 4, `${fighter.id}/${seed}: rival half`);
       let run = initial;
       const beaten = [];
@@ -236,6 +238,25 @@ test('each tournament seeds the authored rival in the opposite half and reaches 
     }
   }
   assert.equal(getTournamentRival('missing'), null);
+});
+
+test('a restricted tournament catalog never draws a rival outside its available fighters', () => {
+  const available = FIGHTERS.filter(fighter => fighter.id !== 'jax').slice(0, 8);
+  const availableIds = available.map(fighter => fighter.id).sort();
+  assert.equal(getTournamentRival('pomni'), 'jax');
+  for (const roster of [available, available.map(fighter => fighter.id)]) {
+    let run = createProgram('tournament', 'pomni', roster, STAGES, { seed: 19 });
+    assert.deepEqual([...run.tournament.participants].sort(), availableIds);
+    assert.equal(programTournamentRival(run), null);
+    for (let round = 0; round < 3; round++) {
+      run = validateProgram(clone(run), roster, STAGES);
+      assert.equal(programTournamentRival(run), null);
+      assert.ok(availableIds.includes(programEncounter(run).opponentId));
+      run = recordProgramResult(run, { won: true, health: 7000 }, roster, STAGES);
+    }
+    assert.equal(run.tournament.champion, 'pomni');
+    assert.deepEqual(validateProgram(clone(run), roster, STAGES), run);
+  }
 });
 
 test('a loss in any tournament round eliminates the player and labels every remaining CPU result as simulated', () => {

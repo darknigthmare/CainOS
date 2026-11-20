@@ -1,0 +1,43 @@
+{
+  "id": "abstractingjax-selection",
+  "appearanceId": "abstractingjax",
+  "slot": "selection",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+  "sourceGenerationId": "exec-77d73efc-58e1-43eb-a66a-1ae53bc7104f",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING JAX from The Amazing Digital Circus. Reference 1 is the strict official partial-abstraction design. Reference 2 is the game style and lanky adult cartoon body proportion reference. Keep Jax tall and thin with long limbs and two very long ears, NOT a squat toy. Smooth purple rabbit body and pink overalls with yellow buttons remain partly visible; one normal yellow eye with black rectangular pupil, one yellow glove, and one broad purple rabbit foot remain. The viewer-right half of the head and very long ear is an irregular dark angular crystal mass containing flat concentric pastel yellow/pink/cyan eyes; additional growths cross one arm, the side of the body and one lower leg/foot, matching the official asymmetry. Preserve normal face half and overalls between black crystal patches. This is partial abstraction, not a fully black monster. Pose: uneasy but composed standing selection pose, body slightly turned toward screen RIGHT, normal hand near the overall bib, transformed arm loosely lowered, feet planted apart. Face keeps restrained small mouth. Full figure with both long ear tips, every eye-bearing spike, hands and feet completely inside canvas and 8 percent clear transparent margins. Crisp dark outlines, controlled cel shading consistent with reference 2. One character on true transparent RGBA. No photographic toy material, display base, scenery, floor, cast shadow, glow, effects, letters or watermark.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/jax.webp"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-77d73efc-58e1-43eb-a66a-1ae53bc7104f.png",
+  "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1405678,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    194,
+    15,
+    791,
+    1509
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "One complete tall lanky Jax; one normal purple ear and one elongated angular black crystal ear. Pink overalls, normal yellow eye/black rectangular pupil, one yellow glove and purple foot preserved; opposing face/arm/leg contain concentric pastel eyes. Full figure and spikes within native transparent margins. Partial abstraction differs from existing fully abstracted archive Jax. Selection pose approved; native alpha checked.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/selection/abstractingjax.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

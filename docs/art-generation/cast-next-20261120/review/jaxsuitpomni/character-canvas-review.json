@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:36.122Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "jaxsuitpomni",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "jaxsuitpomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/jaxsuitpomni/intro.png",
+      "sha256": "b9e304f112d63787fe86306a79968cd9d9abc047cd0307f01246d6afaef8891b",
+      "bytes": 995201,
+      "visibleBounds": {
+        "x": 25,
+        "y": 9,
+        "width": 318,
+        "height": 625
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/jaxsuitpomni/attack.png",
+      "sha256": "f6389b18ddf61d4807b1632faaade3470e891be7602b288dbca5e51ef1629307",
+      "bytes": 1385718,
+      "visibleBounds": {
+        "x": 91,
+        "y": 3,
+        "width": 439,
+        "height": 420
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/jaxsuitpomni/hit.png",
+      "sha256": "9232ef394885124ae4be51810aa712363c8b331b3518732e4e25e0f34751caa3",
+      "bytes": 985431,
+      "visibleBounds": {
+        "x": 52,
+        "y": 4,
+        "width": 273,
+        "height": 634
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/jaxsuitpomni/walk.png",
+      "sha256": "a1f21e7a09273340c0fb458a92a8d11fe364688bf5927e5630f02dac98ef693e",
+      "bytes": 856379,
+      "visibleBounds": {
+        "x": 79,
+        "y": 4,
+        "width": 359,
+        "height": 629
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/jaxsuitpomni/jump.png",
+      "sha256": "7f6ddda1139bacfbca9dcd29f2d59b20b1617554d10bda430ecb1f3ee8dcd1fa",
+      "bytes": 1011058,
+      "visibleBounds": {
+        "x": 34,
+        "y": 10,
+        "width": 401,
+        "height": 621
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/jaxsuitpomni/crouch.png",
+      "sha256": "601c6af1d7bb583c7d323b435852f39b092258508850ca983c171dca210e482b",
+      "bytes": 1194779,
+      "visibleBounds": {
+        "x": 38,
+        "y": 8,
+        "width": 457,
+        "height": 626
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/jaxsuitpomni/victory.png",
+      "sha256": "310aa01b647b4bf10750a9884fb915dbce90e0fcfac2e6b122a25f8b332b10bf",
+      "bytes": 939039,
+      "visibleBounds": {
+        "x": 52,
+        "y": 4,
+        "width": 305,
+        "height": 632
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/jaxsuitpomni/defeat.png",
+      "sha256": "275824da8abf27b8487c69cd141080d8efac37732a5a0bcf25af0694d31ea780",
+      "bytes": 1098260,
+      "visibleBounds": {
+        "x": 33,
+        "y": 30,
+        "width": 490,
+        "height": 594
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "jaxsuitpomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/jaxsuitpomni/heavy.png",
+      "sha256": "e6da33491c9140568f1a0594cb608d7a798f8d063267e5afd021b3ea84652c5c",
+      "bytes": 787731,
+      "visibleBounds": {
+        "x": 15,
+        "y": 5,
+        "width": 543,
+        "height": 628
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "jaxsuitpomni",
+      "file": "assets/encore/stance/jaxsuitpomni.png",
+      "sha256": "87721dfd7999af3b5d6d564135db0d9d26fcbf641b1514481e8e656ce1812fd4",
+      "bytes": 907265,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "jaxsuitpomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/jaxsuitpomni.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-jaxsuitpomni.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

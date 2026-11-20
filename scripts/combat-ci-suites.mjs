@@ -1,6 +1,10 @@
 /** The browser coverage required by Encore's collector and workbook publisher. */
 export const BROWSER_SUITES = Object.freeze([
   ['tests/combat-browser.mjs', 'audit-combat/browser-report.json'],
+  ['tests/combat-merge-browser.mjs', 'audit-combat/merge-2026-11-19/browser-report.json'],
+  ['tests/combat-crossovers-browser.mjs', 'audit-combat/crossovers/browser-report.json'],
+  ['tests/combat-action-art-browser.mjs', 'audit-combat/action-art/browser-report.json'],
+  ['tests/combat-stage-art-browser.mjs', 'audit-combat/stage-art/browser-report.json'],
   ['tests/combat-finishers-browser.mjs', 'audit-combat/finishers-0.7.0/browser-report.json'],
   ['tests/combat-audio-ambiences-browser.mjs', 'audit-combat/audio-ambiences-0.7.0/browser-report.json'],
   ['tests/combat-training-browser.mjs', 'audit-combat/training-browser-report.json'],
@@ -10,6 +14,7 @@ export const BROWSER_SUITES = Object.freeze([
   ['tests/combat-progression-browser.mjs', 'audit-combat/progression-browser-report.json'],
   ['tests/combat-progression-browser.mjs', 'audit-combat/storage-browser-report.json', { COMBAT_TEST_SCOPE: 'storage' }, 'storage'],
   ['tests/combat-story-presentation-browser.mjs', 'audit-combat/story-presentation-browser-report.json'],
+  ['tests/combat-visits-browser.mjs', 'audit-combat/visits/browser-report.json'],
   ['tests/combat-roster-browser.mjs', 'audit-combat/roster-browser-report.json'],
   ['tests/combat-reduced-motion-browser.mjs', 'audit-combat/reduced-motion-browser-report.json'],
   ['tests/combat-offline-browser.mjs', 'audit-combat/offline-browser-report.json'],

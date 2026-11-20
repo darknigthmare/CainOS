@@ -1,0 +1,222 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T13:48:32.336Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": null,
+  "appearanceId": "aquablasterpomni",
+  "sources": {
+    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
+    "combat/costume-additions.mjs": "d1d9c194b316efca6db2f1833c94d820dfdf0b1f028ede091a40a411a6a0619f",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "1bf5bbefabaa9330622a0eead66ece112889a0e1c354d902c977ea6f7abbdb56",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585",
+    "scripts/render-combat-character-review.mjs": "c862d5d36aa0ce9b9cce4b3ad1bf722aa6a4bd0a5f19beaca699f6f4a7ef0468"
+  },
+  "actions": [
+    {
+      "id": "aquablasterpomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/aquablasterpomni/intro.png",
+      "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
+      "bytes": 1544535,
+      "visibleBounds": {
+        "x": 49,
+        "y": 26,
+        "width": 326,
+        "height": 583
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/aquablasterpomni/attack.png",
+      "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
+      "bytes": 772786,
+      "visibleBounds": {
+        "x": 75,
+        "y": 36,
+        "width": 490,
+        "height": 521
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/aquablasterpomni/hit.png",
+      "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
+      "bytes": 1512821,
+      "visibleBounds": {
+        "x": 29,
+        "y": 55,
+        "width": 337,
+        "height": 549
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/aquablasterpomni/walk.png",
+      "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
+      "bytes": 718965,
+      "visibleBounds": {
+        "x": 126,
+        "y": 34,
+        "width": 344,
+        "height": 577
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/aquablasterpomni/jump.png",
+      "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
+      "bytes": 1469970,
+      "visibleBounds": {
+        "x": 49,
+        "y": 46,
+        "width": 327,
+        "height": 505
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/aquablasterpomni/crouch.png",
+      "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
+      "bytes": 905643,
+      "visibleBounds": {
+        "x": 75,
+        "y": 61,
+        "width": 437,
+        "height": 549
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/aquablasterpomni/victory.png",
+      "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
+      "bytes": 1512530,
+      "visibleBounds": {
+        "x": 36,
+        "y": 41,
+        "width": 370,
+        "height": 578
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/aquablasterpomni/defeat.png",
+      "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
+      "bytes": 875406,
+      "visibleBounds": {
+        "x": 69,
+        "y": 63,
+        "width": 442,
+        "height": 551
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "aquablasterpomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/aquablasterpomni/heavy.png",
+      "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
+      "bytes": 851157,
+      "visibleBounds": {
+        "x": 62,
+        "y": 51,
+        "width": 436,
+        "height": 564
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "aquablasterpomni",
+      "file": "assets/encore/stance/aquablasterpomni.png",
+      "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
+      "bytes": 761461,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "aquablasterpomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/aquablasterpomni.png",
+      "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+      "bytes": 1514241,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-aquablasterpomni.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

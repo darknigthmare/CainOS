@@ -1,0 +1,75 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractingzooble-jump",
+  "appearanceId": "abstractingzooble",
+  "slot": "jump",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/jump.png",
+  "targetFile": "assets/encore/poses/abstractingzooble/jump.png",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-14c251c5-e9db-4f7e-ad41-bc2af74c3386",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-14c251c5-e9db-4f7e-ad41-bc2af74c3386.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: JUMP toward screen RIGHT: full figure suspended in midair with both legs off the ground, one knee raised and the other tucked backward, arms spread to balance. Keep all silhouette details and both feet visible; no ground, shadow or motion effect.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "fd7be4a82e398bbe4b3682f9decff64dce07b527f8e8aa98bd646a8380c12bfa",
+      "bytes": 2987776,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "episodeFidelityClaim": false,
+  "sha256": "3510c79529ede62fd8dc93be6ae1525bbe9b61d42849aab648527aaf4a632385",
+  "bytes": 1016107,
+  "dimensions": [
+    1381,
+    1139
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    146,
+    7,
+    1238,
+    1107
+  ],
+  "nativeCopyVerified": true,
+  "nativePixelsUnmodified": true,
+  "createdAt": "2026-11-20T08:40:43.209032+00:00",
+  "visualReviewAt": "2026-11-20T08:40:43.209032+00:00",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Distinct airborne pose travelling toward screen right, blue knee lifted and crystal-footed leg tucked back, both hands spread for balance. Approved mouthless head split and asymmetric eyes, antennae, red curled arm, crystal hand, opposite orange/yellow arm, spotted torso, single cyan ring, crystal shoulder/back star and pink wing retained. Both feet and the rear eye-bearing crystal growth are visible. All tips stay inside transparent margins, with no ground or motion effect."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "productionStatus": "awaiting-integration",
+  "includedInRuntime": false
+}

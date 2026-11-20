@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:38.513Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractingpomni",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractingpomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractingpomni/intro.png",
+      "sha256": "5ff77c485c4c70edd25f50d6904588014e28e1d7d7403528e5f680aa5905f007",
+      "bytes": 998996,
+      "visibleBounds": {
+        "x": 54,
+        "y": 4,
+        "width": 379,
+        "height": 617
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractingpomni/attack.png",
+      "sha256": "6149bd804d336e9e08039e5ebd2faa35c8e46ac54e131d77920bb09294b840e7",
+      "bytes": 1672355,
+      "visibleBounds": {
+        "x": 28,
+        "y": 3,
+        "width": 549,
+        "height": 419
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractingpomni/hit.png",
+      "sha256": "54087bfc1e2c0c197edbad6c2454163038cb3174645ae4f2ea9e030eb3cdab39",
+      "bytes": 1106336,
+      "visibleBounds": {
+        "x": 7,
+        "y": 4,
+        "width": 583,
+        "height": 619
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractingpomni/walk.png",
+      "sha256": "6dc2df262b6bb1735227b09b773bd7f7b3810492b7dcd0af83e1fe98738601a8",
+      "bytes": 1074729,
+      "visibleBounds": {
+        "x": 29,
+        "y": 4,
+        "width": 434,
+        "height": 610
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractingpomni/jump.png",
+      "sha256": "1b4be4cc9c306a0c338a684ceec43cd0c5958423438f75868b1aa82e0f168383",
+      "bytes": 1233883,
+      "visibleBounds": {
+        "x": 6,
+        "y": 4,
+        "width": 569,
+        "height": 570
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractingpomni/crouch.png",
+      "sha256": "00b90e75262a0e6b644b04dd7661ab81bf0ee29e15730fcba9bd96a21eaa6243",
+      "bytes": 1151313,
+      "visibleBounds": {
+        "x": 77,
+        "y": 3,
+        "width": 532,
+        "height": 575
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractingpomni/victory.png",
+      "sha256": "0eceeb57a339a0f98f92d4c3bdf51f92e1d83ca996a20f455fbf4a9be461882d",
+      "bytes": 1194206,
+      "visibleBounds": {
+        "x": 8,
+        "y": 2,
+        "width": 355,
+        "height": 629
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractingpomni/defeat.png",
+      "sha256": "002632ef44d50b5982282d380fd80f9cf2805d212b37caeffecb9b653142102e",
+      "bytes": 1250554,
+      "visibleBounds": {
+        "x": 14,
+        "y": 6,
+        "width": 606,
+        "height": 513
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingpomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractingpomni/heavy.png",
+      "sha256": "456284aba2350d9e20f9916592d086d2003bc2ba261f0f71014996f1fd83d3ac",
+      "bytes": 1784330,
+      "visibleBounds": {
+        "x": 47,
+        "y": 2,
+        "width": 485,
+        "height": 420
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractingpomni",
+      "file": "assets/encore/stance/abstractingpomni.png",
+      "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "bytes": 1039618,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractingpomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractingpomni.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractingpomni.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

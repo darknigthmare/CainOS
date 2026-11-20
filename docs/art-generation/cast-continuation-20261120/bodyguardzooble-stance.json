@@ -1,0 +1,38 @@
+{
+  "id": "bodyguardzooble-stance",
+  "appearanceId": "bodyguardzooble",
+  "slot": "stance",
+  "file": "assets/encore/stance/bodyguardzooble.png",
+  "sourceGenerationId": "exec-37f3e262-6094-4413-bda7-ef47e43e303f",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE single full-body stance sprite for Digital Circus Encore. Image 1 is the approved selection sprite: preserve its exact character identity, body, proportions, clothing, colors and art style. Image 2 is supporting official reference only. Change ONLY the pose: Ready fighting guard toward screen right: lower torso slightly, spread the unlike feet, bend the purple leg and the existing cyan zigzag without changing their parts; bring yellow hand near chest and green C-claw forward. Show all modular joints and both complete feet. Invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. This is one entire character in one individual image, not a collage or sprite sheet. Actual transparent RGBA background, opaque character interior, clean silhouette, generous margins around all tips, bow/antennas, hands and feet. No floor, shadow, haze, glow, motion trails, duplicate body, weapons, scene props, letters, text, frame or watermark. Render clean flat 2D game illustration.",
+  "sha256": "4db21fa1a7fe131d089cbfe745ed929d715a6b5844f24a4d680e5940426af973",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    48,
+    16,
+    1159,
+    1288
+  ],
+  "bytes": 736384,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

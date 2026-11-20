@@ -115,6 +115,7 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
 .story-tableau{margin:0;min-width:0;align-self:start;position:sticky;top:0}.story-tableau figcaption{font:9px/1.6 var(--mono);color:var(--muted);padding-top:10px}
 .story-visual{position:relative;isolation:isolate;aspect-ratio:1/1;overflow:hidden;border:1px solid #806049;border-radius:4px;background:#15101c}
 .story-backdrop{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.72)}
+.story-illustrated .story-backdrop{filter:none;object-fit:contain}
 .story-cast{position:absolute;inset:4% 2% 5%;display:flex;align-items:end;justify-content:center;gap:0}
 .story-actor{display:block;flex:0 1 55%;min-width:0;width:55%;height:94%;object-fit:contain;filter:drop-shadow(0 10px 6px #0006)}
 .story-actor+.story-actor{margin-left:-8%}.story-location{position:absolute;left:14px;bottom:12px;max-width:calc(100% - 28px);padding:5px 9px;border:1px solid #b7935980;border-radius:2px;background:#17101de8;font:9px/1.6 var(--mono);color:#fae7bc;overflow-wrap:anywhere}
@@ -217,6 +218,22 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
 
 .arena-wrap.finishing .fighter-markers{display:none}
 main.combat-main:fullscreen{overflow:auto;max-width:none;background:var(--ink)}
+.costume-picker{min-width:0;max-width:100%}
+.costume-picker select{width:100%;max-width:100%}
+.costume-filters{margin-top:.35rem;color:var(--muted);font-size:.84rem}
+.costume-filters summary{cursor:pointer}
+.costume-filters .field{margin-top:.55rem}
+.wardrobe-dialog .costume-picker{margin-bottom:1rem}
+
+.visits-layout{display:grid;grid-template-columns:minmax(165px,1fr) minmax(0,3fr);gap:clamp(16px,3vw,38px);align-items:start}
+.visits-menu{display:grid;gap:7px}.visits-menu button{text-align:left;line-height:1.35;white-space:normal}
+.visits-menu [aria-pressed=true]{color:var(--ink,#15121a);background:var(--gold,#f5d498)}
+.visit-card{overflow:hidden;border:1px solid #705d59;border-radius:9px;background:#191923}
+.visit-art{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#151521}
+.visit-copy{padding:clamp(14px,2.2vw,28px)}.visit-copy h2,.visit-result h3{margin:.45em 0}
+.visit-copy p,.visit-result p{max-width:68ch;line-height:1.6}.visit-copy button{margin-top:8px}
+.visit-result{margin:16px 0}.visit-result .visit-art{border-radius:5px}
+@media(max-width:650px){.visits-layout{grid-template-columns:1fr}.visits-menu{grid-template-columns:repeat(2,minmax(0,1fr))}.visits-menu button{font-size:12px;padding:10px}}
 
 /* Story roadmap, authored rival and tournament cup endings. */
 .story-brief-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
@@ -234,3 +251,12 @@ main.combat-main:fullscreen{overflow:auto;max-width:none;background:var(--ink)}
 .tournament-ending .small-note{margin-top:10px}
 .bracket-match.rival-match{border-color:#8d6a2f}
 @media(max-width:540px){.story-brief-stats,.story-roadmap{grid-template-columns:1fr}}
+
+/* Separate portraits for archive entries that represent more than one person. */
+.archive-portrait-parts{display:flex;align-items:end;justify-content:center;gap:8px;height:135px;overflow:hidden}
+.archive-portrait-parts figure{flex:1;min-width:0;height:100%;margin:0;text-align:center;display:grid;grid-template-rows:minmax(0,1fr) 34px}
+.archive-portrait-parts img{display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+.archive-portrait-parts figcaption{padding-top:6px;font-size:10px;line-height:1.3;color:var(--muted)}
+@media(max-width:540px){.archive-portrait-parts{height:100px;gap:4px}.archive-portrait-parts figure{grid-template-rows:minmax(0,1fr) 28px}.archive-portrait-parts figcaption{font-size:8px}}
+
+.archive-card:has(.archive-portrait-parts){grid-column:span 2}

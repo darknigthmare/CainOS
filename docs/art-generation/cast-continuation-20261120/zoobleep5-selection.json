@@ -1,0 +1,41 @@
+{
+  "id": "zoobleep5-selection",
+  "appearanceId": "zoobleep5",
+  "slot": "selection",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+  "sourceGenerationId": "exec-d58ef978-354a-44da-a780-b12abed014d5",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-upper-120s-native.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/zooble.webp"
+  ],
+  "prompt": "Use case: precise-object-edit. Asset type: ONE whole-body episode-five Zooble selection sprite. Image 1 is the existing game adaptation of the EXACT correct episode-five modular body; preserve its complete anatomy, proportions, palette, limb sides, pose, wing, antennas and hollow triangle. Change ONLY the sunglasses: remove the black sunglasses entirely and show Zooble's two original asymmetrical eyes as established by official images 2 and 3. Large yellow spherical eye with black spiral pupil and lavender half-lid on SCREEN LEFT; smaller white spherical eye with black pupil, violet half-lid and three black lower eyelashes on SCREEN RIGHT. Dry half-lidded neutral expression. No mouth. Image 4 is the game illustration face style reference only; do NOT copy its different Y antenna, ring chest ornament or incorrect-for-this-episode arms and legs. Preserve image 1's cyan lightning antenna LEFT and black-white curly spring antenna RIGHT, pink triangular head, yellow/orange-pink spotted torso, violet hollow inverted triangle, pink feather wing LEFT. Preserve yellow articulated arm with yellow glove LEFT; green spring, pink elbow, pink-white striped forearm and green C-claw RIGHT; cyan-zigzag red/yellow pointed peg leg LEFT, long purple rod and purple boot RIGHT. One full character with every tip safely inside canvas and generous margins, genuinely transparent RGBA background. Crisp opaque 2D cel-shaded illustrated body, no glow, haze, floor, shadow, text, scenery, extra accessories, extra limbs, collage or sprite sheet.",
+  "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    100,
+    15,
+    890,
+    1526
+  ],
+  "bytes": 1506910,
+  "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete selection pose.",
+  "targetFile": "assets/encore/selection/zoobleep5.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

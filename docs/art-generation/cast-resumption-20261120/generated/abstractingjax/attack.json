@@ -1,0 +1,75 @@
+{
+  "id": "abstractingjax-attack",
+  "appearanceId": "abstractingjax",
+  "slot": "attack",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/attack.png",
+  "targetFile": "assets/encore/poses/abstractingjax/attack.png",
+  "createdAt": "2026-11-20T08:17:43.345927+00:00",
+  "sourceGenerationId": "exec-6b512a15-66cd-4d0a-9204-4282359c7d24",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING JAX. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall lanky purple cartoon rabbit, two very long ears, long thin limbs, pink overalls/yellow buttons. One normal yellow eye with black rectangular pupil, one yellow glove and broad purple foot. Opposing head half, very long ear, arm and leg are angular dark crystal with concentric pastel eyes. Keep exactly the approved anatomical side of every transformation and all normal body sections; not fully abstracted or chibi. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: FAST ATTACK toward screen RIGHT: clear forward lunge and a straight leading-hand strike at chest height, rear hand held back as guard, front knee bent, back leg extended. No target or impact effect.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedJax.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+      "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "bytes": 1405678
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedJax.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "26b99bf9e94559b4da6c64601931d96fe3bf00a4e2965bcc224622f9c4189548",
+      "bytes": 3047080,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "sha256": "9cae49ee9543bf3bcf12b80963238d1a36daca4b8fbf6a2d80c299439e1d6de0",
+  "bytes": 1460039,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_jax_ragatha",
+    "status": "accepted",
+    "observations": [
+      "Full figure facing screen right in a distinct forward lunge. Crystal anatomical-left arm strikes forward, normal yellow hand guards; normal rear leg extends and crystal front leg bends. Long ears, crystal tips, fist and feet remain within the canvas. Approved asymmetry, overalls and eye details are retained; no additional subject or effect.",
+      "Native RGBA and clear threshold-12 contour margins verified; source bytes unchanged."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "episodeFidelityClaim": false,
+  "schema": "encore-native-art-resumption/v1",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-6b512a15-66cd-4d0a-9204-4282359c7d24.png",
+  "alpha12Bounds": [
+    96,
+    11,
+    1423,
+    1012
+  ],
+  "fullyTransparentPixels": 1200039,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json"
+}

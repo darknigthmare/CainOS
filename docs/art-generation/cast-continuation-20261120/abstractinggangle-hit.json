@@ -1,0 +1,51 @@
+{
+  "id": "abstractinggangle-hit",
+  "appearanceId": "abstractinggangle",
+  "slot": "hit",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-b296b9bd-834f-4537-8840-ec61345d99bf",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b296b9bd-834f-4537-8840-ec61345d99bf.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "episodeFidelityClaim": false,
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+  ],
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING GANGLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. ONE compact hunched crystal quadruped with FOUR short angular feet/legs, dark faceted body carrying concentric pastel eyes, RED ribbon loops over the back. Two WHITE MASKS attached to this one connected creature: broken comedy mask and smaller tragedy mask with TWO BLUE TEARS. Both masks have concentric pastel eyes and purple mouths. Preserve their positions and every distinctive feature. No normal humanoid ribbon torso, no separate second creature and no human limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HIT REACTION: connected body jolts backward toward LEFT, four legs splay to catch balance, mask heads tilt back and red loops sag. Preserve every foot and both masks; no cracks, injury or extra creature.",
+  "createdAt": "2026-11-20T04:51:14.659Z",
+  "visualReview": "Reviewed on a composed light background: one complete dark crystal quadruped, four limbs, broken comedy mask and tragedy mask with two blue tears attached to the same body, red ribbon loops and concentric eyes preserved. hit changes the body/feet pose. Clean transparency and complete contours; no glow visible after alpha composition. The front/masks point left like the selection reference; nativeFacing must be reviewed before eventual runtime activation.",
+  "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+  "bytes": 1610452,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    80,
+    21,
+    1422,
+    1006
+  ],
+  "nativeCopyVerified": true,
+  "targetFile": "assets/encore/poses/abstractinggangle/hit.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractinggangle.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+  ],
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/abstractinggangle-partial.jpg",
+  "visualReviewAt": "2026-11-20T04:57:35.154671+00:00",
+  "status": "generated-and-visually-reviewed",
+  "integrationReviewRequired": "Confirm nativeFacing for the left-pointing quadruped when all eleven slots exist."
+}

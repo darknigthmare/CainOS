@@ -1,0 +1,118 @@
+{
+  "schema": "encore-next-missing-verification/v1",
+  "createdAt": "2026-11-20T13:53:14.640485+00:00",
+  "status": "local_qa_canvas_and_integrity_passed_browser_not_reexecuted",
+  "baseLocalCommit": "3858f03bba652fa56bdf422b5566dea86dbdcb9b",
+  "baseRemoteCommit": "3bd83cdf2e63e93275c8478795d5e2af32313f41",
+  "generation": {
+    "appearances": 4,
+    "nativeCostumePngs": 44,
+    "costumeBytes": 41910315,
+    "stagePngs": 3,
+    "stageBytes": 1821031,
+    "manifest": "generation-completion.json",
+    "manifestSha256": "454273e19fa72b2c5af96119d023b165da341f2f3c9b121ef65aeddef6314e25"
+  },
+  "qa": {
+    "tests": 411,
+    "pass": 411,
+    "fail": 0,
+    "skipped": 0,
+    "bothBuildsPassed": true,
+    "evidence": "qa-result.json",
+    "log": "qa.log"
+  },
+  "canvas": {
+    "appearances": 4,
+    "actions": 36,
+    "stances": 4,
+    "drawChecks": 80,
+    "portraits": 4,
+    "missing": 0,
+    "method": "Production Canvas2D renderer under native Skia; no browser interaction.",
+    "evidence": "canvas-summary.json"
+  },
+  "stage": {
+    "id": "undermap",
+    "evidence": "../stage-next-missing-20261120/verification.json",
+    "counts": {
+      "sharedStagesBefore": 22,
+      "sharedStagesAfter": 23,
+      "dedicatedArrangements": 54,
+      "newNativePNGs": 3,
+      "newNativeBytes": 1821031,
+      "existingPlanesPreserved": 66,
+      "totalSharedStagePlanes": 69,
+      "targetedTests": 80,
+      "targetedFailures": 0,
+      "historicalStoryRoutes": 54,
+      "historicalProgramFixtures": 45,
+      "historicalCheckpoints": 270,
+      "historicalReplayFixtures": 14,
+      "historicalReplayFrames": 3682,
+      "canvasCameras": 3,
+      "canvasScenesWithActors": 3,
+      "canvasChecks": 6
+    }
+  },
+  "integrity": {
+    "status": "passed",
+    "baseCommit": "3858f03bba652fa56bdf422b5566dea86dbdcb9b",
+    "nativeAssetComparisons": 94,
+    "costumeComparisons": 88,
+    "stageComparisons": 6,
+    "moduleComparisons": 32,
+    "historicalEncoreFilesVerified": 5678
+  },
+  "runtimeCounts": {
+    "fighters": 54,
+    "techniques": 540,
+    "costumes": 468,
+    "additionalAppearances": 39,
+    "stages": 23,
+    "dedicatedArrangements": 54,
+    "archive": 179,
+    "offlineImages": 5769,
+    "offlineBytes": 3059080660,
+    "coreFiles": 53,
+    "artVersion": "cb628ae846008788",
+    "offlineVersion": "0.7.0-cdc85685a728"
+  },
+  "visualReview": {
+    "status": "accepted_with_stated_scope",
+    "evidence": "visual-review.json",
+    "independentEvidence": "independent-review.json",
+    "independentSha256": "d2fdcb1940dd6ee8e0d8eeeab1e7aa34b79017a3d7a9e8b60d4b0e243d246d85"
+  },
+  "browser": {
+    "status": "not_reexecuted_locally",
+    "successfulChecksThisBatch": 0,
+    "priorAttempt": "../cast-ribbit-20261120/browser-result.json",
+    "note": "Prior local Chromium aborted before navigation with socket Operation not permitted. That attempt is historical and does not validate this revision. Remote CI is reported separately for the published commit."
+  },
+  "sources": {
+    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
+    "combat/costume-additions.mjs": "d1d9c194b316efca6db2f1833c94d820dfdf0b1f028ede091a40a411a6a0619f",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "1bf5bbefabaa9330622a0eead66ece112889a0e1c354d902c977ea6f7abbdb56",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585",
+    "combat/fidelity.mjs": "2e3ee2fe7c19e7ff40997abd2c5c8a1927fc7f5ef82e5522c7192225a8a3142e",
+    "combat/audio.mjs": "e774d5d5c50102dfd6b726affad4cdd546c9d05df070c928d6a3d9ba04c5e9ed",
+    "combat/audio-ambiences.mjs": "135a9fe8c62b99bf06c1182745bce6dbb2ffd31aca7d824e78852ff1d0470fc0",
+    "combat/progression.mjs": "d1c06308fdf48e57b4ef4261d952237be3878cdfacd13ab234d1c6bde9dfae3e",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "327ff8a636f4a37cbd0d7f2d5063b51299c0708d992490189cc9db5d27c71e46",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+  },
+  "limitations": [
+    "Eleven static drawings per appearance do not constitute full animation cycles.",
+    "Official merchandise references establish their own design, not episode-specific proportions or motion.",
+    "PTO Caine reuses the existing Caine body; the chair and drink are excluded.",
+    "Undermap geometry, audio and motion are original game adaptations from one official reference image.",
+    "Unqualified costume parts, forty NPC crossover families, full animation and physical-device checks remain open."
+  ]
+}

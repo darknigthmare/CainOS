@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "tests/combat-action-art-browser.mjs"
+  ],
+  "startedAt": "2026-11-20T10:58:06.436799+00:00",
+  "endedAt": "2026-11-20T10:58:07.163267+00:00",
+  "elapsedSeconds": 0.726,
+  "exitCode": 1,
+  "log": "docs/art-generation/cast-next-20261120/browser-action-art.log",
+  "successfulChecks": 0,
+  "status": "environment_blocked_before_navigation",
+  "sources": {
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "tests/combat-costume-additions.test.mjs": "3bcc5f0019273cf6453f50ca3b51c32753f97aa8bfcc5d74893551a4250eb460",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  }
+}

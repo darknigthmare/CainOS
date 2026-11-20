@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { FIGHTERS } from '../combat/data.mjs';
-import { ANIMATION_REGISTRATION, POSE_PRESENTATION, frameRegistration, spriteSourceRegion, bendLeg, crouchParts, actorPose, frameGeometry } from '../combat/render-poses.mjs';
+import { ANIMATION_REGISTRATION, POSE_PRESENTATION, frameRegistration, spriteSourceRegion, bendLeg, crouchParts, actorPose, frameGeometry, illustratedAction } from '../combat/render-poses.mjs';
 
 const fighter = id => FIGHTERS.find(f => f.id === id);
 const actor = (id = 'pomni', extra = {}) => ({ f: fighter(id), slot: 0, x: 400, y: 568, face: 1, onGround: true, state: 'idle', ...extra });
@@ -11,6 +11,34 @@ const sourceFrame = (id, index = 0) => {
 };
 const almost = (a, b) => assert.ok(Math.abs(a - b) < 1e-8, `${a} differs from ${b}`);
 const transform = (m, p) => [m.a * p[0] + m.c * p[1] + m.e, m.b * p[0] + m.d * p[1] + m.f];
+
+test('dedicated action drawings follow the resolved state, final outcome and exact move', () => {
+  const fighter = actor('gummigoo');
+  const action = (extra, options = {}) => {
+    const value = { ...fighter, ...extra };
+    return illustratedAction(actorPose(value, options), value.attack);
+  };
+  assert.equal(action({}, { phase: 'intro' }), 'intro');
+  assert.equal(action({}, { phase: 'matchOver', winner: 0 }), 'victory');
+  assert.equal(action({}, { phase: 'roundEnd', roundWinner: 1 }), 'defeat');
+  assert.equal(action({}, { phase: 'roundEnd', roundWinner: -1 }), null);
+  for (const state of ['walk', 'jump', 'crouch', 'hit']) assert.equal(action({ state }), state);
+  const move = (name, frame) => ({ attack: { name, def: fighter.f.moves[name], t: frame } });
+  const light = fighter.f.moves.light;
+  assert.equal(action(move('light', 0)), null);
+  assert.equal(action(move('light', light.startup)), 'attack');
+  assert.equal(action(move('light', light.startup + light.active)), 'attack');
+  assert.equal(action(move('light', light.startup + light.active + light.recovery)), null);
+  assert.equal(action(move('heavy', fighter.f.moves.heavy.startup)), 'heavy');
+  assert.equal(action(move('heavy', 0)), null);
+  for (const other of ['low', 'throw', 'special', 'super']) {
+    assert.equal(action(move(other, fighter.f.moves[other].startup)), null);
+  }
+  for (const id of ['ragatha', 'gangle']) {
+    const value = actor(id), def = value.f.moves.light;
+    assert.equal(actorPose({ ...value, attack: { name: 'light', def, t: def.startup } }).frame, 6);
+  }
+});
 
 test('registrations cover the eight inspected cells of each of the seven exact source files', () => {
   assert.equal(Object.keys(ANIMATION_REGISTRATION).length, 7);
@@ -104,6 +132,16 @@ test('costumes, static sprites, other morphologies and non-idle drawings never i
   assert.equal(crouchParts(fighter('pomni'), { ...sourceFrame('pomni'), animated: false }), null);
   assert.equal(crouchParts(fighter('pomni'), sourceFrame('pomni', 1)), null);
   for (const id of ['jax', 'ragatha', 'gangle', 'kinger', 'caine']) assert.equal(crouchParts(fighter(id), sourceFrame(id)), null);
+});
+
+test('right-facing standing art overrides the Queen’s left-facing atlas on either side', () => {
+  const queen = fighter('gloinkqueen');
+  const atlas = { bounds: { x: 0, y: 0, width: 300, height: 100 } };
+  const stance = { ...atlas, nativeFacing: 1 };
+  for (const facing of [-1, 1]) {
+    assert.equal(frameGeometry(queen, atlas, atlas, {}, facing).flip, -facing);
+    assert.equal(frameGeometry(queen, stance, stance, {}, facing).flip, facing);
+  }
 });
 
 test('uniform scale is fixed by idle height; taller reaction and wider accessory frames keep it', () => {

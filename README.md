@@ -6,23 +6,228 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.7.0**, completed in this branch on **24 October 2026**.
+The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 November 2026**; the latest Circus appearance continuation is dated **20 November 2026**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
 - Independent distribution: run **`npm run build:combat`**, then serve **`dist-combat/`**.
 - Production tracker: **[DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx](docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx)**.
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
+- To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The current roster contains **54 fighters, 540 techniques, 12 arenas, 9 modes,
-51 selectable costumes and 179 searchable archive entries**. Fourteen fighters
-have fully authored kits; the 40 promoted PNJ are described in the extension
-section below. The remaining 74 archive entries do not receive a combat kit. The
-combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 23 shared arenas, 468 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 39 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+
+### Four appearances and Undermap — latest 20 November continuation
+
+**Watermelon Gangle, Aqua Blaster Pomni, PTO Caine and Freak Jax** add four complete
+appearance families and **44 individual native PNGs**. Each has a selection
+portrait, a stance and nine action drawings. The cumulative Circus additions
+now contain **39 appearances / 429 PNGs**. Their distinct references and adaptations
+are documented in the [continuation report](docs/COMBAT_NEXT_MISSING_2026-11-20.md)
+and [four production-render galleries](docs/art-generation/cast-next-missing-20261120/README.md).
+
+**Undermap — Sous la carte** adds the indigo grid room beneath Candy Canyon as
+the 23rd shared arena, with three native planes, original audio and restrained
+ambient movement. Its [stage report](docs/art-generation/stage-next-missing-20261120/README.md)
+records the actual 1672 × 941 output size and the three-camera review. Existing
+story routes keep their original 22-stage catalogue; imported programmes retain
+their original seeded draw. Independently captured fixtures preserve **54 stories,
+270 programme checkpoints and 14 historical replays / 3,682 frames**.
+
+**411 Node tests, both builds and 80 costume Canvas drawing checks passed**.
+The 47 new PNGs are copied unchanged into both distributions, and all **5,678**
+earlier Encore asset files remain byte-identical. The offline pack contains
+**5,769 images**. The earlier local Chromium startup failure is historical;
+no successful local browser execution of this batch is claimed.
+
+The [current remaining-work register](docs/art-generation/cast-next-missing-20261120/remaining-work.md)
+removes the four completed candidates and the new arena. It retains obscured
+costume references, full animation cycles, forty NPC crossover families and
+physical-device checks as open work. The [new workbook evidence](docs/art-generation/workbook-next-missing-20261120/README.md)
+continues from the reconciled XLSX without replacing historical IDs or notes.
+The tracker now contains **3,188 Production rows, 2,335 QA rows and 153 sources**.
+Its final export matches **80,346 cells with zero differences**; **42 formulas**,
+eleven sheets and ten tables survive recalculation and reimport. All 36 final
+review views are checked, including the 44 new drawing rows with their native
+dimensions, hashes and receipt links.
+
+### Anime Ribbit and Jax-Suit Ribbit — previous 20 November continuation
+
+**Two more appearances and 22 separate native PNGs** complete Anime Ribbit and
+Jax-Suit Ribbit. Each has a selection portrait, a stance and nine action drawings.
+At this checkpoint the Circus additions contained **35 appearances / 385 PNGs**. Both
+costumes use Ribbit's existing kit. The official product photos were inspected
+and archived before generation; Maid Ribbit remains awaiting a usable view of
+the lower costume and feet.
+
+The [Ribbit continuation report](docs/COMBAT_RIBBIT_CONTINUATION_2026-11-20.md)
+links the two galleries, native-file receipts and final verification. **405 Node
+tests, both builds and 40 production Canvas drawing checks passed**. The 22 images
+are copied unchanged into both distributions, and all 5,656 earlier Encore files
+remained byte-identical. The offline pack then contained **5,722 images**. Local
+Chromium stopped before navigation, so no successful local browser run is claimed.
+
+The recovered ten-appearance batch immediately below is already published in
+[PR #7](https://github.com/darknigthmare/CainOS/pull/7) as
+[`a5341b8c`](https://github.com/darknigthmare/CainOS/commit/a5341b8cf1ceecc22ccca13ba6b20a9f710bddb0).
+The [remaining-work register at that checkpoint](docs/art-generation/cast-ribbit-20261120/remaining-work.md)
+supersedes the two Ribbit candidates from its historical register. Static
+merchandise-inspired poses remain distinct from complete animation cycles and
+episode-by-episode canonical comparison.
+
+The workbook export blocker was resolved in this checkpoint. The
+[production tracker](docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) then reconciled the
+six props and all completed appearance waves: **3,134 Production rows, 2,281 QA
+rows and 149 sources**. The saved XLSX passed a **79,280-cell comparison with zero
+differences**, reimport and recalculation of **42 formulas**, and visual review
+of 33 exports. Its eleven sheets, ten native tables, existing IDs and user notes
+are preserved. See the [reconciliation evidence](docs/art-generation/workbook-reconciliation-20261120/README.md).
+
+### Ten more illustrated appearances — 20 November continuation
+
+The next recovered batch completes **ten appearances and 110 individual native
+PNG drawings**: Jax-Suit Pomni, Noir Ribbit, Kaufmo-Suit Ribbit, Intermission Caine,
+Showtime Pomni, Bowling Pin Ragatha, Ringmaster Caine, Strongman Orbsman,
+Stagehand Bubble and Bug Tamer Kinger. Every family has one selection portrait,
+one stance and nine separate action drawings. At that checkpoint the game contained **33 additional
+Circus appearances / 363 native PNGs** across the dated waves.
+
+The preserved native files and recovered generation records are checked before
+activation. The portrait of Bowling Pin Ragatha keeps its reviewed left-facing
+source direction; her combat poses face right. The existing wardrobe owners,
+move sets, profiles and replay rules are retained. These are appearance variants,
+not ten new fighter identities.
+
+The [continuation report](docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md) links the
+new gallery, per-file provenance, actual checks and remaining candidates. A
+previous browser assertion that incorrectly excluded Queenie's already published
+abstraction outfit is updated to match the existing catalogue.
+
+The official GLITCH product references identify the costumes; the action poses
+are original adaptations for Encore. Canonical scene comparisons and complete
+animation cycles remain tracked separately. At that checkpoint the installed
+workbook retained its previous revision; the manifests preserved the ten additions
+for the reconciliation documented in the latest continuation.
+
+### Nine completed appearances — resumed generation on 20 November
+
+All **63 poses queued in the frozen checkpoint are now generated**. Together with
+the 36 preserved drawings, they complete Smiling Tragedy Gangle, the seven partially
+abstracting characters (Pomni, Jax, Ragatha, Kinger, Gangle, Zooble and Queenie), and
+Zooble's episode-five assembly without sunglasses. Each appearance has its own
+selection portrait, stance and nine action drawings: **99 native PNGs newly active**.
+
+The two dated waves now contain **23 complete additional appearances and 253 native
+PNGs**. Character art outside the crossovers totals **1,487 files: 1,152 actions,
+128 stances and 207 portraits**. The offline pack contains **5,590 images totalling
+2,860,106,610 bytes**. Existing kits, simulation identities, profile formats and
+replay rules are preserved.
+
+Every accepted PNG is copied byte for byte. The renderer respects the reviewed
+direction of each partially abstracting Gangle drawing; its two right-facing poses
+and nine left-facing slots share the same costume without transforming source files.
+The [resumption report](docs/COMBAT_CAST_RESUMPTION_2026-11-20.md) links the completed
+queue, per-image provenance, production-renderer gallery and verification evidence.
+The earlier checkpoint remains unchanged as historical evidence. Static fan-game
+poses do not establish frame-by-frame animation or canonical episode fidelity.
+
+At that checkpoint the installed workbook was the preserved earlier revision:
+the XLSX export memory blocker remained open. The manifest recorded these nine
+completed appearances for reconciliation together with the six stage props.
+
+### Six recovered stage props — 20 November continuation
+
+The wharf lamp, castle ticket dispenser, orbital checkpoint, garden turnstile,
+jazz microphone and bamboo checkpoint now load in their six existing arenas.
+Their **six native PNGs are copied byte for byte** from the recovered source
+archive. The orbital pedestal is lowered by 18 pixels to place its base on the
+platform. At that checkpoint the offline catalogue contained **5,491 images,
+totalling 2,724,652,669 bytes**; the later character resumption is counted above.
+
+The [prop continuation report](docs/COMBAT_PROPS_CONTINUATION_2026-11-20.md)
+links the six before/after comparisons, 18 camera checks, 401 passing Node tests
+and both successful builds. The new browser failure/recovery/cache scenarios
+await a successful browser run for this revision: local Chromium fails before
+navigation because socket creation is denied. Separately, the preceding cast
+commit's remote CI has now passed, including its browser suite.
+
+The [additional primary-reference audit](docs/art-generation/cast-reference-audit-20261120/audit-report.md)
+records nine candidates and nine targeted extracts. It adds no ready appearance
+or generation job: hidden joints and feet remain unresolved. The existing
+**102 accepted character drawings and 63 then-pending poses** retain their exact
+historical checkpoint. The resumption above completes all 63 queued poses.
+
+The [workbook recovery checkpoint](docs/art-generation/workbook-recovery-20261120/README.md)
+preserves a complete public model of the eleven sheets. Independent review
+matches 78,876 cells and 42 formulas to the prepared cast update. XLSX export
+exceeded the memory available at that checkpoint, so the four installed tracker
+files remained byte-identical to the previous revision. The saved model covers
+the cast pass; later reconciliation is documented in the latest continuation.
+
+### Earlier checkpoint: six completed appearances and nine in preparation
+
+Noir Pomni, Noir Jax, Noir Kinger, Bodyguard Ragatha, Bodyguard Zooble and Bad End
+Caine each receive **eleven independent native-alpha PNGs**. These **66 active new
+drawings** bring the two dated waves to **14 complete appearances and 154 PNGs**.
+Combined character art outside the crossovers totals **1,388 files: 1,071 actions,
+119 stances and 198 portraits**.
+
+A further **36 native drawings for nine appearances** are preserved in the PR's
+production archive: Zooble's episode-five assembly, Smiling Tragedy Gangle and the
+seven partially abstracting characters (Pomni, Jax, Ragatha, Kinger, Gangle, Zooble
+and Queenie). **63 action poses remained to generate** when the image service's daily
+quota stopped that pass. The incomplete appearances were outside the active wardrobe
+and offline pack until the resumption above. The checkpoint retains every completed file, reference and missing
+pose prompt; no absent slot is filled by duplicating or transforming another drawing.
+
+Each active appearance retains its fighter's kit and survives profile, campaign and
+replay round trips. Episode observations and official merchandise designs are
+attributed separately: an Abstraction Animiniz design does not establish an episode
+event. The [20 November continuation report](docs/COMBAT_CAST_CONTINUATION_2026-11-20.md)
+links both inventories, the visual reviews, verification and exact resumption point.
+The 19 November evidence below remains a historical checkpoint.
+
+### Eight additional outfits — 19 November continuation
+
+President Pomni, Beach Pomni, Noir Ragatha, Swimmer Ragatha, Noir Zooble,
+Snorkeler Zooble, Beach Jax and Sand Castle Kinger each have **eleven independent native-alpha PNGs**: selection,
+stance and nine action poses. Their wardrobe entries include the inspected
+official merchandise references. They use the existing fighter's moves and
+statistics, and retain the historical atlas, profile and replay identities.
+See the [continuation report and visual review](docs/COMBAT_CAST_CONTINUATION_2026-11-19.md).
+At that checkpoint, combined character-art coverage reached **1,322 files**; the 378 crossover
+costumes remain separately counted. These are static fan-game drawings;
+frame-by-frame animation and scene-level canonical comparison remain open.
+
+### Recovered roster and artwork checkpoint — 19 November 2026
+
+The character pass covers the 54 fighters, 51 archive variants and 74 archive-only
+cards. Its verified individual-art coverage is **945 action drawings, 105 stances and 184
+gallery subjects**. The gallery has 179 cards; three group cards contain separate
+individual portraits. See the [character completion report](docs/COMBAT_CHARACTER_COMPLETION_2026-11-19.md)
+for the file inventory, actual verification results and remaining series-reference
+work. All **1,234 character-art slots are present**. The final local run passed
+399 Node tests and built both distributions; native Canvas checked 1,890 action
+orientations and 184 portraits. Current browser execution was blocked by the
+environment and is not claimed. Static drawings are tracked separately from
+full animation cycles.
+
+The 54-fighter roster, story roadmaps, tournament rivals and friendship numbers
+now coexist with the illustrated GLITCH wardrobe, visits, campaign panels and
+parallax arenas. A promoted NPC does not gain a selectable crossover until its
+body has a defined design; the original fourteen keep all 378 published crossover
+costumes. Dedicated arrangements reuse shared episode-inspired scenery as
+original fan-game compositions.
+
+Version-one programme checkpoints from the 14-fighter and 54-fighter releases
+retain their original seeded opponents, stage schedule and tournament simulation.
+Their existing results, retries and subsequent encounters survive the merge.
+The profile and replay formats remain unchanged. Dedicated arrangements can also
+start an arcade, boss, survival or tournament programme and survive a reload.
 
 ### Stage endings and arena audio in 0.7.0
 
-- **42 theatrical endings**: three per fighter, selected after a real final KO.
+- **162 theatrical endings**: three per fighter, selected after a real final KO.
   They present the already saved result and can be skipped or disabled.
 - **Codex gallery**: preview all endings with the 51 costumes; pause, resume and
   replay without altering a profile, match or saved replay.
@@ -46,9 +251,10 @@ combat techniques and stories are original fan-game adaptations.
 - **Reproducible CI evidence and delivery**: Node/Chromium verification, gallery
   contact sheets, an updated tracker and a standalone ZIP from the verified runtime.
 
-These are original Encore compositions using existing character artwork. They do
-not establish canonical 1:1 fidelity, new drawn combat poses, official voices or a
-finished professional mix. See [the ending catalogue](docs/COMBAT_FINISHERS_0.7.0.md)
+The original 0.7.0 ending release composed the character artwork available at that
+time. It did not produce dedicated body animation, official voices or a finished
+professional mix. The separate 19 November character pass adds static action
+drawings; canonical 1:1 review and full animation remain open. See [the ending catalogue](docs/COMBAT_FINISHERS_0.7.0.md)
 and the versioned CI evidence for the exact scope. Historical 0.6 evidence remains
 separate from checks rerun on 0.7.
 
@@ -79,12 +285,12 @@ horizontal fighting arena. Their floor artwork also follows the new composition;
 collisions are unchanged. The other nine static backgrounds remain identical. See the [stage review](docs/combat-stage-review-0.6.0.json) and
 [before/after sheet](docs/images/encore-stage-comparison-0.6.0.png).
 
-The shared fidelity registers contain **657 records**: 54 fighters, 540 techniques,
-12 arenas and 51 costumes. They separate technical checks, observed reference
+The shared fidelity registers contain **700 records**: 54 fighters, 540 techniques,
+22 shared arenas, 51 archive costumes and 33 additional Circus appearances. They separate technical checks, observed reference
 traits, original adaptations and remaining discrepancies. **This release does not
 claim complete canonical or pixel-exact 1:1 fidelity.**
 
-### Rival, coupe et feuille de route — extension de contenu
+### Rival, coupe et feuille de route — historique de l’extension à 14 artistes
 
 **La coupe du cirque** garde son tableau à huit participants et ses trois duels
 joués, mais chaque artiste a désormais un **rival attitré**, tiré de sa propre
@@ -134,7 +340,7 @@ coloured Mannequins. Their kits are role-based templates adapted for Encore;
 their routes and tournament text are generated from one reviewed record per
 character. They are original fan-game adaptations, not canonical powers. The
 roster now exposes **162 stage finales** (42 authored, 120 generated for the
-promoted PNJ) and **657 fidelity records**. The remaining 74 archive identities
+promoted PNJ) and **700 fidelity records**, including the 33 additional appearances. The remaining 74 archive identities
 (props, effects, abstractions, humans and unreviewed duplicates) stay
 non-playable. See [roster-expansion.mjs](combat/roster-expansion.mjs).
 
@@ -144,8 +350,8 @@ All 54 fighters now share the same presentation guarantees, checked by
 [tests/combat-roster-completeness.test.mjs](tests/combat-roster-completeness.test.mjs):
 
 - **Dedicated stages**: every artist owns one `home-<id>` arrangement built on
-the reviewed scenery of its source episode, offered next to the twelve shared
-series arenas in free modes. The accent changes; the geometry and collision
+the reviewed scenery of its source episode, offered next to the shared
+series and crossover arenas in free modes. The accent changes; the geometry and collision
 bounds do not, and no measured canonical set plan is claimed.
 - **Shared series arenas** remain common and non-dedicated for the whole roster.
 - **Stage finales**: three per fighter (162), chosen from the decisive hit.
@@ -175,7 +381,8 @@ up to **600 frames**. Replay it once or in a loop. The six dummy behaviours, fre
 resource/finale, automatic healing and hitboxes remain independent. Training
 awards no progression and does not replace a saved replay.
 
-Each fighter has five finite procedural presentations, for **70 sequences**.
+The original fourteen-fighter 0.5 release introduced five finite procedural
+presentations per fighter, for **70 sequences** in that historical review.
 Results save immediately; ordinary result presentations last 2.2 seconds. The
 new eligible KO endings last 3–4 seconds and can also be skipped. **Twelve stage-specific ambient layers** stay behind actors and above the
 floor. The system preference or game setting independently enables reduced motion.
@@ -201,9 +408,10 @@ transfer the profile; CainOS and the standalone share storage on the same origin
 ### Offline installation
 
 On HTTPS or localhost, choose **Réglages → Télécharger le spectacle** and wait for
-**44/44 illustrations**. The pack is **52,167,739 bytes**, with art version
-**`05a3fc712a39e1d8`**. The exact 0.7 code build identity is generated in
-[offline-manifest.mjs](combat/offline-manifest.mjs). Use the installed shortcut or
+the complete illustration count shown by the game. The current file list, byte
+count, artwork identity and code build identity are generated in
+[offline-manifest.mjs](combat/offline-manifest.mjs). The former 44-sheet pack belongs
+to the original October 0.7 release. Use the installed shortcut or
 `/combat/index.html?standalone=1` for later offline visits.
 
 Updates are explicitly offered in settings. Unchanged illustrations survive a

@@ -1,0 +1,44 @@
+{
+  "id": "noirkinger-selection",
+  "appearanceId": "noirkinger",
+  "slot": "selection",
+  "file": "assets/encore/selection/noirkinger.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-c2c24632-6e50-4614-b1b2-1fb8ae24ace5.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+  ],
+  "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/presidentpomni.png"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: individual full-body selection illustration for the Digital Circus Encore game. Create exactly ONE Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose. Selection pose: upright three-quarter toward screen right, eyes mildly alarmed, one floating hand gently touching the hat brim, other hand close to the torso. Match smooth clean 2D cel-shaded game art, not plush texture. Reference image 1 controls this costume's shapes, clothing and monochrome palette; references 2 and 3 control only the crisp clean ink outlines and restrained 2D cel-shaded game style. Keep the original recognizable character anatomy, do not copy the toy's proportions or fabric. True transparent RGBA background. Full entire subject including hat, all ears, hands and all feet/base contained with generous clean transparent padding on every edge. No keychain, metal ring, hanging loop, tag, text, labels, logos, shadows on ground, scenery, floor, frame, extra character, duplicate body, split view, contact sheet, animation sheet, or cropped body. Single centered drawing only. Smooth confident contours, detailed high quality native resolution.",
+  "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-c2c24632-6e50-4614-b1b2-1fb8ae24ace5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "createdAt": "2026-11-20T04:23:42.970Z",
+  "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot selection is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+  "sha256": "34689a3fc4ceaaab8fbff0c59f0680f02aca7d5edcb6cf444c6c5bc40a87d4f1",
+  "bytes": 1405315,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    119,
+    29,
+    932,
+    1513
+  ],
+  "visualReviewAt": "2026-11-20T04:48:14.490308+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+  "status": "generated-and-visually-reviewed",
+  "nativeCopyVerified": true,
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

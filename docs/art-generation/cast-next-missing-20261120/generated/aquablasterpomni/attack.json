@@ -1,0 +1,71 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "aquablasterpomni",
+  "fighterId": "pomni",
+  "slot": "attack",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Create ONE new full-body clean cel-shaded 2D fighting-game sprite of AQUA BLASTER POMNI. Reference 1 is the accepted selection sprite: preserve her precise identity, elongated slender game proportions, clothes, face, color palette, linework and the exact water-blaster design. Reference 2 is the official merchandise authority for the Aqua Blaster variant. Change ONLY the pose described below, keeping her recognizably the same character.\n\nIDENTITY: pale white face and limbs, brown bob with blunt bangs, large white eyes with small RED/BLUE PINWHEEL irises, pink cheeks. Iconic two-lobed red-and-blue jester hat, yellow band and two yellow round tip bells. Light-blue/white horizontally striped sleeveless tank top with blue straps, blue swim shorts with two white drawstrings, blue flats. Exactly TWO arms, TWO white hands, TWO legs and TWO shoes, one intact head. Bare arms with NO inflatable armbands, no floaties, no cuffs or bracelets.\nONE COMPACT TOY WATER PISTOL, identical to reference 1: magenta pink main body and grip, orange rear circular inset with green rim, lime-green ribbed cylindrical barrel, orange muzzle, and curved turquoise loop reservoir behind. Keep the toy blaster in her hands in every pose; it is not a realistic firearm. No duplicate gun. No water jet, beam, droplets, splash or puddle.\n\nFace, body and active movement face SCREEN RIGHT, in three-quarter front view, never mirror to left. Preserve the big eyes and hat shape and avoid face occlusion. Keep the FULL BODY, both bells, both shoes and the entire blaster visible, inside the frame. Crisp dark outlines, saturated flat fills and restrained two-tone cel shadows, same clean hand-drawn 2D style as reference 1, no 3D toy/plush texture. Native transparent alpha background. NO floor, ground, shadow, stand, base, backdrop, scene, text, UI, border, spritesheet, multiple views or other character. NO glow, aura, halo, bloom, rim lighting, sparkles or motion trails. Character including weapon occupies at most 82 percent of frame height/width, with generous transparent padding at least 8 percent on every edge.\n\nPOSE: A playful water-blaster firing posture toward screen-right: take a short forward lunge, lean the torso forward, extend BOTH hands on the blaster, pointing its green barrel horizontally right. Rear leg stretched back, forward knee bent, both shoes visible and grounded. Focused cheerful expression. No actual jet or other effect.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-d0396e63-1d39-4eda-bb2b-fff8721ad11b.png",
+  "sourceGenerationId": "exec-d0396e63-1d39-4eda-bb2b-fff8721ad11b",
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.png",
+  "targetFile": "assets/encore/poses/aquablasterpomni/attack.png",
+  "nativeFacing": "right",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "scope": "Adaptation de la figurine officielle Aqua Blaster Pomni aux proportions du jeu. Variante distincte de beachpomni, issu de la peluche à brassards jaunes sans pistolet. Le socle de flaque et le jet moulé sont exclus du sprite neutre ; le pistolet est conservé dans chaque pose. Les vêtements sont partiellement masqués par l’arme dans le rendu et sont prolongés de façon cohérente avec les parties visibles et beachpomni. Poses statiques originales pour le fan-game ; aucune fidélité canonique 1:1 n’est revendiquée.",
+    "observations": [
+      "Fente vers la droite, pistolet tendu horizontalement dans les deux mains ; jambe arrière étendue et jambe avant fléchie.",
+      "Deux bras, deux mains et deux jambes lisibles ; vêtements et pistolet cohérents, aucun brassard ni jet ajouté.",
+      "Composite alpha inspecté sans halo, image entière sans découpe des grelots ni des chaussures."
+    ],
+    "alphaReview": "Contrôle composé pair-attack-heavy.jpg ; pixels natifs conservés."
+  },
+  "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
+  "bytes": 772786,
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 1120608,
+  "alpha12Bounds": [
+    155,
+    75,
+    1158,
+    1142
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T13:37:06.010036+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+      "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+      "bytes": 1514241
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+      "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+      "bytes": 2582811
+    }
+  ]
+}

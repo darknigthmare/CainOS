@@ -1,3 +1,4 @@
+import { STAGES } from '../combat/data.mjs';
 /**
  * Canvas presentation regression fixtures, not played-duel evidence.
  * COMBAT_TEST_URL=http://127.0.0.1:4181 node tests/combat-render-browser.mjs
@@ -59,7 +60,8 @@ try {
         const { CombatRenderer, getFrame } = await import('/combat/render.mjs');
         const { FIGHTERS, STAGES } = await import('/combat/data.mjs');
         const canvas = document.getElementById('fixture'), renderer = new CombatRenderer(canvas);
-        const ready = await renderer.preload(FIGHTERS, STAGES);
+        // The historical palette pins below belong to the procedural fallback.
+        const ready = await renderer.preload(FIGHTERS);
         if (!ready.ok) throw new Error(JSON.stringify(ready));
         window.renderFixture = { renderer, getFrame, FIGHTERS, STAGES, canvas };
       });
@@ -193,13 +195,13 @@ try {
   assert.equal(sprite(after, 'gangle').opaque, sprite(before, 'gangle').opaque);
   assert.ok(after.sprites.every(f => f.rgbChanges === 0 && f.nativeAlphaChanges === 0));
   checked('14 first idle frames preserve their palette; seven native idle alphas are unchanged', after.sprites);
-  assert.equal(after.stages.length, 12);
+  assert.equal(after.stages.length, STAGES.length);
   const bigtop = after.stages.find(s => s.id === 'bigtop'), cellar = after.stages.find(s => s.id === 'cellar'), voidStage = after.stages.find(s => s.id === 'void');
   assert.ok(bigtop.wall[1] > bigtop.wall[0] * 1.5 && bigtop.wall[2] > bigtop.wall[0] * 1.5);
   assert.ok(bigtop.redDoor[0] > bigtop.redDoor[1] * 2 && bigtop.greenDoor[1] > bigtop.greenDoor[0] * 1.4);
   assert.ok(cellar.meanLuminance < 25);
   assert.ok(voidStage.meanLuminance > 200 && voidStage.centre.slice(0, 3).every(n => n > 230));
-  checked('12 stage canvases render; the three reviewed palettes match observed light and colour', { bigtop, cellar, voidStage });
+  checked('All stage canvases render; the three reviewed palettes match observed light and colour', { bigtop, cellar, voidStage });
   assert.ok(after.objects.deterministicAndUnchanged);
   assert.ok(after.objects.projectileHashes.every(o => o.alpha > 0));
   assert.ok(after.objects.trapHashes.every(o => o.alpha > 0));

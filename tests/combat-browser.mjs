@@ -1,3 +1,4 @@
+import { FIGHTERS, STAGES, getDedicatedStage } from '../combat/data.mjs';
 /** End-to-end tests against a running static server. No test-only gameplay hooks. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -46,8 +47,9 @@ try {
   assert.equal(await page.evaluate(()=>window.Encore.profile.settings.rounds),1);
   checked('Settings persist across reload');
   await page.locator('.mode-card[data-mode="training"]').click();
-  assert.equal(await page.locator('.fighter-card').count(),14);
-  assert.equal(await page.locator('.stage-card').count(),12);
+  assert.equal(await page.locator('.fighter-card').count(),FIGHTERS.length);
+  const initialStages=[...STAGES,...['pomni','jax'].map(getDedicatedStage)];
+  assert.deepEqual(await page.locator('.stage-card').evaluateAll(cards=>cards.map(card=>card.dataset.stage)),initialStages.map(stage=>stage.id));
   await page.locator('[data-stage="manor"]').click();
   await page.screenshot({path:path.join(output,'desktop-select.png'),fullPage:true});
   await page.locator('[data-action="start"]').click();

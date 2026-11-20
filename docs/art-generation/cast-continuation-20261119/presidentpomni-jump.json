@@ -1,0 +1,33 @@
+{
+  "id": "presidentpomni-jump",
+  "appearanceId": "presidentpomni",
+  "slot": "jump",
+  "file": "assets/encore/poses/presidentpomni/jump.png",
+  "sourceGenerationId": "exec-950c8a12-7a4f-4dc1-bf86-0041319f49c7",
+  "method": "image_gen.imagegen",
+  "prompt": "One individual transparent RGBA 2D fighting-game sprite of President Pomni. Repose the single approved character in reference1, retaining exact muted blue pantsuit/jacket/lapels, white shirt, pale gray tie, white gloves, black rounded shoes, large white face, brown bob, segmented red-and-blue jester hat with yellow band and both pompons, pinwheel eyes and crisp black outline/cel shading. Preserve same head/body proportions and character identity. Entire full body including hat, hands and feet clearly inside transparent margins, no scenery, floor, background, glow, aura, lettering, labels, speed trails, extra figure or props. Pose: jumping toward right, both feet clearly airborne, one knee lifted and the other leg tucked behind, fists guarding, surprised focused expression.",
+  "referencePaths": [
+    "assets/encore/selection/presidentpomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+  ],
+  "sha256": "30c5ec692725af486840184459e1fa51ac19679a0d3d468f59f280f3bcb0b8f4",
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    14,
+    27,
+    942,
+    1332
+  ],
+  "bytes": 1127239,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu."
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "appearanceId": "abstractingqueenie",
+  "slot": "defeat",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T08:19:03.120011+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: defeated but intact fallen chess queen. Entire rigid queen body tipped steeply diagonally toward screen-left, with crown low and robe base still visible at the opposite end; both small floating hands droop near the torso, normal eye closed tiredly. Preserve the full length of the chess body and long burgundy robe, all crystal spikes and pastel crystal eyes. No blood, damage, dismemberment, invented limbs, floor or shadow. Use enough canvas width to fit the complete diagonal figure with generous clear margins.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedQueenie.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+      "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "bytes": 1667501
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedQueenie.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "f38fb04562693c2e567668532a0667d0672bd3ca91d5f52c4440b582dc5c0c58",
+      "bytes": 2932419,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "sourceGenerationId": "exec-1e8a3875-5e91-4980-8aa4-f7128e192d6f",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-1e8a3875-5e91-4980-8aa4-f7128e192d6f.png",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingqueenie/defeat.png",
+  "targetFile": "assets/encore/poses/abstractingqueenie/defeat.png",
+  "sha256": "2bbf2e14704834800722e40a248289e2e3f1a5677b3deb73d5b1f464c9122893",
+  "bytes": 1563588,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1063426,
+  "alpha12Bounds": [
+    102,
+    13,
+    1403,
+    1015
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Complete rigid queen tipped diagonally left, normal eye closed and exactly two floating hands drooping.",
+      "Scalloped crown, half-crystal face, burgundy ermine robe and crystal base preserved without cropped contour or added limbs.",
+      "Native RGBA transparency retained; no floor or visible background."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  }
+}

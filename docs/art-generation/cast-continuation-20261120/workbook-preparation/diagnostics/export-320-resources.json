@@ -1,0 +1,24 @@
+{
+  "returnCode": -9,
+  "elapsedSeconds": 15.940812822002044,
+  "maximumRSSKiB": 666580,
+  "userSeconds": 27.850729,
+  "systemSeconds": 3.309376,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=320",
+    "--max-semi-space-size=1",
+    "--optimize-for-size",
+    "--no-wasm-tier-up",
+    "--expose-gc",
+    "/tmp/encore-continuation-workbook-20261120-f4gs_4jz/builder.mjs",
+    "--repo-root",
+    "/workspace/scratch/5f5114b49696/CainOS",
+    "--output-dir",
+    "/workspace/scratch/5f5114b49696/outputs/encore-continuation-workbook-20261120",
+    "--confirmed-runtime"
+  ],
+  "environmentOverrides": {
+    "MALLOC_ARENA_MAX": "2"
+  }
+}

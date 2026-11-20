@@ -1,0 +1,29 @@
+{
+  "id": "beachjax-hit",
+  "appearanceId": "beachjax",
+  "slot": "hit",
+  "file": "assets/encore/poses/beachjax/hit.png",
+  "sourceGenerationId": "exec-bc22188a-9964-4132-849b-3cf276c268f8",
+  "method": "image_gen.imagegen",
+  "prompt": "Create ONE complete full-body 2D game sprite of BEACH JAX, reposing the APPROVED attached selection model. Preserve its exact lanky adult cartoon rabbit anatomy, lavender-purple smooth featureless body, two very long purple ears, yellow eyes with simple black rectangular pupils, deadpan small mouth, bare purple cartoon hands, large rounded purple rabbit feet, and the small pink scallop shell fixed securely on the front of the lower belly/hip line. Same clean dark outlines and cel shading, same head/body ratio and colors. No overalls, gloves or shoes, no extra accessories, no new fur or human musculature/anatomical details. Family-friendly smooth cartoon character. Exactly one character, two arms, two legs, two ears; full body from ear tips to feet visible with clear transparent margin. No scenery, shadows, ground, aura, sparks, motion lines, labels, or other figure. Native transparent alpha background. Face generally toward screen-right. Pose: HIT REACTION, body recoiling backward from a strike coming from screen-right, torso tilted back, both open purple hands raised for balance, both feet visible, yellow rectangular-pupil eyes startled. No injury or effects.",
+  "referencePaths": [
+    "assets/encore/selection/beachjax.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "sha256": "c24755a1c21f27bcacf91aaf59ce6c56e8115dccb19413bf2ab80e2f05520e75",
+  "dimensions": [
+    805,
+    1954
+  ],
+  "bytes": 836657,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Distinct backward recoil with both hands open; feet, ears and pink shell remain intact. Reviewed with native alpha composition on a dark background. Lavender featureless cartoon body, long proportions, yellow eyes with rectangular pupils and fixed pink scallop remain consistent; no visible halo, duplicate figure, scenery or cropping."
+}

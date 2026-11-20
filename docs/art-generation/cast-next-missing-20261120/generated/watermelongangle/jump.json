@@ -1,0 +1,71 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "watermelongangle",
+  "fighterId": "gangle",
+  "slot": "jump",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Draw ONE new full-body 2D fighting-game pose of WATERMELON GANGLE. Reference 1 is the accepted selection sprite and locks character identity, elongated proportions, exact costume, palette, two accessory designs and clean cel-shaded line style. Reference 2 is the official merchandise costume authority. Preserve the design of reference 1 exactly; change only the pose described below.\n\nIDENTITY: one white theatrical mask, two large black drooping eyes, two cyan tear drops, small curved mouth and two tiny black seed flecks on the cheek. Broad bright yellow floppy hat, periwinkle band and matching bow on the visible front side, no flower. Periwinkle sweetheart bodice and short pleated skirt with a thin red ribbon waist gap. Neck, torso, exactly two arms and two legs are RED FLAT FLEXIBLE RIBBONS with twists, not human flesh or tubes. Hands and feet are ribbon ends, no human fingers, no shoes. One dark charcoal tapered wooden bat with brown handle held by one ribbon hand; one pink triangular watermelon slice with black seeds, pale rind and green outer rind held by the other. Both props present. No half-watermelon on floor.\n\nKeep head, body and gaze facing SCREEN RIGHT in a readable three-quarter front view, never mirrored. Entire character and both props inside frame, same design and proportions. Clean bold dark contours, saturated flat colors, restrained two-tone cel shading. Native transparent alpha background, no scenery, ground, floor, shadow, puddle, stand or platform; no text, border, UI, sprite sheet or alternate view. No glow, halo, aura, bloom, rim light, sparkles or speed trails. One mask, exactly two arms and two legs; no detached or duplicated limbs. Frame the character SMALLER with generous transparent margin: character and all accessories occupy at most 82 percent of canvas height and width, with at least 8 percent clear empty margin on every edge.\n\nPOSE: An airborne hop toward SCREEN RIGHT: both ribbon legs bend and curl upward beneath the pleated skirt, two distinct ends visible in midair, torso lifted and slightly forward. One ribbon arm carries the bat diagonally beside the body, other hand protects the watermelon slice near chest. No floor or cast shadow; do not make the legs human or shorten ribbon identity.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-ed6d18c2-6227-431a-8ce5-685af50e1b9d.png",
+  "sourceGenerationId": "exec-ed6d18c2-6227-431a-8ce5-685af50e1b9d",
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.png",
+  "targetFile": "assets/encore/poses/watermelongangle/jump.png",
+  "nativeFacing": "right",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_05.png?v=1765572441&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "scope": "Adaptation de la figurine officielle Watermelon Gangle aux proportions élancées du jeu. Distincte de beachgangle (paréo bleu fleuri, fleur rose et noix de coco). La demi-pastèque au sol et le décor de plage sont des éléments de scène exclus. Le ruban arrière peu visible dans la photo est décliné d’après l’anatomie déjà établie de Gangle ; aucune chaussure n’est inventée. Poses statiques originales pour le fan-game, sans certification canonique ni correspondance 1:1 d’épisode.",
+    "observations": [
+      "Bond en l’air, deux jambes de ruban repliées avec extrémités séparées ; batte basse et tranche au buste, aucun socle.",
+      "Un personnage entier orienté à droite, masque intact, deux bras et deux jambes, tenue et accessoires cohérents.",
+      "Alpha composé contrôlé sans halo visible ; aucune découpe ni décor."
+    ],
+    "alphaReview": "Contrôle composé pair-jump-crouch.jpg ; pixels natifs conservés."
+  },
+  "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
+  "bytes": 627177,
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 1219751,
+  "alpha12Bounds": [
+    210,
+    139,
+    984,
+    1113
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T13:26:58.157271+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+      "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+      "bytes": 1527470
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+      "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+      "bytes": 2188514
+    }
+  ]
+}

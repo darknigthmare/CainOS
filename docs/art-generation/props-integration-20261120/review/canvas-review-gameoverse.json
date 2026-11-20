@@ -1,0 +1,100 @@
+{
+  "schema": "encore-recovered-prop-review/v1",
+  "createdAt": "2026-11-20T07:02:21.152Z",
+  "phase": "integrated",
+  "environment": "Node + Skia, production stage-selector Canvas2D renderer; not a browser session",
+  "provenance": "art/sources/recovered-local-props-20261119/manifest.json",
+  "sources": {
+    "art/sources/recovered-local-props-20261119/manifest.json": "471731c1977d9406de5591188b528664c2b04e60fd3d223c2e85a9aa1302b8d1",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10"
+  },
+  "assets": [
+    {
+      "id": "blue-hologram-pedestal",
+      "label": "Piédestal holographique bleu",
+      "source": "art/sources/recovered-local-props-20261119/blue-hologram-pedestal.png",
+      "file": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+      "stageId": "gameoverse",
+      "sha256": "d5728ddf5647786f2c9920ade40fc40de762d1c9a7e4ca9b7c0ed3c34fedc09b",
+      "bytes": 1060878,
+      "dimensions": [
+        1179,
+        1334
+      ],
+      "sourceGenerationId": "exec-2ee5d148-068a-4a6f-b7af-32ad6f0d901e",
+      "nativeCopyVerified": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "gameoverse",
+      "name": "Gameoverse · En orbite",
+      "file": "scene-gameoverse.png",
+      "sha256": "49089d2228f2513c0c4edc61e789c4171f009f527ac36168bd7bac0617c68116",
+      "prop": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+        "coordinates": [
+          134,
+          446,
+          136.1064467766117,
+          154
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "37289aa83bb7cb3a6ecf2b387d6a93ee81fd454712faed0e0ad72670740894e9"
+        },
+        {
+          "camera": 0,
+          "sha256": "ddd958c74fae7400d43e6824cff27d4eac835ae0bfeb43a79612a1d00a18f76c"
+        },
+        {
+          "camera": 1,
+          "sha256": "5b0e00100bb7afe4c7608bb2fac4bf3653a17c29acf81b9678cebdb5ebf55aee"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-gameoverse.png",
+        "baselineSHA256": "2607ca4525d5c3d0118124fde4babf4f7150c50dd8c1a36fe9cd482b380eb504",
+        "changedPixels": 8949,
+        "bounds": {
+          "x": 106,
+          "y": 421,
+          "right": 234,
+          "bottom": 569
+        }
+      }
+    }
+  ],
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "baseline": {
+    "file": "docs/art-generation/props-integration-20261120/before/canvas-review.json",
+    "sha256": "2cb7df4aae3cbcbb51e4a340b91ad94cc10bb65c159615614ca799fd465bd3dd",
+    "phase": "before_integration"
+  },
+  "limitations": [
+    "Original fan-game props; no claim of canonical episode appearance.",
+    "No DOM, input, audio or service-worker verification.",
+    "Visual review is recorded separately from successful rendering."
+  ],
+  "counts": {
+    "sources": 1,
+    "activeProps": 1,
+    "scenes": 1,
+    "cameraViews": 3,
+    "newNativeBytes": 1060878
+  }
+}

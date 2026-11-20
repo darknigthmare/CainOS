@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:45.277Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractinggangle",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractinggangle",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractinggangle/intro.png",
+      "sha256": "cd8c90ffec0b928000b2a93a9c5bb6667aa92dd90f62ff05504d4080b586bafd",
+      "bytes": 1521826,
+      "visibleBounds": {
+        "x": 101,
+        "y": 5,
+        "width": 426,
+        "height": 415
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractinggangle/attack.png",
+      "sha256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "bytes": 1619855,
+      "visibleBounds": {
+        "x": 30,
+        "y": 4,
+        "width": 583,
+        "height": 410
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractinggangle/hit.png",
+      "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "bytes": 1610452,
+      "visibleBounds": {
+        "x": 33,
+        "y": 9,
+        "width": 560,
+        "height": 411
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractinggangle/walk.png",
+      "sha256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "bytes": 1608030,
+      "visibleBounds": {
+        "x": 89,
+        "y": 5,
+        "width": 481,
+        "height": 406
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractinggangle/jump.png",
+      "sha256": "eb633a09ebb1f252692310e43de27cd0c29d9caa5bce17e531e812eaa69940bb",
+      "bytes": 1647743,
+      "visibleBounds": {
+        "x": 113,
+        "y": 3,
+        "width": 429,
+        "height": 408
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractinggangle/crouch.png",
+      "sha256": "f690705f780a769e48baa7279ef63b9268d60de22b1b6c5542df8a2099537823",
+      "bytes": 1615439,
+      "visibleBounds": {
+        "x": 38,
+        "y": 33,
+        "width": 564,
+        "height": 378
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractinggangle/victory.png",
+      "sha256": "7ca2371ab4b6a3ed387fc903daea0e23e88c61566482a3f8c18c691599c5fd64",
+      "bytes": 1547367,
+      "visibleBounds": {
+        "x": 116,
+        "y": 4,
+        "width": 408,
+        "height": 416
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractinggangle/defeat.png",
+      "sha256": "dda58efed31926afb53782ca8f52faddc49f7a457565deec71539c1ccc954e03",
+      "bytes": 1667908,
+      "visibleBounds": {
+        "x": 42,
+        "y": 38,
+        "width": 541,
+        "height": 360
+      },
+      "nativeFacing": -1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractinggangle",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractinggangle/heavy.png",
+      "sha256": "edcb7cff35ed17ab0a06e2ab6203baf77ea38daff87481994c58a231cbff877c",
+      "bytes": 1567434,
+      "visibleBounds": {
+        "x": 32,
+        "y": 3,
+        "width": 577,
+        "height": 414
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractinggangle",
+      "file": "assets/encore/stance/abstractinggangle.png",
+      "sha256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "bytes": 1706313,
+      "nativeFacing": -1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractinggangle",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractinggangle.png",
+      "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "bytes": 1626561,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractinggangle.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

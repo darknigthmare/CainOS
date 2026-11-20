@@ -1,7 +1,10 @@
+import { CROSSOVER_STAGES } from '../combat/crossover-stages.mjs';
+import { getStage } from '../combat/data.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { drawStageScenery, REVIEWED_SCENERY_IDS, SCENERY_ANCHORS, SCENERY_FLOOR } from '../combat/render-stage-scenery.mjs';
 import { stageMotion } from '../combat/render-stage-motion.mjs';
+import { stageCamera, drawStagePlanes } from '../combat/stage-parallax.mjs';
 
 function recorder() {
   const commands = [], stack = [];
@@ -65,4 +68,42 @@ test('ambient sources stay attached to the corridor lights, cooking surface and 
     assert.deepEqual(candleGlows.map(shape => [shape.x, shape.y]), SCENERY_ANCHORS.manor.candles);
   }
   assert.ok(Object.isFrozen(SCENERY_ANCHORS.backstage.lights[0]));
+});
+
+
+test('the camera follows the fighters together, preserves its limits and rests at centre in reduced motion', () => {
+  assert.equal(stageCamera([{ x: 128 }, { x: 1152 }], false), 0);
+  assert.equal(stageCamera([{ x: 0 }, { x: 240 }], false), -1);
+  assert.equal(stageCamera([{ x: 1024 }, { x: 1280 }], false), 1);
+  assert.equal(stageCamera([{ x: 0 }, { x: 240 }], true), 0);
+  assert.equal(stageCamera([{ x: Infinity }], false), 0);
+});
+
+test('all three planes retain overscan and move by different distances behind the fighters', () => {
+  const layers = ['far', 'mid', 'near'];
+  const draws = [0, -1, 1].map(camera => {
+    const commands = [];
+    drawStagePlanes({ drawImage: (...args) => commands.push(args) }, layers, camera);
+    return commands;
+  });
+  for (const commands of draws) {
+    assert.deepEqual(commands.map(([layer]) => layer), layers);
+    assert.ok(commands.every(([, x, y]) => x < 0 && x + 1344 >= 1280 && y < 0 && y + 756 >= 720));
+  }
+  assert.deepEqual(draws[1].map(([, x], i) => x - draws[0][i][1]), [6, 17, 31]);
+  assert.deepEqual(draws[2].map(([, x], i) => x - draws[0][i][1]), [-6, -17, -31]);
+});
+
+test('each crossover world has a credited playable arena and retains the common fight geometry', () => {
+  const queued = CROSSOVER_STAGES.map(stage => stage.series);
+  assert.equal(new Set(queued).size, 9);
+  for (const entry of CROSSOVER_STAGES) {
+    const stage = getStage(entry.id);
+    assert.equal(stage.series, entry.series);
+    assert.equal(stage.floor, 568);
+    assert.equal(stage.width, 1280);
+    assert.deepEqual(stage.bounds, { left: 65, right: 1215 });
+    assert.ok(stage.fidelity.sourceIds.includes(entry.sourceId));
+    assert.match(entry.source, /^https:\/\//);
+  }
 });

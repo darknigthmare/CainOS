@@ -1,4 +1,30 @@
 import { sampleFinisherPresentation } from './finishers.mjs';
+import { ART_FILES } from './offline-manifest.mjs';
+
+const backdrops = new Set(ART_FILES.filter(path => path.startsWith('../assets/encore/finales/')));
+
+// A gallery or a completed match retains just its own display-sized backdrop.
+export async function loadFinisherBackdrop(entry) {
+  const path = `../assets/encore/finales/${entry.fighterId}/${entry.variant}.webp`;
+  if (!backdrops.has(path) || typeof Image === 'undefined') return null;
+  const source = new Image();
+  source.src = new URL(path, import.meta.url).href;
+  try {
+    await source.decode();
+    const backdrop = document.createElement('canvas');
+    backdrop.width = 1280;
+    backdrop.height = 720;
+    const context = backdrop.getContext('2d');
+    if (!context) return null;
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(source, 0, 0, backdrop.width, backdrop.height);
+    return backdrop;
+  } catch {
+    return null;
+  } finally {
+    source.removeAttribute('src');
+  }
+}
 
 /**
  * Forty-two theatrical endings, built from the existing character artwork.
@@ -244,7 +270,7 @@ function stageProps(c, motif, v, reveal, accent, settle) {
   c.restore();
 }
 
-export function drawFinisherScene(ctx, state, entry, frame, { reducedMotion = false, drawActor } = {}) {
+export function drawFinisherScene(ctx, state, entry, frame, { reducedMotion = false, drawActor, backdrop } = {}) {
   const view = sampleFinisherPresentation(entry, frame, { reducedMotion });
   const actors = state?.fighters || [state?.a, state?.b];
   const winner = actors[entry?.winnerIndex], loser = actors[entry?.loserIndex];
@@ -255,11 +281,20 @@ export function drawFinisherScene(ctx, state, entry, frame, { reducedMotion = fa
   const color = definition.color || '#d0b7df';
   ctx.save();
   ctx.beginPath(); ctx.rect(0,84,1280,542); ctx.clip();
-  rect(ctx,0,84,1280,542,'#090b19a6');
+  if (backdrop) {
+    // Keep the illustrated plate's aspect ratio behind both live costume sprites.
+    ctx.drawImage(backdrop, 0, 0);
+    if (reveal < 1) {
+      ctx.save(); ctx.globalAlpha = .28 * (1 - reveal);
+      ctx.fillStyle = '#101222'; ctx.fillRect(0,84,1280,542); ctx.restore();
+    }
+  } else {
+    rect(ctx,0,84,1280,542,'#090b19a6');
+    stageProps(ctx,entry.motif,v,reveal,accent,settle);
+  }
   const glow = ctx.createRadialGradient(640,330,28,640,330,650);
   glow.addColorStop(0,color); glow.addColorStop(1,'#17142400');
-  ctx.save(); ctx.globalAlpha=.11+.07*reveal; ctx.fillStyle=glow;ctx.fillRect(0,84,1280,542);ctx.restore();
-  stageProps(ctx,entry.motif,v,reveal,accent,settle);
+  ctx.save(); ctx.globalAlpha=backdrop ? .04+.055*accent+.045*settle : .11+.07*reveal; ctx.fillStyle=glow;ctx.fillRect(0,84,1280,542);ctx.restore();
   const leftWinner = entry.winnerIndex === 0;
   const presentation = {phase:'matchOver',winner:entry.winnerIndex,roundWinner:entry.winnerIndex,frame:state.frame,presentationFrame:view.frame};
   const winnerX = leftWinner ? 430+v*28 : 850-v*28;

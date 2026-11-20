@@ -1,0 +1,48 @@
+{
+  "appearanceId": "bugtamerkinger",
+  "slot": "jump",
+  "status": "accepted_native",
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: JUMP: entire chess body and robe airborne, slightly forward toward screen RIGHT, free hand raised for balance and hoop hand keeps the ring beside the body; no legs, ground or shadow.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+  ],
+  "executionReferencePaths": [
+    "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+    "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+  ],
+  "transparent_background": true,
+  "nativeFacingRequested": "right",
+  "recovery": {
+    "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+    "supersedesLostNative": {
+      "appearanceId": "bugtamerkinger",
+      "slot": "jump",
+      "sourceGenerationId": "exec-c11573c1-f345-49cd-ae26-0d26be40e2ba",
+      "sha256": "7440856ca0fd2ae4d3dda1fa4ab40da486fae6a7488532743d2ba6d75a185dbc",
+      "bytes": 1063626,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha12Bounds": [
+        55,
+        70,
+        1225,
+        1184
+      ],
+      "nativeFacing": "right",
+      "originalStatus": "accepted_native",
+      "availability": "lost_with_original_workspace",
+      "remoteGitSha": null
+    },
+    "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+    "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+  },
+  "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/jump.json",
+  "sha256": "4846c9be2226b11530b986b193c0b77716daecc7f6c675e6b17aa9d7f1e99f00"
+}

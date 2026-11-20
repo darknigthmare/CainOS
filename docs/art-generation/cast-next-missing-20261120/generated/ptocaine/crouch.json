@@ -1,0 +1,66 @@
+{
+  "appearanceId": "ptocaine",
+  "slot": "crouch",
+  "prompt": "Use case: stylized-concept. Produce ONE new, separate full-body PNG action drawing of PTO Caine for the existing Encore 2D fighting game, with a genuinely transparent background. Reference 1 is the accepted selection illustration: keep its exact identity, standing-game proportions, palette, mint-green sunglasses with yellow translucent lenses, two eye colors under the tint, red denture with white teeth, black top hat and red band, red tailcoat and dark lapels, white shirt front with dark buttons, black bow tie, white cuffed gloves, black trousers and shoes. Reference 2 is the official PTO Caine product, authoritative for the mint/yellow glasses and worn costume only. Use the same crisp dark outlines and polished cel shading as reference 1. Do not copy the original selection pose. ACTION: CROUCH: face RIGHT in a low defensive crouch. Both knees deeply bent, feet separated on the same invisible baseline, upper body slightly forward, both gloved hands guarding the chest and jaw. Maintain the denture shape, top hat and glasses without clipping. Frame the entire single character with clear transparent margins on every side. No chair, glass, cane, beach, ground shadow, oval platform, background, checkerboard, caption, text, watermark, sticker border, duplicate body parts or extra characters. Preserve all native transparency; no glow around the character.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "ptocaine:crouch",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.png",
+  "targetFile": "assets/encore/poses/ptocaine/crouch.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e6331e97-b68c-48d1-8fa5-0e6f1b9a0b26.png",
+  "sourceGenerationId": "exec-e6331e97-b68c-48d1-8fa5-0e6f1b9a0b26",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+      "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+      "bytes": 2507585
+    }
+  ],
+  "dimensions": [
+    1216,
+    1293
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    96,
+    12,
+    1035,
+    1282
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 908977,
+  "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
+  "bytes": 1013805,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T13:35:00.681231+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Accroupissement défensif profond, deux poings devant le torse et deux pieds écartés. Silhouette entière, haut-de-forme intact, lunettes menthe à verres jaunes, habit rouge et pantalon noir conservés."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

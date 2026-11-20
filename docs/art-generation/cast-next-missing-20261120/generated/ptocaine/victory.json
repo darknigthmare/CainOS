@@ -1,0 +1,66 @@
+{
+  "appearanceId": "ptocaine",
+  "slot": "victory",
+  "prompt": "Use case: stylized-concept. Produce ONE new, separate full-body PNG action drawing of PTO Caine for the existing Encore 2D fighting game, with a genuinely transparent background. Reference 1 is the accepted selection illustration: keep its exact identity, standing-game proportions, palette, mint-green sunglasses with yellow translucent lenses, two eye colors under the tint, red denture with white teeth, black top hat and red band, red tailcoat and dark lapels, white shirt front with dark buttons, black bow tie, white cuffed gloves, black trousers and shoes. Reference 2 is the official PTO Caine product, authoritative for the mint/yellow glasses and worn costume only. Use the same crisp dark outlines and polished cel shading as reference 1. Do not copy the original selection pose. ACTION: VICTORY: face RIGHT, stand proudly with one gloved fist raised high in celebration and the other hand at the hip. Both feet planted; broad happy denture smile, sunglasses and top hat still on. Entire raised glove and both shoes in the canvas. No confetti. Frame the entire single character with clear transparent margins on every side. No chair, glass, cane, beach, ground shadow, oval platform, background, checkerboard, caption, text, watermark, sticker border, duplicate body parts or extra characters. Preserve all native transparency; no glow around the character.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "ptocaine:victory",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.png",
+  "targetFile": "assets/encore/poses/ptocaine/victory.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-017bd349-6e54-4c31-92ce-eea78207bca7.png",
+  "sourceGenerationId": "exec-017bd349-6e54-4c31-92ce-eea78207bca7",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+      "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+      "bytes": 2507585
+    }
+  ],
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    142,
+    9,
+    965,
+    1436
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1004974,
+  "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
+  "bytes": 931407,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T13:37:14.481149+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Victoire debout, un poing levé et l’autre main à la hanche ; haut-de-forme, deux gants et deux chaussures entiers. Lunettes menthe à verres jaunes et habit rouge conservés, une seule silhouette tournée vers la droite."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

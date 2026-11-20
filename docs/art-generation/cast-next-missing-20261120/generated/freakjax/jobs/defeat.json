@@ -1,0 +1,16 @@
+{
+  "appearanceId": "freakjax",
+  "fighterId": "jax",
+  "slot": "defeat",
+  "nativeFacing": "right",
+  "prompt": "Use case: identity-preserve / stylized-concept. Reference image 1 is the approved native 2D Freak Jax selection sprite; reference image 2 is the official GLITCH figurine showing the costume. Create ONE NEW full-body game sprite of this EXACT same Freak Jax character, with a genuinely different action pose described below. Preserve proportions, palette, linework and every costume trait from image 1.\nIdentity invariants: bare smooth round golden-yellow head, NO ears on head, TWO solid black rounded-square eyes, NO white eyeballs/pupils/nose/teeth, exactly FIVE small dark-ochre low-face marks. Lavender arms and broad three-toed lavender feet, yellow gloves, coral/salmon intact bib overalls with plain pale-pink rectangular pocket and pale-pink rolled cuffs. Preserve the large folded lavender rabbit-hood-like volume behind the shoulders and its TWO flattened ear-shaped lobes trailing beside/behind the body; do not turn these into a tail, erect ears or separate creature. No torn clothes, added emblems, yellow limbs, new anatomy or invented rear attachments. Keep a front/three-quarter view toward SCREEN-RIGHT so visible design remains supported by the references.\nPOSE: Gentle defeated seated pose facing SCREEN-RIGHT, sitting with shoulders slumped, one yellow-gloved hand resting against the side of the round head, the other on the knee; both legs bent in front with both complete lavender feet visible. Purple draped lobes pool behind. No injury, extra character, floor or shadow.\nArt direction: polished 2D cartoon fighting-game sprite, strong crisp dark outlines, clean flat colors with restrained cel shading, opaque character interior and completely transparent zero-alpha exterior. No 3D texture, background, floor, cast shadow, colored glow, aura, fuzzy fringe, caption, motion trails, speech bubble, particles or framing. Exactly one complete character with two hands and two feet, no collage or duplicated limbs. Portrait or square framing as needed to fit the action, with at least 5 percent transparent padding on all four sides. Do not crop the head, extended fingers, both feet, or long purple lobes. Original fan-game action pose, not an animation sequence or film frame.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_freakJax.png?v=1773977710"
+  ],
+  "reviewer": "tracker_recovery"
+}

@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:46.947Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractingzooble",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractingzooble",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractingzooble/intro.png",
+      "sha256": "022ec3744d2257f97caf4c607610a3bf894add5de0d1c8a2553450838773fe13",
+      "bytes": 1048647,
+      "visibleBounds": {
+        "x": 36,
+        "y": 8,
+        "width": 493,
+        "height": 615
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractingzooble/attack.png",
+      "sha256": "c4f33bd10647267e530adf0e7fe22de91aa09b61f9e29a014e4d99ed18432fb0",
+      "bytes": 1670249,
+      "visibleBounds": {
+        "x": 49,
+        "y": 5,
+        "width": 557,
+        "height": 415
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractingzooble/hit.png",
+      "sha256": "b8f606220d71a6ef37b545635a65418b494d6eeda38f35362d447408229fcfc0",
+      "bytes": 1106562,
+      "visibleBounds": {
+        "x": 40,
+        "y": 6,
+        "width": 483,
+        "height": 626
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractingzooble/walk.png",
+      "sha256": "50a52b5f2eee8b3530cdf01b706a6908d2f381a0877efc30490fd72fc401fcf4",
+      "bytes": 1068416,
+      "visibleBounds": {
+        "x": 74,
+        "y": 5,
+        "width": 457,
+        "height": 617
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractingzooble/jump.png",
+      "sha256": "3510c79529ede62fd8dc93be6ae1525bbe9b61d42849aab648527aaf4a632385",
+      "bytes": 1016107,
+      "visibleBounds": {
+        "x": 67,
+        "y": 3,
+        "width": 507,
+        "height": 510
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractingzooble/crouch.png",
+      "sha256": "af562343875b8ef6754128b7578b7f6207b230c3cb6f7a0d27401c17b085989a",
+      "bytes": 1066986,
+      "visibleBounds": {
+        "x": 73,
+        "y": 15,
+        "width": 498,
+        "height": 558
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractingzooble/victory.png",
+      "sha256": "403fd99056e2d497e7cd975f11f2dfe45ed820782e2850bf8bc5b1f60b6995bf",
+      "bytes": 972489,
+      "visibleBounds": {
+        "x": 97,
+        "y": 3,
+        "width": 389,
+        "height": 625
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractingzooble/defeat.png",
+      "sha256": "3072ada644a0548e901b6baf55f11add26e73f781603cfad5569c87931660d67",
+      "bytes": 1138340,
+      "visibleBounds": {
+        "x": 20,
+        "y": 13,
+        "width": 604,
+        "height": 560
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingzooble",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractingzooble/heavy.png",
+      "sha256": "e655b27bf0f5bbb83331b8186a2246c121445e88f70917d4136bfe39a1b28a2d",
+      "bytes": 1086925,
+      "visibleBounds": {
+        "x": 18,
+        "y": 8,
+        "width": 603,
+        "height": 532
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractingzooble",
+      "file": "assets/encore/stance/abstractingzooble.png",
+      "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "bytes": 959487,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractingzooble",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractingzooble.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractingzooble.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

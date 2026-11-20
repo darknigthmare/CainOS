@@ -1,4 +1,6 @@
+import { CROSSOVER_STAGES, CROSSOVER_STAGE_SOURCES } from './crossover-stages.mjs';
 import { EXPANSION_DEFS } from './roster-expansion.mjs';
+import { COSTUME_ADDITION_SOURCES } from './costume-additions.mjs';
 
 /**
  * Shared provenance for the codex and the planning workbook.
@@ -18,6 +20,8 @@ const episode = (id, title, video, scope) => ({ id, title: `GLITCH — ${title}`
 const still = (id, title, file, scope) => ({ id, title: `GLITCH — ${title}`, url: `https://static.wixstatic.com/media/${file}`, kind: 'Visuel officiel', scope: `${scope} Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue.` });
 const merchandise = (id, title, file, page, scope) => ({ id, title: `GLITCH Store — ${title}`, url: `https://glitchproductions.store/cdn/shop/files/${file}`, kind: 'Produit dérivé officiel', scope: `${scope} Photographie consultée sur https://glitchproductions.store/products/${page}. Ce produit stylisé ne mesure pas les proportions ni les poses de la série.` });
 export const FIDELITY_SOURCES = freeze([
+  ...COSTUME_ADDITION_SOURCES,
+  ...CROSSOVER_STAGE_SOURCES,
   { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle et galerie de la série. La page ne documente ni les règles de combat ni les dimensions du jeu.' },
   episode('ep1', 'Pilot', 'HwAPLk_sQ3w', 'Référence du cirque, de ses résidents, de Caine, Bubble, Kaufmo et des Gloinks. Les plans non décrits dans les visuels consultés restent à revoir.'),
   episode('ep2', 'Candy Carrier Chaos!', '4ofJpOEXrZs', 'Référence de Candy Canyon et de ses personnages. Les attaques du fan-game ne sont pas attestées par ce lien.'),
@@ -619,6 +623,15 @@ export const MOVE_FIDELITY = freeze({
 });
 
 export const STAGE_FIDELITY = freeze({
+  falseexit: record(['ep1', 'glitch-false-exit'],
+    ['Une porte rouge identifiée par le mot EXIT se détache des parois grises du couloir.'],
+    'La piste est élargie pour accueillir deux combattants. Le mobilier, les plafonniers et les distances entre les plans sont recomposés pour Encore.',
+    'Référence visuelle consultée', 'Le visuel officiel renseigne la porte et la palette du couloir. La géométrie du duel est une adaptation.'),
+  ...Object.fromEntries(CROSSOVER_STAGES.map(({ id, sourceId, observed, description }) => [
+    id, record(id === 'showgrounds' ? [sourceId, 'smg4-showgrounds-map'] : [sourceId], [observed],
+      description + ' Les trois plans et le sol horizontal sont composés pour le duel.',
+      'Adaptation crossover documentée', 'La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore.'),
+  ])),
   bigtop: appearance(['ep1', 'glitch-cast', 'glitch-circus-props'], ['Rideaux rouges et accessoires de jeu de grande taille, dont dés et cubes.', 'Damier au sol, murs colorés et portes arrondies dans les vues consultées.'], 'Piste horizontale, limites du ring et perspective simplifiée créées pour le duel.', 'Palette et objets comparés à deux visuels officiels ; disposition complète du chapiteau non reconstruite.'),
   candy: pending(['ep2'], 'La route du convoi et le canyon deviennent une piste horizontale de combat.', 'Épisode 2 identifié ; relief, route, confiseries et lumière à comparer sur des plans du canyon. Le visuel de la cour ne valide pas ce paysage.'),
   manor: pending(['ep3'], 'Salle du manoir reconstruite en décor de duel sans parcours d’exploration.', 'Épisode 3 identifié ; architecture, portraits et bougies à contrôler sur les plans de la salle choisie.'),
@@ -627,6 +640,7 @@ export const STAGE_FIDELITY = freeze({
   void: appearance(['ep1', 'glitch-void'], ['Espace blanc aux nuances bleu pâle et lilas.', 'Bandes et franges multicolores dans le plan de Pomni.'], 'Une limite de sol est nécessaire au duel ; elle constitue une convention de jeu. Le plan de référence ne fournit pas de ring mesurable.', 'Le Vide est comparé à son propre visuel officiel ; le couloir EXIT et le quadrillage sous Candy Canyon correspondent à d’autres lieux.'),
   lake: record([], [], 'Rive issue des décors de CainOS, conservée comme adaptation à vérifier.', 'Source primaire à identifier', 'Aucun visuel primaire précis rattaché à ce décor dans cette revue. Son nom ne constitue pas une validation de lieu canonique.'),
   training: record([], [], 'Grille, repères et espace de mesure entièrement créés pour l’entraînement du fan-game.', 'Création originale', 'Décor utilitaire du jeu ; aucune reproduction d’un lieu de la série revendiquée.'),
+  undermap: appearance(['ep2', 'glitch-undermap'], ['Espace indigo sombre parcouru de grandes lignes quadrillées bleu cobalt.', 'Sol brillant avec perspective et reflets bleus, distinct du Vide blanc du pilote.'], 'Les personnages du visuel sont retirés ; trois plans séparés, une piste horizontale à y568 et des reflets de premier plan composent une arène originale pour Encore. La disposition de la grille et la profondeur sont adaptées au duel.', 'Palette, grille et matière du sol comparées au visuel officiel GLITCH de Pomni et Gummigoo sous la carte. Un seul plan de référence est consulté : aucune géographie complète, mesure du lieu ni animation canonique n’est certifiée.'),
   gloink: pending(['ep1'], 'Le nid devient un ring parsemé de motifs géométriques ; aucune reproduction de sa géographie complète.', 'Pilote identifié ; matière, palette, volumes et disposition du nid à comparer à une séquence primaire.'),
   kingdom: {"sourceIds": ["ep2", "glitch-candy-court"], "observedTraits": ["Architecture de confiserie rouge/rose dans la cour, ouvertures cintrées en retrait et large passage ornementé.", "Volutes de glaçage clair autour du passage, décors arrondis et larges piliers au premier plan.", "Petites ouvertures en arcade dans les façades plus éloignées et sol rose visible."], "combatAdaptation": "La façade générique à deux tours pointues devient une cour recomposée : piliers de premier plan, arcades latérales, ouvertures en retrait, portail large et volutes de glaçage. Les marches de fond restent au-dessus de y568 et ne modifient pas la piste. La symétrie, les proportions, les ornements secondaires et les joints du sol sont des choix lisibles pour le duel.", "reviewStatus": "Référence visuelle consultée — comparaison partielle", "reviewScope": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène."},
   grounds: pending(['ep1'], 'Extérieur du cirque utilisé comme piste de duel avec une pelouse simplifiée.', 'Pilote identifié ; chapiteau, végétation, horizon et éclairage de l’extérieur à comparer sur un plan dédié.'),

@@ -1,0 +1,33 @@
+{
+  "schema": "encore-undermap-generation-prompts-v1",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "planes": [
+    {
+      "plane": "far",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept.\nAsset type: far parallax plane for the Encore 2D combat arena “Sous la carte” (undermap), a Digital Circus fan-game.\nInput image 1 is an official GLITCH environment reference, not a character sheet. Derive a new empty background from the dark blue under-map space shown there. Remove Pomni, Gummigoo and every character completely. Keep the unmistakable deep midnight-indigo surface, electric cobalt-blue square wall grid, restrained blue light bloom and polished digital material.\nCreate ONE finished background plane, native 3840 × 2160 pixels, landscape 16:9, completely opaque. No contact sheet, panels, labels or border.\nComposition: fixed front-facing camera, wall grid fills the upper 79% and a very dark nearly smooth reflective floor fills the bottom 21%. The wall-floor intersection is a straight horizontal line at exactly 78.9% of image height, corresponding to y=568 in a 1280×720 game. Broad square wall cells with soft thin blue edges; slight atmospheric depth, no bright center portal. Keep the entire central combat area spacious and free of objects. This far plane must be beautiful on its own, but the brighter perspective floor grid will be supplied by a separate transparent mid plane. Therefore keep the bottom floor dark and mostly free of strong grid lines. Leave a little unobtrusive image continuation at both horizontal edges for camera bleed.\nStyle: polished cinematic 3D cartoon set, faithful to the reference environment's minimal geometry, darkness and cobalt palette. Crisp at native size with gentle luminous edge softness. No fake texture noise.\nConstraints: no figures, faces, eyes, silhouettes, props, buildings, candy, consoles, platforms, checkerboard transparency, text, UI, watermark, exit doors or space stars. Do not reproduce the characters or their reflections. The fixed horizontal ground, widened composition and parallax separation are fan-game adaptations.",
+      "referencedImages": [
+        "references/glitch-undermap-official.png"
+      ]
+    },
+    {
+      "plane": "mid",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept.\nAsset type: MID transparent parallax plane for the Encore fan-game arena “Sous la carte”.\nInput image 1 is the official dark-blue under-map environment reference from GLITCH. Input image 2 is the approved empty far background and defines the palette and composition. Generate a separate complementary FLOOR plane only, not a duplicate full scene.\nCreate ONE landscape 16:9 PNG, ideally 1672 × 941 pixels to match image 2. It must contain real alpha transparency across the entire upper 73% of the canvas. Across the bottom 27%, draw a complete dark midnight-indigo glossy digital floor, full width, carrying a cobalt-blue square grid in shallow perspective. Its far edge is a level horizontal line at 73% of the canvas height, then floor continues to the lower edge. This position puts the game's fixed standing line y=568/720 safely on the floor. The solid dark floor must occlude any far-background grid beneath it; do not make the lower floor base see-through. Only the soft very narrow edge transition can use partial alpha.\nThe perspective grid is restrained, with broad reflective indigo cells and thin glowing cobalt lines, inspired by the official under-map floor. Reflections show only blue grid light, never figures or objects. Front-facing camera, no tilted horizon, no steps or raised platform. At the standing line near 79% of canvas height, keep surfaces unobstructed and not overly bright. Continue image content off left and right edges for horizontal parallax.\nAbove the floor: absolutely empty transparent pixels, no walls, no sky, no dark rectangle, no checkerboard texture. No character, face, eye, silhouette, object, text, UI or watermark. Match the reference’s minimal polished 3D cartoon digital material. Output only this single mid plane, no preview composition, no labels, no border.",
+      "referencedImages": [
+        "references/glitch-undermap-official.png",
+        "native/far.png"
+      ]
+    },
+    {
+      "plane": "near",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept.\nAsset type: NEAR transparent parallax plane, a subtle foreground reflection overlay for the Encore “Sous la carte” arena.\nReference image 1 is the empty far background, reference image 2 the matching floor plane. Generate a third separate complementary overlay. Keep the same dark indigo and cobalt-blue minimal polished digital environment.\nONE landscape 16:9 PNG, ideally 1672 × 941 pixels matching the references. Real transparent background. The upper 86% of the canvas must remain completely empty with alpha zero. Only in the lowest 14%, create two very restrained pools of soft electric-blue reflected light and a few short, shallow-perspective glossy cobalt tile-edge glints near the lower-left and lower-right edges. Keep the lower middle mostly clear so the floor grid beneath remains legible. These are flat surface reflections, not objects, not fog rising into the fighting space and not another complete floor.\nUse subtle semi-transparent blue light with smooth natural falloff; no hard rectangle, no opacity over the full bottom strip, no repeated full grid. No new geometry at the feet line y=568 in a 1280×720 game. Extend the corner light off the horizontal edges so 31px camera travel stays seamless. Atmosphere is quiet and uncanny, no sparkle spectacle.\nStrictly no wall, no sky, no extra floor base, no character, face, eye, silhouette, character reflection, prop, candy, platform, portal, text, UI, watermark or painted checkerboard. Only this isolated near overlay, not a preview, sheet or composite.",
+      "referencedImages": [
+        "native/far.png",
+        "native/mid.png"
+      ]
+    }
+  ]
+}

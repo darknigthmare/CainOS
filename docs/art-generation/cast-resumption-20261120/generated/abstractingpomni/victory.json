@@ -1,0 +1,77 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingpomni",
+  "slot": "victory",
+  "id": "abstractingpomni-victory",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/victory.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/victory.png",
+  "sourceGenerationId": "exec-fb5468c8-53d4-44c9-b023-329b0cac80bc",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-fb5468c8-53d4-44c9-b023-329b0cac80bc.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. ANATOMICAL SIDE LOCK: the normal RED shoe belongs to the same anatomical side as the CRYSTAL arm. The eye-bearing CRYSTAL foot belongs to the same anatomical side as the BLUE-gloved hand. Trace the legs from their hips and preserve that assignment even when the feet cross or change screen position. POSE: VICTORY facing slightly screen RIGHT: upright confident pose, one arm raised high in celebration, the other near waist, weight on one leg and other foot lightly forward. No trophy, text, glow or accessory.",
+  "checkpointPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: VICTORY facing slightly screen RIGHT: upright confident pose, one arm raised high in celebration, the other near waist, weight on one leg and other foot lightly forward. No trophy, text, glow or accessory.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Upright celebratory pose with crystal fist raised high and the blue-gloved hand on the waist, distinct from selection.",
+      "Near leg has the normal red shoe; opposite leg has the eye-bearing crystal shoe. Face, hat and arm transformation sides remain consistent.",
+      "One complete figure including raised fist, hat tips and both shoes; no trophy or extra accessory."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    21,
+    4,
+    934,
+    1625
+  ],
+  "fullyTransparentPixels": 948941,
+  "sha256": "0eceeb57a339a0f98f92d4c3bdf51f92e1d83ca996a20f455fbf4a9be461882d",
+  "bytes": 1194206,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:32:09.498363+00:00"
+}

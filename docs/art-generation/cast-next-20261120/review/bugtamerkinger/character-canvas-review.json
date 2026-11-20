@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:57:00.433Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "bugtamerkinger",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "bugtamerkinger",
+      "pose": "intro",
+      "file": "assets/encore/poses/bugtamerkinger/intro.png",
+      "sha256": "45416a274fe12e368dff3918ad5473c017eb5bbd3692cd3a3777e5837b705d63",
+      "bytes": 1090351,
+      "visibleBounds": {
+        "x": 25,
+        "y": 24,
+        "width": 558,
+        "height": 604
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "attack",
+      "file": "assets/encore/poses/bugtamerkinger/attack.png",
+      "sha256": "0d767e0f6edab391299b306dcd52d3bdbf2eb0ed381fb1da1e7dab594a89311b",
+      "bytes": 1049007,
+      "visibleBounds": {
+        "x": 36,
+        "y": 36,
+        "width": 585,
+        "height": 584
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "hit",
+      "file": "assets/encore/poses/bugtamerkinger/hit.png",
+      "sha256": "3b2cd31baf415598eff31baa3f8e5c3ea9c233ddab3de668568831104904a075",
+      "bytes": 1155303,
+      "visibleBounds": {
+        "x": 68,
+        "y": 9,
+        "width": 510,
+        "height": 626
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "walk",
+      "file": "assets/encore/poses/bugtamerkinger/walk.png",
+      "sha256": "454d56820858aa9ad5211792458cc554cb891f4fa912dd6425f95d6296c14936",
+      "bytes": 1639317,
+      "visibleBounds": {
+        "x": 42,
+        "y": 17,
+        "width": 583,
+        "height": 402
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "jump",
+      "file": "assets/encore/poses/bugtamerkinger/jump.png",
+      "sha256": "4846c9be2226b11530b986b193c0b77716daecc7f6c675e6b17aa9d7f1e99f00",
+      "bytes": 1072246,
+      "visibleBounds": {
+        "x": 29,
+        "y": 27,
+        "width": 582,
+        "height": 568
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "crouch",
+      "file": "assets/encore/poses/bugtamerkinger/crouch.png",
+      "sha256": "a51c468f38cb727cfea0edca4d0bd44953b7669be87af6a8813c455fb0fa543d",
+      "bytes": 1592030,
+      "visibleBounds": {
+        "x": 47,
+        "y": 60,
+        "width": 566,
+        "height": 347
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "victory",
+      "file": "assets/encore/poses/bugtamerkinger/victory.png",
+      "sha256": "c1cc8da0a99ca184601df02c88a23da67206d66fbc0a9885fbd5e2e48df8002e",
+      "bytes": 1577407,
+      "visibleBounds": {
+        "x": 41,
+        "y": 6,
+        "width": 561,
+        "height": 417
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "defeat",
+      "file": "assets/encore/poses/bugtamerkinger/defeat.png",
+      "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+      "bytes": 1078042,
+      "visibleBounds": {
+        "x": 79,
+        "y": 33,
+        "width": 481,
+        "height": 589
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bugtamerkinger",
+      "pose": "heavy",
+      "file": "assets/encore/poses/bugtamerkinger/heavy.png",
+      "sha256": "43f14e374b895b98de35642798c5e5170c6f2f46ee12c674bf45216bba39f6ce",
+      "bytes": 1022416,
+      "visibleBounds": {
+        "x": 29,
+        "y": 12,
+        "width": 583,
+        "height": 567
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "bugtamerkinger",
+      "file": "assets/encore/stance/bugtamerkinger.png",
+      "sha256": "557f9ee7e9004deba0248c65b82291fae1e5020e3a3afad667bf7b6b572e6180",
+      "bytes": 1126852,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "bugtamerkinger",
+      "archiveId": null,
+      "file": "assets/encore/selection/bugtamerkinger.png",
+      "sha256": "2c4d58c196154f686db40e59c8d99df6f08b1289514aa36fd8766319bf3e4dd3",
+      "bytes": 1047573,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-bugtamerkinger.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

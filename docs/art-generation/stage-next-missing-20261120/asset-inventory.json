@@ -1,0 +1,87 @@
+{
+  "schema": "encore-stage-native-inventory-v1",
+  "asOf": "2026-11-20T13:24:19.328487+00:00",
+  "stageId": "undermap",
+  "logicalCanvas": [
+    1280,
+    720
+  ],
+  "floor": 568,
+  "requestedSizeNote": "The far prompt requested 3840×2160, but the built-in tool delivered 1672×941. Mid and near used that native size. No upscaling, alpha replacement, repainting or image conversion was performed.",
+  "totalNativeBytes": 1821031,
+  "assets": [
+    {
+      "plane": "far",
+      "nativePath": "docs/art-generation/stage-next-missing-20261120/native/far.png",
+      "activePath": "assets/encore/stages/undermap/far.png",
+      "generatedSourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-b47c7924-29e7-48f5-b9d7-570587aff922.png",
+      "tool": "image_gen.imagegen",
+      "bytes": 1163294,
+      "sha256": "8632502788b9f69092ae1cf4b5ae36d9d41af37c9e7155c9475c53879b6ff352",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePreserved": true,
+      "postProcessing": "none",
+      "alphaRange": null
+    },
+    {
+      "plane": "mid",
+      "nativePath": "docs/art-generation/stage-next-missing-20261120/native/mid.png",
+      "activePath": "assets/encore/stages/undermap/mid.png",
+      "generatedSourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-035ee84e-d2b3-45eb-82bd-d9b69d41448e.png",
+      "tool": "image_gen.imagegen",
+      "bytes": 464706,
+      "sha256": "3a27fd151543855490ae95f6250ed127e0bd46c1599b77dff1132ec95f9ac311",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "nativePreserved": true,
+      "postProcessing": "none",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1185569,
+      "alphaPartialPixels": 387783,
+      "alphaOpaquePixels": 0,
+      "nonzeroAlphaBox": [
+        0,
+        183,
+        1672,
+        941
+      ],
+      "aboveHalfMaxAlpha": 1,
+      "atStandingLineCenterAlpha": 253
+    },
+    {
+      "plane": "near",
+      "nativePath": "docs/art-generation/stage-next-missing-20261120/native/near.png",
+      "activePath": "assets/encore/stages/undermap/near.png",
+      "generatedSourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-1c41e8f8-1bf7-4aad-a575-f09320d47e32.png",
+      "tool": "image_gen.imagegen",
+      "bytes": 193031,
+      "sha256": "2e062ba46a9284669b9a19e113dbd1906cafd3f33688c900a22d7217e5869ec1",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "nativePreserved": true,
+      "postProcessing": "none",
+      "alphaRange": [
+        0,
+        90
+      ],
+      "alphaZeroPixels": 1442675,
+      "alphaPartialPixels": 130677,
+      "alphaOpaquePixels": 0,
+      "nonzeroAlphaBox": [
+        0,
+        88,
+        1672,
+        941
+      ],
+      "aboveHalfMaxAlpha": 1,
+      "atStandingLineCenterAlpha": 0
+    }
+  ]
+}

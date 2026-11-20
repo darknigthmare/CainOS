@@ -1,0 +1,20 @@
+{
+  "appearanceId": "animeribbit",
+  "fighterId": "ribbit",
+  "slot": "selection",
+  "prompt": "Use case: identity-preserve.\nAsset type: a full-body selection portrait for the 2D fighting game Digital Circus — Encore.\nReference image 1 is the exact official ANIME RIBBIT costume, face, colours and accessories. Reference image 2 supplies ONLY the existing game's slim full-body frog proportions, clean dark outlines and polished 2D cel-shaded drawing style, not its old bow or bare body.\nCreate one complete Anime Ribbit, recognizably the same green frog as the official reference. Preserve the mint-green muzzle, pink cheek patches and enormous raised oval anime eyes: white outer whites, dark navy pupils, large glossy white highlights and rose/magenta iris areas at the bottom. Preserve the small lower lashes and cheerful wide white open smile. No human hair, no human head.\nCostume locked to official reference: white short-sleeve blouse under pale butter-yellow sleeveless V-neck vest with subtle tan V trim; bright pink collar bow with two long loose tails; a modest pleated bright pink skirt; white socks and rounded very dark navy shoes. Green frog arms/hands and two slim green legs. Keep the same green/mint/pink/yellow palette; no props.\nPose: relaxed upright full-body selection pose, three-quarter body and gaze toward SCREEN-RIGHT, arms comfortably apart with one gentle open-hand gesture, feet separated so both shoes show. Keep costume shapes readable.\nRender one high-quality hand-drawn 2D cel-shaded fighting game sprite, generous transparent margins around the entire head, fingers and both feet. Preserve slender game proportions while faithfully adapting the official costume. True transparent RGBA background, no floor, no shadow halo or glow. No key ring, pendant strap, tag, toy texture, text, watermark, scenery, frame, duplicate character, additional limbs or cropped edges. One character in one image.",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+    "assets/encore/selection/ribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox"
+  ],
+  "status": "needs_correction",
+  "review": [
+    "Official outfit and eye design recognizable; limbs inherited old olive-green colour instead of matching the new green head.",
+    "Remove the coloured halo and use only the single narrow pink sock band visible on merchandise."
+  ]
+}

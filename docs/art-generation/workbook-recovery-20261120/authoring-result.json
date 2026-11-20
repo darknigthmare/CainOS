@@ -1,0 +1,11 @@
+{
+  "status": "prepared-model-awaiting-export",
+  "method": "Workbook.create then toProto",
+  "sourceSHA256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+  "checkpointSHA256": "ee313dcbf58045bf0a3be897d8901c8b483b5e32ef5f2fa76c5747e2654c778d",
+  "formulaCount": 42,
+  "independentFormulaValuesPassed": true,
+  "representativeStatusRecalculationPassed": true,
+  "sourceImportUsed": false,
+  "savedXlsxReimportPassed": false
+}

@@ -1,0 +1,99 @@
+{
+  "appearanceId": "bugtamerkinger",
+  "slot": "attack",
+  "status": "accepted_native",
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: ATTACK: free floating white hand extends in a short forward jab-like gesture toward screen RIGHT; other floating hand keeps the same flaming striped hoop safely beside the robe, butterfly within it; no opponent, strike effect or extra hand.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+  ],
+  "executionReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+  ],
+  "transparent_background": true,
+  "nativeFacingRequested": "right",
+  "recovery": {
+    "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+    "supersedesLostNative": {
+      "appearanceId": "bugtamerkinger",
+      "slot": "attack",
+      "sourceGenerationId": "exec-b1dcdffd-aaa1-44d9-a935-5867dc1f9f77",
+      "sha256": "a4332ca79d91ed4f685b277ff400eb106473e21ba78517756691e251e23d3f1b",
+      "bytes": 1021208,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha12Bounds": [
+        72,
+        71,
+        1188,
+        1196
+      ],
+      "nativeFacing": "right",
+      "originalStatus": "accepted_native",
+      "availability": "lost_with_original_workspace",
+      "remoteGitSha": null
+    },
+    "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+    "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+  },
+  "schema": "encore-native-art-discovery/v1",
+  "method": "image_gen.imagegen",
+  "createdAt": "2026-11-20T10:49:12.863769+00:00",
+  "nativeSourceFile": "/workspace/scratch/212405cce9d0/generated_images/exec-450372e0-463c-4f68-9cc7-85f3c65846f7.png",
+  "sourceGenerationId": "exec-450372e0-463c-4f68-9cc7-85f3c65846f7",
+  "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/attack.png",
+  "targetFile": "assets/encore/poses/bugtamerkinger/attack.png",
+  "sha256": "0d767e0f6edab391299b306dcd52d3bdbf2eb0ed381fb1da1e7dab594a89311b",
+  "bytes": 1049007,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    71,
+    71,
+    1216,
+    1215
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "fullyTransparentPixels": 971180,
+  "nativeFacing": "right",
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+      "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+      "bytes": 1078042
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+      "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+      "bytes": 587257
+    }
+  ],
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "reviewer": "finish_bugtamer",
+    "status": "accepted",
+    "observations": [
+      "Short forward pointing jab gesture, free hand in front at right and hoop hand low behind, matching the requested attack gesture.",
+      "Two detached white hands and no arms or legs; face and gaze point right.",
+      "Bucket/handle/brown grip, purple ermine robe and striped hoop with attached flames and single butterfly remain intact.",
+      "Complete silhouette fits inside transparent margins; native bytes are preserved."
+    ],
+    "scope": "Original static game pose; no episode or frame-by-frame fidelity claim."
+  }
+}

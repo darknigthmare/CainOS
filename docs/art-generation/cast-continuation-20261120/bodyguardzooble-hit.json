@@ -1,0 +1,38 @@
+{
+  "id": "bodyguardzooble-hit",
+  "appearanceId": "bodyguardzooble",
+  "slot": "hit",
+  "file": "assets/encore/poses/bodyguardzooble/hit.png",
+  "sourceGenerationId": "exec-bf85d250-765e-497d-960b-f0c03d9fb7fd",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-1620260f-cffa-4a38-994d-9e5e2c3beb00.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: precise-object-edit. One full-body hit sprite correction. Image 1 is the target and image 2 is the approved anatomy. Move ONLY the YELLOW articulated arm from the incorrect right-side shoulder to its correct shoulder on the LEFT edge of the torso as seen by the viewer. Its open yellow hand is raised defensively in the empty region FAR LEFT of the torso. Make its full shoulder-to-yellow-elbow-to-yellow-hand chain visible on the LEFT. Keep the GREEN spring/pink elbow/straight striped rod/green C-claw arm on the RIGHT exactly as it is. There must be one arm on each side, never two on the right. Do not change head tilt, glasses, antennas, eyes hidden, pink wing, chest triangle, body, legs, feet, pose, colors or 2D art. Preserve the cyan-zigzag red-yellow peg leg on the left and purple leg/boot on the right. True transparent RGBA, opaque character, all tips framed with margins, no shadow, background, haze, glow, text or extra limbs. Correct only the anatomical shoulder sides.",
+  "sha256": "0bca1f04d5b4e4ecf540096ebab9e6bc1d6d6a7735166f81bb5d78d2985e4a0a",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    7,
+    81,
+    975,
+    1515
+  ],
+  "bytes": 1476088,
+  "visualReview": "Targeted arm-side correction visually inspected: yellow articulated arm attaches on image left and green spring/striped/pincer arm on image right. Full pose and unlike legs preserved.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

@@ -1,0 +1,21 @@
+{
+  "source": "current installed reconciled workbook",
+  "files": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "sha256": "aea3c94ea5921f9ed1fd0a4c46b769587c338b2a63d4d70fef8f18a70b0dda5a",
+      "bytes": 708741
+    },
+    "docs/combat-tracker-data.json": {
+      "sha256": "d84353598c621b729098937f9816b5930b960746d85072cbcdd637322157f7c8",
+      "bytes": 4768230
+    },
+    "docs/combat-workbook-verification.json": {
+      "sha256": "7a109393d86a814cdb28129968d2fcf7f072c7da45df61777ef0a8360e18dcfd",
+      "bytes": 25512
+    },
+    "docs/combat-qa-evidence-0.7.0.json": {
+      "sha256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+      "bytes": 588368
+    }
+  }
+}

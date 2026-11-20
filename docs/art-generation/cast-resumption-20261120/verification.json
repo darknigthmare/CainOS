@@ -1,0 +1,106 @@
+{
+  "schema": "encore-resumption-verification/v1",
+  "createdAt": "2026-11-20T09:01:32.957574+00:00",
+  "status": "local_checks_passed_browser_environment_blocked",
+  "generation": {
+    "newAcceptedNativePNGs": 63,
+    "previousPendingNativePNGsActivated": 36,
+    "newActiveNativePNGs": 99,
+    "newCompleteAppearances": 9,
+    "remainingJobsInFrozenCheckpoint": 0,
+    "preservedCheckpointNativePNGs": 102,
+    "completedNovember20Appearances": 15,
+    "november20NativePNGs": 165,
+    "allAdditionalAppearances": 23,
+    "allAdditionalNativePNGs": 253
+  },
+  "nativeIntegrityAudit": {
+    "file": "native-integrity-audit.json",
+    "sha256": "84ccf886a0d302fc16f21f96770770d22be2e9876606db23743ccebdb9c6a8c5",
+    "status": "passed"
+  },
+  "runtimeDirectionReview": {
+    "file": "runtime-direction-review.json",
+    "sha256": "9e7bd6b5ef1a41a9921f5f0d5bb4b47b20be7d265c6566143c6e04bdb37c9bd1",
+    "pass": true
+  },
+  "qa": {
+    "command": "npm run qa",
+    "startedAt": "2026-11-20T08:55:18.125460+00:00",
+    "completedAt": "2026-11-20T08:56:14.722032+00:00",
+    "elapsedSeconds": 56.597,
+    "exitCode": 0,
+    "log": "qa.log",
+    "logSha256": "ae95a2446c777eaa8ab682b2fa5a40e86d60d077ad006039ea029f222383510d",
+    "tests": 404,
+    "passed": 404,
+    "failed": 0,
+    "bothBuildsPassed": true
+  },
+  "canvas": {
+    "appearances": 9,
+    "actions": 81,
+    "stances": 9,
+    "portraits": 9,
+    "drawChecksBothFacings": 180,
+    "missing": 0,
+    "processes": 9,
+    "sources": {
+      "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+      "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+      "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+      "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+      "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+      "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+      "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+      "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+      "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+    }
+  },
+  "visualReview": {
+    "file": "visual-review.json",
+    "sha256": "43180facd7ec7b55b49909e5dc65915585c53798a6f2eb3ebce45dd13973d899"
+  },
+  "buildIntegrity": {
+    "file": "build-integrity.json",
+    "sha256": "5d8e385222bfcd6b041109b7948fc9ecfc726151adde81a5b184f58a74ab3b47",
+    "pass": true
+  },
+  "browser": {
+    "startedAt": "2026-11-20T08:57:19.259977+00:00",
+    "command": "node tests/combat-action-art-browser.mjs",
+    "executablePath": "/usr/bin/chromium",
+    "scope": "Current checkout, action-art browser suite; native Skia evidence is separate.",
+    "origin": "http://127.0.0.1:42071",
+    "exitCode": 1,
+    "status": "environment_blocked_before_navigation",
+    "completedAt": "2026-11-20T08:57:20.263365+00:00",
+    "log": "docs/art-generation/cast-resumption-20261120/browser-action-art.log",
+    "sourceSha256": "237eda4aca80184704e68f0e555cb7afe09444ca74388953dced2fb5d72364b2",
+    "reason": "Chromium process_singleton_posix socket() failed: Operation not permitted; SIGABRT before page navigation.",
+    "browserChecksCompleted": 0
+  },
+  "runtime": {
+    "fighters": 54,
+    "moves": 540,
+    "sharedStages": 22,
+    "costumes": 452,
+    "archive": 179,
+    "additionalAppearances": 23,
+    "characterArt": {
+      "selection": 207,
+      "stance": 128,
+      "poses": 1152
+    },
+    "characterFiles": 1487,
+    "offlineImages": 5590,
+    "offlineBytes": 2860106610,
+    "offlineVersion": "0.7.0-19c3d66b967f",
+    "artVersion": "f9d143077918e2e9"
+  },
+  "tracker": "Installed workbook and three companion files remain byte-identical to previous committed version; no XLSX export attempted in this generation pass.",
+  "limits": [
+    "Current remote CI must be assessed on the new published commit; prior remote success is not reused as a current pass.",
+    "No physical-device test, full body animation or canonical scene-by-scene certification."
+  ]
+}

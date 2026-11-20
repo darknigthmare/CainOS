@@ -1,0 +1,64 @@
+{
+  "schema": "encore-ribbit-independent-review/v1",
+  "reviewer": "audit_github",
+  "observedAt": "2026-11-20T12:43:02.422770+00:00",
+  "status": "passed_with_documented_scope",
+  "blockingFindings": [],
+  "integrityReport": "ribbit-independent-integrity.json",
+  "runtimeReport": "ribbit-independent-runtime.json",
+  "checks": {
+    "acceptedPngs": 22,
+    "uniqueAcceptedPngs": 22,
+    "nativeBytes": 24631738,
+    "byteExactNativeSourceComparisons": 22,
+    "byteExactActiveCopies": 22,
+    "referenceHashComparisons": 44,
+    "oldCostumePrefixPreserved": 462,
+    "addedCostumes": [
+      "animeribbit",
+      "jaxsuitribbit"
+    ],
+    "oldAdditionalDefinitionsPreserved": 33,
+    "offlineImageCount": 5722,
+    "offlineImageDelta": 22,
+    "removedOfflineImages": 0,
+    "allNewImagesNativeFacing": "right"
+  },
+  "visualReview": {
+    "viewed": [
+      "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+      "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+      "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/review/family-alpha-overview.jpg",
+      "docs/art-generation/cast-ribbit-20261120/review/animeribbit/actions-animeribbit.jpg",
+      "docs/art-generation/cast-ribbit-20261120/review/animeribbit/archive-portraits-01.jpg"
+    ],
+    "observations": [
+      "Anime identity, green limbs, cream vest, pink bow/skirt, white socks and dark shoes remain readable across the reviewed output.",
+      "Jax-Suit retains the frog face, lavender hood with two ears and pink bow, coral overalls, yellow gloves and lavender feet.",
+      "The reviews show full silhouettes and independent static poses. Keyring attachments are excluded as described by the adaptation."
+    ],
+    "limitations": [
+      "Comparison uses named merchandise sources and rendered sheets, not episode-by-episode canonical certification.",
+      "No full animation cycle or physical-device performance review was performed."
+    ]
+  },
+  "codeReview": {
+    "runtimeChanges": "Append-only import and definitions; authored fighter kits and simulation modules unchanged.",
+    "browserScope": "Explicit optional filter validates requested IDs; absence of filter retains the full CI catalogue. Failed-load recovery check remains present.",
+    "directions": "All 22 recorded directions map to the existing numeric right-facing default."
+  },
+  "evidenceScope": {
+    "qa": "Observed final qa-result.json reports 405/405 Node tests and both builds passed, with source hashes matching this review.",
+    "canvas": "Observed final canvas-summary.json covers 18 actions, two stances, two portraits and 40 direction checks, no missing image.",
+    "browser": "Observed browser-result.json records launch failure before navigation and zero successful checks. Its offline-manifest hash predates the final manifest; retain as a dated environment attempt, not a final-revision browser validation.",
+    "priorRenderAttempt": "render-before-manifest.log is retained as a historical early attempt; final Canvas result supersedes it."
+  },
+  "sourceHashes": {
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1",
+    "docs/art-generation/cast-ribbit-20261120/generation-completion.json": "c0d909e96d68c2b171b34b45ee6dd87c54e0a69974293602a57bc08d02339e32",
+    "docs/art-generation/cast-ribbit-20261120/qa-result.json": "ca7bd1d5f5e8b25fcfd6cbc27629b55abd5b385ab53127fb0d069ea101d30873",
+    "docs/art-generation/cast-ribbit-20261120/canvas-summary.json": "48b5efd37e9720b51faa835a5f12f62c1c4ae2c74fccafe2aac0b420f5408082"
+  }
+}

@@ -1,3 +1,4 @@
+import { STAGES } from '../combat/data.mjs';
 /** Native Canvas presentation fixtures; not a played duel or canonical-art certification. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -30,7 +31,7 @@ try {
     const { FIGHTERS, STAGES } = await import('/combat/data.mjs');
     const { FIGHTER_SEQUENCES, SEQUENCE_EVENTS, sequencePose } = await import('/combat/render-sequences.mjs');
     const canvas = document.getElementById('fixture'), renderer = new CombatRenderer(canvas), ctx = canvas.getContext('2d', { willReadFrequently: true });
-    const loaded = await renderer.preload(FIGHTERS, STAGES);
+    const loaded = await renderer.preload(FIGHTERS);
     const hash = (y = 0, h = canvas.height, x = 0, w = canvas.width) => {
       const pixels = ctx.getImageData(x, y, w, h).data; let value = 2166136261;
       for (const byte of pixels) value = Math.imul(value ^ byte, 16777619);
@@ -79,8 +80,8 @@ try {
   checked('Le mouvement réduit fige les 70 séquences sur leur présentation finale', 'Comparaison Canvas à 0 et 600 images ; état identique au dernier dessin normal.');
   assert.ok(measurements.draws.every(row => row.first === row.later && row.neutral));
   checked('Une égalité garde les 14 combattants dans une pose neutre stable', 'Aucune séquence de victoire ou de défaite attribuée à une égalité.');
-  assert.equal(measurements.stages.length, 12); assert.ok(measurements.stages.every(row => row.first !== row.later && row.floor === row.floorLater && row.floor === row.baselineFloor));
-  checked('Les 12 arènes s’animent au-dessus du sol sans modifier les pixels de la piste', 'Couche d’ambiance à 0/123 images ; égalité RGBA du sol y568–719 avec le fond statique.');
+  assert.equal(measurements.stages.length, STAGES.length); assert.ok(measurements.stages.every(row => row.first !== row.later && row.floor === row.floorLater && row.floor === row.baselineFloor));
+  checked('Les arènes s’animent au-dessus du sol sans modifier les pixels de la piste', 'Couche d’ambiance à 0/123 images ; égalité RGBA du sol y568–719 avec le fond statique.');
   assert.ok(measurements.unchanged && measurements.stages.every(row => row.unchanged && row.fixed === row.fixedLater));
   checked('Rendu sans mutation des acteurs et des arènes, ambiances figées en mouvement réduit', 'Instantanés avant/après strictement égaux ; Canvas complet identique en mouvement réduit.');
 
@@ -106,8 +107,8 @@ try {
     const { canvas, ctx, renderer, STAGES } = window.sequenceFixture;
     const tile = document.createElement('canvas'); tile.width = 1280; tile.height = 720;
     const previous = renderer.ctx; renderer.ctx = tile.getContext('2d');
-    canvas.width = 1344; canvas.height = 1196;
-    ctx.fillStyle = '#142033'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#f5eddf'; ctx.font = 'bold 25px system-ui'; ctx.textAlign = 'left'; ctx.fillText('12 arènes · ambiances derrière les combattants, sol inchangé', 20, 36);
+    canvas.width = 1344; canvas.height = 68 + Math.ceil(STAGES.length / 3) * 282;
+    ctx.fillStyle = '#142033'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#f5eddf'; ctx.font = 'bold 25px system-ui'; ctx.textAlign = 'left'; ctx.fillText(STAGES.length + ' arènes · ambiances derrière les combattants, sol inchangé', 20, 36);
     STAGES.forEach((stage, index) => {
       renderer.render({ frame: 100, phase: 'fight', stage, fighters: [], traps: [], projectiles: [], fx: [] }, { ambientFrame: 123 });
       const left = index % 3 * 448, top = 65 + Math.floor(index / 3) * 282;

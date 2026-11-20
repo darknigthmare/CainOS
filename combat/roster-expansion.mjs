@@ -11,7 +11,7 @@ export const EXPANSION_DEFS = Object.freeze([
   row('queenie', 'Queenie', 'Le souvenir du chapiteau', 'Soutien', '#c9a7e8', 'ep1', 'kinger', 0.92, 0.98, 1, 215, 76),
   row('kaufmo', 'Kaufmo', 'Le clown d’avant', 'Pression', '#e6a15c', 'ep1', 'ragatha', 1.01, 0.97, 1.03, 235, 84),
   row('ribbit', 'Ribbit', 'La grenouille du groupe', 'Mobilité', '#9fd68a', 'ep1', 'pomni', 0.9, 1.12, 0.96, 190, 74),
-  row('scratch', 'Scratch', 'Le chat rayé', 'Pièges', '#d7b17a', 'ep1', 'jax', 0.96, 1.02, 1, 205, 78),
+  row('scratch', 'Scratch', 'Le chien jaune', 'Pièges', '#d7b17a', 'ep1', 'jax', 0.96, 1.02, 1, 205, 78),
   row('wormo', 'Wormo', 'Le ver du chapiteau', 'Défense', '#b8c47a', 'ep1', 'gangle', 0.98, 0.9, 0.95, 210, 88),
   row('bizco', 'Bizco', 'Le biscuit vivant', 'Endurance', '#dba57d', 'ep1', 'zooble', 1, 0.95, 0.98, 195, 80),
   row('rattie', 'Rattie', 'La rate du cirque', 'Précision', '#b7a9c9', 'ep1', 'jax', 0.94, 1.08, 1.02, 185, 70),

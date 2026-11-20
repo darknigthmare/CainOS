@@ -1,0 +1,14 @@
+{
+  "appearanceId": "animeribbit",
+  "fighterId": "ribbit",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Use case: identity-preserve.\nAsset type: one individual fighting-game pose, Digital Circus — Encore.\nImage 1 is the APPROVED Anime Ribbit game model: preserve its exact green and mint frog skin, giant oval anime eyes with magenta irises/dark navy pupils/white glossy highlights and small lower eyelashes, pink cheeks, white mouth interior, slender frog anatomy and clean dark cel-shaded outlines. Image 2 is the official costume authority.\nLOCK all costume parts: short-sleeved WHITE blouse, PALE BUTTER-YELLOW V-neck sleeveless vest with tan V trim, BRIGHT PINK neck bow with TWO LONG TAILS, modest PINK PLEATED SKIRT, WHITE SOCKS each with ONE narrow pink band, rounded DARK NAVY SHOES. Arms, hands and legs use the SAME cool GREEN as the head, never yellow/olive. Exactly one head, two arms/two hands, two legs/two feet. No added props.\nPOSE:\nHeavy attack: a strong side kick toward SCREEN-RIGHT, one navy shoe extended at waist height, supporting green leg planted, both hands raised for balance. The pleated skirt hangs modestly over the hips with only natural cloth motion, no underwear view. Full kicking shoe and supporting shoe completely inside frame. Clear powerful sideways fighting silhouette, not the light palm-strike pose.\nOne separate full-body polished 2D cel-shaded sprite facing SCREEN-RIGHT. Adapt the whole-body pose, never merely rotate or warp the reference. Keep the character entirely within comfortable transparent margins: full eye tops, hands/fingers and both shoes must be visible. True transparent RGBA background with clean cutout edge; all pixels outside figure zero alpha. No glow, halo, gradient backdrop, ground, cast shadow, text, watermark, second character, speed trails, motion blur or extra limbs. Match the approved model and official costume; original fan-game pose, not a photograph or chibi plush.",
+  "referencePaths": [
+    "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+    "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox"
+  ]
+}

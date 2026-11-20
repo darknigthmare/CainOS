@@ -1,0 +1,33 @@
+{
+  "id": "beachragatha-stance",
+  "appearanceId": "beachragatha",
+  "slot": "stance",
+  "file": "assets/encore/stance/beachragatha.png",
+  "sourceGenerationId": "exec-c4618371-de93-46eb-9540-f68b65dec093",
+  "method": "image_gen.imagegen",
+  "prompt": "One individual transparent RGBA 2D fighting-game sprite of Swimmer Ragatha. Repose the approved single character in reference1, retaining exact adult cloth-doll proportions, red yarn bob, blue button eye at viewer-left and normal eye at viewer-right, orange triangle nose, beige cloth face and limbs, periwinkle swimsuit top and matching bandana bow with pink flower, bright pink HORSE swim ring worn around waist with white muzzle and purple mane/tail, no horn, rounded bare cloth doll feet and mitten hands. Clean detailed 2D cel shading with dark outlines. Preserve all costume details and the full float in every pose. Complete body including head bow, float, limbs and feet inside generous transparent margins. No scene, floor, shadow, background, water, splashes, glow, aura, lettering, watermark, extra person or separate prop. Pose: ready playful combat guard facing screen right, feet planted apart with knees gently bent, both mitten fists raised above the swim ring, friendly determined expression.",
+  "referencePaths": [
+    "assets/encore/selection/beachragatha.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series"
+  ],
+  "sha256": "61df2bd744cf8376bb72d47acb15cc881ea006ece9b64e425267a30e1c74f7d7",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    64,
+    13,
+    892,
+    1517
+  ],
+  "bytes": 1838001,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu. Bouée cheval conservée, sans corne ; deux bras et deux jambes de chiffon."
+}

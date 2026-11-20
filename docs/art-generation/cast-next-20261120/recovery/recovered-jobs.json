@@ -1,0 +1,789 @@
+[
+  {
+    "id": "noirribbit:selection",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "selection",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+    "targetFile": "assets/encore/selection/noirribbit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "assets/encore/selection/ribbit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the exact OFFICIAL COSTUME AND COLOUR authority. Reference 2 supplies the game's character identity, slender proportions and polished 2D drawing style ONLY, not its old clothing. Adapt the official costume to the game character; do not reproduce the short plush/vinyl proportions or the photographed background.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nSelection portrait: full-body standing character, relaxed and clearly readable, body in three-quarter view oriented toward SCREEN-RIGHT. Both feet separated, arms relaxed with one small expressive gesture. Every part of the character and costume fully visible.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:stance",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "stance",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.png",
+    "targetFile": "assets/encore/stance/noirribbit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nCombat stance: face SCREEN-RIGHT, both feet planted apart, knees slightly bent, both hands raised in a readable ready guard. Entire character visible.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:intro",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "intro",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.png",
+    "targetFile": "assets/encore/poses/noirribbit/intro.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nIntro greeting: face SCREEN-RIGHT, one hand lifted in a clear greeting and the other near the torso, slight welcoming step, both feet fully visible. A single held pose.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:attack",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "attack",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.png",
+    "targetFile": "assets/encore/poses/noirribbit/attack.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nLight attack: face SCREEN-RIGHT and extend the forward arm into one straight punch toward SCREEN-RIGHT, other hand near the torso. Slight forward lunge with both feet visible. No opponent, no impact cloud, no trails.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:heavy",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "heavy",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.png",
+    "targetFile": "assets/encore/poses/noirribbit/heavy.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nHeavy attack: face SCREEN-RIGHT in one strong forward lunging strike with the leading arm, rear arm drawn back and knees bent. Distinct from the light jab, a more forceful low forward body commitment; two hands and two feet remain visible. No prop weapon or added effect.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:hit",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "hit",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.png",
+    "targetFile": "assets/encore/poses/noirribbit/hit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nTaking a hit: still oriented toward SCREEN-RIGHT, recoil upper body backward toward screen-left, worried or startled face and open hands, feet braced on the ground. One intact character without injuries or impact effect.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:walk",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "walk",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.png",
+    "targetFile": "assets/encore/poses/noirribbit/walk.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nWalking: face SCREEN-RIGHT, one foot stepping forward to the right and the other behind, natural opposite arm swing, both hands and both feet visible. A clean single-frame walk pose.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:jump",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "jump",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.png",
+    "targetFile": "assets/encore/poses/noirribbit/jump.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nJump: face SCREEN-RIGHT, both feet off the ground with knees bent, arms raised for balance; a readable airborne silhouette. All limbs and costume details fit inside the image with ample space.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:crouch",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "crouch",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.png",
+    "targetFile": "assets/encore/poses/noirribbit/crouch.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nCrouch: face SCREEN-RIGHT, lower into a compact low stance with both knees bent, both feet grounded and both hands held in front of the torso. Maintain the full intact costume and clear limb separation.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:victory",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "victory",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.png",
+    "targetFile": "assets/encore/poses/noirribbit/victory.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nVictory: face SCREEN-RIGHT, celebratory full-body pose with one hand raised overhead and the other on or near the hip, feet planted apart. Cheerful or pleased expression while preserving the costume identity.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "noirribbit:defeat",
+    "appearanceId": "noirribbit",
+    "fighterId": "ribbit",
+    "slot": "defeat",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.png",
+    "targetFile": "assets/encore/poses/noirribbit/defeat.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nDefeat: face SCREEN-RIGHT, one knee down on the ground with the other knee bent up, torso slumped and head lowered, both hands visible in a tired pose. Entire character intact and fully within the frame. No injury, extra character or background.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:selection",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "selection",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+    "targetFile": "assets/encore/selection/kaufmosuitribbit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+      "assets/encore/selection/ribbit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the exact OFFICIAL COSTUME AND COLOUR authority. Reference 2 supplies the game's character identity, slender proportions and polished 2D drawing style ONLY, not its old clothing. Adapt the official costume to the game character; do not reproduce the short plush/vinyl proportions or the photographed background.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nSelection portrait: full-body standing character, relaxed and clearly readable, body in three-quarter view oriented toward SCREEN-RIGHT. Both feet separated, arms relaxed with one small expressive gesture. Every part of the character and costume fully visible.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:stance",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "stance",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.png",
+    "targetFile": "assets/encore/stance/kaufmosuitribbit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nCombat stance: face SCREEN-RIGHT, both feet planted apart, knees slightly bent, both hands raised in a readable ready guard. Entire character visible.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:intro",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "intro",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/intro.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nIntro greeting: face SCREEN-RIGHT, one hand lifted in a clear greeting and the other near the torso, slight welcoming step, both feet fully visible. A single held pose.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:attack",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "attack",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/attack.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nLight attack: face SCREEN-RIGHT and extend the forward arm into one straight punch toward SCREEN-RIGHT, other hand near the torso. Slight forward lunge with both feet visible. No opponent, no impact cloud, no trails.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:heavy",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "heavy",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/heavy.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nHeavy attack: face SCREEN-RIGHT in one strong forward lunging strike with the leading arm, rear arm drawn back and knees bent. Distinct from the light jab, a more forceful low forward body commitment; two hands and two feet remain visible. No prop weapon or added effect.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:hit",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "hit",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/hit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nTaking a hit: still oriented toward SCREEN-RIGHT, recoil upper body backward toward screen-left, worried or startled face and open hands, feet braced on the ground. One intact character without injuries or impact effect.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:walk",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "walk",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/walk.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nWalking: face SCREEN-RIGHT, one foot stepping forward to the right and the other behind, natural opposite arm swing, both hands and both feet visible. A clean single-frame walk pose.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:jump",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "jump",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/jump.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nJump: face SCREEN-RIGHT, both feet off the ground with knees bent, arms raised for balance; a readable airborne silhouette. All limbs and costume details fit inside the image with ample space.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:crouch",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "crouch",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/crouch.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nCrouch: face SCREEN-RIGHT, lower into a compact low stance with both knees bent, both feet grounded and both hands held in front of the torso. Maintain the full intact costume and clear limb separation.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:victory",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "victory",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/victory.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nVictory: face SCREEN-RIGHT, celebratory full-body pose with one hand raised overhead and the other on or near the hip, feet planted apart. Cheerful or pleased expression while preserving the costume identity.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "kaufmosuitribbit:defeat",
+    "appearanceId": "kaufmosuitribbit",
+    "fighterId": "ribbit",
+    "slot": "defeat",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.png",
+    "targetFile": "assets/encore/poses/kaufmosuitribbit/defeat.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nDefeat: face SCREEN-RIGHT, one knee down on the ground with the other knee bent up, torso slumped and head lowered, both hands visible in a tired pose. Entire character intact and fully within the frame. No injury, extra character or background.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details."
+  },
+  {
+    "id": "showtimepomni:selection",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "selection",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+    "targetFile": "assets/encore/selection/showtimepomni.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection-rejected-v1.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. NATIVE DESIGN CORRECTION for Showtime Pomni selection sprite. Reference 1 is an UNAPPROVED draft which needs one exact costume correction. Reference 2 is the official merchandise costume authority.\n\nPreserve the entire draft's face, red/blue jester hat with two yellow pompons, cream feather above the hat, brown bob, gold leotard, cream decorative feather train, slender white arms and legs, gold shoes, full-body standing pose and polished 2D cel-shaded drawing style. REMOVE BOTH GOLD WRIST CUFFS / BRACELETS entirely. Her two wrists must be plain continuous white, with her white hands directly attached to the white forearms. No wrist accessory, band, bracelet, glove cuff, gold cuff, jewellery, sleeve trim or added clothing at either wrist. This is essential: the official photo has plain white hands and arms.\n\nExactly one Pomni, one head, two arms, two hands, two legs, two feet. Keep the same three-quarter SCREEN-RIGHT facing, worried expression, eyes with red/blue pinwheel pupils, and exactly two jester-hat pompons. Cream feathers are costume decorations behind the hips and on the hat, never extra limbs or wings. Entire figure and every feather tip fully inside the frame with generous transparent safety margins. True transparent RGBA background. No stage, floor, shadow, glow, motion effect, text, logo or other character.",
+    "portableReferences": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection-rejected-v1.png",
+        "sha256": "89b5a374baa92f722ccda6234cfbe9eb84cb3cfbbfa11c7c3f3cd9641b1579f6",
+        "bytes": 1646709
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png",
+        "sha256": "bec04843bed096f25d3a6dfb7412e1a53f396af74da8b869ae6c26ca6df3dd3a",
+        "bytes": 6483950
+      }
+    ]
+  },
+  {
+    "id": "showtimepomni:stance",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "stance",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/stance.png",
+    "targetFile": "assets/encore/stance/showtimepomni.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nCombat stance: face SCREEN-RIGHT, both feet planted apart, knees slightly bent, both hands raised in a readable ready guard. Entire character visible.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly."
+  },
+  {
+    "id": "showtimepomni:intro",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "intro",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/intro.png",
+    "targetFile": "assets/encore/poses/showtimepomni/intro.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nIntro greeting: face SCREEN-RIGHT, one hand lifted in a clear greeting and the other near the torso, slight welcoming step, both feet fully visible. A single held pose.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly."
+  },
+  {
+    "id": "showtimepomni:attack",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "attack",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/attack.png",
+    "targetFile": "assets/encore/poses/showtimepomni/attack.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nLight attack: face SCREEN-RIGHT and extend the forward arm into one straight punch toward SCREEN-RIGHT, other hand near the torso. Slight forward lunge with both feet visible. No opponent, no impact cloud, no trails.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly."
+  },
+  {
+    "id": "showtimepomni:heavy",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "heavy",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/heavy.png",
+    "targetFile": "assets/encore/poses/showtimepomni/heavy.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nHeavy attack: face SCREEN-RIGHT in one strong forward lunging strike with the leading arm, rear arm drawn back and knees bent. Distinct from the light jab, a more forceful low forward body commitment; two hands and two feet remain visible. No prop weapon or added effect.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly."
+  },
+  {
+    "id": "showtimepomni:hit",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "hit",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/hit.png",
+    "targetFile": "assets/encore/poses/showtimepomni/hit.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/hit-rejected-v1.png",
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. NATIVE HAND ANATOMY CORRECTION for the Showtime Pomni HIT pose. Reference 1 is an UNAPPROVED hit-pose draft. Reference 2 is the approved character design and hand anatomy.\n\nKeep the entire hit-pose draft unchanged in overall drawing and pose: frightened Pomni recoils to screen-left but faces SCREEN-RIGHT, both open hands raised, both legs braced, full gold leotard, plain white arms/legs, gold shoes, red-and-blue jester hat with two yellow pompons, one cream hat feather and cream feather train behind the hips. Preserve the composition, face, pinwheel pupils, colour placement, all clothing and polished 2D cel style.\n\nCorrect BOTH open hands to have EXACTLY FOUR DIGITS EACH: one thumb plus THREE longer rounded fingers, matching the four-digit cartoon hands in reference 2. There must NOT be five digits on either hand. Remove the extra finger naturally from each open hand. Clear simple four-digit silhouettes, no fused or broken fingers. Both wrists remain plain white without cuffs, bracelets or bands.\n\nOne complete Pomni, exactly two arms, two hands, two legs and two feet. Entire character from uppermost feather tip to both soles fully inside generous transparent margins. True transparent RGBA background; no floor, stage, shadows, glow, effect, text or duplicate character.",
+    "portableReferences": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/hit-rejected-v1.png",
+        "sha256": "e12b8dec63c4fa759571f16d1d44e1732144ff7ec1962666da2908c3853eecdc",
+        "bytes": 1648301
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "d17cc174b27cc1912aec9c6140f75459a2198b551866ebdd2b1c28cb16a0300b",
+        "bytes": 1628606
+      }
+    ]
+  },
+  {
+    "id": "showtimepomni:walk",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "walk",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/walk.png",
+    "targetFile": "assets/encore/poses/showtimepomni/walk.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nWalking: face SCREEN-RIGHT, one foot stepping forward to the right and the other behind, natural opposite arm swing, both hands and both feet visible. A clean single-frame walk pose.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.\n\nHAND ANATOMY LOCK: Each hand has exactly FOUR cartoon digits in total: one thumb and THREE fingers, as in the approved selection. Never five digits. Both hands remain anatomically intact and plain white."
+  },
+  {
+    "id": "showtimepomni:jump",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "jump",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/jump.png",
+    "targetFile": "assets/encore/poses/showtimepomni/jump.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nJump: face SCREEN-RIGHT, both feet off the ground with knees bent, arms raised for balance; a readable airborne silhouette. All limbs and costume details fit inside the image with ample space.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.\n\nHAND ANATOMY LOCK: Each hand has exactly FOUR cartoon digits in total: one thumb and THREE fingers, as in the approved selection. Never five digits. Both hands remain anatomically intact and plain white."
+  },
+  {
+    "id": "showtimepomni:crouch",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "crouch",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/crouch.png",
+    "targetFile": "assets/encore/poses/showtimepomni/crouch.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nCrouch: face SCREEN-RIGHT, lower into a compact low stance with both knees bent, both feet grounded and both hands held in front of the torso. Maintain the full intact costume and clear limb separation.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.\n\nHAND ANATOMY LOCK: Each hand has exactly FOUR cartoon digits in total: one thumb and THREE fingers, as in the approved selection. Never five digits. Both hands remain anatomically intact and plain white."
+  },
+  {
+    "id": "showtimepomni:victory",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "victory",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/victory.png",
+    "targetFile": "assets/encore/poses/showtimepomni/victory.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nVictory: face SCREEN-RIGHT, celebratory full-body pose with one hand raised overhead and the other on or near the hip, feet planted apart. Cheerful or pleased expression while preserving the costume identity.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.\n\nHAND ANATOMY LOCK: Each hand has exactly FOUR cartoon digits in total: one thumb and THREE fingers, as in the approved selection. Never five digits. Both hands remain anatomically intact and plain white."
+  },
+  {
+    "id": "showtimepomni:defeat",
+    "appearanceId": "showtimepomni",
+    "fighterId": "pomni",
+    "slot": "defeat",
+    "status": "accepted_native",
+    "method": "image_gen.imagegen",
+    "transparent_background": true,
+    "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+    "targetFile": "assets/encore/poses/showtimepomni/defeat.png",
+    "referencePaths": [
+      "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+    ],
+    "sourceURLs": [
+      "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+    ],
+    "sourceKind": "Produit dérivé officiel",
+    "episodeFidelityClaim": false,
+    "desiredNativeFacing": "right",
+    "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nDefeat: face SCREEN-RIGHT, one knee down on the ground with the other knee bent up, torso slumped and head lowered, both hands visible in a tired pose. Entire character intact and fully within the frame. No injury, extra character or background.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.\n\nHAND ANATOMY LOCK: Each hand has exactly FOUR cartoon digits in total: one thumb and THREE fingers, as in the approved selection. Never five digits. Both hands remain anatomically intact and plain white."
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "strongmanorbsman",
+  "slot": "victory",
+  "status": "rejected_visual",
+  "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.png",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-3c8d5bd3-81d2-475b-912e-de8384e81589.png",
+  "sourceGenerationId": "exec-3c8d5bd3-81d2-475b-912e-de8384e81589",
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the accepted game selection and the strict design lock for proportions, shape, colours, shading and every prop. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: STRONGMAN ORBSMAN from the official Side Show merchandise. One blue-violet character made entirely of connected polished rounded spheres: large head, smaller round torso and pelvis, two arms of spheres ending in two spherical hands without fingers, two legs of spheres ending in rounded feet. Two huge white eyes with black pupils, thick black eyebrows and small mint sweat drops. No mouth, clothing or human musculature. Preserve the official ball topology. One single silver barbell with exactly TWO big red spherical weights, one at each end, carried by the two round hands. Keep the entire bar and both red weights inside the frame. POSE: VICTORY: a proud relaxed strongman celebration, standing tall with feet wide and head tipped proudly upward while facing screen RIGHT. Both SHORT spherical arms remain bent close to the torso. Hold the same single barbell diagonally across the FRONT OF THE CHEST, its right red weight a little higher near shoulder level and left red weight near waist level. Keep hands BELOW THE FACE, not overhead. Confident raised eyebrows. Keep TWO stacked trunk spheres (chest and pelvis), each arm has exactly FOUR spheres including its round hand, and the three small spheres plus rounded foot of each leg. Do not lengthen arms or add spheres.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+  ],
+  "sha256": "03b95a10e7601822401ec1a4a7e80e390f3404b4a3dd535fc00266add9ae38dd",
+  "bytes": 1535989,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    33,
+    136,
+    998,
+    1449
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "rejectionReason": "Diagonal chest-level celebration restores the two trunk spheres but image-left arm has five spheres including its hand instead of four. Keep this asymmetric topology drift rejected.",
+  "createdAt": "2026-11-20T09:42:47.020032+00:00",
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "bytes": 602038
+    }
+  ]
+}

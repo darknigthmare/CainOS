@@ -19,7 +19,18 @@ export const AUDIO_THEMES = Object.freeze({
   gloink: theme('gloink', 'Géométrie en cavale', 136, 53, [0, 2, 3, 6, 7, 9, 10], [0, 3, 1, 4, null, 2, 5, 3, 6, null, 4, 2, 0, 1, null, 3], [0, 2, 4, 1], 'square', .04),
   kingdom: theme('kingdom', 'Couronne de sucre', 108, 65, major, [0, 4, 2, null, 5, 3, 1, null, 6, 4, 5, 2, null, 3, 1, 0], [0, 4, 5, 3], 'triangle', .08),
   grounds: theme('grounds', 'Tour de piste', 118, 57, [0, 2, 4, 5, 7, 9, 10], [0, 1, 3, 4, null, 2, 1, 5, 4, null, 3, 6, 2, 1, null, 0], [0, 3, 1, 4], 'triangle', .1),
+  falseexit: theme('falseexit', 'Retour au même étage', 84, 55, minor, [0, null, 0, 1, null, 4, 3, null, 0, 1, null, 5, 4, null, 1, null], [0, 3, 1, 4], 'sine', .04),
   backstage: theme('backstage', 'La porte suivante', 104, 59, minor, [0, 2, null, 1, 4, null, 3, 5, 2, 0, null, 4, 6, 3, null, 1], [0, 3, 5, 4], 'sine', .05),
+  coppernine: theme('coppernine', 'Givre magnétique', 90, 50, minor, [0, null, 4, null, 1, 3, null, 6, 5, null, 1, 3, null, 4, 2, null], [0, 4, 1, 5], 'triangle'),
+  silicacity: theme('silicacity', 'Néons sur les toits', 128, 59, minor, [0, 2, 5, null, 4, 2, 1, 5, 6, 3, null, 1, 0, 4, null, 2], [0, 5, 3, 6], 'square', .06),
+  portaurora: theme('portaurora', 'Brise du large', 108, 64, major, [0, 2, null, 4, 5, 3, null, 2, 6, 4, 1, null, 3, 2, null, 0], [0, 3, 1, 4], 'sine', .12),
+  gaslightwharf: theme('gaslightwharf', 'Quai des ombres', 84, 53, minor, [0, null, 2, null, 3, 1, 0, null, 4, null, 3, 6, null, 1, 5, null], [0, 2, 5, 4], 'triangle', .1),
+  parkplanet: theme('parkplanet', 'Jardin suspendu', 96, 65, major, [4, null, 2, 1, 0, 3, null, 5, 4, 6, null, 3, 2, null, 1, 0], [0, 4, 2, 3], 'sine'),
+  gameoverse: theme('gameoverse', 'Orbites de pixels', 132, 58, minor, [0, 4, 2, 5, null, 6, 3, 4, 0, 2, null, 1, 4, 3, 1, null], [0, 3, 6, 4], 'square', .03),
+  littledaisy: theme('littledaisy', 'Après la fermeture', 104, 60, minor, [0, null, 2, 4, null, 5, 3, 1, 4, null, 2, 6, null, 3, 1, 0], [0, 3, 4, 5], 'triangle', .17),
+  showgrounds: theme('showgrounds', 'La grande roue', 120, 62, major, [0, 4, 3, null, 5, 4, 1, 3, null, 6, 4, 2, 3, null, 1, 0], [0, 4, 3, 1], 'triangle', .09),
+  simpleflipisland: theme('simpleflipisland', 'Pas de coco', 126, 67, major, [0, 3, 2, null, 4, 5, 2, 0, 1, null, 4, 6, 3, 2, null, 0], [0, 3, 4, 2], 'sine', .08),
+  undermap: theme('undermap', 'Hors de la carte', 78, 47, minor, [0, null, 4, null, 2, null, 1, 3, null, 5, null, 2, 4, null, 1, null], [0, 5, 2, 4], 'sine'),
 });
 
 // [frequency, end frequency, seconds, delay, waveform, amplitude].

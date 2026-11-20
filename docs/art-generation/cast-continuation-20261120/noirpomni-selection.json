@@ -1,0 +1,44 @@
+{
+  "id": "noirpomni-selection",
+  "appearanceId": "noirpomni",
+  "slot": "selection",
+  "file": "assets/encore/selection/noirpomni.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-024d0234-3d91-4163-bf3f-e33987567528.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+  ],
+  "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/presidentpomni.png"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: individual full-body selection illustration for the Digital Circus Encore game. Create exactly ONE Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy. Selection pose: upright, slightly three-quarter facing screen right, anxious dry expression, one hand near collar and other hanging naturally. Reference image 1 controls this costume's shapes, clothing and monochrome palette; references 2 and 3 control only the crisp clean ink outlines and restrained 2D cel-shaded game style. Keep the original recognizable character anatomy, do not copy the toy's proportions or fabric. True transparent RGBA background. Full entire subject including hat, all ears, hands and all feet/base contained with generous clean transparent padding on every edge. No keychain, metal ring, hanging loop, tag, text, labels, logos, shadows on ground, scenery, floor, frame, extra character, duplicate body, split view, contact sheet, animation sheet, or cropped body. Single centered drawing only. Smooth confident contours, detailed high quality native resolution.",
+  "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-024d0234-3d91-4163-bf3f-e33987567528.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "createdAt": "2026-11-20T04:24:24.363Z",
+  "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot selection is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+  "sha256": "802776e61f9b6b94e505994badfca94aa7be79fcb0e943b9f0698e6bccd99f52",
+  "bytes": 908878,
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    46,
+    34,
+    921,
+    1629
+  ],
+  "visualReviewAt": "2026-11-20T04:48:14.399912+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+  "status": "generated-and-visually-reviewed",
+  "nativeCopyVerified": true,
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

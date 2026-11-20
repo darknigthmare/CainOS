@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:43.670Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractingkinger",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractingkinger",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractingkinger/intro.png",
+      "sha256": "add0d85fb9e6c1629271fac5ced44ee5c2167a4b20d92d03ac19493a1eee6e0d",
+      "bytes": 1058058,
+      "visibleBounds": {
+        "x": 17,
+        "y": 4,
+        "width": 501,
+        "height": 631
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractingkinger/attack.png",
+      "sha256": "3e7b75b4c608e8e1a4e1259d3264cd35723fc84909b56ae922f76fb0992c5582",
+      "bytes": 1043693,
+      "visibleBounds": {
+        "x": 7,
+        "y": 5,
+        "width": 622,
+        "height": 521
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractingkinger/hit.png",
+      "sha256": "4dabc9ebb37b6ad0a24b36cf5a54fd6fe32745e690fa5d621fd5918a9d01869c",
+      "bytes": 1354079,
+      "visibleBounds": {
+        "x": 2,
+        "y": 2,
+        "width": 409,
+        "height": 635
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractingkinger/walk.png",
+      "sha256": "8c86d009a3c9448e6e3ac6f5034ee45d4021aa160e42c7917781386df12cfac6",
+      "bytes": 1097591,
+      "visibleBounds": {
+        "x": 7,
+        "y": 9,
+        "width": 552,
+        "height": 624
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractingkinger/jump.png",
+      "sha256": "60fdb3fc823b91e6a4b01f3da9ba2515f57d6e7b2a3c5af55d4a45a3ba07bfdf",
+      "bytes": 1178703,
+      "visibleBounds": {
+        "x": 16,
+        "y": 3,
+        "width": 566,
+        "height": 631
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractingkinger/crouch.png",
+      "sha256": "a43c8172214584a2f81fe1470d788a60f38658cabdd410630651ab1494d2e9f3",
+      "bytes": 1784750,
+      "visibleBounds": {
+        "x": 15,
+        "y": 4,
+        "width": 602,
+        "height": 422
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractingkinger/victory.png",
+      "sha256": "2ad04b74221ca01ee401b81a3c0b2dae53ff924ea532d1e07de61b9f30029924",
+      "bytes": 1343099,
+      "visibleBounds": {
+        "x": 6,
+        "y": 5,
+        "width": 309,
+        "height": 631
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractingkinger/defeat.png",
+      "sha256": "281efa65161845981ee057ba23327183bedb5dd094777925429125ed27c60ef0",
+      "bytes": 1280084,
+      "visibleBounds": {
+        "x": 8,
+        "y": 15,
+        "width": 625,
+        "height": 300
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingkinger",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractingkinger/heavy.png",
+      "sha256": "2ae28f00ccc858ee709cc243ea6b567f7f471595bbc0ea4b947499b110ed605d",
+      "bytes": 1221845,
+      "visibleBounds": {
+        "x": 6,
+        "y": 11,
+        "width": 628,
+        "height": 499
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractingkinger",
+      "file": "assets/encore/stance/abstractingkinger.png",
+      "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "bytes": 1202856,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractingkinger",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractingkinger.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractingkinger.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

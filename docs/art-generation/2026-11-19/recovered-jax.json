@@ -1,0 +1,44 @@
+{
+  "schema": "encore-art-recovery/v1",
+  "recoveredAt": "2026-11-19",
+  "path": "assets/encore/crossovers/murderdrones/jax/fusion/heavy.png",
+  "source": "Previously generated local image retained from an earlier conversation",
+  "sourceFilename": "exec-19db1409-0bc6-46ec-8a32-f16e8051bb20.png",
+  "sha256": "c79dc60a33a426acac9f7b9dab3fe2d8a68f4388281c99eba116f9fb88b5248b",
+  "byteLength": 1408522,
+  "subject": "Jax — Lièvre de démantèlement — Murder Drones fusion — coup lourd",
+  "generationTool": "image_gen (prior local generated_images output)",
+  "originalPromptAvailable": false,
+  "editHistory": [
+    "Recovered byte for byte; no pixel changes, resizing, cropping or format conversion."
+  ],
+  "format": "PNG",
+  "mode": "RGBA",
+  "width": 1536,
+  "height": 1024,
+  "alpha": {
+    "extrema": [
+      0,
+      254
+    ],
+    "transparentPixels": 1327598,
+    "totalPixels": 1572864,
+    "bounds": [
+      77,
+      5,
+      1518,
+      1008
+    ]
+  },
+  "observedTraits": [
+    "One full-body mechanical lavender rabbit facing right.",
+    "Extended side kick, yellow visor eyes and grin, magenta overall-like armor.",
+    "Transparent exterior with semitransparent edge pixels."
+  ],
+  "classification": "Original fan-game fusion, not a canonical Murder Drones or Digital Circus design.",
+  "review": {
+    "sourceImageInspected": true,
+    "inGameInspection": "Pending after runtime integration.",
+    "canonicalFidelity": "Not certified; compare with the existing Jax fusion selection and stance."
+  }
+}

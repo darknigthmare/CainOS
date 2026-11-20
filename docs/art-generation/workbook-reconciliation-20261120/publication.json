@@ -1,0 +1,15 @@
+{
+  "status": "published_locally_verified",
+  "createdAt": "2026-11-20T12:53:13.973Z",
+  "files": {
+    "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "aea3c94ea5921f9ed1fd0a4c46b769587c338b2a63d4d70fef8f18a70b0dda5a",
+    "combat-tracker-data.json": "d84353598c621b729098937f9816b5930b960746d85072cbcdd637322157f7c8",
+    "combat-workbook-verification.json": "7a109393d86a814cdb28129968d2fcf7f072c7da45df61777ef0a8360e18dcfd"
+  },
+  "historicalQaEvidencePreserved": true,
+  "finalTableReimport": {
+    "companionTables": 9,
+    "preservedNativeTables": 1,
+    "allNativeTableRowsCompared": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitpomni",
+  "slot": "jump",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:37:24.693950+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Draw ONE complete POMNI IN THE JAX SUIT in the approved reference's exact 2D game design. Keep the white face, brown bob/forehead locks, red-and-blue pinwheel irises and orange cheeks, pale lavender rabbit hood with two long rounded ears and small yellow/black eye motifs, lavender covered limbs, yellow gloves, pink short overalls with EXACTLY TWO yellow buttons and ONE bib pocket, and two broad lavender rabbit feet with toe seams. Preserve the reference's proportions, clean dark outlines, colors and detailed cel shading. The small grey toy prop revolver with black grip stays in her anatomical RIGHT glove, lowered or tucked close to the hip, with no firing, flash or projectile. The other glove is empty. No jester hat, bells, ordinary Jax face, new costume piece, extra limb or duplicate accessory. Entire body including both ear tips and both soles inside clear transparent margins, facing screen-right in three-quarter game view. One character, true transparent RGBA, no background, floor, cast shadow, glow, text, logo, watermark or effects. POSE: JUMP. Airborne with both knees folded into a compact leap, feet separated and visible, left glove lifted for balance, right glove holding the one prop close to hip and pointed down. Entire ears and feet within generous margins.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/jax-suit-pomni-plush"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-1914cfcf-d608-405f-b4f0-7209c6e135a8",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-1914cfcf-d608-405f-b4f0-7209c6e135a8.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/jump.png",
+  "targetFile": "assets/encore/poses/jaxsuitpomni/jump.png",
+  "sha256": "7f6ddda1139bacfbca9dcd29f2d59b20b1617554d10bda430ecb1f3ee8dcd1fa",
+  "bytes": 1011058,
+  "dimensions": [
+    1070,
+    1470
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 961499,
+  "alpha12Bounds": [
+    79,
+    24,
+    998,
+    1450
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Airborne pose facing right with both knees bent and feet lifted; two arms and two legs clearly separate.",
+      "Single prop down in right glove and empty left glove open for balance; full ears and soles inside margins."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

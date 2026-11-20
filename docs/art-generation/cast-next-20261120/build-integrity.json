@@ -1,0 +1,1339 @@
+{
+  "schema": "encore-catalog-build-integrity/v1",
+  "createdAt": "2026-11-20T10:58:19.773873+00:00",
+  "status": "passed",
+  "nativeAssetComparisons": 220,
+  "moduleComparisons": 18,
+  "historicalEncoreFilesVerified": 5546,
+  "trackerAndCheckpointsVerified": 6,
+  "copies": [
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/jaxsuitpomni.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/jaxsuitpomni.png",
+      "sha256": "87721dfd7999af3b5d6d564135db0d9d26fcbf641b1514481e8e656ce1812fd4",
+      "bytes": 907265
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/intro.png",
+      "sha256": "b9e304f112d63787fe86306a79968cd9d9abc047cd0307f01246d6afaef8891b",
+      "bytes": 995201
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/attack.png",
+      "sha256": "f6389b18ddf61d4807b1632faaade3470e891be7602b288dbca5e51ef1629307",
+      "bytes": 1385718
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/heavy.png",
+      "sha256": "e6da33491c9140568f1a0594cb608d7a798f8d063267e5afd021b3ea84652c5c",
+      "bytes": 787731
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/hit.png",
+      "sha256": "9232ef394885124ae4be51810aa712363c8b331b3518732e4e25e0f34751caa3",
+      "bytes": 985431
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/walk.png",
+      "sha256": "a1f21e7a09273340c0fb458a92a8d11fe364688bf5927e5630f02dac98ef693e",
+      "bytes": 856379
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/jump.png",
+      "sha256": "7f6ddda1139bacfbca9dcd29f2d59b20b1617554d10bda430ecb1f3ee8dcd1fa",
+      "bytes": 1011058
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/crouch.png",
+      "sha256": "601c6af1d7bb583c7d323b435852f39b092258508850ca983c171dca210e482b",
+      "bytes": 1194779
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/victory.png",
+      "sha256": "310aa01b647b4bf10750a9884fb915dbce90e0fcfac2e6b122a25f8b332b10bf",
+      "bytes": 939039
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitpomni/defeat.png",
+      "sha256": "275824da8abf27b8487c69cd141080d8efac37732a5a0bcf25af0694d31ea780",
+      "bytes": 1098260
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/noirribbit.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "bytes": 1279270
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/noirribbit.png",
+      "sha256": "4630a86d35b9fcd01eefaaf7b71c246cfa334f3a7ebb803fab93ee4442aa31c0",
+      "bytes": 1279890
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/intro.png",
+      "sha256": "680e3640ebe7333951175f8126e9b799956714a7df467c937a990d789a2c1630",
+      "bytes": 1312077
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/attack.png",
+      "sha256": "bd9405b71dadee65c634d56763f9b123cdccfc4ab8ed9960045945e34fa8bc2d",
+      "bytes": 634539
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/heavy.png",
+      "sha256": "31ebd5a9c53ae47ec5cf9a6435378a369e320ec3c6847f14694feda0a050f5b4",
+      "bytes": 1284694
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/hit.png",
+      "sha256": "c7e38f81f34572675481674618d28eb2da7712f2d796a84360fa762b02b7aaf5",
+      "bytes": 1367909
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/walk.png",
+      "sha256": "3aea157537b0149a775293012ef5e56b032160f7ad3177f8520ad699404cbca5",
+      "bytes": 1346053
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/jump.png",
+      "sha256": "834125bf3dddb717eaa715fa409f681ccfdfcbc8e9d707c94c91f242271e7a9b",
+      "bytes": 774755
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/crouch.png",
+      "sha256": "0734c41ad3edf682d31fc37bfb3b860fc0d8baa40b5c6a369f7b1bea447591bd",
+      "bytes": 691865
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/victory.png",
+      "sha256": "2211cde3840d5e26c81df1e7e996722a07a0345a0da4c83d6eb9d33a596e62a3",
+      "bytes": 1311824
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/noirribbit/defeat.png",
+      "sha256": "755ac74442f18e51d29e7f2d52990588cf16b341cf3760954ae355b4044fd119",
+      "bytes": 779208
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/kaufmosuitribbit.png",
+      "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+      "bytes": 1401496
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/kaufmosuitribbit.png",
+      "sha256": "ddd3ccf122e5af6e0b4baf1961018e9fa9ef23f14ba1f0a6bb4964f78fcecd8d",
+      "bytes": 1415133
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/intro.png",
+      "sha256": "7d45ccba02196755a6745575f4fb1fc72173f476992505ee2306d8cf7b8d36b6",
+      "bytes": 1408732
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/attack.png",
+      "sha256": "2b7765bfdb71fa238933ee75c8c9e87c5efe431b8654c81cce57ac0508ea0e8e",
+      "bytes": 1293008
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/heavy.png",
+      "sha256": "a72f3bb28a885e46b07b752eb7e7d606adcb453c28e369366c8210a874c0d5f0",
+      "bytes": 1360039
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/hit.png",
+      "sha256": "c5cccaff1dfbce3d27febcf1310b542766cceb8c8d3cb6f07d39842a0a12c000",
+      "bytes": 1474678
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/walk.png",
+      "sha256": "a3208c7a442461ff9c16c999a7cf6165799241112acdc70fd3fe89ecea3f8547",
+      "bytes": 1465827
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/jump.png",
+      "sha256": "288af00f9612e314effb36d60d0d996a6f5c2710969c933c1e4b32f3e88aa369",
+      "bytes": 724147
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/crouch.png",
+      "sha256": "db8ecaa716c64f39cfddba737642ceb1a75ed0eb15f8e681992c1f9bb6faa5f5",
+      "bytes": 746536
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/victory.png",
+      "sha256": "2bfb6233cb552839f6ecd0809ca5ce9abed38a5c0c4ba6937db483d5c9252b53",
+      "bytes": 1416161
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/kaufmosuitribbit/defeat.png",
+      "sha256": "177a674530a60db4f52b33abcf3ec40aebb94f581576d0e72928cd5f9b4c65e7",
+      "bytes": 786332
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/intermissioncaine.png",
+      "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "bytes": 1315027
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/intermissioncaine.png",
+      "sha256": "f782a57ba22c9239e201fc0e37e119813b339080e0caa2118b6991590cabdffc",
+      "bytes": 1288137
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/intro.png",
+      "sha256": "bfc52f2c77d0cdc8070c7d4e6ff95d19b12ff4e47a40989f11234e7b0a7ebc50",
+      "bytes": 1455421
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/attack.png",
+      "sha256": "f750ba59fc70527075534807de43b6f601cddbe399f891186b9664617910ee21",
+      "bytes": 1275988
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/heavy.png",
+      "sha256": "a9cb44b24a63ab8526c9ed937835a504b628dea81d500d705cf1b3e6ddc8a816",
+      "bytes": 1407275
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/hit.png",
+      "sha256": "e8a38f861078bd9b88255aca4f1d0f6ad73769875dd731c4461a9b5c3a18956d",
+      "bytes": 1330746
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/walk.png",
+      "sha256": "e10b8b2557358341db5989d82dc5b12dfa947b5d2ee79ce630a99d14caf4a6c1",
+      "bytes": 1775213
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/jump.png",
+      "sha256": "e1aa44aa9a728ba02032aa320ac766cfd13bd114522d63b54b4ba4b88a6d5b3c",
+      "bytes": 1208006
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/crouch.png",
+      "sha256": "2249068df3ed2c0637605b3cd8f652b41fcaaca8ce1e5f46a4f3f42f26e1603b",
+      "bytes": 1725115
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/victory.png",
+      "sha256": "ce23e99327ce5ed957cabf0b8ee98779fa215a2f21e303bdc432b44f6616e646",
+      "bytes": 1345739
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/intermissioncaine/defeat.png",
+      "sha256": "451f9b33242bb6a49cb32632337f46c1955789a1b0c6fb6c3d0e591488ed0ffa",
+      "bytes": 1338756
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/showtimepomni.png",
+      "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+      "bytes": 1563975
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/showtimepomni.png",
+      "sha256": "77e43bb3e8b2525b807c05157bcc6c29975db800b451de9b0e29c5804a0df493",
+      "bytes": 1650314
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/intro.png",
+      "sha256": "595696364e07179b2b9c220c6475ded583baafa99ec00267460b8c3e6746ff07",
+      "bytes": 1599167
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/attack.png",
+      "sha256": "e09f808f0f74bfb4051342e214f0b9dc28e9c4075ff093364113a5a87a1006da",
+      "bytes": 909788
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/heavy.png",
+      "sha256": "b2760ed3d00a80c986ab48b0634b04cb4cd83287803b5d680c6baa2ac121dd15",
+      "bytes": 1417130
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/hit.png",
+      "sha256": "46cda1342af6a14f9992ca3ced11e9713130648c5ad8db36821767f172069c7c",
+      "bytes": 1671013
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/walk.png",
+      "sha256": "0eeeb9fde20a63309c001f53bcfe6823f6776dd5d038404dd37324bc609eb873",
+      "bytes": 881860
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/jump.png",
+      "sha256": "3ccc7993d16eb265435ffc3945473c52ed6e810418afeb1c42a57d52c70a2713",
+      "bytes": 983622
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/crouch.png",
+      "sha256": "0cafbba6525b703d4d4c04103483edbac0a94fdb0fbc98243131b777d910ee2d",
+      "bytes": 1369620
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/victory.png",
+      "sha256": "c3d0136ff6c5c0a0542706b83f3a6941020949d5d5304015abf9e48a15826c27",
+      "bytes": 1596596
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/showtimepomni/defeat.png",
+      "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+      "bytes": 1418103
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/bowlingpinragatha.png",
+      "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "bytes": 1487585
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/bowlingpinragatha.png",
+      "sha256": "8881a0a263d6657c52719c12106d91c7e11c177916025a6b30535bbaf2077d3f",
+      "bytes": 1537013
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/intro.png",
+      "sha256": "7be3e6964daaf8ef8acd4f74618df1eaaf6de2367fbaf9e4b085a8cee1085e31",
+      "bytes": 1528385
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/attack.png",
+      "sha256": "cf7640d55180d105b42f89ca6f7fe6e762a25769e624168261dee9822ff90386",
+      "bytes": 870794
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/heavy.png",
+      "sha256": "edf0f13decb21be1d38d57dc91526ad6de62fcc4d1acf814c958f12349778233",
+      "bytes": 1364523
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/hit.png",
+      "sha256": "ee50e3598417b47bc2ea4c5adf6ce18e7e9bb5ca0fbe6ebe8c1c6024a46e633b",
+      "bytes": 895707
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/walk.png",
+      "sha256": "5724adc2c0d3348aaa113fbd6a3a442f68564472d9d3023884e8f04e2d9a66f6",
+      "bytes": 937680
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/jump.png",
+      "sha256": "f0972de871db545f4d49b5de1771209c7fa2adb7eb25f5ff99877b6d09c213e5",
+      "bytes": 1504002
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/crouch.png",
+      "sha256": "c88a839fc994990603af5dad5932703b550605b921921213bdac5b3b7687808b",
+      "bytes": 1416123
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/victory.png",
+      "sha256": "215bc7164b33c47f3a37cb0fa8ab391612de2ef35a3b3fbe6e1e2d40eec137ca",
+      "bytes": 1520523
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bowlingpinragatha/defeat.png",
+      "sha256": "bf778467b9c859be08546fe63eb6cf517c3611eba983155f09e2c027520778e5",
+      "bytes": 1313197
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/ringmastercaine.png",
+      "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+      "bytes": 1539137
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/ringmastercaine.png",
+      "sha256": "9ba904b80bdc7eb238e083d64507fa5056ea21f68d1c4c56b4cf8fe18af9cec1",
+      "bytes": 826247
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/intro.png",
+      "sha256": "08bf3469a66e4a87dd8402f8a61974db34a10aa6d2ae3093cfa78dcac964382f",
+      "bytes": 869376
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/attack.png",
+      "sha256": "d19b1f7281a46c41bbc5bcac672aab9998d4d6ac30fef785d72763febe2f6bb0",
+      "bytes": 1380639
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/heavy.png",
+      "sha256": "cb1a9347e8f0c0251631ad833131a016957eced406403874973089b018ea0293",
+      "bytes": 1448200
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/hit.png",
+      "sha256": "e70d1da481cf75ab2f0732c3a3e56f1cb1f984ee1380b391206e072fa72dea19",
+      "bytes": 972923
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/walk.png",
+      "sha256": "78b73574cf7959957e8188bc7e23a8bfd817b824974e7149a8e7af69a9b2316c",
+      "bytes": 947113
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/jump.png",
+      "sha256": "a6249cb59bc431e47229d6a6071d0ffe47251c8abc960fec643d8b60d49c99b0",
+      "bytes": 973156
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/crouch.png",
+      "sha256": "94d378eb4885b08f729be393c3c1b079ebaa070a3fb96b21b667501f9a2f07bc",
+      "bytes": 1037488
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/victory.png",
+      "sha256": "3bb3d02157bb15f4a0c27a8b0b71df863e26937de70af20c750a43d841895b55",
+      "bytes": 1520084
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/ringmastercaine/defeat.png",
+      "sha256": "d5ae39821002807483e0f75385891e2b2013f62628a39de3ee4cc8c8b9971751",
+      "bytes": 949416
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/strongmanorbsman.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/strongmanorbsman.png",
+      "sha256": "82c5a84824c232f7608b97db29fa4d5a181c0812447e99868f6160cfe9df137d",
+      "bytes": 952869
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/intro.png",
+      "sha256": "98c7993d422bf72a91177c816538a501b6a134acd0624376400624ddc70835ea",
+      "bytes": 924811
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/attack.png",
+      "sha256": "e49508492769e75d1af820243e6a7582d7a537b1801df27c6b98cc4f2a71b34d",
+      "bytes": 1393453
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/heavy.png",
+      "sha256": "ce9b21c555272264eb4fed1085fc1ecab2b5b957493070635d6b72ade255f2ae",
+      "bytes": 853499
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/hit.png",
+      "sha256": "52cef98fbb62e57e13f5ac6c01bcb141f4f94e7ae74ce1f169f8d92085ec5cdd",
+      "bytes": 920170
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/walk.png",
+      "sha256": "fb01709646a9a8b2460c8d29f96d01d163ac528746010d493039b82235cb5e70",
+      "bytes": 1003941
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/jump.png",
+      "sha256": "6be8d309bc4c8e7af6f1057df49aef6f7a02b667d924a22fb997acea6d0b8c52",
+      "bytes": 815559
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/crouch.png",
+      "sha256": "5672a9fa3db78d82c8405dc34a5de4bb708f8af1d91858450b10fd4dad17fc47",
+      "bytes": 872705
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/victory.png",
+      "sha256": "f87735a2e0b4f04db2dd30a7765e73b202b2c764b8dec2584ad38315002391d2",
+      "bytes": 1536055
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/strongmanorbsman/defeat.png",
+      "sha256": "003773700816ca44c00d85351607c3537cfbf937d1710fdbd5610c53ba460b1b",
+      "bytes": 1402930
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/stagehandbubble.png",
+      "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+      "bytes": 820851
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/stagehandbubble.png",
+      "sha256": "2767a833a73e5224d3ee9296c429fd1b2e54783cac760dba4d7331dd8932a1c5",
+      "bytes": 894538
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/intro.png",
+      "sha256": "22a2aef752ee8ddfd8cdec3038ee985a383a9f0e2fcaa353c8808202ec4c1d3a",
+      "bytes": 787318
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/attack.png",
+      "sha256": "0d7ae18fd8e4854097df55ba514b48181ad487bcd0f30de01aeec1bcb001eea1",
+      "bytes": 1314653
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/heavy.png",
+      "sha256": "9f1d80116926a663901bf84f3477307f5448cd0c7ab5c64f92b677ecf8a1d0a5",
+      "bytes": 1331782
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/hit.png",
+      "sha256": "c64f40e2a2d1f4c6a9e936fc075782511a1006db83bab946a89c06523d642c6f",
+      "bytes": 820923
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/walk.png",
+      "sha256": "3b066afee761bc58cd3c502f96d9e9da5b7615ec33f5c1e93211abe0caffdbdf",
+      "bytes": 1280198
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/jump.png",
+      "sha256": "c216a7af8ac9d56c2242e0b5917672a9b7770f92e4f111868c83d85afd876e39",
+      "bytes": 793458
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/crouch.png",
+      "sha256": "2af9fb50ff8bee8cb3c4535f78e8e19535eefb8d013166c33bd5786ed69b0587",
+      "bytes": 907235
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/victory.png",
+      "sha256": "364ae03cb228af1674f3da519a4add3a752453f5e7fc71dede265bc57a173ebb",
+      "bytes": 760684
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/stagehandbubble/defeat.png",
+      "sha256": "ff1b7498c43fd5f705970713f7f9cda38303b9a29a2ad147b934c12aecf4ebe5",
+      "bytes": 1250484
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/bugtamerkinger.png",
+      "sha256": "2c4d58c196154f686db40e59c8d99df6f08b1289514aa36fd8766319bf3e4dd3",
+      "bytes": 1047573
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/bugtamerkinger.png",
+      "sha256": "557f9ee7e9004deba0248c65b82291fae1e5020e3a3afad667bf7b6b572e6180",
+      "bytes": 1126852
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/intro.png",
+      "sha256": "45416a274fe12e368dff3918ad5473c017eb5bbd3692cd3a3777e5837b705d63",
+      "bytes": 1090351
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/attack.png",
+      "sha256": "0d767e0f6edab391299b306dcd52d3bdbf2eb0ed381fb1da1e7dab594a89311b",
+      "bytes": 1049007
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/heavy.png",
+      "sha256": "43f14e374b895b98de35642798c5e5170c6f2f46ee12c674bf45216bba39f6ce",
+      "bytes": 1022416
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/hit.png",
+      "sha256": "3b2cd31baf415598eff31baa3f8e5c3ea9c233ddab3de668568831104904a075",
+      "bytes": 1155303
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/walk.png",
+      "sha256": "454d56820858aa9ad5211792458cc554cb891f4fa912dd6425f95d6296c14936",
+      "bytes": 1639317
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/jump.png",
+      "sha256": "4846c9be2226b11530b986b193c0b77716daecc7f6c675e6b17aa9d7f1e99f00",
+      "bytes": 1072246
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/crouch.png",
+      "sha256": "a51c468f38cb727cfea0edca4d0bd44953b7669be87af6a8813c455fb0fa543d",
+      "bytes": 1592030
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/victory.png",
+      "sha256": "c1cc8da0a99ca184601df02c88a23da67206d66fbc0a9885fbd5e2e48df8002e",
+      "bytes": 1577407
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/bugtamerkinger/defeat.png",
+      "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+      "bytes": 1078042
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/jaxsuitpomni.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/jaxsuitpomni.png",
+      "sha256": "87721dfd7999af3b5d6d564135db0d9d26fcbf641b1514481e8e656ce1812fd4",
+      "bytes": 907265
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/intro.png",
+      "sha256": "b9e304f112d63787fe86306a79968cd9d9abc047cd0307f01246d6afaef8891b",
+      "bytes": 995201
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/attack.png",
+      "sha256": "f6389b18ddf61d4807b1632faaade3470e891be7602b288dbca5e51ef1629307",
+      "bytes": 1385718
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/heavy.png",
+      "sha256": "e6da33491c9140568f1a0594cb608d7a798f8d063267e5afd021b3ea84652c5c",
+      "bytes": 787731
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/hit.png",
+      "sha256": "9232ef394885124ae4be51810aa712363c8b331b3518732e4e25e0f34751caa3",
+      "bytes": 985431
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/walk.png",
+      "sha256": "a1f21e7a09273340c0fb458a92a8d11fe364688bf5927e5630f02dac98ef693e",
+      "bytes": 856379
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/jump.png",
+      "sha256": "7f6ddda1139bacfbca9dcd29f2d59b20b1617554d10bda430ecb1f3ee8dcd1fa",
+      "bytes": 1011058
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/crouch.png",
+      "sha256": "601c6af1d7bb583c7d323b435852f39b092258508850ca983c171dca210e482b",
+      "bytes": 1194779
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/victory.png",
+      "sha256": "310aa01b647b4bf10750a9884fb915dbce90e0fcfac2e6b122a25f8b332b10bf",
+      "bytes": 939039
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitpomni/defeat.png",
+      "sha256": "275824da8abf27b8487c69cd141080d8efac37732a5a0bcf25af0694d31ea780",
+      "bytes": 1098260
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/noirribbit.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "bytes": 1279270
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/noirribbit.png",
+      "sha256": "4630a86d35b9fcd01eefaaf7b71c246cfa334f3a7ebb803fab93ee4442aa31c0",
+      "bytes": 1279890
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/intro.png",
+      "sha256": "680e3640ebe7333951175f8126e9b799956714a7df467c937a990d789a2c1630",
+      "bytes": 1312077
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/attack.png",
+      "sha256": "bd9405b71dadee65c634d56763f9b123cdccfc4ab8ed9960045945e34fa8bc2d",
+      "bytes": 634539
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/heavy.png",
+      "sha256": "31ebd5a9c53ae47ec5cf9a6435378a369e320ec3c6847f14694feda0a050f5b4",
+      "bytes": 1284694
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/hit.png",
+      "sha256": "c7e38f81f34572675481674618d28eb2da7712f2d796a84360fa762b02b7aaf5",
+      "bytes": 1367909
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/walk.png",
+      "sha256": "3aea157537b0149a775293012ef5e56b032160f7ad3177f8520ad699404cbca5",
+      "bytes": 1346053
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/jump.png",
+      "sha256": "834125bf3dddb717eaa715fa409f681ccfdfcbc8e9d707c94c91f242271e7a9b",
+      "bytes": 774755
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/crouch.png",
+      "sha256": "0734c41ad3edf682d31fc37bfb3b860fc0d8baa40b5c6a369f7b1bea447591bd",
+      "bytes": 691865
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/victory.png",
+      "sha256": "2211cde3840d5e26c81df1e7e996722a07a0345a0da4c83d6eb9d33a596e62a3",
+      "bytes": 1311824
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/noirribbit/defeat.png",
+      "sha256": "755ac74442f18e51d29e7f2d52990588cf16b341cf3760954ae355b4044fd119",
+      "bytes": 779208
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/kaufmosuitribbit.png",
+      "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+      "bytes": 1401496
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/kaufmosuitribbit.png",
+      "sha256": "ddd3ccf122e5af6e0b4baf1961018e9fa9ef23f14ba1f0a6bb4964f78fcecd8d",
+      "bytes": 1415133
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/intro.png",
+      "sha256": "7d45ccba02196755a6745575f4fb1fc72173f476992505ee2306d8cf7b8d36b6",
+      "bytes": 1408732
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/attack.png",
+      "sha256": "2b7765bfdb71fa238933ee75c8c9e87c5efe431b8654c81cce57ac0508ea0e8e",
+      "bytes": 1293008
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/heavy.png",
+      "sha256": "a72f3bb28a885e46b07b752eb7e7d606adcb453c28e369366c8210a874c0d5f0",
+      "bytes": 1360039
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/hit.png",
+      "sha256": "c5cccaff1dfbce3d27febcf1310b542766cceb8c8d3cb6f07d39842a0a12c000",
+      "bytes": 1474678
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/walk.png",
+      "sha256": "a3208c7a442461ff9c16c999a7cf6165799241112acdc70fd3fe89ecea3f8547",
+      "bytes": 1465827
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/jump.png",
+      "sha256": "288af00f9612e314effb36d60d0d996a6f5c2710969c933c1e4b32f3e88aa369",
+      "bytes": 724147
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/crouch.png",
+      "sha256": "db8ecaa716c64f39cfddba737642ceb1a75ed0eb15f8e681992c1f9bb6faa5f5",
+      "bytes": 746536
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/victory.png",
+      "sha256": "2bfb6233cb552839f6ecd0809ca5ce9abed38a5c0c4ba6937db483d5c9252b53",
+      "bytes": 1416161
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/kaufmosuitribbit/defeat.png",
+      "sha256": "177a674530a60db4f52b33abcf3ec40aebb94f581576d0e72928cd5f9b4c65e7",
+      "bytes": 786332
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/intermissioncaine.png",
+      "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "bytes": 1315027
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/intermissioncaine.png",
+      "sha256": "f782a57ba22c9239e201fc0e37e119813b339080e0caa2118b6991590cabdffc",
+      "bytes": 1288137
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/intro.png",
+      "sha256": "bfc52f2c77d0cdc8070c7d4e6ff95d19b12ff4e47a40989f11234e7b0a7ebc50",
+      "bytes": 1455421
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/attack.png",
+      "sha256": "f750ba59fc70527075534807de43b6f601cddbe399f891186b9664617910ee21",
+      "bytes": 1275988
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/heavy.png",
+      "sha256": "a9cb44b24a63ab8526c9ed937835a504b628dea81d500d705cf1b3e6ddc8a816",
+      "bytes": 1407275
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/hit.png",
+      "sha256": "e8a38f861078bd9b88255aca4f1d0f6ad73769875dd731c4461a9b5c3a18956d",
+      "bytes": 1330746
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/walk.png",
+      "sha256": "e10b8b2557358341db5989d82dc5b12dfa947b5d2ee79ce630a99d14caf4a6c1",
+      "bytes": 1775213
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/jump.png",
+      "sha256": "e1aa44aa9a728ba02032aa320ac766cfd13bd114522d63b54b4ba4b88a6d5b3c",
+      "bytes": 1208006
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/crouch.png",
+      "sha256": "2249068df3ed2c0637605b3cd8f652b41fcaaca8ce1e5f46a4f3f42f26e1603b",
+      "bytes": 1725115
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/victory.png",
+      "sha256": "ce23e99327ce5ed957cabf0b8ee98779fa215a2f21e303bdc432b44f6616e646",
+      "bytes": 1345739
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/intermissioncaine/defeat.png",
+      "sha256": "451f9b33242bb6a49cb32632337f46c1955789a1b0c6fb6c3d0e591488ed0ffa",
+      "bytes": 1338756
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/showtimepomni.png",
+      "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+      "bytes": 1563975
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/showtimepomni.png",
+      "sha256": "77e43bb3e8b2525b807c05157bcc6c29975db800b451de9b0e29c5804a0df493",
+      "bytes": 1650314
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/intro.png",
+      "sha256": "595696364e07179b2b9c220c6475ded583baafa99ec00267460b8c3e6746ff07",
+      "bytes": 1599167
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/attack.png",
+      "sha256": "e09f808f0f74bfb4051342e214f0b9dc28e9c4075ff093364113a5a87a1006da",
+      "bytes": 909788
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/heavy.png",
+      "sha256": "b2760ed3d00a80c986ab48b0634b04cb4cd83287803b5d680c6baa2ac121dd15",
+      "bytes": 1417130
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/hit.png",
+      "sha256": "46cda1342af6a14f9992ca3ced11e9713130648c5ad8db36821767f172069c7c",
+      "bytes": 1671013
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/walk.png",
+      "sha256": "0eeeb9fde20a63309c001f53bcfe6823f6776dd5d038404dd37324bc609eb873",
+      "bytes": 881860
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/jump.png",
+      "sha256": "3ccc7993d16eb265435ffc3945473c52ed6e810418afeb1c42a57d52c70a2713",
+      "bytes": 983622
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/crouch.png",
+      "sha256": "0cafbba6525b703d4d4c04103483edbac0a94fdb0fbc98243131b777d910ee2d",
+      "bytes": 1369620
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/victory.png",
+      "sha256": "c3d0136ff6c5c0a0542706b83f3a6941020949d5d5304015abf9e48a15826c27",
+      "bytes": 1596596
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/showtimepomni/defeat.png",
+      "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+      "bytes": 1418103
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/bowlingpinragatha.png",
+      "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "bytes": 1487585
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/bowlingpinragatha.png",
+      "sha256": "8881a0a263d6657c52719c12106d91c7e11c177916025a6b30535bbaf2077d3f",
+      "bytes": 1537013
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/intro.png",
+      "sha256": "7be3e6964daaf8ef8acd4f74618df1eaaf6de2367fbaf9e4b085a8cee1085e31",
+      "bytes": 1528385
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/attack.png",
+      "sha256": "cf7640d55180d105b42f89ca6f7fe6e762a25769e624168261dee9822ff90386",
+      "bytes": 870794
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/heavy.png",
+      "sha256": "edf0f13decb21be1d38d57dc91526ad6de62fcc4d1acf814c958f12349778233",
+      "bytes": 1364523
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/hit.png",
+      "sha256": "ee50e3598417b47bc2ea4c5adf6ce18e7e9bb5ca0fbe6ebe8c1c6024a46e633b",
+      "bytes": 895707
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/walk.png",
+      "sha256": "5724adc2c0d3348aaa113fbd6a3a442f68564472d9d3023884e8f04e2d9a66f6",
+      "bytes": 937680
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/jump.png",
+      "sha256": "f0972de871db545f4d49b5de1771209c7fa2adb7eb25f5ff99877b6d09c213e5",
+      "bytes": 1504002
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/crouch.png",
+      "sha256": "c88a839fc994990603af5dad5932703b550605b921921213bdac5b3b7687808b",
+      "bytes": 1416123
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/victory.png",
+      "sha256": "215bc7164b33c47f3a37cb0fa8ab391612de2ef35a3b3fbe6e1e2d40eec137ca",
+      "bytes": 1520523
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bowlingpinragatha/defeat.png",
+      "sha256": "bf778467b9c859be08546fe63eb6cf517c3611eba983155f09e2c027520778e5",
+      "bytes": 1313197
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/ringmastercaine.png",
+      "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+      "bytes": 1539137
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/ringmastercaine.png",
+      "sha256": "9ba904b80bdc7eb238e083d64507fa5056ea21f68d1c4c56b4cf8fe18af9cec1",
+      "bytes": 826247
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/intro.png",
+      "sha256": "08bf3469a66e4a87dd8402f8a61974db34a10aa6d2ae3093cfa78dcac964382f",
+      "bytes": 869376
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/attack.png",
+      "sha256": "d19b1f7281a46c41bbc5bcac672aab9998d4d6ac30fef785d72763febe2f6bb0",
+      "bytes": 1380639
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/heavy.png",
+      "sha256": "cb1a9347e8f0c0251631ad833131a016957eced406403874973089b018ea0293",
+      "bytes": 1448200
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/hit.png",
+      "sha256": "e70d1da481cf75ab2f0732c3a3e56f1cb1f984ee1380b391206e072fa72dea19",
+      "bytes": 972923
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/walk.png",
+      "sha256": "78b73574cf7959957e8188bc7e23a8bfd817b824974e7149a8e7af69a9b2316c",
+      "bytes": 947113
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/jump.png",
+      "sha256": "a6249cb59bc431e47229d6a6071d0ffe47251c8abc960fec643d8b60d49c99b0",
+      "bytes": 973156
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/crouch.png",
+      "sha256": "94d378eb4885b08f729be393c3c1b079ebaa070a3fb96b21b667501f9a2f07bc",
+      "bytes": 1037488
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/victory.png",
+      "sha256": "3bb3d02157bb15f4a0c27a8b0b71df863e26937de70af20c750a43d841895b55",
+      "bytes": 1520084
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/ringmastercaine/defeat.png",
+      "sha256": "d5ae39821002807483e0f75385891e2b2013f62628a39de3ee4cc8c8b9971751",
+      "bytes": 949416
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/strongmanorbsman.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/strongmanorbsman.png",
+      "sha256": "82c5a84824c232f7608b97db29fa4d5a181c0812447e99868f6160cfe9df137d",
+      "bytes": 952869
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/intro.png",
+      "sha256": "98c7993d422bf72a91177c816538a501b6a134acd0624376400624ddc70835ea",
+      "bytes": 924811
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/attack.png",
+      "sha256": "e49508492769e75d1af820243e6a7582d7a537b1801df27c6b98cc4f2a71b34d",
+      "bytes": 1393453
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/heavy.png",
+      "sha256": "ce9b21c555272264eb4fed1085fc1ecab2b5b957493070635d6b72ade255f2ae",
+      "bytes": 853499
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/hit.png",
+      "sha256": "52cef98fbb62e57e13f5ac6c01bcb141f4f94e7ae74ce1f169f8d92085ec5cdd",
+      "bytes": 920170
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/walk.png",
+      "sha256": "fb01709646a9a8b2460c8d29f96d01d163ac528746010d493039b82235cb5e70",
+      "bytes": 1003941
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/jump.png",
+      "sha256": "6be8d309bc4c8e7af6f1057df49aef6f7a02b667d924a22fb997acea6d0b8c52",
+      "bytes": 815559
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/crouch.png",
+      "sha256": "5672a9fa3db78d82c8405dc34a5de4bb708f8af1d91858450b10fd4dad17fc47",
+      "bytes": 872705
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/victory.png",
+      "sha256": "f87735a2e0b4f04db2dd30a7765e73b202b2c764b8dec2584ad38315002391d2",
+      "bytes": 1536055
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/strongmanorbsman/defeat.png",
+      "sha256": "003773700816ca44c00d85351607c3537cfbf937d1710fdbd5610c53ba460b1b",
+      "bytes": 1402930
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/stagehandbubble.png",
+      "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+      "bytes": 820851
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/stagehandbubble.png",
+      "sha256": "2767a833a73e5224d3ee9296c429fd1b2e54783cac760dba4d7331dd8932a1c5",
+      "bytes": 894538
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/intro.png",
+      "sha256": "22a2aef752ee8ddfd8cdec3038ee985a383a9f0e2fcaa353c8808202ec4c1d3a",
+      "bytes": 787318
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/attack.png",
+      "sha256": "0d7ae18fd8e4854097df55ba514b48181ad487bcd0f30de01aeec1bcb001eea1",
+      "bytes": 1314653
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/heavy.png",
+      "sha256": "9f1d80116926a663901bf84f3477307f5448cd0c7ab5c64f92b677ecf8a1d0a5",
+      "bytes": 1331782
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/hit.png",
+      "sha256": "c64f40e2a2d1f4c6a9e936fc075782511a1006db83bab946a89c06523d642c6f",
+      "bytes": 820923
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/walk.png",
+      "sha256": "3b066afee761bc58cd3c502f96d9e9da5b7615ec33f5c1e93211abe0caffdbdf",
+      "bytes": 1280198
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/jump.png",
+      "sha256": "c216a7af8ac9d56c2242e0b5917672a9b7770f92e4f111868c83d85afd876e39",
+      "bytes": 793458
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/crouch.png",
+      "sha256": "2af9fb50ff8bee8cb3c4535f78e8e19535eefb8d013166c33bd5786ed69b0587",
+      "bytes": 907235
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/victory.png",
+      "sha256": "364ae03cb228af1674f3da519a4add3a752453f5e7fc71dede265bc57a173ebb",
+      "bytes": 760684
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/stagehandbubble/defeat.png",
+      "sha256": "ff1b7498c43fd5f705970713f7f9cda38303b9a29a2ad147b934c12aecf4ebe5",
+      "bytes": 1250484
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/bugtamerkinger.png",
+      "sha256": "2c4d58c196154f686db40e59c8d99df6f08b1289514aa36fd8766319bf3e4dd3",
+      "bytes": 1047573
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/bugtamerkinger.png",
+      "sha256": "557f9ee7e9004deba0248c65b82291fae1e5020e3a3afad667bf7b6b572e6180",
+      "bytes": 1126852
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/intro.png",
+      "sha256": "45416a274fe12e368dff3918ad5473c017eb5bbd3692cd3a3777e5837b705d63",
+      "bytes": 1090351
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/attack.png",
+      "sha256": "0d767e0f6edab391299b306dcd52d3bdbf2eb0ed381fb1da1e7dab594a89311b",
+      "bytes": 1049007
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/heavy.png",
+      "sha256": "43f14e374b895b98de35642798c5e5170c6f2f46ee12c674bf45216bba39f6ce",
+      "bytes": 1022416
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/hit.png",
+      "sha256": "3b2cd31baf415598eff31baa3f8e5c3ea9c233ddab3de668568831104904a075",
+      "bytes": 1155303
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/walk.png",
+      "sha256": "454d56820858aa9ad5211792458cc554cb891f4fa912dd6425f95d6296c14936",
+      "bytes": 1639317
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/jump.png",
+      "sha256": "4846c9be2226b11530b986b193c0b77716daecc7f6c675e6b17aa9d7f1e99f00",
+      "bytes": 1072246
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/crouch.png",
+      "sha256": "a51c468f38cb727cfea0edca4d0bd44953b7669be87af6a8813c455fb0fa543d",
+      "bytes": 1592030
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/victory.png",
+      "sha256": "c1cc8da0a99ca184601df02c88a23da67206d66fbc0a9885fbd5e2e48df8002e",
+      "bytes": 1577407
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/bugtamerkinger/defeat.png",
+      "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+      "bytes": 1078042
+    }
+  ],
+  "sources": {
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "tests/combat-costume-additions.test.mjs": "3bcc5f0019273cf6453f50ca3b51c32753f97aa8bfcc5d74893551a4250eb460",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  }
+}

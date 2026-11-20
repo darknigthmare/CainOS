@@ -8,7 +8,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
-import { FIGHTERS, VARIANTS } from '../combat/data.mjs';
+import { COSTUMES, FIGHTERS, VARIANTS } from '../combat/data.mjs';
 import { getFidelitySources } from '../combat/fidelity.mjs';
 import { GAME_VERSION } from '../combat/session.mjs';
 
@@ -43,6 +43,27 @@ async function portraitReady(target,side,id){
 async function wardrobeReady(target,id){
   await target.waitForFunction(id=>document.querySelector('#wardrobe-preview')?.dataset.appearanceId===id && document.querySelector('#wardrobe-load')?.textContent==='',id);
 }
+async function assertCostumePixels(variant, kind) {
+  const matches = await page.evaluate(async ({ id, fighterId, kind }) => {
+    const { loadFighterIllustration, standingIllustration } = await import('/combat/illustrations.mjs');
+    const frame = kind === 'stance'
+      ? standingIllustration({ id: fighterId, costume: id })
+      : await loadFighterIllustration(kind, { id });
+    if (!frame || frame.nativeFacing !== 1) return false;
+    const image = new Image();
+    image.src = `/assets/encore/${kind}/${id}.webp`;
+    await image.decode();
+    const expected = document.createElement('canvas');
+    expected.width = frame.width; expected.height = frame.height;
+    const ctx = expected.getContext('2d');
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(image, 0, 0, expected.width, expected.height);
+    const source = ctx.getImageData(0, 0, expected.width, expected.height).data;
+    const actual = frame.canvas.getContext('2d').getImageData(0, 0, frame.width, frame.height).data;
+    return actual.every((value, index) => value === source[index]);
+  }, { id: variant.id, fighterId: variant.fighterId, kind });
+  assert.ok(matches, `${variant.id}: expected its own untinted ${kind} WebP`);
+}
 async function sourceNotes(target,variant){
   assert.ok(variant.fidelity,`Missing own costume record: ${variant.id}`);
   const details=target.locator('.costume-fidelity');
@@ -70,6 +91,42 @@ try{
   await page.locator('[data-nav="home"]').first().click();
   await page.locator('.mode-card[data-mode="versus"]').click();
 
+  // Interrupt the first decode in a fresh match, then retry alongside a second
+  // costume from the same fighter. Both slots must keep their own drawing.
+  const blockedStance = '**/assets/encore/stance/maidjax.webp';
+  await page.route(blockedStance, route => route.abort());
+  const recovered = await page.evaluate(async () => {
+    const { getFighter, getStage, VARIANTS } = await import('/combat/data.mjs');
+    const { CombatEngine } = await import('/combat/engine.mjs');
+    const { CombatRenderer } = await import('/combat/render.mjs');
+    const { standingIllustration } = await import('/combat/illustrations.mjs');
+    const owner = getFighter('jax'), variant = VARIANTS.find(item => item.id === 'maidjax');
+    const fighter = { ...owner, sprite: variant.sprite, animation: variant.animation || null, costume: variant.id };
+    const stage = getStage('training'), target = document.createElement('canvas'), renderer = new CombatRenderer(target);
+    async function fightImage(costume) {
+      const fighters = [{ ...fighter, costume }, owner];
+      const engine = new CombatEngine({ fighters, stage, mode: 'training', cpu: [false, false] });
+      await renderer.preload(fighters, [stage]);
+      renderer.render(engine.state, { stage, reducedMotion: true });
+      return target.toDataURL();
+    }
+    const interrupted = await fightImage(fighter.costume);
+    const archive = await fightImage('unpublished-test-appearance');
+    return !standingIllustration(fighter) && interrupted === archive;
+  });
+  assert.ok(recovered, 'Unavailable costume art must render its own archive fallback');
+  await page.unroute(blockedStance);
+  const independent = await page.evaluate(async () => {
+    const { loadFighterIllustration, standingIllustration } = await import('/combat/illustrations.mjs');
+    const fighters = ['maidjax', 'baseballjax'].map(costume => ({ id: 'jax', costume }));
+    const [maid, baseball] = await Promise.all(fighters.map(fighter => loadFighterIllustration('stance', fighter)));
+    return !!maid && !!baseball && maid !== baseball &&
+      standingIllustration(fighters[0]) === maid && standingIllustration(fighters[1]) === baseball &&
+      standingIllustration({ id: 'jax' }) !== maid;
+  });
+  assert.ok(independent, 'Two costumes of the same fighter must have independent standing drawings');
+  checked('Failed costume loads fall back and a retry restores both costumes independently', 'Maid Jax and Baseball Jax share a simulation ID and retain separate visual cache entries.');
+
   for(const fighter of FIGHTERS){
     const variants=VARIANTS.filter(variant=>variant.fighterId===fighter.id);
     if(!variants.length)continue;
@@ -83,15 +140,16 @@ try{
         const {drawPortrait}=await import('/combat/render.mjs');
         const actual=document.querySelector('[data-selection-artist="0"] canvas');
         const reference=document.createElement('canvas');reference.width=actual.width;reference.height=actual.height;
-        await drawPortrait(reference,ARCHIVE.find(item=>item.id===id));
+        await drawPortrait(reference,ARCHIVE.find(item=>item.id===id),{ selection: true });
         return {actual:actual.toDataURL(),expected:reference.toDataURL()};
       },variant.id);
       assert.equal(result.actual,result.expected,`Stale or wrong costume portrait: ${variant.id}`);
+      await assertCostumePixels(variant, 'selection');
       previews.push({id:variant.id,fighterId:fighter.id,sha256:hash(result.actual)});
     }
   }
   assert.equal(previews.length,VARIANTS.length);
-  checked('All 51 costume choices refresh the actual selected portrait','Each selected name and canvas matches its own archive image; no inherited or stale original portrait.');
+  checked('All 51 costume choices refresh the actual selected portrait','Every selection matches the pixels decoded independently from its published costume WebP.');
 
   const pomni=VARIANTS.find(v=>v.fighterId==='pomni'),jax=VARIANTS.find(v=>v.fighterId==='jax');
   await page.locator('[data-fighter="pomni"]').click();
@@ -125,9 +183,11 @@ try{
     const ids=await page.locator('.archive-card').evaluateAll(cards=>cards.map(card=>card.dataset.archiveId));
     for(const id of ids){
       const variant=VARIANTS.find(v=>v.id===id);
+      if(!variant) continue;
       await page.locator(`[data-appearance="${id}"]`).click();await wardrobeReady(page,id);
+      await assertCostumePixels(variant, 'stance');
       const options=await page.locator('#wardrobe-variant option').evaluateAll(nodes=>nodes.map(n=>n.value));
-      assert.deepEqual(options,[variant.fighterId,...VARIANTS.filter(v=>v.fighterId===variant.fighterId).map(v=>v.id)]);
+      assert.deepEqual(options,[variant.fighterId,...COSTUMES.filter(v=>v.fighterId===variant.fighterId).map(v=>v.id)]);
       if(id==='ganglecomedy')await page.locator('#modal').screenshot({path:path.join(output,'costume-wardrobe.png')});
       await sourceNotes(page,variant);
       const png=await page.locator('#wardrobe-preview').evaluate(canvas=>canvas.toDataURL());
@@ -138,6 +198,7 @@ try{
     if(more)await page.locator('[data-page="1"]').click();
   }
   assert.equal(new Set(wardrobes.map(v=>v.id)).size,VARIANTS.length);
+  checked('All 51 costumes preload their own right-facing stance in the real wardrobe','Each decoded frame matches its own published WebP pixel for pixel.');
   checked('All 51 wardrobe dialogs show their own references and compatible choices','The comparison uses the combat renderer; each dialog exposes its own references and every recorded framing, transparency, proportion and art issue.');
 
   const last=wardrobes.at(-1).id,trigger=page.locator(`[data-appearance="${last}"]`);

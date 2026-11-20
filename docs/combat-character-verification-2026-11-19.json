@@ -1,0 +1,347 @@
+{
+  "schema": "encore-character-completion-verification/v1",
+  "createdAt": "2026-11-19T21:51:54.240921+00:00",
+  "executionScope": "Final frozen working tree before commit; the exact runtime is identified by the offline manifest and source hashes, not by the older Git HEAD.",
+  "gitHeadAtExecution": "b64dc7ad33a7ec85f2bb69d906921403ad4cf09d",
+  "runtime": {
+    "OFFLINE_VERSION": "0.7.0-9d40b0881496",
+    "ART_VERSION": "0e03085d0a637d14",
+    "ART_BYTES": 2538831567,
+    "artFiles": 5331
+  },
+  "nodeAndBuilds": {
+    "command": "npm run qa",
+    "exitCode": 0,
+    "tests": 399,
+    "pass": 399,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "nodeTestDurationMs": 10237.188937,
+    "builds": [
+      "CainOS dist",
+      "Encore dist-combat"
+    ],
+    "journal": "docs/combat-character-qa-2026-11-19.log",
+    "journalSha256": "f95f7cf07ac90a70afad20ca7aec5d4efa25118458e474e6c83d31f06e0f4336"
+  },
+  "inventory": {
+    "file": "docs/combat-character-art-inventory-2026-11-19.json",
+    "sha256": "52b0f2cbcf056a472f5a4226365d2ae46c440cc7b14eb6e2f123d71122fb91b2",
+    "archiveEntries": 179,
+    "fighters": 54,
+    "variants": 51,
+    "namedCharacterArtFiles": 1234,
+    "bySlot": {
+      "attack": 105,
+      "crouch": 105,
+      "defeat": 105,
+      "heavy": 105,
+      "hit": 105,
+      "intro": 105,
+      "jump": 105,
+      "victory": 105,
+      "walk": 105,
+      "selection": 184,
+      "stance": 105
+    },
+    "bytes": 825705226,
+    "nativeGenerationHashMatches": 517,
+    "newPathsComparedWithBranchHead": 586,
+    "missingSlots": 0,
+    "reviewFlags": 1,
+    "identicalFiles": 0
+  },
+  "productionCanvas": {
+    "file": "docs/images/character-completion-2026-11-19/character-canvas-review.json",
+    "sha256": "f16568f11b6a59888b41011eeac4757293c77222fd47ef9b3ea6823183aed9ff",
+    "appearances": 105,
+    "expectedActions": 945,
+    "actions": 945,
+    "drawChecks": 1890,
+    "archiveEntries": 179,
+    "portraits": 184,
+    "expectedPortraits": 184,
+    "missing": 0,
+    "exitCode": 0,
+    "complete": true
+  },
+  "expansionAndScenesCanvas": {
+    "file": "docs/images/character-scenes-2026-11-19/canvas-review.json",
+    "sha256": "e966dbee4028a9000d0c3d3bb6d4e56033af6780c24147f04ea3fe077a095291",
+    "decodedImages": 80,
+    "scenes": 10,
+    "planesPerScene": 3,
+    "exitCode": 0
+  },
+  "visualReview": {
+    "method": "Agent visual inspection of opaque composites and final production-rendered contact sheets. No image edits during QA.",
+    "newActionSets": "All 427 added action drawings inspected before final copy; accepted PNG originals preserved.",
+    "gallery": "All eight final portrait sheets inspected: 184 subjects; groups Best Children A/B, Mildenhall A/B/C and Laughing A/B/C displayed separately.",
+    "expansion": "Both forty-image selection/stance sheets and ten-scene contact inspected.",
+    "productionActionSamples": [
+      "pomni",
+      "gangle",
+      "monstrouscaine",
+      "gloinkqueenscale",
+      "gloinkqueen",
+      "giantcentipede",
+      "shrimpnpc",
+      "mildenhallsouls",
+      "angel"
+    ],
+    "result": "No blocking crop, opaque rectangle, stretched silhouette or stray fragment observed in the reviewed composites.",
+    "retainedFlag": {
+      "file": "assets/encore/poses/scratch/intro.png",
+      "flag": "Low-alpha pixels touch the top edge at threshold 12.",
+      "bboxAlpha12": [
+        325,
+        0,
+        993,
+        1208
+      ],
+      "bboxAlpha32": [
+        325,
+        49,
+        991,
+        1208
+      ],
+      "disposition": "Reviewed on opaque gray: no visible halo, fragment or cropped anatomy. Native PNG retained unchanged."
+    }
+  },
+  "browser": {
+    "status": "not_executed_in_this_session",
+    "reason": "Browser launch/access was blocked by environment security policy. No alternate browser control was attempted after the explicit denial.",
+    "suiteConfigurations": 21,
+    "uniqueScriptsSyntaxChecked": 20,
+    "syntaxPassed": true,
+    "executionPassed": null,
+    "suites": [
+      {
+        "id": "tests/combat-browser.mjs",
+        "script": "tests/combat-browser.mjs",
+        "report": "audit-combat/browser-report.json"
+      },
+      {
+        "id": "tests/combat-merge-browser.mjs",
+        "script": "tests/combat-merge-browser.mjs",
+        "report": "audit-combat/merge-2026-11-19/browser-report.json"
+      },
+      {
+        "id": "tests/combat-crossovers-browser.mjs",
+        "script": "tests/combat-crossovers-browser.mjs",
+        "report": "audit-combat/crossovers/browser-report.json"
+      },
+      {
+        "id": "tests/combat-action-art-browser.mjs",
+        "script": "tests/combat-action-art-browser.mjs",
+        "report": "audit-combat/action-art/browser-report.json"
+      },
+      {
+        "id": "tests/combat-stage-art-browser.mjs",
+        "script": "tests/combat-stage-art-browser.mjs",
+        "report": "audit-combat/stage-art/browser-report.json"
+      },
+      {
+        "id": "tests/combat-finishers-browser.mjs",
+        "script": "tests/combat-finishers-browser.mjs",
+        "report": "audit-combat/finishers-0.7.0/browser-report.json"
+      },
+      {
+        "id": "tests/combat-audio-ambiences-browser.mjs",
+        "script": "tests/combat-audio-ambiences-browser.mjs",
+        "report": "audit-combat/audio-ambiences-0.7.0/browser-report.json"
+      },
+      {
+        "id": "tests/combat-training-browser.mjs",
+        "script": "tests/combat-training-browser.mjs",
+        "report": "audit-combat/training-browser-report.json"
+      },
+      {
+        "id": "tests/combat-profile-recovery-browser.mjs",
+        "script": "tests/combat-profile-recovery-browser.mjs",
+        "report": "audit-combat/profile-recovery-browser-report.json"
+      },
+      {
+        "id": "tests/combat-profile-backup-browser.mjs",
+        "script": "tests/combat-profile-backup-browser.mjs",
+        "report": "audit-combat/profile-backup-browser-report.json"
+      },
+      {
+        "id": "tests/combat-encore-browser.mjs",
+        "script": "tests/combat-encore-browser.mjs",
+        "report": "audit-combat/encore-browser-report.json"
+      },
+      {
+        "id": "tests/combat-progression-browser.mjs",
+        "script": "tests/combat-progression-browser.mjs",
+        "report": "audit-combat/progression-browser-report.json"
+      },
+      {
+        "id": "tests/combat-progression-browser.mjs-storage",
+        "script": "tests/combat-progression-browser.mjs",
+        "report": "audit-combat/storage-browser-report.json"
+      },
+      {
+        "id": "tests/combat-story-presentation-browser.mjs",
+        "script": "tests/combat-story-presentation-browser.mjs",
+        "report": "audit-combat/story-presentation-browser-report.json"
+      },
+      {
+        "id": "tests/combat-visits-browser.mjs",
+        "script": "tests/combat-visits-browser.mjs",
+        "report": "audit-combat/visits/browser-report.json"
+      },
+      {
+        "id": "tests/combat-roster-browser.mjs",
+        "script": "tests/combat-roster-browser.mjs",
+        "report": "audit-combat/roster-browser-report.json"
+      },
+      {
+        "id": "tests/combat-reduced-motion-browser.mjs",
+        "script": "tests/combat-reduced-motion-browser.mjs",
+        "report": "audit-combat/reduced-motion-browser-report.json"
+      },
+      {
+        "id": "tests/combat-offline-browser.mjs",
+        "script": "tests/combat-offline-browser.mjs",
+        "report": "audit-combat/offline-browser-report.json"
+      },
+      {
+        "id": "tests/combat-accessibility-browser.mjs",
+        "script": "tests/combat-accessibility-browser.mjs",
+        "report": "audit-combat/accessibility-browser-report.json"
+      },
+      {
+        "id": "tests/combat-readability-browser.mjs",
+        "script": "tests/combat-readability-browser.mjs",
+        "report": "audit-combat/readability-browser-report.json"
+      },
+      {
+        "id": "tests/combat-input-browser.mjs",
+        "script": "tests/combat-input-browser.mjs",
+        "report": "audit-combat/input-browser-report.json"
+      }
+    ],
+    "remoteCi": "To be observed on the published PR commit; historical runs are not evidence for this working tree."
+  },
+  "runtimeSourceHashes": {
+    "combat/app.mjs": "15877928f8efa1bc97f28779a21aaea29a7412e6f5266b588cf7999a2cd7a724",
+    "combat/audio-ambiences.mjs": "e67916799498be86ce1eae0547c41baa3ded4ae484dab2eb8fcc716852605435",
+    "combat/audio.mjs": "5abae7daccf4ba3d02f0893df6ed9dccfc6b90935b8fb9697567c0f7afb4dd73",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/crossover-designs.mjs": "10823e3ae1857472b3ccecdfff9018026d1e73c356fc13496e9d3096fb194935",
+    "combat/crossover-fusions.mjs": "2af5a8490395331a92b95f567c155b7237e7355b5cac03a0c45a8d2e1b19241b",
+    "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
+    "combat/crossover-visits.mjs": "fc173219e61473341930bad12e52aefea45b69acfb7f029a03296b4ca8a0efbc",
+    "combat/crossovers.mjs": "0edae90b12cd29dd768afafbdc9b995eb1bd5e521060679f674957f4bfef21bd",
+    "combat/data.mjs": "5f3d195aec8b08c32b02de264ab10cf2dd6ee2e98a58b4a74231af272036de53",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "8a457769f745ff9e4adccf1cdd96d3595e7f5f0db269dc48b825049b61d8c67b",
+    "combat/finisher-catalog.mjs": "4ff2302554a15bbeedcf83f755fc68ce443ed3411ecfed6228c4bb9fb006b059",
+    "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+    "combat/finishers.mjs": "cf41cd5f1137ea8b1b04629980c6985b5b74c9f43e75ebd064a1f1ef37857d38",
+    "combat/friendship-catalog.mjs": "3c9c5e0a7b945aa504936c5c6c72759e2a7ffad6d7c660fe5854b94eff05af4b",
+    "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+    "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+    "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+    "combat/illustrations.mjs": "c3de886221f6f05eebba1ad53f866d7ec486a1a13e0f0733c0e170c8fd81292f",
+    "combat/index.html": "da82a06a72d3bbea1b0d743b939c747b1545d1a9d2234b06d2e8e2203ed12bd8",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+    "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+    "combat/offline-manifest.mjs": "6bc34c00690e60393965bb51b069cc6c6ce46b94565bacd0f5d4f9e7cf9820a9",
+    "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+    "combat/progression.mjs": "0e198c3cd1434efdc2f0d156552b5c87dcdb40c498e6af25f6d398389453082e",
+    "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+    "combat/render-finishers.mjs": "7834ffe5ec5c90d1665ac3e71a036cf24618c755d7bb956eeaeaabc74806b4a6",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/render-presentation.mjs": "fac2ed0d184aa83796d8af841080c0672d055c3aa8c7e0df5988a56a4f68768d",
+    "combat/render-sequences.mjs": "821865fbde2e0709eed82a1bf27e4db801b804409cacc4e20f85fda4eb04b025",
+    "combat/render-stage-motion.mjs": "effadea07df1405a8ced0b382e933e81b7f0ad7400fe16484975f0075563a3cf",
+    "combat/render-stage-scenery.mjs": "0b4edde9d16659675651b6daa114ec03b8a8cf7434c47eb09dd2645eb53ca544",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/sprite-catalog.mjs": "f1d3aabb923df18d8616363840aca370dd3472a9ad92ac51c84d49430a3251fe",
+    "combat/stage-parallax.mjs": "4914aa3fa2c2928e8fa32c8e4cae745adf33e18ded12fdfc9ab4ed9e19765097",
+    "combat/stories.mjs": "4a25469e10845c527f6d0a96921ce9298b4a2f4ec96560c38436dbc24565456e",
+    "combat/story-presentation.mjs": "900ad5dfefc205f868561a7624352152f2d7f51300b5197c16c677bb7692fd54",
+    "combat/style.css": "adc88414a74d24bee7a1e8b08ca31fb9e8d5270d47199dc64eb4914815a36df7",
+    "combat/sw.js": "b10302d7cacdbb4301cb0dbba59d146484cca5516633a1be2adf14497ded6a49",
+    "combat/tournament-lore.mjs": "ecf40bf6f2949eb09dcd03c93044ef6a41b11d302fd1bea90e7f1a22fd9db63f",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+  },
+  "testSourceHashes": {
+    "tests/combat-accessibility-browser.mjs": "69d92ff7120e2d0225e90957b6fbb703d1d5a795711e2a2467cc7f34bea6174e",
+    "tests/combat-action-art-browser.mjs": "1f65f856c9bb6ae4dcb81fff7423c95bdc95bdead2282b72b2be62eff22bcdc1",
+    "tests/combat-art-tracker-formats.test.mjs": "9d27e1a270b34faf8e17db8ba5d11324fac87be7d8c832cb4d12126a35edf7c3",
+    "tests/combat-assets.test.mjs": "6db6e58be78bcf989f7ad606b1e44eea356938083bb791896207b4725ea54faa",
+    "tests/combat-audio-ambiences-browser.mjs": "8c85851d77b1cd178b0a3dd7c4c4a8d1b90c6ede3e079ee1e4280ea14e230bb3",
+    "tests/combat-audio-ambiences.test.mjs": "d265b7fa7bbb3cc1cc9af3b5e35c335682aacdd3ceb674728b749ebfc986b123",
+    "tests/combat-audio-cues.test.mjs": "1b240cc155982c773be0863a3e9c54ee76ed0df607e0940a6687a9711e5f5929",
+    "tests/combat-audio.test.mjs": "f0cf66cd0f5acaf123376e3b35534bcc035df826dbbb47a4357f2f50fdc8e95c",
+    "tests/combat-bindings.test.mjs": "552a6e00f8758eb5b327ef81f098421af81a792e3068453a83008bc2f249609c",
+    "tests/combat-browser.mjs": "b11819738596633613150c95c0322367766b7332874b374cfb03ee55d1a9df90",
+    "tests/combat-catalog.test.mjs": "9c28077a35a7c41bb23eefcea83c129756a81118f1ae3428f33f43c08395fe3e",
+    "tests/combat-costume-browser.mjs": "888395b999e82c1aace9ed11ff60999ef2b32908bdd13f782375706e367b6ace",
+    "tests/combat-costume-refinements-browser.mjs": "a4c45bb21411e8a17c91fd8c756a94c6d98491bfd2b4b1c481130f417f9f4333",
+    "tests/combat-crossovers-browser.mjs": "d2c467157caf7519c06d8bbe015594b75770c0bb9598435dedbbc6cb7a4502c8",
+    "tests/combat-crossovers.test.mjs": "9aac4dfbd1fd3387c163a552b5be4516390288a34ab69ea23a0567823eeee1e8",
+    "tests/combat-encore-browser.mjs": "baf3dbefd284287ca08b074acba07b76631ab6a46abd54d84e2d1bef7c3d107e",
+    "tests/combat-engine.test.mjs": "7b30b513c1af531cdb767b5c60b7c8f02fc7055e4b1fceb1d5f29913a17a3e24",
+    "tests/combat-fidelity-browser.mjs": "4f7b18367b18c2825c1bc1c2855a2554724afb9e02726d8f319c847de745c82d",
+    "tests/combat-fidelity.test.mjs": "3058790353a4a3fb214a40f00e7e2d9c88d3bbd3e0961024dc803c8d0bd79f08",
+    "tests/combat-finisher-gallery.test.mjs": "bb3ed6fae25e8604b4d9b4bb23315dde4fe215b30c39a152a39cc627645907c2",
+    "tests/combat-finishers-browser.mjs": "7d2265dafe42f947999de47ca661b9e412f829925d37d62c2cf952da940d8efe",
+    "tests/combat-finishers-render.test.mjs": "c4ec6318dce4a00c9b11d87e7c5b1a759d8735a5544ac4d6523e04103ce81e4f",
+    "tests/combat-finishers.test.mjs": "eb2b7051565934dcfe2732b48d6123c0bfc58100e57b41f73c63e29f59804464",
+    "tests/combat-illustration-formats.test.mjs": "1ec94fbe96b0cd34a3ed34e14881f3ab64472ebc68ec7d76bbc0a606f53feae3",
+    "tests/combat-input-browser.mjs": "eda1e597a3a7a9a0c9cdf1302489551d11bdb0542fb571dad5300ecf4c6431b1",
+    "tests/combat-input.test.mjs": "f6bbb79897363cd69300fb41bded0020970dd85e3d05447dd365d0d671efe60d",
+    "tests/combat-merge-browser.mjs": "3fa408906c5c85c2979617f8535f1811e222976e1c2976c1fa010d17620681fa",
+    "tests/combat-offline-browser.mjs": "2129be0ff5184d35586ddc8dccfc561a28433538b4179d206f02e467f360e294",
+    "tests/combat-offline.test.mjs": "2d6e8d8e8b32e3cb555ab72e7f8018a34375a411c6ab6c3cceb6bf51a10cfeda",
+    "tests/combat-profile-backup-browser.mjs": "6e93bc5a622b3b572759b89bed39f97727597bda50e6333b7733bc30d1f02b5f",
+    "tests/combat-profile-recovery-browser.mjs": "78aeb3805cd11363e9624909efc07cfe4e0f9f0c79001c9262ac9f41012332a9",
+    "tests/combat-program-compatibility.test.mjs": "47baad912f6c57b0af87538e817fed4a90e8408e939ff1667a00db53bae97fcb",
+    "tests/combat-progression-browser.mjs": "a8470b99a0e5b8c1b631fca253340a46b87d37d4180bcb55c6b42ed86b1bd902",
+    "tests/combat-progression.test.mjs": "3d89a2e5d21b23719dc36a8bda0c37b70c9ccdab5b4940f842726fe29c2c1d6f",
+    "tests/combat-readability-browser.mjs": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff",
+    "tests/combat-readability.test.mjs": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+    "tests/combat-recovery-browser.mjs": "544d8fc82c38dd774573e1783dc24ad6c6d68e3cd7aaab0a932c390c2aebeb22",
+    "tests/combat-reduced-motion-browser.mjs": "c21e5509c519b3a604b60691901e41c0913a51bd0c98cb6ca7d7ea6332fef8e2",
+    "tests/combat-release-evidence.test.mjs": "89317fae370aff317a3e28ecf4631775a5c44a1e40f8bde25e8fced4fa36d4c5",
+    "tests/combat-render-browser.mjs": "7fd9369b5bfc82b39e4ef7dfedc0b8d1dd9f45c13c2b259e9800f6c490d8177b",
+    "tests/combat-render-jax-browser.mjs": "2f82e8152c5857e4e079746d5e171cf9780e228c506cdd4f9546c0704a0351f8",
+    "tests/combat-render-matte.test.mjs": "28f7b0791b9bae5ca55fedf8d84a9a3700e8555533c39b7471abe92ca7a16a4e",
+    "tests/combat-render-poses-browser.mjs": "4861d055869adcd687f9b9dcc3fd626bd492b8604be0c249431c559079c100a3",
+    "tests/combat-render-poses.test.mjs": "9f465170be1c012469137ac19e7e3322d114f969269bc4b5ae99949d3bb88c8e",
+    "tests/combat-render-sequences-browser.mjs": "8afdd296879ed1c68145ce4f39d15ec1cf6e82abc9d15f212f41ed949f6072b2",
+    "tests/combat-render-sequences.test.mjs": "2cb57801ec1fdd14870e3867b76cdafec9d780e6bde3ec3e3d9ce1a7273f0612",
+    "tests/combat-render.test.mjs": "12782fc6f79383dce449336c6fb88564fc26f0e735622040f3e616df2b99b1cb",
+    "tests/combat-roster-browser.mjs": "68c04887f190e8e11677a98790476907927e1de54b196e83f690ee6c09d49f86",
+    "tests/combat-roster-completeness.test.mjs": "9210edfcf48ff6adf4d5341219b802eb62e72653c94635c1f1f978a190ef2ed6",
+    "tests/combat-rules.test.mjs": "dc43e0820bea542d2f7867b6a8fa9bb363f4a6a69a71b972c247580b02c9767b",
+    "tests/combat-session-backup.test.mjs": "ceea8de2ea6e0bd02e8feb945a6d6aa1e1c48567d0838bda351eb308b6f5f96a",
+    "tests/combat-session.test.mjs": "4c32d25ac554845abbe01bde7426b2d20416eb8580c7b5b760b041d807fe9592",
+    "tests/combat-stage-art-browser.mjs": "5fa90846a2a8f5b2bceca8520d16fc221716f35fe79de0c6fbbee431f869a3ec",
+    "tests/combat-stage-scenery-browser.mjs": "8128a719cace7d9464c07cbb7b8a8225f6e1e596c4c7777338fe48897de4c483",
+    "tests/combat-stage-scenery.test.mjs": "e0ab486405e0e6638251d95865f9c8dfcf2a2c9d7ebad5e02791f5e75932a5fa",
+    "tests/combat-story-presentation-browser.mjs": "90a88f6a10492b20b15e4f04381da161897a7a1313dde584b7412b9a8147b3ad",
+    "tests/combat-story-presentation.test.mjs": "e607304a87110d3969f07f5517a05bd486a0948647a7f70c321ebeb8e3be6b2d",
+    "tests/combat-training-browser.mjs": "95a819987fb8ef813d0631bdc9c8f809974bdcccc743116a394cbcc0b3f68754",
+    "tests/combat-training.test.mjs": "f1156033a8263fec59e56f097809889e447b64ab9530308f2b904c7513d37ede",
+    "tests/combat-visits-browser.mjs": "f20a7058194c911597a9deac31142a65dc8f6d6a0270a31dcd8d8d4797f08c47",
+    "tests/combat-workbook-publication.test.mjs": "b56f6c5f7c627d397a359b30c3fd3346a3adfaa8b3fc6620cb70aa1ca9b9ae0a"
+  },
+  "limitations": [
+    "Static artwork coverage of the current project catalog, not an exhaustive verified series-canon census.",
+    "No canonical 1:1 certification, native 4K claim or full animation-cycle completion.",
+    "Node/Skia rendering does not execute browser DOM, controls, WebAudio, service workers or physical devices.",
+    "40 promoted NPC kits remain role-based adaptations; their crossover costumes are not produced."
+  ]
+}

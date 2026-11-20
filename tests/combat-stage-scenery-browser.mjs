@@ -1,3 +1,4 @@
+import { STAGES } from '../combat/data.mjs';
 /** Canvas fixtures: scenery, layering and floor invariants; no played-duel or global 1:1 claim. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -40,7 +41,8 @@ try {
       const { CombatRenderer } = await import('/combat/render.mjs');
       const { STAGES, FIGHTERS } = await import('/combat/data.mjs');
       const canvas = document.querySelector('canvas'), renderer = new CombatRenderer(canvas), ctx = canvas.getContext('2d', { willReadFrequently: true });
-      const ready = await renderer.preload([FIGHTERS.find(f => f.id === 'pomni'), FIGHTERS.find(f => f.id === 'jax')], STAGES);
+      // This historical fixture compares the procedural fallback against 0.5.0.
+      const ready = await renderer.preload([FIGHTERS.find(f => f.id === 'pomni'), FIGHTERS.find(f => f.id === 'jax')]);
       if (!ready.ok) throw new Error(JSON.stringify(ready));
       const pixels = (y = 0, h = 720) => ctx.getImageData(0, y, 1280, h).data;
       const hash = values => { let h = 2166136261; for (const value of values) h = Math.imul(h ^ value, 16777619); return h >>> 0; };
@@ -123,8 +125,8 @@ try {
       await page.locator('canvas').screenshot({ path: path.join(output, 'encore-stage-comparison-0.6.0.png') }); report.screenshots.push('encore-stage-comparison-0.6.0.png');
       await page.evaluate(() => {
         const { canvas, ctx, renderer, STAGES } = window.stageFixture;
-        canvas.width = 1344; canvas.height = 1196;
-        ctx.fillStyle = '#142033'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#fff0d5'; ctx.font = 'bold 24px system-ui'; ctx.textAlign = 'left'; ctx.fillText('12 arènes · 3 décors reconstruits, fidélité documentée par scène', 20, 36);
+        canvas.width = 1344; canvas.height = 68 + Math.ceil(STAGES.length / 3) * 282;
+        ctx.fillStyle = '#142033'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#fff0d5'; ctx.font = 'bold 24px system-ui'; ctx.textAlign = 'left'; ctx.fillText(STAGES.length + ' arènes · 3 décors reconstruits, fidélité documentée par scène', 20, 36);
         STAGES.forEach((stage, index) => {
           const x = index % 3 * 448, y = 65 + Math.floor(index / 3) * 282;
           ctx.drawImage(renderer.background(stage), x, y, 448, 252); ctx.fillStyle = '#dce8f4'; ctx.font = '15px system-ui'; ctx.fillText(stage.name, x + 12, y + 273);
@@ -135,16 +137,16 @@ try {
     await browser.close(); browser = null;
   }
   const before = report.measurements.before.stages, after = report.measurements.after.stages, ids = ['backstage', 'spudsy', 'kingdom'];
-  assert.equal(after.length, 12); assert.ok(after.every(s => s.opaquePixels === 1280 * 720 && s.width === 1280 && s.height === 720));
-  check('Les 12 fonds Canvas restent opaques et complets en 1280 × 720', 'Aucun trou transparent ni chargement de décor bitmap supplémentaire.');
+  assert.equal(after.length, STAGES.length); assert.ok(after.every(s => s.opaquePixels === 1280 * 720 && s.width === 1280 && s.height === 720));
+  check('Les fonds Canvas restent opaques et complets en 1280 × 720', 'Aucun trou transparent ni chargement de décor bitmap supplémentaire.');
   assert.ok(after.filter(s => ids.includes(s.id)).every(s => s.staticHash !== before.find(b => b.id === s.id).staticHash));
   check('Les trois arènes annoncées possèdent un fond distinct du rendu publié 0.5.0', 'Comparaison des pixels couloir, Spudsy et cour Candy ; six captures statiques avant/après.');
-  assert.ok(after.filter(s => !ids.includes(s.id)).every(s => s.staticHash === before.find(b => b.id === s.id).staticHash));
-  check('Les neuf autres fonds statiques conservent exactement leurs pixels', 'Inclut les repères déjà observés de la piste, du cellier et du Vide.');
+  assert.ok(after.filter(s => !ids.includes(s.id) && before.some(b => b.id === s.id)).every(s => s.staticHash === before.find(b => b.id === s.id).staticHash));
+  check('Les autres fonds statiques de la version comparée conservent exactement leurs pixels', 'Inclut les repères déjà observés de la piste, du cellier et du Vide.');
   assert.ok(report.measurements.invariants.clip.every(s => s.floorIntact && s.stateRestored));
   check('Les nouveaux peintres sont strictement coupés à y568 et restaurent le contexte Canvas', 'Pixels sentinelles du sol, transformation, opacité, couleur et largeur de trait vérifiés.');
   assert.ok(after.every(s => s.animated && s.floorStable));
-  check('Les 12 ambiances restent animées au-dessus du sol sans toucher la piste', 'Comparaison directe des octets RGBA à 0 et 123 images, dont y568–719.');
+  check('Les ambiances restent animées au-dessus du sol sans toucher la piste', 'Comparaison directe des octets RGBA à 0 et 123 images, dont y568–719.');
   assert.ok(after.every(s => s.reducedStable && s.stageUnchanged && s.cacheReused));
   check('Mouvement réduit, cache des fonds et arènes préservent leurs invariants', 'Canvas stable à 0 et 8000 images ; mêmes objets du cache et états d’entrée inchangés.');
   assert.ok(report.measurements.invariants.actors.every(s => s.opaqueSamples > 1000 && s.mismatches === 0 && s.stateUnchanged));

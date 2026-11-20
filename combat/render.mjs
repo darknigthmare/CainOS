@@ -1,16 +1,18 @@
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
-import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { actionIllustration, loadFighterIllustration, standingIllustration } from './illustrations.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
 import { drawStageScenery } from './render-stage-scenery.mjs';
+import { stageCamera, drawStagePlanes, loadStagePlanes } from './stage-parallax.mjs';
 import { drawFinisherScene } from './render-finishers.mjs';
 
 /**
  * Digital Circus combat presentation. Existing CainOS atlases are read without
  * changing their files. Static border removal keys only the actual edge matte;
  * the seven existing animation sheets use alpha bounds only. Their
- * inspected cells and rigid cutout poses provide game-state presentation until
- * dedicated fight art is authored. Character transforms use one uniform scale.
+ * inspected cells and rigid cutout poses complement the dedicated action
+ * drawings. Character transforms use one uniform scale.
  */
 export const LOGICAL_WIDTH = 1280;
 export const LOGICAL_HEIGHT = 720;
@@ -136,6 +138,10 @@ function visualRecord(fighter, variant) {
 export function getFrame(fighter, action = 'idle', tick = 0, variant = null, explicitFrame = null) {
   const f = visualRecord(fighter, variant);
   if (!f) return null;
+  if (f.sprite?.crossoverDirectory) {
+    const frame = loadFighterIllustration('stance', f);
+    return frame?.canvas ? frame : null;
+  }
   const animation = f.animation && !failures.has(sourceURL(f.animation.src)) ? f.animation : null;
   const spec = animation || f.sprite;
   if (!spec?.src) return null;
@@ -151,6 +157,7 @@ export function getFrame(fighter, action = 'idle', tick = 0, variant = null, exp
 }
 
 async function prepareFighter(f) {
+  if (f?.sprite?.crossoverDirectory) return loadFighterIllustration('stance', f);
   await Promise.all([loadImage(f?.sprite?.src), loadImage(f?.animation?.src)]);
   getFrame(f, 'idle', 0);
   if (f?.animation) for (const action of ['walk', 'attack', 'hurt', 'talk']) getFrame(f, action, 0);
@@ -158,19 +165,23 @@ async function prepareFighter(f) {
 
 export async function drawPortrait(target, fighter, options = {}) {
   const f = visualRecord(fighter, options.variant);
-  await prepareFighter(f);
+  const illustration = (options.selection || f?.sprite?.crossoverDirectory) && await loadFighterIllustration('selection', f);
+  if (!illustration) await prepareFighter(f);
   const ctx = target.getContext('2d');
   if (!ctx) return false;
   const w = target.width, h = target.height;
   ctx.clearRect(0, 0, w, h);
-  const frame = getFrame(f, options.action || 'idle', options.frame || 0);
+  const frame = illustration || getFrame(f, options.action || 'idle', options.frame || 0);
   if (!frame) return false;
   ctx.save();
-  ctx.imageSmoothingEnabled = false;
-  const scale = Math.min(w * 0.87 / frame.width, h * 0.91 / frame.height);
-  const dw = frame.width * scale, dh = frame.height * scale;
+  ctx.imageSmoothingEnabled = !!illustration;
+  ctx.imageSmoothingQuality = 'high';
+  const area = illustration ? frame.bounds : { x: 0, y: 0, width: frame.width, height: frame.height };
+  const scale = Math.min(w * 0.87 / area.width, h * 0.91 / area.height);
+  const dw = area.width * scale, dh = area.height * scale;
   if (options.glow !== false) { ctx.shadowColor = f.color || '#a897ef'; ctx.shadowBlur = Math.min(18, w * 0.07); }
-  ctx.drawImage(frame.canvas, Math.round((w - dw) / 2), Math.round(h - dh - h * 0.035), Math.round(dw), Math.round(dh));
+  ctx.drawImage(frame.canvas, area.x, area.y, area.width, area.height,
+    Math.round((w - dw) / 2), Math.round(h - dh - h * 0.035), Math.round(dw), Math.round(dh));
   ctx.restore();
   return true;
 }
@@ -296,6 +307,10 @@ function commonFloor(ctx, stage, theme) {
     rect(ctx, 0, FLOOR, 1280, 152, '#da6689');
     for (const y of [600, 650]) line(ctx, [[0, y], [1280, y]], '#b9436c', 2);
     for (let x = -560; x < 1880; x += 200) line(ctx, [[640 + (x - 640) * 0.6, FLOOR], [x, 720]], '#ed87a0', 2);
+  } else if (theme === 'undermap') {
+    rect(ctx, 0, FLOOR, 1280, 152, '#040525');
+    for (const y of [568, 584, 613, 657, 719]) line(ctx, [[0, y], [1280, y]], '#1726b0', 1.5);
+    for (let x = -640; x <= 1920; x += 256) line(ctx, [[640 + (x - 640) * .12, FLOOR], [x, 720]], '#1d29be', 1.5);
   } else if (theme === 'candy') floorTiles(ctx, '#9c5666', '#bc6e78', '#ffdeab');
   else if (theme === 'spudsy') floorTiles(ctx, '#b8a18b', '#cfbca0', '#f0debd');
   else floorTiles(ctx, stage.palette?.floor || '#21192f', theme === 'manor' ? '#362638' : '#302244', stage.palette?.accent || '#8b66ac');
@@ -490,12 +505,71 @@ function grounds(ctx) {
   for (let x = 70; x < 1280; x += 180) { rect(ctx, x, 491, 13, 77, '#c3ad94'); line(ctx, [[x, 508], [x + 180, 508]], '#c9b69e', 4); }
 }
 
-const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds };
+function undermap(ctx) {
+  // Minimal reference-based fallback while the three native planes load.
+  gradient(ctx, '#020321', '#050837', FLOOR);
+  for (let x = -32; x <= 1280; x += 96) line(ctx, [[x, 0], [x, FLOOR]], '#1722a5', 1.5);
+  for (let y = 8; y < FLOOR; y += 80) line(ctx, [[0, y], [1280, y]], '#1722a5', 1.5);
+}
+
+const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds, undermap };
+
+// A light native painting remains available while the illustrated planes load.
+function crossoverScenery(ctx, stage) {
+  const { sky, back, accent, grid } = stage.palette;
+  const id = stage.id;
+  gradient(ctx, sky, back, 568);
+  if (id === 'gameoverse') {
+    ellipse(ctx, 540, 625, 780, 401, grid);
+    ellipse(ctx, 540, 638, 780, 405, back);
+    for (let i = 0; i < 42; i++) rect(ctx, i * 79 % 1280, (i * 57) % 240, 3, 3, accent);
+  } else if (id === 'coppernine' || id === 'silicacity' || id === 'gaslightwharf') {
+    const height = id === 'silicacity' ? 275 : id === 'coppernine' ? 195 : 120;
+    for (let i = 0; i < 15; i++) {
+      const x = i * 97 - 35, y = 490 - (i * 83 % height);
+      rect(ctx, x, y, 76, 570 - y, back);
+      if (id === 'gaslightwharf') path(ctx, [[x - 6,y],[x + 29,y - 29],[x + 80,y]], grid);
+      for (let row = 0; row < 3; row++) rect(ctx, x + 10, y + 14 + 21 * row, id === 'silicacity' ? 45 : 10, 4, accent);
+    }
+  } else if (id === 'littledaisy') {
+    for (let i = 0; i < 6; i++) {
+      const x = i * 230;
+      ellipse(ctx, x, 393, 142, 295, back);
+      rect(ctx, x - 78, 511, 155, 47, grid);
+      line(ctx, [[x + 53,0],[x + 53,217]], grid, 2);
+      ellipse(ctx, x + 53, 226, 15, 12, accent);
+    }
+  } else if (id === 'showgrounds' || id === 'parkplanet') {
+    for (const x of [210, 420, 860, 1070]) {
+      rect(ctx, x - 48, 347, 96, 221, back);
+      path(ctx, [[x - 61,347],[x,225],[x + 61,347]], grid);
+    }
+    rect(ctx, 458, 333, 364, 235, back);
+    ellipse(ctx, 640, 323, 183, 71, grid);
+    ellipse(ctx, 640, 323, 25, 25, accent);
+    ellipse(ctx, 640, 537, 54, 90, sky);
+  } else {
+    ellipse(ctx, 1040, 146, 57, 57, accent);
+    for (let i = 0; i < 6; i++) ellipse(ctx, i * 270 - 61, 518, 233, 76 + (i * 43 % 92), back);
+    if (id === 'portaurora') {
+      for (let i = 0; i < 5; i++) {
+        const x = 115 + i * 253; rect(ctx, x, 405, 85, 125, grid);
+        path(ctx, [[x - 9,407],[x + 43,366],[x + 94,407]], back);
+      }
+    } else {
+      for (const x of [90, 1060]) {
+        line(ctx, [[x,562],[x + 24,409],[x + 20,368]], grid, 12);
+        for (const direction of [-1, 1]) path(ctx, [[x + 20,366],[x + 78 * direction,331],[x + 122 * direction,389],[x + 57 * direction,364]], back);
+      }
+    }
+  }
+}
 
 function makeBackground(stage) {
   const result = canvas(1280, 720), ctx = result.getContext('2d');
   const theme = stage.theme || stage.id || 'bigtop';
-  if (!drawStageScenery(ctx, stage)) (scenes[theme] || circus)(ctx, stage);
+  if (stage.series) crossoverScenery(ctx, stage);
+  else if (!drawStageScenery(ctx, stage)) (scenes[theme] || circus)(ctx, stage);
   commonFloor(ctx, stage, theme);
   const edge = ctx.createRadialGradient(640, 350, 260, 640, 350, 800);
   edge.addColorStop(0, 'transparent'); edge.addColorStop(1, theme === 'void' ? '#a8a7eb15' : ['bigtop', 'circus'].includes(theme) ? '#194f7122' : ['backstage', 'spudsy', 'kingdom'].includes(theme) ? '#42152a38' : '#05061280');
@@ -640,20 +714,46 @@ export class CombatRenderer {
     if (!this.ctx) throw new Error('Canvas 2D indisponible.');
     this.ctx.imageSmoothingEnabled = false;
     this.backgrounds = new Map();
+    this.stageArt = new Map();
     this.lastState = null;
   }
 
   async preload(fighters, stages = []) {
-    const results = await Promise.allSettled((fighters || []).map(prepareFighter));
-    for (const stage of stages) this.background(stage);
-    return { ok: failures.size === 0 && results.every(r => r.status === 'fulfilled'), errors: [...failures.entries()].map(([src, error]) => ({ src, error })) };
+    const missing = [];
+    const fighterLoads = (fighters || []).map(async fighter => {
+      if (fighter.sprite?.crossoverDirectory) {
+        if (!await prepareFighter(fighter)) missing.push({ src: fighter.sprite.src, error: 'Illustration de garde indisponible' });
+      } else {
+        await Promise.all([prepareFighter(fighter), loadFighterIllustration('stance', fighter)]);
+      }
+    });
+    const stageLoads = stages.map(async stage => {
+      const paintings = await loadStagePlanes(stage);
+      if (paintings) this.stageArt.set(stage.theme || stage.id, paintings);
+      else this.background(stage);
+    });
+    const results = await Promise.allSettled([...fighterLoads, ...stageLoads]);
+    const errors = [...failures.entries()].map(([src, error]) => ({ src, error })).concat(missing);
+    return { ok: errors.length === 0 && results.every(r => r.status === 'fulfilled'), errors };
   }
 
   background(stage) {
     const value = stage || { id: 'bigtop' };
+    const paintings = this.stageArt.get(value.theme || value.id);
+    if (paintings) return paintings.still;
     const key = `${value.id || value.theme}:${JSON.stringify(value.palette || {})}`;
     if (!this.backgrounds.has(key)) this.backgrounds.set(key, makeBackground(value));
     return this.backgrounds.get(key);
+  }
+
+  async previewStage(stage) {
+    const options = { stage, reducedMotion: true };
+    this.render(null, options);
+    const paintings = await loadStagePlanes(stage, () => this.canvas.isConnected);
+    if (paintings && this.canvas.isConnected) {
+      this.stageArt.set(stage.theme || stage.id, paintings);
+      this.render(null, options);
+    }
   }
 
   getFrame(fighter, action, tick, variant) { return getFrame(fighter, action, tick, variant); }
@@ -663,18 +763,26 @@ export class CombatRenderer {
   render(state, options = {}) {
     const ctx = this.ctx;
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, 1280, 720);
-    ctx.drawImage(this.background(options.stage || state?.stage), 0, 0);
+    const stage = options.stage || state?.stage;
+    const actors = state?.a && state?.b ? [state.a, state.b] : state?.fighters || [];
     const tick = state?.frame || 0;
-    drawStageMotion(ctx, options.stage || state?.stage, options.ambientFrame ?? tick, options.reducedMotion);
+    const finisher = state?.phase === 'matchOver' && options.finisher;
+    if (!finisher || !options.finisherBackdrop) {
+      const paintings = this.stageArt.get(stage?.theme || stage?.id);
+      const camera = paintings && stageCamera(actors, options.reducedMotion);
+      if (camera) drawStagePlanes(ctx, paintings.layers, camera);
+      else ctx.drawImage(this.background(stage), 0, 0);
+      drawStageMotion(ctx, stage, options.ambientFrame ?? tick, options.reducedMotion, !!paintings);
+    }
     if (!state) { ctx.restore(); return; }
-    if (options.finisher && state.phase === 'matchOver') {
+    if (finisher) {
       drawFinisherScene(ctx, state, options.finisher, options.presentationFrame ?? 0, {
+        backdrop: options.finisherBackdrop,
         reducedMotion: options.reducedMotion,
         drawActor: (actor, presentation) => this.drawActor(actor, tick, options.reducedMotion, presentation),
       });
       ctx.restore(); this.lastState = state; return;
     }
-    const actors = state.a && state.b ? [state.a, state.b] : state.fighters || [];
     for (const object of state.traps || []) this.drawTrap(object, actors, tick, options.reducedMotion);
     const order = [...actors].sort((a, b) => (a.y || FLOOR) - (b.y || FLOOR));
     const presentation = { frame: tick, presentationFrame: options.presentationFrame ?? tick, phase: state.phase, winner: state.winner, roundWinner: state.roundWinner };
@@ -693,8 +801,20 @@ export class CombatRenderer {
     const ctx = this.ctx, f = actor.f || actor.def;
     if (!f) return;
     const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
-    const frame = getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
-    const idle = getFrame(f, 'idle', 0);
+    const stance = (pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
+    const action = illustratedAction(pose, actor.attack);
+    const actionArt = actionIllustration(f, action);
+    const artwork = stance || actionArt || (f.sprite?.crossoverDirectory && standingIllustration(f));
+    // Shift weight around the foot support of the single standing drawing.
+    // Use simulation frames so pausing a match also holds its pose.
+    if (stance && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
+    if (actionArt && action === 'walk' && !reducedMotion) {
+      const step = Math.sin(tick * TAU / 24);
+      pose.lean += 0.018 * step;
+      pose.lift = Math.abs(step) * 2;
+    }
+    const frame = artwork || getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
+    const idle = artwork || getFrame(f, 'idle', 0);
     const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
     const face = actor.face ?? actor.facing ?? 1;
     const y = Number.isFinite(actor.y) ? actor.y : FLOOR;
@@ -705,9 +825,12 @@ export class CombatRenderer {
       ctx.save(); ctx.globalAlpha = 0.5; ellipse(ctx, x, y - height / 2, 28, height / 2, f.color || '#aaa0c3');
       label(ctx, f.name?.slice(0, 1) || '?', x, y - height * 0.5, 30, '#ffffff'); ctx.restore(); return;
     }
-    const articulated = pose.low ? crouchParts(f, frame) : null;
-    const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face);
-    const shownHeight = height - (articulated?.drop || 0) * geometry.scale;
+    const articulated = !artwork && pose.low ? crouchParts(f, frame) : null;
+    // Each authored file is tightly framed. Give compressed poses their reduced
+    // stage height instead of growing a kneeling performer back to standing size.
+    const heightRatio = actionArt && (action === 'crouch' || action === 'defeat') ? 0.74 : 1;
+    const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face, heightRatio);
+    const shownHeight = height * heightRatio - (articulated?.drop || 0) * geometry.scale;
     const attack = actor.attack, active = pose.state === 'attack-active';
     const windup = pose.state === 'attack-windup';
     if (actor.buffs?.power || actor.buffs?.armor) glow(ctx, x, y - height * 0.52, height * 0.72, f.color || '#bd9cd6', 0.18);
@@ -718,7 +841,7 @@ export class CombatRenderer {
     ctx.scale(geometry.flip * geometry.scale, geometry.scale);
     ctx.translate(-geometry.anchor.x, -geometry.anchor.y);
     ctx.globalAlpha = pose.alpha * (actor.buffs?.cloak ? 0.42 : 1);
-    ctx.imageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = !!artwork;
     drawPoseArtwork(ctx, frame, articulated);
     if (actor.flash > 0 && !reducedMotion) {
       // A subtle outline avoids overwriting the original sprite's palette.

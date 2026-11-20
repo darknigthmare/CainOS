@@ -1,0 +1,443 @@
+{
+  "schema": "encore-workbook-recovery-plan/v1",
+  "sourceSHA256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+  "inputDataSHA256": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+  "checkpointSHA256": "ee313dcbf58045bf0a3be897d8901c8b483b5e32ef5f2fa76c5747e2654c778d",
+  "scope": "appearance-wave-ce7ceeb7",
+  "sourceCellsConstrained": 78606,
+  "checkpointSummaryChanges": [
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3120,\"Costume crossover\")+COUNTIFS('Production'!B6:B3120,\"Tenue Circus\")"
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Arrangement d’arène\")"
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,B$14)"
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,C$14)"
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,D$14)"
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,E$14)"
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3120)"
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3120,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Arène\",'Production'!D6:D3120,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,B21)"
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,C21)"
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,D21)"
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,E21)"
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2270)"
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2270,\"Partiel\")"
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3120,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Arène\",'Production'!D6:D3120,\"Ambiance sonore\",'Production'!E6:E3120,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "cell": "H2",
+      "value": "Version 0.7.0 · apparences au 20 novembre 2026"
+    },
+    {
+      "cell": "H8",
+      "value": "6 nouvelles tenues actives ; 9 préparations suivies"
+    },
+    {
+      "cell": "H13",
+      "value": "401 tests Node de cette passe · Canvas natif revu"
+    },
+    {
+      "cell": "H14",
+      "value": "Chromium bloqué au lancement ; aucune assertion"
+    },
+    {
+      "cell": "H15",
+      "value": "Historique conservé ; campagne CAST27 ajoutée dans QA"
+    },
+    {
+      "cell": "H16",
+      "value": "9 apparences en préparation · 36 PNG archivés"
+    },
+    {
+      "cell": "H30",
+      "value": "105 apparences d’archive + 14 tenues (154 PNG)"
+    },
+    {
+      "cell": "A22",
+      "value": "Historique et contrôles datés"
+    }
+  ],
+  "formulas": [
+    {
+      "cell": "B7",
+      "formula": "=COUNTA('Combattants'!A6:A59)",
+      "value": 54
+    },
+    {
+      "cell": "B8",
+      "formula": "=COUNTA('Techniques'!A6:A545)",
+      "value": 540
+    },
+    {
+      "cell": "B9",
+      "formula": "=COUNTA('Arènes'!A6:A27)",
+      "value": 22
+    },
+    {
+      "cell": "B10",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3120,\"Costume crossover\")+COUNTIFS('Production'!B6:B3120,\"Tenue Circus\")",
+      "value": 443
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Arrangement d’arène\")",
+      "value": 54
+    },
+    {
+      "cell": "B15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)",
+      "value": 85
+    },
+    {
+      "cell": "C15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)",
+      "value": 7
+    },
+    {
+      "cell": "D15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)",
+      "value": 12
+    },
+    {
+      "cell": "E15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)",
+      "value": 2
+    },
+    {
+      "cell": "F15",
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)",
+      "value": 106
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,B$14)",
+      "value": 1927
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,C$14)",
+      "value": 966
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,D$14)",
+      "value": 54
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3120,E$14)",
+      "value": 168
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3120)",
+      "value": 3115
+    },
+    {
+      "cell": "B17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)",
+      "value": 343
+    },
+    {
+      "cell": "C17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)",
+      "value": 0
+    },
+    {
+      "cell": "D17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)",
+      "value": 4
+    },
+    {
+      "cell": "E17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)",
+      "value": 1
+    },
+    {
+      "cell": "F17",
+      "formula": "=COUNTA('Scénarios'!A6:A353)",
+      "value": 348
+    },
+    {
+      "cell": "B18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)",
+      "value": 105
+    },
+    {
+      "cell": "C18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)",
+      "value": 74
+    },
+    {
+      "cell": "D18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)",
+      "value": 0
+    },
+    {
+      "cell": "E18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)",
+      "value": 0
+    },
+    {
+      "cell": "F18",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3120,\"Tableau d’histoire\")&\" tableaux\"",
+      "value": "54 routes et 324 tableaux"
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "value": "216 briefings de rencontre"
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Arène\",'Production'!D6:D3120,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "value": "22 thèmes musicaux d’arènes"
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,B21)",
+      "value": 2254
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,C21)",
+      "value": 0
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,D21)",
+      "value": 8
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2270,E21)",
+      "value": 2
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2270)",
+      "value": 2265
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "value": "26 motifs sonores synthétiques"
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2270,\"Partiel\")",
+      "value": 1
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "value": "270 séquences de présentation"
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "value": "22 ambiances visuelles animées"
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Costume\")&\" costumes historiques redessinés\"",
+      "value": "20 costumes historiques redessinés"
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3120,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "value": "681 fiches, hors tenues crossover"
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Finition visuelle\")&\" présentations de KO\"",
+      "value": "162 présentations de KO"
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3120,\"Arène\",'Production'!D6:D3120,\"Ambiance sonore\",'Production'!E6:E3120,\"Implémenté\")&\" ambiances sonores originales\"",
+      "value": "22 ambiances sonores originales"
+    }
+  ],
+  "scopes": [
+    [
+      "Synthèse",
+      "A1:H18",
+      "summary-top"
+    ],
+    [
+      "Synthèse",
+      "A19:H35",
+      "summary-bottom"
+    ],
+    [
+      "QA",
+      "A2266:I2268",
+      "qa-runtime"
+    ],
+    [
+      "QA",
+      "A2269:I2270",
+      "qa-browser-workbook"
+    ],
+    [
+      "Références",
+      "A64:E64",
+      "reference-offline"
+    ],
+    [
+      "Production",
+      "A3106:J3108",
+      "production-1"
+    ],
+    [
+      "Production",
+      "A3109:J3111",
+      "production-2"
+    ],
+    [
+      "Production",
+      "A3112:J3114",
+      "production-3"
+    ],
+    [
+      "Production",
+      "A3115:J3117",
+      "production-4"
+    ],
+    [
+      "Production",
+      "A3118:J3120",
+      "production-5"
+    ],
+    [
+      "Références",
+      "A126:E129",
+      "references-1"
+    ],
+    [
+      "Références",
+      "A130:E133",
+      "references-2"
+    ],
+    [
+      "Références",
+      "A134:E137",
+      "references-3"
+    ],
+    [
+      "Références",
+      "A138:E140",
+      "references-4"
+    ]
+  ],
+  "counts": {
+    "sheets": 11,
+    "nativeTables": 10,
+    "productionBefore": 3100,
+    "productionAfter": 3115,
+    "qaBefore": 2260,
+    "qaAfter": 2265,
+    "sourcesBefore": 120,
+    "sourcesAfter": 135,
+    "costumes": 443,
+    "fighters": 54,
+    "archiveVariants": 51,
+    "fidelityRecords": 681,
+    "newAppearances": 6,
+    "costumeAdditions": 14,
+    "newArtFiles": 66,
+    "cumulativeAdditionArtFiles": 154,
+    "pendingAppearances": 9,
+    "pendingArtFiles": 36,
+    "pendingMissingFiles": 63,
+    "newProductionImplemented": 6,
+    "newProductionPartial": 9
+  },
+  "nativeSourceImportUsed": false,
+  "publishAllowed": false
+}

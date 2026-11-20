@@ -1,4 +1,4 @@
-import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
+import { FIGHTERS, STAGES, DEDICATED_STAGES, COSTUMES } from './data.mjs';
 import { getStoryRoute } from './stories.mjs';
 import { getTournamentRival } from './tournament-lore.mjs';
 
@@ -16,6 +16,16 @@ export const PROGRAM_MODES = Object.freeze(['arcade', 'boss', 'survival', 'story
 export const SURVIVAL_RECOVERY = 1200;
 const FULL_HEALTH = 10000;
 const MAX_UINT = 4294967295;
+// Version-one checkpoints predate roster and arena expansions. Keep their
+// original draw/rival rule in memory after validating against known releases;
+// it is re-inferred from the complete deterministic checkpoint after JSON load.
+const programContexts = new WeakMap();
+const ORIGINAL_FIGHTER_IDS = new Set(['pomni','jax','ragatha','gangle','zooble','kinger','caine','bubble','gummigoo','loolilalu','gloinkqueen','fudge','abstractedkaufmo','baronmildenhall']);
+const ORIGINAL_STAGE_IDS = new Set(['bigtop','candy','manor','spudsy','cellar','void','lake','training','gloink','kingdom','grounds','backstage']);
+const CROSSOVER_STAGE_IDS = new Set(['silicacity','portaurora','coppernine','gaslightwharf','parkplanet','gameoverse','littledaisy','showgrounds','simpleflipisland']);
+// The 22-arena release precedes undermap. Its seeded shuffle remains valid
+// when an imported programme is continued or retried with the larger catalog.
+const ILLUSTRATED_STAGE_IDS = new Set([...ORIGINAL_STAGE_IDS, ...CROSSOVER_STAGE_IDS, 'falseexit']);
 const BOSS_IDS = ['gloinkqueen', 'fudge', 'abstractedkaufmo', 'caine'];
 const TOURNAMENT_ROUNDS = [
   ['quarterfinal', 'Quarts de finale', 4],
@@ -97,7 +107,7 @@ function simulateRound(run, roundIndex) {
   // The authored rival is seeded in the other half of the bracket and keeps
   // that promise until the final. Simulated CPU matches stay labelled as such;
   // only the rival's own non-player encounters are decided by the scenario.
-  const rivalId = run.mode === 'tournament' ? getTournamentRival(run.playerId) : null;
+  const rivalId = programTournamentRival(run);
   for (const match of run.tournament.rounds[roundIndex].matches) {
     if (!match.a || !match.b || match.winner || match.a === run.playerId || match.b === run.playerId) continue;
     if (rivalId && (match.a === rivalId || match.b === rivalId)) match.winner = rivalId;
@@ -121,7 +131,7 @@ function findTournamentOpponent(run) {
 }
 
 function copyProgram(run) {
-  return {
+  const copy = {
     ...run,
     opponents: [...run.opponents], stages: [...run.stages],
     results: run.results.map(result => ({ ...result })),
@@ -131,6 +141,8 @@ function copyProgram(run) {
       champion: run.tournament.champion,
     } : null,
   };
+  if (programContexts.has(run)) programContexts.set(copy, programContexts.get(run));
+  return copy;
 }
 
 /**
@@ -139,13 +151,21 @@ function copyProgram(run) {
  * Stages can be roster objects or ID arrays. Story stages are authored.
  */
 export function createProgram(mode, playerId, roster = FIGHTERS, stages = STAGES, options = {}) {
+  return createProgramForCatalog(mode, playerId, roster, stages, options);
+}
+
+function createProgramForCatalog(mode, playerId, roster, stages, options, legacyTournament = false) {
   if (!plain(options) || !PROGRAM_MODES.includes(mode)) fail('Programme de combat inconnu.');
   const fighterIds = catalogIds(roster, 'des artistes'), stageIds = catalogIds(stages, 'des arènes');
   if (fighterIds.length < 2 || !fighterIds.includes(playerId)) fail('Artiste du programme introuvable.');
-  const { seed = 1, difficulty = 'normal', roundTime = 90, variantId = '', stage = stageIds[0], variants = VARIANTS } = options;
+  const { seed = 1, difficulty = 'normal', roundTime = 90, variantId = '', stage = stageIds[0], variants = COSTUMES } = options;
   if (!integer(seed, 0, MAX_UINT) || !['easy', 'normal', 'hard'].includes(difficulty)
       || ![60, 90, 120].includes(roundTime)) fail('Règles du programme invalides.');
-  if (!stageIds.includes(stage)) fail('Arène du programme introuvable.');
+  if (!stageIds.includes(stage)) {
+    const dedicated = DEDICATED_STAGES.find(item => item.id === stage);
+    if (!dedicated || !fighterIds.includes(dedicated.dedicatedTo) || !stageIds.includes(dedicated.theme)) fail('Arène du programme introuvable.');
+    stageIds.push(stage);
+  }
   if (typeof variantId !== 'string' || variantId && (!Array.isArray(variants)
       || !variants.some(item => item.id === variantId && (item.baseFighterId || item.fighterId) === playerId))) {
     fail('Cette apparence ne correspond pas à l’artiste du programme.');
@@ -155,6 +175,7 @@ export function createProgram(mode, playerId, roster = FIGHTERS, stages = STAGES
     mode, playerId, variantId, seed, difficulty, roundTime, initialStage: stage,
     index: 0, health: FULL_HEALTH, status: 'active', opponents: [], stages: [], results: [], tournament: null,
   };
+  programContexts.set(run, { roster, stages, legacyTournament });
   const others = shuffled(fighterIds.filter(id => id !== playerId), seed, 'opponents');
   if (mode === 'story') {
     const route = getStoryRoute(playerId);
@@ -166,7 +187,8 @@ export function createProgram(mode, playerId, roster = FIGHTERS, stages = STAGES
     run.initialStage = run.stages[0];
   } else if (mode === 'tournament') {
     if (fighterIds.length < 8) fail('Le tournoi demande huit artistes distincts.');
-    const rivalId = getTournamentRival(playerId);
+    const authoredRivalId = legacyTournament ? null : getTournamentRival(playerId);
+    const rivalId = fighterIds.includes(authoredRivalId) ? authoredRivalId : null;
     // The rival is always drawn: seven opponents, with the rival taking one slot.
     const chosen = others.filter(id => id !== rivalId).slice(0, rivalId ? 6 : 7);
     if (rivalId) chosen.push(rivalId);
@@ -197,6 +219,21 @@ export function createProgram(mode, playerId, roster = FIGHTERS, stages = STAGES
   }
   if (!run.stages.length) run.stages = stageSchedule(stageIds, stage, run.opponents.length, seed);
   return run;
+}
+
+/** Return only the rival guaranteed by this programme's own tournament rules. */
+export function programTournamentRival(run) {
+  if (run?.mode !== 'tournament' || !Array.isArray(run.tournament?.participants)) return null;
+  const context = programContexts.get(run);
+  if (!context) {
+    // JSON does not carry the private release context. Reconstruct a supported
+    // checkpoint before making a story promise about its original draw.
+    try { return programTournamentRival(validateProgram(run)); }
+    catch { return null; }
+  }
+  if (context.legacyTournament) return null;
+  const rivalId = getTournamentRival(run.playerId);
+  return rivalId && run.tournament.participants.includes(rivalId) ? rivalId : null;
 }
 
 /** Describes exactly what the existing CombatEngine must start or restart. */
@@ -257,7 +294,7 @@ function applyResult(run, result) {
  * Record one actual player duel without mutating the current result screen.
  * Live fractional HP is rounded once; saved/imported HP must already be integer.
  */
-export function recordProgramResult(run, result, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function recordProgramResult(run, result, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   return applyResult(validateProgram(run, roster, stages, variants), normalizeResult(result));
 }
 
@@ -275,7 +312,7 @@ function agreesWith(value, expected) {
  * Opponents, stage order, round/index, starting HP and all seven bracket matches
  * must agree with that reconstruction. No arbitrary imported objects are copied.
  */
-export function validateProgram(value, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function validateProgram(value, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   if (!plain(value) || value.format !== PROGRAM_FORMAT || value.version !== PROGRAM_VERSION) {
     fail('Ce fichier n’est pas un programme Encore version 1.');
   }
@@ -285,14 +322,31 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
       || ![60, 90, 120].includes(value.roundTime) || !integer(value.index, 0, 10)
       || !integer(value.health, 1, FULL_HEALTH) || !['active', 'complete', 'eliminated'].includes(value.status)
       || !Array.isArray(value.results) || value.results.length > 10) fail('Le point de reprise est corrompu.');
-  let expected = createProgram(value.mode, value.playerId, roster, stages, {
-    seed: value.seed, difficulty: value.difficulty, roundTime: value.roundTime,
-    variantId: value.variantId, stage: value.initialStage, variants,
-  });
-  if (value.results.length > expected.opponents.length) fail('Le programme contient trop de résultats.');
-  for (const result of value.results) expected = applyResult(expected, normalizeResult(result, true));
-  if (!agreesWith(value, expected)) fail('Le point de reprise ne correspond pas aux résultats du programme.');
-  return expected;
+  const contexts = [{ roster, stages, legacyTournament: false }];
+  if (roster === FIGHTERS && stages === STAGES) {
+    const originalRoster = FIGHTERS.filter(fighter => ORIGINAL_FIGHTER_IDS.has(fighter.id));
+    const originalStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id));
+    const crossoverStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id) || CROSSOVER_STAGE_IDS.has(stage.id));
+    const illustratedStages = STAGES.filter(stage => ILLUSTRATED_STAGE_IDS.has(stage.id));
+    // These are release catalogs, never an arbitrary subset supplied by a save.
+    contexts.push({ roster: FIGHTERS, stages: originalStages, legacyTournament: false });
+    contexts.push({ roster: FIGHTERS, stages: illustratedStages, legacyTournament: false });
+    for (const previousStages of [STAGES, illustratedStages, crossoverStages, originalStages]) {
+      contexts.push({ roster: originalRoster, stages: previousStages, legacyTournament: value.mode === 'tournament' });
+    }
+  }
+  for (const context of contexts) {
+    try {
+      let expected = createProgramForCatalog(value.mode, value.playerId, context.roster, context.stages, {
+        seed: value.seed, difficulty: value.difficulty, roundTime: value.roundTime,
+        variantId: value.variantId, stage: value.initialStage, variants,
+      }, context.legacyTournament);
+      if (value.results.length > expected.opponents.length) continue;
+      for (const result of value.results) expected = applyResult(expected, normalizeResult(result, true));
+      if (agreesWith(value, expected)) return expected;
+    } catch { /* Another supported release may own this bounded checkpoint. */ }
+  }
+  fail('Le point de reprise ne correspond pas aux résultats du programme.');
 }
 
 /**
@@ -300,21 +354,22 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
  * Survival and tournament losses end that attempt: retry starts a fresh attempt
  * with the same seeded draw and full health, never restores a defeated bracket.
  */
-export function retryProgram(value, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function retryProgram(value, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   const run = validateProgram(value, roster, stages, variants);
   if (run.status === 'active') return run;
   if (run.status !== 'eliminated') fail('Ce programme est déjà remporté.');
-  let retried = createProgram(run.mode, run.playerId, roster, stages, {
+  const context = programContexts.get(run) || { roster, stages, legacyTournament: false };
+  let retried = createProgramForCatalog(run.mode, run.playerId, context.roster, context.stages, {
     seed: run.seed, difficulty: run.difficulty, roundTime: run.roundTime,
     variantId: run.variantId, stage: run.initialStage, variants,
-  });
+  }, context.legacyTournament);
   if (!['survival', 'tournament'].includes(run.mode)) {
     for (const result of run.results.slice(0, -1)) retried = applyResult(retried, result);
   }
   return retried;
 }
 
-export function readProgram(storage, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function readProgram(storage, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   try {
     const raw = storage.getItem(PROGRAM_KEY);
     if (!raw || typeof raw !== 'string' || raw.length > 65536) return null;
@@ -322,7 +377,7 @@ export function readProgram(storage, roster = FIGHTERS, stages = STAGES, variant
   } catch { return null; }
 }
 
-export function saveProgram(storage, run, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function saveProgram(storage, run, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   const valid = run === null ? null : validateProgram(run, roster, stages, variants);
   try {
     if (valid === null) storage.removeItem(PROGRAM_KEY);

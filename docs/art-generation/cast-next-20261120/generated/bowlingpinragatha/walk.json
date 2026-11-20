@@ -1,0 +1,78 @@
+{
+  "schema": "encore-native-art-next/v1",
+  "id": "bowlingpinragatha-walk",
+  "appearanceId": "bowlingpinragatha",
+  "slot": "walk",
+  "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.png",
+  "targetFile": "assets/encore/poses/bowlingpinragatha/walk.png",
+  "createdAt": "2026-11-20T09:57:34.476128+00:00",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-7575bb03-3d3b-446c-8236-9c09251dcaa7.png",
+  "sourceGenerationId": "exec-7575bb03-3d3b-446c-8236-9c09251dcaa7",
+  "sha256": "5724adc2c0d3348aaa113fbd6a3a442f68564472d9d3023884e8f04e2d9a66f6",
+  "bytes": 937680,
+  "dimensions": [
+    1167,
+    1347
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    224,
+    1,
+    974,
+    1340
+  ],
+  "alphaThreshold": "alpha >= 12",
+  "fullyTransparentPixels": 982622,
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "prompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the APPROVED SELECTION SEED: strictly preserve its identity, proportions, colors, exact anatomy and polished 2D style. Reference 2 supplies the official product details only. Make a genuinely different pose, never a mirrored or cropped copy of selection. DESIGN LOCK: ONE entire Bowling Pin Ragatha: familiar pale cloth Ragatha head with RED YARN HAIR, large BLUE BOW, one BLUE BUTTON EYE and the other normal eye with mauve eyelids, small triangular nose and friendly stitched-doll smile. Her ONLY BODY is a complete WHITE/VERY PALE GRAY BOWLING PIN with white pointed collar and rectangular PERIWINKLE PATCHES. The body narrows into a neck beneath the head and broadens into one continuous rounded pin base. ABSOLUTELY NO ARMS, HANDS, LEGS, FEET, normal dress skirt or added appendages. Preserve exactly this head-and-pin anatomy. The blue bowling ball and the other colored face-pins in the official photograph are separate props and must NOT appear. POSE: MOVEMENT toward screen RIGHT: legless pin makes a small balanced WOBBLE, leaning diagonally toward right with its rounded base tipped and face looking right. Distinct from stance. Do not add feet, legs, wheels, trails or motion marks.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+      "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "bytes": 1487585,
+      "kind": "accepted-native-selection-seed"
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+      "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+      "bytes": 6499850,
+      "kind": "official-product-reference",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+      "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series"
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "queueFile": "docs/art-generation/cast-next-20261120/research/states/generation-queue-three-families.json",
+  "visualReview": {
+    "reviewer": "generate_jax_ragatha",
+    "status": "accepted",
+    "observations": [
+      "Movement uses the tilted rounded pin base and shifted head/hair silhouette, with no feet, wheels, trails or added anatomy.",
+      "Blue bow, red yarn hair, blue button eye, white collar and periwinkle patches remain consistent.",
+      "All alpha>=12 bounds lie strictly inside the canvas. Top clearance is thin at one pixel; the bow contour is enclosed and no alpha>=12 pixel touches an edge.",
+      "One complete character only, with no separate bowling objects."
+    ],
+    "orientation": "Face and pupil look screen-right while the continuous pin wobbles on a forward diagonal.",
+    "scope": "Original 2D pose adaptation from official merchandise; unchanged owner and combat kit."
+  }
+}

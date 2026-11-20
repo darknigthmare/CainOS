@@ -2,7 +2,7 @@ import { FIGHTERS } from './data.mjs';
 
 /**
  * Original Encore stage finales after a resolved match. The descriptions match
- * the procedural props in render-finishers.mjs; character art uses existing poses.
+ * the 42 illustrated sets and their procedural fallback in render-finishers.mjs.
  * References identify comparison material, not canonical fighting powers.
  */
 const deepFreeze=value=>{if(value&&typeof value==='object'&&!Object.isFrozen(value)){Object.values(value).forEach(deepFreeze);Object.freeze(value);}return value;};
@@ -10,7 +10,7 @@ export const FINISHER_CATALOG_VERSION='encore-finisher-catalog-1';
 export const FINISHER_VARIANTS=deepFreeze(['impact','special','super']);
 export const FINISHER_NOTICE='Finales de spectacle créées pour Encore. Les motifs évoquent les personnages ; ils ne prouvent ni une scène ni un pouvoir canonique.';
 const durations={impact:180,special:210,super:240};
-const remainingArtWork='Dessins dédiés aux poses et accessoires, puis comparaison avec des plans primaires. Les illustrations et poses existantes sont conservées ; aucune animation 1:1 dessinée image par image n’est revendiquée.';
+const remainingArtWork='Chaque finale dispose de son décor illustré. Les poses animées image par image et la comparaison avec les plans primaires restent à documenter.';
 const performers={
   pomni:{motif:'exit',sourceIds:['ep1','glitch-cast','glitch-void','temmer-interview'],adaptation:'Les portes sont des accessoires de scène. Elles ne téléportent pas Pomni et ne lui permettent pas de quitter le cirque.'},
   jax:{motif:'trick',sourceIds:['ep1','glitch-cast','glitch-candy-court','temmer-interview'],adaptation:'Les clefs, cartes et rideaux sont une farce graphique originale. Ils ne prouvent aucun pouvoir magique ; le sourire utilise le dessin existant.'},

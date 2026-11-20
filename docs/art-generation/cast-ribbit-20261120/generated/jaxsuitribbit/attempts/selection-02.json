@@ -1,0 +1,65 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitribbit",
+  "fighterId": "ribbit",
+  "slot": "selection",
+  "attempt": 2,
+  "status": "unselected_variant",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. EDIT ONLY THE TRANSPARENCY AROUND the character in the attached image. Preserve every pixel of the actual complete frog character artwork, costume, face, proportions, facing, outline, and pose. Remove the entire purple/yellow coloured glow and all black background haze outside the dark drawn outline. They are unwanted background contamination. Export an isolated CLEAN CUTOUT with TRUE ZERO-ALPHA TRANSPARENCY immediately outside the character outline; tiny antialiasing at the outline is fine. The spaces between fingers, legs and the elbow and torso must also be truly transparent. Do not repaint the silhouette, do not add a shadow, aura, backdrop, or floor. Keep the full body, both ear tips and both feet in frame. Return the same clean 2D cel-shaded sprite, with only its unwanted outer glow removed. Background completely transparent.",
+  "referencePaths": [
+    "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/attempts/selection-01.png"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-fc328fae-acbb-4e38-8f79-dccf8743b594.png",
+  "sourceGenerationId": "exec-fc328fae-acbb-4e38-8f79-dccf8743b594",
+  "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/attempts/selection-02.png",
+  "nativeFacing": "right",
+  "visualReview": {
+    "status": "not_selected",
+    "observations": [
+      "Réévaluation par composition avec alpha natif : les halos RGB sont cachés sous alpha nul et ne contaminent pas le rendu. La première version a été retenue comme sélection sans modification des octets."
+    ]
+  },
+  "initialReview": {
+    "status": "rejected",
+    "observations": [
+      "L’édition de détourage conserve un halo coloré ; image non acceptée."
+    ]
+  },
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/cdn/shop/files/JaxSuit_1.png?v=1785347149&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sha256": "75b5c6949a2b014ec67f89df710bc7ae58a91affb5cbdd45a074ce8af680045c",
+  "bytes": 1478659,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1131465,
+  "alpha12Bounds": [
+    149,
+    48,
+    818,
+    1508
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T12:37:39.955245+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/attempts/selection-01.png",
+      "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+      "bytes": 1485535
+    }
+  ]
+}

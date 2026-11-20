@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:36.649Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "smilingtragedygangle",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "smilingtragedygangle",
+      "pose": "intro",
+      "file": "assets/encore/poses/smilingtragedygangle/intro.png",
+      "sha256": "312d17615bb1c4077f5c732164971dfd7a86b6bc7998b00fbbf8e415dd1f1476",
+      "bytes": 1510384,
+      "visibleBounds": {
+        "x": 40,
+        "y": 17,
+        "width": 368,
+        "height": 603
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "attack",
+      "file": "assets/encore/poses/smilingtragedygangle/attack.png",
+      "sha256": "d19948958bd3cabe5f7b72deaf4ac5099fd77e6ebbc4a9fc781183e803fc73de",
+      "bytes": 1445857,
+      "visibleBounds": {
+        "x": 46,
+        "y": 9,
+        "width": 543,
+        "height": 403
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "hit",
+      "file": "assets/encore/poses/smilingtragedygangle/hit.png",
+      "sha256": "beba63ee3ddbdb3fecebaf8cfa4e883b89b917b3f3a99d7139ab81e7b1602a9a",
+      "bytes": 1469098,
+      "visibleBounds": {
+        "x": 14,
+        "y": 74,
+        "width": 393,
+        "height": 495
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "walk",
+      "file": "assets/encore/poses/smilingtragedygangle/walk.png",
+      "sha256": "0852011b3cdbc8a461ff9688104ca290a1c0d33a08232377b37569e278c00388",
+      "bytes": 1537318,
+      "visibleBounds": {
+        "x": 19,
+        "y": 30,
+        "width": 391,
+        "height": 561
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "jump",
+      "file": "assets/encore/poses/smilingtragedygangle/jump.png",
+      "sha256": "139d0f9886755370ef2543e272f7f4f8b4a574ebd9d2b5e1bc190c35fe8b0f46",
+      "bytes": 1433962,
+      "visibleBounds": {
+        "x": 47,
+        "y": 7,
+        "width": 540,
+        "height": 399
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "crouch",
+      "file": "assets/encore/poses/smilingtragedygangle/crouch.png",
+      "sha256": "34887fb010948a9341ae0cc0b4b9b587e3c38f2d2ca5209f28ee07667e2edbb4",
+      "bytes": 1416361,
+      "visibleBounds": {
+        "x": 47,
+        "y": 11,
+        "width": 480,
+        "height": 403
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "victory",
+      "file": "assets/encore/poses/smilingtragedygangle/victory.png",
+      "sha256": "08a5d670e932839158554de18652594c6eb1d4f9e14d229893918c9d90782f18",
+      "bytes": 1519703,
+      "visibleBounds": {
+        "x": 19,
+        "y": 14,
+        "width": 392,
+        "height": 613
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "defeat",
+      "file": "assets/encore/poses/smilingtragedygangle/defeat.png",
+      "sha256": "ccccecf086f26792aef23ee489cd93f82b7e9bc22eba9bf65a4ded047a998531",
+      "bytes": 1410286,
+      "visibleBounds": {
+        "x": 45,
+        "y": 93,
+        "width": 347,
+        "height": 470
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "smilingtragedygangle",
+      "pose": "heavy",
+      "file": "assets/encore/poses/smilingtragedygangle/heavy.png",
+      "sha256": "fbd2ca6f5548cc9c4762e5af7ae301285e3d676255d76143f05803dd45eaabc8",
+      "bytes": 898705,
+      "visibleBounds": {
+        "x": 23,
+        "y": 16,
+        "width": 543,
+        "height": 603
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "smilingtragedygangle",
+      "file": "assets/encore/stance/smilingtragedygangle.png",
+      "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "bytes": 767470,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "smilingtragedygangle",
+      "archiveId": null,
+      "file": "assets/encore/selection/smilingtragedygangle.png",
+      "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "bytes": 1539075,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-smilingtragedygangle.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

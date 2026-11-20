@@ -1,3 +1,7 @@
+import { CROSSOVER_STAGES } from './crossover-stages.mjs';
+import { createCrossoverCostumes } from './crossovers.mjs';
+import { COSTUME_ADDITIONS } from './costume-additions.mjs';
+export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
@@ -234,15 +238,19 @@ export const STAGES = [
   stage('kingdom', 'Le palais de sucre', 'Des arches de confiserie dans Candy Canyon.', { sky: '#29213d', back: '#74496a', accent: '#ffe7b3', floor: '#684760', grid: '#ab7e9b' }, 'ep2'),
   stage('grounds', 'Les terrains du cirque', 'La pelouse numérique au pied du chapiteau.', { sky: '#173149', back: '#386278', accent: '#ffe29c', floor: '#31584e', grid: '#6c9172' }, 'ep1'),
   stage('backstage', 'Le couloir des portes', 'Les portes des résidents servent de fond de scène.', { sky: '#171326', back: '#462b4e', accent: '#efc694', floor: '#4a3549', grid: '#876779' }, 'ep1'),
+  ...CROSSOVER_STAGES.map(({ id, series, name, description, palette, sourceId }) =>
+    stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
+  stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
+  stage('undermap', 'Sous la carte', 'La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.', { sky: '#020321', back: '#050837', accent: '#315bff', floor: '#040525', grid: '#1d26cc' }, 'ep2'),
 ];
 
-// One dedicated arrangement per playable artist, next to the twelve shared
+// One dedicated arrangement per playable artist, next to the shared
 // series arenas. Each reuses the reviewed scenery of its source episode as a
 // base and only changes the accent, so the decor stays grounded instead of
 // inventing a measured set plan. These are fan-game adaptations.
 const HOME_BASE = Object.freeze({ ep1: 'bigtop', ep2: 'candy', ep3: 'manor', ep4: 'spudsy', cainos: 'lake', adaptation: 'training' });
 function dedicatedStage(fighter) {
-  const base = STAGES.find(item => item.id === (HOME_BASE[fighter.sourceId] || 'bigtop')) || STAGES[0];
+  const base = STAGES.find(item => item.id === (HOME_BASE[fighter.loreSource] || 'bigtop')) || STAGES[0];
   const palette = Object.freeze({ ...base.palette, accent: fighter.color });
   return Object.freeze({
     ...base, id: `home-${fighter.id}`, name: `${base.name} · scène de ${fighter.name}`,
@@ -384,6 +392,16 @@ export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
+export const CROSSOVER_COSTUMES = createCrossoverCostumes(FIGHTERS);
+export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS];
+
+export function equipCostume(fighter, id) {
+  const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);
+  if (!variant) return fighter;
+  return { ...fighter, sprite: variant.sprite, animation: variant.animation || null,
+    visual: { ...fighter.visual, ...variant.visual }, costume: variant.id };
+}
+
 export const MODES = [
   { id: 'versus', name: 'Versus CPU', description: 'Un duel libre contre l’ordinateur.' },
   { id: 'local', name: 'Duel local', description: 'Deux joueurs sur le même appareil.' },

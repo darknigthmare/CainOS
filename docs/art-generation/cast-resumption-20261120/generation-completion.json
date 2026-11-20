@@ -1,0 +1,1786 @@
+{
+  "schema": "encore-cast-generation-completion/v1",
+  "createdAt": "2026-11-20T08:51:28.809081+00:00",
+  "status": "native_generation_complete",
+  "previousCheckpoint": {
+    "file": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+    "sha256": "2ca4585a5e30eba98e9f044e40d637ef38d5a52912c09890efb85d503985cbe9",
+    "unchanged": true
+  },
+  "counts": {
+    "newAcceptedNativePNGs": 63,
+    "previousPendingNativePNGsActivated": 36,
+    "newActiveNativePNGs": 99,
+    "newCompleteAppearances": 9,
+    "remainingJobsInFrozenCheckpoint": 0,
+    "preservedCheckpointNativePNGs": 102,
+    "completedNovember20Appearances": 15,
+    "november20NativePNGs": 165,
+    "allAdditionalAppearances": 23,
+    "allAdditionalNativePNGs": 253
+  },
+  "nativePreservation": "All accepted sources are copied byte-for-byte; no cropping, background replacement, alpha normalization or mirrored derivative PNG. Rejected attempts are not installed in the game.",
+  "facingReview": {
+    "abstractinggangle": {
+      "selection": "left",
+      "stance": "left",
+      "intro": "right",
+      "attack": "left",
+      "heavy": "right",
+      "hit": "left",
+      "walk": "left",
+      "jump": "left",
+      "crouch": "left",
+      "victory": "left",
+      "defeat": "left"
+    },
+    "otherAppearances": "right",
+    "method": "Per-image visual review; production renderer must combine source direction and actor direction."
+  },
+  "appearances": [
+    {
+      "id": "smilingtragedygangle",
+      "name": "Gangle — sourire de tragédie",
+      "fighterId": "gangle",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 2,
+      "newNativeFiles": 9,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+          "targetFile": "assets/encore/selection/smilingtragedygangle.png",
+          "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+          "bytes": 1539075,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/smilingtragedygangle-selection.json",
+          "sourceGenerationId": "exec-2e7364a5-5f5b-44af-839a-03c5d748b42d",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+          "targetFile": "assets/encore/stance/smilingtragedygangle.png",
+          "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+          "bytes": 767470,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/smilingtragedygangle-stance.json",
+          "sourceGenerationId": "exec-0da51ac9-3372-4ba4-a139-0427d881096e",
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/intro.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/intro.png",
+          "sha256": "312d17615bb1c4077f5c732164971dfd7a86b6bc7998b00fbbf8e415dd1f1476",
+          "bytes": 1510384,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/intro.json",
+          "sourceGenerationId": "exec-74abd56e-5c43-4b65-b0aa-c2b331183df4",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/attack.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/attack.png",
+          "sha256": "d19948958bd3cabe5f7b72deaf4ac5099fd77e6ebbc4a9fc781183e803fc73de",
+          "bytes": 1445857,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/attack.json",
+          "sourceGenerationId": "exec-677e2228-f1f7-4e43-a5d7-926ab993521a",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/heavy.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/heavy.png",
+          "sha256": "fbd2ca6f5548cc9c4762e5af7ae301285e3d676255d76143f05803dd45eaabc8",
+          "bytes": 898705,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/heavy.json",
+          "sourceGenerationId": "exec-35a0b086-6a60-4729-b50c-49ef2ec00335",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/hit.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/hit.png",
+          "sha256": "beba63ee3ddbdb3fecebaf8cfa4e883b89b917b3f3a99d7139ab81e7b1602a9a",
+          "bytes": 1469098,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/hit.json",
+          "sourceGenerationId": "exec-b810c113-8637-4f8a-bcd3-4daedc1c0c73",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/walk.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/walk.png",
+          "sha256": "0852011b3cdbc8a461ff9688104ca290a1c0d33a08232377b37569e278c00388",
+          "bytes": 1537318,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/walk.json",
+          "sourceGenerationId": "exec-41bbc44f-c3f9-4e27-8d50-0a2c1fda6626",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/jump.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/jump.png",
+          "sha256": "139d0f9886755370ef2543e272f7f4f8b4a574ebd9d2b5e1bc190c35fe8b0f46",
+          "bytes": 1433962,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/jump.json",
+          "sourceGenerationId": "exec-ca68e5ee-dc2e-42f8-bc69-a3864d38253a",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/crouch.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/crouch.png",
+          "sha256": "34887fb010948a9341ae0cc0b4b9b587e3c38f2d2ca5209f28ee07667e2edbb4",
+          "bytes": 1416361,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/crouch.json",
+          "sourceGenerationId": "exec-01e2ee58-386b-459f-b927-a9d0d8f8c552",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/victory.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/victory.png",
+          "sha256": "08a5d670e932839158554de18652594c6eb1d4f9e14d229893918c9d90782f18",
+          "bytes": 1519703,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/victory.json",
+          "sourceGenerationId": "exec-486c5eac-4a42-4bf7-9760-9b4f9f15309e",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/defeat.png",
+          "targetFile": "assets/encore/poses/smilingtragedygangle/defeat.png",
+          "sha256": "ccccecf086f26792aef23ee489cd93f82b7e9bc22eba9bf65a4ded047a998531",
+          "bytes": 1410286,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/defeat.json",
+          "sourceGenerationId": "exec-c3988982-6ffe-4781-926f-b02c8923ecb7",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractingpomni",
+      "name": "Pomni — abstraction partielle",
+      "fighterId": "pomni",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 2,
+      "newNativeFiles": 9,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+          "targetFile": "assets/encore/selection/abstractingpomni.png",
+          "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+          "bytes": 1217005,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingpomni-selection.json",
+          "sourceGenerationId": "exec-7f9a4918-9022-40f6-bcd2-976c379577bd",
+          "dimensions": [
+            955,
+            1647
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+          "targetFile": "assets/encore/stance/abstractingpomni.png",
+          "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+          "bytes": 1039618,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingpomni-stance.json",
+          "sourceGenerationId": "exec-c10092e6-27c8-42da-986a-0f82f35181db",
+          "dimensions": [
+            1176,
+            1337
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/intro-v2.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/intro.png",
+          "sha256": "5ff77c485c4c70edd25f50d6904588014e28e1d7d7403528e5f680aa5905f007",
+          "bytes": 998996,
+          "dimensions": [
+            1147,
+            1372
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/intro-v2.json",
+          "sourceGenerationId": "exec-08be7a93-c6f1-48cc-97a2-8a5871ede8cc",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/attack.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/attack.png",
+          "sha256": "6149bd804d336e9e08039e5ebd2faa35c8e46ac54e131d77920bb09294b840e7",
+          "bytes": 1672355,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/attack.json",
+          "sourceGenerationId": "exec-293851ad-8601-46ab-b142-ccd30b99e02a",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/heavy.png",
+          "sha256": "456284aba2350d9e20f9916592d086d2003bc2ba261f0f71014996f1fd83d3ac",
+          "bytes": 1784330,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/heavy.json",
+          "sourceGenerationId": "exec-b8d1aec4-9e6a-4d4c-97bb-498b9d0087b8",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/hit.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/hit.png",
+          "sha256": "54087bfc1e2c0c197edbad6c2454163038cb3174645ae4f2ea9e030eb3cdab39",
+          "bytes": 1106336,
+          "dimensions": [
+            1214,
+            1295
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/hit.json",
+          "sourceGenerationId": "exec-90bdd94f-9d81-4d70-a1c8-255138870b71",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/walk.png",
+          "sha256": "6dc2df262b6bb1735227b09b773bd7f7b3810492b7dcd0af83e1fe98738601a8",
+          "bytes": 1074729,
+          "dimensions": [
+            1129,
+            1393
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk.json",
+          "sourceGenerationId": "exec-2547c9ca-dafa-4474-bc01-1da9ada4f6b0",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/jump.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/jump.png",
+          "sha256": "1b4be4cc9c306a0c338a684ceec43cd0c5958423438f75868b1aa82e0f168383",
+          "bytes": 1233883,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/jump.json",
+          "sourceGenerationId": "exec-70d3b12d-4e32-43b7-ac50-af82bf1d63ba",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/crouch.png",
+          "sha256": "00b90e75262a0e6b644b04dd7661ab81bf0ee29e15730fcba9bd96a21eaa6243",
+          "bytes": 1151313,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/crouch.json",
+          "sourceGenerationId": "exec-75e3354d-e17e-48ec-a3f8-b6beb1b47722",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/victory.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/victory.png",
+          "sha256": "0eceeb57a339a0f98f92d4c3bdf51f92e1d83ca996a20f455fbf4a9be461882d",
+          "bytes": 1194206,
+          "dimensions": [
+            955,
+            1647
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/victory.json",
+          "sourceGenerationId": "exec-fb5468c8-53d4-44c9-b023-329b0cac80bc",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/defeat.png",
+          "targetFile": "assets/encore/poses/abstractingpomni/defeat.png",
+          "sha256": "002632ef44d50b5982282d380fd80f9cf2805d212b37caeffecb9b653142102e",
+          "bytes": 1250554,
+          "dimensions": [
+            1385,
+            1136
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/defeat.json",
+          "sourceGenerationId": "exec-223e850a-1b3b-4eb3-993c-315e539fe2d1",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractingjax",
+      "name": "Jax — abstraction partielle",
+      "fighterId": "jax",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 3,
+      "newNativeFiles": 8,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+          "targetFile": "assets/encore/selection/abstractingjax.png",
+          "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+          "bytes": 1405678,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingjax-selection.json",
+          "sourceGenerationId": "exec-77d73efc-58e1-43eb-a66a-1ae53bc7104f",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/stance.png",
+          "targetFile": "assets/encore/stance/abstractingjax.png",
+          "sha256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+          "bytes": 723421,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingjax-stance.json",
+          "sourceGenerationId": "exec-7589ed00-471f-43e0-851c-778ca7458eff",
+          "dimensions": [
+            1145,
+            1374
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/intro.png",
+          "targetFile": "assets/encore/poses/abstractingjax/intro.png",
+          "sha256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+          "bytes": 1534805,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingjax-intro.json",
+          "sourceGenerationId": "exec-808963ea-0e43-4938-824b-257241c54715",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/attack.png",
+          "targetFile": "assets/encore/poses/abstractingjax/attack.png",
+          "sha256": "9cae49ee9543bf3bcf12b80963238d1a36daca4b8fbf6a2d80c299439e1d6de0",
+          "bytes": 1460039,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/attack.json",
+          "sourceGenerationId": "exec-6b512a15-66cd-4d0a-9204-4282359c7d24",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingjax/heavy.png",
+          "sha256": "fd3ddc7f7284bb976cfdeb3fcc417913670e2e69904d63626904b3cdc151f4e5",
+          "bytes": 1515426,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/heavy.json",
+          "sourceGenerationId": "exec-4225bc66-b0dc-4fea-ad4a-8a8c75a07249",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/hit.png",
+          "targetFile": "assets/encore/poses/abstractingjax/hit.png",
+          "sha256": "0bc878651e66492447aeda41756418fb4660e06d39cda0c5989887eabee1542f",
+          "bytes": 816820,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/hit.json",
+          "sourceGenerationId": "exec-ea979e79-43b1-4ee9-9d73-cbecac390dc7",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/walk.png",
+          "targetFile": "assets/encore/poses/abstractingjax/walk.png",
+          "sha256": "41f90c05460090d4e7a1c40d6c5f4303a55208119e65e752f30f36cfb700fa49",
+          "bytes": 680205,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/walk.json",
+          "sourceGenerationId": null,
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/jump.png",
+          "targetFile": "assets/encore/poses/abstractingjax/jump.png",
+          "sha256": "9a370aa1a29b02affb056ca8bca6719a4803ee772c9f7fcf821f4c907c67c094",
+          "bytes": 907807,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/jump.json",
+          "sourceGenerationId": "exec-f549d0e1-8664-407a-a408-d5fed336edde",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingjax/crouch.png",
+          "sha256": "dc6016efaaa4410c0762c731a5615d83840fd02c237600082cccc41139b260e2",
+          "bytes": 795973,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/crouch.json",
+          "sourceGenerationId": "exec-5391a7ee-f669-4f68-a573-97845c320e67",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/victory.png",
+          "targetFile": "assets/encore/poses/abstractingjax/victory.png",
+          "sha256": "ebadaa82d7aff3c20d43fad5b9af60d319b1dc10b682267dadf715984b736bd9",
+          "bytes": 1501780,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/victory.json",
+          "sourceGenerationId": "exec-660dfac4-4bed-422e-8431-56855eecfd5b",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/defeat.png",
+          "targetFile": "assets/encore/poses/abstractingjax/defeat.png",
+          "sha256": "d49bd959f77bf3676e8be92d3166f0eac22f2e3e5ef59144b772330447f451d5",
+          "bytes": 1462902,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/defeat.json",
+          "sourceGenerationId": "exec-f1558182-e1a4-4220-a506-00f991a6c391",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractingragatha",
+      "name": "Ragatha — abstraction partielle",
+      "fighterId": "ragatha",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 3,
+      "newNativeFiles": 8,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+          "targetFile": "assets/encore/selection/abstractingragatha.png",
+          "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+          "bytes": 1764655,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingragatha-selection.json",
+          "sourceGenerationId": "exec-b4892e7d-a309-4a0d-9c12-b9bc476da14e",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+          "targetFile": "assets/encore/stance/abstractingragatha.png",
+          "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+          "bytes": 1840025,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingragatha-stance.json",
+          "sourceGenerationId": "exec-16b102e2-2c4c-4725-8a6b-afcc2261b033",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/intro.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/intro.png",
+          "sha256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+          "bytes": 1846317,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingragatha-intro.json",
+          "sourceGenerationId": "exec-c276553f-66f1-485f-a125-fcc7b46c2847",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/attack.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/attack.png",
+          "sha256": "c08f3ec9364c9d879f1cbd659260f07ef85f6cd7339040e48d8c6b496de97869",
+          "bytes": 1692523,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/attack.json",
+          "sourceGenerationId": "exec-58933779-cc16-4b92-9f6d-573ae4e5ff12",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/heavy.png",
+          "sha256": "17f3fd7f8390e856c45ec263b54c66af1ec0b862e8cd01a7c78e1ea422174507",
+          "bytes": 1662624,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/heavy.json",
+          "sourceGenerationId": "exec-acb30e54-8274-49ab-8a96-d4ec8dc97bf2",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/hit.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/hit.png",
+          "sha256": "a2432ac0b00b051d64230d66a4c1bc21fd8243e5f1184245a4fc83232cd1c0ab",
+          "bytes": 1145596,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/hit.json",
+          "sourceGenerationId": "exec-eadd6bdd-5917-4b97-b961-93f82c7c7df4",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/walk.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/walk.png",
+          "sha256": "fea1ad278e88bff6b511000e5793d29a7ab1d5d63c67ee40932b8c62aedee481",
+          "bytes": 1106862,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/walk.json",
+          "sourceGenerationId": "exec-12bc885d-f238-4739-a87e-3e568fb42c70",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/jump.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/jump.png",
+          "sha256": "596dd6d9a8eaf812088e4a5c3c39fcc918f21cec459cc7a069c006a1f76965ac",
+          "bytes": 1287177,
+          "dimensions": [
+            1222,
+            1287
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/jump.json",
+          "sourceGenerationId": "exec-a0e0ce93-6728-4125-b1e8-eb2e3f82fea5",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/crouch.png",
+          "sha256": "73f985a744221206cd78090c8bddcf4da3229bdb065ee2a0cd28ba7da76771c1",
+          "bytes": 1629628,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/crouch.json",
+          "sourceGenerationId": "exec-12d06407-7461-4a76-b440-0963439f34f3",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/victory.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/victory.png",
+          "sha256": "9f8e49eb93ffe3aae88c97f7dd922f83ecccfe3b30f9ce2043c34f300e487119",
+          "bytes": 1784687,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/victory.json",
+          "sourceGenerationId": "exec-ea078452-8006-43c9-9fa6-6a7d951c7064",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/defeat.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/defeat.png",
+          "sha256": "3e3b63fb70c8aaa06baa94d725f039eb59562013712c0413359986e0807f0355",
+          "bytes": 1613425,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/defeat.json",
+          "sourceGenerationId": "exec-14255ba8-cfcf-4e73-8167-3b79fd1b93a6",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractingkinger",
+      "name": "Kinger — abstraction partielle",
+      "fighterId": "kinger",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 2,
+      "newNativeFiles": 9,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+          "targetFile": "assets/encore/selection/abstractingkinger.png",
+          "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+          "bytes": 1275414,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingkinger-selection.json",
+          "sourceGenerationId": "exec-71d8d96f-91f0-4724-b205-6241be060a75",
+          "dimensions": [
+            887,
+            1774
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+          "targetFile": "assets/encore/stance/abstractingkinger.png",
+          "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+          "bytes": 1202856,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingkinger-stance.json",
+          "sourceGenerationId": "exec-d3df710b-6ca4-41ec-98f9-cf6e51b60593",
+          "dimensions": [
+            1141,
+            1379
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/intro.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/intro.png",
+          "sha256": "add0d85fb9e6c1629271fac5ced44ee5c2167a4b20d92d03ac19493a1eee6e0d",
+          "bytes": 1058058,
+          "dimensions": [
+            1142,
+            1378
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/intro.json",
+          "sourceGenerationId": "exec-8ac32645-b9fe-475c-8bb4-2c383eec0ac0",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/attack.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/attack.png",
+          "sha256": "3e7b75b4c608e8e1a4e1259d3264cd35723fc84909b56ae922f76fb0992c5582",
+          "bytes": 1043693,
+          "dimensions": [
+            1378,
+            1142
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/attack.json",
+          "sourceGenerationId": "exec-617728a0-e5a8-4651-8fc8-97563f2b7625",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/heavy.png",
+          "sha256": "2ae28f00ccc858ee709cc243ea6b567f7f471595bbc0ea4b947499b110ed605d",
+          "bytes": 1221845,
+          "dimensions": [
+            1402,
+            1122
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy.json",
+          "sourceGenerationId": "exec-4f045a5c-812d-433f-8ce8-6d0b96131ffe",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/hit.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/hit.png",
+          "sha256": "4dabc9ebb37b6ad0a24b36cf5a54fd6fe32745e690fa5d621fd5918a9d01869c",
+          "bytes": 1354079,
+          "dimensions": [
+            1015,
+            1549
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/hit.json",
+          "sourceGenerationId": "exec-ceafac14-f07f-4683-856a-eb33948efcb3",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/walk.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/walk.png",
+          "sha256": "8c86d009a3c9448e6e3ac6f5034ee45d4021aa160e42c7917781386df12cfac6",
+          "bytes": 1097591,
+          "dimensions": [
+            1179,
+            1334
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/walk.json",
+          "sourceGenerationId": "exec-25c64bc6-803d-4011-af1b-d5e82aacf577",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/jump.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/jump.png",
+          "sha256": "60fdb3fc823b91e6a4b01f3da9ba2515f57d6e7b2a3c5af55d4a45a3ba07bfdf",
+          "bytes": 1178703,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/jump.json",
+          "sourceGenerationId": "exec-e41bd837-bfec-435d-a6ad-03e11bbedf4e",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/crouch.png",
+          "sha256": "a43c8172214584a2f81fe1470d788a60f38658cabdd410630651ab1494d2e9f3",
+          "bytes": 1784750,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/crouch.json",
+          "sourceGenerationId": "exec-f1db69bd-bf48-4ba9-8024-594007eb89b3",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/victory.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/victory.png",
+          "sha256": "2ad04b74221ca01ee401b81a3c0b2dae53ff924ea532d1e07de61b9f30029924",
+          "bytes": 1343099,
+          "dimensions": [
+            887,
+            1774
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/victory.json",
+          "sourceGenerationId": "exec-acf9fd1a-022c-49c9-9fc0-3693f399d861",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/defeat.png",
+          "targetFile": "assets/encore/poses/abstractingkinger/defeat.png",
+          "sha256": "281efa65161845981ee057ba23327183bedb5dd094777925429125ed27c60ef0",
+          "bytes": 1280084,
+          "dimensions": [
+            1774,
+            887
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/defeat.json",
+          "sourceGenerationId": "exec-e9439da8-0965-4ace-8e5d-3b33ac0a0530",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractinggangle",
+      "name": "Gangle — abstraction partielle",
+      "fighterId": "gangle",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 5,
+      "newNativeFiles": 6,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+          "targetFile": "assets/encore/selection/abstractinggangle.png",
+          "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+          "bytes": 1626561,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-selection.json",
+          "sourceGenerationId": "exec-b88b962d-02ee-4766-b075-feaa53496eaa",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "left"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/stance.png",
+          "targetFile": "assets/encore/stance/abstractinggangle.png",
+          "sha256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+          "bytes": 1706313,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-stance.json",
+          "sourceGenerationId": "exec-1a5b70f5-7e80-46ff-aa32-a0cbe553aaf9",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "left"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/attack.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/attack.png",
+          "sha256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+          "bytes": 1619855,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-attack.json",
+          "sourceGenerationId": "exec-0e77d5d5-5f24-4b47-8210-cb96b2613829",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "left"
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/hit.png",
+          "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+          "bytes": 1610452,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-hit.json",
+          "sourceGenerationId": "exec-b296b9bd-834f-4537-8840-ec61345d99bf",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "left"
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/walk.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/walk.png",
+          "sha256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+          "bytes": 1608030,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-walk.json",
+          "sourceGenerationId": "exec-d7dc95d2-5e4f-49e6-b2fd-d626eac49cbb",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "left"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/intro.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/intro.png",
+          "sha256": "cd8c90ffec0b928000b2a93a9c5bb6667aa92dd90f62ff05504d4080b586bafd",
+          "bytes": 1521826,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/intro.json",
+          "sourceGenerationId": "exec-7b7b3d19-a3f5-4a42-860e-48e5488727cd",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/heavy.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/heavy.png",
+          "sha256": "edcb7cff35ed17ab0a06e2ab6203baf77ea38daff87481994c58a231cbff877c",
+          "bytes": 1567434,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/heavy.json",
+          "sourceGenerationId": "exec-1fe0648f-3bc8-4eaf-95d8-22bb6226394b",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/jump.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/jump.png",
+          "sha256": "eb633a09ebb1f252692310e43de27cd0c29d9caa5bce17e531e812eaa69940bb",
+          "bytes": 1647743,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "left",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/jump.json",
+          "sourceGenerationId": "exec-d5457f81-49b5-4ab5-87d1-807e8344b2b0",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/crouch.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/crouch.png",
+          "sha256": "f690705f780a769e48baa7279ef63b9268d60de22b1b6c5542df8a2099537823",
+          "bytes": 1615439,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "left",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/crouch.json",
+          "sourceGenerationId": "exec-8a016aa9-6c3e-4132-abaf-5db34fd73516",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/victory.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/victory.png",
+          "sha256": "7ca2371ab4b6a3ed387fc903daea0e23e88c61566482a3f8c18c691599c5fd64",
+          "bytes": 1547367,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "left",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/victory.json",
+          "sourceGenerationId": "exec-9e63f9d2-6f5d-406c-a857-81ee3478b484",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/defeat.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/defeat.png",
+          "sha256": "dda58efed31926afb53782ca8f52faddc49f7a457565deec71539c1ccc954e03",
+          "bytes": 1667908,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "left",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/defeat.json",
+          "sourceGenerationId": "exec-4b0788dc-2bcf-403b-ac9f-e9f17fbe3194",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractingzooble",
+      "name": "Zooble — abstraction partielle",
+      "fighterId": "zooble",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 2,
+      "newNativeFiles": 9,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+          "targetFile": "assets/encore/selection/abstractingzooble.png",
+          "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+          "bytes": 1154706,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingzooble-selection.json",
+          "sourceGenerationId": "exec-e0954045-fd1c-467e-960a-2936ef40c324",
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+          "targetFile": "assets/encore/stance/abstractingzooble.png",
+          "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+          "bytes": 959487,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingzooble-stance.json",
+          "sourceGenerationId": "exec-34aa526e-efd5-45c6-b34c-69dac0792c42",
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/intro.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/intro.png",
+          "sha256": "022ec3744d2257f97caf4c607610a3bf894add5de0d1c8a2553450838773fe13",
+          "bytes": 1048647,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/intro.json",
+          "sourceGenerationId": "exec-05b11bd7-609c-4440-81ec-ad9fa5e75b92",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/attack.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/attack.png",
+          "sha256": "c4f33bd10647267e530adf0e7fe22de91aa09b61f9e29a014e4d99ed18432fb0",
+          "bytes": 1670249,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/attack.json",
+          "sourceGenerationId": "exec-846d06ce-7a7d-439d-a94d-bf7d7560d4c0",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/heavy.png",
+          "sha256": "e655b27bf0f5bbb83331b8186a2246c121445e88f70917d4136bfe39a1b28a2d",
+          "bytes": 1086925,
+          "dimensions": [
+            1358,
+            1159
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/heavy.json",
+          "sourceGenerationId": "exec-a0e8f9a0-01f1-4a77-a73f-55ef3c6bc01d",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/hit.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/hit.png",
+          "sha256": "b8f606220d71a6ef37b545635a65418b494d6eeda38f35362d447408229fcfc0",
+          "bytes": 1106562,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/hit.json",
+          "sourceGenerationId": "exec-03c34987-e5e5-4eec-b9dc-0fd649aa1cbe",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/walk.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/walk.png",
+          "sha256": "50a52b5f2eee8b3530cdf01b706a6908d2f381a0877efc30490fd72fc401fcf4",
+          "bytes": 1068416,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/walk.json",
+          "sourceGenerationId": "exec-66c18eee-8d05-45e0-b3a3-77293a8c085a",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/jump.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/jump.png",
+          "sha256": "3510c79529ede62fd8dc93be6ae1525bbe9b61d42849aab648527aaf4a632385",
+          "bytes": 1016107,
+          "dimensions": [
+            1381,
+            1139
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/jump.json",
+          "sourceGenerationId": "exec-14c251c5-e9db-4f7e-ad41-bc2af74c3386",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/crouch.png",
+          "sha256": "af562343875b8ef6754128b7578b7f6207b230c3cb6f7a0d27401c17b085989a",
+          "bytes": 1066986,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/crouch.json",
+          "sourceGenerationId": "exec-1715ea9f-9865-4e96-9581-47819fa6dd03",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/victory.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/victory.png",
+          "sha256": "403fd99056e2d497e7cd975f11f2dfe45ed820782e2850bf8bc5b1f60b6995bf",
+          "bytes": 972489,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/victory.json",
+          "sourceGenerationId": "exec-14663ab8-4a73-4294-947d-ef85661cc307",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/defeat.png",
+          "targetFile": "assets/encore/poses/abstractingzooble/defeat.png",
+          "sha256": "3072ada644a0548e901b6baf55f11add26e73f781603cfad5569c87931660d67",
+          "bytes": 1138340,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/defeat.json",
+          "sourceGenerationId": "exec-6fc79bd0-cfa6-4cc8-a019-8b4cbb695be4",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "abstractingqueenie",
+      "name": "Queenie — abstraction partielle",
+      "fighterId": "queenie",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 9,
+      "newNativeFiles": 2,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+          "targetFile": "assets/encore/selection/abstractingqueenie.png",
+          "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+          "bytes": 1667501,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-selection.json",
+          "sourceGenerationId": "exec-25c7a414-dffa-4b89-b0e6-317c06d3735f",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+          "targetFile": "assets/encore/stance/abstractingqueenie.png",
+          "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+          "bytes": 1634820,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-stance.json",
+          "sourceGenerationId": "exec-b0ddc4b9-0658-422d-a6d0-85180b249513",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/intro.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/intro.png",
+          "sha256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+          "bytes": 1683582,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-intro.json",
+          "sourceGenerationId": "exec-0748a751-b6ba-477e-8239-7b04b9853243",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/attack.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/attack.png",
+          "sha256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+          "bytes": 1667403,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-attack.json",
+          "sourceGenerationId": "exec-80edbb4a-679a-4ac0-9e20-e8f19b092a80",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/heavy.png",
+          "sha256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+          "bytes": 1618747,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-heavy.json",
+          "sourceGenerationId": "exec-0317a439-3799-4973-8762-166be06a1b8b",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/hit.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/hit.png",
+          "sha256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+          "bytes": 1684154,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-hit.json",
+          "sourceGenerationId": "exec-ad32a5d7-8ce9-4aa9-9cde-01a352c6cb1f",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/walk.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/walk.png",
+          "sha256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+          "bytes": 1653567,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-walk.json",
+          "sourceGenerationId": "exec-b6752fa9-6653-40f5-93ee-265219437282",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/jump.png",
+          "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+          "bytes": 1637961,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-jump.json",
+          "sourceGenerationId": "exec-38a116e1-f477-496a-b84e-1cf27fb68332",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/crouch.png",
+          "sha256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+          "bytes": 1516608,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-crouch.json",
+          "sourceGenerationId": "exec-a697bc0e-bdfe-463b-bfba-654b6741a3c3",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingqueenie/victory.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/victory.png",
+          "sha256": "fbdcd62a76435a1405147e0ebff3c50bbfdfead493f87829eefd4a8f03693fa4",
+          "bytes": 1611317,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingqueenie/victory.json",
+          "sourceGenerationId": "exec-b52d3f48-a2e5-4dbd-911c-5d5b49cf42ce",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingqueenie/defeat.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/defeat.png",
+          "sha256": "2bbf2e14704834800722e40a248289e2e3f1a5677b3deb73d5b1f464c9122893",
+          "bytes": 1563588,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/abstractingqueenie/defeat.json",
+          "sourceGenerationId": "exec-1e8a3875-5e91-4980-8aa4-f7128e192d6f",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    },
+    {
+      "id": "zoobleep5",
+      "name": "Zooble — Assemblage épisode 5",
+      "fighterId": "zooble",
+      "completed": true,
+      "slots": 11,
+      "oldNativeFiles": 8,
+      "newNativeFiles": 3,
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+          "targetFile": "assets/encore/selection/zoobleep5.png",
+          "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+          "bytes": 1506910,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-selection.json",
+          "sourceGenerationId": "exec-d58ef978-354a-44da-a780-b12abed014d5",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/stance.png",
+          "targetFile": "assets/encore/stance/zoobleep5.png",
+          "sha256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+          "bytes": 745695,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-stance.json",
+          "sourceGenerationId": "exec-c4a17db9-1d1b-496f-81ed-0c265adcb6d7",
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/intro.png",
+          "targetFile": "assets/encore/poses/zoobleep5/intro.png",
+          "sha256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+          "bytes": 1415628,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-intro.json",
+          "sourceGenerationId": "exec-adefabe4-32de-450c-9baf-b5bbab69c9ca",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+          "targetFile": "assets/encore/poses/zoobleep5/attack.png",
+          "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+          "bytes": 1453651,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-attack.json",
+          "sourceGenerationId": "exec-8573a65b-cced-4c93-ad9c-323f0e42e9a0",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+          "targetFile": "assets/encore/poses/zoobleep5/heavy.png",
+          "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+          "bytes": 1450181,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-heavy.json",
+          "sourceGenerationId": "exec-e028564a-fd8a-44ac-b2e4-56f70fc1705a",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+          "targetFile": "assets/encore/poses/zoobleep5/walk.png",
+          "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+          "bytes": 1529675,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-walk.json",
+          "sourceGenerationId": "exec-1380e757-fc8c-4341-be79-28252198a531",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/jump.png",
+          "targetFile": "assets/encore/poses/zoobleep5/jump.png",
+          "sha256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+          "bytes": 1436322,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-jump.json",
+          "sourceGenerationId": "exec-f920b9d9-8662-4080-89c2-0decc614bacc",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/crouch.png",
+          "targetFile": "assets/encore/poses/zoobleep5/crouch.png",
+          "sha256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+          "bytes": 1449005,
+          "metadataFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-crouch.json",
+          "sourceGenerationId": "exec-96de4c96-89cf-46c4-bc74-4064a238ab35",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeCopyVerified": true,
+          "origin": "frozen_checkpoint",
+          "nativeFacing": "right"
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/hit.png",
+          "targetFile": "assets/encore/poses/zoobleep5/hit.png",
+          "sha256": "902c638beb280f08eb47290ff4754e7459cc28b7106627366c9c148a76b9837e",
+          "bytes": 1507503,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/hit.json",
+          "sourceGenerationId": "exec-4e60c273-7c2a-4102-824a-cadfdefb3a07",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/victory.png",
+          "targetFile": "assets/encore/poses/zoobleep5/victory.png",
+          "sha256": "b2b22bcec06a6c8ca6615cf52e64eb8960219ebb79e45a5c1088bf3d37ef64bf",
+          "bytes": 1458306,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/victory.json",
+          "sourceGenerationId": "exec-c58b112d-e2e2-426b-a868-aa904ab6e9ad",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/defeat.png",
+          "targetFile": "assets/encore/poses/zoobleep5/defeat.png",
+          "sha256": "6f6f779a47dff8fcc74bdd36ced0f68533fe45cb94e8350ceb857f19cdfb3807",
+          "bytes": 843884,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "nativeFacing": "right",
+          "metadataFile": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/defeat.json",
+          "sourceGenerationId": "exec-02fc6366-6873-4326-8a77-b4c180bac6a6",
+          "origin": "resumed_generation",
+          "nativeCopyVerified": true
+        }
+      ]
+    }
+  ],
+  "otherAttempts": [
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/attempts/crouch-rejected-1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingjax",
+      "slot": "crouch"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingjax/attempts/walk-rejected-1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingjax",
+      "slot": "walk"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy-v1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingkinger",
+      "slot": "heavy"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/intro.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingpomni",
+      "slot": "intro"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk-v1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingpomni",
+      "slot": "walk"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/attempts/walk-rejected-1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingragatha",
+      "slot": "walk"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/attempts/defeat-rejected-1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingzooble",
+      "slot": "defeat"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/attempts/heavy-rejected-1.json",
+      "status": "rejected_native",
+      "appearanceId": "abstractingzooble",
+      "slot": "heavy"
+    },
+    {
+      "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/attempts/hit-output-moderation.json",
+      "status": "moderation_blocked",
+      "appearanceId": "abstractingzooble",
+      "slot": "hit"
+    }
+  ],
+  "missingJobs": [],
+  "limitations": [
+    "Original static fan-game poses, not frame-by-frame animation or canonical episode certification.",
+    "Installed workbook remains at its preserved older revision; publication requires successful atomic export and reimport."
+  ]
+}

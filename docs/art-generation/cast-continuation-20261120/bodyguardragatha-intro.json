@@ -1,0 +1,38 @@
+{
+  "id": "bodyguardragatha-intro",
+  "appearanceId": "bodyguardragatha",
+  "slot": "intro",
+  "file": "assets/encore/poses/bodyguardragatha/intro.png",
+  "sourceGenerationId": "exec-5ed52bd6-2b83-4ded-9018-bc0163376dab",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE single full-body intro sprite for Digital Circus Encore. Image 1 is the approved selection sprite: preserve its exact character identity, body, proportions, clothing, colors and art style. Image 2 is supporting official reference only. Change ONLY the pose: Intro greeting: stand upright with one foot lightly forward, lift one hand to touch the outer edge of the sunglasses in a calm security-attendant salute; other hand stays on hip. Smile slightly. Glasses remain covering both eyes. Complete body. Invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. This is one entire character in one individual image, not a collage or sprite sheet. Actual transparent RGBA background, opaque character interior, clean silhouette, generous margins around all tips, bow/antennas, hands and feet. No floor, shadow, haze, glow, motion trails, duplicate body, weapons, scene props, letters, text, frame or watermark. Render clean flat 2D game illustration.",
+  "sha256": "9127600afc40002067ed9decee2c6afd27bfa8454a04e676013f5a6dc43f7b68",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    929,
+    1694
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    65,
+    15,
+    890,
+    1678
+  ],
+  "bytes": 1183410,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

@@ -1,0 +1,3270 @@
+{
+  "schema": "digital-circus-canon-audit.v1",
+  "as_of": "2026-11-19",
+  "purpose": "Research inventory to compare against repository; not a claim these assets are absent or complete.",
+  "release_boundary": {
+    "episode_count": 9,
+    "finale": "Remember",
+    "date": "2026-06-19",
+    "sources": [
+      "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "https://www.netflix.com/title/81936142"
+    ]
+  },
+  "methodology": [
+    "Primary official GLITCH episode pages and Netflix verify release boundary.",
+    "Detailed appearance discovery uses TADC Fandom indexes; direct page fetch returned 402, indexed search content was readable.",
+    "Production tiers and suggested game roles are project design decisions, not official show classifications.",
+    "No episode frame was inspected by this research task; fidelity must be approved with source frames before marking a sprite final.",
+    "Official merchandise confirms many names but collectible proportions are not a substitute for screen model references.",
+    "Repeated normal costumes and props are not additional characters. Source-evidence and repository-completion statuses are separate."
+  ],
+  "episodes": [
+    {
+      "episode": 1,
+      "title": "PILOT",
+      "release_date": "2023-10-13",
+      "primary_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+    },
+    {
+      "episode": 2,
+      "title": "Candy Carrier Chaos!",
+      "release_date": "2024-05-03",
+      "primary_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+    },
+    {
+      "episode": 3,
+      "title": "The Mystery Of Mildenhall Manor",
+      "release_date": "2024-10-04",
+      "primary_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+    },
+    {
+      "episode": 4,
+      "title": "Fast Food Masquerade",
+      "release_date": "2024-12-13",
+      "primary_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+    },
+    {
+      "episode": 5,
+      "title": "Untitled",
+      "release_date": "2025-06-20",
+      "primary_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+    },
+    {
+      "episode": 6,
+      "title": "They All Get Guns",
+      "release_date": "2025-08-15",
+      "primary_url": "https://www.youtube.com/watch?v=mOvhHim78YA"
+    },
+    {
+      "episode": 7,
+      "title": "Beach Episode",
+      "release_date": "2025-12-12",
+      "primary_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+    },
+    {
+      "episode": 8,
+      "title": "hjsakldfhl",
+      "release_date": "2026-03-20",
+      "primary_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+    },
+    {
+      "episode": 9,
+      "title": "Remember",
+      "release_date": "2026-06-19",
+      "primary_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "pomni",
+      "name": "Pomni",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Pomni",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "jax",
+      "name": "Jax",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "ragatha",
+      "name": "Ragatha",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Ragatha",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "gangle",
+      "name": "Gangle",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "kinger",
+      "name": "Kinger",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Kinger",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "zooble",
+      "name": "Zooble",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "caine",
+      "name": "Caine",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Caine",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "bubble",
+      "name": "Bubble",
+      "production_tier": "primary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Bubble",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "gloink_queen",
+      "name": "Gloink Queen",
+      "production_tier": "secondary",
+      "suggested_game_role": "boss",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Gloink_Queen",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "gummigoo",
+      "name": "Gummigoo",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Gummigoo",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "max",
+      "name": "Max",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_assist",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Max",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "chad",
+      "name": "Chad",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_assist",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Chad",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "princess_loolilalu",
+      "name": "Princess Loolilalu",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_story_npc",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Princess_Loolilalu",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "fudge",
+      "name": "The Fudge",
+      "production_tier": "secondary",
+      "suggested_game_role": "boss",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/The_Fudge",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "ghostly",
+      "name": "Ghostly",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_assist",
+      "series_debut_episode": 3,
+      "first_full_body_episode": 3,
+      "source_url": "https://tadc.fandom.com/wiki/Ghostly",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "baron_theodore_mildenhall",
+      "name": "Baron Theodore Mildenhall",
+      "production_tier": "secondary",
+      "suggested_game_role": "boss_or_story_npc",
+      "series_debut_episode": 3,
+      "first_full_body_episode": 3,
+      "source_url": "https://tadc.fandom.com/wiki/Baron_Theodore_Mildenhall",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "martha_mildenhall",
+      "name": "Martha Mildenhall",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_assist",
+      "series_debut_episode": 3,
+      "first_full_body_episode": 3,
+      "source_url": "https://tadc.fandom.com/wiki/Martha_Mildenhall",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "angel",
+      "name": "Angel",
+      "production_tier": "secondary",
+      "suggested_game_role": "boss",
+      "series_debut_episode": 3,
+      "first_full_body_episode": 3,
+      "source_url": "https://tadc.fandom.com/wiki/Angel",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "orbsman",
+      "name": "Orbsman",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter",
+      "series_debut_episode": 4,
+      "first_full_body_episode": 4,
+      "source_url": "https://tadc.fandom.com/wiki/Orbsman",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "abel",
+      "name": "Abel",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_story_npc",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Abel",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "blue_ai",
+      "name": "Blue AI",
+      "production_tier": "secondary",
+      "suggested_game_role": "story_entity",
+      "series_debut_episode": 8,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "kaufmo",
+      "name": "Kaufmo",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_story_npc",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 9,
+      "source_url": "https://tadc.fandom.com/wiki/Kaufmo",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Portrait debut and fully shown avatar debut are distinct; exact frame capture required.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback",
+        "abstracted"
+      ]
+    },
+    {
+      "entity_id": "queenie",
+      "name": "Queenie",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_story_npc",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Queenie",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Portrait debut and fully shown avatar debut are distinct; exact frame capture required.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback",
+        "abstracted_rampage",
+        "abstracted_calm"
+      ]
+    },
+    {
+      "entity_id": "ribbit",
+      "name": "Ribbit",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_story_npc",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 9,
+      "source_url": "https://tadc.fandom.com/wiki/Ribbit",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Portrait debut and fully shown avatar debut are distinct; exact frame capture required.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback",
+        "abstracted"
+      ]
+    },
+    {
+      "entity_id": "scratch",
+      "name": "Scratch",
+      "production_tier": "secondary",
+      "suggested_game_role": "fighter_or_story_npc",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Scratch",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Portrait debut and fully shown avatar debut are distinct; exact frame capture required.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback"
+      ]
+    },
+    {
+      "entity_id": "evil_pomni",
+      "name": "Evil Pomni",
+      "production_tier": "secondary",
+      "suggested_game_role": "npc_doppelganger",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Distinct episode NPC; can share animation rig with pomni. Not an invented palette.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "evil_jax",
+      "name": "Evil Jax",
+      "production_tier": "secondary",
+      "suggested_game_role": "npc_doppelganger",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Distinct episode NPC; can share animation rig with jax. Not an invented palette.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "evil_ragatha",
+      "name": "Evil Ragatha",
+      "production_tier": "secondary",
+      "suggested_game_role": "npc_doppelganger",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Distinct episode NPC; can share animation rig with ragatha. Not an invented palette.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "coach_dictatorer",
+      "name": "Coach Dictatorer",
+      "production_tier": "secondary",
+      "suggested_game_role": "npc_doppelganger",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Distinct episode NPC; can share animation rig with kinger. Not an invented palette.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "bazooble",
+      "name": "Bazooble",
+      "production_tier": "secondary",
+      "suggested_game_role": "npc_doppelganger",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Distinct episode NPC; can share animation rig with zooble. Not an invented palette.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "evil_orbsman",
+      "name": "Evil Orbsman",
+      "production_tier": "secondary",
+      "suggested_game_role": "npc_doppelganger",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Distinct episode NPC; can share animation rig with orbsman. Not an invented palette.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "ming",
+      "name": "Ming",
+      "production_tier": "tertiary",
+      "suggested_game_role": "fighter_or_assist",
+      "series_debut_episode": 6,
+      "first_full_body_episode": 6,
+      "source_url": "https://tadc.fandom.com/wiki/Ming",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "disappearing_guy",
+      "name": "Disappearing Guy",
+      "production_tier": "tertiary",
+      "suggested_game_role": "assist_or_npc",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/Disappearing_Guy",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "dr_football",
+      "name": "Dr. Football",
+      "production_tier": "tertiary",
+      "suggested_game_role": "jumpscare_npc",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Dr._Football",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "moon",
+      "name": "Moon",
+      "production_tier": "tertiary",
+      "suggested_game_role": "environment_character",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Moon",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "sun",
+      "name": "Sun",
+      "production_tier": "tertiary",
+      "suggested_game_role": "environment_character",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Sun",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "gloinks",
+      "name": "Gloinks",
+      "production_tier": "tertiary",
+      "suggested_game_role": "enemy_family",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Gloinks",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "mannequins",
+      "name": "Mannequins",
+      "production_tier": "tertiary",
+      "suggested_game_role": "npc_family",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "barrel_monkeys",
+      "name": "Barrel Monkeys",
+      "production_tier": "tertiary",
+      "suggested_game_role": "creature_family",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 1,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "cookie_butterfly",
+      "name": "Cookie Butterfly",
+      "production_tier": "tertiary",
+      "suggested_game_role": "ambient_creature",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "gummy_elephant",
+      "name": "Gummy Elephant",
+      "production_tier": "tertiary",
+      "suggested_game_role": "creature",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "gummy_worms",
+      "name": "Gummy Worms",
+      "production_tier": "tertiary",
+      "suggested_game_role": "creature_family",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "additional_voices",
+      "name": "Candy announcer (Additional Voices)",
+      "production_tier": "tertiary",
+      "suggested_game_role": "named_cameo_alias",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Additional_Voices",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "candy_guards",
+      "name": "Candy guards",
+      "production_tier": "tertiary",
+      "suggested_game_role": "npc_family",
+      "series_debut_episode": 2,
+      "first_full_body_episode": 2,
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "hell_souls",
+      "name": "Hell souls",
+      "production_tier": "tertiary",
+      "suggested_game_role": "enemy_family",
+      "series_debut_episode": 3,
+      "first_full_body_episode": 3,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "fly",
+      "name": "Fly",
+      "production_tier": "tertiary",
+      "suggested_game_role": "audio_or_ambient_presence_pending_visual_reference",
+      "series_debut_episode": 3,
+      "first_full_body_episode": null,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_level": "dialogue_sound_presence_visual_unverified",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Presence attested by dialogue/sound effect; visible appearance not verified. No silhouette or full-body anatomy is to be invented. First full-body episode remains unknown.",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "giant_centipede",
+      "name": "Giant centipede spectator",
+      "production_tier": "tertiary",
+      "suggested_game_role": "creature",
+      "series_debut_episode": 5,
+      "first_full_body_episode": 5,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "fish_orange",
+      "name": "Orange ugly fish",
+      "production_tier": "tertiary",
+      "suggested_game_role": "npc",
+      "series_debut_episode": 7,
+      "first_full_body_episode": 7,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "fish_red",
+      "name": "Red ugly fish",
+      "production_tier": "tertiary",
+      "suggested_game_role": "npc",
+      "series_debut_episode": 7,
+      "first_full_body_episode": 7,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "shrimp_npc",
+      "name": "Shrimp NPC",
+      "production_tier": "tertiary",
+      "suggested_game_role": "npc",
+      "series_debut_episode": 7,
+      "first_full_body_episode": 7,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "chinese_room_npc",
+      "name": "Chinese Room NPC",
+      "production_tier": "tertiary",
+      "suggested_game_role": "npc",
+      "series_debut_episode": 7,
+      "first_full_body_episode": 7,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "nightmare_fourth_crocodile",
+      "name": "Fourth nightmare crocodile",
+      "production_tier": "tertiary",
+      "suggested_game_role": "nightmare_creature",
+      "series_debut_episode": 8,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "ragatha_mother_shadow",
+      "name": "Ragatha nightmare silhouette",
+      "production_tier": "tertiary",
+      "suggested_game_role": "nightmare_entity",
+      "series_debut_episode": 8,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "",
+      "variant_ids": [
+        "base"
+      ]
+    },
+    {
+      "entity_id": "wormo",
+      "name": "Wormo",
+      "production_tier": "tertiary",
+      "suggested_game_role": "former_avatar",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Full avatar revealed in episode 8; frame reference needed before sprite generation.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback"
+      ]
+    },
+    {
+      "entity_id": "bizco",
+      "name": "Bizco",
+      "production_tier": "tertiary",
+      "suggested_game_role": "former_avatar",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Full avatar revealed in episode 8; frame reference needed before sprite generation.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback"
+      ]
+    },
+    {
+      "entity_id": "rattie",
+      "name": "Rattie",
+      "production_tier": "tertiary",
+      "suggested_game_role": "former_avatar",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Full avatar revealed in episode 8; frame reference needed before sprite generation.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback"
+      ]
+    },
+    {
+      "entity_id": "spike",
+      "name": "Spike",
+      "production_tier": "tertiary",
+      "suggested_game_role": "former_avatar",
+      "series_debut_episode": 1,
+      "first_full_body_episode": 8,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Full avatar revealed in episode 8; frame reference needed before sprite generation.",
+      "variant_ids": [
+        "portrait",
+        "active_flashback"
+      ]
+    },
+    {
+      "entity_id": "portrait_pink_cyclops",
+      "name": "Unnamed pink cyclops",
+      "production_tier": "tertiary",
+      "suggested_game_role": "portrait_only",
+      "series_debut_episode": 1,
+      "first_full_body_episode": null,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Unseen body must not be claimed 1:1; do not use fan names Glorp/Sadguy/Shrooms.",
+      "variant_ids": [
+        "door_portrait"
+      ]
+    },
+    {
+      "entity_id": "portrait_yellow_sad_clown",
+      "name": "Unnamed yellow sad clown",
+      "production_tier": "tertiary",
+      "suggested_game_role": "portrait_only",
+      "series_debut_episode": 1,
+      "first_full_body_episode": null,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Unseen body must not be claimed 1:1; do not use fan names Glorp/Sadguy/Shrooms.",
+      "variant_ids": [
+        "door_portrait"
+      ]
+    },
+    {
+      "entity_id": "portrait_blue_oyster",
+      "name": "Unnamed blue oyster",
+      "production_tier": "tertiary",
+      "suggested_game_role": "portrait_only",
+      "series_debut_episode": 1,
+      "first_full_body_episode": null,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Unseen body must not be claimed 1:1; do not use fan names Glorp/Sadguy/Shrooms.",
+      "variant_ids": [
+        "door_portrait"
+      ]
+    },
+    {
+      "entity_id": "portrait_green_bulb",
+      "name": "Unnamed green bulb",
+      "production_tier": "tertiary",
+      "suggested_game_role": "portrait_only",
+      "series_debut_episode": 1,
+      "first_full_body_episode": null,
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Unseen body must not be claimed 1:1; do not use fan names Glorp/Sadguy/Shrooms.",
+      "variant_ids": [
+        "door_portrait"
+      ]
+    },
+    {
+      "entity_id": "albert_spudsy",
+      "name": "Albert Spudsy",
+      "production_tier": "tertiary",
+      "suggested_game_role": "cutout_or_logo",
+      "series_debut_episode": 4,
+      "first_full_body_episode": null,
+      "source_url": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_level": "secondary_index",
+      "visual_reference_verified": false,
+      "repo_presence": "not_audited_by_research_agent",
+      "notes": "Only an in-world depiction; full living character would be an adaptation.",
+      "variant_ids": [
+        "cardboard_cutout",
+        "logo"
+      ]
+    }
+  ],
+  "variant_candidates": [
+    {
+      "variant_id": "pomni__base",
+      "entity_id": "pomni",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Pomni",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__base",
+      "entity_id": "jax",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__base",
+      "entity_id": "ragatha",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ragatha",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__base",
+      "entity_id": "gangle",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__base",
+      "entity_id": "kinger",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Kinger",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__base",
+      "entity_id": "zooble",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "caine__base",
+      "entity_id": "caine",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Caine",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "bubble__base",
+      "entity_id": "bubble",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Bubble",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gloink_queen__base",
+      "entity_id": "gloink_queen",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gloink_Queen",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gummigoo__base",
+      "entity_id": "gummigoo",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gummigoo",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "max__base",
+      "entity_id": "max",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Max",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "chad__base",
+      "entity_id": "chad",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Chad",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "princess_loolilalu__base",
+      "entity_id": "princess_loolilalu",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Princess_Loolilalu",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "fudge__base",
+      "entity_id": "fudge",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/The_Fudge",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ghostly__base",
+      "entity_id": "ghostly",
+      "name": "base",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ghostly",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "baron_theodore_mildenhall__base",
+      "entity_id": "baron_theodore_mildenhall",
+      "name": "base",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Baron_Theodore_Mildenhall",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "martha_mildenhall__base",
+      "entity_id": "martha_mildenhall",
+      "name": "base",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Martha_Mildenhall",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "angel__base",
+      "entity_id": "angel",
+      "name": "base",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Angel",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "orbsman__base",
+      "entity_id": "orbsman",
+      "name": "base",
+      "episode": 4,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Orbsman",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "abel__base",
+      "entity_id": "abel",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Abel",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "blue_ai__base",
+      "entity_id": "blue_ai",
+      "name": "base",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kaufmo__portrait",
+      "entity_id": "kaufmo",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Kaufmo",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "kaufmo__active_flashback",
+      "entity_id": "kaufmo",
+      "name": "active flashback",
+      "episode": 9,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Kaufmo",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kaufmo__abstracted",
+      "entity_id": "kaufmo",
+      "name": "abstracted",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Kaufmo",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "queenie__portrait",
+      "entity_id": "queenie",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Queenie",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "queenie__active_flashback",
+      "entity_id": "queenie",
+      "name": "active flashback",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Queenie",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "queenie__abstracted_rampage",
+      "entity_id": "queenie",
+      "name": "abstracted rampage",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Queenie",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "queenie__abstracted_calm",
+      "entity_id": "queenie",
+      "name": "abstracted calm",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Queenie",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ribbit__portrait",
+      "entity_id": "ribbit",
+      "name": "portrait",
+      "episode": 5,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Ribbit",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "ribbit__active_flashback",
+      "entity_id": "ribbit",
+      "name": "active flashback",
+      "episode": 9,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ribbit",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ribbit__abstracted",
+      "entity_id": "ribbit",
+      "name": "abstracted",
+      "episode": 9,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ribbit",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "scratch__portrait",
+      "entity_id": "scratch",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Scratch",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "scratch__active_flashback",
+      "entity_id": "scratch",
+      "name": "active flashback",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Scratch",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "evil_pomni__base",
+      "entity_id": "evil_pomni",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "evil_jax__base",
+      "entity_id": "evil_jax",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "evil_ragatha__base",
+      "entity_id": "evil_ragatha",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "coach_dictatorer__base",
+      "entity_id": "coach_dictatorer",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "bazooble__base",
+      "entity_id": "bazooble",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "evil_orbsman__base",
+      "entity_id": "evil_orbsman",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ming__base",
+      "entity_id": "ming",
+      "name": "base",
+      "episode": 6,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ming",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "disappearing_guy__base",
+      "entity_id": "disappearing_guy",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Disappearing_Guy",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "dr_football__base",
+      "entity_id": "dr_football",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Dr._Football",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "moon__base",
+      "entity_id": "moon",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Moon",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "sun__base",
+      "entity_id": "sun",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Sun",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gloinks__base",
+      "entity_id": "gloinks",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gloinks",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "mannequins__base",
+      "entity_id": "mannequins",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "barrel_monkeys__base",
+      "entity_id": "barrel_monkeys",
+      "name": "base",
+      "episode": 1,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "cookie_butterfly__base",
+      "entity_id": "cookie_butterfly",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gummy_elephant__base",
+      "entity_id": "gummy_elephant",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gummy_worms__base",
+      "entity_id": "gummy_worms",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "additional_voices__base",
+      "entity_id": "additional_voices",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Additional_Voices",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "candy_guards__base",
+      "entity_id": "candy_guards",
+      "name": "base",
+      "episode": 2,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "hell_souls__base",
+      "entity_id": "hell_souls",
+      "name": "base",
+      "episode": 3,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "fly__base",
+      "entity_id": "fly",
+      "name": "base",
+      "episode": 3,
+      "variant_kind": "audio_presence",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Presence attested by dialogue/sound effect; visible appearance not verified. No silhouette or full-body anatomy is to be invented. First full-body episode remains unknown.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "giant_centipede__base",
+      "entity_id": "giant_centipede",
+      "name": "base",
+      "episode": 5,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "fish_orange__base",
+      "entity_id": "fish_orange",
+      "name": "base",
+      "episode": 7,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "fish_red__base",
+      "entity_id": "fish_red",
+      "name": "base",
+      "episode": 7,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "shrimp_npc__base",
+      "entity_id": "shrimp_npc",
+      "name": "base",
+      "episode": 7,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "chinese_room_npc__base",
+      "entity_id": "chinese_room_npc",
+      "name": "base",
+      "episode": 7,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "nightmare_fourth_crocodile__base",
+      "entity_id": "nightmare_fourth_crocodile",
+      "name": "base",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha_mother_shadow__base",
+      "entity_id": "ragatha_mother_shadow",
+      "name": "base",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "wormo__portrait",
+      "entity_id": "wormo",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "wormo__active_flashback",
+      "entity_id": "wormo",
+      "name": "active flashback",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "bizco__portrait",
+      "entity_id": "bizco",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "bizco__active_flashback",
+      "entity_id": "bizco",
+      "name": "active flashback",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "rattie__portrait",
+      "entity_id": "rattie",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "rattie__active_flashback",
+      "entity_id": "rattie",
+      "name": "active flashback",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "spike__portrait",
+      "entity_id": "spike",
+      "name": "portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "spike__active_flashback",
+      "entity_id": "spike",
+      "name": "active flashback",
+      "episode": 8,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "portrait_pink_cyclops__door_portrait",
+      "entity_id": "portrait_pink_cyclops",
+      "name": "door portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "portrait_yellow_sad_clown__door_portrait",
+      "entity_id": "portrait_yellow_sad_clown",
+      "name": "door portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "portrait_blue_oyster__door_portrait",
+      "entity_id": "portrait_blue_oyster",
+      "name": "door portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "portrait_green_bulb__door_portrait",
+      "entity_id": "portrait_green_bulb",
+      "name": "door portrait",
+      "episode": 1,
+      "variant_kind": "portrait",
+      "source_url": "https://tadc.fandom.com/wiki/Circus_Members",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Partial portrait reference of existing identity; not a separate missing costume. Exact frame still needs inspection.",
+      "requires_new_art": false
+    },
+    {
+      "variant_id": "albert_spudsy__cardboard_cutout",
+      "entity_id": "albert_spudsy",
+      "name": "cardboard cutout",
+      "episode": 4,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "albert_spudsy__logo",
+      "entity_id": "albert_spudsy",
+      "name": "logo",
+      "episode": 4,
+      "variant_kind": "base_or_state",
+      "source_url": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__spudsys_employee",
+      "entity_id": "pomni",
+      "name": "Spudsy’s employee",
+      "episode": 4,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Pomni",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__spudsys_employee",
+      "entity_id": "jax",
+      "name": "Spudsy’s employee",
+      "episode": 4,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__spudsys_employee",
+      "entity_id": "ragatha",
+      "name": "Spudsy’s employee",
+      "episode": 4,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Ragatha",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__spudsys_employee",
+      "entity_id": "zooble",
+      "name": "Spudsy’s employee",
+      "episode": 4,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__spudsys_manager",
+      "entity_id": "gangle",
+      "name": "Spudsy’s manager + plastic mask",
+      "episode": 4,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__comedy_mask",
+      "entity_id": "gangle",
+      "name": "Comedy mask",
+      "episode": 1,
+      "variant_kind": "mask_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__tragedy_mask",
+      "entity_id": "gangle",
+      "name": "Tragedy mask",
+      "episode": 1,
+      "variant_kind": "mask_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__plastic_mask",
+      "entity_id": "gangle",
+      "name": "Plastic mask outside uniform",
+      "episode": 4,
+      "variant_kind": "mask_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__smiling_tragedy",
+      "entity_id": "gangle",
+      "name": "Smiling tragedy mask",
+      "episode": 6,
+      "variant_kind": "expression_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gangle",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__possessed",
+      "entity_id": "pomni",
+      "name": "Possessed by the souls",
+      "episode": 3,
+      "variant_kind": "transformation",
+      "source_url": "https://tadc.fandom.com/wiki/Pomni",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__dream_abstraction",
+      "entity_id": "pomni",
+      "name": "Abstraction nightmare",
+      "episode": 2,
+      "variant_kind": "dream_only",
+      "source_url": "https://tadc.fandom.com/wiki/Pomni",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Dream state, not permanent in-series abstraction."
+    },
+    {
+      "variant_id": "ragatha__glitched",
+      "entity_id": "ragatha",
+      "name": "Glitched after Kaufmo contact",
+      "episode": 1,
+      "variant_kind": "damage_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ragatha",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__stupid_sauce",
+      "entity_id": "ragatha",
+      "name": "Spudsy’s sauce state",
+      "episode": 4,
+      "variant_kind": "expression_state",
+      "source_url": "https://tadc.fandom.com/wiki/Ragatha",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__shotgun",
+      "entity_id": "kinger",
+      "name": "Mildenhall shotgun",
+      "episode": 3,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/Kinger",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__glowing",
+      "entity_id": "kinger",
+      "name": "Holding breath / glow",
+      "episode": 3,
+      "variant_kind": "effect_state",
+      "source_url": "https://tadc.fandom.com/wiki/Kinger",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__poacher",
+      "entity_id": "jax",
+      "name": "Poacher’s Paradise",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__rhinoceros",
+      "entity_id": "gangle",
+      "name": "Ribbon rhinoceros",
+      "episode": 5,
+      "variant_kind": "transformation",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__flamingo",
+      "entity_id": "zooble",
+      "name": "Flamingo",
+      "episode": 5,
+      "variant_kind": "transformation",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__president",
+      "entity_id": "pomni",
+      "name": "President Pomni",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__bodyguard",
+      "entity_id": "ragatha",
+      "name": "Presidential bodyguard",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__bodyguard",
+      "entity_id": "zooble",
+      "name": "Presidential bodyguard",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__presidential_aide",
+      "entity_id": "kinger",
+      "name": "Presidential assistant",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Kinger",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__australian_extremist",
+      "entity_id": "jax",
+      "name": "President Pomni adventure role",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__new_zealand_extremist",
+      "entity_id": "gangle",
+      "name": "President Pomni adventure role",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__anime_school",
+      "entity_id": "pomni",
+      "name": "Anime school sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__noir_bar",
+      "entity_id": "pomni",
+      "name": "Monochrome bar sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__softball",
+      "entity_id": "pomni",
+      "name": "Big Tops softball",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__beach",
+      "entity_id": "pomni",
+      "name": "Beach outfit",
+      "episode": 7,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Beach_Episode",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__anime_school",
+      "entity_id": "jax",
+      "name": "Anime school sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__noir_bar",
+      "entity_id": "jax",
+      "name": "Monochrome bar sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__softball",
+      "entity_id": "jax",
+      "name": "Big Tops softball",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__beach",
+      "entity_id": "jax",
+      "name": "Beach outfit",
+      "episode": 7,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Beach_Episode",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__anime_school",
+      "entity_id": "ragatha",
+      "name": "Anime school sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__noir_bar",
+      "entity_id": "ragatha",
+      "name": "Monochrome bar sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__softball",
+      "entity_id": "ragatha",
+      "name": "Big Tops softball",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "ragatha__beach",
+      "entity_id": "ragatha",
+      "name": "Beach outfit",
+      "episode": 7,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Beach_Episode",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__anime_school",
+      "entity_id": "gangle",
+      "name": "Anime school sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__noir_bar",
+      "entity_id": "gangle",
+      "name": "Monochrome bar sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__softball",
+      "entity_id": "gangle",
+      "name": "Big Tops softball",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gangle__beach",
+      "entity_id": "gangle",
+      "name": "Beach outfit",
+      "episode": 7,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Beach_Episode",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__anime_school",
+      "entity_id": "kinger",
+      "name": "Anime school sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__noir_bar",
+      "entity_id": "kinger",
+      "name": "Monochrome bar sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__softball",
+      "entity_id": "kinger",
+      "name": "Big Tops softball",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "kinger__beach",
+      "entity_id": "kinger",
+      "name": "Beach outfit",
+      "episode": 7,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Beach_Episode",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__anime_school",
+      "entity_id": "zooble",
+      "name": "Anime school sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__noir_bar",
+      "entity_id": "zooble",
+      "name": "Monochrome bar sequence",
+      "episode": 5,
+      "variant_kind": "style_and_costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__softball",
+      "entity_id": "zooble",
+      "name": "Big Tops softball",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Untitled",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "zooble__beach",
+      "entity_id": "zooble",
+      "name": "Beach outfit",
+      "episode": 7,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Beach_Episode",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__maid",
+      "entity_id": "jax",
+      "name": "Maid outfit",
+      "episode": 5,
+      "variant_kind": "costume",
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "pomni__guns_episode",
+      "entity_id": "pomni",
+      "name": "Episode 6 weapon set",
+      "episode": 6,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Weapons and held props are loadouts, not six extra roster identities."
+    },
+    {
+      "variant_id": "pomni__human_counterpart",
+      "entity_id": "pomni",
+      "name": "Episode 9 human counterpart",
+      "episode": 9,
+      "variant_kind": "human_counterpart",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Only visible design details; no invented earlier/later appearance."
+    },
+    {
+      "variant_id": "jax__guns_episode",
+      "entity_id": "jax",
+      "name": "Episode 6 weapon set",
+      "episode": 6,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Weapons and held props are loadouts, not six extra roster identities."
+    },
+    {
+      "variant_id": "jax__human_counterpart",
+      "entity_id": "jax",
+      "name": "Episode 9 human counterpart",
+      "episode": 9,
+      "variant_kind": "human_counterpart",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Only visible design details; no invented earlier/later appearance."
+    },
+    {
+      "variant_id": "ragatha__guns_episode",
+      "entity_id": "ragatha",
+      "name": "Episode 6 weapon set",
+      "episode": 6,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Weapons and held props are loadouts, not six extra roster identities."
+    },
+    {
+      "variant_id": "ragatha__human_counterpart",
+      "entity_id": "ragatha",
+      "name": "Episode 9 human counterpart",
+      "episode": 9,
+      "variant_kind": "human_counterpart",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Only visible design details; no invented earlier/later appearance."
+    },
+    {
+      "variant_id": "gangle__guns_episode",
+      "entity_id": "gangle",
+      "name": "Episode 6 weapon set",
+      "episode": 6,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Weapons and held props are loadouts, not six extra roster identities."
+    },
+    {
+      "variant_id": "gangle__human_counterpart",
+      "entity_id": "gangle",
+      "name": "Episode 9 human counterpart",
+      "episode": 9,
+      "variant_kind": "human_counterpart",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Only visible design details; no invented earlier/later appearance."
+    },
+    {
+      "variant_id": "kinger__guns_episode",
+      "entity_id": "kinger",
+      "name": "Episode 6 weapon set",
+      "episode": 6,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Weapons and held props are loadouts, not six extra roster identities."
+    },
+    {
+      "variant_id": "kinger__human_counterpart",
+      "entity_id": "kinger",
+      "name": "Episode 9 human counterpart",
+      "episode": 9,
+      "variant_kind": "human_counterpart",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Only visible design details; no invented earlier/later appearance."
+    },
+    {
+      "variant_id": "zooble__guns_episode",
+      "entity_id": "zooble",
+      "name": "Episode 6 weapon set",
+      "episode": 6,
+      "variant_kind": "weapon_loadout",
+      "source_url": "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Weapons and held props are loadouts, not six extra roster identities."
+    },
+    {
+      "variant_id": "zooble__human_counterpart",
+      "entity_id": "zooble",
+      "name": "Episode 9 human counterpart",
+      "episode": 9,
+      "variant_kind": "human_counterpart",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Only visible design details; no invented earlier/later appearance."
+    },
+    {
+      "variant_id": "jax__abstracted",
+      "entity_id": "jax",
+      "name": "Episode 9 abstraction",
+      "episode": 9,
+      "variant_kind": "transformation",
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "jax__mind_counterparts",
+      "entity_id": "jax",
+      "name": "Mind-space counterparts",
+      "episode": 9,
+      "variant_kind": "review_sequence",
+      "source_url": "https://tadc.fandom.com/wiki/Jax",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Separate exact visually shown counterparts only after frame review; do not infer identities from fan theories."
+    },
+    {
+      "variant_id": "zooble__ep02_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 2 parts assembly",
+      "episode": 2,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep03_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 3 parts assembly",
+      "episode": 3,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep04_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 4 parts assembly",
+      "episode": 4,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep05_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 5 parts assembly",
+      "episode": 5,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep06_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 6 parts assembly",
+      "episode": 6,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep07_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 7 parts assembly",
+      "episode": 7,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep08_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 8 parts assembly",
+      "episode": 8,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "zooble__ep09_assembly",
+      "entity_id": "zooble",
+      "name": "Episode 9 parts assembly",
+      "episode": 9,
+      "variant_kind": "modular_parts",
+      "source_url": "https://tadc.fandom.com/wiki/Zooble",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Compare reference before counting as unique; episode 9 reportedly returns to pilot assembly."
+    },
+    {
+      "variant_id": "caine__red_program",
+      "entity_id": "caine",
+      "name": "Original red AI",
+      "episode": 8,
+      "variant_kind": "origin_state",
+      "source_url": "https://tadc.fandom.com/wiki/Caine",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "caine__low_poly",
+      "entity_id": "caine",
+      "name": "Low-poly music sequence",
+      "episode": 8,
+      "variant_kind": "style_state",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "caine__multi_armed",
+      "entity_id": "caine",
+      "name": "Multi-arm angry form",
+      "episode": 8,
+      "variant_kind": "transformation",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "caine__music_forms",
+      "entity_id": "caine",
+      "name": "Other music-sequence forms",
+      "episode": 8,
+      "variant_kind": "review_sequence",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Register separately only forms captured from episode."
+    },
+    {
+      "variant_id": "caine__post_finale",
+      "entity_id": "caine",
+      "name": "Finale Caine",
+      "episode": 9,
+      "variant_kind": "review_sequence",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "bubble__giant",
+      "entity_id": "bubble",
+      "name": "Giant Bubble",
+      "episode": 8,
+      "variant_kind": "scale_variant",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gloink_queen__glitched",
+      "entity_id": "gloink_queen",
+      "name": "After Kaufmo contact",
+      "episode": 1,
+      "variant_kind": "damage_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gloink_Queen",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gloinks__glitched",
+      "entity_id": "gloinks",
+      "name": "Glitched Gloinks",
+      "episode": 1,
+      "variant_kind": "damage_state",
+      "source_url": "https://tadc.fandom.com/wiki/Gloinks",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gloinks__shape_variations",
+      "entity_id": "gloinks",
+      "name": "On-screen shapes / named children",
+      "episode": 1,
+      "variant_kind": "family_review",
+      "source_url": "https://tadc.fandom.com/wiki/Gloinks",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": "Use screen shapes, do not procedurally invent canonical names."
+    },
+    {
+      "variant_id": "gummigoo__spudsys_customer",
+      "entity_id": "gummigoo",
+      "name": "Spudsy’s customer",
+      "episode": 4,
+      "variant_kind": "context_state",
+      "source_url": "https://tadc.fandom.com/wiki/Fast_Food_Masquerade",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gummigoo__nightmare",
+      "entity_id": "gummigoo",
+      "name": "Feral nightmare counterpart",
+      "episode": 8,
+      "variant_kind": "nightmare_variant",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "max__spudsys_customer",
+      "entity_id": "max",
+      "name": "Spudsy’s customer",
+      "episode": 4,
+      "variant_kind": "context_state",
+      "source_url": "https://tadc.fandom.com/wiki/Fast_Food_Masquerade",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "max__nightmare",
+      "entity_id": "max",
+      "name": "Feral nightmare counterpart",
+      "episode": 8,
+      "variant_kind": "nightmare_variant",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "chad__spudsys_customer",
+      "entity_id": "chad",
+      "name": "Spudsy’s customer",
+      "episode": 4,
+      "variant_kind": "context_state",
+      "source_url": "https://tadc.fandom.com/wiki/Fast_Food_Masquerade",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "chad__nightmare",
+      "entity_id": "chad",
+      "name": "Feral nightmare counterpart",
+      "episode": 8,
+      "variant_kind": "nightmare_variant",
+      "source_url": "https://tadc.fandom.com/wiki/Hjsakldfhl",
+      "episode_url": "https://www.youtube.com/watch?v=DMNlzf8PiEM",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "abel__faceless",
+      "entity_id": "abel",
+      "name": "Background faceless mannequin",
+      "episode": 2,
+      "variant_kind": "face_state",
+      "source_url": "https://tadc.fandom.com/wiki/Abel",
+      "episode_url": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "abel__smiley_face",
+      "entity_id": "abel",
+      "name": "Drawn smiley face",
+      "episode": 7,
+      "variant_kind": "face_state",
+      "source_url": "https://tadc.fandom.com/wiki/Abel",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "dr_football__jump_scare_face",
+      "entity_id": "dr_football",
+      "name": "Flying face scare",
+      "episode": 1,
+      "variant_kind": "attack_state",
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "blue_ai__separated",
+      "entity_id": "blue_ai",
+      "name": "Separated blue AI",
+      "episode": 9,
+      "variant_kind": "story_state",
+      "source_url": "https://tadc.fandom.com/wiki/Remember",
+      "episode_url": "https://www.youtube.com/watch?v=PVy-bcTsO8A",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "gummy_elephant__office_skeleton",
+      "entity_id": "gummy_elephant",
+      "name": "Office specimen",
+      "episode": 7,
+      "variant_kind": "prop_state",
+      "source_url": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "episode_url": "https://www.youtube.com/watch?v=oaOG1xOk7XY",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "mannequins__spudsys_customers",
+      "entity_id": "mannequins",
+      "name": "Customers including cereal and Stupidburger",
+      "episode": 4,
+      "variant_kind": "npc_family",
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    },
+    {
+      "variant_id": "mannequins__audience",
+      "entity_id": "mannequins",
+      "name": "Audience and award attendees",
+      "episode": 6,
+      "variant_kind": "npc_family",
+      "source_url": "https://tadc.fandom.com/wiki/Mannequins",
+      "episode_url": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "evidence_status": "indexed_requires_frame",
+      "visual_reference_verified": false,
+      "notes": ""
+    }
+  ],
+  "primary_visual_reference_pages": [
+    "https://glitchproductions.store/products/digital-friends-animiniz-blindbox",
+    "https://glitchproductions.store/collections/the-amazing-digital-circus?page=4",
+    "https://glitchproductions.store/products/ribbit-animatez",
+    "https://glitchproductions.store/products/queenie-animatez",
+    "https://glitchproductions.store/products/kaufmo-animatez",
+    "https://glitchproductions.store/products/god-caine-animatez"
+  ],
+  "out_of_series_or_uncertain": [
+    {
+      "id": "evil_gangle",
+      "classification": "creator_hypothetical_not_episode_character",
+      "action": "Do not include as episode-5 NPC. Evil Orbsman occupies that role."
+    },
+    {
+      "id": "gloink_king",
+      "classification": "creator_mention_no_verified_screen_design",
+      "action": "No 1:1 full-body generation without reference."
+    },
+    {
+      "id": "paine",
+      "classification": "social_joke_or_noncanon",
+      "action": "Optional extra, separately labelled."
+    },
+    {
+      "id": "la_buble",
+      "classification": "merch_promotion",
+      "action": "Separate promotion roster."
+    },
+    {
+      "id": "gummigoo_mother",
+      "classification": "mentioned_only",
+      "action": "Do not relabel the fourth ep8 crocodile as her; that identity is inference."
+    },
+    {
+      "id": "unnamed_former_members_fan_names",
+      "classification": "unverified_names",
+      "action": "Use neutral portrait IDs; do not claim Glorp, Sadguy or Shrooms as canonical names."
+    },
+    {
+      "id": "crossovers",
+      "classification": "original_project_redesigns",
+      "action": "Store separately from series variants."
+    },
+    {
+      "id": "merch_chonk_animiniz_plush",
+      "classification": "merch_designs",
+      "action": "Do not count every merchandise shape as a series transformation."
+    },
+    {
+      "id": "jeffery",
+      "classification": "caine_eye_component_and_promotional_dance",
+      "action": "Review episode 5 intermission before inclusion as a series component."
+    },
+    {
+      "id": "bone_pastor",
+      "classification": "promotional_material_candidate",
+      "action": "Require exact official short reference before generation."
+    }
+  ],
+  "secondary_indexes": [
+    "https://tadc.fandom.com/wiki/Category%3ACharacters",
+    "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+    "https://tadc.fandom.com/wiki/Circus_Members",
+    "https://tadc.fandom.com/wiki/Mannequins",
+    "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+    "https://tadc.fandom.com/wiki/Remember",
+    "https://tadc.fandom.com/wiki/Hjsakldfhl",
+    "https://tadc.fandom.com/wiki/Untitled",
+    "https://tadc.fandom.com/wiki/Beach_Episode",
+    "https://tadc.fandom.com/wiki/They_All_Get_Guns"
+  ],
+  "official_merch_reference_images": [
+    {
+      "entity_id": "ribbit",
+      "url": "https://glitchproductions.store/cdn/shop/files/Animatez_Ribbit.png?v=1780357058&width=1600"
+    },
+    {
+      "entity_id": "queenie",
+      "url": "https://glitchproductions.store/cdn/shop/files/Animatez_Queenie_01.png?v=1773977928&width=1600"
+    },
+    {
+      "entity_id": "kaufmo",
+      "url": "https://glitchproductions.store/cdn/shop/files/Animatez_Kaufmo4.png?v=1780357266&width=1600"
+    },
+    {
+      "entity_id": "caine",
+      "variant": "god",
+      "url": "https://glitchproductions.store/cdn/shop/files/Animatez_GodCaine_01.png?v=1773723373&width=1600"
+    }
+  ],
+  "source_url_note": "Character-page URLs are discovery locators; detailed source evidence was retrieved from the listed secondary indexes and individual character search results. Root must open sources before citing them. Every image reference remains uninspected in this task."
+}

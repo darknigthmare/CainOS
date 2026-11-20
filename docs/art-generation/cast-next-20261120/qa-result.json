@@ -1,0 +1,29 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "qa"
+  ],
+  "startedAt": "2026-11-20T10:56:35.335407+00:00",
+  "endedAt": "2026-11-20T10:57:31.837425+00:00",
+  "elapsedSeconds": 56.502,
+  "exitCode": 0,
+  "log": "docs/art-generation/cast-next-20261120/qa.log",
+  "bothBuildsPassed": true,
+  "sources": {
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "tests/combat-costume-additions.test.mjs": "3bcc5f0019273cf6453f50ca3b51c32753f97aa8bfcc5d74893551a4250eb460",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "testSummary": {
+    "tests": 405,
+    "pass": 405,
+    "fail": 0,
+    "skipped": 0
+  },
+  "logSha256": "832483c885305016c2c98400b4f56cf3bb873aa4836d10bbb4423b5c99c8ae7c",
+  "summaryExtraction": "Parsed existing successful run; no test rerun."
+}

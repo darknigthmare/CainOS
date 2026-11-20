@@ -1,0 +1,1297 @@
+{
+  "schema": "encore-canvas-art-review/v1",
+  "createdAt": "2026-11-19T21:47:45.060Z",
+  "environment": "Node + @napi-rs/canvas (Skia); production Canvas2D modules; no browser session",
+  "limitations": [
+    "No DOM, keyboard, audio or service-worker verification.",
+    "No canonical 1:1 certification.",
+    "Still poses do not establish complete frame-by-frame animation."
+  ],
+  "images": [
+    {
+      "fighter": "queenie",
+      "kind": "selection",
+      "file": "assets/encore/selection/queenie.png",
+      "sha256": "d1bc132682606757d055c26284e2793b3cb423990ef78df80d69742341c37347",
+      "visibleBounds": {
+        "x": 34,
+        "y": 2,
+        "width": 186,
+        "height": 381
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "kaufmo",
+      "kind": "selection",
+      "file": "assets/encore/selection/kaufmo.png",
+      "sha256": "904dde1ffc5fd8ed76c4256a5deaf9d7581e4828d8b21ed774246f0383e7a476",
+      "visibleBounds": {
+        "x": 31,
+        "y": 4,
+        "width": 213,
+        "height": 377
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "ribbit",
+      "kind": "selection",
+      "file": "assets/encore/selection/ribbit.png",
+      "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+      "visibleBounds": {
+        "x": 20,
+        "y": 4,
+        "width": 193,
+        "height": 373
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "scratch",
+      "kind": "selection",
+      "file": "assets/encore/selection/scratch.png",
+      "sha256": "3fae594eb7352b7d7c2e93430b8c66ed8ea15b94a2a4d55dea6521454f4bb737",
+      "visibleBounds": {
+        "x": 42,
+        "y": 9,
+        "width": 191,
+        "height": 366
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "wormo",
+      "kind": "selection",
+      "file": "assets/encore/selection/wormo.png",
+      "sha256": "eb8a9953717bfb635ed1db8c53ee0a87fd0b6a4835cb4a05ef847dfcabfd5539",
+      "visibleBounds": {
+        "x": 34,
+        "y": 9,
+        "width": 227,
+        "height": 358
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "bizco",
+      "kind": "selection",
+      "file": "assets/encore/selection/bizco.png",
+      "sha256": "666f072bec0f2cf4d15d21ef31b69915b606a15856609debfb8e2253ba280891",
+      "visibleBounds": {
+        "x": 37,
+        "y": 14,
+        "width": 260,
+        "height": 334
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "rattie",
+      "kind": "selection",
+      "file": "assets/encore/selection/rattie.png",
+      "sha256": "90fd238aa5ab4c61fe96f29e981323df5cfeda58e022625fe054c0197e823b99",
+      "visibleBounds": {
+        "x": 37,
+        "y": 3,
+        "width": 205,
+        "height": 374
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "spike",
+      "kind": "selection",
+      "file": "assets/encore/selection/spike.png",
+      "sha256": "3ccd86dc7790661ab3881dc2ad598613ccebab1312f958d4dda0702166b5629c",
+      "visibleBounds": {
+        "x": 22,
+        "y": 9,
+        "width": 264,
+        "height": 361
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "pinkcyclops",
+      "kind": "selection",
+      "file": "assets/encore/selection/pinkcyclops.png",
+      "sha256": "dbbc73a87eeedac524701e674b32e7b6803b74b6a3019bf43d7267d74d223f3b",
+      "visibleBounds": {
+        "x": 11,
+        "y": 5,
+        "width": 325,
+        "height": 372
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "yellowclown",
+      "kind": "selection",
+      "file": "assets/encore/selection/yellowclown.png",
+      "sha256": "2eb71bf123b39f25c24730362f5946bb0b3185980fb5e625ff981c993e7e1dfe",
+      "visibleBounds": {
+        "x": 10,
+        "y": 10,
+        "width": 236,
+        "height": 364
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "oyster",
+      "kind": "selection",
+      "file": "assets/encore/selection/oyster.png",
+      "sha256": "e7ce2f78a7331c07ed36ba6e8547a6730690e7d85a071e89df06783ca806cf47",
+      "visibleBounds": {
+        "x": 74,
+        "y": 29,
+        "width": 232,
+        "height": 283
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "bulbcreature",
+      "kind": "selection",
+      "file": "assets/encore/selection/bulbcreature.png",
+      "sha256": "b209e80fa1eabf2b59392998429d3f5fb1eb6b8bd4b7560955e22ac9747ca7c7",
+      "visibleBounds": {
+        "x": 48,
+        "y": 9,
+        "width": 149,
+        "height": 368
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "abel",
+      "kind": "selection",
+      "file": "assets/encore/selection/abel.png",
+      "sha256": "e53a956b9c52c5ddd87a5d0f027951028878a3d6108a20145d4d52aaa3a0eb7f",
+      "visibleBounds": {
+        "x": 71,
+        "y": 17,
+        "width": 135,
+        "height": 346
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "max",
+      "kind": "selection",
+      "file": "assets/encore/selection/max.png",
+      "sha256": "cb96f2f5ae5e8cd7883c1867107d89df840cb40c4ef141a7fa7660dd19328308",
+      "visibleBounds": {
+        "x": 53,
+        "y": 8,
+        "width": 261,
+        "height": 311
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "chad",
+      "kind": "selection",
+      "file": "assets/encore/selection/chad.png",
+      "sha256": "055e5ebeba03291e2b310948d682249f95ebaf9a44fe37eeafe77ce623df542a",
+      "visibleBounds": {
+        "x": 14,
+        "y": 11,
+        "width": 217,
+        "height": 364
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "orbsman",
+      "kind": "selection",
+      "file": "assets/encore/selection/orbsman.png",
+      "sha256": "39b21e8b1532531830c98d1d1afd54973a0ea5721e5375ab7a2354bd6e2cf304",
+      "visibleBounds": {
+        "x": 48,
+        "y": 21,
+        "width": 176,
+        "height": 355
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "ming",
+      "kind": "selection",
+      "file": "assets/encore/selection/ming.png",
+      "sha256": "9eabc3f01409d0fe551325e47792f396270d33d19d5e8fb7aa809115ac91f9e1",
+      "visibleBounds": {
+        "x": 67,
+        "y": 4,
+        "width": 111,
+        "height": 377
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "marthamildenhall",
+      "kind": "selection",
+      "file": "assets/encore/selection/marthamildenhall.png",
+      "sha256": "7eef4f407c7f71119f18149bd26e34f499cbf62d27e84a32f5290aa31dc73eca",
+      "visibleBounds": {
+        "x": 40,
+        "y": 4,
+        "width": 216,
+        "height": 378
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "ghostly",
+      "kind": "selection",
+      "file": "assets/encore/selection/ghostly.png",
+      "sha256": "0e43ef8b9711dce92fdeb6b79a65e65b2fad602fa34905b38a59618100f5f1e9",
+      "visibleBounds": {
+        "x": 77,
+        "y": 21,
+        "width": 195,
+        "height": 344
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "angel",
+      "kind": "selection",
+      "file": "assets/encore/selection/angel.png",
+      "sha256": "f3bb1562a6f46b56f6feff5d3deae7d5ad356f3a139e4698360554476c1a8ab9",
+      "visibleBounds": {
+        "x": 11,
+        "y": 12,
+        "width": 288,
+        "height": 348
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "disappearingguy",
+      "kind": "selection",
+      "file": "assets/encore/selection/disappearingguy.png",
+      "sha256": "d137f2b5ab8ecaf8108ea011d4ebcc76de1305031775264ba99f51da006f8b62",
+      "visibleBounds": {
+        "x": 64,
+        "y": 9,
+        "width": 151,
+        "height": 360
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "committeemember",
+      "kind": "selection",
+      "file": "assets/encore/selection/committeemember.png",
+      "sha256": "7f91bc23edf0bf5ce5afc08abe3bb811ccb1eb02f54190cc88bd8ae35250d1bb",
+      "visibleBounds": {
+        "x": 35,
+        "y": 18,
+        "width": 200,
+        "height": 350
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "shrimpnpc",
+      "kind": "selection",
+      "file": "assets/encore/selection/shrimpnpc.png",
+      "sha256": "2f835b1485187d39f7eaa3c8c87ed33c986c7cb439cf66def3f207a24aae6e5d",
+      "visibleBounds": {
+        "x": 78,
+        "y": 9,
+        "width": 220,
+        "height": 174
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "chineseroomnpc",
+      "kind": "selection",
+      "file": "assets/encore/selection/chineseroomnpc.png",
+      "sha256": "ca2823dcf2a168731a0803eefcc8f5d2042c87b97f5e15f0c25e7bdd07e234eb",
+      "visibleBounds": {
+        "x": 36,
+        "y": 12,
+        "width": 197,
+        "height": 360
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "blueai",
+      "kind": "selection",
+      "file": "assets/encore/selection/blueai.png",
+      "sha256": "a738e0c48b3e48280ce3a1558a597e9f4b29a99dc848cab11ce96386455e9d63",
+      "visibleBounds": {
+        "x": 100,
+        "y": 17,
+        "width": 184,
+        "height": 222
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "cookiebutterfly",
+      "kind": "selection",
+      "file": "assets/encore/selection/cookiebutterfly.png",
+      "sha256": "737c824b0463fac6212aa66a9fd6ef45c8cf7f385326a133024df0384bf746ef",
+      "visibleBounds": {
+        "x": 60,
+        "y": 3,
+        "width": 276,
+        "height": 247
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "gummyelephant",
+      "kind": "selection",
+      "file": "assets/encore/selection/gummyelephant.png",
+      "sha256": "1428090d245c2f5efe7035257125f41e698c918f271f74307bab58ad361a6eac",
+      "visibleBounds": {
+        "x": 77,
+        "y": 13,
+        "width": 229,
+        "height": 231
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "giantcentipede",
+      "kind": "selection",
+      "file": "assets/encore/selection/giantcentipede.png",
+      "sha256": "8c51b17ce49b49fc3ca72f9874e308bea403e7b2384ee7813cf97967df6b1ce4",
+      "visibleBounds": {
+        "x": 86,
+        "y": 9,
+        "width": 204,
+        "height": 237
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "spudsycustomer",
+      "kind": "selection",
+      "file": "assets/encore/selection/spudsycustomer.png",
+      "sha256": "b45f9783cd658dab82cff6cbc0abcb5019a97a25144d6c7af77f53abbf90a59d",
+      "visibleBounds": {
+        "x": 65,
+        "y": 15,
+        "width": 168,
+        "height": 352
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "candyguardcyan",
+      "kind": "selection",
+      "file": "assets/encore/selection/candyguardcyan.png",
+      "sha256": "ff2418ee34234fe59fc018e9b94f0a43a771ae7ec3e2af2670a7a08d3c96982b",
+      "visibleBounds": {
+        "x": 44,
+        "y": 16,
+        "width": 169,
+        "height": 353
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "candyguardblue",
+      "kind": "selection",
+      "file": "assets/encore/selection/candyguardblue.png",
+      "sha256": "61fb5e804366775769a7210e2b79ff1e9fabfe8ae2339f9194bcfaed2422af1e",
+      "visibleBounds": {
+        "x": 62,
+        "y": 18,
+        "width": 133,
+        "height": 343
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "candyguardpurple",
+      "kind": "selection",
+      "file": "assets/encore/selection/candyguardpurple.png",
+      "sha256": "aacd17148746623f9d0e6e211f1b79f35abb1a42c5c01a868e5e19d19d1dd902",
+      "visibleBounds": {
+        "x": 51,
+        "y": 22,
+        "width": 176,
+        "height": 343
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "gummyworm",
+      "kind": "selection",
+      "file": "assets/encore/selection/gummyworm.png",
+      "sha256": "a3aa9ebbe3b49ff7bb9689b88edf23ed201c582fc0454073bb0c7207817b16aa",
+      "visibleBounds": {
+        "x": 45,
+        "y": 22,
+        "width": 172,
+        "height": 341
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "barrelmonkey",
+      "kind": "selection",
+      "file": "assets/encore/selection/barrelmonkey.png",
+      "sha256": "56b3f0d0f0c2fb137a94dc973b8a8c634afc3e9d5c7a7907ff610886919a203f",
+      "visibleBounds": {
+        "x": 43,
+        "y": 15,
+        "width": 312,
+        "height": 352
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "jeffery",
+      "kind": "selection",
+      "file": "assets/encore/selection/jeffery.png",
+      "sha256": "a98a55ee99d45d10487d08bbf46179dd6cf1871eb8b3b76c12f06f1328dbcad2",
+      "visibleBounds": {
+        "x": 38,
+        "y": 27,
+        "width": 196,
+        "height": 337
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "mildenhallsouls",
+      "kind": "selection",
+      "file": "assets/encore/selection/mildenhallsouls.png",
+      "sha256": "67926a753f468ae8c39d969ccc7fb7bc757ce55ba5ec871eacb23abd5b409478",
+      "visibleBounds": {
+        "x": 84,
+        "y": 12,
+        "width": 233,
+        "height": 230
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "redmannequin",
+      "kind": "selection",
+      "file": "assets/encore/selection/redmannequin.png",
+      "sha256": "9c372c00c8456e3f9774c6753338914c22b7442f7a93a5db435260dc42712394",
+      "visibleBounds": {
+        "x": 56,
+        "y": 8,
+        "width": 135,
+        "height": 362
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "orangemannequin",
+      "kind": "selection",
+      "file": "assets/encore/selection/orangemannequin.png",
+      "sha256": "1aaea4826ad06a1bc5700365a052529bfd9f68e2e7872c7df41a452a2bc45c32",
+      "visibleBounds": {
+        "x": 66,
+        "y": 17,
+        "width": 121,
+        "height": 346
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "yellowmannequin",
+      "kind": "selection",
+      "file": "assets/encore/selection/yellowmannequin.png",
+      "sha256": "e56332738637afcdbb444ea791ce351332c0c63b5dbb85cec48d6c67de51de2a",
+      "visibleBounds": {
+        "x": 57,
+        "y": 8,
+        "width": 164,
+        "height": 351
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "magentamannequin",
+      "kind": "selection",
+      "file": "assets/encore/selection/magentamannequin.png",
+      "sha256": "6a52e1b8f1e6b137afcb5a0bbe0a966693f75e887613122a1de915cf16e0c981",
+      "visibleBounds": {
+        "x": 58,
+        "y": 22,
+        "width": 126,
+        "height": 343
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "queenie",
+      "kind": "stance",
+      "file": "assets/encore/stance/queenie.png",
+      "sha256": "ee55476ae12db9031bcf4b57cabe771f2d1d1ebdf435d01c711f4e9765994c9f",
+      "visibleBounds": {
+        "x": 42,
+        "y": 3,
+        "width": 334,
+        "height": 634
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "kaufmo",
+      "kind": "stance",
+      "file": "assets/encore/stance/kaufmo.png",
+      "sha256": "6e58a6cba0f4e0f87fa53d1e6e43d824c31d082882d27528df6112dea2eb3e07",
+      "visibleBounds": {
+        "x": 60,
+        "y": 5,
+        "width": 378,
+        "height": 626
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "ribbit",
+      "kind": "stance",
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 470,
+        "height": 581
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "scratch",
+      "kind": "stance",
+      "file": "assets/encore/stance/scratch.png",
+      "sha256": "8fd0f74feba13b314fed50e758b703838cdce836e7d2f5540f43f5d663c487f0",
+      "visibleBounds": {
+        "x": 77,
+        "y": 33,
+        "width": 381,
+        "height": 577
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "wormo",
+      "kind": "stance",
+      "file": "assets/encore/stance/wormo.png",
+      "sha256": "8ff878fd006cf356ff652110a2909e3f57d5db0edb1491990b8850bf9d508592",
+      "visibleBounds": {
+        "x": 108,
+        "y": 18,
+        "width": 231,
+        "height": 605
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "bizco",
+      "kind": "stance",
+      "file": "assets/encore/stance/bizco.png",
+      "sha256": "56efa567ff92d2374c86868e1beed1420ed5f59d2ddb6cda54ac5886aa115efd",
+      "visibleBounds": {
+        "x": 70,
+        "y": 34,
+        "width": 391,
+        "height": 580
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "rattie",
+      "kind": "stance",
+      "file": "assets/encore/stance/rattie.png",
+      "sha256": "3fe0be3e972b5dac0f875c214faa52e5cc14bddf858c77f7ef6ef6d07e82e41a",
+      "visibleBounds": {
+        "x": 29,
+        "y": 18,
+        "width": 531,
+        "height": 554
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "spike",
+      "kind": "stance",
+      "file": "assets/encore/stance/spike.png",
+      "sha256": "603b3e24d4e967a7d431957e419d40cf78642aaffc96568c47bd18da6757de53",
+      "visibleBounds": {
+        "x": 21,
+        "y": 16,
+        "width": 524,
+        "height": 600
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "pinkcyclops",
+      "kind": "stance",
+      "file": "assets/encore/stance/pinkcyclops.png",
+      "sha256": "24daf6f378b96cfbeef194acd3bc1dad0535c5729a93da28c5181638694ef7f9",
+      "visibleBounds": {
+        "x": 33,
+        "y": 15,
+        "width": 521,
+        "height": 611
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "yellowclown",
+      "kind": "stance",
+      "file": "assets/encore/stance/yellowclown.png",
+      "sha256": "c0a148029311a2d24f2f28e157cfe5379809bfd8221fc426b4446bc9a16eef9d",
+      "visibleBounds": {
+        "x": 46,
+        "y": 24,
+        "width": 446,
+        "height": 601
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "oyster",
+      "kind": "stance",
+      "file": "assets/encore/stance/oyster.png",
+      "sha256": "c1d4a8e85697dfd3bdead6467cc1509cf9e795388e847d03abb47921e8e6cc58",
+      "visibleBounds": {
+        "x": 96,
+        "y": 62,
+        "width": 439,
+        "height": 455
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "bulbcreature",
+      "kind": "stance",
+      "file": "assets/encore/stance/bulbcreature.png",
+      "sha256": "1d3642e9831e6d925de0e6ac8aef8d1c520ab28d306af47ec01da4a301afab2d",
+      "visibleBounds": {
+        "x": 59,
+        "y": 20,
+        "width": 361,
+        "height": 597
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "abel",
+      "kind": "stance",
+      "file": "assets/encore/stance/abel.png",
+      "sha256": "e1cc3f218c1a5df3888966f97222095f3f8b3272a60bbf029f84c587f250c6a3",
+      "visibleBounds": {
+        "x": 114,
+        "y": 26,
+        "width": 315,
+        "height": 579
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "max",
+      "kind": "stance",
+      "file": "assets/encore/stance/max.png",
+      "sha256": "7aeaaa6fc010ca52215485bcb95f4796c49670805638f96fa0d0cdbcb545aed4",
+      "visibleBounds": {
+        "x": 66,
+        "y": 21,
+        "width": 456,
+        "height": 507
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "chad",
+      "kind": "stance",
+      "file": "assets/encore/stance/chad.png",
+      "sha256": "800f84444bae9592b31c1074a1b1453a43f09e0c6404d144defb816d57ba031c",
+      "visibleBounds": {
+        "x": 13,
+        "y": 17,
+        "width": 375,
+        "height": 610
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "orbsman",
+      "kind": "stance",
+      "file": "assets/encore/stance/orbsman.png",
+      "sha256": "f2647618aa856918d6dc416818257ee0ad7b01a0975a7c2a201a2beab4e80c34",
+      "visibleBounds": {
+        "x": 90,
+        "y": 46,
+        "width": 403,
+        "height": 581
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "ming",
+      "kind": "stance",
+      "file": "assets/encore/stance/ming.png",
+      "sha256": "57171ea6a564c10c7be71796e8e6a3ea94768c288b2ad32712b9c90be6911660",
+      "visibleBounds": {
+        "x": 57,
+        "y": 9,
+        "width": 270,
+        "height": 612
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "marthamildenhall",
+      "kind": "stance",
+      "file": "assets/encore/stance/marthamildenhall.png",
+      "sha256": "cf9c8a2f0efa057e663695539330122dd16a46b65f455e5969cf9bc837cfba46",
+      "visibleBounds": {
+        "x": 20,
+        "y": 11,
+        "width": 440,
+        "height": 621
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "ghostly",
+      "kind": "stance",
+      "file": "assets/encore/stance/ghostly.png",
+      "sha256": "8aa5e580875e576f383a48289803d0c9e935cb4826d8ffb7e7992ab821ae925f",
+      "visibleBounds": {
+        "x": 83,
+        "y": 35,
+        "width": 434,
+        "height": 575
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "angel",
+      "kind": "stance",
+      "file": "assets/encore/stance/angel.png",
+      "sha256": "69a75aa35b5e86a16c6a45b0556c4ca2bd71f646fcea201a944154429fae8133",
+      "visibleBounds": {
+        "x": 9,
+        "y": 12,
+        "width": 583,
+        "height": 617
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "disappearingguy",
+      "kind": "stance",
+      "file": "assets/encore/stance/disappearingguy.png",
+      "sha256": "a8e2d3052294c575940a4f032cd816dadad3a114e2d61ada3b1987780375f6c4",
+      "visibleBounds": {
+        "x": 49,
+        "y": 12,
+        "width": 361,
+        "height": 617
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "committeemember",
+      "kind": "stance",
+      "file": "assets/encore/stance/committeemember.png",
+      "sha256": "c8453db34a408d2bc6b8b32853ef2220bc52fabf326f3ebe1344cf9f672417a2",
+      "visibleBounds": {
+        "x": 166,
+        "y": 16,
+        "width": 305,
+        "height": 398
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "shrimpnpc",
+      "kind": "stance",
+      "file": "assets/encore/stance/shrimpnpc.png",
+      "sha256": "55144922f417fce3c15d7691fc89fc1af990dedc573f10cb598d6f337564fe26",
+      "visibleBounds": {
+        "x": 103,
+        "y": 18,
+        "width": 431,
+        "height": 286
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "chineseroomnpc",
+      "kind": "stance",
+      "file": "assets/encore/stance/chineseroomnpc.png",
+      "sha256": "6d714c1c93aa14752dfc464d9aa849962e99bf1aeac96a231b904b66c6c6fc89",
+      "visibleBounds": {
+        "x": 116,
+        "y": 14,
+        "width": 401,
+        "height": 560
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "blueai",
+      "kind": "stance",
+      "file": "assets/encore/stance/blueai.png",
+      "sha256": "c6ab2fcc0c16f0cf59b531445bcfb02b45f231b981d3420facc243dc6e0c0dfb",
+      "visibleBounds": {
+        "x": 140,
+        "y": 21,
+        "width": 346,
+        "height": 365
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "cookiebutterfly",
+      "kind": "stance",
+      "file": "assets/encore/stance/cookiebutterfly.png",
+      "sha256": "984f138d3a22293668945b73f879605acf788ee03c3aba06b1987ae40feb2533",
+      "visibleBounds": {
+        "x": 112,
+        "y": 4,
+        "width": 410,
+        "height": 407
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "gummyelephant",
+      "kind": "stance",
+      "file": "assets/encore/stance/gummyelephant.png",
+      "sha256": "ce84a307449d01fa15c5476c0a5dfdb4bcfb9ae4365b9bc68134b30eab15ae7a",
+      "visibleBounds": {
+        "x": 116,
+        "y": 19,
+        "width": 408,
+        "height": 388
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "giantcentipede",
+      "kind": "stance",
+      "file": "assets/encore/stance/giantcentipede.png",
+      "sha256": "b6a54190b6fcc6e9b610fddf7403c5a42fbc576b4ff894c416c933ad9fa6bedb",
+      "visibleBounds": {
+        "x": 132,
+        "y": 9,
+        "width": 399,
+        "height": 410
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "spudsycustomer",
+      "kind": "stance",
+      "file": "assets/encore/stance/spudsycustomer.png",
+      "sha256": "e332cd113f7da2dd47191e956c3b2739a69a18d57e73ba60f00a3e31cb4ae834",
+      "visibleBounds": {
+        "x": 114,
+        "y": 27,
+        "width": 399,
+        "height": 541
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "candyguardcyan",
+      "kind": "stance",
+      "file": "assets/encore/stance/candyguardcyan.png",
+      "sha256": "422004aad1304fada9d41ad5dc0cacd908d6167757d1c751320ee8de1450984a",
+      "visibleBounds": {
+        "x": 63,
+        "y": 28,
+        "width": 277,
+        "height": 584
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "candyguardblue",
+      "kind": "stance",
+      "file": "assets/encore/stance/candyguardblue.png",
+      "sha256": "ddc7416bf2a91a1fb04fba4f1c41e8d7887427f8fba194e73778f518fbc5d090",
+      "visibleBounds": {
+        "x": 134,
+        "y": 28,
+        "width": 363,
+        "height": 532
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "candyguardpurple",
+      "kind": "stance",
+      "file": "assets/encore/stance/candyguardpurple.png",
+      "sha256": "7e5c23cf4b187a2d6860d3b2f29b1359f69dd636c58647e583361e51dda82865",
+      "visibleBounds": {
+        "x": 193,
+        "y": 16,
+        "width": 231,
+        "height": 397
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "gummyworm",
+      "kind": "stance",
+      "file": "assets/encore/stance/gummyworm.png",
+      "sha256": "0dab3a7c1f927b9012a6600b4a2b2667630dec8ab5e5502e27b5904d75405916",
+      "visibleBounds": {
+        "x": 217,
+        "y": 21,
+        "width": 242,
+        "height": 395
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "barrelmonkey",
+      "kind": "stance",
+      "file": "assets/encore/stance/barrelmonkey.png",
+      "sha256": "dffbd0a948d408e429f0605e5c0f36d482087138f882a07e119658b635ca61f4",
+      "visibleBounds": {
+        "x": 132,
+        "y": 15,
+        "width": 406,
+        "height": 402
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "jeffery",
+      "kind": "stance",
+      "file": "assets/encore/stance/jeffery.png",
+      "sha256": "ee70224564b49b5fb5306176afcfdc75c3a248287f672eaf4f8d2347a443b897",
+      "visibleBounds": {
+        "x": 169,
+        "y": 6,
+        "width": 294,
+        "height": 411
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "mildenhallsouls",
+      "kind": "stance",
+      "file": "assets/encore/stance/mildenhallsouls.png",
+      "sha256": "f96813918e84adf22c2b4c669ecea1f196e1daee72f6a43aaf7b1e863d98398c",
+      "visibleBounds": {
+        "x": 144,
+        "y": 29,
+        "width": 389,
+        "height": 373
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "redmannequin",
+      "kind": "stance",
+      "file": "assets/encore/stance/redmannequin.png",
+      "sha256": "bcfed5323a1910df04c6d6cfcaa9e0a1113cc15a9b36ce91c8cbd7ca3be93d01",
+      "visibleBounds": {
+        "x": 159,
+        "y": 16,
+        "width": 280,
+        "height": 396
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "orangemannequin",
+      "kind": "stance",
+      "file": "assets/encore/stance/orangemannequin.png",
+      "sha256": "00b3cab700682d000dd5dd6dc2c8e5ca36929dc4ee88e8a4a2cdc62b2f29960c",
+      "visibleBounds": {
+        "x": 106,
+        "y": 35,
+        "width": 372,
+        "height": 564
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "yellowmannequin",
+      "kind": "stance",
+      "file": "assets/encore/stance/yellowmannequin.png",
+      "sha256": "62862efc4ed66eb6b583a2558c6d068ff828b85556b27bc0c01e8a6a9a998185",
+      "visibleBounds": {
+        "x": 189,
+        "y": 15,
+        "width": 260,
+        "height": 397
+      },
+      "decoded": true
+    },
+    {
+      "fighter": "magentamannequin",
+      "kind": "stance",
+      "file": "assets/encore/stance/magentamannequin.png",
+      "sha256": "9b68a5587aa759cdfbf494735b2cd750033edd1041fe8304a024eb30b5de0a4a",
+      "visibleBounds": {
+        "x": 204,
+        "y": 19,
+        "width": 213,
+        "height": 389
+      },
+      "decoded": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "falseexit",
+      "fighters": [
+        "queenie",
+        "kaufmo"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-falseexit.png"
+    },
+    {
+      "id": "coppernine",
+      "fighters": [
+        "ribbit",
+        "scratch"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-coppernine.png"
+    },
+    {
+      "id": "silicacity",
+      "fighters": [
+        "wormo",
+        "bizco"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-silicacity.png"
+    },
+    {
+      "id": "portaurora",
+      "fighters": [
+        "rattie",
+        "spike"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-portaurora.png"
+    },
+    {
+      "id": "gaslightwharf",
+      "fighters": [
+        "pinkcyclops",
+        "yellowclown"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-gaslightwharf.png"
+    },
+    {
+      "id": "parkplanet",
+      "fighters": [
+        "oyster",
+        "bulbcreature"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-parkplanet.png"
+    },
+    {
+      "id": "gameoverse",
+      "fighters": [
+        "abel",
+        "max"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-gameoverse.png"
+    },
+    {
+      "id": "littledaisy",
+      "fighters": [
+        "chad",
+        "orbsman"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-littledaisy.png"
+    },
+    {
+      "id": "showgrounds",
+      "fighters": [
+        "ming",
+        "marthamildenhall"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-showgrounds.png"
+    },
+    {
+      "id": "simpleflipisland",
+      "fighters": [
+        "ghostly",
+        "angel"
+      ],
+      "planes": 3,
+      "preload": true,
+      "file": "scene-simpleflipisland.png"
+    }
+  ],
+  "sourceHashes": {
+    "combat/illustrations.mjs": "c3de886221f6f05eebba1ad53f866d7ec486a1a13e0f0733c0e170c8fd81292f",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/stage-parallax.mjs": "4914aa3fa2c2928e8fa32c8e4cae745adf33e18ded12fdfc9ab4ed9e19765097",
+    "combat/offline-manifest.mjs": "6bc34c00690e60393965bb51b069cc6c6ce46b94565bacd0f5d4f9e7cf9820a9"
+  },
+  "outputImages": [
+    "expansion-selection-review.png",
+    "expansion-stance-review.png",
+    "scene-falseexit.png",
+    "scene-coppernine.png",
+    "scene-silicacity.png",
+    "scene-portaurora.png",
+    "scene-gaslightwharf.png",
+    "scene-parkplanet.png",
+    "scene-gameoverse.png",
+    "scene-littledaisy.png",
+    "scene-showgrounds.png",
+    "scene-simpleflipisland.png",
+    "expansion-scenes-review.jpg"
+  ],
+  "requestedFiles": [
+    "assets/encore/props/coppernine/colony-heater.png",
+    "assets/encore/props/portaurora/lifebuoy-station.png",
+    "assets/encore/props/silicacity/uplink-repeater.png",
+    "assets/encore/selection/abel.png",
+    "assets/encore/selection/angel.png",
+    "assets/encore/selection/barrelmonkey.png",
+    "assets/encore/selection/bizco.png",
+    "assets/encore/selection/blueai.png",
+    "assets/encore/selection/bulbcreature.png",
+    "assets/encore/selection/candyguardblue.png",
+    "assets/encore/selection/candyguardcyan.png",
+    "assets/encore/selection/candyguardpurple.png",
+    "assets/encore/selection/chad.png",
+    "assets/encore/selection/chineseroomnpc.png",
+    "assets/encore/selection/committeemember.png",
+    "assets/encore/selection/cookiebutterfly.png",
+    "assets/encore/selection/disappearingguy.png",
+    "assets/encore/selection/ghostly.png",
+    "assets/encore/selection/giantcentipede.png",
+    "assets/encore/selection/gummyelephant.png",
+    "assets/encore/selection/gummyworm.png",
+    "assets/encore/selection/jeffery.png",
+    "assets/encore/selection/kaufmo.png",
+    "assets/encore/selection/magentamannequin.png",
+    "assets/encore/selection/marthamildenhall.png",
+    "assets/encore/selection/max.png",
+    "assets/encore/selection/mildenhallsouls.png",
+    "assets/encore/selection/ming.png",
+    "assets/encore/selection/orangemannequin.png",
+    "assets/encore/selection/orbsman.png",
+    "assets/encore/selection/oyster.png",
+    "assets/encore/selection/pinkcyclops.png",
+    "assets/encore/selection/queenie.png",
+    "assets/encore/selection/rattie.png",
+    "assets/encore/selection/redmannequin.png",
+    "assets/encore/selection/ribbit.png",
+    "assets/encore/selection/scratch.png",
+    "assets/encore/selection/shrimpnpc.png",
+    "assets/encore/selection/spike.png",
+    "assets/encore/selection/spudsycustomer.png",
+    "assets/encore/selection/wormo.png",
+    "assets/encore/selection/yellowclown.png",
+    "assets/encore/selection/yellowmannequin.png",
+    "assets/encore/stages/coppernine/far.webp",
+    "assets/encore/stages/coppernine/mid.webp",
+    "assets/encore/stages/coppernine/near.webp",
+    "assets/encore/stages/falseexit/far.png",
+    "assets/encore/stages/falseexit/mid.png",
+    "assets/encore/stages/falseexit/near.png",
+    "assets/encore/stages/gameoverse/far.webp",
+    "assets/encore/stages/gameoverse/mid.webp",
+    "assets/encore/stages/gameoverse/near.webp",
+    "assets/encore/stages/gaslightwharf/far.webp",
+    "assets/encore/stages/gaslightwharf/mid.webp",
+    "assets/encore/stages/gaslightwharf/near.webp",
+    "assets/encore/stages/littledaisy/far.webp",
+    "assets/encore/stages/littledaisy/mid.webp",
+    "assets/encore/stages/littledaisy/near.webp",
+    "assets/encore/stages/parkplanet/far.webp",
+    "assets/encore/stages/parkplanet/mid.webp",
+    "assets/encore/stages/parkplanet/near.webp",
+    "assets/encore/stages/portaurora/far.webp",
+    "assets/encore/stages/portaurora/mid.webp",
+    "assets/encore/stages/portaurora/near.webp",
+    "assets/encore/stages/showgrounds/far.webp",
+    "assets/encore/stages/showgrounds/mid.webp",
+    "assets/encore/stages/showgrounds/near.webp",
+    "assets/encore/stages/silicacity/far.webp",
+    "assets/encore/stages/silicacity/mid.webp",
+    "assets/encore/stages/silicacity/near.webp",
+    "assets/encore/stages/simpleflipisland/far.webp",
+    "assets/encore/stages/simpleflipisland/mid.webp",
+    "assets/encore/stages/simpleflipisland/near.webp",
+    "assets/encore/stance/abel.png",
+    "assets/encore/stance/angel.png",
+    "assets/encore/stance/barrelmonkey.png",
+    "assets/encore/stance/bizco.png",
+    "assets/encore/stance/blueai.png",
+    "assets/encore/stance/bulbcreature.png",
+    "assets/encore/stance/candyguardblue.png",
+    "assets/encore/stance/candyguardcyan.png",
+    "assets/encore/stance/candyguardpurple.png",
+    "assets/encore/stance/chad.png",
+    "assets/encore/stance/chineseroomnpc.png",
+    "assets/encore/stance/committeemember.png",
+    "assets/encore/stance/cookiebutterfly.png",
+    "assets/encore/stance/disappearingguy.png",
+    "assets/encore/stance/ghostly.png",
+    "assets/encore/stance/giantcentipede.png",
+    "assets/encore/stance/gummyelephant.png",
+    "assets/encore/stance/gummyworm.png",
+    "assets/encore/stance/jeffery.png",
+    "assets/encore/stance/kaufmo.png",
+    "assets/encore/stance/magentamannequin.png",
+    "assets/encore/stance/marthamildenhall.png",
+    "assets/encore/stance/max.png",
+    "assets/encore/stance/mildenhallsouls.png",
+    "assets/encore/stance/ming.png",
+    "assets/encore/stance/orangemannequin.png",
+    "assets/encore/stance/orbsman.png",
+    "assets/encore/stance/oyster.png",
+    "assets/encore/stance/pinkcyclops.png",
+    "assets/encore/stance/queenie.png",
+    "assets/encore/stance/rattie.png",
+    "assets/encore/stance/redmannequin.png",
+    "assets/encore/stance/ribbit.png",
+    "assets/encore/stance/scratch.png",
+    "assets/encore/stance/shrimpnpc.png",
+    "assets/encore/stance/spike.png",
+    "assets/encore/stance/spudsycustomer.png",
+    "assets/encore/stance/wormo.png",
+    "assets/encore/stance/yellowclown.png",
+    "assets/encore/stance/yellowmannequin.png",
+    "assets/images/cainos-pixel-cast-sheet-abel-pack.png",
+    "assets/images/cainos-pixel-cast-sheet-abstracted.png",
+    "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+    "assets/images/cainos-pixel-cast-sheet-ming.png",
+    "assets/images/cainos-pixel-cast-sheet-variants.png",
+    "assets/images/cainos-pixel-cast-sheet.png"
+  ],
+  "browserTestStatus": "not_executed"
+}

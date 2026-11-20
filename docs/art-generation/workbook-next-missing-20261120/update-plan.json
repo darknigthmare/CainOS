@@ -1,0 +1,2591 @@
+{
+  "schema": "encore-tracker-next-missing-plan/v1",
+  "createdAt": "2026-11-20T14:01:30.518Z",
+  "baselineHashes": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "aea3c94ea5921f9ed1fd0a4c46b769587c338b2a63d4d70fef8f18a70b0dda5a",
+    "docs/combat-tracker-data.json": "d84353598c621b729098937f9816b5930b960746d85072cbcdd637322157f7c8",
+    "docs/combat-workbook-verification.json": "7a109393d86a814cdb28129968d2fcf7f072c7da45df61777ef0a8360e18dcfd",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+  },
+  "baselineSnapshotHashes": {
+    "manifest.json": "fb8e407c86fde3103731392175bd151b2411b7b7c676c5fc2505070c988b0620",
+    "sheet-1.json": "569841db17a7061ea33098561c7836ee89f800b3c65aebc41f6650e3543a1ab3",
+    "sheet-2.json": "d390e938145393b5f88402f9d065b207e8f20acc6e666ef7e765c59078bf7c35",
+    "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
+    "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
+    "sheet-5.json": "08ef71da57e0472426aa19c67175a8a020c04424c4d77413bfc6bb036264a057",
+    "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
+    "sheet-7.json": "21c77d13360206e4f6fed14a0e92116de07aa27ca81bcf584d61e6892e33bfbc",
+    "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
+    "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
+    "sheet-10.json": "a949d346a44acfe4071508b35704a43defe0acd9fe505ad02a15b95d8f5e8997",
+    "sheet-11.json": "8c993f65d9ed8d510cc4f23979f71f76e5ccea6e4135b6562ca1c52617bebdf2"
+  },
+  "historicalCellsConstrained": 79280,
+  "approvedChangedCells": [
+    {
+      "sheet": "Production",
+      "cell": "G3027",
+      "before": [
+        "string",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+        null
+      ],
+      "value": "https://www.youtube.com/watch?v=L4p2gN2CzsA\nhttps://www.youtube.com/watch?v=sQ5DCwcpMy0\ndocs/art-generation/cast-next-missing-20261120/candidate-review-australianjax.md",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3027",
+      "before": [
+        "string",
+        "Aucun rapprochement certain avec une archive existante. Type : costume.",
+        null
+      ],
+      "value": "Correction de la revue : short kaki confirmé, avec bas des jambes violets visibles ; aucun pantalon long attesté. Chapeau brun, chemise kaki, ceinture, gants jaunes et mallette grise repérés.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3027",
+      "before": [
+        "string",
+        "Identifier le plan exact puis comparer l’apparence.  No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+        null
+      ],
+      "value": "Les pieds restent hors cadre ou masqués dans les vues officielles inspectées. Les formes claires au bas du plan sont des mains, pas des chaussures. Obtenir une vue complète avant génération ; candidate toujours À vérifier, sans nouvel actif compté.",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "E64",
+      "before": [
+        "string",
+        "5 722 images et 3 015 349 314 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+        null
+      ],
+      "value": "5 769 images et 3 059 080 660 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B7",
+      "before": [
+        "number",
+        54,
+        "=COUNTA('Combattants'!A6:A59)"
+      ],
+      "value": 54,
+      "formula": "=COUNTA('Combattants'!A6:A59)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B8",
+      "before": [
+        "number",
+        540,
+        "=COUNTA('Techniques'!A6:A545)"
+      ],
+      "value": 540,
+      "formula": "=COUNTA('Techniques'!A6:A545)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B9",
+      "before": [
+        "number",
+        22,
+        "=COUNTA('Arènes'!A6:A27)"
+      ],
+      "value": 23,
+      "formula": "=COUNTA('Arènes'!A6:A28)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B10",
+      "before": [
+        "number",
+        179,
+        "=COUNTA('Atlas'!A6:A184)"
+      ],
+      "value": 179,
+      "formula": "=COUNTA('Atlas'!A6:A184)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B11",
+      "before": [
+        "number",
+        464,
+        "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3139,\"Costume crossover\")+COUNTIFS('Production'!B6:B3139,\"Tenue Circus\")"
+      ],
+      "value": 468,
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3193,\"Costume crossover\")+COUNTIFS('Production'!B6:B3193,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B12",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!B6:B3139,\"Arrangement d’arène\")"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B15",
+      "before": [
+        "number",
+        85,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)"
+      ],
+      "value": 85,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C15",
+      "before": [
+        "number",
+        7,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)"
+      ],
+      "value": 7,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D15",
+      "before": [
+        "number",
+        12,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)"
+      ],
+      "value": 12,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E15",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F15",
+      "before": [
+        "number",
+        106,
+        "=COUNTA('Fonctionnalités'!A6:A111)"
+      ],
+      "value": 106,
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B16",
+      "before": [
+        "number",
+        1954,
+        "=COUNTIFS('Production'!E$6:E$3139,B$14)"
+      ],
+      "value": 2008,
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C16",
+      "before": [
+        "number",
+        957,
+        "=COUNTIFS('Production'!E$6:E$3139,C$14)"
+      ],
+      "value": 957,
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D16",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!E$6:E$3139,D$14)"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E16",
+      "before": [
+        "number",
+        169,
+        "=COUNTIFS('Production'!E$6:E$3139,E$14)"
+      ],
+      "value": 169,
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F16",
+      "before": [
+        "number",
+        3134,
+        "=COUNTA('Production'!A6:A3139)"
+      ],
+      "value": 3188,
+      "formula": "=COUNTA('Production'!A6:A3193)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B17",
+      "before": [
+        "number",
+        343,
+        "=COUNTIFS('Scénarios'!H$6:H$353,B$14)"
+      ],
+      "value": 343,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C17",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Scénarios'!H$6:H$353,C$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D17",
+      "before": [
+        "number",
+        4,
+        "=COUNTIFS('Scénarios'!H$6:H$353,D$14)"
+      ],
+      "value": 4,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E17",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('Scénarios'!H$6:H$353,E$14)"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F17",
+      "before": [
+        "number",
+        348,
+        "=COUNTA('Scénarios'!A6:A353)"
+      ],
+      "value": 348,
+      "formula": "=COUNTA('Scénarios'!A6:A353)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B18",
+      "before": [
+        "number",
+        105,
+        "=COUNTIFS('Atlas'!E$6:E$184,B$14)"
+      ],
+      "value": 105,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C18",
+      "before": [
+        "number",
+        74,
+        "=COUNTIFS('Atlas'!E$6:E$184,C$14)"
+      ],
+      "value": 74,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D18",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Atlas'!E$6:E$184,D$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E18",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Atlas'!E$6:E$184,E$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F18",
+      "before": [
+        "number",
+        179,
+        "=COUNTA('Atlas'!A6:A184)"
+      ],
+      "value": 179,
+      "formula": "=COUNTA('Atlas'!A6:A184)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H19",
+      "before": [
+        "string",
+        "54 routes et 324 tableaux",
+        "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3139,\"Tableau d’histoire\")&\" tableaux\""
+      ],
+      "value": "54 routes et 324 tableaux",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3193,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H20",
+      "before": [
+        "string",
+        "216 briefings de rencontre",
+        "=COUNTIFS('Production'!B6:B3139,\"Briefing illustré\")&\" briefings de rencontre\""
+      ],
+      "value": "216 briefings de rencontre",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H21",
+      "before": [
+        "string",
+        "22 thèmes musicaux d’arènes",
+        "=COUNTIFS('Production'!B6:B3139,\"Arène\",'Production'!D6:D3139,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+      ],
+      "value": "23 thèmes musicaux d’arènes",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Arène\",'Production'!D6:D3193,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B22",
+      "before": [
+        "number",
+        2265,
+        "=COUNTIFS('QA'!D6:D2286,B21)"
+      ],
+      "value": 2318,
+      "formula": "=COUNTIFS('QA'!D6:D2340,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C22",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('QA'!D6:D2286,C21)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('QA'!D6:D2340,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D22",
+      "before": [
+        "number",
+        13,
+        "=COUNTIFS('QA'!D6:D2286,D21)"
+      ],
+      "value": 14,
+      "formula": "=COUNTIFS('QA'!D6:D2340,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E22",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('QA'!D6:D2286,E21)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('QA'!D6:D2340,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F22",
+      "before": [
+        "number",
+        2281,
+        "=COUNTA('QA'!A6:A2286)"
+      ],
+      "value": 2335,
+      "formula": "=COUNTA('QA'!A6:A2340)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H22",
+      "before": [
+        "string",
+        "26 motifs sonores synthétiques",
+        "=COUNTIFS('Production'!B6:B3139,\"Motif sonore\")&\" motifs sonores synthétiques\""
+      ],
+      "value": "26 motifs sonores synthétiques",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B23",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('QA'!D6:D2286,\"Partiel\")"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('QA'!D6:D2340,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H23",
+      "before": [
+        "string",
+        "270 séquences de présentation",
+        "=COUNTIFS('Production'!B6:B3139,\"Présentation individuelle\")&\" séquences de présentation\""
+      ],
+      "value": "270 séquences de présentation",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H24",
+      "before": [
+        "string",
+        "22 ambiances visuelles animées",
+        "=COUNTIFS('Production'!B6:B3139,\"Animation d’arène\")&\" ambiances visuelles animées\""
+      ],
+      "value": "23 ambiances visuelles animées",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H25",
+      "before": [
+        "string",
+        "20 costumes historiques redessinés",
+        "=COUNTIFS('Production'!B6:B3139,\"Costume\")&\" costumes historiques redessinés\""
+      ],
+      "value": "20 costumes historiques redessinés",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H27",
+      "before": [
+        "string",
+        "702 fiches, hors tenues crossover",
+        "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3139,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+      ],
+      "value": "707 fiches, hors tenues crossover",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3193,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H31",
+      "before": [
+        "string",
+        "162 présentations de KO",
+        "=COUNTIFS('Production'!B6:B3139,\"Finition visuelle\")&\" présentations de KO\""
+      ],
+      "value": "162 présentations de KO",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H32",
+      "before": [
+        "string",
+        "22 ambiances sonores originales",
+        "=COUNTIFS('Production'!B6:B3139,\"Arène\",'Production'!D6:D3139,\"Ambiance sonore\",'Production'!E6:E3139,\"Implémenté\")&\" ambiances sonores originales\""
+      ],
+      "value": "23 ambiances sonores originales",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Arène\",'Production'!D6:D3193,\"Ambiance sonore\",'Production'!E6:E3193,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H2",
+      "before": [
+        "string",
+        "Version 0.7.0 · suivi réconcilié au 20 novembre 2026",
+        null
+      ],
+      "value": "Version 0.7.0 · nouveaux manquants · 20 novembre 2026",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H8",
+      "before": [
+        "string",
+        "35 tenues Circus · 385 dessins individuels",
+        null
+      ],
+      "value": "39 tenues Circus · 429 dessins individuels",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H13",
+      "before": [
+        "string",
+        "405 tests Node dans la preuve du dernier lot",
+        null
+      ],
+      "value": "411 tests Node dans la preuve finale du lot",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H14",
+      "before": [
+        "string",
+        "État navigateur détaillé dans les preuves datées",
+        null
+      ],
+      "value": "État navigateur détaillé dans la preuve datée",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H15",
+      "before": [
+        "string",
+        "Classeur recalculé et réimporté ; historique conservé",
+        null
+      ],
+      "value": "Classeur recalculé et réimporté ; historique conservé",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H16",
+      "before": [
+        "string",
+        "9 préparations achevées · 6 accessoires intégrés",
+        null
+      ],
+      "value": "4 tenues · 44 dessins · 1 arène à trois plans",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H30",
+      "before": [
+        "string",
+        "105 ensembles de base + 35 tenues (385 PNG)",
+        null
+      ],
+      "value": "105 ensembles de base + 39 tenues (429 PNG)",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H34",
+      "before": [
+        "string",
+        "22 arènes communes · 54 arrangements à décor partagé",
+        null
+      ],
+      "value": "23 arènes communes · 54 arrangements à décor partagé",
+      "formula": null
+    }
+  ],
+  "correctedReference": {
+    "id": "SERIES-jax__australian_extremist",
+    "row": 3027,
+    "keptStatus": "À vérifier"
+  },
+  "appendedProductionIds": [
+    "NEXT29-watermelongangle",
+    "NEXT29-aquablasterpomni",
+    "NEXT29-ptocaine",
+    "NEXT29-freakjax",
+    "NEXT29-watermelongangle-selection",
+    "NEXT29-watermelongangle-stance",
+    "NEXT29-watermelongangle-intro",
+    "NEXT29-watermelongangle-attack",
+    "NEXT29-watermelongangle-heavy",
+    "NEXT29-watermelongangle-hit",
+    "NEXT29-watermelongangle-walk",
+    "NEXT29-watermelongangle-jump",
+    "NEXT29-watermelongangle-crouch",
+    "NEXT29-watermelongangle-victory",
+    "NEXT29-watermelongangle-defeat",
+    "NEXT29-aquablasterpomni-selection",
+    "NEXT29-aquablasterpomni-stance",
+    "NEXT29-aquablasterpomni-intro",
+    "NEXT29-aquablasterpomni-attack",
+    "NEXT29-aquablasterpomni-heavy",
+    "NEXT29-aquablasterpomni-hit",
+    "NEXT29-aquablasterpomni-walk",
+    "NEXT29-aquablasterpomni-jump",
+    "NEXT29-aquablasterpomni-crouch",
+    "NEXT29-aquablasterpomni-victory",
+    "NEXT29-aquablasterpomni-defeat",
+    "NEXT29-ptocaine-selection",
+    "NEXT29-ptocaine-stance",
+    "NEXT29-ptocaine-intro",
+    "NEXT29-ptocaine-attack",
+    "NEXT29-ptocaine-heavy",
+    "NEXT29-ptocaine-hit",
+    "NEXT29-ptocaine-walk",
+    "NEXT29-ptocaine-jump",
+    "NEXT29-ptocaine-crouch",
+    "NEXT29-ptocaine-victory",
+    "NEXT29-ptocaine-defeat",
+    "NEXT29-freakjax-selection",
+    "NEXT29-freakjax-stance",
+    "NEXT29-freakjax-intro",
+    "NEXT29-freakjax-attack",
+    "NEXT29-freakjax-heavy",
+    "NEXT29-freakjax-hit",
+    "NEXT29-freakjax-walk",
+    "NEXT29-freakjax-jump",
+    "NEXT29-freakjax-crouch",
+    "NEXT29-freakjax-victory",
+    "NEXT29-freakjax-defeat",
+    "ART-undermap-background",
+    "ART-undermap-floor",
+    "ART-undermap-foreground",
+    "ART-undermap-music",
+    "ART-undermap-ambience",
+    "ANIM-undermap-ambience"
+  ],
+  "appendedQaIds": [
+    "NEXT29-asset-watermelongangle-selection",
+    "NEXT29-asset-watermelongangle-stance",
+    "NEXT29-asset-watermelongangle-intro",
+    "NEXT29-asset-watermelongangle-attack",
+    "NEXT29-asset-watermelongangle-heavy",
+    "NEXT29-asset-watermelongangle-hit",
+    "NEXT29-asset-watermelongangle-walk",
+    "NEXT29-asset-watermelongangle-jump",
+    "NEXT29-asset-watermelongangle-crouch",
+    "NEXT29-asset-watermelongangle-victory",
+    "NEXT29-asset-watermelongangle-defeat",
+    "NEXT29-asset-aquablasterpomni-selection",
+    "NEXT29-asset-aquablasterpomni-stance",
+    "NEXT29-asset-aquablasterpomni-intro",
+    "NEXT29-asset-aquablasterpomni-attack",
+    "NEXT29-asset-aquablasterpomni-heavy",
+    "NEXT29-asset-aquablasterpomni-hit",
+    "NEXT29-asset-aquablasterpomni-walk",
+    "NEXT29-asset-aquablasterpomni-jump",
+    "NEXT29-asset-aquablasterpomni-crouch",
+    "NEXT29-asset-aquablasterpomni-victory",
+    "NEXT29-asset-aquablasterpomni-defeat",
+    "NEXT29-asset-ptocaine-selection",
+    "NEXT29-asset-ptocaine-stance",
+    "NEXT29-asset-ptocaine-intro",
+    "NEXT29-asset-ptocaine-attack",
+    "NEXT29-asset-ptocaine-heavy",
+    "NEXT29-asset-ptocaine-hit",
+    "NEXT29-asset-ptocaine-walk",
+    "NEXT29-asset-ptocaine-jump",
+    "NEXT29-asset-ptocaine-crouch",
+    "NEXT29-asset-ptocaine-victory",
+    "NEXT29-asset-ptocaine-defeat",
+    "NEXT29-asset-freakjax-selection",
+    "NEXT29-asset-freakjax-stance",
+    "NEXT29-asset-freakjax-intro",
+    "NEXT29-asset-freakjax-attack",
+    "NEXT29-asset-freakjax-heavy",
+    "NEXT29-asset-freakjax-hit",
+    "NEXT29-asset-freakjax-walk",
+    "NEXT29-asset-freakjax-jump",
+    "NEXT29-asset-freakjax-crouch",
+    "NEXT29-asset-freakjax-victory",
+    "NEXT29-asset-freakjax-defeat",
+    "UNDERMAP29-asset-far",
+    "UNDERMAP29-asset-mid",
+    "UNDERMAP29-asset-near",
+    "NEXT29-art",
+    "NEXT29-canvas",
+    "UNDERMAP29-canvas",
+    "NEXT29-node",
+    "NEXT29-integrity",
+    "NEXT29-browser",
+    "TRACKER29-update"
+  ],
+  "appendedSourceIds": [
+    "store-beach-watermelongangle",
+    "store-beach-aquablasterpomni",
+    "store-pto-caine",
+    "store-sideshow-freakjax"
+  ],
+  "appendedStageId": "undermap",
+  "evidenceHashes": {
+    "docs/art-generation/cast-next-missing-20261120/generation-completion.json": "454273e19fa72b2c5af96119d023b165da341f2f3c9b121ef65aeddef6314e25",
+    "docs/art-generation/cast-next-missing-20261120/asset-inventory.json": "e88d6bcd2f535fdceed1d586ce6810ae5321838079cf2663ecc2aba229785d60",
+    "docs/art-generation/cast-next-missing-20261120/qa-result.json": "7a0218805612a44aa17f14ccf6cf06db3e4eb1aa3fc716f20c830ac5a2882877",
+    "docs/art-generation/cast-next-missing-20261120/qa.log": "f0b0583d934bc00bba5d2a91a95401a2c6d9285f3a9c33692d2179171e496423",
+    "docs/art-generation/cast-next-missing-20261120/runtime-counts.json": "eab161df17f1f76eb80fadf62feac81d8f5bbef4b8982cec192ebeb7e33ded70",
+    "docs/art-generation/cast-next-missing-20261120/canvas-summary.json": "92e5d855462578cbed8845514a41ef0d0613ec463162ba6a2e5663d7a47aa594",
+    "docs/art-generation/cast-next-missing-20261120/build-integrity.json": "61509811b7761d218b150cdd946761ca2f60ea5a45198fc831b4cae303e2fece",
+    "docs/art-generation/cast-next-missing-20261120/verification.json": "168b8a406d44e7fe501b182777ae0273fac28b0a106086ea54891e16b6b3c274",
+    "docs/art-generation/cast-next-missing-20261120/visual-review.json": "5b7c18506a8bf941471b841d2a421a5eefe10616efd1958c75249ff886ea5f9b",
+    "docs/art-generation/cast-next-missing-20261120/independent-review.json": "d2fdcb1940dd6ee8e0d8eeeab1e7aa34b79017a3d7a9e8b60d4b0e243d246d85",
+    "docs/art-generation/stage-next-missing-20261120/asset-inventory.json": "1333a394299ddcee2db125c3c4ba472da57d936ed2a6b75258fdcb7727d62996",
+    "docs/art-generation/stage-next-missing-20261120/verification.json": "88992c02003666b32a4d92607dd21184f641ca38e3058601a6159ebde8e26bd7",
+    "docs/art-generation/stage-next-missing-20261120/review/canvas-review.json": "5f063ee874cf5a435a9964fd6132a292645cecdffd63ee093bf48b4c3ae264fa",
+    "docs/art-generation/stage-next-missing-20261120/visual-review.json": "7e5b65779c4d1cfd8ce54bced21f3dea17ee1fe9bad1a2d9bbc49acbd2ff22dc",
+    "docs/art-generation/stage-next-missing-20261120/targeted-tests.log": "96c8925f2fc22df83c6da1f8713592c0d98880612dc20ad4c960fe8408bbba9a",
+    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
+    "combat/costume-additions.mjs": "d1d9c194b316efca6db2f1833c94d820dfdf0b1f028ede091a40a411a6a0619f",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "1bf5bbefabaa9330622a0eead66ece112889a0e1c354d902c977ea6f7abbdb56",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585",
+    "combat/fidelity.mjs": "2e3ee2fe7c19e7ff40997abd2c5c8a1927fc7f5ef82e5522c7192225a8a3142e",
+    "combat/audio.mjs": "e774d5d5c50102dfd6b726affad4cdd546c9d05df070c928d6a3d9ba04c5e9ed",
+    "combat/audio-ambiences.mjs": "135a9fe8c62b99bf06c1182745bce6dbb2ffd31aca7d824e78852ff1d0470fc0",
+    "combat/progression.mjs": "d1c06308fdf48e57b4ef4261d952237be3878cdfacd13ab234d1c6bde9dfae3e",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "327ff8a636f4a37cbd0d7f2d5063b51299c0708d992490189cc9db5d27c71e46",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "tests/combat-undermap.test.mjs": "007f96cdf8363befaae5d2ecef143afbc56cf715702d9cfd02ab16d221b5261b",
+    "tests/fixtures/combat-pre-undermap.json": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
+    "scripts/review-combat-undermap-20261120.mjs": "d8e2112169524aaa56bff1875dc4545b14c8e826e32017f4ecb94309eadff341",
+    "docs/art-generation/cast-next-missing-20261120/review/watermelongangle/character-canvas-review.json": "187d7de81be134bbbbf687d0cd6b269f81fd81e695f1ed299c498f6633a7c2ec",
+    "docs/art-generation/cast-next-missing-20261120/review/aquablasterpomni/character-canvas-review.json": "36a30fe9fae121969f6f525020932a62c3376ff4adcd7faba32edb1c7ef4273a",
+    "docs/art-generation/cast-next-missing-20261120/review/ptocaine/character-canvas-review.json": "b6b83b3a2599024b3a2e731abfd392ed5f50920602272f30e1db7a7563cc3d44",
+    "docs/art-generation/cast-next-missing-20261120/review/freakjax/character-canvas-review.json": "2e17ba3c75d9475e7a9cb770b8d11b10b2cd2311f899f9f758b2ee3e36214df1",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-watermelongangle.md": "6fb5690b971b08faebe8c97146dd50081ccb57e41c41bf3f03cc852fb6ea454b",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-aquablasterpomni.md": "7c05a5560efc9fcdd1d422fa00014d9fa5b10abddfcc094a014dd636eed8ff8b",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-ptocaine.md": "dc6cbdc345af04cb85a2385bc228514952d707ee8aa7fb1d9c95dbff2307e5f1",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-freakjax.md": "451175d25a37728e488debed77cb08f6a1b0040210ea524634f03148bfd30dee",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-australianjax.md": "8159b44594a6005e4caf7bda17d3dfea372d08479c3abfd7c96fbb45fe8fd29a",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-noirgangle.md": "62f3bbdba5d72994be5c74c1079f6ec4807daf3b0f59d355452504cec365226b",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-contortionistzooble.md": "7b29756366e47d92cebad8bb6c0f1c86ddb49e68935d3998b8eeeb61b334d817",
+    "docs/art-generation/cast-next-missing-20261120/candidate-review-hotdogabel.md": "2b2e98540533b05cec33d3dea2544a7b272f24808486fd30e6603c7dcb30f531",
+    "docs/art-generation/cast-next-missing-20261120/remaining-work.md": "e7b9aab6b15ea9996a134ac13a9b30f421b7d4a0c0bf1c288d924c2b0f0583f6",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json": "7656e6a88115569faf180d40d14d035d5d0cbe63394aa03bd478a5a9335bb679",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json": "47e828cf061eac5a34e57df1db1cca9eba230dd7cef3783fbab66a25fcfa8c06",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json": "fb70b5b10712a7ecc7d690f90f0815158f0424c16a0dcb7ec0e8e670f09d7d2f",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json": "a4a670e55ad6fd2005d747debc516907d5eae841173e16950e9f7079e5df94f9",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json": "1b6fd66fa1fb71b6dc6f07c75db55f30fba26f4ddc03b851ab9b19e4f427ad83",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json": "30bc0ece6bb971d5aff399e860c07b36c28fe1025f598c8f178e370f052979b8",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json": "46a530d9f57fcc7f1820bd4d7b59d33b24cb77b2769d8285de2a8e7f495de557",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json": "51c484637db6065e9126d35c101709ffe740f6528be4761c6d4e95df672517b8",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json": "1c47eca6a8cb42efd7705b981d0d76516d7e12435b1dca83777eab920eb6a3a1",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json": "68b5a6c7ab4c01ee3cb5740032895cdd2c1bccdfffeb3fb59c5f41e33b0fbc22",
+    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json": "0d0e19300533c415aa54cfd757ee5e1c8bf6cf09077f5573c1ec0e96edc0c7f1",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json": "9832163733dba4f90bf4d289ff283005d55ceb7c06539c2369ef3e52669151a2",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json": "e9018fdbd6d2bcb1655add134198438d1f590fedffc40616c173d343a7548ac6",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json": "5ddeddd19595569d4469406aacf8db44a1de6debabf1100ec533c17f186982eb",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json": "84c738174ff9cc5af898a9125115604eb60717a91fc1de781b621d7a7db2b956",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json": "c447d3f08d45a8ac34fd9bd0c06cebef9a0100667dc84c284e500324be168cea",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json": "e02951b494a883f7ef80ed1bf8b05daafac90d9c042e2e0a61685856b337fdb6",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json": "1b9f13916d0ca4c41b4f3bb4a500188b6d838cfe50c5b2fa373bc6f90bc653db",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json": "76bbce9fa624081bf51f4047d793c11a90ec93e638addb5b42c714323f365dc4",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json": "665c6d029820b2fad44aebf8e17254536478353b485da34d12361152d9c5b54d",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json": "2f92bf7dc279251d219f139abdcfc4993ae0c518bc5d801e75120a0c7d172bd9",
+    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json": "bfa76ce675000f36f54fef38cd192ebbf58573518f00080ec327046e2c4ccb33",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json": "04f651900aaffd6909e550f57c9261e08c990ab535367bf3ac674602c39dded5",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json": "0241b4719fdb266723f61e90471b388e50e4b39e3f393055d10079bd19482361",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json": "8afd3b71009637e06c440dfc13405a6a3023c1de1b8c1ab4d6bb06528736e7c3",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json": "c4dc8b4f2a9eac3685e79f146cbbe73e9b809f82d87ada06065b02bde09c15b3",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json": "4509a804ddb9e8fb3da73d5868a1a943be9d6626bd1071ab03ab2c58d98bafb6",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json": "168f67974011e1c6fc489959bcf3f506c52be33b6aa709749d26bfd5a4a5c431",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json": "62307b977b870d6332ef14d82a8e62553a2b3a42b246d5f16c605ba60c227920",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json": "17bd5e46ce9467def3088f73d9d31b4935f47164f29df236ce43ea77ffca3f12",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json": "9ddc043a1a6b26be72e98724865e67d0ea710bcc4c3d76ceaa1cbfea4517718b",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json": "e2273b0cca8fbeab1726b8f3a255783627591214ddc29050cce77e515c952d92",
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json": "f85053bf40eef4fed4ac71cc6e97dfc2164e12f3f042835512823507afbf11ea",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json": "87dba66b6186c5eed58c5050013f3657a3f118a37f67f3fde6da7ffe989b9f3a",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json": "8daa993f5726ed76ea8d5b856279fb6ea685d7553bd3842fd5e6508db511888e",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json": "ada90c14265c17941be4179b9b66e310fdfd0777030c7ed723dbeebcff61c5b5",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json": "fce6c43121dd0e540bd44baec0a46c924ad2fba2ced3de3d1c5f6dfd933d58d2",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json": "0c92bc47b11e6ab07f4515c6c4f2d0ec8046baa7e706faa5809712db8f8a3d75",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json": "83f11cc92bcdeb8b36e39e90b695a274a5d7e923b20c8d1d2a0ecd583380daa8",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json": "bd7f7c40f1844a3891f691afbad3389cb0b46d4d1c14c499c8363d7da4d870bc",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json": "915b3b87cf73091ec88ca836cf7f88563f99f33a9f795da9a55de8cb51b0e4b4",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json": "ff4c7c31f2ac9bef14392079f0beccb00db0f2b57a1936df408fc000ae29b211",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json": "089149846741891ff6ea148dc6c8baa2f40e43c1a89225c9e5a91c4d26341529",
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json": "6772bd5bd3227aba248fb73e1288f9add198338110bc27de54eaf000c204b2d4"
+  },
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-cdc85685a728",
+    "artVersion": "cb628ae846008788",
+    "artFiles": 5769,
+    "artBytes": 3059080660,
+    "sha256": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585"
+  },
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 23,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 468,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 23,
+    "soundEffects": 26,
+    "offlineImages": 5769,
+    "offlineBytes": 3059080660,
+    "features": 106,
+    "production": 3188,
+    "scenarios": 348,
+    "qa": 2335,
+    "presentationSequences": 270,
+    "animatedStages": 23,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 23,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54,
+    "costumeAdditions": 39,
+    "pendingCostumeAdditions": 0,
+    "pendingCostumeArtFiles": 0,
+    "sheets": 11,
+    "nativeTables": 10,
+    "sources": 153,
+    "addedProductionRows": 54,
+    "addedQaRows": 54,
+    "addedSourceRows": 4,
+    "addedStageRows": 1,
+    "costumePngs": 429,
+    "newIndividualDrawingRows": 44,
+    "historicalCells": 79280,
+    "totalNativeCells": 80346
+  },
+  "formulas": [
+    {
+      "cell": "B7",
+      "formula": "=COUNTA('Combattants'!A6:A59)",
+      "value": 54
+    },
+    {
+      "cell": "B8",
+      "formula": "=COUNTA('Techniques'!A6:A545)",
+      "value": 540
+    },
+    {
+      "cell": "B9",
+      "formula": "=COUNTA('Arènes'!A6:A28)",
+      "value": 23
+    },
+    {
+      "cell": "B10",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3193,\"Costume crossover\")+COUNTIFS('Production'!B6:B3193,\"Tenue Circus\")",
+      "value": 468
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Arrangement d’arène\")",
+      "value": 54
+    },
+    {
+      "cell": "B15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)",
+      "value": 85
+    },
+    {
+      "cell": "C15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)",
+      "value": 7
+    },
+    {
+      "cell": "D15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)",
+      "value": 12
+    },
+    {
+      "cell": "E15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)",
+      "value": 2
+    },
+    {
+      "cell": "F15",
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)",
+      "value": 106
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,B$14)",
+      "value": 2008
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,C$14)",
+      "value": 957
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,D$14)",
+      "value": 54
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3193,E$14)",
+      "value": 169
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3193)",
+      "value": 3188
+    },
+    {
+      "cell": "B17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)",
+      "value": 343
+    },
+    {
+      "cell": "C17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)",
+      "value": 0
+    },
+    {
+      "cell": "D17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)",
+      "value": 4
+    },
+    {
+      "cell": "E17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)",
+      "value": 1
+    },
+    {
+      "cell": "F17",
+      "formula": "=COUNTA('Scénarios'!A6:A353)",
+      "value": 348
+    },
+    {
+      "cell": "B18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)",
+      "value": 105
+    },
+    {
+      "cell": "C18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)",
+      "value": 74
+    },
+    {
+      "cell": "D18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)",
+      "value": 0
+    },
+    {
+      "cell": "E18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)",
+      "value": 0
+    },
+    {
+      "cell": "F18",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3193,\"Tableau d’histoire\")&\" tableaux\"",
+      "value": "54 routes et 324 tableaux"
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "value": "216 briefings de rencontre"
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Arène\",'Production'!D6:D3193,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "value": "23 thèmes musicaux d’arènes"
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2340,B21)",
+      "value": 2318
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2340,C21)",
+      "value": 0
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2340,D21)",
+      "value": 14
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2340,E21)",
+      "value": 2
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2340)",
+      "value": 2335
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "value": "26 motifs sonores synthétiques"
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2340,\"Partiel\")",
+      "value": 1
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "value": "270 séquences de présentation"
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "value": "23 ambiances visuelles animées"
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Costume\")&\" costumes historiques redessinés\"",
+      "value": "20 costumes historiques redessinés"
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3193,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "value": "707 fiches, hors tenues crossover"
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Finition visuelle\")&\" présentations de KO\"",
+      "value": "162 présentations de KO"
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3193,\"Arène\",'Production'!D6:D3193,\"Ambiance sonore\",'Production'!E6:E3193,\"Implémenté\")&\" ambiances sonores originales\"",
+      "value": "23 ambiances sonores originales"
+    }
+  ],
+  "statusMutationCell": "E3140",
+  "scopes": [
+    [
+      "Synthèse",
+      "A1:H18",
+      "summary-top"
+    ],
+    [
+      "Synthèse",
+      "A19:H35",
+      "summary-bottom"
+    ],
+    [
+      "Arènes",
+      "A28:L28",
+      "stage-left"
+    ],
+    [
+      "Arènes",
+      "M28:T28",
+      "stage-right"
+    ],
+    [
+      "Production",
+      "A3027:J3027",
+      "australian-reference"
+    ],
+    [
+      "Production",
+      "A3140:J3143",
+      "production-1"
+    ],
+    [
+      "Production",
+      "A3144:J3147",
+      "production-2"
+    ],
+    [
+      "Production",
+      "A3148:J3151",
+      "production-3"
+    ],
+    [
+      "Production",
+      "A3152:J3155",
+      "production-4"
+    ],
+    [
+      "Production",
+      "A3156:J3159",
+      "production-5"
+    ],
+    [
+      "Production",
+      "A3160:J3163",
+      "production-6"
+    ],
+    [
+      "Production",
+      "A3164:J3167",
+      "production-7"
+    ],
+    [
+      "Production",
+      "A3168:J3171",
+      "production-8"
+    ],
+    [
+      "Production",
+      "A3172:J3175",
+      "production-9"
+    ],
+    [
+      "Production",
+      "A3176:J3179",
+      "production-10"
+    ],
+    [
+      "Production",
+      "A3180:J3183",
+      "production-11"
+    ],
+    [
+      "Production",
+      "A3184:J3187",
+      "production-12"
+    ],
+    [
+      "Production",
+      "A3188:J3191",
+      "production-13"
+    ],
+    [
+      "Production",
+      "A3192:J3193",
+      "production-14"
+    ],
+    [
+      "QA",
+      "A2287:I2290",
+      "qa-1"
+    ],
+    [
+      "QA",
+      "A2291:I2294",
+      "qa-2"
+    ],
+    [
+      "QA",
+      "A2295:I2298",
+      "qa-3"
+    ],
+    [
+      "QA",
+      "A2299:I2302",
+      "qa-4"
+    ],
+    [
+      "QA",
+      "A2303:I2306",
+      "qa-5"
+    ],
+    [
+      "QA",
+      "A2307:I2310",
+      "qa-6"
+    ],
+    [
+      "QA",
+      "A2311:I2314",
+      "qa-7"
+    ],
+    [
+      "QA",
+      "A2315:I2318",
+      "qa-8"
+    ],
+    [
+      "QA",
+      "A2319:I2322",
+      "qa-9"
+    ],
+    [
+      "QA",
+      "A2323:I2326",
+      "qa-10"
+    ],
+    [
+      "QA",
+      "A2327:I2330",
+      "qa-11"
+    ],
+    [
+      "QA",
+      "A2331:I2334",
+      "qa-12"
+    ],
+    [
+      "QA",
+      "A2335:I2338",
+      "qa-13"
+    ],
+    [
+      "QA",
+      "A2339:I2340",
+      "qa-14"
+    ],
+    [
+      "Références",
+      "A155:E158",
+      "references-new"
+    ],
+    [
+      "Références",
+      "A64:E64",
+      "references-offline"
+    ],
+    [
+      "Références",
+      "A159:E169",
+      "references-footer"
+    ]
+  ],
+  "historicalFooterShift": 4,
+  "assetSlotChecks": [
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "selection",
+      "file": "assets/encore/selection/watermelongangle.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json",
+      "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+      "bytes": 1527470,
+      "productionId": "NEXT29-watermelongangle-selection",
+      "qaId": "NEXT29-asset-watermelongangle-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        76,
+        16,
+        945,
+        1528
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "stance",
+      "file": "assets/encore/stance/watermelongangle.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json",
+      "sha256": "7a1e29f4c0cc21f560ec9234b4de37540782b80a868e425b29cb9ccaad9f311a",
+      "bytes": 610564,
+      "productionId": "NEXT29-watermelongangle-stance",
+      "qaId": "NEXT29-asset-watermelongangle-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        236,
+        168,
+        1000,
+        1183
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "intro",
+      "file": "assets/encore/poses/watermelongangle/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json",
+      "sha256": "0867094ac29df1cbacdce6752ae82f34dd9b64f8fefa58fc63e6941114b90b62",
+      "bytes": 495465,
+      "productionId": "NEXT29-watermelongangle-intro",
+      "qaId": "NEXT29-asset-watermelongangle-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        355,
+        162,
+        977,
+        1062
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "attack",
+      "file": "assets/encore/poses/watermelongangle/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json",
+      "sha256": "79ee1961a5d0285ed540cfc6b8b8d0cedb90d92e6794a357fd36fb61fe122d11",
+      "bytes": 554595,
+      "productionId": "NEXT29-watermelongangle-attack",
+      "qaId": "NEXT29-asset-watermelongangle-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        133,
+        185,
+        1210,
+        1040
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "heavy",
+      "file": "assets/encore/poses/watermelongangle/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json",
+      "sha256": "fc0987cad03482b06e5e4a3a48e95d41b100740e6cd114c6649b312103e80fc2",
+      "bytes": 542307,
+      "productionId": "NEXT29-watermelongangle-heavy",
+      "qaId": "NEXT29-asset-watermelongangle-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        318,
+        134,
+        928,
+        1201
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "hit",
+      "file": "assets/encore/poses/watermelongangle/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json",
+      "sha256": "e9ff8240b557ddf0fb527090711e5b2a6f0cd6a10098fe86c8ca15e3328e6648",
+      "bytes": 544695,
+      "productionId": "NEXT29-watermelongangle-hit",
+      "qaId": "NEXT29-asset-watermelongangle-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        185,
+        223,
+        837,
+        1163
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "walk",
+      "file": "assets/encore/poses/watermelongangle/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json",
+      "sha256": "05ac74df9d231f1bfa045513abeee5c8f9a7afb3d6bb053a79bbd20a6a55e035",
+      "bytes": 586881,
+      "productionId": "NEXT29-watermelongangle-walk",
+      "qaId": "NEXT29-asset-watermelongangle-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        238,
+        153,
+        917,
+        1168
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "jump",
+      "file": "assets/encore/poses/watermelongangle/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json",
+      "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
+      "bytes": 627177,
+      "productionId": "NEXT29-watermelongangle-jump",
+      "qaId": "NEXT29-asset-watermelongangle-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        210,
+        139,
+        984,
+        1113
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "crouch",
+      "file": "assets/encore/poses/watermelongangle/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json",
+      "sha256": "06e009c6ee6227a068ae39ee920bfb973d47904bb4591e72ffd93fc3de6d5b23",
+      "bytes": 554025,
+      "productionId": "NEXT29-watermelongangle-crouch",
+      "qaId": "NEXT29-asset-watermelongangle-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        304,
+        295,
+        1025,
+        1062
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "victory",
+      "file": "assets/encore/poses/watermelongangle/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json",
+      "sha256": "08465899e55f5602a125b166f75c39d38ea6c82193503e41b05e734330c8584d",
+      "bytes": 545167,
+      "productionId": "NEXT29-watermelongangle-victory",
+      "qaId": "NEXT29-asset-watermelongangle-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        191,
+        138,
+        976,
+        1203
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "defeat",
+      "file": "assets/encore/poses/watermelongangle/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json",
+      "sha256": "67c8813222047c3bb8cb5430d034775dd2999b76041b07780654127ee0eff3ee",
+      "bytes": 688903,
+      "productionId": "NEXT29-watermelongangle-defeat",
+      "qaId": "NEXT29-asset-watermelongangle-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        184,
+        185,
+        1039,
+        1154
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/aquablasterpomni.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json",
+      "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+      "bytes": 1514241,
+      "productionId": "NEXT29-aquablasterpomni-selection",
+      "qaId": "NEXT29-asset-aquablasterpomni-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        117,
+        64,
+        897,
+        1486
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/aquablasterpomni.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json",
+      "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
+      "bytes": 761461,
+      "productionId": "NEXT29-aquablasterpomni-stance",
+      "qaId": "NEXT29-asset-aquablasterpomni-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        184,
+        80,
+        970,
+        1256
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/aquablasterpomni/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json",
+      "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
+      "bytes": 1544535,
+      "productionId": "NEXT29-aquablasterpomni-intro",
+      "qaId": "NEXT29-asset-aquablasterpomni-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        118,
+        63,
+        900,
+        1462
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/aquablasterpomni/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json",
+      "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
+      "bytes": 772786,
+      "productionId": "NEXT29-aquablasterpomni-attack",
+      "qaId": "NEXT29-asset-aquablasterpomni-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        155,
+        75,
+        1158,
+        1142
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/aquablasterpomni/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json",
+      "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
+      "bytes": 851157,
+      "productionId": "NEXT29-aquablasterpomni-heavy",
+      "qaId": "NEXT29-asset-aquablasterpomni-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        128,
+        104,
+        1021,
+        1260
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/aquablasterpomni/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json",
+      "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
+      "bytes": 1512821,
+      "productionId": "NEXT29-aquablasterpomni-hit",
+      "qaId": "NEXT29-asset-aquablasterpomni-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        69,
+        133,
+        876,
+        1449
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/aquablasterpomni/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json",
+      "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
+      "bytes": 718965,
+      "productionId": "NEXT29-aquablasterpomni-walk",
+      "qaId": "NEXT29-asset-aquablasterpomni-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        259,
+        70,
+        963,
+        1252
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/aquablasterpomni/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json",
+      "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
+      "bytes": 1469970,
+      "productionId": "NEXT29-aquablasterpomni-jump",
+      "qaId": "NEXT29-asset-aquablasterpomni-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        119,
+        111,
+        902,
+        1321
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/aquablasterpomni/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json",
+      "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
+      "bytes": 905643,
+      "productionId": "NEXT29-aquablasterpomni-crouch",
+      "qaId": "NEXT29-asset-aquablasterpomni-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        153,
+        126,
+        1050,
+        1250
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/aquablasterpomni/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json",
+      "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
+      "bytes": 1512530,
+      "productionId": "NEXT29-aquablasterpomni-victory",
+      "qaId": "NEXT29-asset-aquablasterpomni-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        88,
+        98,
+        972,
+        1486
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/aquablasterpomni/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json",
+      "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
+      "bytes": 875406,
+      "productionId": "NEXT29-aquablasterpomni-defeat",
+      "qaId": "NEXT29-asset-aquablasterpomni-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        142,
+        129,
+        1048,
+        1258
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "selection",
+      "file": "assets/encore/selection/ptocaine.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063,
+      "productionId": "NEXT29-ptocaine-selection",
+      "qaId": "NEXT29-asset-ptocaine-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        151,
+        15,
+        1028,
+        1435
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "stance",
+      "file": "assets/encore/stance/ptocaine.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json",
+      "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
+      "bytes": 943984,
+      "productionId": "NEXT29-ptocaine-stance",
+      "qaId": "NEXT29-asset-ptocaine-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1151,
+        1367
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        113,
+        10,
+        979,
+        1358
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "intro",
+      "file": "assets/encore/poses/ptocaine/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json",
+      "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
+      "bytes": 931163,
+      "productionId": "NEXT29-ptocaine-intro",
+      "qaId": "NEXT29-asset-ptocaine-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1214,
+        1295
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        32,
+        10,
+        1182,
+        1283
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "attack",
+      "file": "assets/encore/poses/ptocaine/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json",
+      "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
+      "bytes": 1341582,
+      "productionId": "NEXT29-ptocaine-attack",
+      "qaId": "NEXT29-asset-ptocaine-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        195,
+        8,
+        1321,
+        1015
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "heavy",
+      "file": "assets/encore/poses/ptocaine/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json",
+      "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
+      "bytes": 936106,
+      "productionId": "NEXT29-ptocaine-heavy",
+      "qaId": "NEXT29-asset-ptocaine-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        64,
+        8,
+        1385,
+        1073
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "hit",
+      "file": "assets/encore/poses/ptocaine/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json",
+      "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
+      "bytes": 1043937,
+      "productionId": "NEXT29-ptocaine-hit",
+      "qaId": "NEXT29-asset-ptocaine-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        45,
+        27,
+        950,
+        1439
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "walk",
+      "file": "assets/encore/poses/ptocaine/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json",
+      "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
+      "bytes": 980030,
+      "productionId": "NEXT29-ptocaine-walk",
+      "qaId": "NEXT29-asset-ptocaine-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        155,
+        11,
+        934,
+        1438
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "jump",
+      "file": "assets/encore/poses/ptocaine/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json",
+      "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
+      "bytes": 1037616,
+      "productionId": "NEXT29-ptocaine-jump",
+      "qaId": "NEXT29-asset-ptocaine-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1158,
+        1358
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        25,
+        11,
+        1128,
+        1260
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "crouch",
+      "file": "assets/encore/poses/ptocaine/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json",
+      "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
+      "bytes": 1013805,
+      "productionId": "NEXT29-ptocaine-crouch",
+      "qaId": "NEXT29-asset-ptocaine-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1216,
+        1293
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        96,
+        12,
+        1035,
+        1282
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "victory",
+      "file": "assets/encore/poses/ptocaine/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json",
+      "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
+      "bytes": 931407,
+      "productionId": "NEXT29-ptocaine-victory",
+      "qaId": "NEXT29-asset-ptocaine-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        142,
+        9,
+        965,
+        1436
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "defeat",
+      "file": "assets/encore/poses/ptocaine/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json",
+      "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
+      "bytes": 933698,
+      "productionId": "NEXT29-ptocaine-defeat",
+      "qaId": "NEXT29-asset-ptocaine-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1240,
+        1268
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        137,
+        10,
+        1073,
+        1246
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "selection",
+      "file": "assets/encore/selection/freakjax.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json",
+      "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+      "bytes": 916364,
+      "productionId": "NEXT29-freakjax-selection",
+      "qaId": "NEXT29-asset-freakjax-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        135,
+        57,
+        951,
+        1280
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "stance",
+      "file": "assets/encore/stance/freakjax.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json",
+      "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
+      "bytes": 1007652,
+      "productionId": "NEXT29-freakjax-stance",
+      "qaId": "NEXT29-asset-freakjax-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        73,
+        56,
+        1011,
+        1233
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "intro",
+      "file": "assets/encore/poses/freakjax/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json",
+      "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
+      "bytes": 916361,
+      "productionId": "NEXT29-freakjax-intro",
+      "qaId": "NEXT29-asset-freakjax-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        144,
+        52,
+        1112,
+        1231
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "attack",
+      "file": "assets/encore/poses/freakjax/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json",
+      "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
+      "bytes": 948653,
+      "productionId": "NEXT29-freakjax-attack",
+      "qaId": "NEXT29-asset-freakjax-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        88,
+        61,
+        1136,
+        1205
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "heavy",
+      "file": "assets/encore/poses/freakjax/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json",
+      "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
+      "bytes": 1110718,
+      "productionId": "NEXT29-freakjax-heavy",
+      "qaId": "NEXT29-asset-freakjax-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        81,
+        24,
+        1177,
+        1240
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "hit",
+      "file": "assets/encore/poses/freakjax/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json",
+      "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
+      "bytes": 1090665,
+      "productionId": "NEXT29-freakjax-hit",
+      "qaId": "NEXT29-asset-freakjax-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        88,
+        51,
+        1057,
+        1223
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "walk",
+      "file": "assets/encore/poses/freakjax/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json",
+      "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
+      "bytes": 996758,
+      "productionId": "NEXT29-freakjax-walk",
+      "qaId": "NEXT29-asset-freakjax-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        65,
+        39,
+        1049,
+        1225
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "jump",
+      "file": "assets/encore/poses/freakjax/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json",
+      "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
+      "bytes": 1101865,
+      "productionId": "NEXT29-freakjax-jump",
+      "qaId": "NEXT29-asset-freakjax-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        48,
+        61,
+        1200,
+        1210
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "crouch",
+      "file": "assets/encore/poses/freakjax/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json",
+      "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
+      "bytes": 993734,
+      "productionId": "NEXT29-freakjax-crouch",
+      "qaId": "NEXT29-asset-freakjax-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        90,
+        77,
+        1160,
+        1206
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "victory",
+      "file": "assets/encore/poses/freakjax/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json",
+      "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
+      "bytes": 1008406,
+      "productionId": "NEXT29-freakjax-victory",
+      "qaId": "NEXT29-asset-freakjax-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        118,
+        61,
+        1088,
+        1235
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "defeat",
+      "file": "assets/encore/poses/freakjax/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json",
+      "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
+      "bytes": 1098984,
+      "productionId": "NEXT29-freakjax-defeat",
+      "qaId": "NEXT29-asset-freakjax-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        81,
+        55,
+        1117,
+        1230
+      ]
+    }
+  ],
+  "activeAssetDigests": [
+    {
+      "file": "assets/encore/selection/watermelongangle.png",
+      "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+      "bytes": 1527470
+    },
+    {
+      "file": "assets/encore/stance/watermelongangle.png",
+      "sha256": "7a1e29f4c0cc21f560ec9234b4de37540782b80a868e425b29cb9ccaad9f311a",
+      "bytes": 610564
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/intro.png",
+      "sha256": "0867094ac29df1cbacdce6752ae82f34dd9b64f8fefa58fc63e6941114b90b62",
+      "bytes": 495465
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/attack.png",
+      "sha256": "79ee1961a5d0285ed540cfc6b8b8d0cedb90d92e6794a357fd36fb61fe122d11",
+      "bytes": 554595
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/heavy.png",
+      "sha256": "fc0987cad03482b06e5e4a3a48e95d41b100740e6cd114c6649b312103e80fc2",
+      "bytes": 542307
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/hit.png",
+      "sha256": "e9ff8240b557ddf0fb527090711e5b2a6f0cd6a10098fe86c8ca15e3328e6648",
+      "bytes": 544695
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/walk.png",
+      "sha256": "05ac74df9d231f1bfa045513abeee5c8f9a7afb3d6bb053a79bbd20a6a55e035",
+      "bytes": 586881
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/jump.png",
+      "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
+      "bytes": 627177
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/crouch.png",
+      "sha256": "06e009c6ee6227a068ae39ee920bfb973d47904bb4591e72ffd93fc3de6d5b23",
+      "bytes": 554025
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/victory.png",
+      "sha256": "08465899e55f5602a125b166f75c39d38ea6c82193503e41b05e734330c8584d",
+      "bytes": 545167
+    },
+    {
+      "file": "assets/encore/poses/watermelongangle/defeat.png",
+      "sha256": "67c8813222047c3bb8cb5430d034775dd2999b76041b07780654127ee0eff3ee",
+      "bytes": 688903
+    },
+    {
+      "file": "assets/encore/selection/aquablasterpomni.png",
+      "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+      "bytes": 1514241
+    },
+    {
+      "file": "assets/encore/stance/aquablasterpomni.png",
+      "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
+      "bytes": 761461
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/intro.png",
+      "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
+      "bytes": 1544535
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/attack.png",
+      "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
+      "bytes": 772786
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/heavy.png",
+      "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
+      "bytes": 851157
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/hit.png",
+      "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
+      "bytes": 1512821
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/walk.png",
+      "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
+      "bytes": 718965
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/jump.png",
+      "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
+      "bytes": 1469970
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/crouch.png",
+      "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
+      "bytes": 905643
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/victory.png",
+      "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
+      "bytes": 1512530
+    },
+    {
+      "file": "assets/encore/poses/aquablasterpomni/defeat.png",
+      "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
+      "bytes": 875406
+    },
+    {
+      "file": "assets/encore/selection/ptocaine.png",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063
+    },
+    {
+      "file": "assets/encore/stance/ptocaine.png",
+      "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
+      "bytes": 943984
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/intro.png",
+      "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
+      "bytes": 931163
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/attack.png",
+      "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
+      "bytes": 1341582
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/heavy.png",
+      "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
+      "bytes": 936106
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/hit.png",
+      "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
+      "bytes": 1043937
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/walk.png",
+      "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
+      "bytes": 980030
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/jump.png",
+      "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
+      "bytes": 1037616
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/crouch.png",
+      "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
+      "bytes": 1013805
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/victory.png",
+      "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
+      "bytes": 931407
+    },
+    {
+      "file": "assets/encore/poses/ptocaine/defeat.png",
+      "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
+      "bytes": 933698
+    },
+    {
+      "file": "assets/encore/selection/freakjax.png",
+      "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+      "bytes": 916364
+    },
+    {
+      "file": "assets/encore/stance/freakjax.png",
+      "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
+      "bytes": 1007652
+    },
+    {
+      "file": "assets/encore/poses/freakjax/intro.png",
+      "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
+      "bytes": 916361
+    },
+    {
+      "file": "assets/encore/poses/freakjax/attack.png",
+      "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
+      "bytes": 948653
+    },
+    {
+      "file": "assets/encore/poses/freakjax/heavy.png",
+      "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
+      "bytes": 1110718
+    },
+    {
+      "file": "assets/encore/poses/freakjax/hit.png",
+      "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
+      "bytes": 1090665
+    },
+    {
+      "file": "assets/encore/poses/freakjax/walk.png",
+      "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
+      "bytes": 996758
+    },
+    {
+      "file": "assets/encore/poses/freakjax/jump.png",
+      "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
+      "bytes": 1101865
+    },
+    {
+      "file": "assets/encore/poses/freakjax/crouch.png",
+      "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
+      "bytes": 993734
+    },
+    {
+      "file": "assets/encore/poses/freakjax/victory.png",
+      "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
+      "bytes": 1008406
+    },
+    {
+      "file": "assets/encore/poses/freakjax/defeat.png",
+      "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
+      "bytes": 1098984
+    },
+    {
+      "file": "assets/encore/stages/undermap/far.png",
+      "sha256": "8632502788b9f69092ae1cf4b5ae36d9d41af37c9e7155c9475c53879b6ff352",
+      "bytes": 1163294
+    },
+    {
+      "file": "assets/encore/stages/undermap/mid.png",
+      "sha256": "3a27fd151543855490ae95f6250ed127e0bd46c1599b77dff1132ec95f9ac311",
+      "bytes": 464706
+    },
+    {
+      "file": "assets/encore/stages/undermap/near.png",
+      "sha256": "2e062ba46a9284669b9a19e113dbd1906cafd3f33688c900a22d7217e5869ec1",
+      "bytes": 193031
+    }
+  ],
+  "qaEvidence": {
+    "tests": 411,
+    "failures": 0,
+    "bothBuildsPassed": true,
+    "costumeCanvasDrawChecks": 80,
+    "stageCanvasChecks": 6,
+    "nativeDistributionComparisons": 94,
+    "moduleComparisons": 32,
+    "historicalEncoreFiles": 5678
+  }
+}

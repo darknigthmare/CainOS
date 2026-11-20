@@ -1,15 +1,22 @@
 # Digital Circus — Encore · Le Grand Duel
 
-Version jouable : **0.7.0** — finalisation du 24 octobre 2026.
+Version jouable : **0.7.0** — sortie initiale le 24 octobre 2026 ; catalogue et
+dessins individuels réunis le **19 novembre 2026**, puis complétés le
+**20 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 12 arènes, 9 modes, 51 costumes et 179 archives**.
+**54 combattants, 540 techniques, 23 arènes partagées, 9 modes, 468 costumes et 179 archives**.
+Le catalogue conserve les 54 arrangements de scènes dédiées,
+les escales GLITCH, les 51 costumes d’archive, 39 variantes supplémentaires et les 378 costumes crossover des
+quatorze combattants d’origine. Les costumes crossover des 40 PNJ promus restent
+à produire ; aucun choix ne pointe vers un dessin absent.
 L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
-les chiffres 0.7 ci-dessous décrivent les quatorze combattants d’origine.
-La version 0.7.0 ajoute **42 finales de spectacle**, trois pour chacun des quatorze
+les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants d’origine.
+La sortie initiale 0.7.0 ajoutait **42 finales de spectacle**, trois pour chacun des quatorze
 combattants, une galerie avec les **51 costumes**, douze ambiances sonores procédurales
 et deux signaux distincts pour les pièges et les KO. Les finales sont des compositions
-originales Encore utilisant les dessins existants, sans nouveaux sprites de combat dédiés.
+originales Encore utilisant les dessins alors existants. La passe du 19 novembre
+ajoute séparément les dessins statiques de combat décrits ci-dessous.
 
 La version 0.6.0 avait corrigé vingt apparences, reconstruit trois décors et ajouté
 84 tableaux narratifs ainsi que 56 briefings. Ces ajouts restent présents.
@@ -17,18 +24,93 @@ La simulation demeure celle de 0.5.0 : les replays 0.5, 0.6 et 0.7 utilisent exa
 les mêmes règles, tandis que les versions 0.1 à 0.4 gardent leurs règles historiques.
 **La fidélité canonique générale 1:1 n’est pas certifiée.** Le suivi distingue les
 compositions jouables, les vérifications techniques et les comparaisons artistiques
-encore incomplètes. Les **40 PNJ promus** possèdent chacun une revue de sprite
-(planche, cellule, dimensions, traits visibles, cadrage, identité) consignée dans
+encore incomplètes. La revue historique du **17 novembre** portait sur les sprites
+en planche des **40 PNJ promus** : cellule, dimensions, traits visibles, cadrage
+et identité. Elle est consignée dans
 [la revue d’extension](combat-expansion-sprite-review-0.7.0.json) et sur la
-[planche de contrôle](images/expansion-sprites-review-0.7.0.png). Aucun visuel
-officiel consulté ne les montre : les quarante fiches restent « Épisode à revoir »,
-et la revue relève 16 cadrages contenant un débris de cellule voisine ainsi que
-neuf attributions d’épisode contradictoires avec la route générée.
+[planche de contrôle](images/expansion-sprites-review-0.7.0.png). Elle relevait
+16 cadrages contenant un débris de cellule voisine ainsi que neuf attributions
+d’épisode contradictoires avec la route générée. Les dessins individuels du
+19 novembre remplacent ces cadrages dans la présentation courante ; cette
+réparation technique ne clôt pas leur comparaison avec les plans officiels.
+
+## Dernière suite — quatre apparences et Sous la carte, 20 novembre
+
+Watermelon Gangle, Aqua Blaster Pomni, PTO Caine et Freak Jax disposent chacun
+de onze dessins individuels : **44 PNG natifs supplémentaires**, portant la
+collection Circus à **39 apparences / 429 PNG**. Les propriétaires et kits sont
+conservés, ainsi que les données et l’ordre des 35 apparences précédentes.
+Les différences avec les costumes déjà présents et les limites des références
+sont détaillées dans le [bilan du lot](COMBAT_NEXT_MISSING_2026-11-20.md).
+
+La nouvelle arène **Sous la carte** (`undermap`) ajoute trois plans natifs à la
+salle indigo quadrillée de l’épisode 2. Le catalogue compte désormais 23 arènes
+partagées et 69 plans ; les 54 arrangements dédiés restent distincts de ce compte.
+Ses dimensions, sa piste, sa musique et son ambiance sont des adaptations du jeu
+documentées dans le [dossier du décor](art-generation/stage-next-missing-20261120/README.md).
+
+La QA du lot réussit **411 tests et les deux builds**. Les fixtures indépendantes
+préservent 54 récits, 270 checkpoints de programmes et 14 replays historiques.
+Le paquet hors ligne contient **5 769 images**. Les revues Canvas, l’intégrité
+des copies et la réconciliation du classeur sont liées dans le bilan ; la
+validation navigateur du commit publié reste distinguée des preuves locales.
+
+Le [registre courant](art-generation/cast-next-missing-20261120/remaining-work.md)
+conserve les références encore masquées, les cycles d’animation complets, les
+crossovers des quarante PNJ et les essais matériels comme travaux ouverts.
+
+## Suite précédente — Anime Ribbit et Jax-Suit Ribbit, 20 novembre
+
+Les deux nouvelles apparences disposent chacune d’un portrait, d’une garde et de
+neuf actions distinctes : **22 PNG natifs ajoutés**, portant les variantes Circus
+supplémentaires à **35 apparences et 385 dessins**. Elles réutilisent le kit de
+Ribbit et les mêmes règles de profil, de campagne et de replay. Les références
+officielles archivées documentent les costumes de produits dérivés ; les poses
+de combat sont des adaptations originales.
+
+Le [rapport de cette suite](COMBAT_RIBBIT_CONTINUATION_2026-11-20.md) rassemble
+les galeries, les reçus natifs et les résultats : **405 tests Node, deux builds
+et 40 contrôles Canvas réussis**. La tentative Chromium locale est bloquée avant
+navigation. Le [registre de ce point d’étape](art-generation/cast-ribbit-20261120/remaining-work.md)
+conserve notamment Maid Ribbit en attente de vues du bas de sa tenue. Aucun
+nouveau décor n’a été ajouté dans ce lot ; les 22 arènes existantes sont conservées.
+
+Les rapports des [dix apparences précédentes](COMBAT_CAST_DISCOVERIES_2026-11-20.md),
+des [neuf familles reprises](COMBAT_CAST_RESUMPTION_2026-11-20.md) et des
+[six premiers ajouts du 20 novembre](COMBAT_CAST_CONTINUATION_2026-11-20.md)
+conservent leurs compteurs et vérifications historiques.
+
+## Huit variantes supplémentaires — suite du 19 novembre
+
+Pomni Présidente, Pomni plage, Ragatha Film noir, Ragatha Nageuse, Zooble Film noir,
+Zooble Plongée, Jax Plage et Kinger Château de sable disposent chacun d’un portrait, d’une garde et de neuf actions
+individuelles. Ces **88 PNG natifs** portent le vestiaire à 437 costumes et la
+couverture statique hors crossover à **1 322 dessins**. Leurs références de produits
+officiels sont consultables dans la garde-robe. Le kit du personnage reste identique.
+Les 179 fiches d’archive historiques et leurs identifiants sont conservés.
+Voir le [rapport de cette suite](COMBAT_CAST_CONTINUATION_2026-11-19.md) pour les
+preuves, les sources et les limites de la comparaison.
+
+## Dessins individuels — point de reprise du 19 novembre 2026
+
+La couverture vérifiée du catalogue est de **1 234 dessins, sans emplacement manquant** : neuf actions pour
+chacune des 105 apparences jouables (54 combattants et 51 variantes), 105 gardes
+et 184 portraits individuels. Les 179 fiches comprennent trois groupes dont les
+membres sont présentés séparément. L’[état de complétion](COMBAT_CHARACTER_COMPLETION_2026-11-19.md)
+détaille les fichiers présents, les contrôles exécutés, le suivi du classeur et
+les références de série encore à revoir. Les costumes crossover restent
+comptabilisés dans leur propre catalogue.
+
+Le chargeur utilise uniquement les PNG ou WebP publiés dans le manifeste. Le
+rendu conserve le rapport d’aspect, mesure la silhouette visible et utilise le
+dessin propre à chaque action quand il existe. Les neuf repères sont des poses
+statiques : entrée, attaque, coup lourd, impact, marche, saut, accroupi, victoire,
+défaite. Les animations dessinées image par image restent un travail distinct.
 
 Chaque artiste des 54 dispose désormais de la même couverture de présentation,
 vérifiée par [`tests/combat-roster-completeness.test.mjs`](../tests/combat-roster-completeness.test.mjs) :
-une **scène dédiée** (`home-<id>`, proposée à côté des douze arènes de série
-partagées), trois **finales de spectacle**, un **numéro d’amitié** qui remplace la
+une **scène dédiée** (`home-<id>`, proposée à côté des arènes de série
+et crossover partagées), trois **finales de spectacle**, un **numéro d’amitié** qui remplace la
 finale quand l’option est active, un **rival** placé dans l’un des quatre
 chapitres de sa route, et une **liste de tableaux d’intro et de fin**
 (trois tableaux de prologue et trois d’épilogue). Les scènes dédiées reprennent
@@ -37,7 +119,7 @@ adaptations de fan-game, sans plan de plateau canonique mesuré. Ces ajouts sont
 uniquement du contenu et de la présentation ; la simulation et les règles de
 replay 0.5.0 restent inchangées.
 
-## Ajouts de la passe 0.7.0
+## Historique des ajouts de la passe 0.7.0
 
 ### Menus, commandes et sons de contact
 
@@ -72,8 +154,8 @@ L’apparence originale de **Gloink Queen** réutilise désormais la planche RGB
 isolée de sa variante corrigée en 0.6. Le rectangle opaque de l’ancienne source
 disparaît des portraits, du combat et de la galerie. L’identité, l’orientation,
 les dimensions visuelles et les collisions de **420 × 150** restent inchangées.
-L’image historique reste dans le dépôt ; le pack du jeu n’en a plus besoin et
-contient maintenant **44 planches / 52 167 739 octets**.
+L’image historique reste dans le dépôt ; le pack de cette sortie d’octobre n’en
+avait plus besoin et contenait **44 planches / 52 167 739 octets**.
 [Voir la comparaison avant/après](COMBAT_GLOINK_QUEEN_0.7.0.md).
 
 Les nouvelles suites `combat-accessibility-browser.mjs` et
@@ -224,15 +306,17 @@ npm run build:combat
 ```
 
 `dist/` contient CainOS et son application de combat. `dist-combat/` contient le jeu
-autonome, son point d’entrée et les **44 planches utilisées par le jeu**, soit
-**52 167 739 octets d’illustrations**. Le manifeste ne copie que les images utilisées ;
+autonome, son point d’entrée et les illustrations publiées dans le manifeste
+courant. Le manifeste ne copie que les images utilisées ;
 les PNG historiques restent conservés dans le dépôt. Ce second dossier peut être hébergé
 indépendamment de CainOS. Les scripts
 [`build-combat.mjs`](../scripts/build-combat.mjs) et
 [`build-combat-offline.mjs`](../scripts/build-combat-offline.mjs) assemblent ces
 fichiers et régénèrent l’inventaire hors ligne. L’empreinte du code 0.7 est inscrite
 dans `OFFLINE_VERSION` du manifeste généré et dans les preuves de la livraison.
-Celle des illustrations conservées est **`ART_VERSION = 05a3fc712a39e1d8`**.
+Celle des illustrations figure dans `ART_VERSION` du même fichier. Le pack de
+44 planches et l’empreinte `05a3fc712a39e1d8` décrivent la sortie d’octobre,
+avant les extensions et les nouveaux dessins individuels.
 
 Pour un essai local sans dépendance supplémentaire :
 
@@ -275,16 +359,22 @@ Les 540 techniques sont décrites dans le codex et dans le classeur avec leurs
 frames de démarrage, d’activité et de récupération, leurs dégâts, leurs portées,
 leurs coûts et leur effet.
 
-Les 12 décors sont la grande piste, Candy Canyon, Mildenhall Manor, Spudsy’s, le
+Les 12 décors de série d’origine sont la grande piste, Candy Canyon, Mildenhall Manor, Spudsy’s, le
 cellier, le Vide, le lac numérique, la salle de calibration, le nid des Gloinks,
 le palais de sucre, les terrains du cirque et le couloir des portes. Les arènes
 partagent une surface de duel sans danger aléatoire. Les décors ont une géométrie
 dessinée dans Canvas et une palette propre.
+La fausse sortie et les neuf arènes GLITCH portent le catalogue partagé à 22.
+Les arrangements `home-<id>` réutilisent ces décors et ne sont pas comptés comme
+54 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
+rendu de secours et suivent les mêmes limites de combat.
 
-Les **51 variantes sélectionnables** remplacent l’apparence du même combattant sans
+Les **51 variantes d’archive et huit variantes supplémentaires** remplacent l’apparence du même combattant sans
 modifier son kit. Leur attribution repose sur une liste explicite par identité :
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.
+Les huit ajouts et leurs sources sont déclarés dans
+[`combat/costume-additions.mjs`](../combat/costume-additions.mjs).
 
 Les **179 entrées d’archive** restent consultables et filtrables : 54 combattants,
 51 variantes et 74 autres archives sans kit livré. Leur présence conserve la
@@ -474,8 +564,9 @@ sur appareils physiques restent suivis dans le classeur.
 ## Installation web et hors ligne
 
 Sous HTTPS ou localhost, ouvrir **Réglages → Télécharger le spectacle** puis
-attendre la confirmation **44/44 illustrations**. Le pack correspond exactement aux
-**52 167 739 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs).
+attendre que le compteur d’illustrations affiché par le jeu soit complet. La
+liste exacte des fichiers et leur taille cumulée proviennent de
+[`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs).
 Le numéro exact de la livraison figure dans `OFFLINE_VERSION` de ce manifeste.
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
@@ -621,7 +712,9 @@ anciens libellés en faits canoniques.
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
-**657 entrées** : 54 personnages, 540 techniques, 12 arènes et 51 costumes.
+**668 entrées** : 54 personnages, 540 techniques, 23 arènes partagées et 51 costumes d’archive.
+Les suites illustrées ajoutent 39 fiches de costume distinctes dans
+`combat/costume-additions.mjs`, portant ce total documenté à **707**.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
 une apparence à lui seul.
@@ -1047,9 +1140,11 @@ COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-roster-browser.mjs
 
 ### Travail restant
 
-Les dessins de combat dédiés, portraits finaux, revue canonique complète,
-enregistrements d’ambiance et voix dédiées, mixage sur appareils et équilibrage compétitif restent
-partiels ou prévus. Les 114 autres archives conservent leur statut sans kit livré.
+Le [bilan du 19 novembre](COMBAT_CHARACTER_COMPLETION_2026-11-19.md) suit les
+dessins statiques et portraits du catalogue courant. Les cycles d’animation,
+la revue canonique complète, les enregistrements d’ambiance et voix dédiées,
+le mixage sur appareils et l’équilibrage compétitif restent partiels ou prévus.
+Les 74 autres archives conservent leur statut sans kit livré.
 Le lac n’a pas de source primaire précise ; la calibration est originale ; le
 couloir attend une confirmation primaire malgré sa reconstruction.
 

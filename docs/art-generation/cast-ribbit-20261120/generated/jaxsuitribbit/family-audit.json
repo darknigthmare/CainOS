@@ -1,0 +1,205 @@
+{
+  "schema": "encore-native-family-audit/v1",
+  "appearanceId": "jaxsuitribbit",
+  "acceptedFiles": 11,
+  "allChecksPassed": true,
+  "uniqueHashes": 11,
+  "totalBytes": 11319371,
+  "sourceGenerations": 12,
+  "selectedNativeGenerations": 11,
+  "unselectedVariantCount": 1,
+  "notes": [
+    "Aucun pixel source retouché ; copies natives à l’octet près.",
+    "La première sélection a été réévaluée après composition alpha : RGB coloré invisible sous alpha nul, pas de halo au rendu.",
+    "Revue du jeu et intégration runtime déléguées au parent."
+  ],
+  "files": [
+    {
+      "slot": "selection",
+      "passed": true,
+      "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+      "bytes": 1485535,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        151,
+        50,
+        816,
+        1506
+      ]
+    },
+    {
+      "slot": "stance",
+      "passed": true,
+      "sha256": "90c39f39629cdf4fe037cf97ca66cce3e189c91c1e879e02661955cba65bc0ff",
+      "bytes": 720809,
+      "dimensions": [
+        1157,
+        1360
+      ],
+      "alpha12Bounds": [
+        190,
+        37,
+        940,
+        1320
+      ]
+    },
+    {
+      "slot": "intro",
+      "passed": true,
+      "sha256": "53d6d7de00d4dc280b114994c92416c32865b3cee57795b31cb33009dbe8c2d6",
+      "bytes": 1527810,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        116,
+        33,
+        923,
+        1510
+      ]
+    },
+    {
+      "slot": "attack",
+      "passed": true,
+      "sha256": "cbb158de826e07c094cfaa0b10d62e36cdbc72789a3a2efabd2651f599c2faef",
+      "bytes": 1313447,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        345,
+        22,
+        1188,
+        1010
+      ]
+    },
+    {
+      "slot": "heavy",
+      "passed": true,
+      "sha256": "c9163abcd105483c0a3dd6a5b6956375548d2fd98372260fe7fe9961e802dd72",
+      "bytes": 1457490,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        88,
+        20,
+        1361,
+        1011
+      ]
+    },
+    {
+      "slot": "hit",
+      "passed": true,
+      "sha256": "000e8a444c8410990062be8ab55592fd96014e2b8fca98020e003d7cde2bcf6b",
+      "bytes": 757260,
+      "dimensions": [
+        1139,
+        1381
+      ],
+      "alpha12Bounds": [
+        188,
+        60,
+        962,
+        1346
+      ]
+    },
+    {
+      "slot": "walk",
+      "passed": true,
+      "sha256": "39a95be67a703a669314975d707b8dcfb4de7f5a95df66fe2ad783d5809974e6",
+      "bytes": 755965,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        211,
+        34,
+        1005,
+        1281
+      ]
+    },
+    {
+      "slot": "jump",
+      "passed": true,
+      "sha256": "64bada3b7a3bd9cc242b7b9e7f2f5f56019a05a09e0f15ab00e49026fe29bd09",
+      "bytes": 762207,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        125,
+        25,
+        1049,
+        1292
+      ]
+    },
+    {
+      "slot": "crouch",
+      "passed": true,
+      "sha256": "e1c91767578431812cbcade9eba732e8b04806f40593cfcb7a07444b0fe816a6",
+      "bytes": 916157,
+      "dimensions": [
+        1223,
+        1286
+      ],
+      "alpha12Bounds": [
+        150,
+        56,
+        1051,
+        1243
+      ]
+    },
+    {
+      "slot": "victory",
+      "passed": true,
+      "sha256": "338bfe7c63943e51e0688a8e1724c9bf498ebbc97f4c568a52b13fce67abd103",
+      "bytes": 778772,
+      "dimensions": [
+        1148,
+        1370
+      ],
+      "alpha12Bounds": [
+        208,
+        14,
+        958,
+        1357
+      ]
+    },
+    {
+      "slot": "defeat",
+      "passed": true,
+      "sha256": "7b4249e4e8f2e9bf94617e4c9e44028c9f9baf28f20c87421b41dddd08f415df",
+      "bytes": 843919,
+      "dimensions": [
+        1225,
+        1284
+      ],
+      "alpha12Bounds": [
+        173,
+        63,
+        1021,
+        1235
+      ]
+    }
+  ],
+  "alphaCompositionReview": {
+    "reviewer": "ribbit_references",
+    "reviewedAt": "2026-11-20T12:37:39.510147+00:00",
+    "file": "review/family-alpha-overview.jpg",
+    "status": "accepted",
+    "observations": [
+      "Onze poses et leurs expressions examinées dans la planche composée avec les alphas natifs.",
+      "Couleurs, costume, identité, oreilles et nœud cohérents ; aucun halo visible.",
+      "L’échelle de la planche dépend du canevas de chaque image et ne constitue pas une preuve d’alignement dans le runtime."
+    ]
+  }
+}

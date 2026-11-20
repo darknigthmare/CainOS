@@ -70,7 +70,14 @@ async function prepare() {
       const url = missing[index++];
       const response = await fetch(url, { cache: 'reload' });
       if (!response.ok || response.type === 'opaque') throw new Error('Une illustration n’a pas pu être téléchargée. Réessaie en ligne.');
-      await cache.put(url, response);
+      try {
+        await cache.put(url, response);
+      } catch (error) {
+        if (error.name === 'QuotaExceededError') {
+          throw new Error('Espace insuffisant pour toutes les illustrations dans ce profil. En navigation privée, ouvre une fenêtre normale. Tu peux aussi libérer de l’espace puis reprendre le téléchargement.');
+        }
+        throw error;
+      }
       done++; progress();
     }
   }));

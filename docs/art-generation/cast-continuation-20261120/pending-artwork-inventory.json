@@ -1,0 +1,1124 @@
+{
+  "schema": "encore-pending-costume-inventory/v1",
+  "createdAt": "2026-11-20T04:57:36.677622+00:00",
+  "introducedOn": "2026-11-20",
+  "status": "partial_generation_blocked_by_service_quota",
+  "scope": "Native source drawings preserved in the PR outside the active assets and offline pack. Missing slots are not filled with duplicated or transformed drawings.",
+  "counts": {
+    "appearances": 9,
+    "files": 36,
+    "missingFiles": 63,
+    "selection": 9,
+    "stances": 9,
+    "actions": 18,
+    "uniqueHashes": 36,
+    "nativeCopiesVerified": 36,
+    "transparent": 36,
+    "completeMargins": 36,
+    "bytes": 52193153
+  },
+  "ids": [
+    "smilingtragedygangle",
+    "abstractingpomni",
+    "abstractingjax",
+    "abstractingragatha",
+    "abstractingkinger",
+    "abstractinggangle",
+    "abstractingzooble",
+    "abstractingqueenie",
+    "zoobleep5"
+  ],
+  "block": {
+    "httpStatus": 429,
+    "type": "usage_limit_reached",
+    "limitWindowMinutes": 1440,
+    "resetsAt": "2026-11-20T08:08:33Z",
+    "resetsAtParis": "2026-11-20T09:08:33+01:00",
+    "note": "Reset time announced by the service; generation was stopped and no bypass attempted."
+  },
+  "assets": [
+    {
+      "appearanceId": "smilingtragedygangle",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+      "targetFile": "assets/encore/selection/smilingtragedygangle.png",
+      "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "bytes": 1539075,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        22,
+        33,
+        915,
+        1511
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/smilingtragedygangle-selection.json",
+      "sourceGenerationId": "exec-2e7364a5-5f5b-44af-839a-03c5d748b42d",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=mOvhHim78YA",
+        "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "smilingtragedygangle",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+      "targetFile": "assets/encore/stance/smilingtragedygangle.png",
+      "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "bytes": 767470,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        90,
+        57,
+        1071,
+        1241
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/smilingtragedygangle-stance.json",
+      "sourceGenerationId": "exec-0da51ac9-3372-4ba4-a139-0427d881096e",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=mOvhHim78YA",
+        "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "targetFile": "assets/encore/selection/abstractingpomni.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        21,
+        5,
+        942,
+        1619
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingpomni-selection.json",
+      "sourceGenerationId": "exec-7f9a4918-9022-40f6-bcd2-976c379577bd",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+      "targetFile": "assets/encore/stance/abstractingpomni.png",
+      "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "bytes": 1039618,
+      "dimensions": [
+        1176,
+        1337
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        154,
+        11,
+        1033,
+        1319
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingpomni-stance.json",
+      "sourceGenerationId": "exec-c10092e6-27c8-42da-986a-0f82f35181db",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+      "targetFile": "assets/encore/selection/abstractingjax.png",
+      "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "bytes": 1405678,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        194,
+        15,
+        791,
+        1510
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingjax-selection.json",
+      "sourceGenerationId": "exec-77d73efc-58e1-43eb-a66a-1ae53bc7104f",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/stance.png",
+      "targetFile": "assets/encore/stance/abstractingjax.png",
+      "sha256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "bytes": 723421,
+      "dimensions": [
+        1145,
+        1374
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        119,
+        9,
+        1001,
+        1359
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingjax-stance.json",
+      "sourceGenerationId": "exec-7589ed00-471f-43e0-851c-778ca7458eff",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/intro.png",
+      "targetFile": "assets/encore/poses/abstractingjax/intro.png",
+      "sha256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "bytes": 1534805,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        96,
+        11,
+        883,
+        1517
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingjax-intro.json",
+      "sourceGenerationId": "exec-808963ea-0e43-4938-824b-257241c54715",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+      "targetFile": "assets/encore/selection/abstractingragatha.png",
+      "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "bytes": 1764655,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        102,
+        9,
+        925,
+        1525
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingragatha-selection.json",
+      "sourceGenerationId": "exec-b4892e7d-a309-4a0d-9c12-b9bc476da14e",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+      "targetFile": "assets/encore/stance/abstractingragatha.png",
+      "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "bytes": 1840025,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        76,
+        20,
+        930,
+        1504
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingragatha-stance.json",
+      "sourceGenerationId": "exec-16b102e2-2c4c-4725-8a6b-afcc2261b033",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/intro.png",
+      "targetFile": "assets/encore/poses/abstractingragatha/intro.png",
+      "sha256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "bytes": 1846317,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        82,
+        23,
+        915,
+        1512
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingragatha-intro.json",
+      "sourceGenerationId": "exec-c276553f-66f1-485f-a125-fcc7b46c2847",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+      "targetFile": "assets/encore/selection/abstractingkinger.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        37,
+        14,
+        873,
+        1760
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingkinger-selection.json",
+      "sourceGenerationId": "exec-71d8d96f-91f0-4724-b205-6241be060a75",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+      "targetFile": "assets/encore/stance/abstractingkinger.png",
+      "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "bytes": 1202856,
+      "dimensions": [
+        1141,
+        1379
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        32,
+        3,
+        1122,
+        1375
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingkinger-stance.json",
+      "sourceGenerationId": "exec-d3df710b-6ca4-41ec-98f9-cf6e51b60593",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+      "targetFile": "assets/encore/selection/abstractinggangle.png",
+      "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "bytes": 1626561,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        257,
+        10,
+        1296,
+        1018
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-selection.json",
+      "sourceGenerationId": "exec-b88b962d-02ee-4766-b075-feaa53496eaa",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/stance.png",
+      "targetFile": "assets/encore/stance/abstractinggangle.png",
+      "sha256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "bytes": 1706313,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        56,
+        15,
+        1481,
+        1013
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-stance.json",
+      "sourceGenerationId": "exec-1a5b70f5-7e80-46ff-aa32-a0cbe553aaf9",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/attack.png",
+      "targetFile": "assets/encore/poses/abstractinggangle/attack.png",
+      "sha256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "bytes": 1619855,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        71,
+        11,
+        1470,
+        993
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-attack.json",
+      "sourceGenerationId": "exec-0e77d5d5-5f24-4b47-8210-cb96b2613829",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "hit",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+      "targetFile": "assets/encore/poses/abstractinggangle/hit.png",
+      "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "bytes": 1610452,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        80,
+        21,
+        1422,
+        1006
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-hit.json",
+      "sourceGenerationId": "exec-b296b9bd-834f-4537-8840-ec61345d99bf",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/walk.png",
+      "targetFile": "assets/encore/poses/abstractinggangle/walk.png",
+      "sha256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "bytes": 1608030,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        214,
+        12,
+        1369,
+        987
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractinggangle-walk.json",
+      "sourceGenerationId": "exec-d7dc95d2-5e4f-49e6-b2fd-d626eac49cbb",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "targetFile": "assets/encore/selection/abstractingzooble.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        130,
+        17,
+        1000,
+        1304
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingzooble-selection.json",
+      "sourceGenerationId": "exec-e0954045-fd1c-467e-960a-2936ef40c324",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+      "targetFile": "assets/encore/stance/abstractingzooble.png",
+      "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "bytes": 959487,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        143,
+        25,
+        1026,
+        1275
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingzooble-stance.json",
+      "sourceGenerationId": "exec-34aa526e-efd5-45c6-b34c-69dac0792c42",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+      "targetFile": "assets/encore/selection/abstractingqueenie.png",
+      "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "bytes": 1667501,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        115,
+        7,
+        883,
+        1531
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-selection.json",
+      "sourceGenerationId": "exec-25c7a414-dffa-4b89-b0e6-317c06d3735f",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+      "targetFile": "assets/encore/stance/abstractingqueenie.png",
+      "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "bytes": 1634820,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        156,
+        8,
+        888,
+        1530
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-stance.json",
+      "sourceGenerationId": "exec-b0ddc4b9-0658-422d-a6d0-85180b249513",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/intro.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/intro.png",
+      "sha256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "bytes": 1683582,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        79,
+        43,
+        945,
+        1521
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-intro.json",
+      "sourceGenerationId": "exec-0748a751-b6ba-477e-8239-7b04b9853243",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/attack.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/attack.png",
+      "sha256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "bytes": 1667403,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        68,
+        35,
+        972,
+        1518
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-attack.json",
+      "sourceGenerationId": "exec-80edbb4a-679a-4ac0-9e20-e8f19b092a80",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/heavy.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/heavy.png",
+      "sha256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "bytes": 1618747,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        47,
+        78,
+        989,
+        1505
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-heavy.json",
+      "sourceGenerationId": "exec-0317a439-3799-4973-8762-166be06a1b8b",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "hit",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/hit.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/hit.png",
+      "sha256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "bytes": 1684154,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        53,
+        45,
+        958,
+        1523
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-hit.json",
+      "sourceGenerationId": "exec-ad32a5d7-8ce9-4aa9-9cde-01a352c6cb1f",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/walk.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/walk.png",
+      "sha256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "bytes": 1653567,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        34,
+        43,
+        1004,
+        1497
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-walk.json",
+      "sourceGenerationId": "exec-b6752fa9-6653-40f5-93ee-265219437282",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "jump",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/jump.png",
+      "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "bytes": 1637961,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        78,
+        40,
+        925,
+        1354
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-jump.json",
+      "sourceGenerationId": "exec-38a116e1-f477-496a-b84e-1cf27fb68332",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/crouch.png",
+      "targetFile": "assets/encore/poses/abstractingqueenie/crouch.png",
+      "sha256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "bytes": 1516608,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        167,
+        22,
+        1334,
+        1022
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/abstractingqueenie-crouch.json",
+      "sourceGenerationId": "exec-a697bc0e-bdfe-463b-bfba-654b6741a3c3",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+      "targetFile": "assets/encore/selection/zoobleep5.png",
+      "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "bytes": 1506910,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        100,
+        15,
+        890,
+        1526
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-selection.json",
+      "sourceGenerationId": "exec-d58ef978-354a-44da-a780-b12abed014d5",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/stance.png",
+      "targetFile": "assets/encore/stance/zoobleep5.png",
+      "sha256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "bytes": 745695,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        44,
+        13,
+        1155,
+        1289
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-stance.json",
+      "sourceGenerationId": "exec-c4a17db9-1d1b-496f-81ed-0c265adcb6d7",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/intro.png",
+      "targetFile": "assets/encore/poses/zoobleep5/intro.png",
+      "sha256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "bytes": 1415628,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        141,
+        10,
+        875,
+        1525
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-intro.json",
+      "sourceGenerationId": "exec-adefabe4-32de-450c-9baf-b5bbab69c9ca",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+      "targetFile": "assets/encore/poses/zoobleep5/attack.png",
+      "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "bytes": 1453651,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        113,
+        11,
+        975,
+        1521
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-attack.json",
+      "sourceGenerationId": "exec-8573a65b-cced-4c93-ad9c-323f0e42e9a0",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+      "targetFile": "assets/encore/poses/zoobleep5/heavy.png",
+      "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "bytes": 1450181,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        44,
+        13,
+        988,
+        1519
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-heavy.json",
+      "sourceGenerationId": "exec-e028564a-fd8a-44ac-b2e4-56f70fc1705a",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+      "targetFile": "assets/encore/poses/zoobleep5/walk.png",
+      "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "bytes": 1529675,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        88,
+        9,
+        962,
+        1466
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-walk.json",
+      "sourceGenerationId": "exec-1380e757-fc8c-4341-be79-28252198a531",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "jump",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/jump.png",
+      "targetFile": "assets/encore/poses/zoobleep5/jump.png",
+      "sha256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "bytes": 1436322,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        27,
+        85,
+        995,
+        1179
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-jump.json",
+      "sourceGenerationId": "exec-f920b9d9-8662-4080-89c2-0decc614bacc",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/crouch.png",
+      "targetFile": "assets/encore/poses/zoobleep5/crouch.png",
+      "sha256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "bytes": 1449005,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        126,
+        255,
+        990,
+        1377
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/zoobleep5-crouch.json",
+      "sourceGenerationId": "exec-96de4c96-89cf-46c4-bc74-4064a238ab35",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "includedInRuntime": false
+    }
+  ],
+  "integrationNotes": {
+    "abstractinggangle": "Front/masks point left in the present source images; confirm nativeFacing for the final complete set before activation."
+  }
+}

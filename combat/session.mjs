@@ -1,6 +1,6 @@
 /** Shared, versioned local profile and replay format for the OS and standalone. */
 import { cleanBindings, DEFAULT_BINDINGS } from './bindings.mjs';
-import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
+import { FIGHTERS, STAGES, COSTUMES } from './data.mjs';
 import { validateProgram } from './progression.mjs';
 export const SAVE_KEY = 'cainos.circus-combat.profile.v1';
 export const SAVE_BACKUP_KEY = `${SAVE_KEY}.backup`;
@@ -56,7 +56,7 @@ export function validateProfile(value, { strictProgram = true } = {}) {
   profile.stories = [...new Set((Array.isArray(value.stories) ? value.stories : []).filter(id => FIGHTERS.some(f => f.id === id)))];
   if (value.program != null) {
     try {
-      profile.program = validateProgram(value.program, FIGHTERS, STAGES, VARIANTS);
+      profile.program = validateProgram(value.program, FIGHTERS, STAGES, COSTUMES);
       if (profile.program.status !== 'active') profile.program = null;
     } catch (error) {
       if (strictProgram !== false) throw error;
@@ -139,7 +139,7 @@ export function validateReplay(value, fighterIds, stageIds) {
   if (c.initialHealth !== undefined && (!Array.isArray(c.initialHealth) || c.initialHealth.length !== 2 || !c.initialHealth.every(v => Number.isInteger(v) && v > 0 && v <= 10000))) throw new Error('La santé initiale du replay est invalide.');
   const initialHealth = c.initialHealth ? [...c.initialHealth] : [10000, 10000];
   const variants = c.variants === undefined ? ['', ''] : c.variants;
-  if (!Array.isArray(variants) || variants.length !== 2 || !variants.every((id, i) => id === '' || VARIANTS.some(v => v.id === id && v.fighterId === c.fighters[i]))) throw new Error('Une apparence du replay ne correspond pas à son combattant.');
+  if (!Array.isArray(variants) || variants.length !== 2 || !variants.every((id, i) => id === '' || COSTUMES.some(v => v.id === id && v.fighterId === c.fighters[i]))) throw new Error('Une apparence du replay ne correspond pas à son combattant.');
   return { format: value.format, version: value.version, config: { fighters: [...c.fighters], variants: [...variants], stage: c.stage, seed: c.seed, roundsToWin: c.roundsToWin, roundTime: c.roundTime, difficulty: c.difficulty, cpu: [...c.cpu], initialHealth }, runs: value.runs.map(r => [...r]), frames: total };
 }
 export function* replayInputs(replay) {

@@ -1,0 +1,1517 @@
+{
+  "schema": "encore-tracker-reconciliation-plan/v1",
+  "createdAt": "2026-11-20T12:45:01.637Z",
+  "baselineHashes": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+    "docs/combat-tracker-data.json": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+    "docs/combat-workbook-verification.json": "8bf3a4ba676c4e7db7050757a0517b3d461186df6c01d7e65c7f743dddc55b4c",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+  },
+  "recoveredNativeComparison": {
+    "schema": "encore-native-workbook-comparison/v1",
+    "status": "passed",
+    "cellsChecked": 78876,
+    "expectedSHA256": null,
+    "actualSHA256": "e6a576b4f8d92391f0a665b3bb720a2e1d9f4194494a8e8bacf28e456979ad06",
+    "differences": []
+  },
+  "recoveredReimport": {
+    "status": "passed-formula-and-row-count-checks",
+    "method": "SpreadsheetFile.importXlsx",
+    "sha256": "e6a576b4f8d92391f0a665b3bb720a2e1d9f4194494a8e8bacf28e456979ad06",
+    "checked": {
+      "summaryFormulasAndValues": 42,
+      "tableRowCounts": [
+        "Production",
+        "QA",
+        "Références"
+      ]
+    },
+    "exhaustivePreservationChecked": false,
+    "requiredSeparately": [
+      "native XML comparison against the constrained target",
+      "visual review"
+    ]
+  },
+  "historicalCellsConstrained": 78876,
+  "approvedChangedCells": [
+    {
+      "sheet": "Production",
+      "cell": "B3112",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3112",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3112",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3112",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/",
+        null
+      ],
+      "value": "assets/encore/selection/smilingtragedygangle.png\nassets/encore/stance/smilingtragedygangle.png\nassets/encore/poses/smilingtragedygangle/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3112",
+      "before": [
+        "string",
+        "2/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance. Manquants : intro, attack, heavy, hit, walk, jump, crouch, victory, defeat. Source : episode6-smilingtragedygangle.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3112",
+      "before": [
+        "string",
+        "Expression observée vers 16 min 10 s sur le storyboard de la vidéo officielle : sourire, yeux fermés et larmes du masque de tragédie conservés. Le corps en rubans est celui de Gangle ; les poses de combat sont originales. Référence consultée le 20 novembre 2026. Les plans indiqués attestent les éléments décrits ; les poses originales ne constituent pas une reproduction image par image de la série. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Expression observée vers 16 min 10 s sur le storyboard de la vidéo officielle : sourire, yeux fermés et larmes du masque de tragédie conservés. Le corps en rubans est celui de Gangle ; les poses de combat sont originales. Référence consultée le 20 novembre 2026. Les plans indiqués attestent les éléments décrits ; les poses originales ne constituent pas une reproduction image par image de la série. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3113",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3113",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3113",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3113",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractingpomni.png\nassets/encore/stance/abstractingpomni.png\nassets/encore/poses/abstractingpomni/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3113",
+      "before": [
+        "string",
+        "2/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance. Manquants : intro, attack, heavy, hit, walk, jump, crouch, victory, defeat. Source : store-abstractingpomni.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3113",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3114",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3114",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3114",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3114",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractingjax.png\nassets/encore/stance/abstractingjax.png\nassets/encore/poses/abstractingjax/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3114",
+      "before": [
+        "string",
+        "3/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance, intro. Manquants : attack, heavy, hit, walk, jump, crouch, victory, defeat. Source : store-abstractingjax.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3114",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3115",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3115",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3115",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3115",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractingragatha.png\nassets/encore/stance/abstractingragatha.png\nassets/encore/poses/abstractingragatha/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3115",
+      "before": [
+        "string",
+        "3/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance, intro. Manquants : attack, heavy, hit, walk, jump, crouch, victory, defeat. Source : store-abstractingragatha.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3115",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3116",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3116",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3116",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3116",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractingkinger.png\nassets/encore/stance/abstractingkinger.png\nassets/encore/poses/abstractingkinger/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3116",
+      "before": [
+        "string",
+        "2/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance. Manquants : intro, attack, heavy, hit, walk, jump, crouch, victory, defeat. Source : store-abstractingkinger.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3116",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3117",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3117",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3117",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3117",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractinggangle.png\nassets/encore/stance/abstractinggangle.png\nassets/encore/poses/abstractinggangle/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3117",
+      "before": [
+        "string",
+        "5/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance, attack, hit, walk. Manquants : intro, heavy, jump, crouch, victory, defeat. Source : store-abstractinggangle.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3117",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3118",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3118",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3118",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3118",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractingzooble.png\nassets/encore/stance/abstractingzooble.png\nassets/encore/poses/abstractingzooble/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3118",
+      "before": [
+        "string",
+        "2/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance. Manquants : intro, attack, heavy, hit, walk, jump, crouch, victory, defeat. Source : store-abstractingzooble.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3118",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3119",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3119",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3119",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3119",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/",
+        null
+      ],
+      "value": "assets/encore/selection/abstractingqueenie.png\nassets/encore/stance/abstractingqueenie.png\nassets/encore/poses/abstractingqueenie/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3119",
+      "before": [
+        "string",
+        "9/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance, intro, attack, heavy, hit, walk, jump, crouch. Manquants : victory, defeat. Source : store-abstractingqueenie.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3119",
+      "before": [
+        "string",
+        "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. Référence consultée le 20 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "B3120",
+      "before": [
+        "string",
+        "Apparence en préparation",
+        null
+      ],
+      "value": "Tenue Circus",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "D3120",
+      "before": [
+        "string",
+        "Portrait, garde et neuf poses — en préparation",
+        null
+      ],
+      "value": "Portrait, garde et neuf poses",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "E3120",
+      "before": [
+        "string",
+        "Partiel",
+        null
+      ],
+      "value": "Implémenté",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "G3120",
+      "before": [
+        "string",
+        "docs/art-generation/cast-continuation-20261120/generation-resume.json\ndocs/art-generation/cast-continuation-20261120/pending-artwork-inventory.json\ndocs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/",
+        null
+      ],
+      "value": "assets/encore/selection/zoobleep5.png\nassets/encore/stance/zoobleep5.png\nassets/encore/poses/zoobleep5/",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3120",
+      "before": [
+        "string",
+        "8/11 PNG natifs archivés, hors catalogue et pack du jeu. Présents : selection, stance, intro, attack, heavy, walk, jump, crouch. Manquants : hit, victory, defeat. Source : episode5-zooble-assembly.",
+        null
+      ],
+      "value": "11 PNG natifs distincts inclus dans le manifeste. Sélection, garde, entrée, attaque, coup lourd, impact, marche, saut, accroupissement, victoire, défaite. Preuve : docs/art-generation/cast-resumption-20261120/generation-completion.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "I3120",
+      "before": [
+        "string",
+        "Assemblage sans lunettes vu corps entier sur la miniature officielle du trailer de l’épisode 5 et recoupé sur les plans de début de l’épisode. Ni l’assemblage de base existant, ni l’uniforme Spudsy, ni la version film noir ne couvrent exactement ces pièces et couleurs. Version séparée de bodyguardzooble ; les poses sont des adaptations 2D originales. Référence consultée le 20 novembre 2026. Les plans indiqués attestent les éléments décrits ; les poses originales ne constituent pas une reproduction image par image de la série. Génération interrompue par la limite imagegen ; prompts exacts et reçus conservés dans le plan de reprise. Aucun ensemble incomplet n’est déclaré jouable ou implémenté.",
+        null
+      ],
+      "value": "Assemblage sans lunettes vu corps entier sur la miniature officielle du trailer de l’épisode 5 et recoupé sur les plans de début de l’épisode. Ni l’assemblage de base existant, ni l’uniforme Spudsy, ni la version film noir ne couvrent exactement ces pièces et couleurs. Version séparée de bodyguardzooble ; les poses sont des adaptations 2D originales. Référence consultée le 20 novembre 2026. Les plans indiqués attestent les éléments décrits ; les poses originales ne constituent pas une reproduction image par image de la série. Dessins statiques adaptés au jeu. Les cycles animés complets et la comparaison canonique plan par plan restent ouverts.",
+      "formula": null
+    },
+    {
+      "sheet": "QA",
+      "cell": "D2270",
+      "before": [
+        "string",
+        "Réussi",
+        null
+      ],
+      "value": "Non exécuté",
+      "formula": null
+    },
+    {
+      "sheet": "QA",
+      "cell": "G2270",
+      "before": [
+        "string",
+        "15 lignes Production (6 Implémenté, 9 Partiel), cinq constats QA et 15 références ajoutés. Recréation par le moteur tableur principal depuis une lecture XML ; ordre, types, notes, formules, styles et tables comparés au fichier source. Recalcul contrôlé.",
+        null
+      ],
+      "value": "Au checkpoint initial, les quinze lignes et le modèle étaient préparés, mais l’export XLSX était bloqué par la mémoire. Aucun nouveau classeur n’avait alors été publié.",
+      "formula": null
+    },
+    {
+      "sheet": "QA",
+      "cell": "H2270",
+      "before": [
+        "string",
+        "Preuve : docs/art-generation/workbook-recovery-20261120/workbook-review.json. Le statut de réimport du XLSX et la revue visuelle sont indiqués séparément dans cette preuve. Contrôle du classeur, distinct des tests du jeu et de la fidélité canonique.",
+        null
+      ],
+      "value": "État historique : docs/art-generation/workbook-recovery-20261120/workbook-review.json. La reprise achevée est consignée séparément dans TRACKER28-reconciliation et docs/art-generation/workbook-reconciliation-20261120/workbook-review.json.",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "E64",
+      "before": [
+        "string",
+        "5 485 images dans le manifeste local, 2 717 164 059 octets. Inventaire final de cette continuation ; la publication distante est un contrôle séparé.",
+        null
+      ],
+      "value": "5 722 images et 3 015 349 314 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B11",
+      "before": [
+        "number",
+        443,
+        "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3120,\"Costume crossover\")+COUNTIFS('Production'!B6:B3120,\"Tenue Circus\")"
+      ],
+      "value": 443,
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3139,\"Costume crossover\")+COUNTIFS('Production'!B6:B3139,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B12",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!B6:B3120,\"Arrangement d’arène\")"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B16",
+      "before": [
+        "number",
+        1927,
+        "=COUNTIFS('Production'!E$6:E$3120,B$14)"
+      ],
+      "value": 1927,
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C16",
+      "before": [
+        "number",
+        966,
+        "=COUNTIFS('Production'!E$6:E$3120,C$14)"
+      ],
+      "value": 966,
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D16",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!E$6:E$3120,D$14)"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E16",
+      "before": [
+        "number",
+        168,
+        "=COUNTIFS('Production'!E$6:E$3120,E$14)"
+      ],
+      "value": 168,
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F16",
+      "before": [
+        "number",
+        3115,
+        "=COUNTA('Production'!A6:A3120)"
+      ],
+      "value": 3115,
+      "formula": "=COUNTA('Production'!A6:A3139)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H19",
+      "before": [
+        "string",
+        "54 routes et 324 tableaux",
+        "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3120,\"Tableau d’histoire\")&\" tableaux\""
+      ],
+      "value": "54 routes et 324 tableaux",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3139,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H20",
+      "before": [
+        "string",
+        "216 briefings de rencontre",
+        "=COUNTIFS('Production'!B6:B3120,\"Briefing illustré\")&\" briefings de rencontre\""
+      ],
+      "value": "216 briefings de rencontre",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H21",
+      "before": [
+        "string",
+        "22 thèmes musicaux d’arènes",
+        "=COUNTIFS('Production'!B6:B3120,\"Arène\",'Production'!D6:D3120,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+      ],
+      "value": "22 thèmes musicaux d’arènes",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Arène\",'Production'!D6:D3139,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B22",
+      "before": [
+        "number",
+        2254,
+        "=COUNTIFS('QA'!D6:D2270,B21)"
+      ],
+      "value": 2254,
+      "formula": "=COUNTIFS('QA'!D6:D2286,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C22",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('QA'!D6:D2270,C21)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('QA'!D6:D2286,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D22",
+      "before": [
+        "number",
+        8,
+        "=COUNTIFS('QA'!D6:D2270,D21)"
+      ],
+      "value": 8,
+      "formula": "=COUNTIFS('QA'!D6:D2286,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E22",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('QA'!D6:D2270,E21)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('QA'!D6:D2286,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F22",
+      "before": [
+        "number",
+        2265,
+        "=COUNTA('QA'!A6:A2270)"
+      ],
+      "value": 2265,
+      "formula": "=COUNTA('QA'!A6:A2286)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H22",
+      "before": [
+        "string",
+        "26 motifs sonores synthétiques",
+        "=COUNTIFS('Production'!B6:B3120,\"Motif sonore\")&\" motifs sonores synthétiques\""
+      ],
+      "value": "26 motifs sonores synthétiques",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B23",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('QA'!D6:D2270,\"Partiel\")"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('QA'!D6:D2286,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H23",
+      "before": [
+        "string",
+        "270 séquences de présentation",
+        "=COUNTIFS('Production'!B6:B3120,\"Présentation individuelle\")&\" séquences de présentation\""
+      ],
+      "value": "270 séquences de présentation",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H24",
+      "before": [
+        "string",
+        "22 ambiances visuelles animées",
+        "=COUNTIFS('Production'!B6:B3120,\"Animation d’arène\")&\" ambiances visuelles animées\""
+      ],
+      "value": "22 ambiances visuelles animées",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H25",
+      "before": [
+        "string",
+        "20 costumes historiques redessinés",
+        "=COUNTIFS('Production'!B6:B3120,\"Costume\")&\" costumes historiques redessinés\""
+      ],
+      "value": "20 costumes historiques redessinés",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H27",
+      "before": [
+        "string",
+        "681 fiches, hors tenues crossover",
+        "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3120,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+      ],
+      "value": "681 fiches, hors tenues crossover",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3139,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H31",
+      "before": [
+        "string",
+        "162 présentations de KO",
+        "=COUNTIFS('Production'!B6:B3120,\"Finition visuelle\")&\" présentations de KO\""
+      ],
+      "value": "162 présentations de KO",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H32",
+      "before": [
+        "string",
+        "22 ambiances sonores originales",
+        "=COUNTIFS('Production'!B6:B3120,\"Arène\",'Production'!D6:D3120,\"Ambiance sonore\",'Production'!E6:E3120,\"Implémenté\")&\" ambiances sonores originales\""
+      ],
+      "value": "22 ambiances sonores originales",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Arène\",'Production'!D6:D3139,\"Ambiance sonore\",'Production'!E6:E3139,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H2",
+      "before": [
+        "string",
+        "Version 0.7.0 · apparences au 20 novembre 2026",
+        null
+      ],
+      "value": "Version 0.7.0 · suivi réconcilié au 20 novembre 2026",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H8",
+      "before": [
+        "string",
+        "6 nouvelles tenues actives ; 9 préparations suivies",
+        null
+      ],
+      "value": "35 tenues Circus · 385 dessins individuels",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H13",
+      "before": [
+        "string",
+        "401 tests Node de cette passe · Canvas natif revu",
+        null
+      ],
+      "value": "405 tests Node dans la preuve du dernier lot",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H14",
+      "before": [
+        "string",
+        "Chromium bloqué au lancement ; aucune assertion",
+        null
+      ],
+      "value": "État navigateur détaillé dans les preuves datées",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H15",
+      "before": [
+        "string",
+        "Historique conservé ; campagne CAST27 ajoutée dans QA",
+        null
+      ],
+      "value": "Classeur recalculé et réimporté ; historique conservé",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H16",
+      "before": [
+        "string",
+        "9 apparences en préparation · 36 PNG archivés",
+        null
+      ],
+      "value": "9 préparations achevées · 6 accessoires intégrés",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H30",
+      "before": [
+        "string",
+        "105 apparences d’archive + 14 tenues (154 PNG)",
+        null
+      ],
+      "value": "105 ensembles de base + 35 tenues (385 PNG)",
+      "formula": null
+    }
+  ],
+  "completedRows": [
+    {
+      "id": "CIRCUS27-smilingtragedygangle",
+      "row": 3112
+    },
+    {
+      "id": "CIRCUS27-abstractingpomni",
+      "row": 3113
+    },
+    {
+      "id": "CIRCUS27-abstractingjax",
+      "row": 3114
+    },
+    {
+      "id": "CIRCUS27-abstractingragatha",
+      "row": 3115
+    },
+    {
+      "id": "CIRCUS27-abstractingkinger",
+      "row": 3116
+    },
+    {
+      "id": "CIRCUS27-abstractinggangle",
+      "row": 3117
+    },
+    {
+      "id": "CIRCUS27-abstractingzooble",
+      "row": 3118
+    },
+    {
+      "id": "CIRCUS27-abstractingqueenie",
+      "row": 3119
+    },
+    {
+      "id": "CIRCUS27-zoobleep5",
+      "row": 3120
+    }
+  ],
+  "appendedProductionIds": [
+    "DISCOVERY28-jaxsuitpomni",
+    "DISCOVERY28-noirribbit",
+    "DISCOVERY28-kaufmosuitribbit",
+    "DISCOVERY28-intermissioncaine",
+    "DISCOVERY28-showtimepomni",
+    "DISCOVERY28-bowlingpinragatha",
+    "DISCOVERY28-ringmastercaine",
+    "DISCOVERY28-strongmanorbsman",
+    "DISCOVERY28-stagehandbubble",
+    "DISCOVERY28-bugtamerkinger",
+    "RIBBIT28-animeribbit",
+    "RIBBIT28-jaxsuitribbit",
+    "PROP28-haunted-lamppost",
+    "PROP28-circus-ticket-dispenser",
+    "PROP28-blue-hologram-pedestal",
+    "PROP28-pastel-turnstile",
+    "PROP28-vintage-brass-microphone",
+    "PROP28-bamboo-bell",
+    "RIBBIT28-maidribbit-reference"
+  ],
+  "appendedQaIds": [
+    "PROPS28-art",
+    "PROPS28-node",
+    "PROPS28-browser",
+    "RESUME28-art",
+    "RESUME28-canvas",
+    "RESUME28-node",
+    "RESUME28-browser",
+    "DISCOVERY28-art",
+    "DISCOVERY28-canvas",
+    "DISCOVERY28-node",
+    "DISCOVERY28-browser",
+    "RIBBIT28-art",
+    "RIBBIT28-canvas",
+    "RIBBIT28-node",
+    "RIBBIT28-browser",
+    "TRACKER28-reconciliation"
+  ],
+  "appendedSourceIds": [
+    "store-jaxsuit-pomni",
+    "store-pendantz-noirribbit",
+    "store-pendantz-kaufmosuitribbit",
+    "store-intermissioncaine",
+    "store-sideshow-showtimepomni",
+    "store-bowlingpinragatha",
+    "store-ringmastercaine",
+    "store-sideshow-strongmanorbsman",
+    "store-sideshow-stagehandbubble",
+    "store-sideshow-bugtamerkinger",
+    "store-pendantz-animeribbit",
+    "store-pendantz-jaxsuitribbit",
+    "props-recovered-20261120",
+    "store-pendantz-maidribbit-review"
+  ],
+  "evidenceHashes": {
+    "docs/art-generation/props-integration-20261120/verification.json": "61f94e62647139adbcf9947a381f8bb8690b6aaf01601ad65ea4ad2f5f5df62e",
+    "docs/art-generation/props-integration-20261120/native-inventory.json": "de502c91fd8a9297f85890086dc81218f4a9ff99d0dcaeb762cc5bbbab8b3eb2",
+    "docs/art-generation/cast-resumption-20261120/verification.json": "e267d1db4d46ade16e3d60509653785455241bb1a036e9c9ad23d3c03578edba",
+    "docs/art-generation/cast-resumption-20261120/generation-completion.json": "e37a904483f63c7f36a2363d4cacd1d185f5f9ab42ec88c59c0974609ceea1d1",
+    "docs/art-generation/cast-next-20261120/verification.json": "d0d3fd23f79217530a3d045feee4edb62efbfbeea26c6c0c34bdd1c98e0b3679",
+    "docs/art-generation/cast-next-20261120/generation-completion.json": "a5f480175453ec19491ea4330e43a27dbba747de30985df88fc5fbb3da69adc4",
+    "docs/art-generation/cast-next-20261120/qa-result.json": "8bdad8381f54882d4b4f50b6217f24c80ea5b0af35d050819f4f71d50997a4fc",
+    "docs/art-generation/cast-next-20261120/canvas-summary.json": "058a4bae8331214bacc62e415f8a1864afdb6c8a449391aa45cb4ef8a8f50627",
+    "docs/art-generation/cast-next-20261120/visual-review.json": "717a5da93b0f728b894b38366a0a81247dcf6f157dbee3afd4a08635e488ce54",
+    "docs/art-generation/cast-next-20261120/final-runtime-audit.json": "691a961539a122c961d352f8530bd3d62aac83a98db30fe4dbd7162d0c6195e2",
+    "docs/art-generation/cast-next-20261120/build-integrity.json": "ad49c9c4789a1f7d7ae896bc6728ff5dc39308fabf799a2a690ca27190b76268",
+    "docs/art-generation/cast-resumption-20261120/native-integrity-audit.json": "84ccf886a0d302fc16f21f96770770d22be2e9876606db23743ccebdb9c6a8c5",
+    "docs/art-generation/cast-resumption-20261120/runtime-direction-review.json": "9e7bd6b5ef1a41a9921f5f0d5bb4b47b20be7d265c6566143c6e04bdb37c9bd1",
+    "docs/art-generation/cast-resumption-20261120/visual-review.json": "43180facd7ec7b55b49909e5dc65915585c53798a6f2eb3ebce45dd13973d899",
+    "docs/art-generation/cast-resumption-20261120/build-integrity.json": "5d8e385222bfcd6b041109b7948fc9ecfc726151adde81a5b184f58a74ab3b47",
+    "docs/art-generation/props-integration-20261120/review/canvas-review.json": "460ddf46ef0b05093b505e4ec9784e5fb13d87d44297247f75aec9889ac15ac1",
+    "docs/art-generation/cast-ribbit-20261120/generation-completion.json": "c0d909e96d68c2b171b34b45ee6dd87c54e0a69974293602a57bc08d02339e32",
+    "docs/art-generation/cast-ribbit-20261120/verification.json": "333a6c647a3f034195e21e76f52fec8878e8cc4c61426cc347ea01ff333f1ff5",
+    "docs/art-generation/cast-ribbit-20261120/qa-result.json": "ca7bd1d5f5e8b25fcfd6cbc27629b55abd5b385ab53127fb0d069ea101d30873",
+    "docs/art-generation/cast-ribbit-20261120/canvas-summary.json": "48b5efd37e9720b51faa835a5f12f62c1c4ae2c74fccafe2aac0b420f5408082",
+    "docs/art-generation/cast-ribbit-20261120/build-integrity.json": "c6ba52188cdb1b4399258e21819817327d355d742e42d0357222575713a765e8",
+    "docs/art-generation/cast-ribbit-20261120/visual-review.json": "3f34f9b88b67b34d1518f39f0b1686cbfaa66552670260f3b10b0601eca8564a",
+    "docs/art-generation/cast-ribbit-20261120/ribbit-independent-review.json": "c220869c0cc7473d277529353e9aa9d19852edfec7f58dbf33ef964b1a417095",
+    "docs/art-generation/cast-ribbit-20261120/ribbit-independent-integrity.json": "59b1d353dacb1d792050f043dbd7dc9e258972f185963f40e2f11b43ffef0025",
+    "docs/art-generation/cast-ribbit-20261120/ribbit-independent-runtime.json": "b6353d01fb7171e75ebcdc517a3b569fccff6975e7c4f833895870941cb517bc",
+    "docs/art-generation/cast-ribbit-20261120/browser-result.json": "ff5dcf645b832416794ecb3b481c56bcf7a42493dbd5459bdce56751b8dd6b91",
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1",
+    "docs/art-generation/ribbit-candidates-20261120/reference-review.md": "5bc0ddaf255c6d2e22555bbda5ca750d2067ea7aa4c8341d76a4bfccaf0b067d",
+    "docs/art-generation/ribbit-candidates-20261120/references/downloads.json": "d9c1baad93dea42a2c06162334dfc6891f1f73e581cdf92dd962597c77eed4b2"
+  },
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-06ee786e917e",
+    "artVersion": "c95f7501cac3f0e4",
+    "artFiles": 5722,
+    "artBytes": 3015349314,
+    "sha256": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+  },
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 22,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 464,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 22,
+    "soundEffects": 26,
+    "offlineImages": 5722,
+    "offlineBytes": 3015349314,
+    "features": 106,
+    "production": 3134,
+    "scenarios": 348,
+    "qa": 2281,
+    "presentationSequences": 270,
+    "animatedStages": 22,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 22,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54,
+    "costumeAdditions": 35,
+    "pendingCostumeAdditions": 0,
+    "pendingCostumeArtFiles": 0,
+    "sheets": 11,
+    "nativeTables": 10,
+    "sources": 149,
+    "completedPreparationRows": 9,
+    "addedProductionRows": 19,
+    "addedQaRows": 16,
+    "addedSourceRows": 14,
+    "costumePngs": 385
+  },
+  "formulas": [
+    {
+      "cell": "B7",
+      "formula": "=COUNTA('Combattants'!A6:A59)",
+      "value": 54
+    },
+    {
+      "cell": "B8",
+      "formula": "=COUNTA('Techniques'!A6:A545)",
+      "value": 540
+    },
+    {
+      "cell": "B9",
+      "formula": "=COUNTA('Arènes'!A6:A27)",
+      "value": 22
+    },
+    {
+      "cell": "B10",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3139,\"Costume crossover\")+COUNTIFS('Production'!B6:B3139,\"Tenue Circus\")",
+      "value": 464
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Arrangement d’arène\")",
+      "value": 54
+    },
+    {
+      "cell": "B15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)",
+      "value": 85
+    },
+    {
+      "cell": "C15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)",
+      "value": 7
+    },
+    {
+      "cell": "D15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)",
+      "value": 12
+    },
+    {
+      "cell": "E15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)",
+      "value": 2
+    },
+    {
+      "cell": "F15",
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)",
+      "value": 106
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,B$14)",
+      "value": 1954
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,C$14)",
+      "value": 957
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,D$14)",
+      "value": 54
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3139,E$14)",
+      "value": 169
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3139)",
+      "value": 3134
+    },
+    {
+      "cell": "B17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)",
+      "value": 343
+    },
+    {
+      "cell": "C17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)",
+      "value": 0
+    },
+    {
+      "cell": "D17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)",
+      "value": 4
+    },
+    {
+      "cell": "E17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)",
+      "value": 1
+    },
+    {
+      "cell": "F17",
+      "formula": "=COUNTA('Scénarios'!A6:A353)",
+      "value": 348
+    },
+    {
+      "cell": "B18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)",
+      "value": 105
+    },
+    {
+      "cell": "C18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)",
+      "value": 74
+    },
+    {
+      "cell": "D18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)",
+      "value": 0
+    },
+    {
+      "cell": "E18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)",
+      "value": 0
+    },
+    {
+      "cell": "F18",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3139,\"Tableau d’histoire\")&\" tableaux\"",
+      "value": "54 routes et 324 tableaux"
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "value": "216 briefings de rencontre"
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Arène\",'Production'!D6:D3139,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "value": "22 thèmes musicaux d’arènes"
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2286,B21)",
+      "value": 2265
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2286,C21)",
+      "value": 0
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2286,D21)",
+      "value": 13
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2286,E21)",
+      "value": 2
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2286)",
+      "value": 2281
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "value": "26 motifs sonores synthétiques"
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2286,\"Partiel\")",
+      "value": 1
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "value": "270 séquences de présentation"
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "value": "22 ambiances visuelles animées"
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Costume\")&\" costumes historiques redessinés\"",
+      "value": "20 costumes historiques redessinés"
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3139,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "value": "702 fiches, hors tenues crossover"
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Finition visuelle\")&\" présentations de KO\"",
+      "value": "162 présentations de KO"
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3139,\"Arène\",'Production'!D6:D3139,\"Ambiance sonore\",'Production'!E6:E3139,\"Implémenté\")&\" ambiances sonores originales\"",
+      "value": "22 ambiances sonores originales"
+    }
+  ],
+  "statusMutationCell": "E3121",
+  "scopes": [
+    [
+      "Synthèse",
+      "A1:H18",
+      "summary-top"
+    ],
+    [
+      "Synthèse",
+      "A19:H35",
+      "summary-bottom"
+    ],
+    [
+      "QA",
+      "A2270:I2270",
+      "qa-prepared-history"
+    ],
+    [
+      "Production",
+      "A3121:J3123",
+      "production-new-1"
+    ],
+    [
+      "Production",
+      "A3124:J3126",
+      "production-new-2"
+    ],
+    [
+      "Production",
+      "A3127:J3129",
+      "production-new-3"
+    ],
+    [
+      "Production",
+      "A3130:J3132",
+      "production-new-4"
+    ],
+    [
+      "Production",
+      "A3133:J3135",
+      "production-new-5"
+    ],
+    [
+      "Production",
+      "A3136:J3138",
+      "production-new-6"
+    ],
+    [
+      "Production",
+      "A3139:J3139",
+      "production-new-7"
+    ],
+    [
+      "Production",
+      "A3112:J3114",
+      "production-completed-3112"
+    ],
+    [
+      "Production",
+      "A3115:J3117",
+      "production-completed-3115"
+    ],
+    [
+      "Production",
+      "A3118:J3120",
+      "production-completed-3118"
+    ],
+    [
+      "QA",
+      "A2271:I2273",
+      "qa-1"
+    ],
+    [
+      "QA",
+      "A2274:I2276",
+      "qa-2"
+    ],
+    [
+      "QA",
+      "A2277:I2279",
+      "qa-3"
+    ],
+    [
+      "QA",
+      "A2280:I2282",
+      "qa-4"
+    ],
+    [
+      "QA",
+      "A2283:I2285",
+      "qa-5"
+    ],
+    [
+      "QA",
+      "A2286:I2286",
+      "qa-6"
+    ],
+    [
+      "Références",
+      "A141:E144",
+      "references-1"
+    ],
+    [
+      "Références",
+      "A145:E148",
+      "references-2"
+    ],
+    [
+      "Références",
+      "A149:E152",
+      "references-3"
+    ],
+    [
+      "Références",
+      "A153:E154",
+      "references-4"
+    ]
+  ],
+  "historicalFooterShift": 14
+}

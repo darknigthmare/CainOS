@@ -1,0 +1,18 @@
+{
+  "capturedAt": "2026-11-20T13:20:49.679Z",
+  "sourceCommit": "3858f03bba652fa56bdf422b5566dea86dbdcb9b",
+  "sourceHashes": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/progression.mjs": "0e198c3cd1434efdc2f0d156552b5c87dcdb40c498e6af25f6d398389453082e",
+    "combat/stories.mjs": "4a25469e10845c527f6d0a96921ce9298b4a2f4ec96560c38436dbc24565456e",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+  },
+  "fixturePath": "tests/fixtures/combat-pre-undermap.json",
+  "fixtureSHA256": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
+  "storyRoutes": 54,
+  "programFixtures": 45,
+  "checkpoints": 270,
+  "replayFixtures": 14,
+  "replayFrames": 3682
+}

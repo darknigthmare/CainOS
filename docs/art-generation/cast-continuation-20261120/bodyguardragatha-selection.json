@@ -1,0 +1,39 @@
+{
+  "id": "bodyguardragatha-selection",
+  "appearanceId": "bodyguardragatha",
+  "slot": "selection",
+  "file": "assets/encore/selection/bodyguardragatha.png",
+  "sourceGenerationId": "exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/ragatha.webp",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-trailer-thumbnail.jpg"
+  ],
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body character-selection sprite for Digital Circus Encore. Image 1 is the existing Ragatha game character and controls identity, complete body, blue patchwork dress, red yarn hair, lavender hair bow, proportions, black shoes and crisp clean 2D cel-shaded illustration. Image 2 is the primary official episode-five bodyguard reference; Ragatha is the character on the LEFT. Image 3 is an official whole-body reference; use only Ragatha, not the others. Create Bodyguard Ragatha: SAME ordinary blue/periwinkle patchwork dress with short puff sleeves, white collar/cuffs/hem, red yarn hair, large lavender bow, cream fabric skin, triangular red nose, short cream legs and black rounded shoes. Add the exact large opaque BLACK SUNGLASSES covering both eye positions seen in image 2. No suit, earpiece, weapon, holster, extra uniform or invented accessories. Pose: full-length calm security attendant stance, both feet planted a little apart, one hand on her waist, the other hand relaxed beside her; small composed mouth. Keep all extremities, complete skirt hem, hair bow and shoes in frame with generous transparent margins. Flat polished 2D game illustration matching image 1, not a 3D toy or photo. Actual transparent RGBA background, clean silhouette and opaque character interior. One single figure only, no shadow, floor, environment, scenery, caption, text, frame, badge, watermark, glow, aura, duplicate view or sprite sheet. Preserve the exact dress and character; only the sunglasses and this pose differ from her base appearance.",
+  "sha256": "1467e634913d72e6edd4704434c7ee87df713fb4c1bc9779fd55c4ee222a4e3c",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    929,
+    1694
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    60,
+    16,
+    902,
+    1679
+  ],
+  "bytes": 1246827,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

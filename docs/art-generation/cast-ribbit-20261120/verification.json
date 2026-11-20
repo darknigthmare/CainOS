@@ -1,0 +1,78 @@
+{
+  "schema": "encore-ribbit-verification/v1",
+  "createdAt": "2026-11-20T12:44:07.185230+00:00",
+  "status": "local_qa_and_canvas_passed_browser_environment_blocked",
+  "generation": {
+    "appearances": 2,
+    "nativePngs": 22,
+    "bytes": 24631738,
+    "manifest": "generation-completion.json",
+    "manifestSha256": "c0d909e96d68c2b171b34b45ee6dd87c54e0a69974293602a57bc08d02339e32"
+  },
+  "qa": {
+    "tests": 405,
+    "passed": 405,
+    "failed": 0,
+    "skipped": 0,
+    "bothBuildsPassed": true,
+    "evidence": "qa-result.json",
+    "log": "qa.log"
+  },
+  "canvas": {
+    "appearances": 2,
+    "actions": 18,
+    "stances": 2,
+    "drawChecks": 40,
+    "portraits": 2,
+    "missing": 0,
+    "method": "Production Canvas2D renderer under native Skia; no browser interaction.",
+    "evidence": "canvas-summary.json"
+  },
+  "integrity": {
+    "status": "passed",
+    "nativeAssetComparisons": 44,
+    "moduleComparisons": 14,
+    "historicalEncoreFilesVerified": 5656,
+    "evidence": "build-integrity.json"
+  },
+  "runtimeCounts": {
+    "fighters": 54,
+    "costumes": 464,
+    "additionalAppearances": 35,
+    "stages": 22,
+    "archive": 179,
+    "offlineImages": 5722,
+    "offlineBytes": 3015349314,
+    "coreFiles": 52
+  },
+  "visualReview": {
+    "status": "accepted_with_stated_scope",
+    "evidence": "visual-review.json",
+    "independentEvidence": "ribbit-independent-review.json"
+  },
+  "browser": {
+    "status": "environment_blocked_before_navigation",
+    "successfulChecks": 0,
+    "evidence": "browser-result.json",
+    "note": "Chromium aborted before navigation with socket Operation not permitted. The dated attempt predates the final offline-manifest regeneration and is not browser validation of the final source revision."
+  },
+  "supersededEvidence": {
+    "file": "review/animeribbit/render-before-manifest.log",
+    "note": "Initial Canvas attempt before offline-manifest regeneration. Superseded by the successful final Canvas runs bound to the sources below."
+  },
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+  },
+  "limitations": [
+    "The eleven drawings per appearance are static action and selection slots, not frame-by-frame animation cycles.",
+    "The official merchandise references support costume identity, not episode-specific canonical poses.",
+    "Maid Ribbit remains awaiting a usable lower-costume reference.",
+    "The local browser attempt could not execute any application assertions."
+  ]
+}

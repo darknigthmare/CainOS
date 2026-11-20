@@ -1,0 +1,72 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "aquablasterpomni",
+  "fighterId": "pomni",
+  "slot": "selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Create a polished clean cel-shaded 2D full-body game selection sprite of AQUA BLASTER POMNI from The Amazing Digital Circus. Use reference image 1 as authority for this specific OFFICIAL MERCHANDISE VARIANT and its water blaster. Use reference image 2 as authority for existing game character proportions, identity, face, elongated slender limbs, clothing shape and clean 2D linework. The result must look like a new compatible pose of reference 2 wearing the Aqua Blaster variant from reference 1.\n\nIDENTITY AND CLOTHES: one large pale white face with pink cheek circles, large white eyes with small red-and-blue pinwheel irises, brown bobbed side locks and blunt bangs. Keep the iconic two-lobed red and blue jester cap, yellow head band and one yellow round bell on each tip. She wears a light-blue and white horizontally striped sleeveless tank top with blue shoulder straps, light-blue swim shorts with two white drawstrings, and blue flat shoes. Two slender WHITE arms/hands and two slender WHITE legs. Exactly TWO arms, TWO hands and TWO legs. Her arms are COMPLETELY BARE, no yellow inflatable armbands, no floaties, no bracelets, no wrist cuffs. Yellow belongs ONLY to hat band and bells.\nONE WATER BLASTER: copy the clearly visible toy from official image 1. Rounded MAGENTA/PINK rear main body and grip with an ORANGE rear circular inset, a bright LIME-GREEN cylindrical front barrel with several ridges, short ORANGE muzzle at the tip, and a curved TURQUOISE loop reservoir/handle at the rear. A colorful small water pistol, not a realistic firearm. Match this compact chunky design and color blocking. Keep it clearly visible and fully inside the image. Omit the molded transparent water jet and puddle pedestal from the collectible.\n\nPOSE selection: full character standing comfortably with legs planted apart, body and face in three-quarter view facing SCREEN RIGHT. A cautious friendly smile. Hold the blaster in both hands at waist-to-chest level pointing diagonally forward toward SCREEN RIGHT, one hand on the magenta grip and the other supporting the green barrel. Keep all fingers/hands anatomically clear and no duplicate hand. No extra props.\n\nSTYLE: reference 2's clean expressive cartoon illustration, crisp dark contours, saturated flat fills, restrained two-tone cel shading. Not a 3D toy render, no plush or fabric texture. Keep the slender game proportions rather than the very short collectible proportions. One complete character from both hat bells to both shoe soles. Leave generous TRANSPARENT empty margins of at least 8 percent all around the whole character including gun and hat; occupy at most 82 percent of canvas height/width. Native transparent alpha background, no background, floor, shadow, base, puddle, scenery, panel, text, logo, border or UI. No aura, halo, glow, bloom, rim light, sparkles or detached effects. Do not copy the inflatable yellow armbands from image 2.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+    "assets/encore/selection/beachpomni.png"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-69d0a0fc-6fd2-45a6-9450-60bb70d7b1cf.png",
+  "sourceGenerationId": "exec-69d0a0fc-6fd2-45a6-9450-60bb70d7b1cf",
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+  "targetFile": "assets/encore/selection/aquablasterpomni.png",
+  "nativeFacing": "right",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "scope": "Adaptation de la figurine officielle Aqua Blaster Pomni aux proportions du jeu. Variante distincte de beachpomni, issu de la peluche à brassards jaunes sans pistolet. Le socle de flaque et le jet moulé sont exclus du sprite neutre ; le pistolet est conservé dans chaque pose. Les vêtements sont partiellement masqués par l’arme dans le rendu et sont prolongés de façon cohérente avec les parties visibles et beachpomni. Poses statiques originales pour le fan-game ; aucune fidélité canonique 1:1 n’est revendiquée.",
+    "observations": [
+      "Pomni entière orientée trois-quarts droite ; deux mains saisissent le pistolet, deux jambes et deux chaussures complètes.",
+      "Bras blancs sans brassards ; haut rayé bleu/blanc, short à deux cordons blancs, bonnet rouge/bleu avec bande et deux grelots jaunes.",
+      "Pistolet magenta à cercle orange, canon vert nervuré, embout orange et boucle turquoise ; silhouette conforme aux couleurs et éléments visibles de la référence officielle.",
+      "Composite alpha contrôlé : aucun halo visible ; couleur diffuse de l’aperçu brut sous alpha nul, PNG natif inchangé."
+    ],
+    "alphaReview": "Revue de selection-alpha.jpg sur fond #3c465a."
+  },
+  "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+  "bytes": 1514241,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1081048,
+  "alpha12Bounds": [
+    117,
+    64,
+    897,
+    1486
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T13:31:40.134885+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+      "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+      "bytes": 2582811
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/selection/beachpomni.png",
+      "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+      "bytes": 1055943
+    }
+  ]
+}

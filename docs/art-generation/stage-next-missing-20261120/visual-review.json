@@ -1,0 +1,42 @@
+{
+  "reviewedAt": "2026-11-20T13:32:58.549167+00:00",
+  "method": "Direct visual inspection of production Canvas captures at camera -1, 0 and +1, plus the procedural fallback.",
+  "images": [
+    {
+      "path": "review/three-cameras.png",
+      "sha256": "07a837af3971f8a749513a9e4e3b6056453aae587a67a301354e53a614fdd2ec"
+    },
+    {
+      "path": "review/fallback.png",
+      "sha256": "43a7f6f6947cf6f4035efe827e51f1afe739af0e1473950c2852679cd1bf6510"
+    }
+  ],
+  "accepted": true,
+  "observations": [
+    "Three-plane palette and large wall grid remain coherent across the camera travel.",
+    "The lower perspective floor covers the far-wall continuation, with a clear standing surface at y568.",
+    "Pomni and Gummigoo remain visible against the dark scene; neither a generated figure nor a prop occupies the stage artwork.",
+    "The near blue reflections remain low in the frame, below the standing line.",
+    "No transparent edge gap or visible alpha matte was observed.",
+    "The procedural fallback keeps the indigo grid environment instead of falling back to the circus."
+  ],
+  "scope": [
+    "The reference is one official still. Composition, horizontal duel surface, parallax separation and ambient light are adaptations.",
+    "Existing character art is shown for context; its anatomy and costume fidelity are outside this new-stage review.",
+    "This is a Node/Skia review, not a browser session."
+  ],
+  "finalManifestRefresh": {
+    "refreshedAt": "2026-11-20T13:53:09.450215+00:00",
+    "renderedAt": "2026-11-20T13:49:10.739Z",
+    "manifest": {
+      "version": "0.7.0-cdc85685a728",
+      "artVersion": "cb628ae846008788",
+      "images": 5769,
+      "bytes": 3059080660
+    },
+    "cameraCapturesUnchanged": 3,
+    "sceneCapturesUnchanged": 3,
+    "inspectionImagesUnchanged": 2,
+    "method": "Re-executed production Canvas review after the final manifest. All six camera/actor captures and both previously inspected overview/fallback PNGs remain byte-identical. The existing visual acceptance therefore applies to the final render."
+  }
+}

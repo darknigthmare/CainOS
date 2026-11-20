@@ -1,0 +1,80 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingkinger",
+  "slot": "heavy",
+  "id": "abstractingkinger-heavy",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy.png",
+  "targetFile": "assets/encore/poses/abstractingkinger/heavy.png",
+  "sourceGenerationId": "exec-4f045a5c-812d-433f-8ce8-6d0b96131ffe",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-4f045a5c-812d-433f-8ce8-6d0b96131ffe.png",
+  "prompt": "Use case: precise-object-edit. Correct reference 1, the full-body heavy attack game sprite of Abstracting Kinger, using reference 2 as the anatomy/design lock. Preserve its diagonal forward lean, purple floor-length ermine robe, beige cross-crowned chess head, normal blue eye, opposite crystal half with flat pastel eyes, crystal robe base, colours, detailed 2D cel shading and exactly TWO white cartoon hands with crystal cuffs. Kinger has NO ARMS at all. Remove the purple arm-like connector that currently joins the upper/front hand's crystal cuff to the robe. Both hands and crystal cuffs must FLOAT independently, with a small but visibly transparent gap separating each complete cuff from the robe/head and the other hand. Keep the hands sweeping forward/down in the heavy attack; adjust their placement only as needed to make the gap unambiguous. Do not add sleeves, arms, legs, feet, mouth, extra hand, weapons or effects. Frame the entire single character with all crown and crystal tips and both complete hands inside clear transparent margins on every edge; avoid a crystal spike touching the top. True transparent RGBA, no background, floor, shadow, halo, glow, particles, text or extra objects.",
+  "checkpointPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING KINGER. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall beige king chess piece with cross crown, one normal bulging blue-iris eye, purple floor-length robe with white black-spotted ermine. Opposing head/crown side is dark angular crystal with large concentric pastel eye and extra embedded eyes; two WHITE FLOATING HANDS with crystal cuffs, asymmetrical crystal robe base. Absolutely no human face, mouth, arms inside sleeves, legs or feet. Preserve exact normal/abstract side pattern. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HEAVY ATTACK toward screen RIGHT: strong diagonal chess-body lean, both floating white hands sweeping down together from raised position, robe and crystal base splayed for a broad forceful silhouette. No limbs or weapons added.",
+  "referencePaths": [
+    "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy-v1.png",
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "generated-correction-input",
+      "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy-v1.png",
+      "sha256": "38d402ad462bfa29f46ee9ff5ba9d55bc0ea2d03b8b083a86ccaa5ea3c423397",
+      "bytes": 1217500
+    },
+    {
+      "position": 2,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "rejectedAttempts": [
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/heavy-v1.png",
+      "reason": "Purple connector resembled an arm; corrected natively so both white hand/cuff units float independently."
+    }
+  ],
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Forceful forward diagonal chess-body lean with two white hands sweeping forward and down.",
+      "Exactly two floating white hand/crystal-cuff units with clear transparent gaps; purple arm-like connector removed by native regeneration.",
+      "Cross crown, normal blue eye, opposing crystal eyes, purple ermine robe and crystal base retained; no arms, legs or feet; all crown/base/hand tips within frame."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1402,
+    1122
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    14,
+    25,
+    1390,
+    1117
+  ],
+  "fullyTransparentPixels": 921988,
+  "sha256": "2ae28f00ccc858ee709cc243ea6b567f7f471595bbc0ea4b947499b110ed605d",
+  "bytes": 1221845,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:41:56.931713+00:00"
+}

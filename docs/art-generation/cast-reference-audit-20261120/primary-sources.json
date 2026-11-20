@@ -1,0 +1,920 @@
+{
+  "schema": "cainos.cast-primary-reference-audit.v1",
+  "date": "2026-11-20",
+  "recordedAt": "2026-11-20T06:55:12.985903+00:00",
+  "primarySourcesOnlyForConclusions": true,
+  "sources": [
+    {
+      "id": "official-trailer-ep3",
+      "kind": "official-youtube-trailer",
+      "url": "https://www.youtube.com/watch?v=x287j7Vby0U",
+      "videoId": "x287j7Vby0U",
+      "title": "VIEWER BEWARE... DIGITAL CIRCUS EPISODE 3 IS NEAR!",
+      "author": "GLITCH",
+      "channelId": "UCn_FAXem2-e3HQvmK-mOH4g",
+      "sampleIntervalMs": 1000,
+      "sampleSize": [
+        320,
+        180
+      ],
+      "pageGrid": [
+        3,
+        3
+      ],
+      "pages": [
+        {
+          "page": 0,
+          "fileNameAtRetrieval": "episode3-trailer-L3-M0.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/x287j7Vby0U/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ_BqbcG&sigh=rs$AOn4CLBNR4VJu-MvqZ07hidSjQ6eSp61pQ",
+          "sha256": "35701b359609f133b7e92f2bf32a4cd17a490e08d66054b62eb48a93f581dce5",
+          "bytes": 32735,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 0,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 1,
+          "fileNameAtRetrieval": "episode3-trailer-L3-M1.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/x287j7Vby0U/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ_BqbcG&sigh=rs$AOn4CLBNR4VJu-MvqZ07hidSjQ6eSp61pQ",
+          "sha256": "9d91258bda3bae9346e41fe9aa75d57203bb3d73e63fa61cc4b6d4316b994d23",
+          "bytes": 32679,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 9,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 2,
+          "fileNameAtRetrieval": "episode3-trailer-L3-M2.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/x287j7Vby0U/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ_BqbcG&sigh=rs$AOn4CLBNR4VJu-MvqZ07hidSjQ6eSp61pQ",
+          "sha256": "7035b610251331d1ef79fd6ffcbcd2e8ac461a443faaaf0fd9649b2e394d01e3",
+          "bytes": 29533,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 18,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 3,
+          "fileNameAtRetrieval": "episode3-trailer-L3-M3.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/x287j7Vby0U/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ_BqbcG&sigh=rs$AOn4CLBNR4VJu-MvqZ07hidSjQ6eSp61pQ",
+          "sha256": "26d9d068720016933c8a22bcfc92ecc07b8059d76e7e6e6fcf809dc1c85066a7",
+          "bytes": 27200,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 27,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 4,
+          "fileNameAtRetrieval": "episode3-trailer-L3-M4.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/x287j7Vby0U/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ_BqbcG&sigh=rs$AOn4CLBNR4VJu-MvqZ07hidSjQ6eSp61pQ",
+          "sha256": "20495d8b90dd6b8decea1ebc951c0410a914f89fdf376bc4d3cf62c9eaf15308",
+          "bytes": 15669,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 36,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 5,
+          "fileNameAtRetrieval": "episode3-trailer-L3-M5.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/x287j7Vby0U/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ_BqbcG&sigh=rs$AOn4CLBNR4VJu-MvqZ07hidSjQ6eSp61pQ",
+          "sha256": "fc899472ada74cdf4059ff5ec6e70936ac5988e510667f145117cf583b7921b7",
+          "bytes": 3346,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 45,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        }
+      ],
+      "observationScope": "Storyboard samples only; not a continuous frame-by-frame viewing."
+    },
+    {
+      "id": "official-trailer-ep4",
+      "kind": "official-youtube-trailer",
+      "url": "https://www.youtube.com/watch?v=abZtsmMUbJo",
+      "videoId": "abZtsmMUbJo",
+      "title": "Digital Circus Episode 4 [TRAILER]",
+      "author": "GLITCH",
+      "channelId": "UCn_FAXem2-e3HQvmK-mOH4g",
+      "sampleIntervalMs": 1000,
+      "sampleSize": [
+        320,
+        180
+      ],
+      "pageGrid": [
+        3,
+        3
+      ],
+      "pages": [
+        {
+          "page": 0,
+          "fileNameAtRetrieval": "episode4-trailer-L3-M0.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/abZtsmMUbJo/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJPcg7oG&sigh=rs$AOn4CLCbYriITHaNAqnv5JPTcvHg6bQ6YQ",
+          "sha256": "8108aabcac829c8e131a936a9f4a7baf0ce3d5c4a70837e4b282dd5954bbe5ba",
+          "bytes": 32174,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 0,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 1,
+          "fileNameAtRetrieval": "episode4-trailer-L3-M1.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/abZtsmMUbJo/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJPcg7oG&sigh=rs$AOn4CLCbYriITHaNAqnv5JPTcvHg6bQ6YQ",
+          "sha256": "95746ae3bcf8239b7edb3468a47b00513c52f6cf9523049b4f78c31dd866d2d5",
+          "bytes": 60529,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 9,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 2,
+          "fileNameAtRetrieval": "episode4-trailer-L3-M2.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/abZtsmMUbJo/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJPcg7oG&sigh=rs$AOn4CLCbYriITHaNAqnv5JPTcvHg6bQ6YQ",
+          "sha256": "a3a40b040cbfd9195ef9e0e9c4303ac79963b5ed586dd4a3af65a36f1faf191b",
+          "bytes": 57864,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 18,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 3,
+          "fileNameAtRetrieval": "episode4-trailer-L3-M3.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/abZtsmMUbJo/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJPcg7oG&sigh=rs$AOn4CLCbYriITHaNAqnv5JPTcvHg6bQ6YQ",
+          "sha256": "0e64508b837b093011976984414f322b4a8a26239058cf2237fc37cc0acc49e0",
+          "bytes": 62121,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 27,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 4,
+          "fileNameAtRetrieval": "episode4-trailer-L3-M4.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/abZtsmMUbJo/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJPcg7oG&sigh=rs$AOn4CLCbYriITHaNAqnv5JPTcvHg6bQ6YQ",
+          "sha256": "f06130ddf659928a01ffcc934aa5df930621837499c98191696cdfa2ddd45baa",
+          "bytes": 30020,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 36,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 5,
+          "fileNameAtRetrieval": "episode4-trailer-L3-M5.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/abZtsmMUbJo/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJPcg7oG&sigh=rs$AOn4CLCbYriITHaNAqnv5JPTcvHg6bQ6YQ",
+          "sha256": "fbd9766238f51d0f5fd47516d3f76c52a890d4cc3cf3b643918115ff945acb2c",
+          "bytes": 15476,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 45,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        }
+      ],
+      "observationScope": "Storyboard samples only; not a continuous frame-by-frame viewing."
+    },
+    {
+      "id": "official-trailer-ep6",
+      "kind": "official-youtube-trailer",
+      "url": "https://www.youtube.com/watch?v=viNz5TiNgSc",
+      "videoId": "viNz5TiNgSc",
+      "title": "DIGITAL CIRCUS EP 6 TRAILER!!!",
+      "author": "GLITCH",
+      "channelId": "UCn_FAXem2-e3HQvmK-mOH4g",
+      "sampleIntervalMs": 1000,
+      "sampleSize": [
+        320,
+        180
+      ],
+      "pageGrid": [
+        3,
+        3
+      ],
+      "pages": [
+        {
+          "page": 0,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M0.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "3505a445c3483119f3a12ddc46cc8ce09c9368bbad2b2a9e0bb1af41fe476bde",
+          "bytes": 92119,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 0,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 1,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M1.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "0d40a6779589786f538c169de38f72d4c4b1bc903a91217cd3ead03720e3b7b1",
+          "bytes": 63400,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 9,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 2,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M2.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "cb55969b4a323079a5c00b3a148de2dc06a969e02656583035bbc4dfa6424505",
+          "bytes": 51915,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 18,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 3,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M3.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "703c9c6a79734cf59ee7f210eac190dce1b1cd7ecd102830ef4d4e2e61bb661a",
+          "bytes": 57935,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 27,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 4,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M4.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "f2a532b6528b19daf2dcc2ea3ea40e94bdd55ec5662eecd66eed36212f50c0c4",
+          "bytes": 49469,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 36,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 5,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M5.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "13eee55fd8321d5604ac36d4b64da74edba843c88abb88dd8138ee3e408c3d5f",
+          "bytes": 48723,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 45,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 6,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M6.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M6.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "f2d1b7ebd0923aaf0d3caa54716b0536f2056db7da155cec6597770b7d83f070",
+          "bytes": 77088,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 54,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 7,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M7.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "aafc955ef58fb2b6c828749de63e853dc7eca65cc575ec5d13fc301877ea4c6d",
+          "bytes": 85664,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 63,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 8,
+          "fileNameAtRetrieval": "episode6-trailer-L3-M8.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/viNz5TiNgSc/storyboard3_L3/M8.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJ7B1sQG&sigh=rs$AOn4CLDwe78zkHaClG0htI9T1AFeBJ1-Wg",
+          "sha256": "d4233eea93ac166692e6a5a7081b15ffbcfb06a1473ec3939cd1423eda852ef8",
+          "bytes": 2349,
+          "size": [
+            960,
+            360
+          ],
+          "firstSampleSecond": 72,
+          "visuallyInspected": false,
+          "archivedWholePageInRepository": false
+        }
+      ],
+      "observationScope": "Storyboard samples only; not a continuous frame-by-frame viewing."
+    },
+    {
+      "id": "official-trailer-ep7",
+      "kind": "official-youtube-trailer",
+      "url": "https://www.youtube.com/watch?v=VI6XO8EijT4",
+      "videoId": "VI6XO8EijT4",
+      "title": "DIGITAL CIRCUS EP 7 TRAILER!!",
+      "author": "GLITCH",
+      "channelId": "UCn_FAXem2-e3HQvmK-mOH4g",
+      "sampleIntervalMs": 1000,
+      "sampleSize": [
+        320,
+        180
+      ],
+      "pageGrid": [
+        3,
+        3
+      ],
+      "pages": [
+        {
+          "page": 0,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M0.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "5477a9de2e906d4149ca959330366cabb3c34cfc0759eee4c5b3fcdecc0c701e",
+          "bytes": 59965,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 0,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 1,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M1.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "3c35a019400fc1d7e913fcbbc59f63a8cb19faf318348c51ef0ffa49788fe85f",
+          "bytes": 64791,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 9,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 2,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M2.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "b6df2b71f4a6ff6ab39b8d94c5bcd9ad2425474e973dd44aa45f172d5679a6af",
+          "bytes": 55322,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 18,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 3,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M3.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "ff2eb17d4eed7f2775aac5cdab845c6373f4c8b614df58e2425a3a7b236a5fe4",
+          "bytes": 62542,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 27,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 4,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M4.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "c084f0efd03ad809b7c4b8297ea975a0229b5e57207fecc379795284bc6b3865",
+          "bytes": 46410,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 36,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 5,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M5.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "1b9b29fe2e3fd0bd9198e2d299c8f0276fdb0aa583961b3e5b266aa0b4aa3cc6",
+          "bytes": 23178,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 45,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 6,
+          "fileNameAtRetrieval": "episode7-trailer-L3-M6.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/VI6XO8EijT4/storyboard3_L3/M6.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOSPv8kG&sigh=rs$AOn4CLARV3rAEWXAERm27PIpvHxkWThvIw",
+          "sha256": "664156842dd25e2a9bd8d45ba29d395a51b2bc0ebd40d9cb5ba1054140e1df26",
+          "bytes": 19136,
+          "size": [
+            960,
+            360
+          ],
+          "firstSampleSecond": 54,
+          "visuallyInspected": false,
+          "archivedWholePageInRepository": false
+        }
+      ],
+      "observationScope": "Storyboard samples only; not a continuous frame-by-frame viewing."
+    },
+    {
+      "id": "official-trailer-ep8",
+      "kind": "official-youtube-trailer",
+      "url": "https://www.youtube.com/watch?v=4lFnIlH06Sw",
+      "videoId": "4lFnIlH06Sw",
+      "title": "Digital Circus Ep 8 Trailer.",
+      "author": "GLITCH",
+      "channelId": "UCn_FAXem2-e3HQvmK-mOH4g",
+      "sampleIntervalMs": 1000,
+      "sampleSize": [
+        320,
+        180
+      ],
+      "pageGrid": [
+        3,
+        3
+      ],
+      "pages": [
+        {
+          "page": 0,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M0.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "672622e5c7eaecead34bd5ef3fb13979471fed634bb07a2a0417f91db7e2be61",
+          "bytes": 43984,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 0,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 1,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M1.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "afca3e58e76e5eec5885a7fb39b9d29903e52b6e6587fba7822a9f2917c94e2e",
+          "bytes": 51343,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 9,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 2,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M2.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "9b5049e07e94b9138d5f560daadaf6d64cc8ef22d9f83edf3ba15631539f2e04",
+          "bytes": 50222,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 18,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 3,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M3.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "b1213808eb542df0a92c29300be634c7c99990ae56c9fc62caa49a1871577ce6",
+          "bytes": 42837,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 27,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 4,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M4.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "0a4f19d7a8fc5ec8b98a42bd9e446b4984fe9764e39ea4ec924c2385f58829c3",
+          "bytes": 55051,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 36,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 5,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M5.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "565f602831b598b58c8322f687a971f592f89d3eaff2fb45af81e616fb1567b9",
+          "bytes": 52730,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 45,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 6,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M6.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M6.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "d693b907216bbb2005456618c0cf04eaaa2955da2e676c6b62b63bfbab93529b",
+          "bytes": 29208,
+          "size": [
+            960,
+            540
+          ],
+          "firstSampleSecond": 54,
+          "visuallyInspected": true,
+          "archivedWholePageInRepository": false
+        },
+        {
+          "page": 7,
+          "fileNameAtRetrieval": "episode8-trailer-L3-M7.jpg",
+          "sourceUrl": "https://i.ytimg.com/sb/4lFnIlH06Sw/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyQmM0G&sigh=rs$AOn4CLAkrrP8tftDAAPABwhWJsEk8iy3NA",
+          "sha256": "35e8e8c61f344c2be48e8f3b1a9da86befcd5d8eeacadd01036fd9c1dd8865ef",
+          "bytes": 5736,
+          "size": [
+            960,
+            360
+          ],
+          "firstSampleSecond": 63,
+          "visuallyInspected": false,
+          "archivedWholePageInRepository": false
+        }
+      ],
+      "observationScope": "Storyboard samples only; not a continuous frame-by-frame viewing."
+    },
+    {
+      "id": "official-artbook-public-previews",
+      "kind": "official-merchandise-product-page",
+      "url": "https://glitchproductions.store/products/digital-circus-artbook",
+      "title": "The Amazing Digital Circus Art Book",
+      "retrievedHtmlSha256": "3810d6b1a9c822826acf14c0cb2155ff49ddbd6d0c048ae31ab914bbe1bc6f94",
+      "previews": [
+        {
+          "url": "https://glitchproductions.store/cdn/shop/files/SLIDE-DC-BOOK-CONCEPT-ART.png?v=1789100550&width=1400",
+          "file": "SLIDE-DC-BOOK-CONCEPT-ART.png",
+          "bytes": 1256677,
+          "sha256": "66cece0fcb3c8b0e3d6fdb071e0e578549c0286907233f5ded51dae72310e116",
+          "dimensions": [
+            1346,
+            904
+          ],
+          "visuallyInspected": true,
+          "archivedWholeImageInRepository": false
+        },
+        {
+          "url": "https://glitchproductions.store/cdn/shop/files/DC-ARTBOOK-SPREADS.webp?v=1789099215&width=3840",
+          "file": "DC-ARTBOOK-SPREADS.webp",
+          "bytes": 448257,
+          "sha256": "0ced8ccab92b42502f51fb3b78528859713281e9b73d00971f7db1d375953d01",
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "visuallyInspected": true,
+          "archivedWholeImageInRepository": false
+        },
+        {
+          "url": "https://glitchproductions.store/cdn/shop/files/Tier2_3_Stickers_1.webp?v=1789097565&width=1600",
+          "file": "Tier2_3_Stickers_1.webp",
+          "bytes": 2941801,
+          "sha256": "a69055cad456c2f0d6f44f7d29cbabd18bf2f369229fdb7a701a48854f5b169b",
+          "dimensions": [
+            1600,
+            1600
+          ],
+          "visuallyInspected": true,
+          "archivedWholeImageInRepository": false
+        },
+        {
+          "url": "https://glitchproductions.store/cdn/shop/files/Tier2_3_Stickers_2.webp?v=1789097571&width=1600",
+          "file": "Tier2_3_Stickers_2.webp",
+          "bytes": 3370329,
+          "sha256": "cb1dbae885b1db43d000f031c53560743f7d156aded6766ebb42b87e236e3f59",
+          "dimensions": [
+            1600,
+            1600
+          ],
+          "visuallyInspected": true,
+          "archivedWholeImageInRepository": false
+        }
+      ],
+      "observationScope": "Four public promotional images only. No book file, paid pages or complete book were accessed."
+    },
+    {
+      "id": "official-jax-pendantz",
+      "kind": "official-merchandise-product-page",
+      "url": "https://glitchproductions.store/products/jax-pendantz",
+      "observation": "Explicit named lineup does not identify the Australian outfit. Secret variants are not treated as evidence of a particular design."
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "ep3-t36",
+      "file": "references/zooble-ep3-trailer-36s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep3",
+      "sourceImageSha256": "20495d8b90dd6b8decea1ebc951c0410a914f89fdf376bc4d3cf62c9eaf15308",
+      "sourcePage": 4,
+      "cellIndex": 0,
+      "timestampSeconds": 36,
+      "watchUrl": "https://www.youtube.com/watch?v=x287j7Vby0U&t=36s",
+      "cropXYXY": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "e10aed71ff982cd9533c6b5258902b04af41472bb531edf29bc7d3410bf3bc44",
+      "bytes": 59480,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep4-t29",
+      "file": "references/zooble-ep4-trailer-29s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep4",
+      "sourceImageSha256": "0e64508b837b093011976984414f322b4a8a26239058cf2237fc37cc0acc49e0",
+      "sourcePage": 3,
+      "cellIndex": 2,
+      "timestampSeconds": 29,
+      "watchUrl": "https://www.youtube.com/watch?v=abZtsmMUbJo&t=29s",
+      "cropXYXY": [
+        640,
+        0,
+        960,
+        180
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "d6693d638f40832336b3d72344a9d79fa816234f81682a4997284e1ea27605f9",
+      "bytes": 91962,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep6-t30",
+      "file": "references/zooble-ep6-trailer-30s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep6",
+      "sourceImageSha256": "703c9c6a79734cf59ee7f210eac190dce1b1cd7ecd102830ef4d4e2e61bb661a",
+      "sourcePage": 3,
+      "cellIndex": 3,
+      "timestampSeconds": 30,
+      "watchUrl": "https://www.youtube.com/watch?v=viNz5TiNgSc&t=30s",
+      "cropXYXY": [
+        0,
+        180,
+        320,
+        360
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "1684cae6229cfb3948c070ac0ca8025fd743f9a189b966cd62dedc6bff238180",
+      "bytes": 93065,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep6-t32",
+      "file": "references/zooble-ep6-trailer-32s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep6",
+      "sourceImageSha256": "703c9c6a79734cf59ee7f210eac190dce1b1cd7ecd102830ef4d4e2e61bb661a",
+      "sourcePage": 3,
+      "cellIndex": 5,
+      "timestampSeconds": 32,
+      "watchUrl": "https://www.youtube.com/watch?v=viNz5TiNgSc&t=32s",
+      "cropXYXY": [
+        640,
+        180,
+        960,
+        360
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "7156ec1c3d38d9b2983fb9a387cb1c5e389520aa4cceaf34497cc045a2faf124",
+      "bytes": 93958,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep6-t41",
+      "file": "references/zooble-ep6-trailer-41s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep6",
+      "sourceImageSha256": "f2a532b6528b19daf2dcc2ea3ea40e94bdd55ec5662eecd66eed36212f50c0c4",
+      "sourcePage": 4,
+      "cellIndex": 5,
+      "timestampSeconds": 41,
+      "watchUrl": "https://www.youtube.com/watch?v=viNz5TiNgSc&t=41s",
+      "cropXYXY": [
+        640,
+        180,
+        960,
+        360
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "d9a05dca374b8174a8b0944902bcaad46ede74388f1c229669b9a5151d6d0f7e",
+      "bytes": 68306,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep6-t46",
+      "file": "references/zooble-ep6-trailer-46s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep6",
+      "sourceImageSha256": "13eee55fd8321d5604ac36d4b64da74edba843c88abb88dd8138ee3e408c3d5f",
+      "sourcePage": 5,
+      "cellIndex": 1,
+      "timestampSeconds": 46,
+      "watchUrl": "https://www.youtube.com/watch?v=viNz5TiNgSc&t=46s",
+      "cropXYXY": [
+        320,
+        0,
+        640,
+        180
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "1dfcaabc539c307f8e783bd11d6c34b91f19f53afd4ff7c9a179a37c4ef85dd3",
+      "bytes": 72711,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep8-t39",
+      "file": "references/zooble-ep8-trailer-39s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep8",
+      "sourceImageSha256": "0a4f19d7a8fc5ec8b98a42bd9e446b4984fe9764e39ea4ec924c2385f58829c3",
+      "sourcePage": 4,
+      "cellIndex": 3,
+      "timestampSeconds": 39,
+      "watchUrl": "https://www.youtube.com/watch?v=4lFnIlH06Sw&t=39s",
+      "cropXYXY": [
+        0,
+        180,
+        320,
+        360
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "be4039a6914acc39e78ce0f034b1faeded213148ea6d39cc12bf92daf98ad8c6",
+      "bytes": 36648,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "ep8-t40",
+      "file": "references/zooble-ep8-trailer-40s.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-trailer-ep8",
+      "sourceImageSha256": "0a4f19d7a8fc5ec8b98a42bd9e446b4984fe9764e39ea4ec924c2385f58829c3",
+      "sourcePage": 4,
+      "cellIndex": 4,
+      "timestampSeconds": 40,
+      "watchUrl": "https://www.youtube.com/watch?v=4lFnIlH06Sw&t=40s",
+      "cropXYXY": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "sha256": "7f8b6c796098eac3c2b1817a7fd816213562631aae1eb87be2214c4cbb7dc927",
+      "bytes": 103796,
+      "processing": "Exact native-pixel rectangle from the public storyboard. No resize, retouch, reconstruction or background removal.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    },
+    {
+      "id": "artbook-zooble-cocktail",
+      "file": "references/zooble-artbook-cocktail-detail.png",
+      "kind": "targeted-reference-snapshot",
+      "sourceId": "official-artbook-public-previews",
+      "sourceUrl": "https://glitchproductions.store/cdn/shop/files/Tier2_3_Stickers_1.webp?v=1789097565&width=1600",
+      "sourceImageSha256": "a69055cad456c2f0d6f44f7d29cbabd18bf2f369229fdb7a701a48854f5b169b",
+      "cropXYXY": [
+        235,
+        110,
+        685,
+        665
+      ],
+      "size": [
+        450,
+        555
+      ],
+      "sha256": "b70d20881e69abeb3a578f96ca16bd1339ffeec8f8d050471fc66d8cf17c52eb",
+      "bytes": 419327,
+      "processing": "Exact native-pixel rectangle from the published sticker-sheet product preview. The foil reflections and small adjacent-sticker corner are retained; no artwork is reconstructed.",
+      "runtimeAsset": false,
+      "visuallyInspected": true
+    }
+  ],
+  "limits": [
+    "A sampled frame is not continuous playback.",
+    "A whole silhouette can still hide an arm attachment or joint.",
+    "Official merchandise is labeled separately from an episode design.",
+    "No inference from a mirror, fan render or prior generated game asset is promoted to primary evidence."
+  ]
+}

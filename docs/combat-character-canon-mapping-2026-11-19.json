@@ -1,0 +1,4895 @@
+{
+  "schema": "digital-circus-canon-mapping.v1",
+  "asOf": "2026-11-19",
+  "repo": "darknigthmare/CainOS",
+  "readOnly": true,
+  "scopeNote": "Mapping evidence matches identities and labels only. It neither changes runtime nor validates existing images as 1:1. Empty mapping is a review task, not proof the asset is absent elsewhere. Identity/portrait/prop/equipment links do not certify exact visual fidelity; unmatched research candidates are pending evidence, not confirmed absent costumes.",
+  "sourceAudit": "combat-character-canon-research-2026-11-19.json",
+  "entityMappings": [
+    {
+      "entityId": "pomni",
+      "archiveIds": [
+        "pomni"
+      ],
+      "mappedIds": [
+        "pomni"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Pomni",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Pomni",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "jax",
+      "archiveIds": [
+        "jax"
+      ],
+      "mappedIds": [
+        "jax"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Jax",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "ragatha",
+      "archiveIds": [
+        "ragatha"
+      ],
+      "mappedIds": [
+        "ragatha"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Ragatha",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ragatha",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "gangle",
+      "archiveIds": [
+        "gangle"
+      ],
+      "mappedIds": [
+        "gangle"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Gangle",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "kinger",
+      "archiveIds": [
+        "kinger"
+      ],
+      "mappedIds": [
+        "kinger"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Kinger",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kinger",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "zooble",
+      "archiveIds": [
+        "zooble"
+      ],
+      "mappedIds": [
+        "zooble"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Zooble",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "caine",
+      "archiveIds": [
+        "caine"
+      ],
+      "mappedIds": [
+        "caine"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Caine",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Caine",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "bubble",
+      "archiveIds": [
+        "bubble"
+      ],
+      "mappedIds": [
+        "bubble"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "primary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Bubble",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Bubble",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "gloink_queen",
+      "archiveIds": [
+        "gloinkqueen"
+      ],
+      "mappedIds": [
+        "gloinkqueen"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Gloink_Queen",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloink_Queen",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "gummigoo",
+      "archiveIds": [
+        "gummigoo"
+      ],
+      "mappedIds": [
+        "gummigoo"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Gummigoo",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gummigoo",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "max",
+      "archiveIds": [
+        "max"
+      ],
+      "mappedIds": [
+        "max"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Max",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Max",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "chad",
+      "archiveIds": [
+        "chad"
+      ],
+      "mappedIds": [
+        "chad"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Chad",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Chad",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "princess_loolilalu",
+      "archiveIds": [
+        "loolilalu"
+      ],
+      "mappedIds": [
+        "loolilalu"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Princess_Loolilalu",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Princess_Loolilalu",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "fudge",
+      "archiveIds": [
+        "fudge"
+      ],
+      "mappedIds": [
+        "fudge"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/The_Fudge",
+      "sources": [
+        "https://tadc.fandom.com/wiki/The_Fudge",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "ghostly",
+      "archiveIds": [
+        "ghostly"
+      ],
+      "mappedIds": [
+        "ghostly"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Ghostly",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ghostly",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "baron_theodore_mildenhall",
+      "archiveIds": [
+        "baronmildenhall"
+      ],
+      "mappedIds": [
+        "baronmildenhall"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Baron_Theodore_Mildenhall",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Baron_Theodore_Mildenhall",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "martha_mildenhall",
+      "archiveIds": [
+        "marthamildenhall"
+      ],
+      "mappedIds": [
+        "marthamildenhall"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Martha_Mildenhall",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Martha_Mildenhall",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "angel",
+      "archiveIds": [
+        "angel"
+      ],
+      "mappedIds": [
+        "angel"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Angel",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Angel",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "orbsman",
+      "archiveIds": [
+        "orbsman"
+      ],
+      "mappedIds": [
+        "orbsman"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Orbsman",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Orbsman",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "abel",
+      "archiveIds": [
+        "abel",
+        "abelmannequin",
+        "abelfullbody",
+        "peekingmannequin"
+      ],
+      "mappedIds": [
+        "abel",
+        "abelmannequin",
+        "abelfullbody",
+        "peekingmannequin"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Abel",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Abel",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "One canonical identity represented by several archive assets. Peeking Mannequin alias requires shot verification."
+    },
+    {
+      "entityId": "blue_ai",
+      "archiveIds": [
+        "blueai"
+      ],
+      "mappedIds": [
+        "blueai"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Category%3ACharacters",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Appearance discovery places the blue program in ep8; existing archive says ep9, which is a later appearance."
+    },
+    {
+      "entityId": "kaufmo",
+      "archiveIds": [
+        "kaufmo"
+      ],
+      "mappedIds": [
+        "kaufmo"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Kaufmo",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kaufmo",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "queenie",
+      "archiveIds": [
+        "queenie"
+      ],
+      "mappedIds": [
+        "queenie"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Queenie",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Queenie",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "ribbit",
+      "archiveIds": [
+        "ribbit"
+      ],
+      "mappedIds": [
+        "ribbit"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Ribbit",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ribbit",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "scratch",
+      "archiveIds": [
+        "scratch"
+      ],
+      "mappedIds": [
+        "scratch"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Scratch",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Scratch",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "evil_pomni",
+      "archiveIds": [
+        "evilpomni",
+        "rivalbaseballpomni"
+      ],
+      "mappedIds": [
+        "evilpomni",
+        "rivalbaseballpomni"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "evil_jax",
+      "archiveIds": [
+        "eviljax",
+        "rivalbaseballjax"
+      ],
+      "mappedIds": [
+        "eviljax",
+        "rivalbaseballjax"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "evil_ragatha",
+      "archiveIds": [
+        "evilragatha",
+        "rivalbaseballragatha"
+      ],
+      "mappedIds": [
+        "evilragatha",
+        "rivalbaseballragatha"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "coach_dictatorer",
+      "archiveIds": [
+        "evilkinger",
+        "rivalbaseballkinger"
+      ],
+      "mappedIds": [
+        "evilkinger",
+        "rivalbaseballkinger"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "bazooble",
+      "archiveIds": [
+        "evilzooble",
+        "rivalbaseballzooble"
+      ],
+      "mappedIds": [
+        "evilzooble",
+        "rivalbaseballzooble"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "evil_orbsman",
+      "archiveIds": [
+        "evilorbsman",
+        "rivalbaseballpinkgiant"
+      ],
+      "mappedIds": [
+        "evilorbsman",
+        "rivalbaseballpinkgiant"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "secondary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "ming",
+      "archiveIds": [
+        "ming"
+      ],
+      "mappedIds": [
+        "ming"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Ming",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ming",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "disappearing_guy",
+      "archiveIds": [
+        "disappearingguy"
+      ],
+      "mappedIds": [
+        "disappearingguy"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Disappearing_Guy",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Disappearing_Guy",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "dr_football",
+      "archiveIds": [
+        "drfootball"
+      ],
+      "mappedIds": [
+        "drfootball"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Dr._Football",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Dr._Football",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Named NPC, not merely a prop. Existing archive prop classification is a gameplay decision; lore category needs correction."
+    },
+    {
+      "entityId": "moon",
+      "archiveIds": [
+        "moon"
+      ],
+      "mappedIds": [
+        "moon"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Moon",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Moon",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "sun",
+      "archiveIds": [
+        "sun"
+      ],
+      "mappedIds": [
+        "sun"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Sun",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Sun",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "gloinks",
+      "archiveIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "mappedIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Gloinks",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloinks",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "One creature family; six existing shape IDs. Their source shapes still require frame verification."
+    },
+    {
+      "entityId": "mannequins",
+      "archiveIds": [
+        "mannequin",
+        "redmannequin",
+        "orangemannequin",
+        "yellowmannequin",
+        "magentamannequin"
+      ],
+      "mappedIds": [
+        "mannequin",
+        "redmannequin",
+        "orangemannequin",
+        "yellowmannequin",
+        "magentamannequin"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Mannequins",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "One NPC family with several existing colour/role assets; do not count each as a newly discovered individual."
+    },
+    {
+      "entityId": "barrel_monkeys",
+      "archiveIds": [
+        "barrelmonkey"
+      ],
+      "mappedIds": [
+        "barrelmonkey"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "cookie_butterfly",
+      "archiveIds": [
+        "cookiebutterfly"
+      ],
+      "mappedIds": [
+        "cookiebutterfly"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "gummy_elephant",
+      "archiveIds": [
+        "gummyelephant"
+      ],
+      "mappedIds": [
+        "gummyelephant"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "gummy_worms",
+      "archiveIds": [
+        "gummyworm"
+      ],
+      "mappedIds": [
+        "gummyworm"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "additional_voices",
+      "archiveIds": [
+        "additionalvoices"
+      ],
+      "mappedIds": [
+        "additionalvoices"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Additional_Voices",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Additional_Voices",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "On-screen unnamed candy mannequin; Additional Voices is a voice-actor nickname, not an on-screen personal name."
+    },
+    {
+      "entityId": "candy_guards",
+      "archiveIds": [
+        "candyguardcyan",
+        "candyguardblue",
+        "candyguardpurple"
+      ],
+      "mappedIds": [
+        "candyguardcyan",
+        "candyguardblue",
+        "candyguardpurple"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Mannequins",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "hell_souls",
+      "archiveIds": [
+        "mildenhallsouls"
+      ],
+      "mappedIds": [
+        "mildenhallsouls"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "fly",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "canonicalStatus": "presence_attested_visual_unverified",
+      "needsFrameReview": true,
+      "notes": "Presence attested by dialogue/sound effect; visible appearance not verified. No silhouette or full-body anatomy is to be invented. First full-body episode remains unknown.",
+      "firstFullBodyEpisode": null,
+      "requiresNewCharacterArt": false
+    },
+    {
+      "entityId": "giant_centipede",
+      "archiveIds": [
+        "giantcentipede"
+      ],
+      "mappedIds": [
+        "giantcentipede"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "fish_orange",
+      "archiveIds": [
+        "truthtellerfish"
+      ],
+      "mappedIds": [
+        "truthtellerfish"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "fish_red",
+      "archiveIds": [
+        "liarfish"
+      ],
+      "mappedIds": [
+        "liarfish"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "shrimp_npc",
+      "archiveIds": [
+        "shrimpnpc"
+      ],
+      "mappedIds": [
+        "shrimpnpc"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "chinese_room_npc",
+      "archiveIds": [
+        "chineseroomnpc"
+      ],
+      "mappedIds": [
+        "chineseroomnpc"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "nightmare_fourth_crocodile",
+      "archiveIds": [
+        "fourthcrocodile"
+      ],
+      "mappedIds": [
+        "fourthcrocodile"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Do not name it Gummigoo’s mother; that identity is unconfirmed."
+    },
+    {
+      "entityId": "ragatha_mother_shadow",
+      "archiveIds": [
+        "ragathamothershadow"
+      ],
+      "mappedIds": [
+        "ragathamothershadow"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Keep neutral silhouette label; maternal identity inferred from context, not visibly proved by silhouette alone."
+    },
+    {
+      "entityId": "wormo",
+      "archiveIds": [
+        "wormo"
+      ],
+      "mappedIds": [
+        "wormo"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "bizco",
+      "archiveIds": [
+        "bizco"
+      ],
+      "mappedIds": [
+        "bizco"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "rattie",
+      "archiveIds": [
+        "rattie"
+      ],
+      "mappedIds": [
+        "rattie"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "spike",
+      "archiveIds": [
+        "spike"
+      ],
+      "mappedIds": [
+        "spike"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Identity mapping only; no new visual fidelity approval."
+    },
+    {
+      "entityId": "portrait_pink_cyclops",
+      "archiveIds": [
+        "pinkcyclops"
+      ],
+      "mappedIds": [
+        "pinkcyclops"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "portrait_only_source",
+      "needsFrameReview": true,
+      "notes": "Existing playable art depicts a portrait-only source character. Unseen full-body details are project reconstruction, not verified 1:1 canon."
+    },
+    {
+      "entityId": "portrait_yellow_sad_clown",
+      "archiveIds": [
+        "yellowclown"
+      ],
+      "mappedIds": [
+        "yellowclown"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "portrait_only_source",
+      "needsFrameReview": true,
+      "notes": "Existing playable art depicts a portrait-only source character. Unseen full-body details are project reconstruction, not verified 1:1 canon."
+    },
+    {
+      "entityId": "portrait_blue_oyster",
+      "archiveIds": [
+        "oyster"
+      ],
+      "mappedIds": [
+        "oyster"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "portrait_only_source",
+      "needsFrameReview": true,
+      "notes": "Existing playable art depicts a portrait-only source character. Unseen full-body details are project reconstruction, not verified 1:1 canon."
+    },
+    {
+      "entityId": "portrait_green_bulb",
+      "archiveIds": [
+        "bulbcreature"
+      ],
+      "mappedIds": [
+        "bulbcreature"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Circus_Members",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "canonicalStatus": "portrait_only_source",
+      "needsFrameReview": true,
+      "notes": "Existing playable art depicts a portrait-only source character. Unseen full-body details are project reconstruction, not verified 1:1 canon."
+    },
+    {
+      "entityId": "albert_spudsy",
+      "archiveIds": [
+        "albertspudsy"
+      ],
+      "mappedIds": [
+        "albertspudsy"
+      ],
+      "confidence": "high_identity_match",
+      "tier": "tertiary",
+      "sourceUrl": "https://tadc.fandom.com/wiki/Category%3ACharacters",
+      "sources": [
+        "https://tadc.fandom.com/wiki/Category%3ACharacters",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "canonicalStatus": "indexed_requires_frame_review",
+      "needsFrameReview": true,
+      "notes": "Cutout/logo depiction only; do not claim a source-confirmed living full-body fighter."
+    }
+  ],
+  "variantMappings": [
+    {
+      "variantId": "pomni__base",
+      "entityId": "pomni",
+      "archiveIds": [
+        "pomni"
+      ],
+      "mappedIds": [
+        "pomni"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Pomni",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "jax__base",
+      "entityId": "jax",
+      "archiveIds": [
+        "jax"
+      ],
+      "mappedIds": [
+        "jax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "ragatha__base",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "ragatha"
+      ],
+      "mappedIds": [
+        "ragatha"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ragatha",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "gangle__base",
+      "entityId": "gangle",
+      "archiveIds": [
+        "gangle"
+      ],
+      "mappedIds": [
+        "gangle"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "kinger__base",
+      "entityId": "kinger",
+      "archiveIds": [
+        "kinger"
+      ],
+      "mappedIds": [
+        "kinger"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kinger",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "zooble__base",
+      "entityId": "zooble",
+      "archiveIds": [
+        "zooble"
+      ],
+      "mappedIds": [
+        "zooble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "caine__base",
+      "entityId": "caine",
+      "archiveIds": [
+        "caine"
+      ],
+      "mappedIds": [
+        "caine"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Caine",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "bubble__base",
+      "entityId": "bubble",
+      "archiveIds": [
+        "bubble"
+      ],
+      "mappedIds": [
+        "bubble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Bubble",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "gloink_queen__base",
+      "entityId": "gloink_queen",
+      "archiveIds": [
+        "gloinkqueen"
+      ],
+      "mappedIds": [
+        "gloinkqueen"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloink_Queen",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "gummigoo__base",
+      "entityId": "gummigoo",
+      "archiveIds": [
+        "gummigoo"
+      ],
+      "mappedIds": [
+        "gummigoo"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gummigoo",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "max__base",
+      "entityId": "max",
+      "archiveIds": [
+        "max"
+      ],
+      "mappedIds": [
+        "max"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Max",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "chad__base",
+      "entityId": "chad",
+      "archiveIds": [
+        "chad"
+      ],
+      "mappedIds": [
+        "chad"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Chad",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "princess_loolilalu__base",
+      "entityId": "princess_loolilalu",
+      "archiveIds": [
+        "loolilalu"
+      ],
+      "mappedIds": [
+        "loolilalu"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Princess_Loolilalu",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "fudge__base",
+      "entityId": "fudge",
+      "archiveIds": [
+        "fudge"
+      ],
+      "mappedIds": [
+        "fudge"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/The_Fudge",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "ghostly__base",
+      "entityId": "ghostly",
+      "archiveIds": [
+        "ghostly"
+      ],
+      "mappedIds": [
+        "ghostly"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ghostly",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "baron_theodore_mildenhall__base",
+      "entityId": "baron_theodore_mildenhall",
+      "archiveIds": [
+        "baronmildenhall"
+      ],
+      "mappedIds": [
+        "baronmildenhall"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Baron_Theodore_Mildenhall",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "martha_mildenhall__base",
+      "entityId": "martha_mildenhall",
+      "archiveIds": [
+        "marthamildenhall"
+      ],
+      "mappedIds": [
+        "marthamildenhall"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Martha_Mildenhall",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "angel__base",
+      "entityId": "angel",
+      "archiveIds": [
+        "angel"
+      ],
+      "mappedIds": [
+        "angel"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Angel",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "orbsman__base",
+      "entityId": "orbsman",
+      "archiveIds": [
+        "orbsman"
+      ],
+      "mappedIds": [
+        "orbsman"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Orbsman",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "abel__base",
+      "entityId": "abel",
+      "archiveIds": [
+        "abel",
+        "abelmannequin",
+        "abelfullbody",
+        "peekingmannequin"
+      ],
+      "mappedIds": [
+        "abel",
+        "abelmannequin",
+        "abelfullbody",
+        "peekingmannequin"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Abel",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "blue_ai__base",
+      "entityId": "blue_ai",
+      "archiveIds": [
+        "blueai"
+      ],
+      "mappedIds": [
+        "blueai"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Category%3ACharacters",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "kaufmo__portrait",
+      "entityId": "kaufmo",
+      "archiveIds": [
+        "kaufmo"
+      ],
+      "mappedIds": [
+        "kaufmo"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kaufmo",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "kaufmo__active_flashback",
+      "entityId": "kaufmo",
+      "archiveIds": [
+        "kaufmo"
+      ],
+      "mappedIds": [
+        "kaufmo"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kaufmo",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "kaufmo__abstracted",
+      "entityId": "kaufmo",
+      "archiveIds": [
+        "abstractedkaufmo"
+      ],
+      "mappedIds": [
+        "abstractedkaufmo"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kaufmo",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "queenie__portrait",
+      "entityId": "queenie",
+      "archiveIds": [
+        "queenie"
+      ],
+      "mappedIds": [
+        "queenie"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Queenie",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "queenie__active_flashback",
+      "entityId": "queenie",
+      "archiveIds": [
+        "queenie"
+      ],
+      "mappedIds": [
+        "queenie"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Queenie",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "queenie__abstracted_rampage",
+      "entityId": "queenie",
+      "archiveIds": [
+        "abstractedqueenie"
+      ],
+      "mappedIds": [
+        "abstractedqueenie"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Queenie",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "queenie__abstracted_calm",
+      "entityId": "queenie",
+      "archiveIds": [
+        "abstractedqueeniedark"
+      ],
+      "mappedIds": [
+        "abstractedqueeniedark"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Queenie",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "ribbit__portrait",
+      "entityId": "ribbit",
+      "archiveIds": [
+        "ribbit"
+      ],
+      "mappedIds": [
+        "ribbit"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ribbit",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "ribbit__active_flashback",
+      "entityId": "ribbit",
+      "archiveIds": [
+        "ribbit"
+      ],
+      "mappedIds": [
+        "ribbit"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ribbit",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "ribbit__abstracted",
+      "entityId": "ribbit",
+      "archiveIds": [
+        "abstractedribbit"
+      ],
+      "mappedIds": [
+        "abstractedribbit"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ribbit",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "scratch__portrait",
+      "entityId": "scratch",
+      "archiveIds": [
+        "scratch"
+      ],
+      "mappedIds": [
+        "scratch"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Scratch",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "scratch__active_flashback",
+      "entityId": "scratch",
+      "archiveIds": [
+        "scratch"
+      ],
+      "mappedIds": [
+        "scratch"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Scratch",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "evil_pomni__base",
+      "entityId": "evil_pomni",
+      "archiveIds": [
+        "evilpomni",
+        "rivalbaseballpomni"
+      ],
+      "mappedIds": [
+        "evilpomni",
+        "rivalbaseballpomni"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "evil_jax__base",
+      "entityId": "evil_jax",
+      "archiveIds": [
+        "eviljax",
+        "rivalbaseballjax"
+      ],
+      "mappedIds": [
+        "eviljax",
+        "rivalbaseballjax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "evil_ragatha__base",
+      "entityId": "evil_ragatha",
+      "archiveIds": [
+        "evilragatha",
+        "rivalbaseballragatha"
+      ],
+      "mappedIds": [
+        "evilragatha",
+        "rivalbaseballragatha"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "coach_dictatorer__base",
+      "entityId": "coach_dictatorer",
+      "archiveIds": [
+        "evilkinger",
+        "rivalbaseballkinger"
+      ],
+      "mappedIds": [
+        "evilkinger",
+        "rivalbaseballkinger"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "bazooble__base",
+      "entityId": "bazooble",
+      "archiveIds": [
+        "evilzooble",
+        "rivalbaseballzooble"
+      ],
+      "mappedIds": [
+        "evilzooble",
+        "rivalbaseballzooble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "evil_orbsman__base",
+      "entityId": "evil_orbsman",
+      "archiveIds": [
+        "evilorbsman",
+        "rivalbaseballpinkgiant"
+      ],
+      "mappedIds": [
+        "evilorbsman",
+        "rivalbaseballpinkgiant"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Evil_Big_Tops",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "ming__base",
+      "entityId": "ming",
+      "archiveIds": [
+        "ming"
+      ],
+      "mappedIds": [
+        "ming"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ming",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "disappearing_guy__base",
+      "entityId": "disappearing_guy",
+      "archiveIds": [
+        "disappearingguy"
+      ],
+      "mappedIds": [
+        "disappearingguy"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Disappearing_Guy",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "dr_football__base",
+      "entityId": "dr_football",
+      "archiveIds": [
+        "drfootball"
+      ],
+      "mappedIds": [
+        "drfootball"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Dr._Football",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "moon__base",
+      "entityId": "moon",
+      "archiveIds": [
+        "moon"
+      ],
+      "mappedIds": [
+        "moon"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Moon",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "sun__base",
+      "entityId": "sun",
+      "archiveIds": [
+        "sun"
+      ],
+      "mappedIds": [
+        "sun"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Sun",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "gloinks__base",
+      "entityId": "gloinks",
+      "archiveIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "mappedIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloinks",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "mannequins__base",
+      "entityId": "mannequins",
+      "archiveIds": [
+        "mannequin",
+        "redmannequin",
+        "orangemannequin",
+        "yellowmannequin",
+        "magentamannequin"
+      ],
+      "mappedIds": [
+        "mannequin",
+        "redmannequin",
+        "orangemannequin",
+        "yellowmannequin",
+        "magentamannequin"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "barrel_monkeys__base",
+      "entityId": "barrel_monkeys",
+      "archiveIds": [
+        "barrelmonkey"
+      ],
+      "mappedIds": [
+        "barrelmonkey"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "cookie_butterfly__base",
+      "entityId": "cookie_butterfly",
+      "archiveIds": [
+        "cookiebutterfly"
+      ],
+      "mappedIds": [
+        "cookiebutterfly"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "gummy_elephant__base",
+      "entityId": "gummy_elephant",
+      "archiveIds": [
+        "gummyelephant"
+      ],
+      "mappedIds": [
+        "gummyelephant"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "gummy_worms__base",
+      "entityId": "gummy_worms",
+      "archiveIds": [
+        "gummyworm"
+      ],
+      "mappedIds": [
+        "gummyworm"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "additional_voices__base",
+      "entityId": "additional_voices",
+      "archiveIds": [
+        "additionalvoices"
+      ],
+      "mappedIds": [
+        "additionalvoices"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Additional_Voices",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "candy_guards__base",
+      "entityId": "candy_guards",
+      "archiveIds": [
+        "candyguardcyan",
+        "candyguardblue",
+        "candyguardpurple"
+      ],
+      "mappedIds": [
+        "candyguardcyan",
+        "candyguardblue",
+        "candyguardpurple"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "hell_souls__base",
+      "entityId": "hell_souls",
+      "archiveIds": [
+        "mildenhallsouls"
+      ],
+      "mappedIds": [
+        "mildenhallsouls"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "fly__base",
+      "entityId": "fly",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "presence_only_no_visible_design",
+      "mappingKind": "audio_presence_no_visual_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Presence attested by dialogue/sound effect; visible appearance not verified. No silhouette or full-body anatomy is to be invented. First full-body episode remains unknown.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "giant_centipede__base",
+      "entityId": "giant_centipede",
+      "archiveIds": [
+        "giantcentipede"
+      ],
+      "mappedIds": [
+        "giantcentipede"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "fish_orange__base",
+      "entityId": "fish_orange",
+      "archiveIds": [
+        "truthtellerfish"
+      ],
+      "mappedIds": [
+        "truthtellerfish"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "fish_red__base",
+      "entityId": "fish_red",
+      "archiveIds": [
+        "liarfish"
+      ],
+      "mappedIds": [
+        "liarfish"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "shrimp_npc__base",
+      "entityId": "shrimp_npc",
+      "archiveIds": [
+        "shrimpnpc"
+      ],
+      "mappedIds": [
+        "shrimpnpc"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "chinese_room_npc__base",
+      "entityId": "chinese_room_npc",
+      "archiveIds": [
+        "chineseroomnpc"
+      ],
+      "mappedIds": [
+        "chineseroomnpc"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "nightmare_fourth_crocodile__base",
+      "entityId": "nightmare_fourth_crocodile",
+      "archiveIds": [
+        "fourthcrocodile"
+      ],
+      "mappedIds": [
+        "fourthcrocodile"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "ragatha_mother_shadow__base",
+      "entityId": "ragatha_mother_shadow",
+      "archiveIds": [
+        "ragathamothershadow"
+      ],
+      "mappedIds": [
+        "ragathamothershadow"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "wormo__portrait",
+      "entityId": "wormo",
+      "archiveIds": [
+        "wormo"
+      ],
+      "mappedIds": [
+        "wormo"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "wormo__active_flashback",
+      "entityId": "wormo",
+      "archiveIds": [
+        "wormo"
+      ],
+      "mappedIds": [
+        "wormo"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "bizco__portrait",
+      "entityId": "bizco",
+      "archiveIds": [
+        "bizco"
+      ],
+      "mappedIds": [
+        "bizco"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "bizco__active_flashback",
+      "entityId": "bizco",
+      "archiveIds": [
+        "bizco"
+      ],
+      "mappedIds": [
+        "bizco"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "rattie__portrait",
+      "entityId": "rattie",
+      "archiveIds": [
+        "rattie"
+      ],
+      "mappedIds": [
+        "rattie"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "rattie__active_flashback",
+      "entityId": "rattie",
+      "archiveIds": [
+        "rattie"
+      ],
+      "mappedIds": [
+        "rattie"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "spike__portrait",
+      "entityId": "spike",
+      "archiveIds": [
+        "spike"
+      ],
+      "mappedIds": [
+        "spike"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "spike__active_flashback",
+      "entityId": "spike",
+      "archiveIds": [
+        "spike"
+      ],
+      "mappedIds": [
+        "spike"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "base_identity",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Existing base asset for this entity; not proof of full episode-accurate proportions."
+    },
+    {
+      "variantId": "portrait_pink_cyclops__door_portrait",
+      "entityId": "portrait_pink_cyclops",
+      "archiveIds": [
+        "pinkcyclops"
+      ],
+      "mappedIds": [
+        "pinkcyclops"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "portrait_yellow_sad_clown__door_portrait",
+      "entityId": "portrait_yellow_sad_clown",
+      "archiveIds": [
+        "yellowclown"
+      ],
+      "mappedIds": [
+        "yellowclown"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "portrait_blue_oyster__door_portrait",
+      "entityId": "portrait_blue_oyster",
+      "archiveIds": [
+        "oyster"
+      ],
+      "mappedIds": [
+        "oyster"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "portrait_green_bulb__door_portrait",
+      "entityId": "portrait_green_bulb",
+      "archiveIds": [
+        "bulbcreature"
+      ],
+      "mappedIds": [
+        "bulbcreature"
+      ],
+      "confidence": "partial_identity_reference_needs_frame_review",
+      "mappingKind": "partial_portrait_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Circus_Members",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Portrait of same existing identity: partial reference, not exact verified portrait nor a separate missing costume. Unseen full-body details remain project reconstruction.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "albert_spudsy__cardboard_cutout",
+      "entityId": "albert_spudsy",
+      "archiveIds": [
+        "albertspudsy"
+      ],
+      "mappedIds": [
+        "albertspudsy"
+      ],
+      "confidence": "existing_prop_identity_episode_frame_pending",
+      "mappingKind": "existing_prop_or_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Category%3ACharacters",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Existing archive prop/identity covers this row. Albert standee and Dr. Football mask source cells visually inspected; exact series frame remains unverified. Logo is same mascot partial reference, plastic mask existing ID is a prop, not another character.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "albert_spudsy__logo",
+      "entityId": "albert_spudsy",
+      "archiveIds": [
+        "albertspudsy"
+      ],
+      "mappedIds": [
+        "albertspudsy"
+      ],
+      "confidence": "existing_prop_identity_episode_frame_pending",
+      "mappingKind": "existing_prop_or_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Category%3ACharacters",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Existing archive prop/identity covers this row. Albert standee and Dr. Football mask source cells visually inspected; exact series frame remains unverified. Logo is same mascot partial reference, plastic mask existing ID is a prop, not another character.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "pomni__spudsys_employee",
+      "entityId": "pomni",
+      "archiveIds": [
+        "spudsypomni"
+      ],
+      "mappedIds": [
+        "spudsypomni"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Pomni",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "jax__spudsys_employee",
+      "entityId": "jax",
+      "archiveIds": [
+        "spudsyjax"
+      ],
+      "mappedIds": [
+        "spudsyjax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "ragatha__spudsys_employee",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "spudsyragatha"
+      ],
+      "mappedIds": [
+        "spudsyragatha"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ragatha",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "zooble__spudsys_employee",
+      "entityId": "zooble",
+      "archiveIds": [
+        "spudsyzooble"
+      ],
+      "mappedIds": [
+        "spudsyzooble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__spudsys_manager",
+      "entityId": "gangle",
+      "archiveIds": [
+        "workgangle"
+      ],
+      "mappedIds": [
+        "workgangle"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__comedy_mask",
+      "entityId": "gangle",
+      "archiveIds": [
+        "ganglecomedy"
+      ],
+      "mappedIds": [
+        "ganglecomedy"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__tragedy_mask",
+      "entityId": "gangle",
+      "archiveIds": [
+        "gangletragedy"
+      ],
+      "mappedIds": [
+        "gangletragedy"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__plastic_mask",
+      "entityId": "gangle",
+      "archiveIds": [
+        "plasticganglemask"
+      ],
+      "mappedIds": [
+        "plasticganglemask"
+      ],
+      "confidence": "existing_prop_identity_episode_frame_pending",
+      "mappingKind": "existing_prop_or_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Existing archive prop/identity covers this row. Albert standee and Dr. Football mask source cells visually inspected; exact series frame remains unverified. Logo is same mascot partial reference, plastic mask existing ID is a prop, not another character.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "gangle__smiling_tragedy",
+      "entityId": "gangle",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gangle",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "pomni__possessed",
+      "entityId": "pomni",
+      "archiveIds": [
+        "possessedpomni"
+      ],
+      "mappedIds": [
+        "possessedpomni"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Pomni",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "pomni__dream_abstraction",
+      "entityId": "pomni",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Pomni",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "ragatha__glitched",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "jumbledragatha"
+      ],
+      "mappedIds": [
+        "jumbledragatha"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ragatha",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "ragatha__stupid_sauce",
+      "entityId": "ragatha",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Ragatha",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "kinger__shotgun",
+      "entityId": "kinger",
+      "archiveIds": [
+        "kinger"
+      ],
+      "mappedIds": [
+        "kinger"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kinger",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "kinger__glowing",
+      "entityId": "kinger",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kinger",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "jax__poacher",
+      "entityId": "jax",
+      "archiveIds": [
+        "hunterjax"
+      ],
+      "mappedIds": [
+        "hunterjax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__rhinoceros",
+      "entityId": "gangle",
+      "archiveIds": [
+        "rhinogangle"
+      ],
+      "mappedIds": [
+        "rhinogangle"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "zooble__flamingo",
+      "entityId": "zooble",
+      "archiveIds": [
+        "flamingozooble"
+      ],
+      "mappedIds": [
+        "flamingozooble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "pomni__president",
+      "entityId": "pomni",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "ragatha__bodyguard",
+      "entityId": "ragatha",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__bodyguard",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "kinger__presidential_aide",
+      "entityId": "kinger",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Kinger",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "jax__australian_extremist",
+      "entityId": "jax",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "gangle__new_zealand_extremist",
+      "entityId": "gangle",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "pomni__anime_school",
+      "entityId": "pomni",
+      "archiveIds": [
+        "japanesepomni"
+      ],
+      "mappedIds": [
+        "japanesepomni"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "pomni__noir_bar",
+      "entityId": "pomni",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "pomni__softball",
+      "entityId": "pomni",
+      "archiveIds": [
+        "baseballpomni"
+      ],
+      "mappedIds": [
+        "baseballpomni"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "pomni__beach",
+      "entityId": "pomni",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Beach_Episode",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "jax__anime_school",
+      "entityId": "jax",
+      "archiveIds": [
+        "japanesejax"
+      ],
+      "mappedIds": [
+        "japanesejax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "jax__noir_bar",
+      "entityId": "jax",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "jax__softball",
+      "entityId": "jax",
+      "archiveIds": [
+        "baseballjax"
+      ],
+      "mappedIds": [
+        "baseballjax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "jax__beach",
+      "entityId": "jax",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Beach_Episode",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "ragatha__anime_school",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "japaneseragatha"
+      ],
+      "mappedIds": [
+        "japaneseragatha"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "ragatha__noir_bar",
+      "entityId": "ragatha",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "ragatha__softball",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "baseballragatha"
+      ],
+      "mappedIds": [
+        "baseballragatha"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "ragatha__beach",
+      "entityId": "ragatha",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Beach_Episode",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "gangle__anime_school",
+      "entityId": "gangle",
+      "archiveIds": [
+        "japanesegangle"
+      ],
+      "mappedIds": [
+        "japanesegangle"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__noir_bar",
+      "entityId": "gangle",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "gangle__softball",
+      "entityId": "gangle",
+      "archiveIds": [
+        "baseballgangle"
+      ],
+      "mappedIds": [
+        "baseballgangle"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gangle__beach",
+      "entityId": "gangle",
+      "archiveIds": [
+        "beachgangle"
+      ],
+      "mappedIds": [
+        "beachgangle"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Beach_Episode",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "kinger__anime_school",
+      "entityId": "kinger",
+      "archiveIds": [
+        "japanesekinger"
+      ],
+      "mappedIds": [
+        "japanesekinger"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "kinger__noir_bar",
+      "entityId": "kinger",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "kinger__softball",
+      "entityId": "kinger",
+      "archiveIds": [
+        "baseballkinger"
+      ],
+      "mappedIds": [
+        "baseballkinger"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "kinger__beach",
+      "entityId": "kinger",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Beach_Episode",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__anime_school",
+      "entityId": "zooble",
+      "archiveIds": [
+        "japanesezooble"
+      ],
+      "mappedIds": [
+        "japanesezooble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "zooble__noir_bar",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__softball",
+      "entityId": "zooble",
+      "archiveIds": [
+        "baseballzooble"
+      ],
+      "mappedIds": [
+        "baseballzooble"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Untitled",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "zooble__beach",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Beach_Episode",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "jax__maid",
+      "entityId": "jax",
+      "archiveIds": [
+        "maidjax"
+      ],
+      "mappedIds": [
+        "maidjax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "pomni__guns_episode",
+      "entityId": "pomni",
+      "archiveIds": [
+        "pomni"
+      ],
+      "mappedIds": [
+        "pomni"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "pomni__human_counterpart",
+      "entityId": "pomni",
+      "archiveIds": [
+        "abigailbrooks"
+      ],
+      "mappedIds": [
+        "abigailbrooks"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "human_counterpart",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing separate-person archive, not an approved skin of the avatar. Preserve current gameplay separation."
+    },
+    {
+      "variantId": "jax__guns_episode",
+      "entityId": "jax",
+      "archiveIds": [
+        "jax"
+      ],
+      "mappedIds": [
+        "jax"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "jax__human_counterpart",
+      "entityId": "jax",
+      "archiveIds": [
+        "leeroymateo"
+      ],
+      "mappedIds": [
+        "leeroymateo"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "human_counterpart",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing separate-person archive, not an approved skin of the avatar. Preserve current gameplay separation."
+    },
+    {
+      "variantId": "ragatha__guns_episode",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "ragatha"
+      ],
+      "mappedIds": [
+        "ragatha"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "ragatha__human_counterpart",
+      "entityId": "ragatha",
+      "archiveIds": [
+        "suzieackerman"
+      ],
+      "mappedIds": [
+        "suzieackerman"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "human_counterpart",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing separate-person archive, not an approved skin of the avatar. Preserve current gameplay separation."
+    },
+    {
+      "variantId": "gangle__guns_episode",
+      "entityId": "gangle",
+      "archiveIds": [
+        "gangle"
+      ],
+      "mappedIds": [
+        "gangle"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "gangle__human_counterpart",
+      "entityId": "gangle",
+      "archiveIds": [
+        "zoeyraghavan"
+      ],
+      "mappedIds": [
+        "zoeyraghavan"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "human_counterpart",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing separate-person archive, not an approved skin of the avatar. Preserve current gameplay separation."
+    },
+    {
+      "variantId": "kinger__guns_episode",
+      "entityId": "kinger",
+      "archiveIds": [
+        "kinger"
+      ],
+      "mappedIds": [
+        "kinger"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "kinger__human_counterpart",
+      "entityId": "kinger",
+      "archiveIds": [
+        "grantbest"
+      ],
+      "mappedIds": [
+        "grantbest"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "human_counterpart",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing separate-person archive, not an approved skin of the avatar. Preserve current gameplay separation."
+    },
+    {
+      "variantId": "zooble__guns_episode",
+      "entityId": "zooble",
+      "archiveIds": [
+        "zooble"
+      ],
+      "mappedIds": [
+        "zooble"
+      ],
+      "confidence": "partial_base_identity_equipment_pending",
+      "mappingKind": "equipment_state_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/They_All_Get_Guns",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Base identity partial reference only; equipment/action has not been visually matched. Inspect episode frame before choosing a separate costume or prop asset. Equipment row is not an extra character.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "zooble__human_counterpart",
+      "entityId": "zooble",
+      "archiveIds": [
+        "rileyverselis"
+      ],
+      "mappedIds": [
+        "rileyverselis"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "human_counterpart",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Existing separate-person archive, not an approved skin of the avatar. Preserve current gameplay separation."
+    },
+    {
+      "variantId": "jax__abstracted",
+      "entityId": "jax",
+      "archiveIds": [
+        "abstractedjax"
+      ],
+      "mappedIds": [
+        "abstractedjax"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "jax__mind_counterparts",
+      "entityId": "jax",
+      "archiveIds": [
+        "maidjax",
+        "jaxmindviolent",
+        "jaxmindcomic",
+        "jaxmindtrapped"
+      ],
+      "mappedIds": [
+        "maidjax",
+        "jaxmindviolent",
+        "jaxmindcomic",
+        "jaxmindtrapped"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "group_of_states",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Jax",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Review sequence grouping; do not count an extra costume in addition to the listed four state IDs."
+    },
+    {
+      "variantId": "zooble__ep02_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep03_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep04_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep05_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep06_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep07_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep08_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "zooble__ep09_assembly",
+      "entityId": "zooble",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Zooble",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "caine__red_program",
+      "entityId": "caine",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Caine",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "caine__low_poly",
+      "entityId": "caine",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "caine__multi_armed",
+      "entityId": "caine",
+      "archiveIds": [
+        "monstrouscaine"
+      ],
+      "mappedIds": [
+        "monstrouscaine"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "caine__music_forms",
+      "entityId": "caine",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "caine__post_finale",
+      "entityId": "caine",
+      "archiveIds": [
+        "groundedcaine"
+      ],
+      "mappedIds": [
+        "groundedcaine"
+      ],
+      "confidence": "medium_named_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding. Exact image/state match uninspected."
+    },
+    {
+      "variantId": "bubble__giant",
+      "entityId": "bubble",
+      "archiveIds": [
+        "bubble"
+      ],
+      "mappedIds": [
+        "bubble"
+      ],
+      "confidence": "partial_identity_scale_state",
+      "mappingKind": "scale_state_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "Same Bubble identity at another scale. Inspect actual frame for any shape change; size alone does not prove need for another bitmap or costume.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "gloink_queen__glitched",
+      "entityId": "gloink_queen",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloink_Queen",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "gloinks__glitched",
+      "entityId": "gloinks",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloinks",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "gloinks__shape_variations",
+      "entityId": "gloinks",
+      "archiveIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "mappedIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Gloinks",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "gummigoo__spudsys_customer",
+      "entityId": "gummigoo",
+      "archiveIds": [
+        "gummigoo"
+      ],
+      "mappedIds": [
+        "gummigoo"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "same_design_reappearance",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Fast_Food_Masquerade",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Later reappearance of existing NPC; do not create a second identity or count an extra costume without visual changes."
+    },
+    {
+      "variantId": "gummigoo__nightmare",
+      "entityId": "gummigoo",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "max__spudsys_customer",
+      "entityId": "max",
+      "archiveIds": [
+        "max"
+      ],
+      "mappedIds": [
+        "max"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "same_design_reappearance",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Fast_Food_Masquerade",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Later reappearance of existing NPC; do not create a second identity or count an extra costume without visual changes."
+    },
+    {
+      "variantId": "max__nightmare",
+      "entityId": "max",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "chad__spudsys_customer",
+      "entityId": "chad",
+      "archiveIds": [
+        "chad"
+      ],
+      "mappedIds": [
+        "chad"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "same_design_reappearance",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Fast_Food_Masquerade",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Later reappearance of existing NPC; do not create a second identity or count an extra costume without visual changes."
+    },
+    {
+      "variantId": "chad__nightmare",
+      "entityId": "chad",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Hjsakldfhl",
+        "https://www.youtube.com/watch?v=DMNlzf8PiEM"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "abel__faceless",
+      "entityId": "abel",
+      "archiveIds": [
+        "abelmannequin",
+        "peekingmannequin"
+      ],
+      "mappedIds": [
+        "abelmannequin",
+        "peekingmannequin"
+      ],
+      "confidence": "medium_named_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Abel",
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding. Exact image/state match uninspected."
+    },
+    {
+      "variantId": "abel__smiley_face",
+      "entityId": "abel",
+      "archiveIds": [
+        "abel",
+        "abelfullbody"
+      ],
+      "mappedIds": [
+        "abel",
+        "abelfullbody"
+      ],
+      "confidence": "medium_named_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Abel",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding. Exact image/state match uninspected."
+    },
+    {
+      "variantId": "dr_football__jump_scare_face",
+      "entityId": "dr_football",
+      "archiveIds": [
+        "drfootball"
+      ],
+      "mappedIds": [
+        "drfootball"
+      ],
+      "confidence": "existing_prop_identity_episode_frame_pending",
+      "mappingKind": "existing_prop_or_partial_reference",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+      ],
+      "notes": "Existing archive prop/identity covers this row. Albert standee and Dr. Football mask source cells visually inspected; exact series frame remains unverified. Logo is same mascot partial reference, plastic mask existing ID is a prop, not another character.",
+      "requiresNewAsset": false,
+      "countsAsMissingCostume": false
+    },
+    {
+      "variantId": "blue_ai__separated",
+      "entityId": "blue_ai",
+      "archiveIds": [
+        "blueai"
+      ],
+      "mappedIds": [
+        "blueai"
+      ],
+      "confidence": "medium_named_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Remember",
+        "https://www.youtube.com/watch?v=PVy-bcTsO8A"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding. Exact image/state match uninspected."
+    },
+    {
+      "variantId": "gummy_elephant__office_skeleton",
+      "entityId": "gummy_elephant",
+      "archiveIds": [],
+      "mappedIds": [],
+      "confidence": "unmapped_needs_frame_review",
+      "mappingKind": "no_exact_asset_id",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+        "https://www.youtube.com/watch?v=oaOG1xOk7XY"
+      ],
+      "notes": "No exact state/costume ID found in current archive; check frames before creating a separate asset. Unmatched research candidate, not automatically a confirmed absent costume; inspect visible change and duplication before production.",
+      "requiresNewAsset": null,
+      "countsAsMissingCostume": null
+    },
+    {
+      "variantId": "mannequins__spudsys_customers",
+      "entityId": "mannequins",
+      "archiveIds": [
+        "spudsycustomer",
+        "stupidburgermannequin",
+        "cerealmannequin"
+      ],
+      "mappedIds": [
+        "spudsycustomer",
+        "stupidburgermannequin",
+        "cerealmannequin"
+      ],
+      "confidence": "high_identity_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding."
+    },
+    {
+      "variantId": "mannequins__audience",
+      "entityId": "mannequins",
+      "archiveIds": [
+        "committeemember"
+      ],
+      "mappedIds": [
+        "committeemember"
+      ],
+      "confidence": "medium_named_match",
+      "mappingKind": "explicit_alias",
+      "needsFrameReview": true,
+      "sources": [
+        "https://tadc.fandom.com/wiki/Mannequins",
+        "https://www.youtube.com/watch?v=mOvhHim78YA"
+      ],
+      "notes": "Exact named-state mapping; source-frame verification remains outstanding. Exact image/state match uninspected."
+    }
+  ],
+  "deduplicationGroups": [
+    {
+      "entityId": "abel",
+      "archiveIds": [
+        "abel",
+        "abelmannequin",
+        "abelfullbody",
+        "peekingmannequin"
+      ],
+      "reason": "One canonical identity represented by several archive assets. Peeking Mannequin alias requires shot verification."
+    },
+    {
+      "entityId": "evil_pomni",
+      "archiveIds": [
+        "evilpomni",
+        "rivalbaseballpomni"
+      ],
+      "reason": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "evil_jax",
+      "archiveIds": [
+        "eviljax",
+        "rivalbaseballjax"
+      ],
+      "reason": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "evil_ragatha",
+      "archiveIds": [
+        "evilragatha",
+        "rivalbaseballragatha"
+      ],
+      "reason": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "coach_dictatorer",
+      "archiveIds": [
+        "evilkinger",
+        "rivalbaseballkinger"
+      ],
+      "reason": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "bazooble",
+      "archiveIds": [
+        "evilzooble",
+        "rivalbaseballzooble"
+      ],
+      "reason": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "evil_orbsman",
+      "archiveIds": [
+        "evilorbsman",
+        "rivalbaseballpinkgiant"
+      ],
+      "reason": "Two existing asset IDs represent one episode-5 Evil Big Tops identity; keep both assets but count one canonical identity."
+    },
+    {
+      "entityId": "gloinks",
+      "archiveIds": [
+        "gloinkstar",
+        "gloinkcube",
+        "gloinkpyramid",
+        "gloinkcrescent",
+        "gloinkpin",
+        "gloinkround"
+      ],
+      "reason": "One creature family; six existing shape IDs. Their source shapes still require frame verification."
+    },
+    {
+      "entityId": "mannequins",
+      "archiveIds": [
+        "mannequin",
+        "redmannequin",
+        "orangemannequin",
+        "yellowmannequin",
+        "magentamannequin"
+      ],
+      "reason": "One NPC family with several existing colour/role assets; do not count each as a newly discovered individual."
+    },
+    {
+      "entityId": "candy_guards",
+      "archiveIds": [
+        "candyguardcyan",
+        "candyguardblue",
+        "candyguardpurple"
+      ],
+      "reason": "Identity mapping only; no new visual fidelity approval."
+    }
+  ],
+  "existingArchiveUnmappedInResearch": [
+    {
+      "id": "ganglekawaii",
+      "name": "Kawaii Gangle",
+      "category": "variant",
+      "baseFighterId": "gangle",
+      "sourceAge": "Variante",
+      "archiveKind": null
+    },
+    {
+      "id": "darkduojax",
+      "name": "Dark Duo Jax",
+      "category": "variant",
+      "baseFighterId": "jax",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "darkduogangle",
+      "name": "Dark Duo Gangle",
+      "category": "variant",
+      "baseFighterId": "gangle",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "maidragatha",
+      "name": "Maid Ragatha",
+      "category": "variant",
+      "baseFighterId": "ragatha",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "maidpomni",
+      "name": "Maid Pomni",
+      "category": "variant",
+      "baseFighterId": "pomni",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "maidgangle",
+      "name": "Maid Gangle",
+      "category": "variant",
+      "baseFighterId": "gangle",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "jaxgirl",
+      "name": "Jax Girl",
+      "category": "variant",
+      "baseFighterId": "jax",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "japanesegummigoo",
+      "name": "Japanese Gummigoo",
+      "category": "variant",
+      "baseFighterId": "gummigoo",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowpomni",
+      "name": "Shadow Pomni",
+      "category": "variant",
+      "baseFighterId": "pomni",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowjax",
+      "name": "Shadow Jax",
+      "category": "variant",
+      "baseFighterId": "jax",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowragatha",
+      "name": "Shadow Ragatha",
+      "category": "variant",
+      "baseFighterId": "ragatha",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowkinger",
+      "name": "Shadow Kinger",
+      "category": "variant",
+      "baseFighterId": "kinger",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowgangle",
+      "name": "Shadow Gangle",
+      "category": "variant",
+      "baseFighterId": "gangle",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowzooble",
+      "name": "Shadow Zooble",
+      "category": "variant",
+      "baseFighterId": "zooble",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "shadowcaine",
+      "name": "Shadow Caine",
+      "category": "variant",
+      "baseFighterId": "caine",
+      "sourceAge": "Variante cauchemar",
+      "archiveKind": null
+    },
+    {
+      "id": "horrorghost",
+      "name": "Horror Ghost Lady",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Variante fan",
+      "archiveKind": "unassigned-art"
+    },
+    {
+      "id": "horrormonster",
+      "name": "Horror Screaming Monster",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Variante fan",
+      "archiveKind": "unassigned-art"
+    },
+    {
+      "id": "horrorpomnivoid",
+      "name": "Horror Pomni Void-Eyes",
+      "category": "variant",
+      "baseFighterId": "pomni",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "horrorpomnispiral",
+      "name": "Horror Pomni Spiral-Eyes",
+      "category": "variant",
+      "baseFighterId": "pomni",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "horrorpomniskull",
+      "name": "Horror Pomni Skull-Mask",
+      "category": "variant",
+      "baseFighterId": "pomni",
+      "sourceAge": "Variante fan",
+      "archiveKind": null
+    },
+    {
+      "id": "themachine",
+      "name": "The Machine",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Promotion / hors timeline",
+      "archiveKind": "unassigned-art"
+    },
+    {
+      "id": "gloinkqueenscale",
+      "name": "Gloink Queen True Scale",
+      "category": "variant",
+      "baseFighterId": "gloinkqueen",
+      "sourceAge": "PNJ geant",
+      "archiveKind": null
+    },
+    {
+      "id": "jeffery",
+      "name": "Jeffery",
+      "category": "fighter",
+      "baseFighterId": "jeffery",
+      "sourceAge": "Extension de Caine",
+      "archiveKind": null
+    },
+    {
+      "id": "bonepastor",
+      "name": "The Bone Pastor",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Production / hors timeline",
+      "archiveKind": "unassigned-art"
+    },
+    {
+      "id": "paintedmasks",
+      "name": "Painted Masks",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Decor de tourment - Ep. 8",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "zoobleparts",
+      "name": "Body Parts and Mirrors",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Decor de tourment - Ep. 8",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "laughingshadows",
+      "name": "Laughing Shadows",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Entites de tourment - Ep. 8",
+      "archiveKind": "projection"
+    },
+    {
+      "id": "jaxfather",
+      "name": "Jax's Father",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Archive humaine - Ep. 9",
+      "archiveKind": "other-person"
+    },
+    {
+      "id": "jaxmother",
+      "name": "Jax's Mother",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Archive humaine - Ep. 9",
+      "archiveKind": "other-person"
+    },
+    {
+      "id": "abigailfriendone",
+      "name": "Abigail's Friend A",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Humain du monde reel - Ep. 9",
+      "archiveKind": "other-person"
+    },
+    {
+      "id": "abigailfriendtwo",
+      "name": "Abigail's Friend B",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Humain du monde reel - Ep. 9",
+      "archiveKind": "other-person"
+    },
+    {
+      "id": "bestchildren",
+      "name": "Anne and Sam Best",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Famille humaine - Ep. 9",
+      "archiveKind": "other-person"
+    },
+    {
+      "id": "cellarabstraction",
+      "name": "Abstraction du Cellar",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Phenomene d abstraction",
+      "archiveKind": "abstraction"
+    },
+    {
+      "id": "aquaticabstraction",
+      "name": "Abstraction aquatique",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Phenomene d abstraction - Ep. 9",
+      "archiveKind": "abstraction"
+    },
+    {
+      "id": "floatingworm",
+      "name": "Floating Worm",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Figurant - Ep. 9",
+      "archiveKind": "separate-character"
+    },
+    {
+      "id": "creditsfish",
+      "name": "Credits Fish",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Figurant de generique - Ep. 9",
+      "archiveKind": "separate-character"
+    },
+    {
+      "id": "stabbedragdolls",
+      "name": "Stabbed Ragdolls",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Decor de tourment - Ep. 8",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "coiledcentipedes",
+      "name": "Coiled Centipedes",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Decor de tourment - Ep. 8",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "unusedbrainscans",
+      "name": "Unused Brainscans",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Artefact C&A - Ep. 9",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "peeledjax",
+      "name": "Jax - Skin Peeled Off",
+      "category": "variant",
+      "baseFighterId": "jax",
+      "sourceAge": "Variante canon - Ep. 8",
+      "archiveKind": null
+    },
+    {
+      "id": "destinybest",
+      "name": "Destiny Best",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Contrepartie humaine - Ep. 9",
+      "archiveKind": "other-person"
+    },
+    {
+      "id": "whatifragatha",
+      "name": "What-if Ragatha abstraction",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Projection mentale - Ep. 9",
+      "archiveKind": "projection"
+    },
+    {
+      "id": "whatifgangle",
+      "name": "What-if Gangle abstraction",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Projection mentale - Ep. 9",
+      "archiveKind": "projection"
+    },
+    {
+      "id": "jumbledpomni",
+      "name": "Pomni jumbled",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "VFX canon - Ep. 9",
+      "archiveKind": "effect"
+    },
+    {
+      "id": "angelhead",
+      "name": "Mounted Angel Head",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Artefact canon - Ep. 3",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "mouthlesspomni",
+      "name": "Pomni sans bouche",
+      "category": "variant",
+      "baseFighterId": "pomni",
+      "sourceAge": "Etat canon - Ep. 8",
+      "archiveKind": null
+    },
+    {
+      "id": "mouthlessjax",
+      "name": "Jax sans bouche",
+      "category": "variant",
+      "baseFighterId": "jax",
+      "sourceAge": "Etat canon - Ep. 8",
+      "archiveKind": null
+    },
+    {
+      "id": "mouthlesszooble",
+      "name": "Zooble sans bouche",
+      "category": "variant",
+      "baseFighterId": "zooble",
+      "sourceAge": "Etat canon - Ep. 8",
+      "archiveKind": null
+    },
+    {
+      "id": "inertbubble",
+      "name": "Bubble inerte",
+      "category": "variant",
+      "baseFighterId": "bubble",
+      "sourceAge": "Etat canon - Ep. 9",
+      "archiveKind": null
+    },
+    {
+      "id": "healingbutterfly",
+      "name": "Healing Butterfly",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "PNJ canon - Ep. 6",
+      "archiveKind": "separate-character"
+    },
+    {
+      "id": "plasticganglemask",
+      "name": "Plastic Gangle Mask",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "Artefact canon - Ep. 4",
+      "archiveKind": "prop"
+    },
+    {
+      "id": "charredshrimp",
+      "name": "Charred Shrimp Trace",
+      "category": "archive",
+      "baseFighterId": null,
+      "sourceAge": "VFX canon - Ep. 7",
+      "archiveKind": "effect"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "identity_count",
+      "ids": [
+        "evilpomni",
+        "rivalbaseballpomni",
+        "eviljax",
+        "rivalbaseballjax",
+        "evilragatha",
+        "rivalbaseballragatha",
+        "evilkinger",
+        "rivalbaseballkinger",
+        "evilzooble",
+        "rivalbaseballzooble",
+        "evilorbsman",
+        "rivalbaseballpinkgiant"
+      ],
+      "note": "12 asset records correspond to 6 NPC identities, not 12 distinct canonical characters."
+    },
+    {
+      "severity": "identity_count",
+      "ids": [
+        "abel",
+        "abelmannequin",
+        "abelfullbody",
+        "peekingmannequin"
+      ],
+      "note": "These target the same NPC identity; preserve separate assets and inspect peeking alias."
+    },
+    {
+      "severity": "canonical_scope",
+      "ids": [
+        "pinkcyclops",
+        "yellowclown",
+        "oyster",
+        "bulbcreature"
+      ],
+      "note": "Source body incomplete. Existing fighter art must remain labelled project reconstruction where not visible."
+    },
+    {
+      "severity": "source_correction",
+      "ids": [
+        "blueai"
+      ],
+      "note": "Program first appears in ep8; ep9 is not its first series appearance."
+    },
+    {
+      "severity": "lore_classification",
+      "ids": [
+        "drfootball"
+      ],
+      "note": "Character NPC; current prop classification should not be presented as canonical taxonomy."
+    },
+    {
+      "severity": "naming",
+      "ids": [
+        "evilkinger",
+        "evilzooble"
+      ],
+      "note": "Keep stable IDs; canonical display identities are Coach Dictatorer and Bazooble."
+    },
+    {
+      "severity": "review_scope",
+      "ids": [
+        "mouthlesszooble"
+      ],
+      "note": "Zooble normally has no mouth; a special mouthless variant cannot be justified by mouth absence alone."
+    },
+    {
+      "severity": "source_scope",
+      "ids": [
+        "darkduojax",
+        "darkduogangle",
+        "maidragatha",
+        "maidpomni",
+        "maidgangle",
+        "jaxgirl",
+        "japanesegummigoo",
+        "horrorpomnivoid",
+        "horrorpomnispiral",
+        "horrorpomniskull"
+      ],
+      "note": "Existing archive itself classifies these as fan variants; do not include in completed series-canon count."
+    },
+    {
+      "reviewRefinement": "Mapped 12 portraits as partial identity references; reconciled existing props, scale-only and equipment candidates without visual certification. Real unmatched outfits/states retained."
+    }
+  ],
+  "stats": {
+    "entities": 62,
+    "mappedEntities": 61,
+    "variantCandidates": 168,
+    "mappedVariantCandidates": 129,
+    "existingArchiveEntries": 179,
+    "unmappedExistingArchiveEntries": 52,
+    "unmappedVariantCandidates": 39,
+    "partialPortraitReferences": 12,
+    "confirmedMissingCostumes": null
+  }
+}

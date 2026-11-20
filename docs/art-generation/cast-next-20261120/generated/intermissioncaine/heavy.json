@@ -1,0 +1,78 @@
+{
+  "schema": "encore-native-art-next/v1",
+  "id": "intermissioncaine-heavy",
+  "appearanceId": "intermissioncaine",
+  "slot": "heavy",
+  "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.png",
+  "targetFile": "assets/encore/poses/intermissioncaine/heavy.png",
+  "createdAt": "2026-11-20T09:39:22.401140+00:00",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-80b8be33-dc32-4e6e-8cb4-9f6111138ceb.png",
+  "sourceGenerationId": "exec-80b8be33-dc32-4e6e-8cb4-9f6111138ceb",
+  "sha256": "a9cb44b24a63ab8526c9ed937835a504b628dea81d500d705cf1b3e6ddc8a816",
+  "bytes": 1407275,
+  "dimensions": [
+    1402,
+    1122
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    28,
+    63,
+    1366,
+    1091
+  ],
+  "alphaThreshold": "alpha >= 12",
+  "fullyTransparentPixels": 764660,
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "prompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the APPROVED SELECTION SEED: strictly preserve its identity, proportions, colors, exact anatomy and polished 2D style. Reference 2 supplies the official product details only. Make a genuinely different pose, never a mirrored or cropped copy of selection. DESIGN LOCK: ONE entire Intermission Caine: a giant upright open orange-coral denture mouth with clean white teeth and orange interior. The mouth is the entire body: NO human torso, jacket, neck, legs or feet. Exactly TWO eyes: one ROUND WHITE eye with BLUE iris high on viewer-right, and one WHITE STAR-SHAPED eye with GREEN iris lower/front-left inside the mouth. A small BLACK TOP HAT with RED band rests on the star-shaped eye. Exactly FOUR separate WHITE GLOVE HANDS around the mouth, two on each side, without human arms or sleeves; one upper-left hand holds a BLACK CANE with a GOLD SPHERICAL KNOB. Exactly three small GOLD STAR ornaments stay close behind the denture silhouette as in the product. Preserve this one coherent magical character and its unusual anatomy. Never replace it by a normal ringmaster body, six-armed Caine, Bubble cluster, or another character. POSE: HEAVY ATTACK toward screen RIGHT: mouth rotates into a forceful forward diagonal and the cane hand drives the single cane downward and forward. Other three gloves counterbalance in distinct positions. Preserve exactly four hands; no duplicate cane, arms, legs, weapon effects or scene. FOUR-HAND VISIBILITY MAP: exactly 1 cane-gripping glove at upper-left, 2 a separate free glove lower-left, 3 a separate free glove upper-right, 4 a separate free glove LOWER-RIGHT beneath glove 3. Adjust these four distinct positions to the requested pose while keeping all four countable. Do not merge, omit or hide a glove. No flesh or long arms: detached gloves only. Leave visible transparent gaps between the two gloves on each side.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+    "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+      "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "bytes": 1315027,
+      "kind": "accepted-native-selection-seed"
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+      "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+      "bytes": 3889495,
+      "kind": "official-product-reference",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+      "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "queueFile": "docs/art-generation/cast-next-20261120/research/states/generation-queue-three-families.json",
+  "visualReview": {
+    "reviewer": "generate_jax_ragatha",
+    "status": "accepted",
+    "observations": [
+      "Exactly four detached gloves occupy distinct visible positions; upper-left glove swings one cane while other three counterbalance.",
+      "Both eyes and star-eye hat remain legible despite the foreground cane, with three gold ornaments attached near the silhouette.",
+      "Full mouth body, fingertips and cane ends remain inside transparent margins; no limbs, scene or weapon effects."
+    ],
+    "orientation": "Denture tilts down and forward to screen-right; cane strikes diagonally toward lower-right.",
+    "scope": "Original 2D pose adaptation from official merchandise; unchanged owner and combat kit."
+  },
+  "originalQueuedPrompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the APPROVED SELECTION SEED: strictly preserve its identity, proportions, colors, exact anatomy and polished 2D style. Reference 2 supplies the official product details only. Make a genuinely different pose, never a mirrored or cropped copy of selection. DESIGN LOCK: ONE entire Intermission Caine: a giant upright open orange-coral denture mouth with clean white teeth and orange interior. The mouth is the entire body: NO human torso, jacket, neck, legs or feet. Exactly TWO eyes: one ROUND WHITE eye with BLUE iris high on viewer-right, and one WHITE STAR-SHAPED eye with GREEN iris lower/front-left inside the mouth. A small BLACK TOP HAT with RED band rests on the star-shaped eye. Exactly FOUR separate WHITE GLOVE HANDS around the mouth, two on each side, without human arms or sleeves; one upper-left hand holds a BLACK CANE with a GOLD SPHERICAL KNOB. Exactly three small GOLD STAR ornaments stay close behind the denture silhouette as in the product. Preserve this one coherent magical character and its unusual anatomy. Never replace it by a normal ringmaster body, six-armed Caine, Bubble cluster, or another character. POSE: HEAVY ATTACK toward screen RIGHT: mouth rotates into a forceful forward diagonal and the cane hand drives the single cane downward and forward. Other three gloves counterbalance in distinct positions. Preserve exactly four hands; no duplicate cane, arms, legs, weapon effects or scene."
+}

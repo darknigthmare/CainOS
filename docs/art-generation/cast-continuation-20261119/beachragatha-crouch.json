@@ -1,0 +1,25 @@
+{
+  "id": "beachragatha",
+  "slot": "crouch",
+  "file": "assets/encore/poses/beachragatha/crouch.png",
+  "generator": "OpenAI built-in image_gen",
+  "generatedOn": "2026-11-19",
+  "prompt": "Create ONE finished transparent full-body game character sprite, ONE character only, of Beach Ragatha, using the attached APPROVED selection image as the exact model sheet. Preserve the same character, proportions, costume and polished illustrated 2.5D game style. Adult-proportioned cloth ragdoll, red yarn bob, periwinkle bandana tied into a bow with small pink flower, blue crossed button eye on viewer-left, normal white/black eye on viewer-right, orange-red triangular nose, periwinkle bathing top. The PINK HORSE swim ring stays around her waist in every pose, with pink horse head, white muzzle, purple mane and tail, NO HORN; its long axis changes naturally with the body. Beige cloth legs, rounded bare cloth feet, mitten cloth hands. Keep exactly two legs and two arms; never add a person, detached limb, extra face or character. No water, beach, scenery, platform, shadows, effects, lettering, symbols or props. Every extremity, bow, hair, ring, horse head and feet visible with clear margin on all sides. Use native transparent alpha for the whole background. This is an original fan-game action pose based on an official merchandise costume, not an episode screenshot. Face generally to screen-right. A clearly readable CROUCH pose facing screen-right, knees bent deeply under the horse ring, body lowered, one mitten hand guarding, ring remains around the waist. Both legs and feet visibly distinct and complete, no cropping.",
+  "referenceImage": "assets/encore/selection/beachragatha.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series"
+  ],
+  "transparentBackground": true,
+  "nativeOutputPreserved": true,
+  "sha256": "23ad5ec6125743340c8d4dbb2fc91230648278945bee8e10fc3da660a1582e87",
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "alphaRange": [
+    0,
+    255
+  ],
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-134179c2-e162-420c-a4db-7872f8c3c138.png",
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu. Bouée cheval conservée, sans corne ; deux bras et deux jambes de chiffon."
+}

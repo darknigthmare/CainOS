@@ -1,0 +1,399 @@
+{
+  "schema": "encore-workbook-recovery/v1",
+  "createdAt": "2026-11-20T07:18:57.528666+00:00",
+  "status": "export_blocked_memory",
+  "publication": {
+    "workbookPublished": false,
+    "trackerDataPublished": false,
+    "installedArtifactsUnchanged": true,
+    "releaseReviewed": false,
+    "fullCiExecuted": false
+  },
+  "scope": {
+    "appearanceRevision": "ce7ceeb74d89f135ac33d906b99c05c5392e3083",
+    "equivalentLocalCommit": "bdeb7f261f0e5634d31806a619499f802d6e0755",
+    "modelArtFiles": 5485,
+    "laterPropsIncluded": false,
+    "laterPropsEvidence": "docs/art-generation/props-integration-20261120/verification.json",
+    "currentPropManifestImages": 5491,
+    "currentPropManifestBytes": 2724652669
+  },
+  "installedArtifacts": [
+    {
+      "file": "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+      "bytes": 751648,
+      "beforeSHA256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+      "afterSHA256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+      "byteIdentical": true
+    },
+    {
+      "file": "docs/combat-tracker-data.json",
+      "bytes": 4426869,
+      "beforeSHA256": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+      "afterSHA256": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+      "byteIdentical": true
+    },
+    {
+      "file": "docs/combat-workbook-verification.json",
+      "bytes": 102781,
+      "beforeSHA256": "8bf3a4ba676c4e7db7050757a0517b3d461186df6c01d7e65c7f743dddc55b4c",
+      "afterSHA256": "8bf3a4ba676c4e7db7050757a0517b3d461186df6c01d7e65c7f743dddc55b4c",
+      "byteIdentical": true
+    },
+    {
+      "file": "docs/combat-qa-evidence-0.7.0.json",
+      "bytes": 588368,
+      "beforeSHA256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+      "afterSHA256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+      "byteIdentical": true
+    }
+  ],
+  "inputs": [
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation-checkpoint.json.gz",
+      "bytes": 767313,
+      "sha256": "ee313dcbf58045bf0a3be897d8901c8b483b5e32ef5f2fa76c5747e2654c778d"
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-review.json",
+      "bytes": 6666,
+      "sha256": "c86ec2be97d98fac8885d03b46511355a2c3bd862d9a97e7063177ee09562c0c"
+    }
+  ],
+  "scripts": [
+    {
+      "file": "scripts/inspect-combat-workbook-native.py",
+      "bytes": 20371,
+      "sha256": "d480185589442f9db5d18fd9a26079fdfbbfcf65a5a79c8ba2af1a6aead8b6f2"
+    },
+    {
+      "file": "scripts/recover-combat-workbook-native.mjs",
+      "bytes": 25103,
+      "sha256": "406b476a1314bf0ebacff46356d4870bb4bbb2036e4bd77f5829ff33da6db244"
+    },
+    {
+      "file": "scripts/update-combat-continuation-20261120-workbook.mjs",
+      "bytes": 57663,
+      "sha256": "68746d3eadec93f15cffe90b3e613d37d132aca2c07886f1a3c1bdb70a2d507e"
+    }
+  ],
+  "preparedCheckpoints": [
+    {
+      "file": "docs/art-generation/workbook-recovery-20261120/recreated-model.json.gz",
+      "bytes": 740829,
+      "sha256": "974b08614078cc84e0d32d54d407ca09257728b0008d840f14fa5d780da4df43",
+      "uncompressedBytes": 9954189,
+      "uncompressedSHA256": "71417e3269e7256b1b491ec56eeb8449ef5b40f272dbc56d021d4992e5724d09",
+      "kind": "public-workbook-model",
+      "published": false
+    },
+    {
+      "file": "docs/art-generation/workbook-recovery-20261120/combat-tracker-data.prepared.json.gz",
+      "bytes": 371222,
+      "sha256": "cf4c621e37dac3a6bff592d876603b7ab1eb6f847260289ef752be7534ff85eb",
+      "uncompressedBytes": 4570385,
+      "uncompressedSHA256": "9d4b3cd0e4482dfb9b532e75ea1971e7137401d4114587e7cd9761e617ce17dc",
+      "kind": "prepared-companion-data",
+      "published": false
+    }
+  ],
+  "preparationPlan": {
+    "file": "docs/art-generation/workbook-recovery-20261120/recovery-plan.json",
+    "bytes": 11485,
+    "sha256": "1ba0b58a5c07c2f479bb597b3ae70ede2735b388d51fba60a6ad61d49d98cfde"
+  },
+  "authoringResult": {
+    "file": "docs/art-generation/workbook-recovery-20261120/authoring-result.json",
+    "bytes": 449,
+    "sha256": "4b712f6da19f0d0ef2565e5e834ac445fe5840470ee8098480ebb617cab4d906"
+  },
+  "snapshotHashes": {
+    "file": "docs/art-generation/workbook-recovery-20261120/native-snapshot-hashes.json",
+    "bytes": 3627,
+    "sha256": "65066bbc5afe1d947dc938dcf69ddf12930bac45554f591d52036ab1a9afbc7f"
+  },
+  "method": {
+    "sourceRead": "Python stdlib zipfile/ElementTree, read-only XML",
+    "authoring": "Primary @oai/artifact-tool Workbook.create and documented public methods only",
+    "modelSerialization": "Workbook.toProto; streamed JSON",
+    "modelReload": "Workbook.load; not SpreadsheetFile.importXlsx",
+    "otherWorkbookWritersUsed": false,
+    "xmlWrittenOrModified": false
+  },
+  "checked": {
+    "sourceCellsConstrained": 78606,
+    "sourceOldRowsAndNotesInPreparedInputs": true,
+    "existingDimensionsAndNativeFeaturesInPreparedInputs": true,
+    "independentExpectedFormulaValues": 42,
+    "artifactFormulaValuesMatched": 42,
+    "representativeStatusChangeAndRestore": true,
+    "publicModelSerializationAndLoad": true
+  },
+  "notCompleted": {
+    "savedXlsxExport": true,
+    "savedXlsxNativeSemanticComparison": true,
+    "savedXlsxReimport": true,
+    "savedXlsxVisualReview": true,
+    "laterPropWorkbookDelta": true,
+    "publication": true
+  },
+  "preparedCounts": {
+    "sheets": 11,
+    "nativeTables": 10,
+    "productionBefore": 3100,
+    "productionAfter": 3115,
+    "qaBefore": 2260,
+    "qaAfter": 2265,
+    "sourcesBefore": 120,
+    "sourcesAfter": 135,
+    "costumes": 443,
+    "fighters": 54,
+    "archiveVariants": 51,
+    "fidelityRecords": 681,
+    "newAppearances": 6,
+    "costumeAdditions": 14,
+    "newArtFiles": 66,
+    "cumulativeAdditionArtFiles": 154,
+    "pendingAppearances": 9,
+    "pendingArtFiles": 36,
+    "pendingMissingFiles": 63,
+    "newProductionImplemented": 6,
+    "newProductionPartial": 9
+  },
+  "attempts": [
+    {
+      "purpose": "Source import while a separate Canvas process had been active",
+      "phase": "serialize-prepared",
+      "returnCode": -9,
+      "elapsedSeconds": 4.417272364997189,
+      "maximumRSSKiB": 445852,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--max-old-space-size=176",
+        "--max-semi-space-size=1",
+        "--optimize-for-size",
+        "--no-wasm-tier-up",
+        "--expose-gc",
+        "/tmp/cainos-workbook-recovery-20261120-t60p1y52/builder.mjs",
+        "--repo-root",
+        "/workspace/scratch/5f5114b49696/CainOS",
+        "--output-dir",
+        "/workspace/scratch/5f5114b49696/outputs/encore-workbook-recovery-20261120",
+        "--confirmed-runtime",
+        "--serialize-prepared"
+      ],
+      "environmentOverrides": {
+        "MALLOC_ARENA_MAX": "2"
+      },
+      "log": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/serialize-prepared-before-exclusive.log",
+        "bytes": 159,
+        "sha256": "398fc63852e042e0a85d14813a6741b34a19696285509e7d44a8bcf20523e4d9"
+      },
+      "resourceRecord": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/serialize-prepared-before-exclusive-resources.json",
+        "bytes": 700,
+        "sha256": "0edf262b2ffe22cff17c04f095b97b46d615e9746ce6d7e4c7b074bdc28f9591"
+      }
+    },
+    {
+      "purpose": "Exclusive source import",
+      "phase": "serialize-prepared",
+      "returnCode": -9,
+      "elapsedSeconds": 5.597056856997369,
+      "maximumRSSKiB": 479340,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--max-old-space-size=176",
+        "--max-semi-space-size=1",
+        "--optimize-for-size",
+        "--no-wasm-tier-up",
+        "--expose-gc",
+        "/tmp/cainos-workbook-recovery-20261120-t60p1y52/builder.mjs",
+        "--repo-root",
+        "/workspace/scratch/5f5114b49696/CainOS",
+        "--output-dir",
+        "/workspace/scratch/5f5114b49696/outputs/encore-workbook-recovery-20261120",
+        "--confirmed-runtime",
+        "--serialize-prepared"
+      ],
+      "environmentOverrides": {
+        "MALLOC_ARENA_MAX": "2"
+      },
+      "log": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/serialize-prepared.log",
+        "bytes": 840,
+        "sha256": "745361a31dbcd19a7af9dfd1326bfc23cae8c2f3ad9d3c5c807d467d6a845b2d"
+      },
+      "resourceRecord": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/serialize-prepared-resources.json",
+        "bytes": 700,
+        "sha256": "42d1341b9c88ca6ac723d3a8118142b6fe3e2110bac87361601a25e5354d9715"
+      }
+    },
+    {
+      "purpose": "Workbook.create then direct export, heap176",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--max-old-space-size=176",
+        "--max-semi-space-size=1",
+        "--optimize-for-size",
+        "--no-wasm-tier-up",
+        "--expose-gc",
+        "/tmp/cainos-workbook-recovery-20261120-t60p1y52/recovery.mjs",
+        "--repo-root",
+        "/workspace/scratch/5f5114b49696/CainOS",
+        "--build"
+      ],
+      "returnCode": -6,
+      "elapsedSeconds": 50.19558387000143,
+      "maximumRSSKiB": 402660,
+      "log": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/create-build.log",
+        "bytes": 3398,
+        "sha256": "f62014e9922c6580c71a5870a655311e2160d13e65bf179804219c6bd38066be"
+      },
+      "resourceRecord": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/create-build-resources.json",
+        "bytes": 466,
+        "sha256": "6dd7a20884c6f0ccc278a34e8d48127a4790694959fe6cee9d6dfd4b18b379bf"
+      }
+    },
+    {
+      "purpose": "Workbook.create then public model serialization, heap256",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=1",
+        "--optimize-for-size",
+        "--no-wasm-tier-up",
+        "--expose-gc",
+        "/tmp/cainos-workbook-recovery-20261120-t60p1y52/recovery.mjs",
+        "--repo-root",
+        "/workspace/scratch/5f5114b49696/CainOS",
+        "--build",
+        "--serialize-only"
+      ],
+      "returnCode": 0,
+      "elapsedSeconds": 48.051071765003144,
+      "maximumRSSKiB": 335876,
+      "log": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/create-serialize.log",
+        "bytes": 2097,
+        "sha256": "c32a76ea65e3799d78c2e5cc859e52be47e578d083a27c333853e0addfbee3b3"
+      },
+      "resourceRecord": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/create-serialize-resources.json",
+        "bytes": 490,
+        "sha256": "17ad2f339f8e33d233d715ac8d77c4614cb04f2818dfc0cbaccf9cab09a26ca2"
+      }
+    },
+    {
+      "purpose": "Workbook.load then export, heap256",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=1",
+        "--optimize-for-size",
+        "--no-wasm-tier-up",
+        "--expose-gc",
+        "/tmp/cainos-workbook-recovery-20261120-t60p1y52/recovery.mjs",
+        "--repo-root",
+        "/workspace/scratch/5f5114b49696/CainOS",
+        "--export-model"
+      ],
+      "returnCode": -6,
+      "elapsedSeconds": 5.941113870998379,
+      "maximumRSSKiB": 485456,
+      "log": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/model-export.log",
+        "bytes": 1613,
+        "sha256": "4708eecb1d6c2e3074f8579ce17ae81a7c8ac1aa99a5eeba1f42f051ae3e6b02"
+      },
+      "resourceRecord": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/model-export-resources.json",
+        "bytes": 473,
+        "sha256": "307056f63e6eb3c91cb2d4c47bd9362e5468ddc25293fa89a639e3b008481a1e"
+      }
+    },
+    {
+      "purpose": "Workbook.load then export, heap320",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--max-old-space-size=320",
+        "--max-semi-space-size=1",
+        "--optimize-for-size",
+        "--no-wasm-tier-up",
+        "--expose-gc",
+        "/tmp/cainos-workbook-recovery-20261120-t60p1y52/recovery.mjs",
+        "--repo-root",
+        "/workspace/scratch/5f5114b49696/CainOS",
+        "--export-model"
+      ],
+      "returnCode": -9,
+      "elapsedSeconds": 6.532868863003387,
+      "maximumRSSKiB": 534064,
+      "log": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/model-export-320.log",
+        "bytes": 152,
+        "sha256": "5ebeb1ee6a335db481e2dd0eebac2b3ed530af612c80c69eb10d10b6019eeaf2"
+      },
+      "resourceRecord": {
+        "file": "docs/art-generation/workbook-recovery-20261120/attempts/model-export-320-resources.json",
+        "bytes": 473,
+        "sha256": "95092bff5d5fb20da886d370e743de9cde4709eea0c72f5496f6fb74487e2316"
+      }
+    }
+  ],
+  "runtime": {
+    "CODEX_PRIMARY_RUNTIME_BUNDLE_VERSION": "26.1117.11355",
+    "CODEX_PRIMARY_RUNTIME_ROOT": "/opt/codex/runtimes/codex-primary-runtime",
+    "CODEX_PRIMARY_RUNTIME_NODE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "CODEX_PRIMARY_RUNTIME_NODE_MODULES": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "CODEX_PRIMARY_RUNTIME_PYTHON": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+  },
+  "memoryConclusion": "Recreation removes the import bottleneck and public reload reduces retained V8 heap to about 71 MB; XLSX serialization still fails at 256 MB old space and is killed at 320 MB. The last attempt already used semi-space 1, model=null, gc, optimize-for-size, no-wasm-tier-up, and MALLOC_ARENA_MAX=2. No further identical attempt was made.",
+  "independentReview": {
+    "status": "prepared-public-model-matches-constrained-target",
+    "report": {
+      "file": "docs/art-generation/workbook-recovery-20261120/independent-model-review.json",
+      "bytes": 2967,
+      "sha256": "c7dccfd530a35fd8c50d77e313910d806201f3afabbd50dd8d2fdd731413b785"
+    },
+    "publicationApproved": false
+  },
+  "requiredBeforePublication": [
+    "Successful XLSX export",
+    "Exhaustive native comparison against the constrained target",
+    "Saved XLSX reimport with its exact checked scope recorded",
+    "Review all changed views",
+    "Separate current props delta with its own runtime evidence",
+    "Publish through workbook-publication.mjs; preserve historical reports"
+  ],
+  "limitations": [
+    "The prepared companion contains planned QA workbook-success text; it is not a published result and must never replace the installed JSON before all gates pass.",
+    "Formula checks and public model load do not prove an XLSX export or Excel desktop behavior.",
+    "SIGKILL is recorded as observed; no unsupported claim about an exact environment memory quota is made."
+  ],
+  "executedBuilderSnapshots": [
+    {
+      "file": "docs/art-generation/workbook-recovery-20261120/attempts/executed-recovery-builder.mjs.txt",
+      "bytes": 24752,
+      "sha256": "af33d0e5ffb5651dce10985fbaf64bafacbe3977d3e0bbef7a78943d39e5d8a0",
+      "scope": "Exact copy used for the failed public-model export attempts. The successful creation copy was not separately retained; subsequent changes added prepare-only assertions and did not change native authoring behavior."
+    },
+    {
+      "file": "docs/art-generation/workbook-recovery-20261120/attempts/executed-legacy-builder.mjs.txt",
+      "bytes": 57519,
+      "sha256": "a5191af3bca53a14431cd95febfdbf300a7f2397810f10734d4f8f76e17b81ea",
+      "scope": "Failed legacy source-import attempts; final updater also has an export destination guard"
+    }
+  ],
+  "readme": {
+    "file": "docs/art-generation/workbook-recovery-20261120/README.md",
+    "bytes": 6582,
+    "sha256": "9f07ee99d8940aad37f1f5e62348d2616ba8d681d319072c4328ab898105f1d5"
+  },
+  "finalizedAt": "2026-11-20T07:20:15.541196+00:00",
+  "recoveryCheckpointReady": true
+}

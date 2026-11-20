@@ -1,0 +1,49 @@
+{
+  "id": "abstractingpomni-selection",
+  "appearanceId": "abstractingpomni",
+  "slot": "selection",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+  "sourceGenerationId": "exec-7f9a4918-9022-40f6-bcd2-976c379577bd",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Correct this transparent full-body game illustration of Abstracting Pomni using reference 2 as exact design evidence. Keep all existing upper-body artwork, pose, costume, face, eye placement, hat crystals, arms, linework, cel shading and slender proportions unchanged. Change ONLY the two feet: the foot on the VIEWER'S LEFT must be the normal RED jester shoe with its yellow cuff; the foot on the VIEWER'S RIGHT must be the irregular dark crystal boot with a large concentric pastel eye and spikes. The source drawing currently has the foot transformation on the wrong side. Do not mirror the whole character. Preserve white lower legs. Keep the whole figure, all hat tips and both shoes entirely inside canvas with visibly clear transparent margins on all sides. True transparent RGBA background, no glow, floor, text, scene, second figure or extra effect. One complete character only.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-8e4bb708-6ddc-45bd-8810-9fed7db4c02f.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-7f9a4918-9022-40f6-bcd2-976c379577bd.png",
+  "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+  "dimensions": [
+    955,
+    1647
+  ],
+  "bytes": 1217005,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    21,
+    5,
+    942,
+    1619
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Approved after targeted correction: normal red shoe now on viewer-left, crystal eye-bearing shoe on viewer-right, matching the official asymmetric foot pattern. One pale normal face half with pinwheel iris, opposing crystal face/hat, viewer-left crystal arm and viewer-right blue glove retained. Complete figure, natural worried selection stance, crisp cel shading, all spikes/hat tips and feet inside canvas.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "rejectedAttempts": [
+    {
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-8e4bb708-6ddc-45bd-8810-9fed7db4c02f.png",
+      "reason": "Crystal shoe on wrong side of the body; corrected through built-in image generation."
+    }
+  ],
+  "targetFile": "assets/encore/selection/abstractingpomni.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

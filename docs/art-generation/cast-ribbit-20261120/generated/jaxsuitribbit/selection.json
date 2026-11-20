@@ -1,0 +1,71 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitribbit",
+  "fighterId": "ribbit",
+  "slot": "selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Asset type: ONE complete full-body selection sprite for a polished 2D fighting game.\nREFERENCE 1 is the exact OFFICIAL COSTUME, FACE AND COLOUR authority. Reference 2 is ONLY the game's slender limb proportions and clear dark contour/cel-shading style. Ignore its green/black glow completely; do not inherit any halo, background pixels, naked body, neck bow, or olive skin colour.\nDraw RIBBIT wearing the official JAX-SUIT. Ribbit remains a green anthropomorphic FROG: large raised oval eyes with black pupils and white eye surfaces, dark-violet half-closed upper eyelids, a pale mint muzzle, round pink cheeks with three tiny dark lower lashes, broad mischievous white grin divided into rectangular teeth. Bright clean green skin from reference 1, not olive. A pale LAVENDER full-body suit covers the body and all limbs; hood frames the frog face and has TWO upright softly rounded rabbit ears. A small hot-pink bow is attached at the base of the ANATOMICAL LEFT ear (on the right in the front-view official photo). CORAL-PINK overalls with exactly two yellow buttons, shoulder straps and one rectangular front pocket. YELLOW gloves on exactly two hands. Exactly two long slender lavender legs and rounded LAVENDER covered feet, as the product colours show. No yellow feet, no visible green hands or legs, no pink neck bow, no eye motifs on hood.\nPOSE: complete relaxed upright selection pose, body and face in readable three-quarter view facing SCREEN-RIGHT. Both feet separated, two arms naturally relaxed with one small expressive open-hand gesture, all costume details readable. Keep slender full-length game proportions but retain the large expressive frog head. One character only.\nRender polished hand-drawn 2D CEL SHADING, crisp dark outline, clean solid fully opaque colour inside the character. NOT a plush photo or 3D toy. TRUE TRANSPARENT RGBA canvas outside the silhouette, strictly zero opacity outside the clean silhouette except edge antialiasing. Generous transparent margins on ALL sides: at least 60 pixels beyond both ear tips, fingertips and both soles. No cropping, no scenery, no floor or floor shadow, no glow, no haze, no aura, no outer bloom, no checkerboard painted in, no text, no ring, no strap, no watermark. Entire figure visible from ears to soles. One head, two arms, two hands, two legs, two feet.",
+  "referencePaths": [
+    "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+    "assets/encore/selection/ribbit.png"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-6be42235-40e1-4355-b8cf-284b04f37933.png",
+  "sourceGenerationId": "exec-6be42235-40e1-4355-b8cf-284b04f37933",
+  "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+  "targetFile": "assets/encore/selection/jaxsuitribbit.png",
+  "nativeFacing": "right",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/cdn/shop/files/JaxSuit_1.png?v=1785347149&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Identité de grenouille verte, museau menthe, yeux mi-clos et grand sourire à dents rectangulaires conservés.",
+      "Capuche à deux oreilles lavande, petit nœud rose côté gauche anatomique, salopette à deux boutons jaunes et poche avant, deux gants jaunes et deux pieds lavande.",
+      "La composition de contrôle avec l’alpha natif sur fond opaque montre un détourage propre. Les halos colorés visibles dans l’aperçu brut sont du RGB à alpha nul ; aucun nettoyage de pixels n’a été appliqué.",
+      "Corps entier orienté vers la droite, extrémités et deux pieds dans le cadre ; proportions élancées adaptées au jeu."
+    ],
+    "scope": "Official merchandise costume; original game pose, no canonical episode certification."
+  },
+  "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+  "bytes": 1485535,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1134507,
+  "alpha12Bounds": [
+    151,
+    50,
+    816,
+    1506
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T12:25:47.781682+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+      "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+      "bytes": 1467375
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/selection/ribbit.png",
+      "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+      "bytes": 1352678
+    }
+  ]
+}

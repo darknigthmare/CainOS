@@ -1,0 +1,71 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "appearanceId": "zoobleep5",
+  "slot": "victory",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T08:21:57.000669+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: precise-object-edit. ONE individual full-body victory sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+  "referencePaths": [
+    "assets/encore/poses/bodyguardzooble/victory.png",
+    "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "assets/encore/poses/bodyguardzooble/victory.png",
+      "sha256": "0018629750fcb14dfd23cea2dad1ba63aec0adc74981076296179402918cfe36",
+      "bytes": 1464892
+    },
+    {
+      "position": 2,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+      "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "bytes": 1506910
+    }
+  ],
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "sourceKind": "Épisode officiel et miniature officielle du trailer",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "sourceGenerationId": "exec-c58b112d-e2e2-426b-a868-aa904ab6e9ad",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-c58b112d-e2e2-426b-a868-aa904ab6e9ad.png",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/zoobleep5/victory.png",
+  "targetFile": "assets/encore/poses/zoobleep5/victory.png",
+  "sha256": "b2b22bcec06a6c8ca6615cf52e64eb8960219ebb79e45a5c1088bf3d37ef64bf",
+  "bytes": 1458306,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1136312,
+  "alpha12Bounds": [
+    63,
+    6,
+    876,
+    1524
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Unaccessorized asymmetrical eyes replace the sunglasses; victory V-sign and complete modular body remain consistent with the pose reference.",
+      "Both antennas, pink wing, violet triangle, green spring and straight striped forearm, C-claw, cyan zigzag peg and purple boot preserved on their exact sides.",
+      "Whole figure, real native alpha and uncut silhouette verified."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  }
+}

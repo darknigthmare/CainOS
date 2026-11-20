@@ -1,0 +1,159 @@
+{
+  "schema": "encore-cast-discovery-verification/v1",
+  "createdAt": "2026-11-20T11:04:23.627934+00:00",
+  "baseCommit": "6ea3e8041f71789f858ed724ceeb49a3e5efacff",
+  "status": "local_static_checks_passed_remote_browser_verification_pending",
+  "generation": {
+    "appearances": 10,
+    "nativePngs": 110,
+    "nativeBytes": 130610966,
+    "exactlyRecovered": 90,
+    "regeneratedAfterEnvironmentLoss": 20,
+    "newAcceptedInThisContinuation": 9,
+    "newInThisContinuation": {
+      "showtimepomni": [
+        "jump",
+        "crouch",
+        "victory"
+      ],
+      "bugtamerkinger": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "victory"
+      ]
+    },
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/generation-completion.json",
+      "sha256": "a5f480175453ec19491ea4330e43a27dbba747de30985df88fc5fbb3da69adc4"
+    }
+  },
+  "qa": {
+    "status": "passed",
+    "command": "npm run qa",
+    "tests": 405,
+    "passed": 405,
+    "failed": 0,
+    "skipped": 0,
+    "bothBuildsPassed": true,
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/qa-result.json",
+      "sha256": "8bdad8381f54882d4b4f50b6217f24c80ea5b0af35d050819f4f71d50997a4fc"
+    }
+  },
+  "canvas": {
+    "status": "passed",
+    "counts": {
+      "appearances": 10,
+      "expectedActions": 90,
+      "actions": 90,
+      "stances": 10,
+      "drawChecks": 200,
+      "portraits": 10,
+      "expectedPortraits": 10,
+      "missing": 0
+    },
+    "method": "Production Canvas2D modules executed under native Skia, separately for each appearance.",
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/canvas-summary.json",
+      "sha256": "058a4bae8331214bacc62e415f8a1864afdb6c8a449391aa45cb4ef8a8f50627"
+    }
+  },
+  "visualReview": {
+    "status": "accepted_at_review_scale",
+    "actions": 90,
+    "portraits": 10,
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/visual-review.json",
+      "sha256": "717a5da93b0f728b894b38366a0a81247dcf6f157dbee3afd4a08635e488ce54"
+    }
+  },
+  "independentRuntimeAudit": {
+    "status": "passed",
+    "counts": {
+      "appearances": 10,
+      "nativePngs": 110,
+      "distinctSha256": 110,
+      "nativeBytes": 130610966,
+      "matchingFacingDeclarations": 110,
+      "rightFacingSlots": 109,
+      "leftFacingSlots": 1,
+      "preservedHistoricalAppearanceObjects": 23,
+      "referenceLinksChecked": 216,
+      "referenceLinksExactNow": 215,
+      "renderEvidenceAssetRecordsMatched": 110
+    },
+    "historicalCostumePrefixUnchanged": true,
+    "historicalCostumeCount": 452,
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/final-runtime-audit.json",
+      "sha256": "691a961539a122c961d352f8530bd3d62aac83a98db30fe4dbd7162d0c6195e2"
+    }
+  },
+  "buildIntegrity": {
+    "status": "passed",
+    "nativeAssetComparisons": 220,
+    "moduleComparisons": 18,
+    "historicalEncoreFilesVerified": 5546,
+    "trackerAndCheckpointsVerified": 6,
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/build-integrity.json",
+      "sha256": "ad49c9c4789a1f7d7ae896bc6728ff5dc39308fabf799a2a690ca27190b76268"
+    }
+  },
+  "localBrowsers": {
+    "status": "environment_blocked_before_navigation",
+    "successfulChecks": 0,
+    "actionArt": {
+      "file": "docs/art-generation/cast-next-20261120/browser-result.json",
+      "sha256": "e49c602643ce108b5849d9a23aecc0bd3b5339901e8e7cea1f2f3f29c99c1ec9"
+    },
+    "merge": {
+      "file": "docs/art-generation/cast-next-20261120/merge-browser-result.json",
+      "sha256": "91fad8305f647a8c42375b0b363524e0d12fe5e473993b5635cf602b853a9247"
+    },
+    "reason": "System Chromium aborts on socket() with Operation not permitted before page navigation."
+  },
+  "previousRemoteCi": {
+    "commit": "6ea3e8041f71789f858ed724ceeb49a3e5efacff",
+    "conclusion": "failure",
+    "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/44708369491",
+    "reason": "Obsolete Queenie variant assertion expected only the default outfit; published abstractingqueenie was correctly present.",
+    "fix": "tests/combat-merge-browser.mjs now explicitly expects the default and abstractingqueenie."
+  },
+  "remoteCi": {
+    "status": "pending_publication",
+    "note": "The PR description and GitHub Actions run provide the later result for the published commit; this file records checks actually observed before publication."
+  },
+  "limits": [
+    "Static drawings do not certify full animation cycles or exact episode fidelity.",
+    "The one lost historical selection reference for Bug Tamer defeat remains recorded and is not silently replaced.",
+    "Workbook and frozen tracker/checkpoint evidence remain byte-identical to their prior revision."
+  ],
+  "runtimeCounts": {
+    "createdAt": "2026-11-20T10:57:13.225Z",
+    "fighters": 54,
+    "moves": 540,
+    "sharedStages": 22,
+    "costumes": 462,
+    "archive": 179,
+    "additionalAppearances": 33,
+    "characterArt": {
+      "selection": 217,
+      "stance": 138,
+      "poses": 1242
+    },
+    "characterFiles": 1597,
+    "offlineImages": 5700,
+    "offlineBytes": 2990717576,
+    "offlineVersion": "0.7.0-5b0cc82556ac",
+    "artVersion": "5f2b4ac158cbd2f5",
+    "fidelityRecords": 700,
+    "evidence": {
+      "file": "docs/art-generation/cast-next-20261120/runtime-counts.json",
+      "sha256": "84434244e34108b106d2cddc303b3e79910515220b24b55a2beb9e2ec6c9159a"
+    }
+  }
+}

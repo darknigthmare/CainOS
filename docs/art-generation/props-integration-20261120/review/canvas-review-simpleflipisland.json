@@ -1,0 +1,100 @@
+{
+  "schema": "encore-recovered-prop-review/v1",
+  "createdAt": "2026-11-20T07:02:26.619Z",
+  "phase": "integrated",
+  "environment": "Node + Skia, production stage-selector Canvas2D renderer; not a browser session",
+  "provenance": "art/sources/recovered-local-props-20261119/manifest.json",
+  "sources": {
+    "art/sources/recovered-local-props-20261119/manifest.json": "471731c1977d9406de5591188b528664c2b04e60fd3d223c2e85a9aa1302b8d1",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10"
+  },
+  "assets": [
+    {
+      "id": "bamboo-bell",
+      "label": "Cloche de bambou",
+      "source": "art/sources/recovered-local-props-20261119/bamboo-bell.png",
+      "file": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+      "stageId": "simpleflipisland",
+      "sha256": "11e58a3c0734a1ee46368fd8630bb97b905bbdcd30492f3a51d77d7a23a9980c",
+      "bytes": 1663958,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceGenerationId": "exec-e25498a1-df9e-4677-b37c-16994c40b97b",
+      "nativeCopyVerified": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "simpleflipisland",
+      "name": "Ultra Jump Mania! · L’île de Theo",
+      "file": "scene-simpleflipisland.png",
+      "sha256": "3f419a9419958c63f62bacb9f299f17e662d0a5685f346bae9d191932e768e2f",
+      "prop": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+        "coordinates": [
+          1055,
+          447,
+          98.66666666666667,
+          148
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "c9ccb63cf86cd067f803c19418fc953439c7bba490e91206aef1fe013241b04f"
+        },
+        {
+          "camera": 0,
+          "sha256": "1fc7553c8f9d796ce4b3d835a34533e89468057d7cf372678f0ccf5c9b437cbb"
+        },
+        {
+          "camera": 1,
+          "sha256": "ef1b0299b31c0d348bd2f0afa22b51de15ebedc73adc6ee15f28ef2e8e87f0fe"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-simpleflipisland.png",
+        "baselineSHA256": "edc53c68ce566d517712ce5b825fa4d8e4977a386c01f3cbf6d38d3fc9f3a718",
+        "changedPixels": 3806,
+        "bounds": {
+          "x": 1025,
+          "y": 419,
+          "right": 1118,
+          "bottom": 562
+        }
+      }
+    }
+  ],
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "baseline": {
+    "file": "docs/art-generation/props-integration-20261120/before/canvas-review.json",
+    "sha256": "2cb7df4aae3cbcbb51e4a340b91ad94cc10bb65c159615614ca799fd465bd3dd",
+    "phase": "before_integration"
+  },
+  "limitations": [
+    "Original fan-game props; no claim of canonical episode appearance.",
+    "No DOM, input, audio or service-worker verification.",
+    "Visual review is recorded separately from successful rendering."
+  ],
+  "counts": {
+    "sources": 1,
+    "activeProps": 1,
+    "scenes": 1,
+    "cameraViews": 3,
+    "newNativeBytes": 1663958
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "bugtamerkinger",
+  "slot": "defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the accepted game selection and the strict design lock for proportions, shape, colours, shading and every prop. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: DEFEAT: weary forward slump of the whole chess body under the intact bucket, robe low and wide, free white hand lowered, hoop hand rests the intact ring near the base while keeping butterfly visible; no invented feet, injury, floor or shadow.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/selection.png",
+      "sha256": "70338a25133f009b96081ca3f1cfcb8b8360151347b00b56dcd482db44f6b058",
+      "bytes": 1046609,
+      "availability": "lost_original_reference",
+      "doNotResolveToRegeneratedFile": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger.png",
+      "sha256": "5dc0dc8f04c9667b5975f7ab7b005eb95900589d9a1d9dd97820887d74bcf94e",
+      "bytes": 6448103,
+      "availability": "lost_original_reference",
+      "doNotResolveToFreshJpeg": true
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-f4747e91-cdc5-46d6-95ce-0a14e4d5367a",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+  "originalNativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-f4747e91-cdc5-46d6-95ce-0a14e4d5367a.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+  "targetFile": "assets/encore/poses/bugtamerkinger/defeat.png",
+  "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+  "bytes": 1078042,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    155,
+    66,
+    1097,
+    1219
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Previously accepted native defeat recovered byte-identically. Weary forward slump faces down and right under the intact bucket; two floating hands, lowered hoop, one butterfly, attached flames, ermine robe and brown-gripped handle remain complete."
+    ],
+    "scope": "Original merchandise game-pose adaptation, not an episode certification."
+  },
+  "receiptRecovery": {
+    "status": "reconstructed_receipt_for_exact_recovered_png",
+    "restoredAt": "2026-11-20T10:29:34.654096+00:00",
+    "pngSource": "functions store lastNativeResult.image_url",
+    "submittedPromptSource": "functions store currentJob",
+    "originalReceiptBytesAvailable": false,
+    "originalCreatedAtAvailable": false,
+    "originalGenerationReferencesAvailable": false,
+    "warning": "Reference paths above are HISTORICAL and pinned by their old SHA values. Neither a regenerated selection nor a fresh JPEG is claimed to have been used in this old generation."
+  }
+}

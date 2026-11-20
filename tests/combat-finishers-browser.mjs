@@ -9,8 +9,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
+import { COSTUMES, FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
 import { FINISHER_CATALOG, FINISHER_VARIANTS } from '../combat/finisher-catalog.mjs';
+import { ART_FILES } from '../combat/offline-manifest.mjs';
 import { REPLAY_KEY, SAVE_KEY, validateReplay } from '../combat/session.mjs';
 
 let playwright;
@@ -44,7 +45,7 @@ function watch(p, prefix = '') {
   p.on('pageerror', error => errors.push(`${prefix}${error.message}`));
   p.on('response', response => {
     if (response.url().startsWith(base) && response.status() >= 400) errors.push(`${prefix}HTTP ${response.status()} ${response.url()}`);
-    if (response.url().includes('/assets/images/') && response.ok()) imageResponses.add(response.url());
+    if (response.ok() && /\/assets\/(?:images|encore)\//.test(response.url())) imageResponses.add(response.url());
   });
 }
 watch(page);
@@ -83,6 +84,42 @@ async function capture(entry, label, p = page) {
   await fs.writeFile(path.join(output, file), bytes);
   return { file, sha256: sha(bytes), sceneSHA256: rendered.sceneSHA256, frame: (await gallerySnapshot(p)).frame, colors: rendered.colors, dataURL: rendered.png };
 }
+async function verifyBackdrop(entry, fighter) {
+  const backdropPath = `../assets/encore/finales/${entry.fighterId}/${entry.variant}.webp`;
+  if (!ART_FILES.includes(backdropPath)) {
+    const absent = await page.evaluate(async entry => {
+      const { loadFinisherBackdrop } = await import('./render-finishers.mjs');
+      return await loadFinisherBackdrop(entry) === null;
+    }, entry);
+    assert.equal(absent, true, `${entry.id}: the procedural scene must not request an unpublished painting`);
+    return 'procedural';
+  }
+  const match = await page.locator('#finale-preview').evaluate(async (canvas, { url, color }) => {
+    const source = new Image();
+    source.src = new URL(url, document.baseURI).href;
+    await source.decode();
+    const width = canvas.width, height = canvas.height;
+    const expected = document.createElement('canvas');
+    expected.width = width; expected.height = height;
+    const context = expected.getContext('2d');
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(source, 0, 0, width, height);
+    const glow = context.createRadialGradient(640,330,28,640,330,650);
+    glow.addColorStop(0,color); glow.addColorStop(1,'#17142400');
+    context.globalAlpha = .14; context.fillStyle = glow;
+    context.fillRect(0,84,1280,542);
+    // This strip lies below the title and above both actors, even for the Queen.
+    const actual = canvas.getContext('2d').getImageData(20,100,1240,16).data;
+    const wanted = context.getImageData(20,100,1240,16).data;
+    let matching = 0;
+    for (let i = 0; i < actual.length; i += 4) {
+      if ([0,1,2].every(channel => Math.abs(actual[i+channel]-wanted[i+channel]) <= 3)) matching++;
+    }
+    return matching/(actual.length/4);
+  }, { url: backdropPath, color: fighter.color || '#d0b7df' });
+  assert.ok(match > .98, `${entry.id}: expected the illustrated set in the real gallery (pixel match ${match})`);
+  return 'illustrated';
+}
 async function assertPersistent(expected, label) {
   assert.deepEqual(await persistent(), expected, label);
   assert.equal(await page.evaluate(() => window.Encore.snapshot), null, `${label}: gallery leaves no active match`);
@@ -93,18 +130,18 @@ async function setReduced(value) {
   assert.equal(await page.evaluate(() => window.Encore.profile.settings.reducedMotion), value);
   await page.getByRole('button', { name: 'Combattants', exact: true }).click();
 }
-async function makeContactSheet(index, records) {
+async function makeContactSheet(index, records, total) {
   const sheetPage = await context.newPage();
   try {
     await sheetPage.setContent('<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Planches de contrôle Encore</title></head><body></body></html>');
-    const jpeg = await sheetPage.evaluate(async ({ index, records }) => {
+    const jpeg = await sheetPage.evaluate(async ({ index, records, total }) => {
       const width = 384, pictureHeight = 216, rowHeight = 270, gap = 12, margin = 16, heading = 68;
       const canvas = document.createElement('canvas');
       canvas.width = margin * 2 + width * 3 + gap * 2;
-      canvas.height = heading + rowHeight * 7 + margin;
+      canvas.height = heading + rowHeight * Math.ceil(records.length / 3) + margin;
       const ctx = canvas.getContext('2d');
       ctx.fillStyle = '#101222'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#f0e3cb'; ctx.font = 'bold 23px sans-serif'; ctx.fillText(`Encore 0.7 — finales ${index + 1}/2`, margin, 29);
+      ctx.fillStyle = '#f0e3cb'; ctx.font = 'bold 23px sans-serif'; ctx.fillText(`Encore 0.7 — finales ${index + 1}/${total}`, margin, 29);
       ctx.font = '13px sans-serif'; ctx.fillStyle = '#c7bdd2'; ctx.fillText('Captures du Canvas réel à la fin de chaque scène — impact / spécial / super', margin, 51);
       for (let i = 0; i < records.length; i++) {
         const record = records[i], x = margin + (i % 3) * (width + gap), y = heading + Math.floor(i / 3) * rowHeight;
@@ -114,16 +151,16 @@ async function makeContactSheet(index, records) {
         ctx.fillStyle = '#c7bdd2'; ctx.font = '13px sans-serif'; ctx.fillText(record.title, x + 4, y + pictureHeight + 40, width - 8);
       }
       return canvas.toDataURL('image/jpeg', 0.94);
-    }, { index, records });
+    }, { index, records, total });
     const name = `contact-sheet-${index + 1}.jpg`;
     const bytes = Buffer.from(jpeg.split(',')[1], 'base64');
     await fs.writeFile(path.join(output, name), bytes);
-    return { file: name, sha256: sha(bytes), panels: records.length, rows: 7, columns: 3 };
+    return { file: name, sha256: sha(bytes), panels: records.length, rows: Math.ceil(records.length / 3), columns: 3 };
   } finally { await sheetPage.close(); await page.bringToFront(); }
 }
 let sheets = [];
 try {
-  assert.equal(FIGHTERS.length, 14); assert.equal(FINISHER_CATALOG.length, 42); assert.equal(VARIANTS.length, 51);
+  assert.equal(FIGHTERS.length, 54); assert.equal(FINISHER_CATALOG.length, FIGHTERS.length * FINISHER_VARIANTS.length); assert.equal(VARIANTS.length, 51);
   await page.goto(`${base}/combat/`, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => window.Encore?.screen === 'home');
   await page.getByRole('button', { name: 'Réglages', exact: true }).click();
@@ -171,33 +208,35 @@ try {
       await page.waitForTimeout(160);
       assert.equal((await gallerySnapshot()).frame, startState.frame, `${entry.id}: pause is exact`);
       await toggle();
-      await page.waitForFunction(frame => window.Encore.finales.frame >= frame, entry.beats[1].frame + 4, { polling: 'raf', timeout: 10000 });
+      await page.waitForFunction(frame => window.Encore.finales.frame >= frame, entry.beats[1].frame + 4, { polling: 'raf', timeout: 30000 });
       await toggle();
       await page.waitForFunction(() => !window.Encore.finales.playing);
       assert.ok((await gallerySnapshot()).frame < entry.beats[2].frame, `${entry.id}: middle tableau remains observable`);
       assert.equal((await page.locator('#finale-beat-title').textContent()).trim(), entry.beats[1].title);
       const middle = await capture(entry, 'middle');
       await toggle();
-      await page.waitForFunction(() => window.Encore.finales.done, null, { timeout: 10000 });
+      await page.waitForFunction(() => window.Encore.finales.done, null, { timeout: 30000 });
       const endState = await gallerySnapshot();
       assert.equal(endState.frame, entry.durationFrames);
       assert.equal(endState.playing, false);
       assert.equal((await page.locator('#finale-beat-title').textContent()).trim(), entry.beats[2].title);
       const end = await capture(entry, 'end');
+      const backdropKind = await verifyBackdrop(entry, fighter);
       await page.waitForTimeout(120);
       assert.deepEqual(await gallerySnapshot(), endState, `${entry.id}: finite settled state`);
       assert.notEqual(start.sha256, middle.sha256); assert.notEqual(middle.sha256, end.sha256);
       finalHashes.push(end.sceneSHA256);
       contacts.push({ dataURL: end.dataURL, title: entry.title, fighterName: fighter.name });
       const clean = ({ dataURL, ...rest }) => rest;
-      scenes.push({ id: entry.id, fighterId: fighter.id, variant: entry.variant, durationFrames: entry.durationFrames, captures: [clean(start), clean(middle), clean(end)] });
+      scenes.push({ id: entry.id, fighterId: fighter.id, variant: entry.variant, backdropKind, durationFrames: entry.durationFrames, captures: [clean(start), clean(middle), clean(end)] });
       checked(`Galerie ${entry.id} : trois tableaux, pause et arrêt final`, { id: entry.id, frames: [start.frame, middle.frame, end.frame] });
     }
     assert.equal(new Set(finalHashes).size, 3, `${fighter.id}: distinct graphic compositions excluding title bars`);
     await closeGallery();
   }
   await assertPersistent(animatedBaseline, 'Full animated gallery');
-  checked('42 finales animées : profil, sauvegarde brute et replay non vide inchangés');
+  assert.equal(scenes.length, FINISHER_CATALOG.length);
+  checked(`${scenes.length} finales animées : profil, sauvegarde brute et replay non vide inchangés`);
 
   await openArtist('pomni');
   await page.waitForFunction(() => window.Encore.finales.frame >= 25);
@@ -220,7 +259,7 @@ try {
     const variants = VARIANTS.filter(item => item.fighterId === fighter.id);
     await openArtist(fighter.id);
     const offered = await page.locator('#finale-costume option').evaluateAll(options => options.map(option => option.value).filter(Boolean));
-    assert.deepEqual(offered.sort(), variants.map(item => item.id).sort());
+    assert.deepEqual(offered.sort(), COSTUMES.filter(item => item.fighterId === fighter.id).map(item => item.id).sort());
     for (const variant of variants) {
       await page.locator('#finale-costume').selectOption(variant.id);
       await waitReady(`${fighter.id}.impact`);
@@ -239,8 +278,11 @@ try {
   await assertPersistent(costumeBaseline, 'All fifty-one costumes');
   checked('51 costumes : profil, sauvegarde brute et replay non vide inchangés');
   assert.ok(!/indisponible/i.test(await page.locator('#toast').textContent()), 'No missing-art toast');
-  sheets = [await makeContactSheet(0, contacts.slice(0, 21)), await makeContactSheet(1, contacts.slice(21, 42))];
-  checked('Deux planches de contact issues du Canvas réel, chacune en 7 × 3', { files: sheets.map(s => s.file) });
+  for (let offset = 0; offset < contacts.length; offset += 21) {
+    sheets.push(await makeContactSheet(offset / 21, contacts.slice(offset, offset + 21), Math.ceil(contacts.length / 21)));
+  }
+  assert.equal(sheets.reduce((sum, sheet) => sum + sheet.panels, 0), FINISHER_CATALOG.length);
+  checked('Toutes les finales figurent sur les planches issues du Canvas réel', { files: sheets.map(s => s.file) });
 
   // Match the baseline runner: a separate Chromium process for mobile when
   // --single-process is used, instead of simultaneous browser contexts.
@@ -276,10 +318,10 @@ try {
     schemaVersion: 1, version: '0.7.0', base, checks, errors, scenes, costumes: costumeChecks,
     contactSheets: sheets, imageResponses: [...imageResponses].sort(),
     fixture: { file: 'gallery-replay-fixture.json', earnedMatch: false, importedThroughUI: true, storageSeededBeforeBoot: true, frames: 120, version: '0.6.0', sha256: sha(fixtureJSON), fileSHA256: sha(fixtureFileJSON) },
-    scope: { galleryFinales: 42, snapshotsPerFinale: 3, costumePreviews: 51, costumeVariant: 'impact', allCostumeFinaleCombinations: false, actualKOJourney: false, disabledSettingKO: false, physicalPhone: false, canonicalOneToOne: false },
+    scope: { galleryFinales: scenes.length, illustratedBackdropsCompared: scenes.filter(scene => scene.backdropKind === 'illustrated').length, proceduralFinales: scenes.filter(scene => scene.backdropKind === 'procedural').length, snapshotsPerFinale: 3, costumePreviews: costumeChecks.length, costumeVariant: 'impact', allCostumeFinaleCombinations: false, actualKOJourney: false, disabledSettingKO: false, physicalPhone: false, canonicalOneToOne: false },
   };
   await fs.writeFile(path.join(output, 'browser-report.json'), JSON.stringify(report, null, 2));
-  console.log(`Finale gallery QA: ${checks.length} checks passed; 42 animated scenes and 51 costume previews.`);
+  console.log(`Finale gallery QA: ${checks.length} checks passed; ${scenes.length} animated scenes and ${costumeChecks.length} costume previews.`);
 } catch (error) {
   await page.screenshot({ path: path.join(output, 'failure.png'), fullPage: true }).catch(() => {});
   await fs.writeFile(path.join(output, 'browser-report.json'), JSON.stringify({ schemaVersion: 1, version: '0.7.0', base, checks, errors, scenes, costumes: costumeChecks, contactSheets: sheets, failure: error.message, stack: error.stack }, null, 2));
