@@ -1,0 +1,32 @@
+NATIVE_RECOVERY {"label":"created-empty-workbook","rss":183132160,"heapTotal":41127936,"heapUsed":37234344,"external":33013917,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Synthèse","rss":194789376,"heapTotal":46047232,"heapUsed":39686408,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Fonctionnalités","rss":196493312,"heapTotal":49192960,"heapUsed":41695048,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Combattants","rss":197279744,"heapTotal":47095808,"heapUsed":42738592,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Techniques","rss":215412736,"heapTotal":69066752,"heapUsed":54367328,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Arènes","rss":212951040,"heapTotal":61726720,"heapUsed":53698784,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Atlas","rss":220127232,"heapTotal":73932800,"heapUsed":60147568,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Production","rss":260816896,"heapTotal":100519936,"heapUsed":91470496,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Scénarios","rss":262254592,"heapTotal":108920832,"heapUsed":91742768,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Extension PNJ","rss":284971008,"heapTotal":111017984,"heapUsed":91470832,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-QA","rss":288604160,"heapTotal":132403200,"heapUsed":119334976,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"authored-Références","rss":297619456,"heapTotal":127520768,"heapUsed":117409360,"external":33008516,"arrayBuffers":1613822}
+NATIVE_RECOVERY {"label":"recalculated-and-restored","rss":293150720,"heapTotal":131452928,"heapUsed":117946984,"external":33008516,"arrayBuffers":1613822}
+
+<--- Last few GCs --->
+
+[5:0x29eaf000]    50106 ms: Mark-Compact 173.0 (177.2) -> 172.1 (177.2) MB, pooled: 1 MB, 56.49 / 0.00 ms  (average mu = 0.152, current mu = 0.117) allocation failure; scavenge might not succeed
+[5:0x29eaf000]    50172 ms: Mark-Compact 173.1 (177.2) -> 172.1 (177.2) MB, pooled: 1 MB, 64.10 / 0.00 ms  (average mu = 0.087, current mu = 0.018) allocation failure; scavenge might not succeed
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 0x91df90  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 2: 0x75bb9f node::OOMErrorHandler(char const*, v8::OOMDetails const&) [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 3: 0xc77280  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 4: 0xc7737f  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 5: 0xf272b5  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 6: 0xf272e2  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 7: 0xf27664  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 8: 0xf393ca  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 9: 0xf3d880  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]
+10: 0x1a420c1  [/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node]

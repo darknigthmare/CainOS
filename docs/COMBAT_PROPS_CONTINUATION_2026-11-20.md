@@ -146,8 +146,24 @@ officielle distincte. Les raccords cachés et les pieds insuffisamment visibles
 restent à documenter : **aucune nouvelle apparence prête et aucun job de
 génération ajouté**.
 
-La récupération du classeur est un chantier séparé. Ce rapport et ses preuves
-ne certifient pas la publication d’un nouveau XLSX. Le relevé antérieur de
-l’[export bloqué](art-generation/cast-continuation-20261120/workbook-review.json)
-reste applicable jusqu’à une exportation réelle, une vérification de conservation
-et une publication atomique du classeur avec ses données et ses preuves.
+La récupération du classeur a produit un
+[nouveau point de reprise documenté](art-generation/workbook-recovery-20261120/README.md).
+La recréation par les API publiques du moteur tableur réussit : le modèle complet
+des **11 feuilles et 42 formules** est conservé dans une archive comprimée.
+La [revue indépendante](art-generation/workbook-recovery-20261120/independent-model-review.json)
+confirme la concordance de **78 876 cellules**, de leurs valeurs et styles, des
+dix tables, des validations et des règles conditionnelles avec la cible préparée.
+Les cellules réellement vides et les chaînes vides restent distinctes.
+
+L’export XLSX reste bloqué par la mémoire, même après rechargement du modèle dans
+un processus séparé. Le [reçu final de récupération](art-generation/workbook-recovery-20261120/workbook-review.json)
+porte donc le statut **`export_blocked_memory`**. Les quatre fichiers installés
+du suivi sont conservés à octets identiques à la révision précédente ; aucun
+nouveau XLSX n’est publié. Ce point de reprise couvre la passe des apparences
+avec 5 485 images. La petite mise à jour du suivi pour les six accessoires reste
+à appliquer après récupération de l’export.
+
+La comparaison du fichier XLSX sauvegardé, sa réimportation et sa revue visuelle
+restent à exécuter avant publication atomique du classeur avec ses données et
+ses preuves. Le [constat de blocage antérieur](art-generation/cast-continuation-20261120/workbook-review.json)
+reste conservé comme relevé historique distinct.

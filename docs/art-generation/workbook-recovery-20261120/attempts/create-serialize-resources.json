@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=1",
+    "--optimize-for-size",
+    "--no-wasm-tier-up",
+    "--expose-gc",
+    "/tmp/cainos-workbook-recovery-20261120-t60p1y52/recovery.mjs",
+    "--repo-root",
+    "/workspace/scratch/5f5114b49696/CainOS",
+    "--build",
+    "--serialize-only"
+  ],
+  "returnCode": 0,
+  "elapsedSeconds": 48.051071765003144,
+  "maximumRSSKiB": 335876
+}

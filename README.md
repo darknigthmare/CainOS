@@ -39,6 +39,13 @@ or generation job: hidden joints and feet remain unresolved. The existing
 **102 accepted character drawings and 63 pending poses** retain their exact
 checkpoint.
 
+The [workbook recovery checkpoint](docs/art-generation/workbook-recovery-20261120/README.md)
+preserves a complete public model of the eleven sheets. Independent review
+matches 78,876 cells and 42 formulas to the prepared cast update. XLSX export
+still exceeds the available memory, so the four installed tracker files remain
+byte-identical to the previous revision. The saved model covers the cast pass;
+the six-prop tracker update remains a separate step after export recovery.
+
 ### Six completed appearances and nine in preparation — 20 November continuation
 
 Noir Pomni, Noir Jax, Noir Kinger, Bodyguard Ragatha, Bodyguard Zooble and Bad End

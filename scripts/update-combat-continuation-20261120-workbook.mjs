@@ -4,13 +4,18 @@
  * This is an incremental edit: all earlier IDs, rows, notes and evidence remain.
  * --inspect-only reads the baseline; --confirmed-runtime requires the final,
  * hash-linked verification.json. Outputs are review copies outside the input paths.
+ * --serialize-prepared then --export-model separates XLSX import from export;
+ * --verify-export reopens the saved workbook in a third primary-runtime process.
  */
 import fs from 'node:fs/promises';
+import { createWriteStream } from 'node:fs';
+import { once } from 'node:events';
+import { finished } from 'node:stream/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
+import { FileBlob, SpreadsheetFile, Workbook } from '@oai/artifact-tool';
 
 const args = process.argv.slice(2);
 const flag = (name, fallback) => { const i = args.indexOf(name); return i < 0 ? fallback : args[i + 1]; };
@@ -34,6 +39,19 @@ const col = n => { let s = ''; while (n) { n--; s = String.fromCharCode(65 + n %
 const TABLES = { 'Fonctionnalités': 'features', 'Combattants': 'roster', 'Techniques': 'moves', 'Arènes': 'stages', 'Atlas': 'atlas', 'Production': 'production', 'Scénarios': 'scenarios', 'QA': 'qa' };
 const names = ['Synthèse', ...Object.keys(TABLES).filter(name => name !== 'QA'), 'Extension PNJ', 'QA', 'Références'];
 if (args.includes('--verify-export')) { await verifyExport(); process.exit(0); }
+if (args.includes('--export-model')) {
+  assert.notEqual(path.join(outputDir, 'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'), input, 'Export to a review copy, never over the input workbook');
+  let model = await json(path.join(outputDir, 'authoring-model.json'));
+  const prepared = await Workbook.load(model);
+  model = null;
+  prepared.recalculate();
+  phase('exporting-prepared-model-in-new-process');
+  const xlsxPath = path.join(outputDir, 'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx');
+  await (await SpreadsheetFile.exportXlsx(prepared)).save(xlsxPath);
+  phase('exported-prepared-model');
+  console.log('CONTINUATION_WORKBOOK_EXPORTED ' + JSON.stringify({ outputDir, xlsxPath, next: '--verify-export' }));
+  process.exit(0);
+}
 let data = await json(dataPath);
 let inputData = structuredClone({ costumeAdditionCoverage: data.costumeAdditionCoverage, costumeAdditionReview: data.costumeAdditionReview, characterCoverage: data.characterCoverage });
 assert.notEqual(path.join(outputDir, 'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'), input, 'Export to a review copy, never over the input workbook');
@@ -138,7 +156,7 @@ assert.equal(proof.runtime.offlineVersion, offline.OFFLINE_VERSION);
 const expectedManifestHash = proof.runtime.manifestSha256;
 assert.equal(digest(await fs.readFile(path.join(root, 'combat/offline-manifest.mjs'))), expectedManifestHash);
 
-const reviewFile = generationPath + '/workbook-review.json';
+const reviewFile = flag('--review-report', 'docs/art-generation/workbook-recovery-20261120/workbook-review.json');
 const sourceMap = new Map();
 for (const source of COSTUME_ADDITION_SOURCES) {
   if (sourceMap.has(source.id)) assert.deepEqual(source, sourceMap.get(source.id), `Conflicting source definitions: ${source.id}`);
@@ -410,11 +428,46 @@ checkpoint = null;
 dataBytes = null;
 before = null; data = null; inputData = null; proof = null; preparation = null; evidence = null;
 generations.clear();
+if (args.includes('--serialize-prepared')) {
+  phase('serializing-prepared-model');
+  // Public artifact-tool serialization preserves the complete workbook model.
+  // Write its top-level array members separately to avoid a second, workbook-
+  // sized JSON string beside the live import and serialization objects.
+  await saveSerializedModel(workbook.toProto(), path.join(outputDir, 'authoring-model.json'));
+  phase('serialized-prepared-model');
+  console.log('CONTINUATION_WORKBOOK_PREPARED ' + JSON.stringify({ outputDir, next: '--export-model' }));
+  process.exit(0);
+}
 phase('exporting-without-render-caches');
 await (await SpreadsheetFile.exportXlsx(workbook)).save(xlsxPath);
 phase('exported-awaiting-separate-verification');
 console.log('CONTINUATION_WORKBOOK_EXPORTED ' + JSON.stringify({ outputDir, xlsxPath, next: '--verify-export' }));
 process.exit(0);
+
+async function saveSerializedModel(model, filename) {
+  const stream = createWriteStream(filename, { encoding: 'utf8' });
+  const write = async text => { if (!stream.write(text)) await once(stream, 'drain'); };
+  try {
+    await write('{');
+    let separator = '';
+    for (const [key, value] of Object.entries(model)) {
+      if (value === undefined) continue;
+      await write(separator + JSON.stringify(key) + ':');
+      separator = ',';
+      if (Array.isArray(value)) {
+        await write('[');
+        for (let i = 0; i < value.length; i++) await write((i ? ',' : '') + JSON.stringify(value[i] ?? null));
+        await write(']');
+      } else await write(JSON.stringify(value));
+    }
+    await write('}');
+    stream.end();
+    await finished(stream);
+  } catch (error) {
+    stream.destroy();
+    throw error;
+  }
+}
 
 async function verifyExport() {
   const { before, data, scopes, offlineSourceIndex, verificationDraft: verification } = await json(path.join(outputDir, 'authoring-checkpoint.json'));
