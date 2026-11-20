@@ -1,0 +1,16 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "slot": "selection",
+  "nativeFacing": "right",
+  "prompt": "Create ONE high-quality native transparent PNG sprite for the existing Encore 2D fighting game. A single COMPLETE full-body character, clean expressive hand-drawn cel shading, bold dark outlines, no background, no floor, no drop shadow, no text, no border, no sprite sheet. Face three-quarter to the RIGHT (nose and gaze toward image right). Keep entire head, both hands and both feet inside the image with generous 8% transparent margins. At least 1024px. Reference 1 is the game Ribbit adaptation for identity and long-limbed proportions; reference 2 is official merchandise for frog face, mint muzzle and pink bow ONLY: do not include the keychain or plush texture and do not infer digit anatomy from it. Reference 3 shows cybernetic arm material and cyan seams only; do not copy human body, gun, clothing or scenery. Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and hot-pink fabric bow tie. Long slender game-adapted frog limbs. Original esports replay analyst resident of the Meta Runner world. Wear a sleeveless short navy esports jacket with distinct MAGENTA side panels over a cream short-sleeve tee; navy athletic shorts; small smooth grey kneepads; bare green lower legs; purple high-top sneakers with cyan soles. LEFT forearm is a light-grey cybernetic prosthesis with navy joints and thin cyan interface strips, ending in THREE rounded robotic digits. RIGHT hand is green, exactly THREE rounded digits, with a compact black screen wristband. Keep the pink bow tie visible and no headphones blocking eyes. No hoodie, tool belt, weapons, company logo, floating interface, extra device or tail. Clear sporty silhouette. POSE: character-selection full-body portrait, relaxed upright three-quarter-right pose, friendly confident smile, feet separated, both arms slightly away from body so costume and hand materials are readable. Keep it one clear character in one pose.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "encore-costume-append-simulation/v1",
+  "createdAt": "2026-11-20T16:31:54.159Z",
+  "status": "passed_simulation_only",
+  "baselineFile": "costume-prefix-baseline.json",
+  "baselineSHA256": "a069c06ef34541b965169f12db4169e40fe16fbbf2381bbffa99b32ce29058cd",
+  "method": "In-memory proposal; placeholder IDs; no runtime, asset or test file changed.",
+  "cases": [
+    {
+      "simulatedCircusFamilies": 1,
+      "simulatedNpcFamilies": 3,
+      "naiveFirstHistoricalChangeIndex": 469,
+      "naiveDisplacedIds": [
+        "glitch-murderdrones-ribbit-hommage",
+        "glitch-murderdrones-ribbit-resident",
+        "glitch-murderdrones-ribbit-fusion"
+      ],
+      "orderedPrefixCount": 472,
+      "orderedPrefixSHA256": "5dafc529d6121a2850b7bfad54684f57e7223bfd29c2051b3687c00bed057685",
+      "historicalIdsAndFieldsPreserved": true,
+      "appendedSimulatedIds": [
+        "__simulation-cafe-0",
+        "__simulation-metarunner-hommage",
+        "__simulation-metarunner-resident",
+        "__simulation-metarunner-fusion"
+      ]
+    },
+    {
+      "simulatedCircusFamilies": 2,
+      "simulatedNpcFamilies": 3,
+      "naiveFirstHistoricalChangeIndex": 469,
+      "naiveDisplacedIds": [
+        "glitch-murderdrones-ribbit-hommage",
+        "glitch-murderdrones-ribbit-resident",
+        "glitch-murderdrones-ribbit-fusion"
+      ],
+      "orderedPrefixCount": 472,
+      "orderedPrefixSHA256": "5dafc529d6121a2850b7bfad54684f57e7223bfd29c2051b3687c00bed057685",
+      "historicalIdsAndFieldsPreserved": true,
+      "appendedSimulatedIds": [
+        "__simulation-cafe-0",
+        "__simulation-cafe-1",
+        "__simulation-metarunner-hommage",
+        "__simulation-metarunner-resident",
+        "__simulation-metarunner-fusion"
+      ]
+    }
+  ],
+  "productionRuntimeChanged": false,
+  "newAssetsImplemented": false
+}

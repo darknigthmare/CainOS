@@ -1,6 +1,7 @@
 import { CROSSOVER_STAGES } from './crossover-stages.mjs';
 import { createLegacyCrossoverCostumes, createNpcCrossoverCostumes } from './crossovers.mjs';
 import { COSTUME_ADDITIONS } from './costume-additions.mjs';
+import { orderCostumeExtensions } from './costume-order.mjs';
 export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
@@ -243,6 +244,7 @@ export const STAGES = [
   stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
   stage('undermap', 'Sous la carte', 'La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.', { sky: '#020321', back: '#050837', accent: '#315bff', floor: '#040525', grid: '#1d26cc' }, 'ep2'),
   stage('barnoir', 'Le bar des néons', 'Le comptoir sombre et le damier du bar de l’épisode 5.', { sky: '#090e11', back: '#172524', accent: '#ed8fc4', floor: '#202726', grid: '#85938e' }, 'ep5'),
+  stage('softballfield', 'Le stade de softball', 'Le terrain des Big Tops sous les tribunes et les projecteurs de l’épisode 5.', { sky: '#123c6b', back: '#304a60', accent: '#e4efff', floor: '#b9804c', grid: '#56852d' }, 'ep5'),
 ];
 
 // One dedicated arrangement per playable artist, next to the shared
@@ -396,9 +398,9 @@ export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && en
 const LEGACY_CROSSOVER_COSTUMES = createLegacyCrossoverCostumes(FIGHTERS);
 const NPC_CROSSOVER_COSTUMES = createNpcCrossoverCostumes(FIGHTERS);
 export const CROSSOVER_COSTUMES = [...LEGACY_CROSSOVER_COSTUMES, ...NPC_CROSSOVER_COSTUMES];
-// Append new NPC costumes after the published wardrobe instead of inserting
-// them among historical series entries and shifting existing costume indices.
-export const COSTUMES = [...VARIANTS, ...LEGACY_CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS, ...NPC_CROSSOVER_COSTUMES];
+// Circus and NPC additions share an explicit append order across publications.
+export const COSTUMES = [...VARIANTS, ...LEGACY_CROSSOVER_COSTUMES,
+  ...orderCostumeExtensions([...COSTUME_ADDITIONS, ...NPC_CROSSOVER_COSTUMES])];
 
 export function equipCostume(fighter, id) {
   const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);

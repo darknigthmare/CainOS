@@ -30,5 +30,35 @@ export const NPC_CROSSOVER_DEFINITIONS = Object.freeze([
     "introducedOn": "2026-11-20",
     "sourceKind": "Création originale pour Encore",
     "format": "png"
+  },
+  {
+    "id": "glitch-metarunner-ribbit-hommage",
+    "fighterId": "ribbit",
+    "series": "metarunner",
+    "style": "hommage",
+    "name": "Meta Runner · Hommage · Tari",
+    "introducedOn": "2026-11-20",
+    "sourceKind": "Création originale pour Encore",
+    "format": "png"
+  },
+  {
+    "id": "glitch-metarunner-ribbit-resident",
+    "fighterId": "ribbit",
+    "series": "metarunner",
+    "style": "resident",
+    "name": "Meta Runner · Analyste de replays",
+    "introducedOn": "2026-11-20",
+    "sourceKind": "Création originale pour Encore",
+    "format": "png"
+  },
+  {
+    "id": "glitch-metarunner-ribbit-fusion",
+    "fighterId": "ribbit",
+    "series": "metarunner",
+    "style": "fusion",
+    "name": "Meta Runner · Avatar de synchronisation",
+    "introducedOn": "2026-11-20",
+    "sourceKind": "Création originale pour Encore",
+    "format": "png"
   }
 ].map(entry => Object.freeze(entry)));

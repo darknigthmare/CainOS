@@ -1,0 +1,90 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "crouch",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE original full-body crouch action sprite for the existing Digital Circus Encore game.\n\nReference image 1 is the accepted cafekinger selection: lock its identity, proportions, line weight, cel shading, costume construction and colors. Reference image 2 is the official Animate Cafe illustration detail: preserve its distinctive outfit. Make a genuinely new crouch pose, not a flipped or mechanically moved copy. Only one character.\n\nKinger remains a beige cross-topped chess king with two blue eyes, clear silver monocle and chain, purple tailcoat with pale lavender piping and tails, gray-lilac diamond waistcoat with dark buttons, white collar, black tie and blue-centered flower ornament. One purple tapering chess-piece body ends in a complete navy circular plinth with a thin pale rim. EXACTLY TWO disconnected white gloves float beside him. No human arms, sleeves connecting gloves, legs, shoes, feet, knees, royal fur or new accessories. Keep the hands separate from the body through real transparency.\n\nPOSE: Low defensive action: tilt the entire rigid chess-piece body diagonally about 35 degrees toward screen-right, lowering the head by inclination only. Two floating gloves protect the front of the body. Keep its full conical body and circular base intact; absolutely no folding torso, kneeling or knees.\n\nNative orientation is SCREEN-RIGHT. Keep all visible costume asymmetry consistent with the selection. Crisp dark contours and restrained flat two-tone cel shading, same polished 2D game family. Center the complete silhouette with generous transparent space around every extremity; use a wider composition if needed so nothing touches the edges. Native transparent RGBA. No scenery, floor, cast shadow, halo, bloom, sticker outline, motion streaks, text, logo, watermark, duplicate figure or additional limbs. Preserve all original image pixels in the delivered native result; no painted checkerboard or solid background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  },
+  "schema": "encore-native-continuation-b-cafe-art/v1",
+  "id": "cafekinger:crouch",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.png",
+  "targetFile": "assets/encore/poses/cafekinger/crouch.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-f7165877-f19c-4a51-a028-add094d71776.png",
+  "sourceGenerationId": "exec-f7165877-f19c-4a51-a028-add094d71776",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+      "sha256": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+      "bytes": 123785
+    }
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    334,
+    39,
+    1264,
+    1008
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1224409,
+  "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+  "bytes": 1340173,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:07:41.149442+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Esquive inclinée vers la droite avec plinthe horizontale entière et deux gants flottants ouverts devant le buste ; posture abaissée sans genoux ni jambes inventés.",
+      "Croix et monocle entiers, chaîne visible, même queue-de-pie violette à parements lilas, gilet à losanges et fleur.",
+      "Aucun halo visible dans la composition alpha ; les deux gants restent détachés du corps, sans raccord de bras.",
+      "Inspection du PNG natif et de sa composition alpha sur fonds clair et sombre ; silhouette entière, contours propres, alpha natif conservé sans retouche. Orientation écran droit.",
+      "Bornes alpha > 12 [334,39,1264,1008] internes à 1536 × 1024. Le RGB caché sous alpha nul n’a pas été modifié. Adaptation statique de jeu ; aucune certification d’épisode ou d’animation complète."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T17:17:56.268791+00:00",
+    "targetFile": "assets/encore/poses/cafekinger/crouch.png",
+    "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

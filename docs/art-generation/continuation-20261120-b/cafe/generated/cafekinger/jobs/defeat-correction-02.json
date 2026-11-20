@@ -1,0 +1,30 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "defeat",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nNative transparent PNG edit of reference image 1: correct ONLY the composition/framing of this original Cafe Kinger defeat sprite so that the ENTIRE navy circular plinth is safely inside the canvas. Preserve the weary, diagonally leaning screen-right pose, the exact Cafe costume, two detached white gloves, and the same crisp 2D drawing family. Reference 2 is the accepted selection for identity and construction; reference 3 is the official outfit detail.\n\nThe previous image fails because the bottom edge of its plinth touches the frame. Draw the WHOLE same character at a clearly smaller scale, with its entire silhouette occupying about 70 percent of canvas height and width, surrounded by a continuous wide transparent margin on ALL four sides. Place at least 90 pixels of clear transparent space below the complete plinth and above the cross. Everything, including coat tails and floating gloves, must be inside this generous margin. Wide landscape canvas, one character only.\n\nKeep Kinger's beige cross-topped chess head, TWO protruding blue eyes, transparent silver monocle with fine chain, purple tailcoat with pale lavender piping and tails, gray-lilac diamond waistcoat and three dark buttons, white collar, black tie, blue-centered white flower, and tapering striped purple chess body ending in the COMPLETE navy circular plinth with thin pale rim. EXACTLY TWO white disconnected gloves hang wearily beside him. No arms, legs, knees, shoes, feet or new accessories. Keep screen-right gaze and tired eyelids.\n\nRestrained two-tone cel shading and crisp dark contours, same colors and body proportions as reference 2. Native transparent RGBA. No floor, cast shadow, background, halo, glow, bloom, motion lines, text, logo, watermark or checkerboard. This is a native generative framing correction; output the complete transparent asset without any local pixel editing.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Archived first native defeat: pose and outfit, framing correction only",
+    "Accepted selection: identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png": "ca972c0104fcdda2c49cce2a1fdfde47697e77d3fbf91f5e3c3da51f6921745f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  },
+  "jobPath": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/defeat-correction-02.json",
+  "revisionReason": "First native bottom alpha>12 bound touched frame at y=1024. Correct framing through imagegen; preserve old native unmodified in attempts."
+}

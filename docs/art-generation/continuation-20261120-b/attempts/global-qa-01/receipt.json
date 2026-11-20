@@ -1,0 +1,16 @@
+{
+  "schema": "encore-continuation-b-qa-attempt/v1",
+  "recordedAt": "2026-11-20T17:34:11.763968+00:00",
+  "status": "failed_archived_before_test_scope_correction",
+  "result": {
+    "tests": 431,
+    "pass": 430,
+    "fail": 1,
+    "skipped": 0
+  },
+  "reason": "The commercial-source branch of the fidelity test assumed every official commercial illustration was Cafe Ribbit. Cafe Kinger is correctly declared animate-cafe-kinger, so the old strict single-value assertion fails. Runtime sources and native PNGs are unchanged.",
+  "evidence": {
+    "qa.log": "8892dbe372ca6cd5acff3d065b977734f64d9ebd420b965d6f4621b483f5b1f1",
+    "qa-result.json": "737f43b9d96e56430db9ac1effb1ea748158bb36296931bc667c4366a8aeb76b"
+  }
+}

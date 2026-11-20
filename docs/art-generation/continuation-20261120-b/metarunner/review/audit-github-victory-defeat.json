@@ -1,0 +1,200 @@
+{
+  "schema": "encore-metarunner-audit-github-six-pose-review-v1",
+  "reviewedAt": "2026-11-20T17:21:50.255553+00:00",
+  "reviewer": "audit_github",
+  "status": "accepted_with_stated_scope",
+  "acceptedPNGs": 6,
+  "nativeBytes": 5007262,
+  "generationCalls": 9,
+  "rejectedCalls": 3,
+  "includedInRuntimeAtReview": false,
+  "images": [
+    {
+      "style": "hommage",
+      "slot": "victory",
+      "png": "hommage/generated/victory.png",
+      "sha256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+      "bytes": 661706,
+      "dimensions": [
+        1081,
+        1455
+      ],
+      "alpha12Bounds": [
+        239,
+        50,
+        899,
+        1414
+      ],
+      "receipt": "hommage/generated/victory.json",
+      "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-b1300ba5-21ae-4db8-89d5-4f3508e7e69b.png",
+      "nativeCopyVerified": true,
+      "diagnosticsActuallyInspected": [
+        {
+          "file": "hommage/review/audit-victory-defeat/victory-alpha.jpg",
+          "sha256": "65ed216ead0422b2582034a0bd77537c504d24c3c611f43ebcc204c313630387"
+        },
+        {
+          "file": "hommage/review/audit-victory-defeat/victory-hands.jpg",
+          "sha256": "a882c256cbdd5286cf8cede310fe5c02a2ceac96022bb5ffc51542ae9b8c6599"
+        }
+      ]
+    },
+    {
+      "style": "hommage",
+      "slot": "defeat",
+      "png": "hommage/generated/defeat.png",
+      "sha256": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+      "bytes": 865871,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        153,
+        48,
+        945,
+        1272
+      ],
+      "receipt": "hommage/generated/defeat.json",
+      "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-7f80738e-a670-4342-9918-a34efd8aa0a0.png",
+      "nativeCopyVerified": true,
+      "diagnosticsActuallyInspected": [
+        {
+          "file": "hommage/review/audit-victory-defeat/defeat-alpha.jpg",
+          "sha256": "bfa0077914e631bc0975cd41012de2b66a1721c31d2292448cb4d88f7bd17c65"
+        }
+      ]
+    },
+    {
+      "style": "resident",
+      "slot": "victory",
+      "png": "resident/generated/victory.png",
+      "sha256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+      "bytes": 657866,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        230,
+        10,
+        883,
+        1262
+      ],
+      "receipt": "resident/generated/victory.json",
+      "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-a18fcf39-dc2a-40aa-9299-0b03c9ab77d8.png",
+      "nativeCopyVerified": true,
+      "diagnosticsActuallyInspected": [
+        {
+          "file": "resident/review/audit-victory-defeat/victory-02-alpha.jpg",
+          "sha256": "930c677fcbbb12e6e5c1c08e0aac21108d9609a942ae76f80f64c59268c67b78"
+        },
+        {
+          "file": "resident/review/audit-victory-defeat/victory-02-hands.jpg",
+          "sha256": "b32ee4b4547fd4ec9bf2d8567752fd597a1f9d6614c19f983fb3d2435a12e8db"
+        }
+      ]
+    },
+    {
+      "style": "resident",
+      "slot": "defeat",
+      "png": "resident/generated/defeat.png",
+      "sha256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+      "bytes": 878926,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        203,
+        78,
+        982,
+        1255
+      ],
+      "receipt": "resident/generated/defeat.json",
+      "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-155206ad-a612-4079-9d75-ac824c3e7f9c.png",
+      "nativeCopyVerified": true,
+      "diagnosticsActuallyInspected": [
+        {
+          "file": "resident/review/audit-victory-defeat/defeat-alpha.jpg",
+          "sha256": "bd507baa276550097afb10db61616d0d9e50dfaab2e284c1f8dc4da0cd4a6472"
+        }
+      ]
+    },
+    {
+      "style": "fusion",
+      "slot": "victory",
+      "png": "fusion/generated/victory.png",
+      "sha256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+      "bytes": 877568,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        158,
+        33,
+        966,
+        1422
+      ],
+      "receipt": "fusion/generated/victory.json",
+      "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-147b5ed3-038a-4f39-9ed1-30a899910051.png",
+      "nativeCopyVerified": true,
+      "diagnosticsActuallyInspected": [
+        {
+          "file": "fusion/review/audit-victory-defeat/victory-03-alpha.jpg",
+          "sha256": "21908d1bb8672feefc8717f5c277e985685b181a0210f74b3f3e6564ddc73eea"
+        },
+        {
+          "file": "fusion/review/audit-victory-defeat/victory-03-hands.jpg",
+          "sha256": "fd6571b886d069061d6b5934f07e25b01e76e49e78907dfca9ca72e7e4eef2b5"
+        }
+      ]
+    },
+    {
+      "style": "fusion",
+      "slot": "defeat",
+      "png": "fusion/generated/defeat.png",
+      "sha256": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+      "bytes": 1065325,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        97,
+        42,
+        1090,
+        1278
+      ],
+      "receipt": "fusion/generated/defeat.json",
+      "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-9e667fcd-2d7b-4235-8496-6ac44a6fc9e7.png",
+      "nativeCopyVerified": true,
+      "diagnosticsActuallyInspected": [
+        {
+          "file": "fusion/review/audit-victory-defeat/defeat-alpha.jpg",
+          "sha256": "221888c5b54456018f11ee12d57db3f596e7ea8539a6065f50fbd55c495ce1fd"
+        }
+      ]
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "receipt": "resident/attempts/victory-01/receipt.json",
+      "sha256": "192d3c26da8fef65bcb05de4356cfa14dec4df5793e27b92f3423dd9ad3a932d"
+    },
+    {
+      "receipt": "fusion/attempts/victory-01/receipt.json",
+      "sha256": "c6553870448312e6582e9712498d99e3f2e13577e171e4eba2801db1853283b6"
+    },
+    {
+      "receipt": "fusion/attempts/victory-02/receipt.json",
+      "sha256": "801eb258cfaca8df1866c1d27f27ea39d42983f47a4b04f7582d8d54725b57ab"
+    }
+  ],
+  "limitations": [
+    "Original crossover anatomy and costumes; no canonical costume or official three-digit assertion.",
+    "Still-image identity, pose and alpha inspection only; not complete animation, browser or collision validation.",
+    "Receipt paths may be updated later by the authorized installer to mark includedInRuntime; native PNGs and the reviewed diagnostics are fixed."
+  ]
+}

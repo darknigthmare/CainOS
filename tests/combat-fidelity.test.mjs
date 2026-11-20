@@ -35,14 +35,22 @@ test('review records keep source scope, observations and invented combat separat
     if (url.hostname === 'prtimes.jp') {
       // Animate Holdings' own release for its official Digital Circus café collaboration.
       assert.equal(url.pathname, '/main/html/rd/p/000008857.000016756.html');
-      assert.equal(source.id, 'animate-cafe-ribbit');
       assert.equal(source.kind, 'Illustration officielle de collaboration commerciale');
-      assert.match(source.scope, /Pendantz Maid/);
+      const reviewedCafeScopes = {
+        'animate-cafe-ribbit': [/Pendantz Maid/, /ne qualifie pas le bas encore masqué de maidribbit/],
+        'animate-cafe-kinger': [/corps conique et sa base entière/, /mains ne sont pas clairement attribuables à Kinger/, /gants flottants/, /sans ajout de bras/],
+        'animate-cafe-pomni': [/silhouette entière, les deux jambes et les deux chaussures/, /mains croisées.*masquent une partie du haut du plastron/, /dos non montré/, /Distincte de maidpomni/],
+      };
+      assert.ok(Object.hasOwn(reviewedCafeScopes, source.id), 'Unreviewed Animate Café source');
+      for (const scope of reviewedCafeScopes[source.id]) assert.match(source.scope, scope, source.id);
     }
     if (source.kind === 'Vignettes de l’épisode officiel') {
-      assert.equal(source.id, 'glitch-barnoir-storyboards');
+      const reviewedTimes = { 'glitch-barnoir-storyboards': '690', 'glitch-softballfield-storyboards': '1120' };
+      assert.ok(Object.hasOwn(reviewedTimes, source.id), 'Unreviewed episode storyboard source');
       assert.equal(url.hostname, 'www.youtube.com');
+      assert.equal(url.pathname, '/watch');
       assert.equal(url.searchParams.get('v'), 'L4p2gN2CzsA');
+      assert.equal(url.searchParams.get('t'), reviewedTimes[source.id]);
       assert.match(source.scope, /320 × 180/);
       assert.match(source.scope, /Aucun visionnage du flux complet revendiqué/);
     }

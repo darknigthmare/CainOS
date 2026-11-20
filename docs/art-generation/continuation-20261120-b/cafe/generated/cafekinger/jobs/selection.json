@@ -1,0 +1,25 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: one full-body transparent 2D character selection sprite for Digital Circus Encore.\n\nCreate exactly ONE Kinger in the Animate Cafe costume. Image 1 is the official costume authority. Image 2 supplies only the existing game's clean cel-shaded drawing style, tall chess-piece proportions and disconnected white glove anatomy. Do not copy its royal fur robe.\n\nKinger is a beige wooden chess king: one intact cross-topped head, two protruding white eyes with blue irises, no mouth. Keep the silver circular monocle with its fine hanging chain over the higher eye as in image 1; the eye remains visible through the clear lens. Outfit: rich dark purple tailcoat with pale lavender piping on the lapels and two long pointed rear tails lined in muted lilac. Gray-lilac patterned waistcoat with subtle diamond panels and dark buttons, white shirt collar, black necktie and a small pale-blue flower-shaped neck ornament. Under the jacket is ONE long tapering purple chess-piece body with subtle lengthwise stripes, ending in its complete dark navy circular plinth and thin pale rim. No fur trim, human torso anatomy, trouser legs, shoes, feet or knees.\n\nExactly TWO compact white cartoon gloves FLOAT separately beside the body, with short empty wrist openings and visible transparent gaps. Absolutely no arms, sleeves stretching to the gloves, shoulder limbs or glove supports. Both gloves remain part of this one character, as in the game reference.\n\nSelection pose: upright dignified neutral pose, three-quarter toward SCREEN-RIGHT, eyes looking screen-right. One floating glove raised in a small polite greeting, the other resting lower beside the waist. Keep monocle, neck ornament, vest, coat tails and entire bottom plinth readable. No serving objects or props.\n\nCrisp dark outlines, restrained two-tone cel shading, flat clean colors matching the game reference. Entire body centered with generous transparent margins on every side, full cross, gloves and plinth visible. The character occupies about 75 percent of canvas height. Native transparent RGBA background. No environment, floor, shadow, gradients behind the subject, glow, halo, sticker border, text, logo, watermarks, second figure or cropped parts.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+    "assets/encore/selection/kinger.webp"
+  ],
+  "referenceRoles": [
+    "Official cafe outfit and full silhouette",
+    "Existing game drawing style, identity and proportions; Kinger floating gloves only"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+    "assets/encore/selection/kinger.webp": "56138a24a0b5d9fa75d86ce4c4bc4c4f3c0f26f77c2f4958ac6c5a6151326787"
+  }
+}

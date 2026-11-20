@@ -1,0 +1,17 @@
+✔ additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips (46.425875ms)
+✔ resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries (13.594449ms)
+✔ runtime directions agree with the individually reviewed completion records for all ninety-nine resumed drawings (1.921205ms)
+✔ new catalogue drawings match reviewed native directions and exact archived PNGs (2884.216531ms)
+✔ Cafe Kinger and Pomni preserve all 472 published costumes and bind 22 native drawings to their frozen owners (195.061433ms)
+✔ Cafe Ribbit preserves the 468-costume prefix and binds every installed pose to its frozen owner and accepted receipt (136.116781ms)
+✔ the complete 472-costume prefix keeps its published IDs, order and fields (17.3842ms)
+✔ explicit addition order appends successive mixed Circus and NPC batches without shifting published records (18.724527ms)
+✔ ambiguous or incomplete addition registries fail with explicit IDs (4.006394ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3656.816577

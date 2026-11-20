@@ -1,0 +1,25 @@
+{
+  "schema": "encore-softballfield-browser-nonexecution-v1",
+  "recordedAt": "2026-11-20T16:53:21.959989+00:00",
+  "status": "not_executed",
+  "attempted": false,
+  "command": null,
+  "successfulChecks": 0,
+  "exitCode": null,
+  "scope": "No local browser execution for this continuation. Production Canvas evidence is separate.",
+  "reason": "Identical Chromium environment failure already observed before navigation; no repeat requested by the parent task.",
+  "log": "browser.log",
+  "logSHA256": "88772ea0a34d72d219c2d354b2e4089bee67145e500b21109391a010a9376328",
+  "historicalAttempt": {
+    "receipt": "../../stage-next-wave-20261120/browser-result.json",
+    "receiptSHA256": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+    "startedAt": "2026-11-20T14:51:46.083930+00:00",
+    "endedAt": "2026-11-20T14:51:47.586016+00:00",
+    "status": "environment_blocked_before_navigation",
+    "successfulChecks": 0,
+    "exitCode": 1,
+    "log": "../../stage-next-wave-20261120/browser.log",
+    "logSHA256": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9",
+    "scope": "Historical Barnoir attempt, before its final manifest. Does not validate softballfield or any current costume."
+  }
+}

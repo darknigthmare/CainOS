@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "walk",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: A clear right-facing walking mid-stride pose: left foot stepping forward toward image right, right foot behind with heel lifted; gentle opposing arm swing, upright torso. Both separate legs and both arms fully visible, no motion trails.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-fusion:walk",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/fusion/walk.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-b4e686ea-0ccd-41e4-86ef-94b92fcf299a.png",
+  "sourceGenerationId": "exec-b4e686ea-0ccd-41e4-86ef-94b92fcf299a",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "bytes": 941029
+    }
+  ],
+  "dimensions": [
+    1150,
+    1368
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    104,
+    47,
+    1052,
+    1287
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1174470,
+  "sha256": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+  "bytes": 848857,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:03:25.922534+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Pas vers la droite avec une jambe avant et l’autre arrière, pieds mécaniques à trois lobes entièrement visibles ; mains à trois doigts, matériaux blanc/cyan et joints marine cohérents, silhouette complète."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

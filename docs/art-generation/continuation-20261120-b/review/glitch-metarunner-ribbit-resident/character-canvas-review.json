@@ -1,0 +1,251 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T17:32:49.914Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": false,
+  "crossoversOnly": true,
+  "introducedOn": null,
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "scripts/render-combat-character-review.mjs": "3b6519a33e5e923c10517c8a12135f112ae30822247c16bfdda55a4b9a134e09"
+  },
+  "actions": [
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/intro.png",
+      "sha256": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+      "bytes": 664573,
+      "visibleBounds": {
+        "x": 134,
+        "y": 16,
+        "width": 310,
+        "height": 600
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/attack.png",
+      "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+      "bytes": 746676,
+      "visibleBounds": {
+        "x": 49,
+        "y": 13,
+        "width": 555,
+        "height": 563
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/hit.png",
+      "sha256": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+      "bytes": 794831,
+      "visibleBounds": {
+        "x": 104,
+        "y": 22,
+        "width": 396,
+        "height": 596
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/walk.png",
+      "sha256": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+      "bytes": 715959,
+      "visibleBounds": {
+        "x": 78,
+        "y": 15,
+        "width": 416,
+        "height": 594
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/jump.png",
+      "sha256": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+      "bytes": 762618,
+      "visibleBounds": {
+        "x": 36,
+        "y": 19,
+        "width": 512,
+        "height": 600
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/crouch.png",
+      "sha256": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+      "bytes": 868900,
+      "visibleBounds": {
+        "x": 40,
+        "y": 33,
+        "width": 472,
+        "height": 585
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/victory.png",
+      "sha256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+      "bytes": 657866,
+      "visibleBounds": {
+        "x": 112,
+        "y": 5,
+        "width": 319,
+        "height": 611
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/defeat.png",
+      "sha256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+      "bytes": 878926,
+      "visibleBounds": {
+        "x": 99,
+        "y": 38,
+        "width": 380,
+        "height": 574
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/heavy.png",
+      "sha256": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+      "bytes": 1445975,
+      "visibleBounds": {
+        "x": 26,
+        "y": 7,
+        "width": 542,
+        "height": 415
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/stance.png",
+      "sha256": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+      "bytes": 760287,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "archiveId": null,
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/selection.png",
+      "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+      "bytes": 684381,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-glitch-metarunner-ribbit-resident.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "complete": true
+}

@@ -1,0 +1,251 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T17:32:42.304Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "crossoversOnly": false,
+  "introducedOn": null,
+  "appearanceId": "cafekinger",
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "scripts/render-combat-character-review.mjs": "3b6519a33e5e923c10517c8a12135f112ae30822247c16bfdda55a4b9a134e09"
+  },
+  "actions": [
+    {
+      "id": "cafekinger",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/poses/cafekinger/intro.png",
+      "sha256": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+      "bytes": 1133425,
+      "visibleBounds": {
+        "x": 181,
+        "y": 9,
+        "width": 277,
+        "height": 412
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/poses/cafekinger/attack.png",
+      "sha256": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+      "bytes": 1165904,
+      "visibleBounds": {
+        "x": 150,
+        "y": 7,
+        "width": 327,
+        "height": 414
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/poses/cafekinger/hit.png",
+      "sha256": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+      "bytes": 639682,
+      "visibleBounds": {
+        "x": 119,
+        "y": 11,
+        "width": 364,
+        "height": 568
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/poses/cafekinger/walk.png",
+      "sha256": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+      "bytes": 1160564,
+      "visibleBounds": {
+        "x": 177,
+        "y": 5,
+        "width": 283,
+        "height": 420
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/poses/cafekinger/jump.png",
+      "sha256": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+      "bytes": 1185817,
+      "visibleBounds": {
+        "x": 181,
+        "y": 7,
+        "width": 295,
+        "height": 414
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/poses/cafekinger/crouch.png",
+      "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+      "bytes": 1340173,
+      "visibleBounds": {
+        "x": 139,
+        "y": 16,
+        "width": 388,
+        "height": 405
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/poses/cafekinger/victory.png",
+      "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+      "bytes": 1346080,
+      "visibleBounds": {
+        "x": 105,
+        "y": 10,
+        "width": 241,
+        "height": 620
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/poses/cafekinger/defeat.png",
+      "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+      "bytes": 1072926,
+      "visibleBounds": {
+        "x": 200,
+        "y": 61,
+        "width": 253,
+        "height": 318
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafekinger",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/poses/cafekinger/heavy.png",
+      "sha256": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+      "bytes": 1273887,
+      "visibleBounds": {
+        "x": 148,
+        "y": 8,
+        "width": 315,
+        "height": 415
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "cafekinger",
+      "file": "assets/encore/stance/cafekinger.png",
+      "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+      "bytes": 1324026,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "cafekinger",
+      "archiveId": null,
+      "file": "assets/encore/selection/cafekinger.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-cafekinger.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "complete": true
+}

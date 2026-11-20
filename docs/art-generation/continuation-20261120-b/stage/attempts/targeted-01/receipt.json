@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "observedAt": "2026-11-20T16:51:10.971021+00:00",
+  "reason": "The new ambience used 12.6 seconds; the existing contract caps all stage ambience periods at 12 seconds. Fix the new value to 11.8 without changing the contract.",
+  "logSHA256": "5a1089dd2d90e5ea8e50ca0fa516aa01bb6e7ed11059a411fd0d0fd1d906cd9b"
+}

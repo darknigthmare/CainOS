@@ -1,0 +1,92 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "stance",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept. One transparent full-body 2D game character sprite, Kinger in the purple Animate Cafe outfit.\n\nUse image 1, the accepted selection, to keep exactly the same character, colors, outfit, facial features and drawing style. Image 2 confirms the cafe clothing. Create a new calm ready pose: the whole chess-piece body faces SCREEN-RIGHT with a small forward inclination; the two magical white gloves hover openly at chest level, palms relaxed and separated, ready to greet someone.\n\nKeep the beige wooden king head and complete cross, two blue eyes, silver monocle and chain, purple tailcoat with pale piping and lilac tails, gray-lilac diamond vest, black tie and blue flower ornament. Preserve the single long conical purple chess-piece body and complete dark circular base with pale rim. The two white gloves float independently beside this simple fantasy chess character, as they do in image 1. Keep the same clean nonhuman chess-piece form throughout.\n\nFull silhouette centered with ample transparent margins around cross, gloves and base. Crisp dark contours and restrained flat cel shading. Native transparent RGBA, clean isolated cartoon artwork, no other character, objects, scenery, letters, shadow, glow or framing.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  },
+  "revisionOf": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/stance.json",
+  "revisionReason": "Neutral open-palm ready pose after the earlier output was blocked; no image was returned.",
+  "jobPath": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/stance-revision-02.json",
+  "schema": "encore-native-continuation-b-cafe-art/v1",
+  "id": "cafekinger:stance",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.png",
+  "targetFile": "assets/encore/stance/cafekinger.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-46fdb5ef-e34a-4494-8002-72070b65cb0e.png",
+  "sourceGenerationId": "exec-46fdb5ef-e34a-4494-8002-72070b65cb0e",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+      "sha256": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+      "bytes": 123785
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    180,
+    30,
+    896,
+    1517
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1208468,
+  "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+  "bytes": 1324026,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T16:49:23.965704+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Pose d’attente calme distincte de la sélection : deux gants ouverts devant le corps, sans bras, pieds ou jambes. Croix, monocle, chaîne et base complets ; gilet et queue-de-pie cohérents.",
+      "Les gants flottent devant/à côté du torse, sans raccord humain. La sortie précédente bloquée n’a fourni aucun PNG et reste archivée comme appel non abouti.",
+      "Inspection du PNG natif et de sa composition alpha sur fonds clair et sombre ; silhouette entière, contours propres, alpha natif conservé sans retouche. Orientation écran droit.",
+      "Bornes alpha > 12 [180,30,896,1517] internes à 1024 × 1536. Le RGB caché sous alpha nul n’a pas été modifié. Adaptation statique de jeu ; aucune certification d’épisode ou d’animation complète."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T17:17:56.268791+00:00",
+    "targetFile": "assets/encore/stance/cafekinger.png",
+    "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "defeat",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nNative transparent PNG edit of reference image 1: correct ONLY the composition/framing of this original Cafe Kinger defeat sprite so that the ENTIRE navy circular plinth is safely inside the canvas. Preserve the weary, diagonally leaning screen-right pose, the exact Cafe costume, two detached white gloves, and the same crisp 2D drawing family. Reference 2 is the accepted selection for identity and construction; reference 3 is the official outfit detail.\n\nThe previous image fails because the bottom edge of its plinth touches the frame. Draw the WHOLE same character at a clearly smaller scale, with its entire silhouette occupying about 70 percent of canvas height and width, surrounded by a continuous wide transparent margin on ALL four sides. Place at least 90 pixels of clear transparent space below the complete plinth and above the cross. Everything, including coat tails and floating gloves, must be inside this generous margin. Wide landscape canvas, one character only.\n\nKeep Kinger's beige cross-topped chess head, TWO protruding blue eyes, transparent silver monocle with fine chain, purple tailcoat with pale lavender piping and tails, gray-lilac diamond waistcoat and three dark buttons, white collar, black tie, blue-centered white flower, and tapering striped purple chess body ending in the COMPLETE navy circular plinth with thin pale rim. EXACTLY TWO white disconnected gloves hang wearily beside him. No arms, legs, knees, shoes, feet or new accessories. Keep screen-right gaze and tired eyelids.\n\nRestrained two-tone cel shading and crisp dark contours, same colors and body proportions as reference 2. Native transparent RGBA. No floor, cast shadow, background, halo, glow, bloom, motion lines, text, logo, watermark or checkerboard. This is a native generative framing correction; output the complete transparent asset without any local pixel editing.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Archived first native defeat: pose and outfit, framing correction only",
+    "Accepted selection: identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png": "ca972c0104fcdda2c49cce2a1fdfde47697e77d3fbf91f5e3c3da51f6921745f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  },
+  "jobPath": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/defeat-correction-02.json",
+  "revisionReason": "First native bottom alpha>12 bound touched frame at y=1024. Correct framing through imagegen; preserve old native unmodified in attempts.",
+  "schema": "encore-native-continuation-b-cafe-art/v1",
+  "id": "cafekinger:defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.png",
+  "targetFile": "assets/encore/poses/cafekinger/defeat.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-c5af683b-2b81-4553-92e8-6adcc2fdc40c.png",
+  "sourceGenerationId": "exec-c5af683b-2b81-4553-92e8-6adcc2fdc40c",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png",
+      "sha256": "ca972c0104fcdda2c49cce2a1fdfde47697e77d3fbf91f5e3c3da51f6921745f",
+      "bytes": 1359494
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+      "sha256": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+      "bytes": 123785
+    }
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    479,
+    147,
+    1088,
+    909
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1408806,
+  "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+  "bytes": 1072926,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:13:31.531002+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Correction native du cadrage réussie : pièce entière avec plinthe complète et larges marges, alpha>12 [479,147,1088,909] dans 1536×1024 ; aucun pixel natif modifié localement.",
+      "Expression fatiguée aux paupières baissées, inclinaison vers la droite et deux gants flottants pendants ; aucune jambe, chaussure ou bras humain ajouté.",
+      "Monocle et chaîne, croix, queue-de-pie violette, gilet à losanges, fleur et bandes de la base conservés ; contours propres sur les deux fonds composés.",
+      "L'essai initial rejeté pour contact au bord inférieur, son prompt et son diagnostic sont archivés exactement sous attempts/defeat-framing-01.",
+      "Inspection du PNG natif et de sa composition alpha sur fonds clair et sombre ; silhouette entière, contours propres, alpha natif conservé sans retouche. Orientation écran droit.",
+      "Bornes alpha > 12 [479,147,1088,909] internes à 1536 × 1024. Le RGB caché sous alpha nul n’a pas été modifié. Adaptation statique de jeu ; aucune certification d’épisode ou d’animation complète."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T17:17:56.268791+00:00",
+    "targetFile": "assets/encore/poses/cafekinger/defeat.png",
+    "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

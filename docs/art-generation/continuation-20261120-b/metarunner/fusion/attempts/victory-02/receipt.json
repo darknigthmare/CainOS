@@ -1,0 +1,26 @@
+{
+  "schema": "encore-rejected-native-generation-v1",
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "slot": "victory",
+  "status": "rejected_ambiguous_two_tip_waist_hand",
+  "includedInRuntime": false,
+  "reviewer": "audit_github",
+  "recordedAt": "2026-11-20T17:19:56.462881+00:00",
+  "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-a439c72f-2950-415f-9089-2e189f14b80f.png",
+  "nativeFile": "victory.png",
+  "sha256": "f547de46b103be089c28e70425710755eec11013e6839329667b222285920e2d",
+  "bytes": 859047,
+  "job": "job.json",
+  "jobSHA256": "7095508e351200088e28e1efbdac9b31e22e4702a72a36b0373eb46824c9b1b2",
+  "diagnostics": [
+    {
+      "file": "victory-alpha.jpg",
+      "sha256": "91418a90371a4fb676d2b3ce7049c120bfc247d7d1815337e1a845e2df77b24b"
+    },
+    {
+      "file": "victory-hands.jpg",
+      "sha256": "6cb84bbbbf1de9089009c5dc47caaf814f7ff35bef60432b967dea81caecb271"
+    }
+  ],
+  "observation": "Raised fist now visibly has three digits and native alpha composition is clean. The waist hand was simplified to only two visible fingertip lobes; request clearer three-digit reading for the original design, without asserting a canonical anatomical defect."
+}

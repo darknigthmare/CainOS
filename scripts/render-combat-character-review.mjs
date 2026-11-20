@@ -81,7 +81,7 @@ const report = { schema: 'encore-character-canvas-review/v1', createdAt: new Dat
     'Individual static poses do not establish frame-by-frame animation.',
     'Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification.'],
   partial, additionsOnly, crossoversOnly, introducedOn, appearanceId, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
-for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/costume-discoveries-20261120.mjs','combat/costume-ribbit-20261120.mjs','combat/costume-next-missing-20261120.mjs','combat/costume-next-wave-20261120.mjs','combat/crossovers.mjs','combat/crossover-npc-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
+for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/costume-discoveries-20261120.mjs','combat/costume-ribbit-20261120.mjs','combat/costume-next-missing-20261120.mjs','combat/costume-next-wave-20261120.mjs','combat/costume-order.mjs','combat/costume-continuation-20261120-b.mjs','combat/crossovers.mjs','combat/crossover-npc-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
   report.sources[file] = sha(await fs.readFile(path.join(repo, file)));
 }
 function background(ctx, width, height) {

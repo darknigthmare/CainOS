@@ -7,6 +7,7 @@ export const STAGE_AMBIENCES = Object.freeze({
   falseexit: 'Poussière sous les tubes fluorescents',
   undermap: 'Pulsations bleues sous la carte',
   barnoir: 'Lueurs discrètes des enseignes',
+  softballfield: 'Halos lents des projecteurs',
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
   cellar: 'Présences du cellier', void: 'Reflets irisés', lake: 'Ondes du lac', training: 'Balayage de calibration',
   gloink: 'Formes du nid', kingdom: 'Scintillements de sucre', grounds: 'Nuages des terrains', backstage: 'Veilleuses du couloir',
@@ -89,6 +90,12 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
     // Gentle light only, behind actors and clipped above the fixed floor.
     for (const [i, [x, y, color]] of [[76, 328, '#6bddb8'], [1002, 309, '#f49ccf'], [1184, 309, '#eebf65']].entries()) {
       shapes.push(circle(x, y, 30 + wave(.18, i) * 3, 36 + wave(.21, i) * 4, color, .018 + (wave(.27, i * 1.4) + 1) * .009));
+    }
+  } else if (id === 'softballfield') {
+    // Subtle original light variation, behind actors and above the fixed floor.
+    for (const [i, [x, y]] of [[385, 157], [585, 166], [787, 174], [990, 169]].entries()) {
+      shapes.push(circle(x, y, 33 + wave(.14, i) * 2, 20 + wave(.16, i) * 2,
+        '#e3efff', .018 + (wave(.19, i * 1.4) + 1) * .008));
     }
   } else if (id === 'gloink') {
     for (let i = 0; i < 7; i++) {

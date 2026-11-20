@@ -5,12 +5,12 @@ dessins individuels réunis le **19 novembre 2026**, puis complétés le
 **20 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 24 arènes partagées, 9 modes, 472 costumes et 179 archives**.
+**54 combattants, 540 techniques, 25 arènes partagées, 9 modes, 477 costumes et 179 archives**.
 Le catalogue conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, **51 costumes d’archive**, **40 variantes Circus / 440 PNG** et
-**381 costumes crossover / 3 814 fichiers**. Les quatorze propriétaires historiques
+les escales GLITCH, **51 costumes d’archive**, **42 variantes Circus / 462 PNG** et
+**384 costumes crossover / 3 847 fichiers**. Les quatorze propriétaires historiques
 conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les trois styles
-Murder Drones, soit **3/27** parmi les neuf collections. Ses huit autres séries et
+Murder Drones et les trois styles Meta Runner, soit **6/27** parmi les neuf collections. Ses sept autres séries et
 les **39 autres PNJ sans crossover** restent ouverts. Aucun choix ne pointe vers
 un dessin absent.
 L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
@@ -37,7 +37,44 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Dernière suite — Café Ribbit, trois crossovers et le bar des néons, 20 novembre
+## Dernière suite — deux Café, Ribbit × Meta Runner et le stade de softball
+
+**Café Kinger** et **Café Pomni** complètent les tenues Circus d’après les
+illustrations officielles de la collaboration Animate Café. **Ribbit × Meta Runner**
+ajoute trois créations originales : **Hommage · Tari**, **Analyste de replays** et
+**Avatar de synchronisation**. Les cinq familles possèdent chacune un portrait,
+une garde et neuf actions distinctes, dont leur propre coup lourd : **55 PNG natifs**.
+Les mains flottantes de Kinger et les poses de combat sont des adaptations
+documentées ; ces images ne qualifient aucune partie masquée d’un autre costume.
+
+**Le stade de softball** (`softballfield`) devient la **25e arène partagée** avec
+trois plans natifs, un rendu de secours, une ambiance et une musique originales.
+Les tribunes, les auvents, les projecteurs, l’herbe et la terre ocre proviennent
+des vues officielles examinées de l’épisode 5. Le lieu existait déjà dans
+l’exploration CainOS ; il est désormais utilisable en duel Encore.
+
+Les **58 PNG du lot / 55 122 465 octets** sont conservés sans retouche ni réencodage. Les 472 costumes
+précédents gardent leur ordre et leurs objets JSON exacts. Les récits, les anciens
+programmes et les replays sont comparés à des fixtures capturées avant les
+modifications ; les 54 arrangements dédiés restent des réemplois des scènes partagées.
+
+La QA finale réussit **431 tests et les deux builds**. Les personnages passent
+**100 contrôles Canvas** et le stade **six contrôles** ; les copies natives et les
+**5 772 anciens fichiers Encore** sont intacts. Le classeur contient **3 308 lignes
+Production, 2 454 lignes QA et 161 sources**. Sa comparaison de **82 697 cellules**
+ne relève aucune différence, avec 42 formules conservées et 50 vues inspectées.
+
+Le [rapport courant](COMBAT_CONTINUATION_B_2026-11-20.md), les
+[galeries et preuves](art-generation/continuation-20261120-b/README.md), le
+[dossier du stade](art-generation/continuation-20261120-b/stage/README.md) et le
+[suivi du classeur](art-generation/continuation-20261120-b/workbook/README.md)
+consignent les résultats réellement exécutés. Le
+[registre courant des manquants](art-generation/continuation-20261120-b/remaining-work.md)
+conserve les **1 074 tenues crossover de PNJ encore absentes**, les références
+occultées, les cycles animés complets et les essais matériels. Les comptes rendus
+ci-dessous restent des points d’étape datés.
+
+## Suite précédente — Café Ribbit, trois crossovers et le bar des néons, 20 novembre
 
 **Café Ribbit** complète les tenues Circus. Les premières déclinaisons crossover
 d’un PNJ promu sont **Ribbit · Hommage Uzi**, **Ribbit · Technicienne des conduites**
@@ -66,7 +103,7 @@ ces rendus ne constituent pas une validation des interactions navigateur.
 Les résultats datés de la QA globale et de la réconciliation du classeur restent
 dans les nouveaux rapports, notamment le
 [dossier du suivi](art-generation/workbook-next-wave-20261120/README.md).
-Le [registre courant des manquants](art-generation/next-wave-20261120/remaining-work.md)
+Le [registre des manquants à ce point d’étape](art-generation/next-wave-20261120/remaining-work.md)
 conserve les références occultées, les crossovers encore absents, les cycles animés
 et les essais matériels. Les bilans ci-dessous gardent leurs chiffres historiques.
 
@@ -401,12 +438,12 @@ le palais de sucre, les terrains du cirque et le couloir des portes. Les arènes
 partagent une surface de duel sans danger aléatoire. Les décors ont une géométrie
 dessinée dans Canvas et une palette propre.
 La fausse sortie et les neuf arènes GLITCH avaient porté le catalogue partagé à 22.
-Sous la carte et le bar des néons le portent maintenant à **24 arènes / 72 plans**.
+Sous la carte, le bar des néons et le stade de softball le portent maintenant à **25 arènes / 75 plans**.
 Les arrangements `home-<id>` réutilisent ces décors et ne sont pas comptés comme
 54 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
 rendu de secours et suivent les mêmes limites de combat.
 
-Les **51 variantes d’archive et 40 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
+Les **51 variantes d’archive et 42 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
 modifier son kit. Leur attribution repose sur une liste explicite par identité :
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.
@@ -749,9 +786,9 @@ anciens libellés en faits canoniques.
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
-**669 entrées** : 54 personnages, 540 techniques, 24 arènes partagées et 51 costumes d’archive.
-Les suites illustrées ajoutent 40 fiches de costume distinctes dans
-`combat/costume-additions.mjs`, portant ce sous-total documenté à **709**, hors fiches
+**670 entrées** : 54 personnages, 540 techniques, 25 arènes partagées et 51 costumes d’archive.
+Les suites illustrées ajoutent 42 fiches de costume distinctes dans
+`combat/costume-additions.mjs`, portant ce sous-total documenté à **712**, hors fiches
 de création originale des crossovers.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
@@ -993,9 +1030,9 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 
 ## Classeur de production
 
-Le [dossier de mise à jour du lot courant](art-generation/workbook-next-wave-20261120/README.md)
-relie les preuves propres à Café Ribbit, aux trois crossovers de Ribbit et au bar
-des néons. Les compteurs, l’export, le réimport et les résultats de contrôle de cette
+Le [dossier de mise à jour du lot courant](art-generation/continuation-20261120-b/workbook/README.md)
+relie les preuves propres à Café Kinger, Café Pomni, aux trois crossovers Meta Runner
+de Ribbit et au stade de softball. Les compteurs, l’export, le réimport et les résultats de contrôle de cette
 vague sont consignés dans ce dossier ; les nombres ci-dessous décrivent les campagnes
 historiques et ne sont pas réattribués au nouveau lot.
 

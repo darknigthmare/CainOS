@@ -1,0 +1,14 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Draw ONE new complete full-body character sprite from the provided CLEAN identity reference, native PNG with a TRUE transparent background. Match identity, proportions, exact costume and materials. Crisp cel shading and solid outlines. No background lighting, no aura, no bloom, no haze, no cast shadow or floor: all outside-of-silhouette pixels are transparent except ordinary one-pixel edge antialiasing. Keep generous margins around whole body. One character, no text or extras. Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and hot-pink fabric bow tie. Long slender game-adapted frog limbs. Original esports replay analyst resident of the Meta Runner world. Wear a sleeveless short navy esports jacket with distinct MAGENTA side panels over a cream short-sleeve tee; navy athletic shorts; small smooth grey kneepads; bare green lower legs; purple high-top sneakers with cyan soles. LEFT forearm is a light-grey cybernetic prosthesis with navy joints and thin cyan interface strips, ending in THREE rounded robotic digits. RIGHT hand is green, exactly THREE rounded digits, with a compact black screen wristband. Keep the pink bow tie visible and no headphones blocking eyes. No hoodie, tool belt, weapons, company logo, floating interface, extra device or tail. Clear sporty silhouette. POSE: Heavy action: a forceful LOW FORWARD LUNGE toward image right with both arms thrust forward, TWO SEPARATE COMPACT CLOSED FISTS. Each three-digit frog hand is curled into a rounded fist (two curled fingers, one folded thumb), not an open palm. Front knee deeply bent, rear leg long and braced. Determined face, complete feet, clear bent elbows. No visible open fingers.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4"
+}

@@ -2,11 +2,13 @@
 
 Les collections permettent de rendre hommage à un personnage de l’œuvre, d’incarner un habitant de son univers ou d’adopter une fusion originale. Pour cette troisième apparence, la silhouette et les traits du combattant sont redessinés dans le langage visuel de la série. Le joueur garde les attaques, les statistiques et le scénario de son combattant. Les créations d’Encore sont des adaptations de fan. [Catalogue du studio](https://www.glitchprod.com/our-shows)
 
-Le catalogue courant compte **381 costumes crossover / 3 814 fichiers** dans neuf collections. Les **quatorze propriétaires historiques** conservent leurs 27 tenues chacun, soit les **378 costumes** du premier catalogue. **Ribbit** inaugure les crossovers des PNJ promus avec trois styles Murder Drones : **3/27** parmi les neuf collections. Ses huit autres séries et les **39 autres PNJ sans crossover** restent à produire ; le menu n’invente pas de costume pour un corps sans dessin complet.
+Le catalogue courant compte **384 costumes crossover / 3 847 fichiers** dans neuf collections. Les **quatorze propriétaires historiques** conservent leurs 27 tenues chacun, soit les **378 costumes** du premier catalogue. **Ribbit** possède trois styles Murder Drones et trois styles Meta Runner : **6/27** parmi les neuf collections. Ses sept autres séries et les **39 autres PNJ sans crossover** restent à produire ; le menu n’invente pas de costume pour un corps sans dessin complet.
 
-Le bloc historique du 18 novembre réunissait **252 tenues « Hommage » ou « Résident » et 126 fusions originales**. Ces tenues conservent leurs dix dessins de sélection, garde, attaque, victoire, entrée, marche, saut, accroupissement, impact et défaite. Leurs coups légers et lourds peuvent réemployer le dessin d’attaque pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent également chacun d’un dessin propre à leur coup lourd. Les **trois nouvelles familles Ribbit** possèdent chacune **onze PNG natifs**, avec un dessin distinct pour leur coup lourd.
+Le bloc historique du 18 novembre réunissait **252 tenues « Hommage » ou « Résident » et 126 fusions originales**. Ces tenues conservent leurs dix dessins de sélection, garde, attaque, victoire, entrée, marche, saut, accroupissement, impact et défaite. Leurs coups légers et lourds peuvent réemployer le dessin d’attaque pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent également chacun d’un dessin propre à leur coup lourd. Les **six familles Ribbit** possèdent chacune **onze PNG natifs**, avec un dessin distinct pour leur coup lourd.
 
-La [vague du 20 novembre](COMBAT_NEXT_WAVE_2026-11-20.md) réunit aussi Café Ribbit et le bar des néons : **47 PNG natifs**, dont 44 dessins de personnages et trois plans d’arène, pour **59 538 780 octets**. Les [galeries et preuves du lot](art-generation/next-wave-20261120/README.md), le [registre des manquants](art-generation/next-wave-20261120/remaining-work.md) et le [dossier du classeur](art-generation/workbook-next-wave-20261120/README.md) gardent leurs résultats et limites propres. Les crossovers restent distincts des **40 variantes Circus / 440 PNG** et des 51 costumes d’archive du vestiaire de 472 costumes.
+La [dernière continuation du 20 novembre](COMBAT_CONTINUATION_B_2026-11-20.md) réunit Café Kinger, Café Pomni, les trois styles Meta Runner de Ribbit et le stade de softball : **58 PNG natifs**, dont 55 dessins de personnages et trois plans d’arène. Ses [galeries et preuves](art-generation/continuation-20261120-b/README.md), son [registre des manquants](art-generation/continuation-20261120-b/remaining-work.md) et son [dossier du classeur](art-generation/continuation-20261120-b/workbook/README.md) donnent les résultats datés. Les crossovers restent distincts des **42 variantes Circus / 462 PNG** et des 51 costumes d’archive du vestiaire de **477 costumes**.
+
+La [vague précédente](COMBAT_NEXT_WAVE_2026-11-20.md) réunissait Café Ribbit, les trois styles Murder Drones et le bar des néons : **47 PNG natifs / 59 538 780 octets**. Ses [preuves historiques](art-generation/next-wave-20261120/README.md) conservent leur portée propre.
 
 Sur l’accueil du mode Combat, **Escales GLITCH** ouvre le choix des neuf destinations. Sélectionnez une escale pour lire son introduction, puis remportez le duel pour afficher sa fin. Chaque étape possède une arène à trois profondeurs et un tableau d’introduction et de fin. L’arène comporte un fond et deux plans transparents. Les poses, l’habillage et les escales sont imaginés pour le jeu. [Fichiers des costumes](../assets/encore/crossovers/) · [Illustrations du parcours](../assets/encore/escales/)
 
@@ -42,6 +44,28 @@ La vitrine GlitchX présente les projets de créateurs invités et sa mascotte B
 ## Galerie des ressources jouables
 
 Chaque lien de tenue ouvre les PNG ou WebP individuels de cette apparence. Les combattants équipés conservent le gabarit et le jeu de coups de leur personnage.
+
+### Ribbit × Meta Runner — trois créations originales
+
+L’**Hommage · Tari** conserve Ribbit biologique avec une veste cyan et blanche et
+un avant-bras cybernétique gauche. L’**Analyste de replays** porte une veste de
+compétition marine et magenta, un short et des genouillères. La fusion **Avatar de
+synchronisation** remplace tout le corps par des plaques pâles, des articulations
+marine et des lignes cyan, avec le nœud magenta intégré au torse. Les trois
+designs gardent le kit de Ribbit et disposent de onze poses distinctes.
+
+Les références officielles de Meta Runner guident les motifs et les matériaux ;
+ces rôles, ces corps et ces poses restent des créations originales du jeu.
+La lecture à trois lobes des mains appartient au design de cette vague et ne
+constitue pas une affirmation sur l’anatomie canonique de Ribbit.
+
+| Hommage · Tari | Résident · Analyste de replays | Fusion · Avatar de synchronisation |
+| --- | --- | --- |
+| ![Ribbit en hommage à Tari](../assets/encore/crossovers/metarunner/ribbit/hommage/selection.png) | ![Ribbit analyste de replays](../assets/encore/crossovers/metarunner/ribbit/resident/selection.png) | ![Ribbit avatar de synchronisation](../assets/encore/crossovers/metarunner/ribbit/fusion/selection.png) |
+| [Garde](../assets/encore/crossovers/metarunner/ribbit/hommage/stance.png) · [Onze PNG](../assets/encore/crossovers/metarunner/ribbit/hommage/) | [Garde](../assets/encore/crossovers/metarunner/ribbit/resident/stance.png) · [Onze PNG](../assets/encore/crossovers/metarunner/ribbit/resident/) | [Garde](../assets/encore/crossovers/metarunner/ribbit/fusion/stance.png) · [Onze PNG](../assets/encore/crossovers/metarunner/ribbit/fusion/) |
+
+[Sources et portée des références](art-generation/continuation-20261120-b/metarunner/reference-review.md)
+· [Comparer la fusion en sélection et en garde](COMBAT_GALERIE_FUSIONS.md#meta-runner).
 
 ### Ribbit — premiers crossovers de PNJ, 20 novembre
 

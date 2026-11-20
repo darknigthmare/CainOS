@@ -1,0 +1,40 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and hot-pink fabric bow tie. Long slender game-adapted frog limbs. Original esports replay analyst resident of the Meta Runner world. Wear a sleeveless short navy esports jacket with distinct MAGENTA side panels over a cream short-sleeve tee; navy athletic shorts; small smooth grey kneepads; bare green lower legs; purple high-top sneakers with cyan soles. LEFT forearm is a light-grey cybernetic prosthesis with navy joints and thin cyan interface strips, ending in THREE rounded robotic digits. RIGHT hand is green, exactly THREE rounded digits, with a compact black screen wristband. Keep the pink bow tie visible and no headphones blocking eyes. No hoodie, tool belt, weapons, company logo, floating interface, extra device or tail. Clear sporty silhouette. POSE: A powerful two-handed forward shove toward image right: both arms extended forward at chest level, hands clearly separate and palms aimed right, deep forward lunge with front knee strongly bent and rear leg braced. Determined frog expression. Keep each hand material on its correct anatomical side; no duplicated limbs or impact effects.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+  "status": "rejected_native",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-c1fc5b40-593e-42d8-b0b2-90e29b7bfdc5",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-c1fc5b40-593e-42d8-b0b2-90e29b7bfdc5.png",
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/rejected/heavy-attempt01.png",
+  "sha256": "0312b75611c57a1020484ddeccb059dac9803021b871372d810197125a47855a",
+  "bytes": 1429185,
+  "mode": "RGBA",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "reason": "Quatre doigts visibles par main au lieu de trois. Le halo initialement soupçonné dans l’aperçu brut n’est pas confirmé en composition alpha.",
+  "includedInRuntime": false,
+  "initialReviewReason": "Halo flou extérieur étendu et quatre doigts par main au lieu de trois.",
+  "alphaReassessment": {
+    "reviewer": "root",
+    "reviewedAt": "2026-11-20T17:13:44.989562+00:00",
+    "diagnostic": "docs/art-generation/continuation-20261120-b/metarunner/review/rejected-attempts-alpha.png",
+    "diagnosticSHA256": "302795db28d9e9010958e4b8098e139472db929dac36a1b9e95b3f125a86b2b4",
+    "observation": "Toutes les cinq tentatives ont une composition alpha sans halo diffus. Les écarts de doigts sont évalués séparément ; deux variantes correctes restent simplement non retenues."
+  }
+}

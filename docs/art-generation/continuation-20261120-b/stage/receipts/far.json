@@ -1,0 +1,60 @@
+{
+  "schema": "encore-native-stage-plane-receipt-v1",
+  "stageId": "softballfield",
+  "plane": "far",
+  "status": "accepted_native",
+  "includedInRuntime": true,
+  "generatedOrigin": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-0fff614e-0149-45aa-beae-73d965bfd5a5.png",
+  "nativePath": "native/far.png",
+  "job": "jobs/far-01.json",
+  "jobSHA256": "1d2b48f3f4721694cdd4d22054b09864e29f9ad5ce73c776f79ee3ad31224673",
+  "tool": "image_gen.imagegen",
+  "sha256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+  "bytes": 2071718,
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "alphaExtrema": null,
+  "copiedByteIdentically": true,
+  "noRetouchOrReencoding": true,
+  "inspectedAt": "2026-11-20T16:38:43.549577+00:00",
+  "observations": [
+    "One coherent empty open-air stadium, blue evening sky, muted seats, steel canopies and white floodlights.",
+    "Native opaque image covers the whole frame; lower field is clear and uninterrupted, no characters or legible signage.",
+    "The layout is a game adaptation; not a measured reconstruction of stadium geometry."
+  ],
+  "portableReferences": [
+    {
+      "path": "references/episode5-storyboard-L3-M12.jpg",
+      "sha256": "497b0548a2ecb43c771414c28171ce889560c8830d89932ec7671069816090b5"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M15.jpg",
+      "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a"
+    }
+  ],
+  "compositeReview": {
+    "phase": "final",
+    "report": "review/canvas-review.json",
+    "reportSHA256": "c32477f05d91a31131d20c91f1662b145b58b6893bf5ceba6342d99c35322526",
+    "image": "review/three-cameras.png",
+    "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+    "inspectedAt": "2026-11-20T17:36:28.170858+00:00",
+    "status": "accepted_with_stated_scope",
+    "scope": "Image bytes are identical to the final views actually inspected; report refreshed after a test-only source correction."
+  },
+  "activePath": "assets/encore/stages/softballfield/far.png",
+  "activeSHA256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+  "installedAt": "2026-11-20T16:44:51.574317+00:00",
+  "preliminaryCompositeReview": {
+    "phase": "preliminary",
+    "report": "preliminary/review/canvas-review.json",
+    "reportSHA256": "06208f489110e318385ef42815d7b9464593e421c89e90f36bed171dd6e1e8ab",
+    "image": "preliminary/review/three-cameras.png",
+    "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+    "inspectedAt": "2026-11-20T17:06:48.313029+00:00",
+    "status": "accepted_with_stated_scope"
+  }
+}

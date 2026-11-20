@@ -313,6 +313,10 @@ function commonFloor(ctx, stage, theme) {
     for (let x = -640; x <= 1920; x += 256) line(ctx, [[640 + (x - 640) * .12, FLOOR], [x, 720]], '#1d29be', 1.5);
   } else if (theme === 'candy') floorTiles(ctx, '#9c5666', '#bc6e78', '#ffdeab');
   else if (theme === 'barnoir') floorTiles(ctx, '#181e20', '#717c77', '#43564f');
+  else if (theme === 'softballfield') {
+    rect(ctx, 0, FLOOR, 1280, 152, '#b9804c');
+    line(ctx, [[0, FLOOR + 2], [1280, FLOOR + 2]], '#d5a570', 2);
+  }
   else if (theme === 'spudsy') floorTiles(ctx, '#b8a18b', '#cfbca0', '#f0debd');
   else floorTiles(ctx, stage.palette?.floor || '#21192f', theme === 'manor' ? '#362638' : '#302244', stage.palette?.accent || '#8b66ac');
   ctx.restore();
@@ -534,7 +538,25 @@ function barnoir(ctx) {
   for (let x = 15; x < 1280; x += 210) line(ctx, [[x, 453], [x + 185, 453], [x + 185, 551], [x, 551], [x, 453]], '#304139', 3);
 }
 
-const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds, undermap, barnoir };
+function softballfield(ctx) {
+  // A small recognizable stadium fallback; no invented game score or crowd.
+  gradient(ctx, '#123c6b', '#304a60', FLOOR);
+  rect(ctx, 0, 332, 1280, 174, '#43383d');
+  for (let y = 350; y < 500; y += 24) {
+    line(ctx, [[0, y + 17], [1280, y + 17]], '#243747', 7);
+    for (let x = 12; x < 1280; x += 24) rect(ctx, x, y, 17, 11, '#785253');
+  }
+  rect(ctx, 410, 279, 460, 55, '#657777'); rect(ctx, 398, 268, 484, 12, '#213f53');
+  for (const [x, y] of [[385, 157], [585, 166], [787, 174], [990, 169]]) {
+    line(ctx, [[x, y + 25], [x, 330]], '#8093a1', 5);
+    rect(ctx, x - 40, y - 20, 80, 40, '#c8dbe7', '#41627c', 3);
+    for (let dx = -26; dx <= 26; dx += 26) for (const dy of [-8, 8]) ellipse(ctx, x + dx, y + dy, 7, 6, '#eef6ff');
+  }
+  rect(ctx, 1060, 224, 168, 62, '#174d50', '#55778b', 4);
+  rect(ctx, 0, 506, 1280, 62, '#56852d');
+}
+
+const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds, undermap, barnoir, softballfield };
 
 // A light native painting remains available while the illustrated planes load.
 function crossoverScenery(ctx, stage) {

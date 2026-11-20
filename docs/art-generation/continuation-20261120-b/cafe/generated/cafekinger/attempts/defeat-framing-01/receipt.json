@@ -1,0 +1,73 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "defeat",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE original full-body defeat action sprite for the existing Digital Circus Encore game.\n\nReference image 1 is the accepted cafekinger selection: lock its identity, proportions, line weight, cel shading, costume construction and colors. Reference image 2 is the official Animate Cafe illustration detail: preserve its distinctive outfit. Make a genuinely new defeat pose, not a flipped or mechanically moved copy. Only one character.\n\nKinger remains a beige cross-topped chess king with two blue eyes, clear silver monocle and chain, purple tailcoat with pale lavender piping and tails, gray-lilac diamond waistcoat with dark buttons, white collar, black tie and blue-centered flower ornament. One purple tapering chess-piece body ends in a complete navy circular plinth with a thin pale rim. EXACTLY TWO disconnected white gloves float beside him. No human arms, sleeves connecting gloves, legs, shoes, feet, knees, royal fur or new accessories. Keep the hands separate from the body through real transparency.\n\nPOSE: Defeat: the intact chess piece rests tilted almost sideways, with the complete circular plinth toward the lower-left and the cross-topped head toward the upper-right. Eyes look wearily toward screen-right, two disconnected white gloves droop nearby. No cracks, detached cross, stars, floor or ground shadow.\n\nNative orientation is SCREEN-RIGHT. Keep all visible costume asymmetry consistent with the selection. Crisp dark contours and restrained flat two-tone cel shading, same polished 2D game family. Center the complete silhouette with generous transparent space around every extremity; use a wider composition if needed so nothing touches the edges. Native transparent RGBA. No scenery, floor, cast shadow, halo, bloom, sticker outline, motion streaks, text, logo, watermark, duplicate figure or additional limbs. Preserve all original image pixels in the delivered native result; no painted checkerboard or solid background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  },
+  "schema": "encore-native-continuation-b-cafe-art/v1",
+  "status": "rejected_native",
+  "method": "image_gen.imagegen",
+  "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-9b981ec1-0703-4b0c-9cc6-5d0c9ebf548a.png",
+  "sourceGenerationId": "exec-9b981ec1-0703-4b0c-9cc6-5d0c9ebf548a",
+  "sha256": "ca972c0104fcdda2c49cce2a1fdfde47697e77d3fbf91f5e3c3da51f6921745f",
+  "bytes": 1359494,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    165,
+    25,
+    1374,
+    1024
+  ],
+  "nativeCopyVerified": true,
+  "includedInRuntime": false,
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+      "sha256": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+      "bytes": 123785
+    }
+  ],
+  "createdAt": "2026-11-20T17:12:21.836420+00:00",
+  "visualReview": {
+    "status": "rejected",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "La base atteint le bord inférieur au seuil alpha>12 (1024/1024) ; cadrage insuffisant malgré la silhouette et les accessoires conservés.",
+      "Natif inspecté et diagnostic alpha clair/sombre examiné ; aucun halo visible composé. Nouvelle correction de cadrage requise, aucune retouche locale."
+    ]
+  }
+}

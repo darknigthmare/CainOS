@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-11-20T17:40:08.671172+00:00",
+  "status": "cancelled_before_export_for_final_metadata_refresh",
+  "buildExitCode": 130,
+  "reason": "The stage report was already final, but the root visual-review and consolidated report hashes changed after preparation to propagate an archived Markdown path. The parent requested a fresh plan and export under the final hashes. No QA or Canvas rerun is required.",
+  "workbookExported": false,
+  "installedWorkbookTouched": false,
+  "finalConsolidatedSHA256": "e9b14742226ffe31870260abbd13db9b58f590f73ce448af29708a499f93ba73",
+  "archivedFilesSHA256": {
+    "update-plan.json": "0c2ae55b4bcaa19658fed8fdb6797b51e33eab71f7549ea77df8aea446b5abdf",
+    "combat-tracker-data.json": "839790a0a128e09573e0c1578ccecc46e1dc20819c75108650c666a2aeabb352",
+    "prepare.log": "22887e5319fc719cdf6e6f5a693a953b569da9723f0c71e4e80e18d5085ebdb1",
+    "build.log": "defcde34c0eebd302d27da78882284d6bd3de5b570dac9ee5dc31366af27e5ed"
+  }
+}

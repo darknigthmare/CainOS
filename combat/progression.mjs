@@ -28,6 +28,8 @@ const CROSSOVER_STAGE_IDS = new Set(['silicacity','portaurora','coppernine','gas
 const ILLUSTRATED_STAGE_IDS = new Set([...ORIGINAL_STAGE_IDS, ...CROSSOVER_STAGE_IDS, 'falseexit']);
 // The subsequent 23-arena release includes undermap and predates barnoir.
 const UNDERMAP_STAGE_IDS = new Set([...ILLUSTRATED_STAGE_IDS, 'undermap']);
+// The 24-arena release includes barnoir and predates softballfield.
+const BARNOIR_STAGE_IDS = new Set([...UNDERMAP_STAGE_IDS, 'barnoir']);
 const BOSS_IDS = ['gloinkqueen', 'fudge', 'abstractedkaufmo', 'caine'];
 const TOURNAMENT_ROUNDS = [
   ['quarterfinal', 'Quarts de finale', 4],
@@ -331,11 +333,13 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
     const crossoverStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id) || CROSSOVER_STAGE_IDS.has(stage.id));
     const illustratedStages = STAGES.filter(stage => ILLUSTRATED_STAGE_IDS.has(stage.id));
     const undermapStages = STAGES.filter(stage => UNDERMAP_STAGE_IDS.has(stage.id));
+    const barnoirStages = STAGES.filter(stage => BARNOIR_STAGE_IDS.has(stage.id));
     // These are release catalogs, never an arbitrary subset supplied by a save.
     contexts.push({ roster: FIGHTERS, stages: originalStages, legacyTournament: false });
     contexts.push({ roster: FIGHTERS, stages: illustratedStages, legacyTournament: false });
     contexts.push({ roster: FIGHTERS, stages: undermapStages, legacyTournament: false });
-    for (const previousStages of [STAGES, undermapStages, illustratedStages, crossoverStages, originalStages]) {
+    contexts.push({ roster: FIGHTERS, stages: barnoirStages, legacyTournament: false });
+    for (const previousStages of [STAGES, barnoirStages, undermapStages, illustratedStages, crossoverStages, originalStages]) {
       contexts.push({ roster: originalRoster, stages: previousStages, legacyTournament: value.mode === 'tournament' });
     }
   }

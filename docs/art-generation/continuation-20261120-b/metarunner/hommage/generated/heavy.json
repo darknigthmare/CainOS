@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "hommage",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and a hot-pink fabric bow tie. Long slender limbs and torso in the existing game adaptation, not plush proportions. Wear Tari-inspired bright cyan zip-up hoodie: white hood folded DOWN, white side panels running along the sleeves, charcoal hem and cuffs, plain central white zipper, no written logos. Bow tie visible at neck above zipper. Slim navy trousers and white sneakers with cyan soles. LEFT forearm is a smooth white cybernetic prosthesis with navy joints and slim cyan indicators, ending in a rounded THREE-digit robotic frog hand; RIGHT hand biological green with exactly THREE rounded digits. Both eyes natural white/black; no electronic face visor. No hair, hat, tail, wings or weapons. POSE: A powerful two-handed forward shove toward image right: both arms extended forward at chest level, hands clearly separate and palms aimed right, deep forward lunge with front knee strongly bent and rear leg braced. Determined frog expression. Keep each hand material on its correct anatomical side; no duplicated limbs or impact effects.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-hommage:heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/hommage/heavy.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-21484300-e57b-4d8e-b296-7cc8e9e33706.png",
+  "sourceGenerationId": "exec-21484300-e57b-4d8e-b296-7cc8e9e33706",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+      "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+      "bytes": 717557
+    }
+  ],
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    131,
+    36,
+    1314,
+    1063
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1196607,
+  "sha256": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+  "bytes": 664213,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T16:55:33.396360+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Poussée à deux mains nettement distincte de l’attaque simple ; bras droit vert et gauche cybernétique conservés, doigts arrondis, forte flexion de la jambe avant et deux chaussures entières. Pas de traînée ou décor."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

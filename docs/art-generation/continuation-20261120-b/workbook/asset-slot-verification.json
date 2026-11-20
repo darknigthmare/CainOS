@@ -1,0 +1,1349 @@
+{
+  "schema": "encore-tracker-asset-slots/v1",
+  "status": "passed",
+  "verifiedSlots": 55,
+  "order": [
+    "cafekinger",
+    "cafepomni",
+    "glitch-metarunner-ribbit-hommage",
+    "glitch-metarunner-ribbit-resident",
+    "glitch-metarunner-ribbit-fusion"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "checks": [
+    {
+      "appearanceId": "cafekinger",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafekinger.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.json",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158,
+      "productionId": "WAVE31-cafekinger-selection",
+      "qaId": "WAVE31-asset-cafekinger-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        245,
+        30,
+        762,
+        1515
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafekinger.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.json",
+      "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+      "bytes": 1324026,
+      "productionId": "WAVE31-cafekinger-stance",
+      "qaId": "WAVE31-asset-cafekinger-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        180,
+        30,
+        896,
+        1517
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafekinger/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.json",
+      "sha256": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+      "bytes": 1133425,
+      "productionId": "WAVE31-cafekinger-intro",
+      "qaId": "WAVE31-asset-cafekinger-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        435,
+        23,
+        1099,
+        1009
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafekinger/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.json",
+      "sha256": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+      "bytes": 1165904,
+      "productionId": "WAVE31-cafekinger-attack",
+      "qaId": "WAVE31-asset-cafekinger-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        361,
+        16,
+        1145,
+        1009
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafekinger/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.json",
+      "sha256": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+      "bytes": 1273887,
+      "productionId": "WAVE31-cafekinger-heavy",
+      "qaId": "WAVE31-asset-cafekinger-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        355,
+        19,
+        1111,
+        1013
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafekinger/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.json",
+      "sha256": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+      "bytes": 639682,
+      "productionId": "WAVE31-cafekinger-hit",
+      "qaId": "WAVE31-asset-cafekinger-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        245,
+        24,
+        990,
+        1186
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafekinger/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.json",
+      "sha256": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+      "bytes": 1160564,
+      "productionId": "WAVE31-cafekinger-walk",
+      "qaId": "WAVE31-asset-cafekinger-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        424,
+        12,
+        1103,
+        1018
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafekinger/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.json",
+      "sha256": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+      "bytes": 1185817,
+      "productionId": "WAVE31-cafekinger-jump",
+      "qaId": "WAVE31-asset-cafekinger-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        435,
+        16,
+        1142,
+        1010
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafekinger/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.json",
+      "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+      "bytes": 1340173,
+      "productionId": "WAVE31-cafekinger-crouch",
+      "qaId": "WAVE31-asset-cafekinger-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        334,
+        39,
+        1264,
+        1008
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafekinger/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.json",
+      "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+      "bytes": 1346080,
+      "productionId": "WAVE31-cafekinger-victory",
+      "qaId": "WAVE31-asset-cafekinger-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        252,
+        24,
+        828,
+        1511
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafekinger/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.json",
+      "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+      "bytes": 1072926,
+      "productionId": "WAVE31-cafekinger-defeat",
+      "qaId": "WAVE31-asset-cafekinger-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        479,
+        147,
+        1088,
+        909
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafepomni.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.json",
+      "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+      "bytes": 1123066,
+      "productionId": "WAVE31-cafepomni-selection",
+      "qaId": "WAVE31-asset-cafepomni-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        25,
+        30,
+        933,
+        1633
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafepomni.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.json",
+      "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+      "bytes": 795027,
+      "productionId": "WAVE31-cafepomni-stance",
+      "qaId": "WAVE31-asset-cafepomni-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        301,
+        24,
+        1028,
+        1172
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafepomni/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.json",
+      "sha256": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+      "bytes": 750903,
+      "productionId": "WAVE31-cafepomni-intro",
+      "qaId": "WAVE31-asset-cafepomni-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1314,
+        1197
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        308,
+        18,
+        1048,
+        1184
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafepomni/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.json",
+      "sha256": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+      "bytes": 832720,
+      "productionId": "WAVE31-cafepomni-attack",
+      "qaId": "WAVE31-asset-cafepomni-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1426,
+        1103
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        217,
+        13,
+        1171,
+        1087
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafepomni/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.json",
+      "sha256": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+      "bytes": 1567942,
+      "productionId": "WAVE31-cafepomni-heavy",
+      "qaId": "WAVE31-asset-cafepomni-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        198,
+        38,
+        1340,
+        1007
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafepomni/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.json",
+      "sha256": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+      "bytes": 886377,
+      "productionId": "WAVE31-cafepomni-hit",
+      "qaId": "WAVE31-asset-cafepomni-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        97,
+        13,
+        1130,
+        1179
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafepomni/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.json",
+      "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+      "bytes": 815378,
+      "productionId": "WAVE31-cafepomni-walk",
+      "qaId": "WAVE31-asset-cafepomni-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        266,
+        16,
+        998,
+        1186
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafepomni/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.json",
+      "sha256": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+      "bytes": 861925,
+      "productionId": "WAVE31-cafepomni-jump",
+      "qaId": "WAVE31-asset-cafepomni-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        218,
+        52,
+        1076,
+        1154
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafepomni/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.json",
+      "sha256": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+      "bytes": 1081527,
+      "productionId": "WAVE31-cafepomni-crouch",
+      "qaId": "WAVE31-asset-cafepomni-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        227,
+        60,
+        1151,
+        1181
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafepomni/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.json",
+      "sha256": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+      "bytes": 975630,
+      "productionId": "WAVE31-cafepomni-victory",
+      "qaId": "WAVE31-asset-cafepomni-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1091,
+        1442
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        77,
+        17,
+        904,
+        1427
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafepomni/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.json",
+      "sha256": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+      "bytes": 1291355,
+      "productionId": "WAVE31-cafepomni-defeat",
+      "qaId": "WAVE31-asset-cafepomni-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1362,
+        1155
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        115,
+        29,
+        1248,
+        1151
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/selection.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.json",
+      "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+      "bytes": 717557,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-selection",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1081,
+        1455
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        146,
+        48,
+        946,
+        1424
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/stance.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.json",
+      "sha256": "baa3212257643a6c1cb4afcac50f591b5cf1def68c8bd76470c4868f35cf514f",
+      "bytes": 782181,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-stance",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1192,
+        1320
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        97,
+        33,
+        1109,
+        1291
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.json",
+      "sha256": "5f744b70af9328152324f88e025778f016f697b5a99895c184cb9df4fdb40b49",
+      "bytes": 693357,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-intro",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1081,
+        1455
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        180,
+        45,
+        848,
+        1420
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.json",
+      "sha256": "3ff2fa3dd5b3fc64961f7417f724cfd8030f1748d3ecfdedd95c3e29824640a8",
+      "bytes": 697035,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-attack",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        69,
+        66,
+        1147,
+        1270
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.json",
+      "sha256": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+      "bytes": 664213,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-heavy",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        131,
+        36,
+        1314,
+        1063
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.json",
+      "sha256": "f1f19ecdec728fc1c9699962c9ea4893558b736f4b8bdc7cd20c96e4f075e0da",
+      "bytes": 831035,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-hit",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1081,
+        1455
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        87,
+        79,
+        932,
+        1411
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.json",
+      "sha256": "9e13a21c083cb17feef275e4540a6e3ac39181d44c92601844c454d39d75ae54",
+      "bytes": 743313,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-walk",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1081,
+        1455
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        147,
+        41,
+        934,
+        1393
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.json",
+      "sha256": "066842d08009481b27e597e8b7d72daee3b8d0c7f8d13c10f816be085eca22a6",
+      "bytes": 756176,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-jump",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1102,
+        1428
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        35,
+        43,
+        1068,
+        1382
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.json",
+      "sha256": "b0ea55e9529f71656bd1720c90d6204eae9b86e5488173423e0fa240b5f3f09d",
+      "bytes": 836192,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-crouch",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        115,
+        42,
+        1020,
+        1281
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.json",
+      "sha256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+      "bytes": 661706,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-victory",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1081,
+        1455
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        239,
+        50,
+        899,
+        1414
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.json",
+      "sha256": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+      "bytes": 865871,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-defeat",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        153,
+        48,
+        945,
+        1272
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/selection.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.json",
+      "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+      "bytes": 684381,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-selection",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        178,
+        33,
+        1031,
+        1268
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/stance.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.json",
+      "sha256": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+      "bytes": 760287,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-stance",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        138,
+        70,
+        1082,
+        1255
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.json",
+      "sha256": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+      "bytes": 664573,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-intro",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        276,
+        32,
+        910,
+        1262
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.json",
+      "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+      "bytes": 746676,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-attack",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        101,
+        28,
+        1238,
+        1180
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.json",
+      "sha256": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+      "bytes": 1445975,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-heavy",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        62,
+        16,
+        1363,
+        1012
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.json",
+      "sha256": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+      "bytes": 794831,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-hit",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        213,
+        46,
+        1024,
+        1267
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.json",
+      "sha256": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+      "bytes": 715959,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-walk",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        161,
+        31,
+        1013,
+        1248
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.json",
+      "sha256": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+      "bytes": 762618,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-jump",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        74,
+        40,
+        1123,
+        1270
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.json",
+      "sha256": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+      "bytes": 868900,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-crouch",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        83,
+        68,
+        1050,
+        1266
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.json",
+      "sha256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+      "bytes": 657866,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-victory",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        230,
+        10,
+        883,
+        1262
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.json",
+      "sha256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+      "bytes": 878926,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-resident-defeat",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        203,
+        78,
+        982,
+        1255
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/selection.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.json",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "bytes": 941029,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-selection",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        97,
+        42,
+        1011,
+        1392
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/stance.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.json",
+      "sha256": "d7358a61b8b4b149a77a63be03bb58ec69d439b67c36bd792c00ead8e0e225b1",
+      "bytes": 897808,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-stance",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        61,
+        62,
+        1137,
+        1261
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.json",
+      "sha256": "757ecf2fc43dbf0872b724b57433ec44058a9021f4dbf4a5c351dbe010156338",
+      "bytes": 863983,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-intro",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        134,
+        40,
+        946,
+        1393
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.json",
+      "sha256": "2a5584483f87200a118aa30485e668653925c7cb2f5c8ae0b87ab3a0667ee91c",
+      "bytes": 809312,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-attack",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        58,
+        102,
+        1154,
+        1241
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.json",
+      "sha256": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+      "bytes": 1604119,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-heavy",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        70,
+        25,
+        1470,
+        1012
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.json",
+      "sha256": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+      "bytes": 976968,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-hit",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        112,
+        53,
+        935,
+        1401
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.json",
+      "sha256": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+      "bytes": 848857,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-walk",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1150,
+        1368
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        104,
+        47,
+        1052,
+        1287
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.json",
+      "sha256": "5d852f1212a23b9177cbbc65d27ec3c1355b857f7cef6399c384c09bf272c277",
+      "bytes": 862989,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-jump",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        34,
+        64,
+        1032,
+        1372
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.json",
+      "sha256": "981dc120521bd3df683a17327ddd6d950b70e69026dee1062e6e449e9880187d",
+      "bytes": 1040557,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-crouch",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1196,
+        1315
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        80,
+        75,
+        1092,
+        1267
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.json",
+      "sha256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+      "bytes": 877568,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-victory",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        158,
+        33,
+        966,
+        1422
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.json",
+      "sha256": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+      "bytes": 1065325,
+      "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-defeat",
+      "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        97,
+        42,
+        1090,
+        1278
+      ]
+    }
+  ],
+  "productionRowCount": 55,
+  "qaRowCount": 55
+}

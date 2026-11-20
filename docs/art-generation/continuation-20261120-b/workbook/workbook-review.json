@@ -1,0 +1,2746 @@
+{
+  "schema": "encore-tracker-continuation-b-review/v1",
+  "createdAt": "2026-11-20T17:48:55.750Z",
+  "gameVersion": "0.7.0",
+  "workbookSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+  "trackerDataSHA256": "839790a0a128e09573e0c1578ccecc46e1dc20819c75108650c666a2aeabb352",
+  "sourceDigests": {
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/hand-count-scope-addendum.md": "a8ffd26f49ce23ef7fe967e40530fdb38db79d2122526e1c3dc8577c41ca4755",
+    "docs/art-generation/continuation-20261120-b/workbook/costume-prefix-baseline.json": "a069c06ef34541b965169f12db4169e40fe16fbbf2381bbffa99b32ce29058cd",
+    "docs/art-generation/continuation-20261120-b/workbook/costume-order-targeted-tests.json": "9d67c862573c3729c84cb7fbf7043409493fd6b716fb8a7548bc408e0fec763a",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-runtime-freeze.json": "4ebd8dbb85b7736d2cd003ef6436f63cd3f258fe199b15021dd2aff38e338928",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "tests/combat-costume-order.test.mjs": "9fbf58113e480a154e2e9257843497af728d72e0b59811a82453aa48ff20d24c",
+    "docs/art-generation/continuation-20261120-b/generation-completion.json": "9722a5f71a48ced9796048e90e8817b250222d86fab6d985cace2bb0fe7a542f",
+    "docs/art-generation/continuation-20261120-b/asset-inventory.json": "ec3f5913fc9361009bd26045fb1723fc354ca3987d4c8d45fa27f878d70ad542",
+    "docs/art-generation/continuation-20261120-b/cafe/generation-completion.json": "4b32287f571e5b2ae42f4215f7bb2f1f0d80bcf5b762780d2816bffe037de448",
+    "docs/art-generation/continuation-20261120-b/metarunner/generation-completion.json": "55ddfbd4ea6b217680f57b4c902484ab51d340296a2dfc9a754ba9baddda837b",
+    "docs/art-generation/continuation-20261120-b/qa-result.json": "0aafcd4b8304a2dea728c3aa374fffe82261fc9344b4f7f69ba4251a7174d130",
+    "docs/art-generation/continuation-20261120-b/qa.log": "c412f75a48f9b5be9bf93b8f27db04b5c34a22cd688d273c225bba2914196e54",
+    "docs/art-generation/continuation-20261120-b/runtime-counts.json": "16282cbbc1f7e430efdfe0e036e07e3d43e393c8139148a3307ecc0451eece33",
+    "docs/art-generation/continuation-20261120-b/canvas-summary.json": "4844f9395c8f57ce48d65e401f010a9ebed08db5e2e8aad4b9ae4c6e6c8da3e5",
+    "docs/art-generation/continuation-20261120-b/build-integrity.json": "9309f94eb76bf5c6ceb8c6bdb49c674bd5f5aac3b390164c957f3a4a96d2078e",
+    "docs/art-generation/continuation-20261120-b/verification.json": "e9b14742226ffe31870260abbd13db9b58f590f73ce448af29708a499f93ba73",
+    "docs/art-generation/continuation-20261120-b/stage/asset-inventory.json": "c06757fb5a1a1c9af15f1fd0d46bd767be2f8ef850cc060cd2272ceb3cf73eed",
+    "docs/art-generation/continuation-20261120-b/stage/generation-receipts.json": "e15bfd8496b507b0cc2af96a7c13c71aadfd34adb45b3ce865b24a89a199ae7b",
+    "docs/art-generation/continuation-20261120-b/stage/attempts/near-01/receipt.json": "6f9ab7337110757cf8d3ec05da9234d475f39452d5fe9c4404b37d20692893ac",
+    "docs/art-generation/continuation-20261120-b/stage/verification.json": "0b7e295a0a6031f4b799f0ee68de51cfa745fd5fd06a725680485e0a95962cf8",
+    "docs/art-generation/continuation-20261120-b/stage/review/canvas-review.json": "c32477f05d91a31131d20c91f1662b145b58b6893bf5ceba6342d99c35322526",
+    "docs/art-generation/continuation-20261120-b/stage/visual-review.md": "0bb856f3a68c42eb08f507dd2d9f3519d1257bf71098af5ee64b8db14a034d8f",
+    "docs/art-generation/continuation-20261120-b/stage/targeted-tests.log": "d851de47a498909704c744a4e4ec7812a57fc0994be82296d6af791d1acfe6f4",
+    "docs/art-generation/continuation-20261120-b/stage/browser-result.json": "fc3b47d5a2360f8142f949473819e4f35904ae266c4bf2579e00e3e9b7691732",
+    "docs/art-generation/continuation-20261120-b/stage/browser.log": "88772ea0a34d72d219c2d354b2e4089bee67145e500b21109391a010a9376328",
+    "docs/art-generation/stage-next-wave-20261120/browser-result.json": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+    "docs/art-generation/stage-next-wave-20261120/browser.log": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9",
+    "docs/art-generation/continuation-20261120-b/visual-review.json": "747bb924dcaa583e87e460c668213b5699961f115a808dc2cbd369d8db92742c",
+    "docs/art-generation/continuation-20261120-b/independent-visual-review.json": "715478f9241e47aa78a66fff285b7280dd5ea17e99a82c1e3dd43b1184d241d7",
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "tests/combat-softballfield.test.mjs": "df3be4bfe202aa13f0c67017f1208e5ae754ef40437b92bc65c0e20d40f8e293",
+    "tests/combat-fidelity.test.mjs": "f4cd72a0551447143e0de003b8d679d8097c1bf23f9314fcd5d0393929d33950",
+    "scripts/review-combat-softballfield-20261120-b.mjs": "f91423d2b0b21b157894c918f7063ec4c5e6d7c21cd929472914df5c6f960886",
+    "tests/fixtures/combat-pre-softballfield.json": "504bf44aaa1e84b46482385755ad468283ae84e95bb4c594f82b810bd0c65dfe",
+    "docs/art-generation/continuation-20261120-b/review/cafekinger/character-canvas-review.json": "80a190f4a2fe39052663f61dce0f50a1307ad499a7336f63ecfffaa89b7c4fa6",
+    "docs/art-generation/continuation-20261120-b/review/cafepomni/character-canvas-review.json": "09d44163bb774b6cb068e8735c81c7fda03294f43abdcd74b2976d959504dd3a",
+    "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/character-canvas-review.json": "e3e804a604c5f37db1f67b5b1808dd2bc03ffdb0e3e77c69faaf5214fa9cade4",
+    "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/character-canvas-review.json": "a400a0f048ee54c0957dc03ed1c098eb2a7258df87d1f843b7092bb6f0649d4e",
+    "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/character-canvas-review.json": "e287e46ef6227a078bfa53904713f9c5817421470c7775ebc00897c03324ae5d",
+    "docs/art-generation/continuation-20261120-b/cafe/definitions/cafekinger.json": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+    "docs/art-generation/continuation-20261120-b/cafe/definitions/cafepomni.json": "93b2acb2d0b4fb269727a18e0f16460ee610979089227acb8dbaa7d39720014c",
+    "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+    "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+    "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.json": "5d46406c7761e43847eb3a0ade0d3fc2d3e37872ba54186150204c694ce5474e",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+    "assets/encore/selection/kinger.webp": "56138a24a0b5d9fa75d86ce4c4bc4c4f3c0f26f77c2f4958ac6c5a6151326787",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.png": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.json": "314b48bb51b6fe78b9bfa1e0b5db1f417e3c4fa15de3445534d54da899561f85",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.png": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.json": "1b8130bdd032ef5b1b7d97039d92cd670fde8642379e8b247e7938445c2755da",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.png": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.json": "5a486c928535c7680b827dd9107ed341abe92efe99233197e1e039532bed0d01",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.png": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.json": "8a61b5e3b8ffc02018fe6414462d6881d37dff8564a3b40a4cfe04125896596c",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.png": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.json": "368ff9774868b5373d1cb5931bb99ecc0eb21b32303ff61da319d3bf850d6f53",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.png": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.json": "dde9cccf0990da1c7901c81a04ecfb90c728adc0a7e199e54869585d5878fd27",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.png": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.json": "f85bd95115640868295ad2830d6d62aec085e5cf612f83987c4f123c21deadb2",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.png": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.json": "bca313de1b2a351a73f521c09a1f913885509519b06c1a86da92c711234174e4",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.png": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.json": "bf8d99d1125ae7cac970418a84fda073e15b79beb19c0134d257dc254ab3632c",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.png": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.json": "ac3940d259c67df03081437144f8f2019bd181588c6dfa3cb2d23c08151c1fdb",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png": "ca972c0104fcdda2c49cce2a1fdfde47697e77d3fbf91f5e3c3da51f6921745f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.json": "5a9a9c732e647e80a988912d744500232c24423c00ece1a90b4584c82541bfde",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png": "b5bd88345eeed2098cc9b281d4aee07fea9d2c41c77699ffe3dadf53daa59b09",
+    "assets/encore/selection/pomni.webp": "50fa49cc6678b85959fc0f6fcc6b2a5665265238eccd1d7cf8c05206db874ca7",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.png": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.json": "01cf862e38d7f8594ac929f82d0267033dd5cd3b3fde4a333edc01dfa395932f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.png": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.json": "45949d7226c412a170ed948d92fba79cdb0360d49496393efa7e4faf1cfaf8a0",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.png": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.json": "0383c7dce5b509b6a6d3e31186b18e71ea73de2b8befef78656b4b9075cba071",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.png": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.json": "bc178da02311498467c1c856422b599b5e8c32d654204a8e86302e7bd660be35",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.png": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.json": "0ec265c11edafaefd735e5098de4ee22d56c648fa98b31bc74a5fde8c8187ca1",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.png": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.json": "5148749717c9ebd98ef266a2ff39c5749a6658c250f9184c150bc58ca949c06f",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.png": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.json": "e01f58953bf590c3c141bae180495f0c60620526f2db6666969059980f45a44d",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.png": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.json": "1fb19d7cf67879ebd81dc8423491d237b2a6374a61d7a03cdcafefca223f624d",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.png": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.json": "4cab124b32ecf32152ebfd387420bf65e7fa96e1537666708400d9d3e14dcedb",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.png": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.json": "7c98a22bc317819b814f5ecf4fbaac3e52ad2b4b16b07e2bfb242481e3790c57",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.json": "919a4958f74fbd18e163c72169614ec0ee448ffbd02679f8f352b3a21cbc6de0",
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/tari-hoodie-official.png": "335b4537caf58642ddc7501c70be6ea8f7cdc60f0881bc612fbabf2c6cbb8cdd",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.png": "baa3212257643a6c1cb4afcac50f591b5cf1def68c8bd76470c4868f35cf514f",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.json": "530fc71b019e624bbd3f24b3ceb41432e1ac867eedc78f5def68d99d7e309e50",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.png": "5f744b70af9328152324f88e025778f016f697b5a99895c184cb9df4fdb40b49",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.json": "df2d8685fa90dadcb2cbc88576c61e819b06755c6b1e354b6e1fb7da57526d7b",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.png": "3ff2fa3dd5b3fc64961f7417f724cfd8030f1748d3ecfdedd95c3e29824640a8",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.json": "113c6c647b3842a265f77df294e416aeeb207e85bb6a59c9003b4a3aa54322a0",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.png": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.json": "6d102ed8cbd254343d1dc10fdfc8a2ed80ebeff5a4d435a02497b23940480722",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.png": "f1f19ecdec728fc1c9699962c9ea4893558b736f4b8bdc7cd20c96e4f075e0da",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.json": "1b73b1425f842927ed46edd49e9c0a4defe0dfa8ecd4a7a15cfe482ed72c5b86",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.png": "9e13a21c083cb17feef275e4540a6e3ac39181d44c92601844c454d39d75ae54",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.json": "352a9134b75effe05a4d7068e43ead9809c929a516449eb499deb3dfc0f4e25a",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.png": "066842d08009481b27e597e8b7d72daee3b8d0c7f8d13c10f816be085eca22a6",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.json": "a968dfc512eac36b49a80a1ba225461df989fd7fb63bd8837aa8b65319e11d93",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.png": "b0ea55e9529f71656bd1720c90d6204eae9b86e5488173423e0fa240b5f3f09d",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.json": "6c88d5042cff1a606b449162913fcd3674f261e6d6a983aaf02b8e5f1bc02cfe",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.png": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.json": "9c04bdf210eba322160472b73f0925121faecf2b0a7afa6e172d0515eeaa861a",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.png": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.json": "823891aed117bd03d0162df21faf34aacc24c62f59ae5c041b0939f3e70d6319",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.json": "fdacdbba54204ac302695014e5fee91a8f3ec6b35b8a9a52187f69eca9314974",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.png": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.json": "ec25eb465e971257cfa33568ae13899dd928c41cf1f4649616d7c65e24fa527b",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.png": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.json": "1038d4940af5c83eeb4e9ae81eacaad786816a08072036d44c4c0981967d370e",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.png": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.json": "fb611790105bf89d4c2adb6d33045f496bcc6ad85ed338ee395d96a26142618b",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.png": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.json": "75f4b5abefc55638924e75afd8daf31ebb6ea589f494a74514619b696324a9ad",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.png": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.json": "78a3b00e5ce2db92220b378e09ab189fdadf9ac190c9f7234359597125184c58",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.png": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.json": "1204c4909fe2a7c1e5bc3d2ec94895b8afd9bf297dc910020befb90ea0ed8ab8",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.png": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.json": "249601b29b03d8eeeabe2889f6bac341f0148b74ff7eed0546e6cccce26532d7",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.png": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.json": "e7bf2d951af13fcaa953168946510977043005e10eda53f3a2f21b591bb9c4a1",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.png": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.json": "bd9a0d8c03a51e0d4f7cc9c1e76568422a3458a2165101748fae405d37074b0c",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/attempts/victory-01/victory.png": "44a543afc53069e44e52e75c289217015219df4c96f06967a7404af72873e9a5",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.png": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.json": "8785650b251975db0ed1dc49560cb313892dc6adbfc4b7285715834ca6746263",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.json": "b8a664739d7d8fac14ce69964758d1c834f542e57ee28dafa6e5d6720ca7ea6e",
+    "assets/encore/crossovers/metarunner/pomni/fusion/selection.webp": "e510bcfe2bfc4ce25ac67f4e14d40d1b40ef29d553ae3c830a77f1dfcad799e0",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.png": "d7358a61b8b4b149a77a63be03bb58ec69d439b67c36bd792c00ead8e0e225b1",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.json": "c1bd780ab49befd8e277ad99e2b1016e906a7fe31ee51e4af282e9d74ca4f2d4",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.png": "757ecf2fc43dbf0872b724b57433ec44058a9021f4dbf4a5c351dbe010156338",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.json": "62531e632e28661437d12efff351a43a52dc2a717bff5ee31ccfefe7e542986a",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.png": "2a5584483f87200a118aa30485e668653925c7cb2f5c8ae0b87ab3a0667ee91c",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.json": "d1a278869fec81895e9a3ada25472e90fb951b4f788ae326a681dd8723d125e7",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.png": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.json": "6cbae1651cdd955418c30d41fcf7de0e786474ea3dd85f6590696ff8b473cfbc",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.png": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.json": "c788d611ac4c9ba66654b3398d1c8bdc8d7fb57dac3a77b07bdca86b9938e24e",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.png": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.json": "69d83959dc6efcf18e2ee33dfe03ad4e83cf684a150ff8fc003521abe8bdc0e8",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.png": "5d852f1212a23b9177cbbc65d27ec3c1355b857f7cef6399c384c09bf272c277",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.json": "a194ccf7632ad93383fdba08de6e2851148f7e79dbad28771094db0892aa01c5",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.png": "981dc120521bd3df683a17327ddd6d950b70e69026dee1062e6e449e9880187d",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.json": "28777792e1431bd353f98e6510f5199c6fc814f2ca895bd6c497de2cc03fd6e3",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.png": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.json": "946d19b1639b1e589e5e5c289e780788d0cc344592de274dfc1a493aa8bc3dd4",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/victory.png": "f547de46b103be089c28e70425710755eec11013e6839329667b222285920e2d",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.png": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.json": "8d3237d9f24e356d357218a24e399c5deae70246b8372b70de932f0551ae7395",
+    "docs/art-generation/continuation-20261120-b/stage/references/episode5-storyboard-L3-M12.jpg": "497b0548a2ecb43c771414c28171ce889560c8830d89932ec7671069816090b5",
+    "docs/art-generation/continuation-20261120-b/stage/references/episode5-storyboard-L3-M15.jpg": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a",
+    "docs/art-generation/continuation-20261120-b/stage/native/far.png": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+    "docs/art-generation/continuation-20261120-b/stage/native/mid.png": "66dfb01a55abd8b28b8cf404074b20021cfb5fff040d8c9efbc27efa24bf0842",
+    "docs/art-generation/continuation-20261120-b/stage/attempts/near-01/near.png": "b791925979ac352f396101a30a11700f3e5880ea0f43129e53985ede4a8f9d17",
+    "docs/art-generation/continuation-20261120-b/stage/native/near.png": "aef682f1c524798efe1e7e09080eae872d63584d3237185fe173c162969be767",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/source-downloads.json": "0cfed31edbc8c0ac3259bde75e5bf030656ab76648c49ad60e3e6038defafaa0",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-02.png": "f05daf8095b0aab8b0473b3871b985a2b107de26bf51a342eb29d866da15ef68",
+    "scripts/update-combat-continuation-b-workbook-20261120.mjs": "e3bb14c0296ae6798cb36a97144ea5be7120cce7e64fa45920708861a530f33e",
+    "scripts/inspect-combat-workbook-native.py": "44d1a662c0f87804689fb090424eb700ab709b1f1335f7097bd3673f92764c8b",
+    "scripts/workbook-publication.mjs": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e"
+  },
+  "baselineHashes": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+    "docs/combat-tracker-data.json": "82c44b7598e3c7822f62a166555258d68ebe442577fa61dd2613e7f6f4d6e218",
+    "docs/combat-workbook-verification.json": "05d9006314b12bc9b44b9d53e4e18d71791822d8613d8cf77f506c3c1a80d25b",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+  },
+  "baselineSnapshotHashes": {
+    "manifest.json": "a044ea166d0892449022ae66372c6c6236f0e9e4c144fdb05298926f4dde9a34",
+    "sheet-1.json": "8f57faec4cd03e63850ba6d42e7a3f5c594def2f021ec9067d75650ae0eea0df",
+    "sheet-2.json": "68264328e58c0d062f1d1606ffcd45f898bab97eb5455a8922aab0a833f4950f",
+    "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
+    "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
+    "sheet-5.json": "a80a7f078045195230b6f6d2bf65785aba4507a6aab1d963f738ac0e16d9678c",
+    "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
+    "sheet-7.json": "dd91e3e4e5e88f18d1cc1b06450e543fc0c5ddff4464b3a0658af499bba03dd5",
+    "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
+    "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
+    "sheet-10.json": "1d848a3009f6284756e89836346ce1809bb678656657b1610f163bdd36fa438e",
+    "sheet-11.json": "bb424ae4f2d3e1bd8392104ab62b5cc1066bf16deeae745be234263cb7100e00"
+  },
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 25,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 477,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 25,
+    "soundEffects": 26,
+    "offlineImages": 5874,
+    "offlineBytes": 3173741905,
+    "features": 106,
+    "production": 3308,
+    "scenarios": 348,
+    "qa": 2454,
+    "presentationSequences": 270,
+    "animatedStages": 25,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 25,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54,
+    "costumeAdditions": 42,
+    "pendingCostumeAdditions": 0,
+    "pendingCostumeArtFiles": 0,
+    "crossovers": 384,
+    "sheets": 11,
+    "nativeTables": 10,
+    "sources": 161,
+    "addedProductionRows": 66,
+    "addedQaRows": 65,
+    "addedSourceRows": 4,
+    "addedStageRows": 1,
+    "costumePngs": 462,
+    "crossoverCostumes": 384,
+    "crossoverDrawings": 3847,
+    "newIndividualDrawingRows": 55,
+    "historicalCells": 81412,
+    "totalNativeCells": 82697
+  },
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-17366238b519",
+    "artVersion": "20311abb70caa13c",
+    "artFiles": 5874,
+    "artBytes": 3173741905,
+    "sha256": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af"
+  },
+  "currentQa": {
+    "gameVersion": "0.7.0",
+    "campaign": "continuation-b-2026-11-20",
+    "complete": false,
+    "evidence": "docs/art-generation/continuation-20261120-b/verification.json",
+    "workbookEvidence": "docs/art-generation/continuation-20261120-b/workbook/workbook-review.json",
+    "rowIds": [
+      "WAVE31-asset-cafekinger-selection",
+      "WAVE31-asset-cafekinger-stance",
+      "WAVE31-asset-cafekinger-intro",
+      "WAVE31-asset-cafekinger-attack",
+      "WAVE31-asset-cafekinger-heavy",
+      "WAVE31-asset-cafekinger-hit",
+      "WAVE31-asset-cafekinger-walk",
+      "WAVE31-asset-cafekinger-jump",
+      "WAVE31-asset-cafekinger-crouch",
+      "WAVE31-asset-cafekinger-victory",
+      "WAVE31-asset-cafekinger-defeat",
+      "WAVE31-asset-cafepomni-selection",
+      "WAVE31-asset-cafepomni-stance",
+      "WAVE31-asset-cafepomni-intro",
+      "WAVE31-asset-cafepomni-attack",
+      "WAVE31-asset-cafepomni-heavy",
+      "WAVE31-asset-cafepomni-hit",
+      "WAVE31-asset-cafepomni-walk",
+      "WAVE31-asset-cafepomni-jump",
+      "WAVE31-asset-cafepomni-crouch",
+      "WAVE31-asset-cafepomni-victory",
+      "WAVE31-asset-cafepomni-defeat",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-selection",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-stance",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-intro",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-attack",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-heavy",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-hit",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-walk",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-jump",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-crouch",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-victory",
+      "WAVE31-asset-glitch-metarunner-ribbit-hommage-defeat",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-selection",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-stance",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-intro",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-attack",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-heavy",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-hit",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-walk",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-jump",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-crouch",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-victory",
+      "WAVE31-asset-glitch-metarunner-ribbit-resident-defeat",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-selection",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-stance",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-intro",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-attack",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-heavy",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-hit",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-walk",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-jump",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-crouch",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-victory",
+      "WAVE31-asset-glitch-metarunner-ribbit-fusion-defeat",
+      "SOFTBALL31-asset-far",
+      "SOFTBALL31-asset-mid",
+      "SOFTBALL31-asset-near",
+      "WAVE31-art",
+      "WAVE31-canvas",
+      "SOFTBALL31-canvas",
+      "WAVE31-node",
+      "WAVE31-integrity",
+      "WAVE31-browser",
+      "TRACKER31-update"
+    ],
+    "totals": {
+      "nodeTests": 431,
+      "nodePassed": 431,
+      "browserAssertionsExecutedByWorkbookUpdate": 0
+    },
+    "scope": "Preuves finales importées avec leurs dates et empreintes. Les tests du jeu ne sont pas présentés comme exécutés par le builder du classeur."
+  },
+  "formulas": {
+    "count": 42,
+    "recalculated": true,
+    "errors": 0,
+    "statusChangeRecalculated": true,
+    "exportRoundTripPassed": true
+  },
+  "nativeComparison": {
+    "schema": "encore-native-workbook-comparison/v1",
+    "status": "passed",
+    "cellsChecked": 82697,
+    "expectedSHA256": null,
+    "actualSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+    "expectedSnapshotHashes": {
+      "manifest.json": "70039d0d0c269661781d01cc3c4305067a7da088caecd24dbe489f7ed0b0c91c",
+      "sheet-1.json": "7ec1eb1432e90ae3ff1a456159e0618a74713117864f528747afbbecff8f50ad",
+      "sheet-2.json": "10a0959511996459cf66eb172ed2f7f5160874cb0a306400ccf88408c0d8ebd0",
+      "sheet-3.json": "cb190954c7f66477b74cd2eda7f63d354c9f9a814ee2f878d18ce1a39365bce8",
+      "sheet-4.json": "8cbea3eb38e6d8e57df000807619bfaa0a5f72e7b49c04d19f9f77e7d1ba43f3",
+      "sheet-5.json": "2fd143ed92aef9ae1ac1323962266a93565a9592cc90ab76146274e80d491776",
+      "sheet-6.json": "e1b73192e588b2a3669df523d86b1609bd002cdcdaa1014a778825b33cd28409",
+      "sheet-7.json": "b4b654d52bf0e81d425b773c0560b2e882722f15befacac08b798cc57784910f",
+      "sheet-8.json": "7c8457e3e6e5875b2d87e48803a1c52648f4e842b661650ad8f4e5e5c3cdb3d5",
+      "sheet-9.json": "5bd283aa6342e65f1311d468f2a2a434c63abfe6adc788d1cd8bbf99d49011f9",
+      "sheet-10.json": "4289687b0ae186297869ce04d5e03f2bb77fe86c189b493ddd73a84a2811c5d0",
+      "sheet-11.json": "91b7145c6cd6c5672aaf584979dea7e54c8eedf02262221496d71dae1b190b9a"
+    },
+    "differences": []
+  },
+  "reimport": {
+    "status": "passed",
+    "sha256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+    "planSha256": "2a18d8c9d5b667409db2acaf4443eed854e095cc1196033b9c465db0c28d4299",
+    "trackerDataSha256": "839790a0a128e09573e0c1578ccecc46e1dc20819c75108650c666a2aeabb352",
+    "formulas": 42,
+    "allTableRowsCompared": true,
+    "sheets": 11,
+    "nativeTables": 10
+  },
+  "visualReview": {
+    "schema": "encore-workbook-combined-visual-review/v1",
+    "createdAt": "2026-11-20T17:48:41.641029+00:00",
+    "status": "accepted",
+    "workbookSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+    "planSha256": "2a18d8c9d5b667409db2acaf4443eed854e095cc1196033b9c465db0c28d4299",
+    "renderedViewsManifestSHA256": "e7dfd440577992e1c96a637fa46019dd3a088d7660fd98b87d05ec64d4e916dd",
+    "reviewedViews": 50,
+    "views": [
+      {
+        "sheet": "Synthèse",
+        "range": "A1:H18",
+        "file": "summary-top.png",
+        "sha256": "cd219272b2c118cdc3233e6fa17b7c31c833ca9c6f3cd812eb7dc3de50b0867b",
+        "dimensions": [
+          1890,
+          667
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Synthèse",
+        "range": "A19:H35",
+        "file": "summary-bottom.png",
+        "sha256": "d215bec817991ced66074f1a06700ec6087f61fe31bda6a6645243f9dd6cf495",
+        "dimensions": [
+          1890,
+          639
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Arènes",
+        "range": "A30:L30",
+        "file": "stage-left.png",
+        "sha256": "fe82520bac5886073e359c242ce5db2d2212ee84e52db708ec31a79df609f0f4",
+        "dimensions": [
+          2380,
+          120
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Arènes",
+        "range": "M30:T30",
+        "file": "stage-right.png",
+        "sha256": "438120114804715eefbc1edd1bca7cb05988e00a80dd9517e032d84343e49d05",
+        "dimensions": [
+          5980,
+          120
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A61:I61",
+        "file": "feature-pre-02.png",
+        "sha256": "7651a913559ab55ca5f461bba9b40c22109d36e34240ac43a375d9aa772582c9",
+        "dimensions": [
+          3560,
+          85
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A62:I62",
+        "file": "feature-pre-03.png",
+        "sha256": "7e9d94cb8fe82c0c03c39331271b1481a874efe8b0cfe1321d64353060d0f75c",
+        "dimensions": [
+          3560,
+          85
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A95:I95",
+        "file": "feature-prd-11.png",
+        "sha256": "d42f51dcda7fe7ba0d4844877490722a0639df1f51f566c4137cb54a598abb83",
+        "dimensions": [
+          3560,
+          76
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A68:I68",
+        "file": "feature-pre-09.png",
+        "sha256": "0d3409ca327e3a644a25991c1fa2bcfba3d26f0d67139d80621f6ce924370c2f",
+        "dimensions": [
+          3560,
+          76
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A101:I101",
+        "file": "feature-pre-17.png",
+        "sha256": "ff4365ea75a70ec276ac2c062cfb2655146c679d951f6d43cd3786c22d197444",
+        "dimensions": [
+          3560,
+          76
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A107:I107",
+        "file": "feature-pre-21.png",
+        "sha256": "40ac48acae924e1d8dec48aeca0c6d762aadd94390f0a01fcd109ea9fd7c57f7",
+        "dimensions": [
+          3560,
+          140
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3248:J3252",
+        "file": "production-1.png",
+        "sha256": "0bcf352e124c33df3ada74bc90bf7169cac09ae301bdd707e6785346c92ae20f",
+        "dimensions": [
+          4020,
+          936
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3253:J3256",
+        "file": "production-2.png",
+        "sha256": "603e221bdaf3494fb16dd3052202b9af49e610a484a014ab3903d7055a41b57d",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3257:J3260",
+        "file": "production-3.png",
+        "sha256": "b8ff0f20190b1df6dd64bbfc4a29e494c2434319048bae60128dd179cab4e7df",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3261:J3264",
+        "file": "production-4.png",
+        "sha256": "c6163afc4d7d2bc00cf110d268ad56767ec4640577f793edb86ca560281269df",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3265:J3268",
+        "file": "production-5.png",
+        "sha256": "afc654a84ad36586bb543f2795404cd2224db70d5f74c54115e7feeb7cf10070",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3269:J3272",
+        "file": "production-6.png",
+        "sha256": "c64a2d95e853e1883ab827892c9462ec2c585ccf7b715efb00276e76f8dd7e27",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3273:J3276",
+        "file": "production-7.png",
+        "sha256": "d329e78e639e8e85301bd268f6e0abba281355a665f57ad2bfb1fd064b79a337",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3277:J3280",
+        "file": "production-8.png",
+        "sha256": "ca1876e9fcd3458a68700322316db4ab4a6d9e435dbf8464faac4fd86e161a52",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3281:J3284",
+        "file": "production-9.png",
+        "sha256": "57f94f1c84e68ef518fdb609f4bfe212792f6b66268dc424af25164bebc006c7",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3285:J3288",
+        "file": "production-10.png",
+        "sha256": "19fec4eabdc4b3b9495eb13932fb521c5209199904e9b8fbf7292e152ce7022d",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3289:J3292",
+        "file": "production-11.png",
+        "sha256": "0478c8883ddabbfbeeb8622b273f6db51d035da26fa11968d66442921f2afea2",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3293:J3296",
+        "file": "production-12.png",
+        "sha256": "9cb9e79f18cc66a79d9648e370993a2056861240ecef1a20d77b3282f15883b0",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3297:J3300",
+        "file": "production-13.png",
+        "sha256": "19ae6d73d2bf986a961e3c1493910d653f5b74318b91e275f862825de69a4029",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3301:J3304",
+        "file": "production-14.png",
+        "sha256": "f996a1452726402a7a018969edcef562abe6a27cdb2fd819797a0164765e4a11",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3305:J3308",
+        "file": "production-15.png",
+        "sha256": "80af963964a328a7bdb5d927081a205e438f8ac6dcf7a62b369e01567966ba4c",
+        "dimensions": [
+          4020,
+          800
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3309:J3312",
+        "file": "production-16.png",
+        "sha256": "353c66b4357198b76f561458bfea1011573f4dee7b8120e699bb026681418830",
+        "dimensions": [
+          4020,
+          307
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Production",
+        "range": "A3313:J3313",
+        "file": "production-17.png",
+        "sha256": "ffcb4c757caa8341fb48c5e0b3363c99df3a0192e7ef82e88b1ae77130c997dd",
+        "dimensions": [
+          4020,
+          85
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2395:I2398",
+        "file": "qa-1.png",
+        "sha256": "308b47147b2a45a35a7a6ec5b74660893c9fce2b2e64638db9ddce054cd44274",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2399:I2402",
+        "file": "qa-2.png",
+        "sha256": "b99b69550c02f5c13b88c77d4a0589b09a4294fcba38a66fed10d2df24b1bb99",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2403:I2406",
+        "file": "qa-3.png",
+        "sha256": "0c38237d03ce449a83a82ce6b149dd2c85b2cb304538de8b0c413834e543ac39",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2407:I2410",
+        "file": "qa-4.png",
+        "sha256": "78d69785eecc99114be7e8fc2014b4d9ba5ea5d933d1cd1117c65a610f44d5cd",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2411:I2414",
+        "file": "qa-5.png",
+        "sha256": "57973d2e6d43fb30a897bd75af76377a3142840148f3ee2eabf0c2f8a86e0361",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2415:I2418",
+        "file": "qa-6.png",
+        "sha256": "b8a1679ed563e8b6a5e501aa1955036807a1f733434c812988650b01483e6405",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2419:I2422",
+        "file": "qa-7.png",
+        "sha256": "9fa141164b7ed3e132bdc88f5759985caea503cbdbcf9f90a99934f7db88fe0a",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2423:I2426",
+        "file": "qa-8.png",
+        "sha256": "885d46a6cea6d80b499616476146136724a5245ad6d75f36f59e4d1040d57cf1",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2427:I2430",
+        "file": "qa-9.png",
+        "sha256": "db3223ae61df0930c5d9f269497d62d5ba2dc38882f2256433b1dc1794251258",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2431:I2434",
+        "file": "qa-10.png",
+        "sha256": "dd1ee690f8a339e1c1f1723c357f6de4fae62f8e5d8c51e5c35a4de513564c1a",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2435:I2438",
+        "file": "qa-11.png",
+        "sha256": "715298e74e066961c1908ada1ff8f0e911d7156ac1e14c8aa7aa6863349e5306",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2439:I2442",
+        "file": "qa-12.png",
+        "sha256": "0d911584e0a6a3022ab34f3d4f3a75662c648af46b3572c926a6fba9b0b5f98f",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2443:I2446",
+        "file": "qa-13.png",
+        "sha256": "7d756ebe11271befd26f167226d456dd466fb0ca8a3905691701ac23bae06829",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2447:I2450",
+        "file": "qa-14.png",
+        "sha256": "e89f186b84e930400972408e87764f6c9b73c5f3cbe015de9d4b2136eb54a55e",
+        "dimensions": [
+          4980,
+          683
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2451:I2454",
+        "file": "qa-15.png",
+        "sha256": "11b32b3a073016ccedda11fc8f7259d1dae5fb170e3c20f78b79fd6e723dbbb6",
+        "dimensions": [
+          4980,
+          297
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2455:I2458",
+        "file": "qa-16.png",
+        "sha256": "8dcfa84413b03616e47288347a78acac65aff5804cccdbe38595899075215f85",
+        "dimensions": [
+          4980,
+          253
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "QA",
+        "range": "A2459:I2459",
+        "file": "qa-17.png",
+        "sha256": "8b4131fb41e41e240208bc01cd768d1b22d0c49799ccb55526255e692b68d189",
+        "dimensions": [
+          4980,
+          85
+        ],
+        "reviewer": "/root/ribbit_references",
+        "evidence": "independent-visual-review.json",
+        "evidenceSHA256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Références",
+        "range": "A163:E166",
+        "file": "references-new.png",
+        "sha256": "aadbb3f27e62cfc5bc0cbf74bb3c6eb961e4cfbf22195f93af08d6d512a79e93",
+        "dimensions": [
+          3240,
+          621
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Références",
+        "range": "A64:E64",
+        "file": "references-offline.png",
+        "sha256": "75ad7131a391050781a12d65f64e18e18572ec5050a4a3de634054d045e9427b",
+        "dimensions": [
+          3240,
+          59
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Références",
+        "range": "A167:E177",
+        "file": "references-footer.png",
+        "sha256": "ac616450bd1b6c9c08a35f1ecb5be0f576e2abc50bffb540c189205cd76e5676",
+        "dimensions": [
+          3240,
+          401
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Références",
+        "range": "A63:E63",
+        "file": "source-music.png",
+        "sha256": "01ce964681bc4e6e0177dcee70d4be4a81b43b79eb325023d668fa2590067adc",
+        "dimensions": [
+          3240,
+          59
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Références",
+        "range": "A60:E60",
+        "file": "source-stage-ambiences.png",
+        "sha256": "60a60362d3d0a6f66b312a1aeaf1dba5580e882496c452238f9bfeb385d89b31",
+        "dimensions": [
+          3240,
+          63
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      },
+      {
+        "sheet": "Références",
+        "range": "A67:E67",
+        "file": "source-audio-ambiences-07.png",
+        "sha256": "37693cb65095e960641ad10e2241c6057e28d7250ebb75d7a1b865b6d672bb9a",
+        "dimensions": [
+          3240,
+          121
+        ],
+        "reviewer": "/root",
+        "evidence": "root-visual-review.json",
+        "evidenceSHA256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "status": "accepted"
+      }
+    ],
+    "reviewEvidence": {
+      "root": {
+        "file": "root-visual-review.json",
+        "sha256": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+        "views": 16
+      },
+      "independent": {
+        "file": "independent-visual-review.json",
+        "sha256": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+        "views": 34
+      }
+    },
+    "diagnosticReadingAids": {
+      "manifest": "root-diagnostics/manifest.json",
+      "sha256": "5c18ea05cbd54abe43f71d5d72675bd26c1795c7c136a6bdcce6f0514d98e559",
+      "count": 14,
+      "additionalWorkbookViews": 0
+    },
+    "authorSpotChecks": {
+      "reviewer": "/root/tracker_recovery",
+      "files": [
+        "summary-top.png",
+        "qa-16.png"
+      ],
+      "observations": [
+        "La Synthèse affiche 54 combattants, 540 techniques, 25 arènes, 477 costumes et 3 308 lignes Production, avec les réserves de finition visibles.",
+        "La vue QA 16 montre les 431 tests datés et les preuves d’intégrité, puis le statut navigateur Non exécuté ; l’absence de tentative courante et le blocage Barnoir historique sont lisibles en entier."
+      ],
+      "additionalWorkbookViews": 0
+    },
+    "defects": [],
+    "scope": "All 50 original workbook views were actually inspected across the two stated review scopes. Fourteen root diagnostic arrangements aid reading of the same source pixels and do not add views. The six baseline images retain their prior reviewed provenance; no new baseline inspection is claimed here. No desktop Excel, browser or game test is implied by this visual review."
+  },
+  "baselineVisualReview": {
+    "schema": "encore-workbook-baseline-visual-review/v1",
+    "createdAt": "2026-11-20T16:48:25.576606+00:00",
+    "status": "accepted_as_baseline",
+    "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+    "method": "Reused unchanged PNGs from the accepted final review of this exact installed XLSX. All six were actually inspected during that prior review; no fresh rendering or fresh visual inspection is claimed here. They remain available for side-by-side comparison during the new final review.",
+    "previousVisualReview": {
+      "file": "docs/art-generation/workbook-next-wave-20261120/visual-review.json",
+      "sha256": "2e4c81ee4bf01d20be9aff991fd9c44bdeae513301dfc5539f77c1cc86cdc17f"
+    },
+    "previousIndependentReview": {
+      "file": "docs/art-generation/workbook-next-wave-20261120/independent-visual-review.json",
+      "sha256": "1a8b4e319fb142f2d6936b757b1407ab64252a14767f8dff00422ee965e7ac54"
+    },
+    "views": [
+      {
+        "file": "baseline-summary.png",
+        "sha256": "584fbfa60a809ddf178e4276e3d91315d03029a87edf73749a65e05cef9a88ce",
+        "sheet": "Synthèse",
+        "range": "A1:H18",
+        "originalFile": "docs/art-generation/workbook-next-wave-20261120/summary-top.png",
+        "previouslyInspected": true,
+        "newRenderClaimed": false
+      },
+      {
+        "file": "baseline-stage-left.png",
+        "sha256": "81192dda48df7dfdae494422429be41199edc7d20fc26f2f1dd00ec27682f6e1",
+        "sheet": "Arènes",
+        "range": "A29:L29",
+        "originalFile": "docs/art-generation/workbook-next-wave-20261120/stage-left.png",
+        "previouslyInspected": true,
+        "newRenderClaimed": false
+      },
+      {
+        "file": "baseline-stage-right.png",
+        "sha256": "2ead00f36514389d972e2d6b0b392691dea503765ae5f455e6403cab7ecd926e",
+        "sheet": "Arènes",
+        "range": "M29:T29",
+        "originalFile": "docs/art-generation/workbook-next-wave-20261120/stage-right.png",
+        "previouslyInspected": true,
+        "newRenderClaimed": false
+      },
+      {
+        "file": "baseline-production.png",
+        "sha256": "1ac463820ea479f25fe6c4628de17715f535ff1fcc235b30eb315e1a1e011ba9",
+        "sheet": "Production",
+        "range": "A3194:J3197",
+        "originalFile": "docs/art-generation/workbook-next-wave-20261120/production-1.png",
+        "previouslyInspected": true,
+        "newRenderClaimed": false
+      },
+      {
+        "file": "baseline-qa.png",
+        "sha256": "a6b9733d6ae93eeb621ca9cc17b4febd4a05087c08f50391e8c820466b36c9d2",
+        "sheet": "QA",
+        "range": "A2393:I2394",
+        "originalFile": "docs/art-generation/workbook-next-wave-20261120/qa-14.png",
+        "previouslyInspected": true,
+        "newRenderClaimed": false
+      },
+      {
+        "file": "baseline-references.png",
+        "sha256": "115a22851dccd4ab2be3c1406d3b3c7def627bd95b1b5cb0ed863c94c8e2b5a0",
+        "sheet": "Références",
+        "range": "A163:E173",
+        "originalFile": "docs/art-generation/workbook-next-wave-20261120/references-footer.png",
+        "previouslyInspected": true,
+        "newRenderClaimed": false
+      }
+    ]
+  },
+  "assetSlotVerification": {
+    "schema": "encore-tracker-asset-slots/v1",
+    "status": "passed",
+    "verifiedSlots": 55,
+    "order": [
+      "cafekinger",
+      "cafepomni",
+      "glitch-metarunner-ribbit-hommage",
+      "glitch-metarunner-ribbit-resident",
+      "glitch-metarunner-ribbit-fusion"
+    ],
+    "slots": [
+      "selection",
+      "stance",
+      "intro",
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "checks": [
+      {
+        "appearanceId": "cafekinger",
+        "slot": "selection",
+        "file": "assets/encore/selection/cafekinger.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.json",
+        "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+        "bytes": 1354158,
+        "productionId": "WAVE31-cafekinger-selection",
+        "qaId": "WAVE31-asset-cafekinger-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          245,
+          30,
+          762,
+          1515
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "stance",
+        "file": "assets/encore/stance/cafekinger.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.json",
+        "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+        "bytes": 1324026,
+        "productionId": "WAVE31-cafekinger-stance",
+        "qaId": "WAVE31-asset-cafekinger-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          180,
+          30,
+          896,
+          1517
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "intro",
+        "file": "assets/encore/poses/cafekinger/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.json",
+        "sha256": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+        "bytes": 1133425,
+        "productionId": "WAVE31-cafekinger-intro",
+        "qaId": "WAVE31-asset-cafekinger-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          435,
+          23,
+          1099,
+          1009
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "attack",
+        "file": "assets/encore/poses/cafekinger/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.json",
+        "sha256": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+        "bytes": 1165904,
+        "productionId": "WAVE31-cafekinger-attack",
+        "qaId": "WAVE31-asset-cafekinger-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          361,
+          16,
+          1145,
+          1009
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "heavy",
+        "file": "assets/encore/poses/cafekinger/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.json",
+        "sha256": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+        "bytes": 1273887,
+        "productionId": "WAVE31-cafekinger-heavy",
+        "qaId": "WAVE31-asset-cafekinger-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          355,
+          19,
+          1111,
+          1013
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "hit",
+        "file": "assets/encore/poses/cafekinger/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.json",
+        "sha256": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+        "bytes": 639682,
+        "productionId": "WAVE31-cafekinger-hit",
+        "qaId": "WAVE31-asset-cafekinger-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          245,
+          24,
+          990,
+          1186
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "walk",
+        "file": "assets/encore/poses/cafekinger/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.json",
+        "sha256": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+        "bytes": 1160564,
+        "productionId": "WAVE31-cafekinger-walk",
+        "qaId": "WAVE31-asset-cafekinger-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          424,
+          12,
+          1103,
+          1018
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "jump",
+        "file": "assets/encore/poses/cafekinger/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.json",
+        "sha256": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+        "bytes": 1185817,
+        "productionId": "WAVE31-cafekinger-jump",
+        "qaId": "WAVE31-asset-cafekinger-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          435,
+          16,
+          1142,
+          1010
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "crouch",
+        "file": "assets/encore/poses/cafekinger/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.json",
+        "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+        "bytes": 1340173,
+        "productionId": "WAVE31-cafekinger-crouch",
+        "qaId": "WAVE31-asset-cafekinger-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          334,
+          39,
+          1264,
+          1008
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "victory",
+        "file": "assets/encore/poses/cafekinger/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.json",
+        "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+        "bytes": 1346080,
+        "productionId": "WAVE31-cafekinger-victory",
+        "qaId": "WAVE31-asset-cafekinger-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          252,
+          24,
+          828,
+          1511
+        ]
+      },
+      {
+        "appearanceId": "cafekinger",
+        "slot": "defeat",
+        "file": "assets/encore/poses/cafekinger/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.json",
+        "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+        "bytes": 1072926,
+        "productionId": "WAVE31-cafekinger-defeat",
+        "qaId": "WAVE31-asset-cafekinger-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          479,
+          147,
+          1088,
+          909
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "selection",
+        "file": "assets/encore/selection/cafepomni.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.json",
+        "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+        "bytes": 1123066,
+        "productionId": "WAVE31-cafepomni-selection",
+        "qaId": "WAVE31-asset-cafepomni-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          955,
+          1647
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          25,
+          30,
+          933,
+          1633
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "stance",
+        "file": "assets/encore/stance/cafepomni.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.json",
+        "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+        "bytes": 795027,
+        "productionId": "WAVE31-cafepomni-stance",
+        "qaId": "WAVE31-asset-cafepomni-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          301,
+          24,
+          1028,
+          1172
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "intro",
+        "file": "assets/encore/poses/cafepomni/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.json",
+        "sha256": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+        "bytes": 750903,
+        "productionId": "WAVE31-cafepomni-intro",
+        "qaId": "WAVE31-asset-cafepomni-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1314,
+          1197
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          308,
+          18,
+          1048,
+          1184
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "attack",
+        "file": "assets/encore/poses/cafepomni/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.json",
+        "sha256": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+        "bytes": 832720,
+        "productionId": "WAVE31-cafepomni-attack",
+        "qaId": "WAVE31-asset-cafepomni-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1426,
+          1103
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          217,
+          13,
+          1171,
+          1087
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "heavy",
+        "file": "assets/encore/poses/cafepomni/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.json",
+        "sha256": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+        "bytes": 1567942,
+        "productionId": "WAVE31-cafepomni-heavy",
+        "qaId": "WAVE31-asset-cafepomni-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          198,
+          38,
+          1340,
+          1007
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "hit",
+        "file": "assets/encore/poses/cafepomni/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.json",
+        "sha256": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+        "bytes": 886377,
+        "productionId": "WAVE31-cafepomni-hit",
+        "qaId": "WAVE31-asset-cafepomni-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          97,
+          13,
+          1130,
+          1179
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "walk",
+        "file": "assets/encore/poses/cafepomni/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.json",
+        "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+        "bytes": 815378,
+        "productionId": "WAVE31-cafepomni-walk",
+        "qaId": "WAVE31-asset-cafepomni-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          266,
+          16,
+          998,
+          1186
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "jump",
+        "file": "assets/encore/poses/cafepomni/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.json",
+        "sha256": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+        "bytes": 861925,
+        "productionId": "WAVE31-cafepomni-jump",
+        "qaId": "WAVE31-asset-cafepomni-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          218,
+          52,
+          1076,
+          1154
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "crouch",
+        "file": "assets/encore/poses/cafepomni/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.json",
+        "sha256": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+        "bytes": 1081527,
+        "productionId": "WAVE31-cafepomni-crouch",
+        "qaId": "WAVE31-asset-cafepomni-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          227,
+          60,
+          1151,
+          1181
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "victory",
+        "file": "assets/encore/poses/cafepomni/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.json",
+        "sha256": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+        "bytes": 975630,
+        "productionId": "WAVE31-cafepomni-victory",
+        "qaId": "WAVE31-asset-cafepomni-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1091,
+          1442
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          77,
+          17,
+          904,
+          1427
+        ]
+      },
+      {
+        "appearanceId": "cafepomni",
+        "slot": "defeat",
+        "file": "assets/encore/poses/cafepomni/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.json",
+        "sha256": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+        "bytes": 1291355,
+        "productionId": "WAVE31-cafepomni-defeat",
+        "qaId": "WAVE31-asset-cafepomni-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1362,
+          1155
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          115,
+          29,
+          1248,
+          1151
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "selection",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/selection.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.json",
+        "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+        "bytes": 717557,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-selection",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1081,
+          1455
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          146,
+          48,
+          946,
+          1424
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "stance",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/stance.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.json",
+        "sha256": "baa3212257643a6c1cb4afcac50f591b5cf1def68c8bd76470c4868f35cf514f",
+        "bytes": 782181,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-stance",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1192,
+          1320
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          97,
+          33,
+          1109,
+          1291
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "intro",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.json",
+        "sha256": "5f744b70af9328152324f88e025778f016f697b5a99895c184cb9df4fdb40b49",
+        "bytes": 693357,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-intro",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1081,
+          1455
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          180,
+          45,
+          848,
+          1420
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "attack",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.json",
+        "sha256": "3ff2fa3dd5b3fc64961f7417f724cfd8030f1748d3ecfdedd95c3e29824640a8",
+        "bytes": 697035,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-attack",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          69,
+          66,
+          1147,
+          1270
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "heavy",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.json",
+        "sha256": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+        "bytes": 664213,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-heavy",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          131,
+          36,
+          1314,
+          1063
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "hit",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.json",
+        "sha256": "f1f19ecdec728fc1c9699962c9ea4893558b736f4b8bdc7cd20c96e4f075e0da",
+        "bytes": 831035,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-hit",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1081,
+          1455
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          87,
+          79,
+          932,
+          1411
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "walk",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.json",
+        "sha256": "9e13a21c083cb17feef275e4540a6e3ac39181d44c92601844c454d39d75ae54",
+        "bytes": 743313,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-walk",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1081,
+          1455
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          147,
+          41,
+          934,
+          1393
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "jump",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.json",
+        "sha256": "066842d08009481b27e597e8b7d72daee3b8d0c7f8d13c10f816be085eca22a6",
+        "bytes": 756176,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-jump",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1102,
+          1428
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          35,
+          43,
+          1068,
+          1382
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "crouch",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.json",
+        "sha256": "b0ea55e9529f71656bd1720c90d6204eae9b86e5488173423e0fa240b5f3f09d",
+        "bytes": 836192,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-crouch",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          115,
+          42,
+          1020,
+          1281
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "victory",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.json",
+        "sha256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+        "bytes": 661706,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-victory",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1081,
+          1455
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          239,
+          50,
+          899,
+          1414
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-hommage",
+        "slot": "defeat",
+        "file": "assets/encore/crossovers/metarunner/ribbit/hommage/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.json",
+        "sha256": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+        "bytes": 865871,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-hommage-defeat",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-hommage-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          153,
+          48,
+          945,
+          1272
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "selection",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/selection.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.json",
+        "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+        "bytes": 684381,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-selection",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          178,
+          33,
+          1031,
+          1268
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "stance",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/stance.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.json",
+        "sha256": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+        "bytes": 760287,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-stance",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          138,
+          70,
+          1082,
+          1255
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "intro",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.json",
+        "sha256": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+        "bytes": 664573,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-intro",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          276,
+          32,
+          910,
+          1262
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "attack",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.json",
+        "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+        "bytes": 746676,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-attack",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          101,
+          28,
+          1238,
+          1180
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "heavy",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.json",
+        "sha256": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+        "bytes": 1445975,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-heavy",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          62,
+          16,
+          1363,
+          1012
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "hit",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.json",
+        "sha256": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+        "bytes": 794831,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-hit",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          213,
+          46,
+          1024,
+          1267
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "walk",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.json",
+        "sha256": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+        "bytes": 715959,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-walk",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          161,
+          31,
+          1013,
+          1248
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "jump",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.json",
+        "sha256": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+        "bytes": 762618,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-jump",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          74,
+          40,
+          1123,
+          1270
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "crouch",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.json",
+        "sha256": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+        "bytes": 868900,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-crouch",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          83,
+          68,
+          1050,
+          1266
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "victory",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.json",
+        "sha256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+        "bytes": 657866,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-victory",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          230,
+          10,
+          883,
+          1262
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-resident",
+        "slot": "defeat",
+        "file": "assets/encore/crossovers/metarunner/ribbit/resident/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.json",
+        "sha256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+        "bytes": 878926,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-resident-defeat",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-resident-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          203,
+          78,
+          982,
+          1255
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "selection",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/selection.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.json",
+        "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+        "bytes": 941029,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-selection",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          97,
+          42,
+          1011,
+          1392
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "stance",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/stance.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.json",
+        "sha256": "d7358a61b8b4b149a77a63be03bb58ec69d439b67c36bd792c00ead8e0e225b1",
+        "bytes": 897808,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-stance",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          61,
+          62,
+          1137,
+          1261
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "intro",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.json",
+        "sha256": "757ecf2fc43dbf0872b724b57433ec44058a9021f4dbf4a5c351dbe010156338",
+        "bytes": 863983,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-intro",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          134,
+          40,
+          946,
+          1393
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "attack",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.json",
+        "sha256": "2a5584483f87200a118aa30485e668653925c7cb2f5c8ae0b87ab3a0667ee91c",
+        "bytes": 809312,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-attack",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          58,
+          102,
+          1154,
+          1241
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "heavy",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.json",
+        "sha256": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+        "bytes": 1604119,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-heavy",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          70,
+          25,
+          1470,
+          1012
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "hit",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.json",
+        "sha256": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+        "bytes": 976968,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-hit",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          112,
+          53,
+          935,
+          1401
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "walk",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.json",
+        "sha256": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+        "bytes": 848857,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-walk",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1150,
+          1368
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          104,
+          47,
+          1052,
+          1287
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "jump",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.json",
+        "sha256": "5d852f1212a23b9177cbbc65d27ec3c1355b857f7cef6399c384c09bf272c277",
+        "bytes": 862989,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-jump",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          34,
+          64,
+          1032,
+          1372
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "crouch",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.json",
+        "sha256": "981dc120521bd3df683a17327ddd6d950b70e69026dee1062e6e449e9880187d",
+        "bytes": 1040557,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-crouch",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1196,
+          1315
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          80,
+          75,
+          1092,
+          1267
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "victory",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.json",
+        "sha256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+        "bytes": 877568,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-victory",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          158,
+          33,
+          966,
+          1422
+        ]
+      },
+      {
+        "appearanceId": "glitch-metarunner-ribbit-fusion",
+        "slot": "defeat",
+        "file": "assets/encore/crossovers/metarunner/ribbit/fusion/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.json",
+        "sha256": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+        "bytes": 1065325,
+        "productionId": "WAVE31-glitch-metarunner-ribbit-fusion-defeat",
+        "qaId": "WAVE31-asset-glitch-metarunner-ribbit-fusion-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          97,
+          42,
+          1090,
+          1278
+        ]
+      }
+    ],
+    "productionRowCount": 55,
+    "qaRowCount": 55
+  },
+  "historicalCellsConstrained": 81412,
+  "originalIdsAndOrderPreserved": true,
+  "userNotesPreserved": true,
+  "historicalEvidencePreserved": true,
+  "coverageChanges": {
+    "featureIds": [
+      "PRE-02",
+      "PRE-03",
+      "PRD-11",
+      "PRE-09",
+      "PRE-17",
+      "PRE-21"
+    ],
+    "sourceIds": [
+      "music",
+      "stage-ambiences",
+      "audio-ambiences-07"
+    ],
+    "promotedNpcFamilies": 6,
+    "remainingNpcFamilies": 1074,
+    "noHistoricalProductionRowChanged": true
+  },
+  "appendedProductionIds": [
+    "WAVE31-cafekinger",
+    "WAVE31-cafepomni",
+    "COST-glitch-metarunner-ribbit-hommage",
+    "COST-glitch-metarunner-ribbit-resident",
+    "COST-glitch-metarunner-ribbit-fusion",
+    "WAVE31-cafekinger-selection",
+    "WAVE31-cafekinger-stance",
+    "WAVE31-cafekinger-intro",
+    "WAVE31-cafekinger-attack",
+    "WAVE31-cafekinger-heavy",
+    "WAVE31-cafekinger-hit",
+    "WAVE31-cafekinger-walk",
+    "WAVE31-cafekinger-jump",
+    "WAVE31-cafekinger-crouch",
+    "WAVE31-cafekinger-victory",
+    "WAVE31-cafekinger-defeat",
+    "WAVE31-cafepomni-selection",
+    "WAVE31-cafepomni-stance",
+    "WAVE31-cafepomni-intro",
+    "WAVE31-cafepomni-attack",
+    "WAVE31-cafepomni-heavy",
+    "WAVE31-cafepomni-hit",
+    "WAVE31-cafepomni-walk",
+    "WAVE31-cafepomni-jump",
+    "WAVE31-cafepomni-crouch",
+    "WAVE31-cafepomni-victory",
+    "WAVE31-cafepomni-defeat",
+    "WAVE31-glitch-metarunner-ribbit-hommage-selection",
+    "WAVE31-glitch-metarunner-ribbit-hommage-stance",
+    "WAVE31-glitch-metarunner-ribbit-hommage-intro",
+    "WAVE31-glitch-metarunner-ribbit-hommage-attack",
+    "WAVE31-glitch-metarunner-ribbit-hommage-heavy",
+    "WAVE31-glitch-metarunner-ribbit-hommage-hit",
+    "WAVE31-glitch-metarunner-ribbit-hommage-walk",
+    "WAVE31-glitch-metarunner-ribbit-hommage-jump",
+    "WAVE31-glitch-metarunner-ribbit-hommage-crouch",
+    "WAVE31-glitch-metarunner-ribbit-hommage-victory",
+    "WAVE31-glitch-metarunner-ribbit-hommage-defeat",
+    "WAVE31-glitch-metarunner-ribbit-resident-selection",
+    "WAVE31-glitch-metarunner-ribbit-resident-stance",
+    "WAVE31-glitch-metarunner-ribbit-resident-intro",
+    "WAVE31-glitch-metarunner-ribbit-resident-attack",
+    "WAVE31-glitch-metarunner-ribbit-resident-heavy",
+    "WAVE31-glitch-metarunner-ribbit-resident-hit",
+    "WAVE31-glitch-metarunner-ribbit-resident-walk",
+    "WAVE31-glitch-metarunner-ribbit-resident-jump",
+    "WAVE31-glitch-metarunner-ribbit-resident-crouch",
+    "WAVE31-glitch-metarunner-ribbit-resident-victory",
+    "WAVE31-glitch-metarunner-ribbit-resident-defeat",
+    "WAVE31-glitch-metarunner-ribbit-fusion-selection",
+    "WAVE31-glitch-metarunner-ribbit-fusion-stance",
+    "WAVE31-glitch-metarunner-ribbit-fusion-intro",
+    "WAVE31-glitch-metarunner-ribbit-fusion-attack",
+    "WAVE31-glitch-metarunner-ribbit-fusion-heavy",
+    "WAVE31-glitch-metarunner-ribbit-fusion-hit",
+    "WAVE31-glitch-metarunner-ribbit-fusion-walk",
+    "WAVE31-glitch-metarunner-ribbit-fusion-jump",
+    "WAVE31-glitch-metarunner-ribbit-fusion-crouch",
+    "WAVE31-glitch-metarunner-ribbit-fusion-victory",
+    "WAVE31-glitch-metarunner-ribbit-fusion-defeat",
+    "ART-softballfield-background",
+    "ART-softballfield-floor",
+    "ART-softballfield-foreground",
+    "ART-softballfield-music",
+    "ART-softballfield-ambience",
+    "ANIM-softballfield-ambience"
+  ],
+  "appendedQaIds": [
+    "WAVE31-asset-cafekinger-selection",
+    "WAVE31-asset-cafekinger-stance",
+    "WAVE31-asset-cafekinger-intro",
+    "WAVE31-asset-cafekinger-attack",
+    "WAVE31-asset-cafekinger-heavy",
+    "WAVE31-asset-cafekinger-hit",
+    "WAVE31-asset-cafekinger-walk",
+    "WAVE31-asset-cafekinger-jump",
+    "WAVE31-asset-cafekinger-crouch",
+    "WAVE31-asset-cafekinger-victory",
+    "WAVE31-asset-cafekinger-defeat",
+    "WAVE31-asset-cafepomni-selection",
+    "WAVE31-asset-cafepomni-stance",
+    "WAVE31-asset-cafepomni-intro",
+    "WAVE31-asset-cafepomni-attack",
+    "WAVE31-asset-cafepomni-heavy",
+    "WAVE31-asset-cafepomni-hit",
+    "WAVE31-asset-cafepomni-walk",
+    "WAVE31-asset-cafepomni-jump",
+    "WAVE31-asset-cafepomni-crouch",
+    "WAVE31-asset-cafepomni-victory",
+    "WAVE31-asset-cafepomni-defeat",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-selection",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-stance",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-intro",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-attack",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-heavy",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-hit",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-walk",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-jump",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-crouch",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-victory",
+    "WAVE31-asset-glitch-metarunner-ribbit-hommage-defeat",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-selection",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-stance",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-intro",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-attack",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-heavy",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-hit",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-walk",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-jump",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-crouch",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-victory",
+    "WAVE31-asset-glitch-metarunner-ribbit-resident-defeat",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-selection",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-stance",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-intro",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-attack",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-heavy",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-hit",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-walk",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-jump",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-crouch",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-victory",
+    "WAVE31-asset-glitch-metarunner-ribbit-fusion-defeat",
+    "SOFTBALL31-asset-far",
+    "SOFTBALL31-asset-mid",
+    "SOFTBALL31-asset-near",
+    "WAVE31-art",
+    "WAVE31-canvas",
+    "SOFTBALL31-canvas",
+    "WAVE31-node",
+    "WAVE31-integrity",
+    "WAVE31-browser",
+    "TRACKER31-update"
+  ],
+  "appendedSourceIds": [
+    "animate-cafe-kinger",
+    "animate-cafe-pomni",
+    "glitch-softballfield-storyboards",
+    "npc-metarunner-ribbit-20261120-b"
+  ],
+  "appendedStageId": "softballfield",
+  "qaEvidence": {
+    "tests": 431,
+    "failures": 0,
+    "bothBuildsPassed": true,
+    "costumeCanvasDrawChecks": 100,
+    "stageCanvasChecks": 6,
+    "stageImagegenCalls": 4,
+    "acceptedStageImages": 3,
+    "nativeDistributionComparisons": 116,
+    "moduleComparisons": 40,
+    "historicalEncoreFiles": 5772
+  },
+  "releaseReviewed": false,
+  "fullCiExecutedByWorkbookUpdate": false,
+  "canonicalVisualApproval": false,
+  "limitations": [
+    "The update authored and checked the workbook, all native cells, all ten tables, all forty-two formulas and the fifty-five individual drawing slots.",
+    "Runtime QA and Canvas results retain the dates, versions and scopes of the final frozen generation wave.",
+    "No desktop Excel session, physical-device test, full animation cycle or scene-by-scene canonical approval is claimed.",
+    "The published fields in costume coverage denote active local files; GitHub publication is recorded separately."
+  ]
+}

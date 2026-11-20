@@ -1,0 +1,91 @@
+{
+  "schema": "encore-cafe-reference-audit/v1",
+  "sourcePage": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+  "eventPage": "https://www.animatecafe.jp/event/ac000791",
+  "publisher": "Animate Holdings / Animate Cafe",
+  "sourceKind": "Official collaboration merchandise illustration",
+  "episodeClaim": false,
+  "reusedArchiveDate": "2026-11-20T14:35:38.081864+00:00",
+  "reviewedOn": "2026-11-20",
+  "publicPageReopened": true,
+  "pageCitation": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+  "sameDrawingRepeatedInGoodsPanel": true,
+  "files": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+      "url": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-67383ec049776a79e04eea0c153d49e4-1000x707.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+      "contentType": "image/jpeg",
+      "bytes": 181618,
+      "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "dimensions": [
+        1000,
+        707
+      ],
+      "visuallyInspected": true,
+      "alterations": "none; downloaded JPEG bytes copied unchanged",
+      "originalArchivePath": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/animate-press-main.jpg",
+      "reusedWithoutDownload": true
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-goods.jpg",
+      "url": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-0d14946233ef147194229260b58973f0-1000x708.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+      "contentType": "image/jpeg",
+      "bytes": 175497,
+      "sha256": "3a300b59e47531d8bb2d1c118fd80b6c778d3849d9b572a06c2434f6deacec9c",
+      "dimensions": [
+        1000,
+        708
+      ],
+      "visuallyInspected": true,
+      "alterations": "none; downloaded JPEG bytes copied unchanged",
+      "originalArchivePath": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/animate-press-goods.jpg",
+      "reusedWithoutDownload": true
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+      "sourceFile": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+      "sourceSha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "cropRectangle": [
+        420,
+        130,
+        595,
+        580
+      ],
+      "dimensions": [
+        175,
+        450
+      ],
+      "sha256": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+      "bytes": 123785,
+      "alterations": "Rectangular reference extract only. No resizing, recoloring, reconstruction or background removal. Not a generated game asset.",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png",
+      "sourceFile": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+      "sourceSha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "cropRectangle": [
+        10,
+        290,
+        205,
+        580
+      ],
+      "dimensions": [
+        195,
+        290
+      ],
+      "sha256": "b5bd88345eeed2098cc9b281d4aee07fea9d2c41c77699ffe3dadf53daa59b09",
+      "bytes": 114061,
+      "alterations": "Rectangular reference extract only. No resizing, recoloring, reconstruction or background removal. Not a generated game asset.",
+      "visuallyInspected": true
+    }
+  ],
+  "limits": [
+    "The main poster is 1000 × 707 pixels; the goods panel is 1000 × 708.",
+    "The goods panel repeats the same designs on products; it supplies no independent back view.",
+    "The Café Kinger hands are not clearly attributable in the main poster. The existing Kinger game design and archived official Bug Tamer reference justify disconnected white gloves for original combat poses.",
+    "No rear costume, complete animation, episode appearance or measured canonical proportions are certified."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "appearanceId": "cafepomni",
+  "slot": "walk",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE original full-body walk action sprite for the existing Digital Circus Encore game.\n\nReference image 1 is the accepted cafepomni selection: lock its identity, proportions, line weight, cel shading, costume construction and colors. Reference image 2 is the official Animate Cafe illustration detail: preserve its distinctive outfit. Make a genuinely new walk pose, not a flipped or mechanically moved copy. Only one character.\n\nPomni keeps her white face, brown bob, red/blue pinwheel irises, red cheeks, complete red/dark-navy two-point jester hat with TWO YELLOW bells, white frilled headband and navy bows. Short dark navy puff-sleeved dress, white ruffled bib/apron, BLUE bow at anatomical right and RED bow at anatomical left, white gloves and scalloped cuffs, two slender WHITE legs, white scalloped ankle cuffs. Right anatomical shoe is RED and left anatomical shoe is DARK NAVY with white accents. Preserve the neck bow shown in the accepted selection. Do not swap the shoes or apron bows, darken the legs, introduce yellow ankle cuffs or convert the hat to white pompoms.\n\nPOSE: Walking step toward SCREEN-RIGHT: navy left shoe forward, red right shoe behind, two white legs clearly separate. Arms swing naturally in opposing positions. Gentle sway of the skirt and bonnet tips, with no duplicate limbs or motion trail.\n\nNative orientation is SCREEN-RIGHT. Keep all visible costume asymmetry consistent with the selection. Crisp dark contours and restrained flat two-tone cel shading, same polished 2D game family. Center the complete silhouette with generous transparent space around every extremity; use a wider composition if needed so nothing touches the edges. Native transparent RGBA. No scenery, floor, cast shadow, halo, bloom, sticker outline, motion streaks, text, logo, watermark, duplicate figure or additional limbs. Preserve all original image pixels in the delivered native result; no painted checkerboard or solid background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "93b2acb2d0b4fb269727a18e0f16460ee610979089227acb8dbaa7d39720014c",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png": "b5bd88345eeed2098cc9b281d4aee07fea9d2c41c77699ffe3dadf53daa59b09"
+  },
+  "schema": "encore-native-continuation-b-cafe-art/v1",
+  "id": "cafepomni:walk",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.png",
+  "targetFile": "assets/encore/poses/cafepomni/walk.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-cfe813d3-dd08-436c-8fcb-844bb491c493.png",
+  "sourceGenerationId": "exec-cfe813d3-dd08-436c-8fcb-844bb491c493",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+      "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+      "bytes": 1123066
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png",
+      "sha256": "b5bd88345eeed2098cc9b281d4aee07fea9d2c41c77699ffe3dadf53daa59b09",
+      "bytes": 114061
+    }
+  ],
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    266,
+    16,
+    998,
+    1186
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1126656,
+  "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+  "bytes": 815378,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T16:58:51.837440+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Pas vers la droite lisible : chaussure bleu nuit en avant, rouge derrière, deux jambes et bras distincts. Bonnet entier malgré le mouvement.",
+      "Le tablier, les deux nœuds, les manchettes et revers de chevilles restent cohérents avec la sélection. Aucun dédoublement de membre ou traînée.",
+      "Inspection du PNG natif et de sa composition alpha sur fonds clair et sombre ; silhouette entière, contours propres, alpha natif conservé sans retouche. Orientation écran droit.",
+      "Bornes alpha > 12 [266,16,998,1186] internes à 1312 × 1199. Le RGB caché sous alpha nul n’a pas été modifié. Adaptation statique de jeu ; aucune certification d’épisode ou d’animation complète."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T17:17:56.268791+00:00",
+    "targetFile": "assets/encore/poses/cafepomni/walk.png",
+    "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

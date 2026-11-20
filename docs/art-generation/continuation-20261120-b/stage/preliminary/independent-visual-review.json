@@ -1,0 +1,39 @@
+{
+  "schema": "encore-softballfield-independent-visual-review-v1",
+  "recordedAt": "2026-11-20T17:08:31.331744+00:00",
+  "reviewer": "/root/tracker_recovery",
+  "recorder": "/root/audit_github",
+  "status": "accepted_with_stated_scope",
+  "phase": "preliminary-manifest-only",
+  "manifestImages": 5819,
+  "imagesActuallyInspected": [
+    {
+      "path": "review/three-cameras.png",
+      "sha256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6"
+    },
+    {
+      "path": "review/fallback.png",
+      "sha256": "e41a25c45e02ed2f32a73fb766a4af7eb19b91b87027150e178d023245a7f4ba"
+    },
+    {
+      "path": "../references/episode5-storyboard-L3-M12.jpg",
+      "sha256": "497b0548a2ecb43c771414c28171ce889560c8830d89932ec7671069816090b5"
+    },
+    {
+      "path": "../references/episode5-storyboard-L3-M15.jpg",
+      "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a"
+    }
+  ],
+  "observations": [
+    "Les grandes masses du ciel, des tribunes, des projecteurs et du panneau vert correspondent aux vues officielles M12/M15 inspectées.",
+    "Piste ocre dégagée aux trois caméras, sans trou ni raccord alpha visible.",
+    "Dans les trois scènes Pomni/Gummigoo, pieds lisibles sur le sol ; herbes seulement au bord inférieur, sans voile blanc ni occultation des acteurs.",
+    "Le repli procédural est reconnaissable par les gradins, projecteurs, herbe et piste. Aucun acteur n’y figure ; aucun jugement de pieds porté sur cette image."
+  ],
+  "limitations": [
+    "Revue préliminaire sur 5 819 images seulement ; ne remplace pas la revue au manifeste global.",
+    "Textes et score des références retirés ; géométrie de duel adaptée.",
+    "Aucune validation canonique 1:1, aucun contrôle navigateur ni certification de mouvement à partir des images fixes."
+  ],
+  "evidence": "Direct independent inspection reported through the team channel; exact image hashes rechecked by the recorder. No files changed by the reviewer."
+}

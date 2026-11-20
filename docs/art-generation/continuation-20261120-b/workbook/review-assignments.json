@@ -1,0 +1,312 @@
+{
+  "schema": "encore-workbook-review-assignment/v1",
+  "status": "assigned_not_reviewed",
+  "workbookFile": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+  "workbookSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+  "planFile": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/update-plan.json",
+  "planSha256": "2a18d8c9d5b667409db2acaf4443eed854e095cc1196033b9c465db0c28d4299",
+  "root": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "file": "summary-top.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/summary-top.png"
+    },
+    {
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "file": "summary-bottom.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/summary-bottom.png"
+    },
+    {
+      "sheet": "Arènes",
+      "range": "A30:L30",
+      "file": "stage-left.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/stage-left.png"
+    },
+    {
+      "sheet": "Arènes",
+      "range": "M30:T30",
+      "file": "stage-right.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/stage-right.png"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A61:I61",
+      "file": "feature-pre-02.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/feature-pre-02.png"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "file": "feature-pre-03.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/feature-pre-03.png"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A95:I95",
+      "file": "feature-prd-11.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/feature-prd-11.png"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A68:I68",
+      "file": "feature-pre-09.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/feature-pre-09.png"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A101:I101",
+      "file": "feature-pre-17.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/feature-pre-17.png"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A107:I107",
+      "file": "feature-pre-21.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/feature-pre-21.png"
+    },
+    {
+      "sheet": "Références",
+      "range": "A163:E166",
+      "file": "references-new.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/references-new.png"
+    },
+    {
+      "sheet": "Références",
+      "range": "A64:E64",
+      "file": "references-offline.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/references-offline.png"
+    },
+    {
+      "sheet": "Références",
+      "range": "A167:E177",
+      "file": "references-footer.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/references-footer.png"
+    },
+    {
+      "sheet": "Références",
+      "range": "A63:E63",
+      "file": "source-music.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/source-music.png"
+    },
+    {
+      "sheet": "Références",
+      "range": "A60:E60",
+      "file": "source-stage-ambiences.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/source-stage-ambiences.png"
+    },
+    {
+      "sheet": "Références",
+      "range": "A67:E67",
+      "file": "source-audio-ambiences-07.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/source-audio-ambiences-07.png"
+    }
+  ],
+  "ribbit_references": [
+    {
+      "sheet": "Production",
+      "range": "A3248:J3252",
+      "file": "production-1.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-1.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3253:J3256",
+      "file": "production-2.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-2.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3257:J3260",
+      "file": "production-3.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-3.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3261:J3264",
+      "file": "production-4.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-4.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3265:J3268",
+      "file": "production-5.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-5.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3269:J3272",
+      "file": "production-6.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-6.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3273:J3276",
+      "file": "production-7.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-7.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3277:J3280",
+      "file": "production-8.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-8.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3281:J3284",
+      "file": "production-9.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-9.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3285:J3288",
+      "file": "production-10.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-10.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3289:J3292",
+      "file": "production-11.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-11.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3293:J3296",
+      "file": "production-12.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-12.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3297:J3300",
+      "file": "production-13.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-13.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3301:J3304",
+      "file": "production-14.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-14.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3305:J3308",
+      "file": "production-15.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-15.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3309:J3312",
+      "file": "production-16.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-16.png"
+    },
+    {
+      "sheet": "Production",
+      "range": "A3313:J3313",
+      "file": "production-17.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/production-17.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2395:I2398",
+      "file": "qa-1.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-1.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2399:I2402",
+      "file": "qa-2.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-2.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2403:I2406",
+      "file": "qa-3.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-3.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2407:I2410",
+      "file": "qa-4.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-4.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2411:I2414",
+      "file": "qa-5.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-5.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2415:I2418",
+      "file": "qa-6.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-6.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2419:I2422",
+      "file": "qa-7.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-7.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2423:I2426",
+      "file": "qa-8.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-8.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2427:I2430",
+      "file": "qa-9.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-9.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2431:I2434",
+      "file": "qa-10.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-10.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2435:I2438",
+      "file": "qa-11.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-11.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2439:I2442",
+      "file": "qa-12.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-12.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2443:I2446",
+      "file": "qa-13.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-13.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2447:I2450",
+      "file": "qa-14.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-14.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2451:I2454",
+      "file": "qa-15.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-15.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2455:I2458",
+      "file": "qa-16.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-16.png"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2459:I2459",
+      "file": "qa-17.png",
+      "absolutePath": "/workspace/scratch/f726dc7a5ad2/outputs/tracker-continuation-b-20261120/qa-17.png"
+    }
+  ]
+}

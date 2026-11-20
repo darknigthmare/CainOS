@@ -1,0 +1,45 @@
+{
+  "stage": "softballfield",
+  "count": 3,
+  "bytes": 3125830,
+  "assets": [
+    {
+      "plane": "far",
+      "path": "assets/encore/stages/softballfield/far.png",
+      "nativePath": "docs/art-generation/continuation-20261120-b/stage/native/far.png",
+      "bytes": 2071718,
+      "sha256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "plane": "mid",
+      "path": "assets/encore/stages/softballfield/mid.png",
+      "nativePath": "docs/art-generation/continuation-20261120-b/stage/native/mid.png",
+      "bytes": 907121,
+      "sha256": "66dfb01a55abd8b28b8cf404074b20021cfb5fff040d8c9efbc27efa24bf0842",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "plane": "near",
+      "path": "assets/encore/stages/softballfield/near.png",
+      "nativePath": "docs/art-generation/continuation-20261120-b/stage/native/near.png",
+      "bytes": 146991,
+      "sha256": "aef682f1c524798efe1e7e09080eae872d63584d3237185fe173c162969be767",
+      "size": [
+        1671,
+        941
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "nativeRetouchOrReencoding": false,
+  "sizeNote": "Far and mid are native 1672x941. Corrected near is native 1671x941, kept unchanged on disk. The existing loader paints each native image into its fixed 1344x756 surface."
+}

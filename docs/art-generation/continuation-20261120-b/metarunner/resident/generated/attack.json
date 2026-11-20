@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "slot": "attack",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and hot-pink fabric bow tie. Long slender game-adapted frog limbs. Original esports replay analyst resident of the Meta Runner world. Wear a sleeveless short navy esports jacket with distinct MAGENTA side panels over a cream short-sleeve tee; navy athletic shorts; small smooth grey kneepads; bare green lower legs; purple high-top sneakers with cyan soles. LEFT forearm is a light-grey cybernetic prosthesis with navy joints and thin cyan interface strips, ending in THREE rounded robotic digits. RIGHT hand is green, exactly THREE rounded digits, with a compact black screen wristband. Keep the pink bow tie visible and no headphones blocking eyes. No hoodie, tool belt, weapons, company logo, floating interface, extra device or tail. Clear sporty silhouette. POSE: Quick straight LEFT palm strike toward image right: left arm extended at chest height, palm oriented forward, right arm held close in guard, front knee bent and rear leg extended for balance. Lean into the strike, clear compact silhouette. No energy projectile, trail or impact graphic.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-resident:attack",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/resident/attack.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-02318ad0-52f5-4d47-be5a-db632807847b.png",
+  "sourceGenerationId": "exec-02318ad0-52f5-4d47-be5a-db632807847b",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+      "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+      "bytes": 684381
+    }
+  ],
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    101,
+    28,
+    1238,
+    1180
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1174769,
+  "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+  "bytes": 746676,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T16:55:33.956694+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Paume gauche cybernétique étendue avec trois doigts, main droite verte près du torse ; jambes vertes en fente avec short et genouillères. Veste, bracelet et baskets cohérents, figure entière sans halo large."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

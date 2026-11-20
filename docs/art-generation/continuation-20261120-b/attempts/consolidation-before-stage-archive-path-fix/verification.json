@@ -1,0 +1,167 @@
+{
+  "schema": "encore-continuation-b-verification/v1",
+  "status": "local_qa_canvas_and_integrity_passed_browser_not_reexecuted",
+  "createdAt": "2026-11-20T17:37:39.512713+00:00",
+  "counts": {
+    "fighters": 54,
+    "techniques": 540,
+    "costumes": 477,
+    "additionalAppearances": 42,
+    "crossovers": 384,
+    "historicalCostumePrefixCount": 472,
+    "historicalCostumePrefixSHA256": "5dafc529d6121a2850b7bfad54684f57e7223bfd29c2051b3687c00bed057685",
+    "fullyCoveredCrossoverFighters": 14,
+    "partiallyCoveredCrossoverFighters": 1,
+    "fightersWithoutCrossovers": 39,
+    "crossoverDrawings": 3847,
+    "stages": 25,
+    "dedicatedArrangements": 54,
+    "archive": 179,
+    "offlineImages": 5874,
+    "offlineBytes": 3173741905,
+    "coreFiles": 57,
+    "artVersion": "20311abb70caa13c",
+    "offlineVersion": "0.7.0-17366238b519"
+  },
+  "runtimeCounts": {
+    "fighters": 54,
+    "techniques": 540,
+    "costumes": 477,
+    "additionalAppearances": 42,
+    "crossovers": 384,
+    "historicalCostumePrefixCount": 472,
+    "historicalCostumePrefixSHA256": "5dafc529d6121a2850b7bfad54684f57e7223bfd29c2051b3687c00bed057685",
+    "fullyCoveredCrossoverFighters": 14,
+    "partiallyCoveredCrossoverFighters": 1,
+    "fightersWithoutCrossovers": 39,
+    "crossoverDrawings": 3847,
+    "stages": 25,
+    "dedicatedArrangements": 54,
+    "archive": 179,
+    "offlineImages": 5874,
+    "offlineBytes": 3173741905,
+    "coreFiles": 57,
+    "artVersion": "20311abb70caa13c",
+    "offlineVersion": "0.7.0-17366238b519"
+  },
+  "generation": {
+    "manifest": "generation-completion.json",
+    "manifestSha256": "9722a5f71a48ced9796048e90e8817b250222d86fab6d985cace2bb0fe7a542f",
+    "families": 5,
+    "nativePNG": 55,
+    "bytes": 51996635
+  },
+  "qa": {
+    "tests": 431,
+    "pass": 431,
+    "fail": 0,
+    "skipped": 0
+  },
+  "bothBuildsPassed": true,
+  "canvas": {
+    "appearances": 5,
+    "actions": 45,
+    "stances": 5,
+    "drawChecks": 100,
+    "portraits": 5,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "integrity": {
+    "schema": "encore-continuation-b-build-integrity/v1",
+    "status": "passed",
+    "complete": true,
+    "baseCommit": "38e8000cad61f4b229ad300877f44c31356343fa",
+    "newNativePNG": 58,
+    "newNativeBytes": 55122465,
+    "nativeBuildCopies": 116,
+    "moduleComparisons": 40,
+    "nativeAssetComparisons": 116,
+    "costumeComparisons": 110,
+    "stageComparisons": 6,
+    "historicalAssetsCompared": 5772,
+    "historicalAssetsUnchanged": true,
+    "historicalInventorySHA256": "39436c0746c90ce14cdfb5857768fda28f70376e6f2c1ca06043f28fc505d24a",
+    "historicalMurderDronesRibbitFiles": 33,
+    "historicalEncoreFilesVerified": 5772,
+    "preservedRuntimeModules": {
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+      "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+      "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d"
+    }
+  },
+  "reports": {
+    "generation-completion": {
+      "file": "docs/art-generation/continuation-20261120-b/generation-completion.json",
+      "sha256": "9722a5f71a48ced9796048e90e8817b250222d86fab6d985cace2bb0fe7a542f"
+    },
+    "runtime-counts": {
+      "file": "docs/art-generation/continuation-20261120-b/runtime-counts.json",
+      "sha256": "16282cbbc1f7e430efdfe0e036e07e3d43e393c8139148a3307ecc0451eece33"
+    },
+    "qa-result": {
+      "file": "docs/art-generation/continuation-20261120-b/qa-result.json",
+      "sha256": "0aafcd4b8304a2dea728c3aa374fffe82261fc9344b4f7f69ba4251a7174d130"
+    },
+    "canvas-summary": {
+      "file": "docs/art-generation/continuation-20261120-b/canvas-summary.json",
+      "sha256": "4844f9395c8f57ce48d65e401f010a9ebed08db5e2e8aad4b9ae4c6e6c8da3e5"
+    },
+    "build-integrity": {
+      "file": "docs/art-generation/continuation-20261120-b/build-integrity.json",
+      "sha256": "9309f94eb76bf5c6ceb8c6bdb49c674bd5f5aac3b390164c957f3a4a96d2078e"
+    }
+  },
+  "stageReport": "docs/art-generation/continuation-20261120-b/stage/verification.json",
+  "stageReportSHA256": "0b7e295a0a6031f4b799f0ee68de51cfa745fd5fd06a725680485e0a95962cf8",
+  "visualReview": {
+    "evidence": "visual-review.json",
+    "sha256": "e12515389a9436a831ce018ae196c3fc8531aee72524b1c2ddec3c830d217947",
+    "independentEvidence": "independent-visual-review.json",
+    "independentSha256": "715478f9241e47aa78a66fff285b7280dd5ea17e99a82c1e3dd43b1184d241d7"
+  },
+  "browser": {
+    "status": "not_executed",
+    "attempted": false,
+    "assertionsExecuted": 0,
+    "record": "docs/art-generation/continuation-20261120-b/stage/browser-result.json",
+    "recordSHA256": "fc3b47d5a2360f8142f949473819e4f35904ae266c4bf2579e00e3e9b7691732",
+    "historicalAttempt": {
+      "receipt": "../../stage-next-wave-20261120/browser-result.json",
+      "receiptSHA256": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+      "startedAt": "2026-11-20T14:51:46.083930+00:00",
+      "endedAt": "2026-11-20T14:51:47.586016+00:00",
+      "status": "environment_blocked_before_navigation",
+      "successfulChecks": 0,
+      "exitCode": 1,
+      "log": "../../stage-next-wave-20261120/browser.log",
+      "logSHA256": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9",
+      "scope": "Historical Barnoir attempt, before its final manifest. Does not validate softballfield or any current costume."
+    },
+    "scope": "No local browser command executed for this continuation. The dated Barnoir launch failure is historical evidence only; it does not validate softballfield, current costumes, or this final manifest."
+  },
+  "canonicalFidelity": "Café references qualified; Meta Runner crossover bodies, roles and poses are original game designs. No 1:1 or complete animation certification.",
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+  }
+}

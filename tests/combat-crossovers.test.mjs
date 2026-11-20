@@ -59,7 +59,7 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
   }
 });
 
-test('partial NPC coverage appends three real Ribbit outfits and preserves all 468 historical wardrobe entries', () => {
+test('the published Murder Drones Ribbit group retains its historical positions and all 468 earlier wardrobe entries', () => {
   const baselineBytes = readFileSync(new URL('../docs/art-generation/npc-crossovers-next-wave-20261120/integration-baseline.json', import.meta.url));
   const sha = value => createHash('sha256').update(value).digest('hex');
   assert.equal(sha(baselineBytes), '1bea46363a8b121b71db75eb2da67f21b7db55254bc85eda5d242bb15e23acbf');
@@ -68,12 +68,12 @@ test('partial NPC coverage appends three real Ribbit outfits and preserves all 4
   assert.equal(sha(JSON.stringify(COSTUMES.slice(0, 468))), baseline.costumesSHA256);
   assert.deepEqual(CROSSOVER_COSTUMES.slice(0, 378).map(item => item.id), baseline.crossoverIds);
   assert.deepEqual(createCrossoverCostumes(FIGHTERS), CROSSOVER_COSTUMES);
-  assert.equal(NPC_CROSSOVER_DEFINITIONS.length, 3);
   const ids = ['hommage','resident','fusion'].map(style => 'glitch-murderdrones-ribbit-' + style);
-  assert.deepEqual(CROSSOVER_COSTUMES.slice(378).map(item => item.id), ids);
-  assert.deepEqual(COSTUMES.slice(-3).map(item => item.id), ids);
+  assert.deepEqual(NPC_CROSSOVER_DEFINITIONS.slice(0, 3).map(item => item.id), ids);
+  assert.deepEqual(CROSSOVER_COSTUMES.slice(378, 381).map(item => item.id), ids);
+  assert.deepEqual(COSTUMES.slice(469, 472).map(item => item.id), ids);
   const owner = FIGHTERS.find(item => item.id === 'ribbit');
-  for (const costume of CROSSOVER_COSTUMES.slice(378)) {
+  for (const costume of CROSSOVER_COSTUMES.slice(378, 381)) {
     assert.equal(costume.fighterId, 'ribbit');
     assert.equal(costume.crossover.series, 'murderdrones');
     assert.equal(costume.canonicalCostumeClaim, false);
@@ -85,7 +85,8 @@ test('partial NPC coverage appends three real Ribbit outfits and preserves all 4
     assert.deepEqual(equipped.visual, owner.visual);
   }
   for (const series of CROSSOVER_SERIES.filter(item => item.id !== 'murderdrones')) {
-    assert.deepEqual(crossoverStylesFor(series.id, 'ribbit'), []);
+    const reviewed = NPC_CROSSOVER_DEFINITIONS.filter(item => item.fighterId === 'ribbit' && item.series === series.id);
+    assert.deepEqual(crossoverStylesFor(series.id, 'ribbit').sort(), reviewed.map(item => item.style).sort());
   }
 });
 

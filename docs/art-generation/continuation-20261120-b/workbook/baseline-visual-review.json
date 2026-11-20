@@ -1,0 +1,71 @@
+{
+  "schema": "encore-workbook-baseline-visual-review/v1",
+  "createdAt": "2026-11-20T16:48:25.576606+00:00",
+  "status": "accepted_as_baseline",
+  "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+  "method": "Reused unchanged PNGs from the accepted final review of this exact installed XLSX. All six were actually inspected during that prior review; no fresh rendering or fresh visual inspection is claimed here. They remain available for side-by-side comparison during the new final review.",
+  "previousVisualReview": {
+    "file": "docs/art-generation/workbook-next-wave-20261120/visual-review.json",
+    "sha256": "2e4c81ee4bf01d20be9aff991fd9c44bdeae513301dfc5539f77c1cc86cdc17f"
+  },
+  "previousIndependentReview": {
+    "file": "docs/art-generation/workbook-next-wave-20261120/independent-visual-review.json",
+    "sha256": "1a8b4e319fb142f2d6936b757b1407ab64252a14767f8dff00422ee965e7ac54"
+  },
+  "views": [
+    {
+      "file": "baseline-summary.png",
+      "sha256": "584fbfa60a809ddf178e4276e3d91315d03029a87edf73749a65e05cef9a88ce",
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "originalFile": "docs/art-generation/workbook-next-wave-20261120/summary-top.png",
+      "previouslyInspected": true,
+      "newRenderClaimed": false
+    },
+    {
+      "file": "baseline-stage-left.png",
+      "sha256": "81192dda48df7dfdae494422429be41199edc7d20fc26f2f1dd00ec27682f6e1",
+      "sheet": "Arènes",
+      "range": "A29:L29",
+      "originalFile": "docs/art-generation/workbook-next-wave-20261120/stage-left.png",
+      "previouslyInspected": true,
+      "newRenderClaimed": false
+    },
+    {
+      "file": "baseline-stage-right.png",
+      "sha256": "2ead00f36514389d972e2d6b0b392691dea503765ae5f455e6403cab7ecd926e",
+      "sheet": "Arènes",
+      "range": "M29:T29",
+      "originalFile": "docs/art-generation/workbook-next-wave-20261120/stage-right.png",
+      "previouslyInspected": true,
+      "newRenderClaimed": false
+    },
+    {
+      "file": "baseline-production.png",
+      "sha256": "1ac463820ea479f25fe6c4628de17715f535ff1fcc235b30eb315e1a1e011ba9",
+      "sheet": "Production",
+      "range": "A3194:J3197",
+      "originalFile": "docs/art-generation/workbook-next-wave-20261120/production-1.png",
+      "previouslyInspected": true,
+      "newRenderClaimed": false
+    },
+    {
+      "file": "baseline-qa.png",
+      "sha256": "a6b9733d6ae93eeb621ca9cc17b4febd4a05087c08f50391e8c820466b36c9d2",
+      "sheet": "QA",
+      "range": "A2393:I2394",
+      "originalFile": "docs/art-generation/workbook-next-wave-20261120/qa-14.png",
+      "previouslyInspected": true,
+      "newRenderClaimed": false
+    },
+    {
+      "file": "baseline-references.png",
+      "sha256": "115a22851dccd4ab2be3c1406d3b3c7def627bd95b1b5cb0ed863c94c8e2b5a0",
+      "sheet": "Références",
+      "range": "A163:E173",
+      "originalFile": "docs/art-generation/workbook-next-wave-20261120/references-footer.png",
+      "previouslyInspected": true,
+      "newRenderClaimed": false
+    }
+  ]
+}

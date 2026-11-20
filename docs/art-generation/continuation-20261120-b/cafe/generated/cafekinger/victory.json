@@ -1,0 +1,90 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "victory",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE original full-body victory action sprite for the existing Digital Circus Encore game.\n\nReference image 1 is the accepted cafekinger selection: lock its identity, proportions, line weight, cel shading, costume construction and colors. Reference image 2 is the official Animate Cafe illustration detail: preserve its distinctive outfit. Make a genuinely new victory pose, not a flipped or mechanically moved copy. Only one character.\n\nKinger remains a beige cross-topped chess king with two blue eyes, clear silver monocle and chain, purple tailcoat with pale lavender piping and tails, gray-lilac diamond waistcoat with dark buttons, white collar, black tie and blue-centered flower ornament. One purple tapering chess-piece body ends in a complete navy circular plinth with a thin pale rim. EXACTLY TWO disconnected white gloves float beside him. No human arms, sleeves connecting gloves, legs, shoes, feet, knees, royal fur or new accessories. Keep the hands separate from the body through real transparency.\n\nPOSE: Victory gesture: Kinger stands proudly upright facing screen-right, one floating open white glove raised beside the cross and the other floating over the chest. Blue eyes bright, monocle still in place. Keep the complete body and both gloves entirely in frame. No trophy, stars or symbols.\n\nNative orientation is SCREEN-RIGHT. Keep all visible costume asymmetry consistent with the selection. Crisp dark contours and restrained flat two-tone cel shading, same polished 2D game family. Center the complete silhouette with generous transparent space around every extremity; use a wider composition if needed so nothing touches the edges. Native transparent RGBA. No scenery, floor, cast shadow, halo, bloom, sticker outline, motion streaks, text, logo, watermark, duplicate figure or additional limbs. Preserve all original image pixels in the delivered native result; no painted checkerboard or solid background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  },
+  "schema": "encore-native-continuation-b-cafe-art/v1",
+  "id": "cafekinger:victory",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.png",
+  "targetFile": "assets/encore/poses/cafekinger/victory.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e32391eb-6ae3-4867-833e-aa84700b95a0.png",
+  "sourceGenerationId": "exec-e32391eb-6ae3-4867-833e-aa84700b95a0",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "bytes": 1354158
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png",
+      "sha256": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60",
+      "bytes": 123785
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    252,
+    24,
+    828,
+    1511
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1188823,
+  "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+  "bytes": 1346080,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:09:48.299148+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Victoire droite avec un gant levé et l'autre devant le cœur, sans raccord de bras ; les deux yeux regardent vers la droite.",
+      "Toute la pièce d'échecs et sa base sont visibles ; monocle, chaîne, fleur, gilet et parements de queue-de-pie conservés.",
+      "Les couleurs diffuses du RGB brut sont invisibles après composition alpha ; contours de la silhouette propres sur clair et sombre.",
+      "Inspection du PNG natif et de sa composition alpha sur fonds clair et sombre ; silhouette entière, contours propres, alpha natif conservé sans retouche. Orientation écran droit.",
+      "Bornes alpha > 12 [252,24,828,1511] internes à 1024 × 1536. Le RGB caché sous alpha nul n’a pas été modifié. Adaptation statique de jeu ; aucune certification d’épisode ou d’animation complète."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T17:17:56.268791+00:00",
+    "targetFile": "assets/encore/poses/cafekinger/victory.png",
+    "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}
