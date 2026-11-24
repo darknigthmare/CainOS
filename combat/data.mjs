@@ -7,7 +7,7 @@ import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
 import { EXPANSION_DEFS, buildExpansionKit, expansionFighterConfig } from './roster-expansion.mjs';
-import { ABSTRACTION_DEFS, ABSTRACTION_CALM_ID, ABSTRACTION_ORIGINAL_ARCHIVE, abstractionSprite, buildAbstractionKit } from './abstractions-content.mjs';
+import { ABSTRACTION_DEFS, ABSTRACTION_CALM_ID, ABSTRACTION_CALM_VISUAL, ABSTRACTION_ORIGINAL_ARCHIVE, abstractionSprite, buildAbstractionKit } from './abstractions-content.mjs';
 
 /**
  * Digital Circus — Encore content.
@@ -416,7 +416,7 @@ export const ROSTER_ARCHIVE = [...SPRITE_CATALOG, ...ABSTRACTION_ORIGINAL_ARCHIV
   const classification = classifyArchiveEntry(entry.id);
   const override = Object.hasOwn(COSTUME_SPRITE_OVERRIDES, entry.id) ? COSTUME_SPRITE_OVERRIDES[entry.id] : null;
   const sprite = { ...entry.sprite, ...override, ...(entry.id === 'gloinkqueenscale' ? { component: 'largest', nativeFacing: -1 } : {}) };
-  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId, ...(classification.category === 'variant' ? { fidelity: getCostumeFidelity(entry.id) } : {}) };
+  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId, ...(classification.category === 'variant' ? { fidelity: getCostumeFidelity(entry.id) } : {}), ...(entry.id === ABSTRACTION_CALM_ID ? { visual: ABSTRACTION_CALM_VISUAL } : {}) };
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 const archiveVariants = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);

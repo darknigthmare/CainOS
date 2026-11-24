@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { COSTUMES, FIGHTERS, VARIANTS } from '../combat/data.mjs';
 import { createLegacyCrossoverCostumes } from '../combat/crossovers.mjs';
 import { COSTUME_EXTENSION_ORDER, orderCostumeExtensions } from '../combat/costume-order.mjs';
+import { ABSTRACTION_CALM_ID } from '../combat/abstractions-content.mjs';
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const captured = readFileSync(new URL('../docs/art-generation/continuation-20261120-b/workbook/costume-prefix-baseline.json', import.meta.url));
@@ -18,10 +19,14 @@ test('the complete 472-costume prefix keeps its published IDs, order and fields'
   assert.deepEqual(COSTUME_EXTENSION_ORDER.slice(0, baseline.publishedExtensionIds.length), baseline.publishedExtensionIds);
 });
 
-test('explicit addition order appends successive mixed Circus and NPC batches without shifting published records', () => {
-  const fixedCount = VARIANTS.length + createLegacyCrossoverCostumes(FIGHTERS).length;
+test('explicit addition order appends mixed batches after all published records, including calm Queenie', () => {
+  // The calm appearance was appended after the published Circus/NPC families;
+  // it is not part of the historical archive prefix preceding those families.
+  const fixedCount = VARIANTS.filter(variant => variant.id !== ABSTRACTION_CALM_ID).length + createLegacyCrossoverCostumes(FIGHTERS).length;
   let published = COSTUMES;
-  let order = [...COSTUME_EXTENSION_ORDER];
+  let order = [...COSTUME_EXTENSION_ORDER, ABSTRACTION_CALM_ID];
+  assert.equal(published.at(-1).id, ABSTRACTION_CALM_ID);
+  assert.deepEqual(published.slice(fixedCount).map(costume => costume.id), order);
   for (const wave of [1, 2]) {
     const existing = published.slice(fixedCount);
     const circus = existing.filter(costume => !costume.crossover);

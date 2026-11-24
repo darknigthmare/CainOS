@@ -179,14 +179,17 @@ if(args.includes('--aquatic-origin')) {
     const actor=engine.state.a,spawnX=actor.x+direction*projectile.def.projectileOrigin[direction].forward,margin=direction*(spawnX-headBoundX);
     assert.ok(margin>0,'unadvanced projectile centre ahead of the full visible head bounds');
     assert.equal(Math.sign(a),direction);assert.ok(Math.abs(Math.hypot(a,b)-Math.hypot(c,d))<1e-8);
-    assert.ok(Math.abs(Math.hypot(c,d)*bounds.height-200)<1e-6);
+    // Native Skia matrices use float32 components; permit less than 0.0001 px.
+    const renderedHeight = Math.hypot(c,d)*bounds.height, heightTolerance = 1e-4;
+    assert.ok(Math.abs(renderedHeight-200)<heightTolerance, JSON.stringify({ renderedHeight, bounds, matrix: {a,b,c,d,e,f} }));
     const body=getHurtbox(actor);assert.deepEqual([body.w,body.h],[195,200]);
     const file='aquatic-origin-'+(direction===1?'right':'left')+'.jpg';
     await fs.writeFile(path.join(output,file),canvas.toBuffer('image/jpeg',91));report.outputImages.push(file);
     report.aquaticOrigins.push({direction,file,exactSource:true,uniformScale:true,authoredAnchorX:aquatic.visual.anchorX,
-      visibleHeight:200,simulationBody:body,nativeStanceWidth:bounds.width*200/bounds.height,headBoundX,spawnX,spawnMargin:margin,
+      visibleHeight:renderedHeight,requestedVisibleHeight:200,heightTolerance,simulationBody:body,nativeStanceWidth:bounds.width*200/bounds.height,headBoundX,spawnX,spawnMargin:margin,
       firstFrameProjectileX:projectile.x,projectileMove:projectile.def.name,projectileArt:projectileArtSpec(projectile,actor)?.id,
       matrix:{a,b,c,d,e,f},simulationUnchangedByRendering:true,
+      drawnPose:'stance',poseSelection:'Projectile slots retain intact standing art; illustratedAction selects attack/heavy drawings only for normal strikes.',
       decorativeScope:'Trailing tendrils remain decorative outside the new 195 × 200 collision body.'});
   }
 }

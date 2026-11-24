@@ -1,7 +1,7 @@
 import { projectileArtSpec, ProjectileArtLoader } from './projectile-art.mjs';
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
-import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, illustratedHeightRatio, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
 import { actionIllustration, loadFighterIllustration, standingIllustration } from './illustrations.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
 import { drawStageScenery } from './render-stage-scenery.mjs';
@@ -886,9 +886,12 @@ export class CombatRenderer {
     const articulated = !artwork && pose.low ? crouchParts(f, frame) : null;
     // Each authored file is tightly framed. Give compressed poses their reduced
     // stage height instead of growing a kneeling performer back to standing size.
-    const heightRatio = actionArt && (action === 'crouch' || action === 'defeat') ? 0.74 : 1;
+    // Calibrate only the resolved drawing; a missing pose keeps the stance size.
+    const heightRatio = actionArt ? illustratedHeightRatio(f, action) : 1;
     const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face, heightRatio);
-    const shownHeight = height * heightRatio - (articulated?.drop || 0) * geometry.scale;
+    const limitedIllustration = Number.isFinite(f.visual?.maxIllustratedWidth) && f.visual.maxIllustratedWidth > 0;
+    const shownHeight = (limitedIllustration ? frame.bounds.height * geometry.scale : height * heightRatio)
+      - (articulated?.drop || 0) * geometry.scale;
     const attack = actor.attack, active = pose.state === 'attack-active';
     const windup = pose.state === 'attack-windup';
     if (actor.buffs?.power || actor.buffs?.armor) glow(ctx, x, y - height * 0.52, height * 0.72, f.color || '#bd9cd6', 0.18);

@@ -81,7 +81,7 @@ const report = { schema: 'encore-character-canvas-review/v1', createdAt: new Dat
     'Individual static poses do not establish frame-by-frame animation.',
     'Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification.'],
   partial, additionsOnly, crossoversOnly, introducedOn, appearanceId, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
-for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/costume-discoveries-20261120.mjs','combat/costume-ribbit-20261120.mjs','combat/costume-next-missing-20261120.mjs','combat/costume-next-wave-20261120.mjs','combat/costume-order.mjs','combat/costume-continuation-20261120-b.mjs','combat/costume-continuation-20261120-c.mjs','combat/crossovers.mjs','combat/crossover-npc-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
+for (const file of ['combat/data.mjs','combat/abstractions-content.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/costume-discoveries-20261120.mjs','combat/costume-ribbit-20261120.mjs','combat/costume-next-missing-20261120.mjs','combat/costume-next-wave-20261120.mjs','combat/costume-order.mjs','combat/costume-continuation-20261120-b.mjs','combat/costume-continuation-20261120-c.mjs','combat/crossovers.mjs','combat/crossover-npc-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
   report.sources[file] = sha(await fs.readFile(path.join(repo, file)));
 }
 function background(ctx, width, height) {
@@ -107,13 +107,29 @@ const arena = createCanvas(1280, 720), renderer = new CombatRenderer(arena), ctx
 let sampled = [];
 const draw = ctx.drawImage.bind(ctx);
 ctx.drawImage = (source, ...rest) => { sampled.push({ source, matrix: ctx.getTransform() }); return draw(source, ...rest); };
+function expectedSize(f, frame, height) {
+  const limit = f.visual?.maxIllustratedWidth;
+  const scale = Number.isFinite(limit) && limit > 0
+    ? Math.min(height / frame.bounds.height, limit / frame.bounds.width)
+    : height / frame.bounds.height;
+  return { width: frame.bounds.width * scale, height: frame.bounds.height * scale };
+}
+function worldBounds(frame, matrix) {
+  const { x, y, width, height } = frame.bounds;
+  const points = [[x,y],[x+width,y],[x,y+height],[x+width,y+height]].map(([x,y]) => ({
+    x: matrix.a*x+matrix.c*y+matrix.e, y: matrix.b*x+matrix.d*y+matrix.f,
+  }));
+  return { left: Math.min(...points.map(p=>p.x)), right: Math.max(...points.map(p=>p.x)), bottom: Math.max(...points.map(p=>p.y)) };
+}
 for (const { id, f } of appearances) {
+  globalThis.gc?.();
   const stanceFile = sourceForAppearance('stance', id, f);
   if (!stanceFile) report.missing.push(id + '/stance');
   else {
     const stance = await loadFighterIllustration('stance', f);
     assert.ok(stance?.canvas, id + ': authored stance must decode');
     assert.equal(decodedSources.get(stance.canvas), path.resolve(repo, stanceFile), id + ': exact stance source');
+    const drawChecks = [];
     for (const face of [1, -1]) {
       sampled = []; ctx.clearRect(0, 0, arena.width, arena.height);
       renderer.drawActor({ f, slot: 0, state: 'idle', x: 640, y: 568, face, onGround: true }, 0, true, { phase: 'fight' });
@@ -123,10 +139,14 @@ for (const { id, f } of appearances) {
       assert.ok([-1, 1].includes(stance.nativeFacing), id + ': known source direction');
       assert.equal(Math.sign(a), face * stance.nativeFacing, id + ': stance facing');
       assert.ok(Math.abs(Math.hypot(a, b) - Math.hypot(c, d)) < 0.0001, id + ': uniform stance scale');
+      const dimensions = expectedSize(f, stance, f.visual?.height || f.combat?.simulationBody?.height || 230);
+      assert.ok(Math.abs(Math.hypot(c,d)*stance.bounds.height-dimensions.height)<.01, id+': visible stance height');
+      drawChecks.push({face,sourceVerified:true,uniformScale:true,visibleWidth:Math.hypot(a,b)*stance.bounds.width,
+        visibleHeight:Math.hypot(c,d)*stance.bounds.height,matrix:{a,b,c,d,e:emitted.matrix.e,f:emitted.matrix.f}});
     }
     const bytes = await fs.readFile(path.join(repo, stanceFile));
     report.stances.push({ id, file: stanceFile, sha256: sha(bytes), bytes: bytes.length, nativeFacing: stance.nativeFacing,
-      rendered: true, sourceVerified: true, bothFacings: true });
+      rendered: true, sourceVerified: true, bothFacings: true, drawChecks });
   }
   const sheet = createCanvas(1080, 1110), sc = sheet.getContext('2d');
   background(sc, sheet.width, sheet.height);
@@ -147,38 +167,53 @@ for (const { id, f } of appearances) {
       const slot = pose === 'heavy' ? 'heavy' : 'light';
       actor.attack = { name: slot, def: f.moves[slot], t: f.moves[slot].startup };
     }
+    const drawChecks = [];
     for (const face of [1, -1]) {
       actor.face = face; sampled = []; ctx.clearRect(0, 0, 1280, 720);
+      const before = JSON.stringify(actor);
       renderer.drawActor(actor, 0, true, { phase, winner: pose === 'defeat' ? 1 : 0 });
+      assert.equal(JSON.stringify(actor), before, id+'/'+pose+': presentation preserves actor');
       const emitted = sampled.find(row => row.source === expected.canvas);
       assert.ok(emitted, id + '/' + pose + ': renderer must use the authored drawing');
       const { a, b, c, d } = emitted.matrix;
       assert.ok([-1, 1].includes(expected.nativeFacing), id + '/' + pose + ': known source direction');
       assert.equal(Math.sign(a), face * expected.nativeFacing, id + '/' + pose + ': facing');
       assert.ok(Math.abs(Math.hypot(a, b) - Math.hypot(c, d)) < 0.0001, 'uniform scale');
-      const height = (f.visual?.height || f.combat?.simulationBody?.height || 230) * (['crouch','defeat'].includes(pose) ? 0.74 : 1);
-      assert.ok(Math.abs(Math.hypot(c, d) * expected.bounds.height - height) < 0.01, id + '/' + pose + ': visible height');
+      const configuredFactor = f.visual?.poseHeightFactors?.[sourcePose];
+      const poseHeightFactor = Number.isFinite(configuredFactor) && configuredFactor > 0 ? configuredFactor : 1;
+      const height = (f.visual?.height || f.combat?.simulationBody?.height || 230) * (['crouch','defeat'].includes(pose) ? 0.74 : 1) * poseHeightFactor;
+      const dimensions = expectedSize(f, expected, height);
+      assert.ok(Math.abs(Math.hypot(c, d) * expected.bounds.height - dimensions.height) < 0.01, id + '/' + pose + ': visible height');
+      drawChecks.push({face,sourceVerified:true,uniformScale:true,visibleWidth:Math.hypot(a,b)*expected.bounds.width,
+        visibleHeight:Math.hypot(c,d)*expected.bounds.height,maxIllustratedWidth:f.visual?.maxIllustratedWidth??null,poseHeightFactor,
+        matrix:{a,b,c,d,e:emitted.matrix.e,f:emitted.matrix.f}});
       if (face === 1) {
         // Centered production crop; the right/left facing assertions above use
         // the entire unscaled arena. The sheet is only a visual review aid.
         const x = index % 3 * 360, y = Math.floor(index / 3) * 350 + 52;
-        const visibleWidth = expected.bounds.width * height / expected.bounds.height;
-        const scale = Math.min(1, 300 / Math.max(1, height), 336 / (visibleWidth + 30));
+        const bounds = worldBounds(expected, emitted.matrix);
+        const scale = Math.min(1, 300 / Math.max(1, dimensions.height), 336 / (dimensions.width + 30));
         sc.save(); sc.beginPath(); sc.rect(x + 2, y + 28, 356, 312); sc.clip();
-        sc.translate(x + 180 - 640 * scale, y + 330 - 568 * scale);
-        sc.scale(scale, scale); sc.drawImage(arena, 0, 0); sc.restore();
+        sc.translate(x + 180 - (bounds.left+bounds.right)/2 * scale, y + 330 - bounds.bottom * scale);
+        sc.scale(scale, scale);
+        // Draw into the sheet directly: native Skia can defer a reused arena
+        // copy until a later pose, silently repeating that later image.
+        const previousContext = renderer.ctx;
+        try { renderer.ctx = sc; renderer.drawActor(actor, 0, true, { phase, winner: pose === 'defeat' ? 1 : 0 }); }
+        finally { renderer.ctx = previousContext; sc.restore(); }
         sc.fillStyle = '#f1e7d1'; sc.font = '16px sans-serif'; sc.fillText(pose, x + 12, y + 20);
       }
     }
     const bytes = await fs.readFile(path.join(repo, file));
     report.actions.push({ id, pose, sourcePose, file, sha256: sha(bytes), bytes: bytes.length,
-      visibleBounds: expected.bounds, nativeFacing: expected.nativeFacing, sourceVerified: true, bothFacings: true, uniformScale: true, rendered: true });
+      visibleBounds: expected.bounds, nativeFacing: expected.nativeFacing, sourceVerified: true, bothFacings: true, uniformScale: true, rendered: true, drawChecks });
     checked++;
   }
   if (checked) {
     const filename = `actions-${id}.jpg`;
     await fs.writeFile(path.join(output, filename), sheet.toBuffer('image/jpeg', 88)); report.sheets.push(filename);
   }
+  sheet.width = 1; sheet.height = 1;
 }
 
 const portraits = crossoversOnly ? appearances.map(item => ({ ...item.f, id: item.id, archiveId: null })) : (additionsOnly ? [] : ARCHIVE).flatMap(item => {
@@ -218,6 +253,7 @@ for (let offset = 0; offset < portraits.length; offset += 24) {
   }
   const filename = `archive-portraits-${String(offset / 24 + 1).padStart(2, '0')}.jpg`;
   await fs.writeFile(path.join(output, filename), sheet.toBuffer('image/jpeg', 88)); report.sheets.push(filename);
+  sheet.width = 1; sheet.height = 1;
 }
 report.counts = { appearances: appearances.length, expectedActions: appearances.length * poses.length,
   actions: report.actions.length, stances: report.stances.length, drawChecks: (report.actions.length + report.stances.length) * 2, archiveEntries: additionsOnly || crossoversOnly ? 0 : ARCHIVE.length,

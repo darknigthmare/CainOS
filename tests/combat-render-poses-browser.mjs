@@ -81,7 +81,9 @@ try {
           const name = f.id === 'abstractedkaufmo' ? 'Kaufmo' : f.id === 'baronmildenhall' ? 'Baron' : f.name;
           context.fillStyle = '#e5eaf5'; context.font = '15px system-ui'; context.textAlign = 'center'; context.fillText(`${name} · ${caption}`, left + 110, top + 23);
           const idle = getFrame(f, 'idle', 0), baseScale = (f.visual.height || 230) / idle.bounds.height;
-          const scale = Math.min(0.82, 180 / (idle.bounds.width * baseScale), (height - 60) / f.visual.height);
+          const maxPoseFactor = Math.max(1, ...Object.values(f.visual?.poseHeightFactors || {}).filter(value => Number.isFinite(value) && value > 0));
+          const illustratedWidth = f.visual?.maxIllustratedWidth || idle.bounds.width * baseScale;
+          const scale = Math.min(0.82, 180 / illustratedWidth, (height - 60) / (f.visual.height * maxPoseFactor));
           context.save(); context.beginPath(); context.rect(left + 3, top + 30, 214, height - 34); context.clip();
           context.translate(left + 110 - 640 * scale, ground - 568 * scale); context.scale(scale, scale);
           renderer.drawActor(actor(f, extra), options.frame ?? 0, options.reducedMotion ?? true, options);

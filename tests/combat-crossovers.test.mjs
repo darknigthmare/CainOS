@@ -24,7 +24,7 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
     assert.deepEqual(Object.keys(roster).sort(), illustrated.map(fighter => fighter.id).sort());
     assert.equal(new Set(Object.values(roster)).size, illustrated.length);
   }
-  assert.equal(new Set(COSTUMES.map(item => item.id)).size, 303 + fusions + COSTUME_ADDITIONS.length + NPC_CROSSOVER_DEFINITIONS.length);
+  assert.equal(new Set(COSTUMES.map(item => item.id)).size, VARIANTS.length + 252 + fusions + COSTUME_ADDITIONS.length + NPC_CROSSOVER_DEFINITIONS.length);
   assert.equal(VARIANTS.length, 52);
   assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions + NPC_CROSSOVER_DEFINITIONS.length);
   for (const fighter of illustrated) {

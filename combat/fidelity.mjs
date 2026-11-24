@@ -621,7 +621,7 @@ export const MOVE_FIDELITY = freeze({
     ...abstractionFidelity(def),
     combatAdaptation: 'Technique ' + slot + ' propre à ' + def.name + '. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.',
     reviewStatus: 'Adaptation de combat',
-    reviewScope: 'Les sources et le classement décrivent l’identité de la silhouette, sans attester un geste de combat. Les formes originales restent des créations du fan-game.',
+    reviewScope: 'Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game.',
   }]))),
   ...Object.fromEntries(Object.entries(moveAdaptations).flatMap(([fighterId, descriptions]) => slots.map((slot, i) => {
     const parent = FIGHTER_FIDELITY[fighterId];

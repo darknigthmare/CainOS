@@ -1,9 +1,10 @@
-/** UI regression for the merged 54-fighter roster and illustrated wardrobe. */
+/** UI regression for the merged 64-fighter roster and illustrated wardrobe. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { emptyProfile, SAVE_KEY } from '../combat/session.mjs';
+import { FIGHTERS } from '../combat/data.mjs';
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -36,16 +37,18 @@ async function pageFor(entry = '/combat/', fixture = null) {
 }
 async function select(page, mode, fighter) {
   await page.locator(`.mode-card[data-mode="${mode}"]`).click();
-  assert.equal(await page.locator('.roster [data-fighter]').count(), 54);
+  assert.equal(await page.locator('.roster [data-fighter]').count(), FIGHTERS.length);
+  assert.deepEqual(await page.locator('.roster [data-fighter]').evaluateAll(items => items.map(item => item.dataset.fighter)), FIGHTERS.map(item => item.id));
   await page.locator(`[data-fighter="${fighter}"]`).click();
 }
 try {
+  assert.equal(FIGHTERS.length, 64);
   const page = await pageFor();
   await select(page, 'local', 'queenie');
   assert.deepEqual(await page.locator('#variant-0 option').evaluateAll(items => items.map(item => item.value)), ['', 'abstractingqueenie']);
   await page.locator('[data-stage="home-queenie"]').click();
   assert.equal(await page.locator('[data-stage="home-queenie"]').getAttribute('aria-pressed'), 'true');
-  pass('54 fighters are selectable; Queenie offers her illustrated appearance without nonexistent crossover choices');
+  pass('64 fighters are selectable; Queenie offers her illustrated appearance without nonexistent crossover choices');
   await page.locator('[data-fighter="pomni"]').click();
   const picker = page.locator('[data-costume-picker="variant-0"]');
   await picker.locator('summary').click();

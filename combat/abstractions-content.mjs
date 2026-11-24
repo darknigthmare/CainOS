@@ -13,6 +13,22 @@ const freeze = value => {
 export const ABSTRACTION_ART_SLOTS = freeze([
   'selection', 'stance', 'intro', 'attack', 'heavy', 'hit', 'walk', 'jump', 'crouch', 'victory', 'defeat',
 ]);
+// Measured on the 2026-11-24 native standing drawings, with room for gestures.
+// Aquatic keeps its trailing tendrils inside the initial ring framing. Calm
+// Queenie uses her long body's standing height when it bends horizontally.
+// These limits affect uniform drawing scale only, never collision or moves.
+export const ABSTRACTION_ILLUSTRATED_WIDTHS = freeze({
+  cellarabstraction: 290, aquaticabstraction: 480, abstractedjax: 420,
+  abstractedqueenie: 355, abstractedribbit: 300, abstractedqueeniedark: 315,
+  originalabstractedpomni: 530, originalabstractedragatha: 395,
+  originalabstractedgangle: 325, originalabstractedkinger: 390, originalabstractedzooble: 400,
+});
+// Native pupil/button measurements keep anatomical scale when arms rise.
+// These five authored drawings alone request extra height before width limiting.
+export const ABSTRACTION_POSE_HEIGHT_FACTORS = freeze({
+  originalabstractedpomni: { intro: 1.45, hit: 1.40, victory: 1.55, heavy: 1.40 },
+  originalabstractedragatha: { heavy: 1.35 },
+});
 export const ABSTRACTION_SOURCES = freeze([{
   id: 'store-jax-abstraction-identity',
   title: 'GLITCH Store — Pomni & Abstraction Magnetic Plush Keychains',
@@ -24,7 +40,9 @@ export const ABSTRACTION_SOURCES = freeze([{
 const def = (id, name, title, role, color, sourceKind, sourceIds, rivalId, width, height, power, speed, reach, signature, labels, story, visual = {}) => ({
   id, name, title, role, color, sourceKind, sourceIds, rivalId, width, height,
   crouchHeight: Math.round(height * (role === 'Colosse' ? .65 : .56)),
-  power, speed, reach, signature, labels, story, visual,
+  power, speed, reach, signature, labels, story,
+  visual: { maxIllustratedWidth: ABSTRACTION_ILLUSTRATED_WIDTHS[id],
+    ...(ABSTRACTION_POSE_HEIGHT_FACTORS[id] ? { poseHeightFactors: ABSTRACTION_POSE_HEIGHT_FACTORS[id] } : {}), ...visual },
   sourceId: sourceIds.find(id => /^ep\d$/.test(id)) || 'adaptation',
   homeStage: sourceKind === 'original-encore' ? 'memoryfracture' : 'abstractionthreshold',
 });
@@ -64,6 +82,7 @@ export const ABSTRACTION_DEFS = freeze([
 export const ABSTRACTION_IDS = freeze(ABSTRACTION_DEFS.map(item => item.id));
 export const ABSTRACTION_RIVALS = freeze(Object.fromEntries(ABSTRACTION_DEFS.map(item => [item.id, item.rivalId])));
 export const ABSTRACTION_CALM_ID = 'abstractedqueeniedark';
+export const ABSTRACTION_CALM_VISUAL = freeze({ maxIllustratedWidth: ABSTRACTION_ILLUSTRATED_WIDTHS[ABSTRACTION_CALM_ID] });
 export const ABSTRACTION_APPEARANCE_IDS = freeze([...ABSTRACTION_IDS.slice(0, 5), ABSTRACTION_CALM_ID, ...ABSTRACTION_IDS.slice(5)]);
 
 export function abstractionSprite(id) {
@@ -158,17 +177,19 @@ export const ABSTRACTION_CALM_FIDELITY = freeze({
   reviewStatus: 'Identité officielle — comparaison visuelle ouverte',
   reviewScope: 'État d’archive attribué à Queenie dans l’obscurité. Le dessin de jeu et ses nouvelles poses demandent encore une comparaison visuelle aux plans de l’épisode 3 ; aucune réversion ni fidélité 1:1 certifiée.',
   assetReview: {
-    status: 'Revue technique à reprendre après restauration — 24 novembre 2026',
+    status: 'Revue technique partielle — images restaurées le 24 novembre 2026',
     visibleTraits: [
-      'La fiche historique décrit une silhouette noire fuselée et des yeux colorés. Les images de remplacement doivent être inspectées avant de reconduire ces observations.',
+      'Silhouette noire fuselée et facettée, sans membres humains ajoutés ; les poses replient ou inclinent cette même masse.',
+      'Cinq yeux à pupilles verticales sont conservés dans l’ordre violet, cyan, jaune, rouge et blanc ; leurs ouvertures changent entre l’impact et les autres poses.',
+      'Les facettes gardent des reflets cyan, violets et jaunes. Les dix nouveaux dessins comportent des lueurs périphériques douces dans leur alpha natif.',
     ],
-    identityEvidence: 'L’entrée historique abstractedqueeniedark appartient au même combattant que Queenie abstraite. La conservation des octets du portrait doit être contrôlée lors de la restauration des PNG ; cette attribution ne vaut pas comparaison canonique.',
-    framing: 'Cadres et marges des nouvelles poses à mesurer après réception des PNG natifs. Les mesures du jeu de fichiers perdu restent une preuve historique distincte.',
-    transparency: 'Le contrat de rendu exige l’alpha natif des PNG. La transparence des fichiers restaurés doit être vérifiée sans recoloration ni détourage automatique.',
-    proportions: 'Le costume conserve le corps de simulation 180 × 285 pixels et les mêmes techniques que Queenie abstraite. Les nouveaux dessins seront affichés sans déformation ; leurs proportions restent à comparer aux références primaires.',
+    identityEvidence: 'Le portrait de sélection est identique octet pour octet à assets/encore/selection/abstractedqueeniedark.png. Les dix autres PNG sont distincts. Cette entrée reste une apparence de Queenie abstraite ; la continuité du dessin de jeu ne valide pas la comparaison canonique.',
+    framing: 'Les onze PNG ont des marges visibles positives au seuil alpha > 12. La plus petite marge mesure 13 pixels, sous la pose d’introduction ; aucune silhouette n’atteint le bord à ce seuil. Mesures et empreintes : docs/art-generation/abstractions-20261124/calm-asset-review.json.',
+    transparency: 'Onze PNG RGBA à alpha natif, avec 54,17 % à 73,72 % de pixels entièrement transparents selon l’état. Les lueurs périphériques appartiennent aux images reçues ; aucun détourage, fond opaque ajouté, recoloriage ni réencodage des fichiers.',
+    proportions: 'Le costume conserve le corps de simulation 180 × 285 pixels, son volume accroupi et les mêmes dix techniques que Queenie abstraite. Le rendu conserve le rapport largeur/hauteur de chaque dessin. Les courbures des nouvelles poses sont des gestes originaux ; leurs proportions restent à comparer aux plans primaires.',
     issues: [
-      'Reprendre la revue du portrait, de la garde et des neuf actions après restauration des fichiers.',
       'Comparer la forme, les couleurs et la disposition des yeux à des plans officiels identifiés de Queenie dans l’obscurité.',
+      'Les courbures, les reflets et les gestes des dix poses nouvelles sont des adaptations du portrait de jeu, sans validation image par image de la série.',
       'Les onze repères restent des images statiques ; les cycles de dessin animés complets restent à produire.',
     ],
   },

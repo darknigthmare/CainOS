@@ -89,7 +89,7 @@ test('calm Queenie is one costume of abstracted Queenie with unchanged rules and
   assert.equal(VARIANTS.at(-1).baseFighterId, fighter.id);
   assert.equal(calm.id, fighter.id); assert.equal(calm.costume, ABSTRACTION_CALM_ID);
   assert.equal(calm.combat, fighter.combat); assert.equal(calm.moves, fighter.moves);
-  assert.deepEqual(calm.visual, fighter.visual);
+  assert.deepEqual(calm.visual, { ...fighter.visual, maxIllustratedWidth: 315 });
   assert.notEqual(calm.sprite.src, fighter.sprite.src);
   assert.equal(equipCostume(getFighter('queenie'), ABSTRACTION_CALM_ID), getFighter('queenie'));
   assert.equal(getReplayFighter(fighter.id, '0.5.0'), fighter);
@@ -104,6 +104,7 @@ test('new projectile slots originate beyond their body in both directions and da
     if (move.kind !== 'projectile') continue;
     for (const face of [1, -1]) {
       const engine = engineFor(def.id, face);
+      engine.state.b.x = engine.state.a.x + face * 360;
       engine.step(FIXED_DT, [{ slot }, {}]);
       let projectile;
       for (let i = 0; i < move.startup + 3 && !projectile; i++) {

@@ -4,6 +4,31 @@ import { mkdtemp, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { ABSTRACTION_APPEARANCE_IDS, ABSTRACTION_ART_SLOTS, ABSTRACTION_CALM_ID, abstractionSprite } from '../combat/abstractions-content.mjs';
+
+test('all eleven abstraction families resolve their 121 declared PNG slots without normal-form aliasing', async t => {
+  const files = ABSTRACTION_APPEARANCE_IDS.flatMap(id => ABSTRACTION_ART_SLOTS.map(slot => '../assets/encore/abstractions/' + id + '/' + slot + '.png'));
+  const { art, requests } = await isolatedIllustrations(t, files);
+  assert.equal(files.length, 121);
+  const allCanvases = new Set();
+  for (const id of ABSTRACTION_APPEARANCE_IDS) {
+    const fighter = { id: id === ABSTRACTION_CALM_ID ? 'abstractedqueenie' : id, ...(id === ABSTRACTION_CALM_ID ? { costume: id } : {}), sprite: abstractionSprite(id) };
+    const poses = new Map();
+    for (const slot of ABSTRACTION_ART_SLOTS) {
+      const kind = ['selection', 'stance'].includes(slot) ? slot : 'poses';
+      const frame = await art.loadFighterIllustration(kind, fighter, kind === 'poses' ? slot : undefined);
+      assert.ok(frame?.canvas, id + ':' + slot);
+      assert.ok(requests.at(-1).endsWith('/abstractions/' + id + '/' + slot + '.png'));
+      assert.equal(frame.nativeFacing, 1);
+      assert.deepEqual(frame.bounds, { x: 10, y: 20, width: frame.width - 20, height: frame.height - 40 });
+      allCanvases.add(frame.canvas); poses.set(slot, frame);
+    }
+    assert.notEqual(poses.get('heavy'), poses.get('attack'), id + ': own heavy drawing');
+    assert.equal(art.actionIllustration(fighter, 'heavy'), poses.get('heavy'));
+  }
+  assert.equal(allCanvases.size, 121, 'each state and appearance has its own decoded canvas');
+});
+
 
 async function isolatedIllustrations(t, files) {
   const folder = await mkdtemp(path.join(tmpdir(), 'encore-illustration-formats-'));
