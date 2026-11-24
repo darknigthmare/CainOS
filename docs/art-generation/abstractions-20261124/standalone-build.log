@@ -1,0 +1,8 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 build:combat
+> node scripts/build-combat.mjs
+
+Offline manifest: 0.7.0-a75401ab15c4 / 6082 illustrations / 3372101559 bytes / art 0a23b46977da5002.
+Standalone ready: /workspace/library-files/encore-build-review-20261124-ils_kv8_/output (6082 illustrations).
+{"type":"standalone","output":"/workspace/library-files/encore-build-review-20261124-ils_kv8_/output","report":"/tmp/encore-worktree/docs/art-generation/abstractions-20261124/standalone-build-verification.json","expectedIllustrations":6082,"verifiedIllustrations":6082,"expectedCombatFiles":63,"verifiedCombatFiles":63,"expectedEntryFiles":2,"verifiedEntryFiles":2,"expectedFiles":6147,"verifiedFiles":6147,"verifiedBytes":3373556607,"failures":0,"verifiedDigest":"4d9f25a2b5e0730b99d26ee134e516b1a296c5535d448e136e4f2fe7bf8a7727","ok":true}

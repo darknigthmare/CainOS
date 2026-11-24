@@ -1,0 +1,520 @@
+{
+  "schema": "encore-workbook-immutable-git-blobs/v1",
+  "repository": "darknigthmare/CainOS",
+  "status": "complete",
+  "complete": true,
+  "createdAt": "2026-11-24T14:46:26.356Z",
+  "expected": 83,
+  "uploaded": 83,
+  "workbooks": 1,
+  "finalPreviewPNGs": 76,
+  "baselinePreviewPNGs": 6,
+  "totalBytes": 6542067,
+  "workbookSHA256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+  "sourcePlanSha256": "d5f1ed8b08b193c0494f310e372b545a2ee98dc50b712bc47381d61684e47f19",
+  "previewManifestSha256": "1ac52b7cdd005a49f528e67a2474b5db4a2a6af18f52cbbe5837a9a2455e5c97",
+  "refsModified": false,
+  "treesModified": false,
+  "commitsCreated": false,
+  "files": [
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-abstractedjax.png",
+      "sha": "11116e257fb773543f4632de09a00711d71154d4",
+      "sha256": "13764f72f9ddbb3f37507e6498f3901e447f5d7f8a465a616e1b4dff10649ab7",
+      "bytes": 51281
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-abstractedqueenie.png",
+      "sha": "d737e7a265abc1aaefefa287189c397aaa61dcbe",
+      "sha256": "16ad9ec555ac92d111248922ed5fa5dd3e1e85b7c1693a139d25cfd42eb2f2e1",
+      "bytes": 51455
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-abstractedqueeniedark.png",
+      "sha": "fb934b1a1ca4d9db75f304573083dbfb83ced763",
+      "sha256": "c617ed7916ead16bcb29e92f0da3166be9f0b867553315c98ec66e7ca7054b50",
+      "bytes": 55392
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-abstractedribbit.png",
+      "sha": "27c53c615f7c4181abee38e195f76c48c6466110",
+      "sha256": "fdf661867b74d08f44d4ff308f76eda0d430c72d75e0598f87ce76913328665d",
+      "bytes": 43425
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-aquaticabstraction.png",
+      "sha": "bcbfd3775529c725fa736d74e91594d0104e0a5a",
+      "sha256": "b8e591f3885e2a3737601c7c3f6facdf29707a2c9ee1323b7c02db9b41052f2c",
+      "bytes": 44633
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-cellarabstraction.png",
+      "sha": "997c83ca6738b99cded9077c48eb20fea9638948",
+      "sha256": "e34decfe104b2deef5e2dce8820b4b6b20bb9ac1f9bd48423069d13370f0d204",
+      "bytes": 43486
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-originalabstractedpomni.png",
+      "sha": "6aa78fa8489c7987d8b37cea9300255751ee1994",
+      "sha256": "88a3ffdfa0435ac114a2028721b3fe8a5a01aa675801068f58fea24f783419b2",
+      "bytes": 38146
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-originalabstractedzooble.png",
+      "sha": "13ba4ba85238829eefc4adf784f40596721fb387",
+      "sha256": "9a6716db2183faa9f776187668d6638e5c4a0d2c2f69e02ece9f1acbafe36aca",
+      "bytes": 39050
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-abstractedjax.png",
+      "sha": "d621a713cb133c82cd13036083466342eb91a202",
+      "sha256": "ffee2e4a6857cff067db8c580ada199f090c538ecba7a8e033a131b748a622be",
+      "bytes": 52740
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-abstractedqueenie.png",
+      "sha": "5174386e91a1618e961cfee69953e0c6f3a56d6b",
+      "sha256": "5e3a41952918cda80812c439064232575d93da7486464bafafcd32fa455289a5",
+      "bytes": 48868
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-abstractedqueeniedark.png",
+      "sha": "31198963d0fc98e4068cd88add89e81171b06bbd",
+      "sha256": "95187dc3f6079b3b96ccaea0facfffcf22b7412ce0c4a6e56241517c0cccebdf",
+      "bytes": 144604
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-abstractedribbit.png",
+      "sha": "3d6228dddc2a401eb5d7ecf557f36e1de08d235e",
+      "sha256": "f2a7b5d81e72d19dbeaf0a499045875ca050ef23ee425cf8040ed5db3a47ba03",
+      "bytes": 47841
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-aquaticabstraction.png",
+      "sha": "32909fc9da39ba6a7617eb99eef8e8384e00c561",
+      "sha256": "b6a91de60cd974c4587bac9bc6476a774e3c03e8897c2777bda951fef81af98a",
+      "bytes": 59349
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-cellarabstraction.png",
+      "sha": "2a5167544fbcb74d1a6d41da06f46775c7b0b023",
+      "sha256": "7823bc4996e18957e043267dfe6d20e80277d94b3b90c08ae43084a0d42c783e",
+      "bytes": 55441
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-originalabstractedpomni.png",
+      "sha": "49a974c363023240be8b930187c820725e66dd3d",
+      "sha256": "59e26a98627d533b7db6f3ed65cc7e95b9167fdc28693e3bb5288b1f74c66997",
+      "bytes": 43839
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/atlas-review-originalabstractedzooble.png",
+      "sha": "30a4580ae83b5806445021de6cb67cbcb5a3f762",
+      "sha256": "f76f40f779174ff2d0f145850313e801d8486adb6ab67dc835babba5892a1342",
+      "bytes": 44560
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/baseline-atlas.png",
+      "sha": "6ae33eb059f7e0d46d2dd2a13d452813fac58806",
+      "sha256": "f0455c159acd6dc55d6ce518a04c11c2ddf6d9456684bf57518a790634f720f9",
+      "bytes": 109740
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/baseline-production.png",
+      "sha": "c54efad07c531f77864f2eabab6be411192bcc6f",
+      "sha256": "0cb8af06093f88114106557d41f5c61b52196365b8b296f272b83a93a9092b4e",
+      "bytes": 121242
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/baseline-references.png",
+      "sha": "56a1acf21f0bedceae75cd6ba06addec5cbbee01",
+      "sha256": "eec90d12bee9da693468f8beafeb8463dc199adca94f20c81e199435fb540d7e",
+      "bytes": 223658
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/baseline-roster-review.png",
+      "sha": "e80db7e541e78996b450e0966f41a2a608ea8467",
+      "sha256": "81391983e813a6ca50c28f49fd6cc9c57105c9f20753fd6867c54ce7beedb3d4",
+      "bytes": 92405
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/baseline-roster.png",
+      "sha": "d0c082acc934aca9de8fb1d360f53405ea9a682c",
+      "sha256": "2c3dadb84311e18976dea45d46a2d922bb414368093943a44e769768214f8a17",
+      "bytes": 71993
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/baseline-summary.png",
+      "sha": "0f8688282550310f61f2784ef7d88625d5a99277",
+      "sha256": "78a1a337c022a8469950bff487e7427199b5032a35338f02ae4c06f3b69d6d61",
+      "bytes": 124168
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-cqc-24.png",
+      "sha": "115182420a2a2808764fd7d25fe7ee7fa42402b1",
+      "sha256": "6f71c52a90347b8c66dee8a71a5afd372639479b86608331ad6e7646c66ed3b3",
+      "bytes": 32206
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-mod-09.png",
+      "sha": "ee8e6f41acc3f0c3575d76d3d18b26c0ec6aa22c",
+      "sha256": "eda021ce47643ebfeb25be39f901020c52a8472e2098938794e9ec8615d7c09f",
+      "bytes": 31850
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-prd-06.png",
+      "sha": "38c0c8129d862065dc6aa893d83c5b9900341ad7",
+      "sha256": "1c6d1d66bdbc270f731ac4f46b2b3325b1e50ddd2aace15a451f2682f2ac3702",
+      "bytes": 32253
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-prd-10.png",
+      "sha": "a9c2a20f384d9e35c44e09d829c534b23d147a47",
+      "sha256": "79e523dd60280140f115bcbba88bd6689b0f24a399f360ddef6b4da5d87f9307",
+      "bytes": 32525
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-prd-11.png",
+      "sha": "612737ad21a7a25d3016c5c3d639ee66cde51364",
+      "sha256": "9d3ff1ff405c1192675eb95ed680f048266233013d1640a64677b5ed8d7b9be0",
+      "bytes": 35822
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-01.png",
+      "sha": "a4e72eeb32a0d58c5ecec9a6909852e461f72f04",
+      "sha256": "7ed928063de2425d6aa219e523a5f068bf25e6446c224cd98e2726bc334a5400",
+      "bytes": 30678
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-02.png",
+      "sha": "32bf36eb8d6e1e2ea314be5f039b403c755955e5",
+      "sha256": "5102f036d9cf36dd068e3c96d18dd3a289d92da4eb40ebdfbf6c9b191ebffdf4",
+      "bytes": 33245
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-03.png",
+      "sha": "ad744d94d17d1d405d20b78bbc0839cc4ac82067",
+      "sha256": "1b1c7e31a64d1495c2f985854445ae50ad147b319bac58ca2ca859a7c465980c",
+      "bytes": 48461
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-04.png",
+      "sha": "b4d1652dec5a306af96bd08caf43496b7475c5c4",
+      "sha256": "7ad55f655b9e02bf723a056774620aded9508ff70af5ad3fd8b549711f6f1c0d",
+      "bytes": 15688
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-09.png",
+      "sha": "fd88a31ea2c36e14ed1edf14c99b421e0bba9555",
+      "sha256": "dd00f008f0378bbabc624ab28bf422945545d9e8ddea9960e4fca4b0c392f369",
+      "bytes": 28590
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-16.png",
+      "sha": "eb221173ad3c18c41c2631e5f4fc9e6570fd2f2a",
+      "sha256": "c4f88e7d3e18eab803b54e4bbaf03832290b798c08b7d7121d796966f2012892",
+      "bytes": 30570
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-17.png",
+      "sha": "746687c4ff1d15a16e619e08a5e296c2ce4ce9f3",
+      "sha256": "11f29afb0fbd8dbf0728b249e94f592d85b97e92fc80ca7208bf5cdc98470b32",
+      "bytes": 20592
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-20.png",
+      "sha": "2e3baa040c664aeb57fd65756da949c61c1fdfe6",
+      "sha256": "7f2cff83ec6857a940d71d3bf8156fc248781e4864e08743738d21b5e90234ef",
+      "bytes": 40829
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/feature-pre-21.png",
+      "sha": "7a2a183e21d81b6799976277d796885153ce68f9",
+      "sha256": "27b54480fe6848415966a278a187f6fea53fb634624d19bba69eebd54bf5626b",
+      "bytes": 22251
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-1.png",
+      "sha": "004517f966695d03ff455df12d1a519e4ede3818",
+      "sha256": "1853d01ecc91a33a9acbbbcf362f864bbcb85f4c424e509127a083421f11a456",
+      "bytes": 83765
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-10.png",
+      "sha": "ca70d50832ef37b93ce4c6506a3f936a774308a6",
+      "sha256": "359aabe9221ab69887a32d2b16b8fa724046e07f4ba8319752df15e39974dc6e",
+      "bytes": 61975
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-11.png",
+      "sha": "24adf5368661544cc6db830c73f42f02df296c67",
+      "sha256": "33c3b06f19874f6fcd6211a485f9a9077d9722bb9b1fd9692db9fb1d2929aa3a",
+      "bytes": 41574
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-12.png",
+      "sha": "0116481cd0cb65dd670b82c866901fd134d0503c",
+      "sha256": "b99104f2517b482f6b5bc544e7cb94455edde7ccd73d984af8b82c6e77ba6754",
+      "bytes": 40599
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-13.png",
+      "sha": "0ff1a2d1b2a56622e3022c98468274a09275560c",
+      "sha256": "acf25fb88d41c1a712d518c554708817a1507833358621d06939dcdf48086cdb",
+      "bytes": 61729
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-14.png",
+      "sha": "a6d6cd852e5601754b490b03354359432fb4c7b2",
+      "sha256": "5ac4da25e29da84c453d3408ae0c6827f2e67ae924a6a755a029f6b176c1512d",
+      "bytes": 62702
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-2.png",
+      "sha": "024b8d3900fd943b075c6c0c5333a685b3dd00a4",
+      "sha256": "5ec225995d2952da64af21a0cbc070b1326904fa00ab5b652dc0fe732d95975e",
+      "bytes": 109250
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-3.png",
+      "sha": "98fd1bdd0a5bfc87337703a40204e2c0b1c8b899",
+      "sha256": "dd2cc870e5b4aa1727e16a6076b75eff2e4c5295b1d1f0b76425a3c59d70bd8d",
+      "bytes": 107141
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-4.png",
+      "sha": "18bbfb3257a2c49c28eddc7799ab74b1351117d5",
+      "sha256": "4af3a4a01d3f31c9cf37cfc69cb228e74e74194ade01dab295d59ddacd963340",
+      "bytes": 98763
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-5.png",
+      "sha": "ccdcd4c92b94d5dca712cc0da69ef124e891f5af",
+      "sha256": "2e61b8513e29f6a915275e367d048334eb6bee53a58d625a00995d2322fd527d",
+      "bytes": 69774
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-6.png",
+      "sha": "dac3c5378c90038bec58b70403756a2b7d28a61e",
+      "sha256": "ec2bb25ed15fdc23b305d70dc5dbcc88e11494ec3f283922ebd5a78d06ea748b",
+      "bytes": 75846
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-7.png",
+      "sha": "4dad927c89460cd683f3389db8ff1e6fbc6ea93f",
+      "sha256": "22afe60449df7dbcd35eb608e2441ac953619ee9141b360c428718d99c1b754a",
+      "bytes": 125585
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-8.png",
+      "sha": "be6bfb057523224b3f78975f9a337515f829719f",
+      "sha256": "d58a7e7ae6df8d7f5220ef45e2c0b8d939afebf65641732ec3caa3ee82f4e4aa",
+      "bytes": 126464
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/production-category-9.png",
+      "sha": "091b1e123244a9aebfb9d0e66d4cee15469f85c0",
+      "sha256": "f16c120ab13b00b042803e8a4c3a3419873bb5974030562bc77064dc686bdc8d",
+      "bytes": 60616
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/qa-1.png",
+      "sha": "4434ba895fb11e4e01a0faf659cf5bb154654f35",
+      "sha256": "cb1ba31247adae2a29340309474feaae977383f11eb45673df90e8acd75c2fbd",
+      "bytes": 71304
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/qa-2.png",
+      "sha": "a99097e48ac75a3279322c8a13249e5094c9cdf7",
+      "sha256": "a5ae149a23fbbc6f974bbfd8f4118df8cfdb0698657b0e4b400b4474fc4e1b8a",
+      "bytes": 79943
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/reference-audio-ambiences-07.png",
+      "sha": "271aa6fc9adcab599f9f32edff8658cedc6ae932",
+      "sha256": "e5506be17d7b4a995ac9717eedc7304dfaca2ed2190fbbb238c1dc348fc3541b",
+      "bytes": 16983
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/reference-music.png",
+      "sha": "6859554488977a6fee965f0d3626a0869b3dcca9",
+      "sha256": "31595b45e557598487392650eccf2ce1025bfd3c73764a3d7e1994c0fa577b2e",
+      "bytes": 14111
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/reference-offline.png",
+      "sha": "49f8ff69470fd79d1efe2566c4c71242d9adb175",
+      "sha256": "fbbeed0ecfd9662d5952d6bb16125ecdf517b29dfa75c8c68bf517d4997c5ce6",
+      "bytes": 19056
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/reference-stage-ambiences.png",
+      "sha": "d7a0d788d3df3f21085a0def05389c325ae4fb45",
+      "sha256": "9c5d141755ed53c7596296c8967eb135b7833bd5ce9764ea4c03b6d39c07b63f",
+      "bytes": 15273
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/references-footer.png",
+      "sha": "dd20d386a27cd28ec66e0ade2e4f1da107028dda",
+      "sha256": "b8be4b65f19be33939585e134a809a2c9833cb55bfa0f8458f69299d4f9e844c",
+      "bytes": 95609
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/references-new.png",
+      "sha": "3a17a800e1c077c20d358123eacf17d207f4fac6",
+      "sha256": "109c45df7c88ae9def17d580ab372dcd002425b2bf154e31ea3f50181092abf9",
+      "bytes": 211130
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-1.png",
+      "sha": "bebd743b16ac872097e1b363bd6fb178861c01df",
+      "sha256": "ccd7fcd55dfca109bf57c8dd99c8761174fffa1b4f48bdbf9969b20dd9a1ed81",
+      "bytes": 73707
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-2.png",
+      "sha": "a9e070044b2c0c17ca7abea1edfa9680ed6e4a61",
+      "sha256": "a0f5af51f9aa33ef4c9c6c6f16f00fb01443bb19a2103d74b4c0c39fa0d5d54a",
+      "bytes": 74052
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-3.png",
+      "sha": "86018c01a5bb819e7a41c135900e3210093cf9f6",
+      "sha256": "34a53077914759963868320fbce2d1fe78198cf7bd1f050e3b165882531fd88a",
+      "bytes": 76091
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-4.png",
+      "sha": "b1baffd001aa83d4f5ab2762bb80cff1aa35a81a",
+      "sha256": "da456aa34c716ded8d1f663ea82b2f29f11f84c4798912584a4e499753781654",
+      "bytes": 76868
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-5.png",
+      "sha": "98be4f78b7433eb833b4e388afe9343624690e89",
+      "sha256": "f0ada4301185ebdb214e00991a66c41ef9ba501dad941f2381f683aa5ce2df1f",
+      "bytes": 76802
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-review-1.png",
+      "sha": "b182a98749778ccb59b842f385122caa475b784c",
+      "sha256": "6c11c432a6898bdf3814c1a33079690267bedf172b40a788233625611200b0fd",
+      "bytes": 132407
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-review-2.png",
+      "sha": "94f424ebc58a8184cd4b625e13add2cc61988499",
+      "sha256": "b9f31e6f8e47e0afd882f08ce265e7450c48b04d54c717ad018ed38ca1252216",
+      "bytes": 116432
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-review-3.png",
+      "sha": "7f7f89227ae8f316b95d9f9e793999c5aa12cffa",
+      "sha256": "606e30cc5fbc649c3aad0de7e90cf26cb05fca19538a8ccc1e85aafdd7b23f3c",
+      "bytes": 107222
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-review-4.png",
+      "sha": "9ae8b6f2dee59ce4bb3077c1657b0867560ac183",
+      "sha256": "42963abc03874f00a7c5d2ca96a4d31cf0b64edfab42bb5579a29bf11f1add77",
+      "bytes": 103014
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/roster-review-5.png",
+      "sha": "f4e2f150735279350bd78cc55040a0467e2a294c",
+      "sha256": "066f2d45ad3134360d3097d10e151d1c95ce6603093d0ff21940ed69b36ad888",
+      "bytes": 103640
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/scenarios-archive.png",
+      "sha": "3ad129cb6bdde6f90d7573cc66dd722b39881399",
+      "sha256": "fad562a6b34cb226f2b9d8c9172ae12620ba328a3b6307ec81871d4e974e16d8",
+      "bytes": 122394
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/scenarios-original.png",
+      "sha": "6ff491d0aefad339c83a8e2018de94b4858d2966",
+      "sha256": "4ced6df68909aca8144dcba0742bce885a59556fb63f1ba2613098b8f6728e72",
+      "bytes": 141567
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/stages-review.png",
+      "sha": "02821d35a6042a83ca9f369d55ed27b96b5960cc",
+      "sha256": "d3b57e14b65d7c521a57428bde24f528d6a63763b9c26f2b14a44e5ca039676e",
+      "bytes": 46779
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/stages.png",
+      "sha": "899ef704f1f231429e8b0cf171e5e33546cf7fee",
+      "sha256": "d8842439b576cb690d4826489f256d0eb154ed6b3f7981c8254c2f932339079d",
+      "bytes": 59984
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/summary-bottom.png",
+      "sha": "9e7875cfc4eb69207ee393d0eb4b42bf38a86e2f",
+      "sha256": "3d8fd78cf3ec82edde5bd3060548669847bacc1008cb960ed71020eee1d968d2",
+      "bytes": 126354
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/summary-top.png",
+      "sha": "399f6853577c70e029c0294fdc2c661e1970aa7b",
+      "sha256": "c5e43336437e00f543b4f6e2e7037ddf5afdf8cd8e6282a05786efd1c5344593",
+      "bytes": 127198
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-546.png",
+      "sha": "7f8cdd2b361059c1f7a9387159f300e9470f8f4d",
+      "sha256": "d5bf333625ce4366f233406733720a713fd473cf5682b9c3e0c86b5733441a80",
+      "bytes": 28429
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-566.png",
+      "sha": "28d6f9983beec1553323ee505c39d21194493eb2",
+      "sha256": "e88e3d4bfa8e1b310143fc6660ed2a97930ce766195c3456de8706dbaf1c7f7b",
+      "bytes": 29356
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-596.png",
+      "sha": "294f0ed4b0269582af042f3696ebec9eac9d7cc8",
+      "sha256": "eec094182d0a51ed1dc5906325f306af9d2a21523a15e7581efcfb7f92e39dc8",
+      "bytes": 30784
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-636.png",
+      "sha": "776deef02e54a71f5424d36e5187a7a818c6a98f",
+      "sha256": "9013cfde31b4b7085ace3d178515c6fb05600cb53aa5863043efbb303278d195",
+      "bytes": 34307
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-review-546.png",
+      "sha": "bcc9e0f42477c7825f2046d747844a1f2df7f954",
+      "sha256": "196a30545af8df719699c3cf1410450b5c808ced5ebc0b15e9fd1219ff66dfc7",
+      "bytes": 92213
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-review-566.png",
+      "sha": "5403af7c47f8deab27e346ffa135386307bda201",
+      "sha256": "dcbe6709589ba9b36d0d4667a19b319c1226dbcfc419a1ac347c48346714fc62",
+      "bytes": 92302
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-review-596.png",
+      "sha": "67afe63b4cfe81e78d59b7b4a715ca2fd31fb0ab",
+      "sha256": "1c0e56790fdd72f99c1d3a40124ce00bcf9751b28968874ec365852a1bf4f2ce",
+      "bytes": 70024
+    },
+    {
+      "file": "docs/art-generation/abstractions-20261124/workbook/techniques-review-636.png",
+      "sha": "edf79af653d1ee3c4d427204f19eb310d11e78f4",
+      "sha256": "10a81e65a34d28535f9df72cdf7fb5db09f584e001923e1d5cd905196ca95b1a",
+      "bytes": 70184
+    },
+    {
+      "file": "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+      "sha": "0d4dd35e90c8e7bec70a44e0b8b76609f794afc7",
+      "sha256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+      "bytes": 837889
+    }
+  ],
+  "errors": []
+}

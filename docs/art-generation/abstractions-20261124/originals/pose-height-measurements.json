@@ -1,0 +1,335 @@
+{
+  "schema": "encore-original-abstraction-pose-landmarks/v1",
+  "createdAt": "2026-11-24T14:12:12.012402+00:00",
+  "sourceReport": "docs/art-generation/abstractions-20261124/canvas/width-calibration-after.json",
+  "sourceReportSha256": "60ce5002879937e66859b165a62e022219c85baf1172bf47e9b5c173837d833f",
+  "method": "Native unmodified RGBA PNG, manually selected landmark region, largest connected color component. Compare landmark source length multiplied by pre-factor rendered silhouette height and divided by native alpha12 silhouette height. Factors are rounded visual corrections; final production matrices are audited independently.",
+  "limitations": [
+    "The landmark length is an approximate visual-size proxy; head angle, foreshortening and independent painted variations remain.",
+    "Runtime downsamples the source to its cached canvas, so native alpha bounds and production measurements may differ by a fraction of a pixel.",
+    "The five factors uniformly scale the complete pose before the existing width ceiling. They do not warp images, edit source PNGs or change gameplay collision bodies.",
+    "Individual generated state illustrations are not a full animation cycle or evidence of canonical 1:1 fidelity."
+  ],
+  "nativePngEdits": false,
+  "factors": {
+    "originalabstractedpomni": {
+      "intro": 1.45,
+      "hit": 1.4,
+      "victory": 1.55,
+      "heavy": 1.4
+    },
+    "originalabstractedragatha": {
+      "heavy": 1.35
+    }
+  },
+  "records": [
+    {
+      "id": "originalabstractedpomni",
+      "pose": "stance",
+      "file": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+      "sha256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Horizontal extent of the largest connected saturated red/blue pinwheel pupil",
+      "roiXYXYExclusive": [
+        835,
+        480,
+        1010,
+        600
+      ],
+      "colorPredicate": "((R>100 and R-G>60 and R-B>60) or (B>100 and B-R>60 and B-G>60)) and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 7089,
+      "markerBoundingBoxXYXYExclusive": [
+        866,
+        501,
+        1000,
+        583
+      ],
+      "markerEquivalentAreaDiameterNative": 95.00523739577501,
+      "markerSourceLength": 134,
+      "alpha12BoundingBoxXYXYExclusive": [
+        101,
+        291,
+        1212,
+        950
+      ],
+      "priorRenderHeight": 259.9999965429306,
+      "priorRenderWidth": 438.21957874298096,
+      "estimatedMarkerLengthBefore": 52.86798108763688,
+      "factorForExactMarkerEquality": 1.0,
+      "selectedUniformHeightFactor": 1,
+      "estimatedMarkerLengthAfter": 52.86798108763688,
+      "predictedRenderHeightBeforeWidthCeiling": 259.9999965429306,
+      "predictedRenderWidthBeforeWidthCeiling": 438.21957874298096,
+      "maxIllustratedWidth": 530,
+      "predictedWidthCeilingActive": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedpomni/intro.png",
+      "sha256": "cfb3cb4d3e8a26ac762d1199c16a9e26e07fa8e3916c03d9d7373d21bac7d865",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Horizontal extent of the largest connected saturated red/blue pinwheel pupil",
+      "roiXYXYExclusive": [
+        640,
+        320,
+        815,
+        440
+      ],
+      "colorPredicate": "((R>100 and R-G>60 and R-B>60) or (B>100 and B-R>60 and B-G>60)) and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 6664,
+      "markerBoundingBoxXYXYExclusive": [
+        672,
+        353,
+        806,
+        425
+      ],
+      "markerEquivalentAreaDiameterNative": 92.11334499471357,
+      "markerSourceLength": 134,
+      "alpha12BoundingBoxXYXYExclusive": [
+        131,
+        136,
+        1178,
+        1081
+      ],
+      "priorRenderHeight": 260.00001204013824,
+      "priorRenderWidth": 287.4534294605255,
+      "estimatedMarkerLengthBefore": 36.86772657500373,
+      "factorForExactMarkerEquality": 1.4339908098233891,
+      "selectedUniformHeightFactor": 1.45,
+      "estimatedMarkerLengthAfter": 53.45820353375541,
+      "predictedRenderHeightBeforeWidthCeiling": 377.00001745820043,
+      "predictedRenderWidthBeforeWidthCeiling": 416.807472717762,
+      "maxIllustratedWidth": 530,
+      "predictedWidthCeilingActive": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedpomni/hit.png",
+      "sha256": "6fd54d706ed1d41ca568bdb8bdd6a4defc99cb54d2d6475fefdb42aa8dd6165e",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Horizontal extent of the largest connected saturated red/blue pinwheel pupil",
+      "roiXYXYExclusive": [
+        520,
+        360,
+        690,
+        480
+      ],
+      "colorPredicate": "((R>100 and R-G>60 and R-B>60) or (B>100 and B-R>60 and B-G>60)) and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 6444,
+      "markerBoundingBoxXYXYExclusive": [
+        549,
+        385,
+        673,
+        467
+      ],
+      "markerEquivalentAreaDiameterNative": 90.58010612862732,
+      "markerSourceLength": 124,
+      "alpha12BoundingBoxXYXYExclusive": [
+        97,
+        196,
+        1147,
+        1057
+      ],
+      "priorRenderHeight": 259.9999836410669,
+      "priorRenderWidth": 317.31816185284754,
+      "estimatedMarkerLengthBefore": 37.44482923518269,
+      "factorForExactMarkerEquality": 1.4118900304120707,
+      "selectedUniformHeightFactor": 1.4,
+      "estimatedMarkerLengthAfter": 52.42276092925576,
+      "predictedRenderHeightBeforeWidthCeiling": 363.9999770974936,
+      "predictedRenderWidthBeforeWidthCeiling": 444.2454265939865,
+      "maxIllustratedWidth": 530,
+      "predictedWidthCeilingActive": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedpomni/victory.png",
+      "sha256": "a21327fe653daebe7a3f5139d615e4bb7a69b6ae7c2e95ff9631380df8d7ff99",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Horizontal extent of the largest connected saturated red/blue pinwheel pupil",
+      "roiXYXYExclusive": [
+        640,
+        330,
+        810,
+        440
+      ],
+      "colorPredicate": "((R>100 and R-G>60 and R-B>60) or (B>100 and B-R>60 and B-G>60)) and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 5205,
+      "markerBoundingBoxXYXYExclusive": [
+        671,
+        363,
+        793,
+        425
+      ],
+      "markerEquivalentAreaDiameterNative": 81.40768901244232,
+      "markerSourceLength": 122,
+      "alpha12BoundingBoxXYXYExclusive": [
+        121,
+        162,
+        1130,
+        1102
+      ],
+      "priorRenderHeight": 260.00000226037366,
+      "priorRenderWidth": 278.95833575852595,
+      "estimatedMarkerLengthBefore": 33.744681144431475,
+      "factorForExactMarkerEquality": 1.5667056049916512,
+      "selectedUniformHeightFactor": 1.55,
+      "estimatedMarkerLengthAfter": 52.30425577386879,
+      "predictedRenderHeightBeforeWidthCeiling": 403.0000035035792,
+      "predictedRenderWidthBeforeWidthCeiling": 432.3854204257152,
+      "maxIllustratedWidth": 530,
+      "predictedWidthCeilingActive": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedpomni/heavy.png",
+      "sha256": "58d8d72f65931c0c6f8368e019183ef6cf10975b809ca70d910752f325656248",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Horizontal extent of the largest connected saturated red/blue pinwheel pupil",
+      "roiXYXYExclusive": [
+        690,
+        545,
+        870,
+        710
+      ],
+      "colorPredicate": "((R>100 and R-G>60 and R-B>60) or (B>100 and B-R>60 and B-G>60)) and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 8054,
+      "markerBoundingBoxXYXYExclusive": [
+        718,
+        575,
+        856,
+        680
+      ],
+      "markerEquivalentAreaDiameterNative": 101.26535090195955,
+      "markerSourceLength": 138,
+      "alpha12BoundingBoxXYXYExclusive": [
+        95,
+        158,
+        1060,
+        1110
+      ],
+      "priorRenderHeight": 259.999989691322,
+      "priorRenderWidth": 263.7448455099213,
+      "estimatedMarkerLengthBefore": 37.68907413592693,
+      "factorForExactMarkerEquality": 1.4027402450101774,
+      "selectedUniformHeightFactor": 1.4,
+      "estimatedMarkerLengthAfter": 52.7647037902977,
+      "predictedRenderHeightBeforeWidthCeiling": 363.9999855678508,
+      "predictedRenderWidthBeforeWidthCeiling": 369.24278371388976,
+      "maxIllustratedWidth": 530,
+      "predictedWidthCeilingActive": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "stance",
+      "file": "assets/encore/abstractions/originalabstractedragatha/stance.png",
+      "sha256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Vertical extent (long axis) of the largest connected blue face-button component",
+      "roiXYXYExclusive": [
+        900,
+        360,
+        1140,
+        610
+      ],
+      "colorPredicate": "B>90 and B-R>40 and B-G>10 and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 21114,
+      "markerBoundingBoxXYXYExclusive": [
+        941,
+        388,
+        1113,
+        584
+      ],
+      "markerEquivalentAreaDiameterNative": 163.9609092056342,
+      "markerSourceLength": 196,
+      "alpha12BoundingBoxXYXYExclusive": [
+        85,
+        170,
+        1172,
+        1086
+      ],
+      "priorRenderHeight": 275.00000232458115,
+      "priorRenderWidth": 326.82013124227524,
+      "estimatedMarkerLengthBefore": 58.842795257224786,
+      "factorForExactMarkerEquality": 1.0,
+      "selectedUniformHeightFactor": 1,
+      "estimatedMarkerLengthAfter": 58.842795257224786,
+      "predictedRenderHeightBeforeWidthCeiling": 275.00000232458115,
+      "predictedRenderWidthBeforeWidthCeiling": 326.82013124227524,
+      "maxIllustratedWidth": 395,
+      "predictedWidthCeilingActive": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedragatha/heavy.png",
+      "sha256": "786abc0f0a627fafea5861df7f7db8dcbccd9358292a2eefa3dc47c29a4804da",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "marker": "Vertical extent (long axis) of the largest connected blue face-button component",
+      "roiXYXYExclusive": [
+        680,
+        410,
+        890,
+        620
+      ],
+      "colorPredicate": "B>90 and B-R>40 and B-G>10 and alpha>200",
+      "componentConnectivity": 4,
+      "markerComponentPixels": 13727,
+      "markerBoundingBoxXYXYExclusive": [
+        716,
+        441,
+        864,
+        594
+      ],
+      "markerEquivalentAreaDiameterNative": 132.2034766206229,
+      "markerSourceLength": 153,
+      "alpha12BoundingBoxXYXYExclusive": [
+        133,
+        164,
+        971,
+        1129
+      ],
+      "priorRenderHeight": 275.0000145364599,
+      "priorRenderWidth": 239.22765492196103,
+      "estimatedMarkerLengthBefore": 43.601038574174474,
+      "factorForExactMarkerEquality": 1.3495732482867557,
+      "selectedUniformHeightFactor": 1.35,
+      "estimatedMarkerLengthAfter": 58.861402075135544,
+      "predictedRenderHeightBeforeWidthCeiling": 371.2500196242209,
+      "predictedRenderWidthBeforeWidthCeiling": 322.9573341446474,
+      "maxIllustratedWidth": 395,
+      "predictedWidthCeilingActive": false
+    }
+  ]
+}

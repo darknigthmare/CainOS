@@ -1,0 +1,32 @@
+{
+  "style": "resident",
+  "state": "hit",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE freshly drawn individual full-body 2D fighting-game state illustration, using the provided stance image as the exact character model. Preserve the same face, limb count, body proportions, palette, costume, backpack or fins, contours and cel-shaded finish. This is an ORIGINAL Encore Ribbit / Sunset Paradise crossover design, not an official canonical appearance. Articulate the joints and expression into the requested new pose; do not repeat, flip, crop, warp or merely reposition the stance drawing. Genuine transparent alpha background, solid opaque character, clean sharp outline. Square composition with entire silhouette inside CENTRAL 76 percent and at least twelve percent empty margin on ALL edges, including hands, feet, caps, fins and tail. Character faces RIGHT in side view with slight three-quarter depth. One character only, no multiple views, sprite sheet, text, letters, watermark, border, floor, shadow, painted background, halo, haze, glow or checkerboard. HIT reaction pose: torso recoils backward toward the LEFT from a front impact, head tilts back a little, mouth opens in surprise, both arms lift reflexively with open hands, leading knee raised slightly and back foot supports body. No injury, stars, flashes or detached particles. Still faces right. Identity lock: Ribbit as an ORIGINAL friendly resident harbour courier of Port Aurora: lime-green cartoon frog with exactly TWO huge protruding white eyes and black wedge-cut round pupils, pink circular cheeks, wide smiling mouth, thin long green arms and legs, four rounded fingers per hand and three broad toes per foot. Preserve the body and head from first reference. Outfit: small cream sailor cap with navy band and one simple gold anchor icon centered between the eyes, short teal open sleeveless waistcoat with cream piping over the frog's natural cream oval belly, small pink bow tie at neck, navy shorts, coral-orange waist sash with one short loose tail, coiled cream rope and tiny brass compass fixed to belt. Bare green webbed feet, no shoes. The second reference informs only the nautical palette and clean game art finish; no doll face, yarn hair, stitches, dress or human proportions. Silhouette cheerful and slender, all equipment attached neatly to body.",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "sunsetRibbitResult:resident:hit:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ac2b1c61-8b2d-47fa-9bea-9f0f21ec65a3.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-ac2b1c61-8b2d-47fa-9bea-9f0f21ec65a3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/hit.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "bytes": 650246,
+  "sha256": "c5194acd483de0d4eef69e7c94d1a3113adec5786f2475e53a450e9d2172c444",
+  "sha": "45874f981d34d9b1df70a2b49fe6aee4b9d59ef3",
+  "alphaZeroFraction": 0.8056623907165332,
+  "alpha12BBox": [
+    221,
+    90,
+    952,
+    1163
+  ],
+  "nativeBytesVerified": true,
+  "auditPass": true
+}

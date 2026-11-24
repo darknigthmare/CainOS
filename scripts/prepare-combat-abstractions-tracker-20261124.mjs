@@ -100,7 +100,18 @@ if (final) {
   assert.deepEqual(inventory.failures, []);
   assert.equal(proof.qa.fail, 0); assert.equal(proof.qa.pass, proof.qa.tests); assert.equal(proof.qa.bothBuildsPassed, true);
   assert(proof.qa.tests >= contentQa.tests);
-  assert(proof.status?.startsWith('passed') || proof.status === 'complete');
+  assert.equal(proof.schema, 'encore-abstractions-delivery-verification/v1');
+  assert.equal(proof.qa.skipped, 0); assert.equal(proof.qa.cancelled, 0);
+  await evidence(proof.qa.report);
+  assert.equal(evidenceHashes[proof.qa.report], proof.qa.reportSha256);
+  assert.deepEqual(proof.builds.map(build => build.kind).sort(), ['cainos', 'standalone']);
+  for (const build of proof.builds) {
+    assert.equal(build.ok, true); assert.equal(build.counts.failures, 0);
+    assert.equal(build.counts.verifiedFiles, build.counts.expectedFiles);
+    assert.equal(build.counts.verifiedIllustrations, offline.ART_FILES.length);
+    await evidence(build.report);
+    assert.equal(evidenceHashes[build.report], build.sha256);
+  }
   const records = inventory.files || inventory.records || inventory.assets;
   assert(Array.isArray(records)); assert.equal(records.length, 142);
   for (const file of assetPaths) {

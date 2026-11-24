@@ -1,0 +1,10 @@
+{
+  "id": "memoryfracture",
+  "slot": "far",
+  "plane": "far",
+  "prompt": "Use case: stylized-concept. Asset type: FAR / BASE PARALLAX PLANE for a 2D side-view fighting-game arena, WIDE LANDSCAPE 16:9, ideally 1920x1080. An original surreal broken-memory circus hall: enormous red-purple circus canopy arches split into floating pieces at the distant left and right, a large fractured oval mirror high in the center reflecting an empty indigo void, alternating faded rose/indigo panels and small golden trims, suspended colored glass shards far in the depth. A broad EMPTY continuous polished dark lavender stone floor fills the bottom 25%, with subtle cyan reflections. Main focal architecture stays behind fighters. Majestic melancholy mood, controlled purple/cyan lighting. Polished detailed hand-painted 2D fighting game background inspired by a surreal digital circus, original Encore location not an official series scene. Camera fixed straight-on, level horizon, no Dutch tilt. The combat ground contact line must be straight horizontal at 79% image height; the combat area from x 10% to 90% and y 35% to 79% remains legible, unobstructed, low-detail behind actors. Background fills entire image edge to edge and is fully OPAQUE. This is the complete distant environment only: no nearby pillars, no plants, no silhouettes of people, no foreground props, no UI, no text, no logos, no borders. Long panoramic composition with left-right overscan for camera.",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-fe2f618e-af23-4c11-b928-50f791523de9.png",
+  "destination": "assets/encore/stages/memoryfracture/far.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "Regenerated from retained prompt after local filesystem reset; this is a new image, not a byte-identical recovery."
+}

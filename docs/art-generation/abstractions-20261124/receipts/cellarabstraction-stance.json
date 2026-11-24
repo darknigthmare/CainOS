@@ -1,0 +1,11 @@
+{
+  "id": "cellarabstraction",
+  "pose": "stance",
+  "slot": "stance",
+  "prompt": "Use case: identity-preserve. Asset type: single native-alpha 2D UHD fighting game stance sprite for Digital Circus Encore. Reference is the existing project archive design; preserve its identity and detailing. A tall lanky faceted black-burgundy quadrupedal creature with uneven beak-like upper spire, modest dorsal triangular spikes, scattered white/cyan/yellow eyes, exactly this reference's silhouette. Four feet. Only change pose to a readable relaxed combat guard facing RIGHT in a side-view fighting game with mild three-quarter volume. No frontal presentation. Entire character including all feet/tendrils/spikes fully inside image with minimum 8% clear padding all sides. Polished crisp hand-painted 2D sprite, matching reference black facets and colored eyes; not a plastic miniature. One single character, one pose, no sheet/grid, no letters, no floor, no scenery, no shadow. True transparent background, no faint background halo.",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-82683392-c1de-4346-bf0e-ecd8b923ed3d.png",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/selection/cellarabstraction.png",
+  "destination": "assets/encore/abstractions/cellarabstraction/stance.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New rendering using original recovered prompt and unchanged published selection reference."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "abstractedribbit",
+  "pose": "walk",
+  "slot": "walk",
+  "prompt": "Use case: identity-preserve. Asset type: SINGLE 2D UHD fighting-game state sprite, walk. Reference is this character's approved native stance, preserve character design, topology, colored eye identities, materials and crisp rendering 1:1. Tall narrow multiple-spire black crystalline quadruped with rounded colorful irises (pink/cyan/gold/red), FOUR low splayed clawed legs. Preserve reference identity; no green frog features. Distinct FORWARD WALK stride toward RIGHT, alternating limbs visibly stepping with one foot off the ground. For limbless forms a long rolling glide with torso curved and tendrils undulating. Strict side-on fighting-game view, facing RIGHT with modest three-quarter volume. One independent newly drawn complete pose, NOT a duplicate of stance. Retain same scale and proportion relationships; fit entire subject with 8% transparent padding around extreme limbs/tendrils/spires. High detail black faceted mass legible via controlled violet/cyan rim highlights. TRUE transparent alpha outside silhouette, no black/grey background, NO environmental glow or haze, no floor, no shadow, no text/labels, no grid, no other character, no effect cloud. No extra arms, no humanoid face, no costumes beyond reference. This is an original combat adaptation of the provided project design, not an official new scene.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/abstractedribbit/stance.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-bc12e1a8-2b39-42d6-b24a-8a420167e76c.png",
+  "destination": "assets/encore/abstractions/abstractedribbit/walk.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native drawing using retained original prompt and regenerated matching stance."
+}

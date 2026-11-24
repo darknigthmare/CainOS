@@ -1,0 +1,1707 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-24T14:16:17.700Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": false,
+  "crossoversOnly": true,
+  "introducedOn": "2026-11-24",
+  "appearanceId": null,
+  "sources": {
+    "combat/data.mjs": "4ee02d45615773a0cec0f42c6ffe627d4ffbb719fac42b8fb32b4fb7a0b1e0ec",
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "c141fa3cc90a18996582c593b1eb6f824412c4a583fdaa95839819b5f74dc1d1",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "f56896170b3da27f4479797f1314e339d2918dbcd76cc3850c465369c356eba5",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "b58a56d5438170b6f6a40fdc9912cb791edbafced966d779eb11baae81c89507",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/offline-manifest.mjs": "a9f9c4cee6795da2e182d18d408f2f31838c2c47c4da51d5ab4c88560c581e16",
+    "scripts/render-combat-character-review.mjs": "2a9505923f844e67f61ee22ef5d00dff784357e13279f56d5552120c81dbd9a4"
+  },
+  "actions": [
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/intro.png",
+      "sha256": "4a9f2ddac8771443b7078a05a42826e18d71d95982088fbbf0e848ff7b2d1f5b",
+      "bytes": 810291,
+      "visibleBounds": {
+        "x": 82,
+        "y": 42,
+        "width": 487,
+        "height": 564
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 164.06028348207474,
+          "visibleHeight": 189.99999976158142,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3368794322013855,
+            "b": 0,
+            "c": 0,
+            "d": 0.3368794322013855,
+            "e": 530.3457641601562,
+            "f": 363.85107421875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 164.06028348207474,
+          "visibleHeight": 189.99999976158142,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3368794322013855,
+            "b": 0,
+            "c": 0,
+            "d": 0.3368794322013855,
+            "e": 749.6542358398438,
+            "f": 363.85107421875
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/attack.png",
+      "sha256": "e96a5970579172f1c15511fc33c72421534ef5d5100df005cf91b3b2c57273f3",
+      "bytes": 764690,
+      "visibleBounds": {
+        "x": 77,
+        "y": 63,
+        "width": 518,
+        "height": 514
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 191.47859528471855,
+          "visibleHeight": 189.99999609333076,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3691878318786621,
+            "b": 0.018474789336323738,
+            "c": -0.018474789336323738,
+            "d": 0.3691878318786621,
+            "e": 526.6128540039062,
+            "f": 343.9768981933594
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 191.47859528471855,
+          "visibleHeight": 189.99999609333076,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3691878318786621,
+            "b": 0.018474789336323738,
+            "c": 0.018474789336323738,
+            "d": 0.3691878318786621,
+            "e": 753.3871459960938,
+            "f": 343.9768981933594
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/hit.png",
+      "sha256": "38ce9b80734d0253f08c2cbddfd51f36cd90e4374c8c269a4d994878cc9eab85",
+      "bytes": 755398,
+      "visibleBounds": {
+        "x": 114,
+        "y": 31,
+        "width": 366,
+        "height": 578
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 120.31142702606326,
+          "visibleHeight": 190.00001317230755,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.32738932967185974,
+            "b": -0.029544850811362267,
+            "c": 0.029544850811362267,
+            "d": 0.32738932967185974,
+            "e": 524.7725830078125,
+            "f": 372.0028076171875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 120.31142702606326,
+          "visibleHeight": 190.00001317230755,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.32738932967185974,
+            "b": -0.029544850811362267,
+            "c": -0.029544850811362267,
+            "d": 0.32738932967185974,
+            "e": 755.2274169921875,
+            "f": 372.0028076171875
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/walk.png",
+      "sha256": "9b0a67c6ea975f962f6d81457accda9478e3a3e8034bab9488a17c7bcc560eef",
+      "bytes": 705491,
+      "visibleBounds": {
+        "x": 114,
+        "y": 40,
+        "width": 381,
+        "height": 538
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 134.5539008975029,
+          "visibleHeight": 189.9999965429306,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3531598448753357,
+            "b": 0,
+            "c": 0,
+            "d": 0.3531598448753357,
+            "e": 532.4628295898438,
+            "f": 363.87359619140625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 134.5539008975029,
+          "visibleHeight": 189.9999965429306,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3531598448753357,
+            "b": 0,
+            "c": 0,
+            "d": 0.3531598448753357,
+            "e": 747.5371704101562,
+            "f": 363.87359619140625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/jump.png",
+      "sha256": "1c88ddf1ba6ad7712b3934255a9d85ad11279dddfa928c130370ef6b78a07ced",
+      "bytes": 791796,
+      "visibleBounds": {
+        "x": 138,
+        "y": 49,
+        "width": 418,
+        "height": 503
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 157.892639875412,
+          "visibleHeight": 189.99999487400055,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.37773358821868896,
+            "b": 0,
+            "c": 0,
+            "d": 0.37773358821868896,
+            "e": 508.92645263671875,
+            "f": 359.4910583496094
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 157.892639875412,
+          "visibleHeight": 189.99999487400055,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.37773358821868896,
+            "b": 0,
+            "c": 0,
+            "d": 0.37773358821868896,
+            "e": 771.0735473632812,
+            "f": 359.4910583496094
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/crouch.png",
+      "sha256": "2c8c87cc6b432da323c004dc198c9d7b2e4bb0bbf4c0895fa9023ee9d716c1a1",
+      "bytes": 867596,
+      "visibleBounds": {
+        "x": 97,
+        "y": 92,
+        "width": 447,
+        "height": 457
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 137.52341830595083,
+          "visibleHeight": 140.60000484523383,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3074702322483063,
+            "b": -0.010765854269266129,
+            "c": 0.010765854269266129,
+            "d": 0.3074702322483063,
+            "e": 535.5453491210938,
+            "f": 400.24853515625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 137.52341830595083,
+          "visibleHeight": 140.60000484523383,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3074702322483063,
+            "b": -0.010765854269266129,
+            "c": -0.010765854269266129,
+            "d": 0.3074702322483063,
+            "e": 744.4546508789062,
+            "f": 400.24853515625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/victory.png",
+      "sha256": "2bee53200bd9898af006bd5bc6cb83f84de86860db4da0e9134ccc7bd9f5838b",
+      "bytes": 721052,
+      "visibleBounds": {
+        "x": 190,
+        "y": 18,
+        "width": 280,
+        "height": 597
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 89.11222817737361,
+          "visibleHeight": 190.00000079247158,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.31815850734710693,
+            "b": 0.007955620065331459,
+            "c": -0.007955620065331459,
+            "d": 0.31815850734710693,
+            "e": 539.900390625,
+            "f": 368.58941650390625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 89.11222817737361,
+          "visibleHeight": 190.00000079247158,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.31815850734710693,
+            "b": 0.007955620065331459,
+            "c": 0.007955620065331459,
+            "d": 0.31815850734710693,
+            "e": 740.099609375,
+            "f": 368.58941650390625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/defeat.png",
+      "sha256": "c29922160ccc5d3f7317773ba0ca5ae834c59b9af7482b2c1c7b7ab0f0964ee8",
+      "bytes": 831676,
+      "visibleBounds": {
+        "x": 97,
+        "y": 105,
+        "width": 443,
+        "height": 463
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 134.5265722905314,
+          "visibleHeight": 140.6000067054538,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3027004897594452,
+            "b": -0.024267828091979027,
+            "c": 0.024267828091979027,
+            "d": 0.3027004897594452,
+            "e": 529.8057861328125,
+            "f": 398.43218994140625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 134.5265722905314,
+          "visibleHeight": 140.6000067054538,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3027004897594452,
+            "b": -0.024267828091979027,
+            "c": -0.024267828091979027,
+            "d": 0.3027004897594452,
+            "e": 750.1942138671875,
+            "f": 398.43218994140625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/heavy.png",
+      "sha256": "28d666126bf3b43d4d294abb7d2e1dc3d6ac707033c6796eae357bb3235ed8e6",
+      "bytes": 721796,
+      "visibleBounds": {
+        "x": 92,
+        "y": 52,
+        "width": 484,
+        "height": 537
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 171.2476677667983,
+          "visibleHeight": 189.99999502225347,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.35337531566619873,
+            "b": 0.01768350414931774,
+            "c": -0.01768350414931774,
+            "d": 0.35337531566619873,
+            "e": 532.3882446289062,
+            "f": 349.6673583984375
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 171.2476677667983,
+          "visibleHeight": 189.99999502225347,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.35337531566619873,
+            "b": 0.01768350414931774,
+            "c": 0.01768350414931774,
+            "d": 0.35337531566619873,
+            "e": 747.6117553710938,
+            "f": 349.6673583984375
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/intro.png",
+      "sha256": "8adfdd0d413827239ea5acc6082ec6e08cf1153cda32d9dfff1d4e50b8e5bbbd",
+      "bytes": 696053,
+      "visibleBounds": {
+        "x": 110,
+        "y": 59,
+        "width": 445,
+        "height": 528
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 160.1325821876526,
+          "visibleHeight": 190.00000762939453,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3598484992980957,
+            "b": 0,
+            "c": 0,
+            "d": 0.3598484992980957,
+            "e": 520.350341796875,
+            "f": 356.7689208984375
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 160.1325821876526,
+          "visibleHeight": 190.00000762939453,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3598484992980957,
+            "b": 0,
+            "c": 0,
+            "d": 0.3598484992980957,
+            "e": 759.649658203125,
+            "f": 356.7689208984375
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/attack.png",
+      "sha256": "3242d28e28f013ef5f2be82f1c3ba862d787dbce74d6d58b5016471499ea8b98",
+      "bytes": 647650,
+      "visibleBounds": {
+        "x": 86,
+        "y": 65,
+        "width": 483,
+        "height": 507
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 181.00591446434262,
+          "visibleHeight": 189.99999717064537,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.37428510189056396,
+            "b": 0.018729865550994873,
+            "c": -0.018729865550994873,
+            "d": 0.37428510189056396,
+            "e": 528.1351318359375,
+            "f": 343.24224853515625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 181.00591446434262,
+          "visibleHeight": 189.99999717064537,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.37428510189056396,
+            "b": 0.018729865550994873,
+            "c": 0.018729865550994873,
+            "d": 0.37428510189056396,
+            "e": 751.8648681640625,
+            "f": 343.24224853515625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/hit.png",
+      "sha256": "c5194acd483de0d4eef69e7c94d1a3113adec5786f2475e53a450e9d2172c444",
+      "bytes": 650246,
+      "visibleBounds": {
+        "x": 113,
+        "y": 46,
+        "width": 373,
+        "height": 548
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 129.32482110208073,
+          "visibleHeight": 190.0000052652553,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.34531208872795105,
+            "b": -0.031162269413471222,
+            "c": 0.031162269413471222,
+            "d": 0.34531208872795105,
+            "e": 518.0686645507812,
+            "f": 366.4215087890625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 129.32482110208073,
+          "visibleHeight": 190.0000052652553,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.34531208872795105,
+            "b": -0.031162269413471222,
+            "c": -0.031162269413471222,
+            "d": 0.34531208872795105,
+            "e": 761.9313354492188,
+            "f": 366.4215087890625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/walk.png",
+      "sha256": "9c6bbe310d8755e0912644ca7b4542225c17ed1f84e725e4c5afef0bfe76e6db",
+      "bytes": 648969,
+      "visibleBounds": {
+        "x": 140,
+        "y": 37,
+        "width": 354,
+        "height": 547
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 122.96160507202148,
+          "visibleHeight": 189.9999942779541,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3473491668701172,
+            "b": 0,
+            "c": 0,
+            "d": 0.3473491668701172,
+            "e": 529.8903198242188,
+            "f": 365.1480712890625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 122.96160507202148,
+          "visibleHeight": 189.9999942779541,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3473491668701172,
+            "b": 0,
+            "c": 0,
+            "d": 0.3473491668701172,
+            "e": 750.1096801757812,
+            "f": 365.1480712890625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/jump.png",
+      "sha256": "11fd216c236aa30d562d3d4d0bc07183fe125dfe08a6c86d9391c0ddf63b6055",
+      "bytes": 696526,
+      "visibleBounds": {
+        "x": 134,
+        "y": 52,
+        "width": 409,
+        "height": 513
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 151.48147651553154,
+          "visibleHeight": 189.99999377131462,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.37037035822868347,
+            "b": 0,
+            "c": 0,
+            "d": 0.37037035822868347,
+            "e": 514.629638671875,
+            "f": 358.7407531738281
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 151.48147651553154,
+          "visibleHeight": 189.99999377131462,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.37037035822868347,
+            "b": 0,
+            "c": 0,
+            "d": 0.37037035822868347,
+            "e": 765.370361328125,
+            "f": 358.7407531738281
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/crouch.png",
+      "sha256": "e4635b5e428a10d75f20617ca4679a36a79bbc1ac44f5208a0b9a69d9f324b0e",
+      "bytes": 695616,
+      "visibleBounds": {
+        "x": 115,
+        "y": 117,
+        "width": 435,
+        "height": 420
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 145.6214387447973,
+          "visibleHeight": 140.60000982256292,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.33455690741539,
+            "b": -0.011714274995028973,
+            "c": 0.011714274995028973,
+            "d": 0.33455690741539,
+            "e": 522.46923828125,
+            "f": 389.6959228515625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 145.6214387447973,
+          "visibleHeight": 140.60000982256292,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.33455690741539,
+            "b": -0.011714274995028973,
+            "c": -0.011714274995028973,
+            "d": 0.33455690741539,
+            "e": 757.53076171875,
+            "f": 389.6959228515625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/victory.png",
+      "sha256": "4360042db9e1d7ac99a6e3618ce7130feb2af552f2e83b4f42ccfa796c4536b0",
+      "bytes": 723803,
+      "visibleBounds": {
+        "x": 182,
+        "y": 22,
+        "width": 308,
+        "height": 591
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 99.01861284331724,
+          "visibleHeight": 190.0000006181834,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3213885426521301,
+            "b": 0.008036388084292412,
+            "c": -0.008036388084292412,
+            "d": 0.3213885426521301,
+            "e": 536.9397583007812,
+            "f": 367.0469665527344
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 99.01861284331724,
+          "visibleHeight": 190.0000006181834,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3213885426521301,
+            "b": 0.008036388084292412,
+            "c": 0.008036388084292412,
+            "d": 0.3213885426521301,
+            "e": 743.0602416992188,
+            "f": 367.0469665527344
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/defeat.png",
+      "sha256": "d889c549be4a07371d5f19760da50cf4fbfc6a140a4efb624e48f7a8347d043f",
+      "bytes": 687971,
+      "visibleBounds": {
+        "x": 106,
+        "y": 107,
+        "width": 421,
+        "height": 445
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 133.01707693655305,
+          "visibleHeight": 140.5999981870929,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3149445354938507,
+            "b": -0.02524944581091404,
+            "c": 0.02524944581091404,
+            "d": 0.3149445354938507,
+            "e": 526.38232421875,
+            "f": 396.8397216796875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 133.01707693655305,
+          "visibleHeight": 140.5999981870929,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3149445354938507,
+            "b": -0.02524944581091404,
+            "c": -0.02524944581091404,
+            "d": 0.3149445354938507,
+            "e": 753.61767578125,
+            "f": 396.8397216796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/heavy.png",
+      "sha256": "7e2176cc28e0954e7504aaeb76e77b67c3b6c1c530df4f9c4c491649e656a561",
+      "bytes": 635090,
+      "visibleBounds": {
+        "x": 116,
+        "y": 75,
+        "width": 463,
+        "height": 507
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 173.51084554242368,
+          "visibleHeight": 189.99999717064537,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.37428510189056396,
+            "b": 0.018729865550994873,
+            "c": -0.018729865550994873,
+            "d": 0.37428510189056396,
+            "e": 520.8367309570312,
+            "f": 339.3121337890625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 173.51084554242368,
+          "visibleHeight": 189.99999717064537,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.37428510189056396,
+            "b": 0.018729865550994873,
+            "c": 0.018729865550994873,
+            "d": 0.37428510189056396,
+            "e": 759.1632690429688,
+            "f": 339.3121337890625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/intro.png",
+      "sha256": "77d05f5482f962cbf207df1568f3747d7454aa55b6f510c610f368d93a73620e",
+      "bytes": 922848,
+      "visibleBounds": {
+        "x": 56,
+        "y": 62,
+        "width": 529,
+        "height": 524
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 191.81297144293785,
+          "visibleHeight": 189.9999943971634,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.36259540915489197,
+            "b": 0,
+            "c": 0,
+            "d": 0.36259540915489197,
+            "e": 523.7881469726562,
+            "f": 355.51910400390625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 191.81297144293785,
+          "visibleHeight": 189.9999943971634,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.36259540915489197,
+            "b": 0,
+            "c": 0,
+            "d": 0.36259540915489197,
+            "e": 756.2118530273438,
+            "f": 355.51910400390625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/attack.png",
+      "sha256": "e18055dd4552ae5468a496ab84662fc50c9edcd34b03bccd838677ac6dc8b3a0",
+      "bytes": 871167,
+      "visibleBounds": {
+        "x": 39,
+        "y": 80,
+        "width": 562,
+        "height": 494
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 216.15385966575272,
+          "visibleHeight": 190.00001187701395,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3841347396373749,
+            "b": 0.01922275684773922,
+            "c": -0.01922275684773922,
+            "d": 0.3841347396373749,
+            "e": 528.1107177734375,
+            "f": 335.9441833496094
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 216.15385966575272,
+          "visibleHeight": 190.00001187701395,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3841347396373749,
+            "b": 0.01922275684773922,
+            "c": 0.01922275684773922,
+            "d": 0.3841347396373749,
+            "e": 751.8892822265625,
+            "f": 335.9441833496094
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/hit.png",
+      "sha256": "e5af0ea8a9b35f932a98353130b545a7339b95142880fd5e2d435b91b49686bb",
+      "bytes": 837186,
+      "visibleBounds": {
+        "x": 73,
+        "y": 67,
+        "width": 446,
+        "height": 522
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 162.33715772729653,
+          "visibleHeight": 189.99999177948158,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3625115156173706,
+            "b": -0.03271441161632538,
+            "c": 0.03271441161632538,
+            "d": 0.3625115156173706,
+            "e": 513.4277954101562,
+            "f": 356.88525390625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 162.33715772729653,
+          "visibleHeight": 189.99999177948158,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3625115156173706,
+            "b": -0.03271441161632538,
+            "c": -0.03271441161632538,
+            "d": 0.3625115156173706,
+            "e": 766.5722045898438,
+            "f": 356.88525390625
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/walk.png",
+      "sha256": "fe97ccb8604ac79555e7e2ec7170a6becada023f795c7bcbf025b93143067ea7",
+      "bytes": 809742,
+      "visibleBounds": {
+        "x": 54,
+        "y": 61,
+        "width": 508,
+        "height": 513
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 188.1481419801712,
+          "visibleHeight": 189.99999377131462,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.37037035822868347,
+            "b": 0,
+            "c": 0,
+            "d": 0.37037035822868347,
+            "e": 525.9259033203125,
+            "f": 355.40740966796875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 188.1481419801712,
+          "visibleHeight": 189.99999377131462,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.37037035822868347,
+            "b": 0,
+            "c": 0,
+            "d": 0.37037035822868347,
+            "e": 754.0740966796875,
+            "f": 355.40740966796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/jump.png",
+      "sha256": "0b7f922207a262a2efb0bd17167aac2fbc6d2b9c9a9fc31007a86d5956ac6ef3",
+      "bytes": 941907,
+      "visibleBounds": {
+        "x": 47,
+        "y": 48,
+        "width": 559,
+        "height": 525
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 202.30476650595665,
+          "visibleHeight": 190.00000432133675,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3619047701358795,
+            "b": 0,
+            "c": 0,
+            "d": 0.3619047701358795,
+            "e": 521.8380737304688,
+            "f": 360.6285705566406
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 202.30476650595665,
+          "visibleHeight": 190.00000432133675,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3619047701358795,
+            "b": 0,
+            "c": 0,
+            "d": 0.3619047701358795,
+            "e": 758.1619262695312,
+            "f": 360.6285705566406
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/crouch.png",
+      "sha256": "7d9ae97ee8212a9647fccfefa738d601b70551bef5d2c4148198e169a650f5b0",
+      "bytes": 844625,
+      "visibleBounds": {
+        "x": 67,
+        "y": 130,
+        "width": 497,
+        "height": 404
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 172.96584194536396,
+          "visibleHeight": 140.60000029361578,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3478066623210907,
+            "b": -0.012178206816315651,
+            "c": 0.012178206816315651,
+            "d": 0.3478066623210907,
+            "e": 523.7638549804688,
+            "f": 383.09326171875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 172.96584194536396,
+          "visibleHeight": 140.60000029361578,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3478066623210907,
+            "b": -0.012178206816315651,
+            "c": -0.012178206816315651,
+            "d": 0.3478066623210907,
+            "e": 756.2361450195312,
+            "f": 383.09326171875
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/victory.png",
+      "sha256": "2f4d7be795b9baa2c2f525311eba7cac81981843d0f1c59ee9ee2cd15ada1a8d",
+      "bytes": 884110,
+      "visibleBounds": {
+        "x": 78,
+        "y": 50,
+        "width": 450,
+        "height": 549
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 155.73770234214726,
+          "visibleHeight": 189.99999685741966,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3459756374359131,
+            "b": 0.008651193231344223,
+            "c": -0.008651193231344223,
+            "d": 0.3459756374359131,
+            "e": 540.3514404296875,
+            "f": 356.18841552734375
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 155.73770234214726,
+          "visibleHeight": 189.99999685741966,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3459756374359131,
+            "b": 0.008651193231344223,
+            "c": 0.008651193231344223,
+            "d": 0.3459756374359131,
+            "e": 739.6485595703125,
+            "f": 356.18841552734375
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/defeat.png",
+      "sha256": "0c5ec3adb5386606993797ecbb9af7dc73f36a4017b82e2791925692a2bd399b",
+      "bytes": 894023,
+      "visibleBounds": {
+        "x": 51,
+        "y": 81,
+        "width": 519,
+        "height": 484
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 150.76735963403348,
+          "visibleHeight": 140.6000039747056,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.2895667850971222,
+            "b": -0.023214885964989662,
+            "c": 0.023214885964989662,
+            "d": 0.2895667850971222,
+            "e": 536.9730834960938,
+            "f": 405.59033203125
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 150.76735963403348,
+          "visibleHeight": 140.6000039747056,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.2895667850971222,
+            "b": -0.023214885964989662,
+            "c": -0.023214885964989662,
+            "d": 0.2895667850971222,
+            "e": 743.0269165039062,
+            "f": 405.59033203125
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/heavy.png",
+      "sha256": "b20f069f957080541c70f519c54c6c7e4936ea97a96252aee2522de57b69491c",
+      "bytes": 804193,
+      "visibleBounds": {
+        "x": 32,
+        "y": 75,
+        "width": 574,
+        "height": 490
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 222.57142916331034,
+          "visibleHeight": 190.00000050526492,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": 0.3872705101966858,
+            "b": 0.01937967725098133,
+            "c": -0.01937967725098133,
+            "d": 0.3872705101966858,
+            "e": 527.4102172851562,
+            "f": 337.43841552734375
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 222.57142916331034,
+          "visibleHeight": 190.00000050526492,
+          "maxIllustratedWidth": null,
+          "poseHeightFactor": 1,
+          "matrix": {
+            "a": -0.3872705101966858,
+            "b": 0.01937967725098133,
+            "c": 0.01937967725098133,
+            "d": 0.3872705101966858,
+            "e": 752.5897827148438,
+            "f": 337.43841552734375
+          }
+        }
+      ]
+    }
+  ],
+  "stances": [
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png",
+      "sha256": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d",
+      "bytes": 774797,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 129.67266663908958,
+          "visibleHeight": 189.99999836087227,
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 542.2012939453125,
+            "f": 375.2012939453125
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 129.67266663908958,
+          "visibleHeight": 189.99999836087227,
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 737.7987060546875,
+            "f": 375.2012939453125
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png",
+      "sha256": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d",
+      "bytes": 686638,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 127.10120469331741,
+          "visibleHeight": 190.0000059902668,
+          "matrix": {
+            "a": 0.32590052485466003,
+            "b": 0,
+            "c": 0,
+            "d": 0.32590052485466003,
+            "e": 537.0154418945312,
+            "f": 370.8302001953125
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 127.10120469331741,
+          "visibleHeight": 190.0000059902668,
+          "matrix": {
+            "a": -0.32590052485466003,
+            "b": 0,
+            "c": 0,
+            "d": 0.32590052485466003,
+            "e": 742.9845581054688,
+            "f": 370.8302001953125
+          }
+        }
+      ]
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png",
+      "sha256": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87",
+      "bytes": 1009355,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 176.52249777317047,
+          "visibleHeight": 190.0000069141388,
+          "matrix": {
+            "a": 0.32871973514556885,
+            "b": 0,
+            "c": 0,
+            "d": 0.32871973514556885,
+            "e": 538.918701171875,
+            "f": 367.1522216796875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "visibleWidth": 176.52249777317047,
+          "visibleHeight": 190.0000069141388,
+          "matrix": {
+            "a": -0.32871973514556885,
+            "b": 0,
+            "c": 0,
+            "d": 0.32871973514556885,
+            "e": 741.081298828125,
+            "f": 367.1522216796875
+          }
+        }
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "glitch-sunsetparadise-ribbit-hommage",
+      "archiveId": null,
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/selection.png",
+      "sha256": "9d794490aa35bfb45eef7cfff6c1f957245443ca373b344022380e963423c7fe",
+      "bytes": 651593,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-resident",
+      "archiveId": null,
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/selection.png",
+      "sha256": "696d417d1cdc05c4288b3970632604c4ea978ccce2cadc782e6aba86a8334a91",
+      "bytes": 589593,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    },
+    {
+      "id": "glitch-sunsetparadise-ribbit-fusion",
+      "archiveId": null,
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/selection.png",
+      "sha256": "9ccde87698bf2bda2f16cc223eda26426a6b5774d61b84d77d723acbc7ebeb2d",
+      "bytes": 817543,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-glitch-sunsetparadise-ribbit-hommage.jpg",
+    "actions-glitch-sunsetparadise-ribbit-resident.jpg",
+    "actions-glitch-sunsetparadise-ribbit-fusion.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 3,
+    "expectedActions": 27,
+    "actions": 27,
+    "stances": 3,
+    "drawChecks": 60,
+    "archiveEntries": 0,
+    "portraits": 3,
+    "expectedPortraits": 3,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "complete": true
+}

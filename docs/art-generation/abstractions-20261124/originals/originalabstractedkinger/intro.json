@@ -1,0 +1,15 @@
+{
+  "id": "originalabstractedkinger",
+  "state": "intro",
+  "prompt": "Use case: precise-object-edit. ONE FULL-BODY TRANSPARENT FIGHTING-GAME CHARACTER ASSET. Draw the EXACT original hypothetical abstraction creature shown in the reference in ONE newly articulated state. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. INTRO pose: theatrical arrival gesture with front body rising and both forelimbs spread outward at different heights, hind supports braced, head announcing itself toward the right. Proud reveal, distinctly different articulation from idle and portrait, full body visible. Preserve character identity, limb anatomy, body volume, characteristic eye arrangement, costume remnants, proportions, and the reference's crisp hand-painted faceted obsidian 2D rendering. View mainly SIDE ON, facing RIGHT, slight three-quarter depth. One complete character only, every appendage and costume extremity contained inside the CENTRAL 76 PERCENT of a square canvas with generous blank transparent margins on ALL sides. Do not crop. The opaque black character is surrounded by genuine alpha transparency. No scene, background color, checkerboard, floor, shadow, glow, halo, haze, particles, motion blur, text, labels, frame, watermark, additional characters or sprite sheet. This is an original fan-game design and not an official canon form. Create a distinctly new articulated drawing, not a transformed copy of idle.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/originalabstractedkinger/stance.png",
+  "revision": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "result_store_key": "originalRecoveryResult:originalabstractedkinger:intro:1",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-f937f0db-ae57-44dd-babd-48b9cc249dfa.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-f937f0db-ae57-44dd-babd-48b9cc249dfa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

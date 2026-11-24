@@ -1,0 +1,18 @@
+✔ additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips (26.265352ms)
+✔ each additional outfit ships all eleven independent native-alpha PNG drawings in the offline pack (637.633689ms)
+✔ Cafe Ragatha, Gangle and Zooble append after the unchanged 477-costume checkpoint (3.546638ms)
+✔ resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries (1.74716ms)
+✔ runtime directions agree with the individually reviewed completion records for all ninety-nine resumed drawings (0.943634ms)
+✔ new catalogue drawings match reviewed native directions and exact archived PNGs (267.529377ms)
+✔ Cafe Kinger and Pomni preserve all 472 published costumes and bind 22 native drawings to their frozen owners (70.170795ms)
+✔ Cafe Ribbit preserves the 468-costume prefix and binds every installed pose to its frozen owner and accepted receipt (40.817995ms)
+✔ the three explicit Ribbit Meta Runner designs append after both Cafe outfits and preserve their owner kit (1.88155ms)
+✔ all 33 Meta Runner slots retain native bytes, accepted receipts, frozen definitions and exact job references (203.213413ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1223.382959

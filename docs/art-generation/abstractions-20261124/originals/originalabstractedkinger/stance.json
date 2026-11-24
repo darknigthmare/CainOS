@@ -1,0 +1,14 @@
+{
+  "id": "originalabstractedkinger",
+  "state": "stance",
+  "prompt": "Use case: stylized-concept. Asset: ONE individual full-body 2D fighting-game character sprite with genuine transparent background, no scene. Original hypothetical COMPLETE abstraction form for Digital Circus Encore, clearly an original fan-game design. High-quality hand-painted angular obsidian-black polygon creature with several jewel-colored cyan, magenta, violet and yellow eyes embedded in its body. Precise sharp readable outline, subtle colored facet edges BUT ABSOLUTELY NO outer glow, mist, halo, ground, shadow, checkerboard, background color or decorative particles. No text, watermark or frame. Not a sprite sheet, not multiple views. Combat idle stance, facing RIGHT in mostly side view with slight three-quarter depth. Keep entire silhouette comfortably inside CENTRAL 76 percent of canvas, large empty alpha margin on ALL FOUR edges; no extremity touches border. Four readable ground contacts. Opaque body pixels and fully transparent empty space. Subject: fully abstracted KINGER original design. A broad tall obsidian monster whose head and shoulders preserve the stepped crown and battlements of a KING CHESS PIECE, with a short rectangular crown cross integrated into the silhouette. Four faceted limbs planted widely, black heavy body with many cyan violet yellow eyes. Torn deep purple royal robe fragments with pale ivory spotted ermine edge stay attached to the flanks, plus two floating-looking mitten-like black foreclaws connected to thin limb stalks. No normal human king, no skin or human face. Heavy defensive stance, facing right, royal head crown above a compact angular body, keep crown and robe fully visible. Use a square canvas and keep at least 12 percent clear padding; genuine alpha surrounds the character. Keep hand-painted shapes boldly readable.",
+  "reference": null,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "result_store_key": "originalRecoveryResult:originalabstractedkinger:stance:1",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-df57cdfa-d56e-4b30-a88d-4f4a1fe3e1eb.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-df57cdfa-d56e-4b30-a88d-4f4a1fe3e1eb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

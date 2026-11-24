@@ -1,0 +1,23 @@
+{
+  "schema": "encore-tracker-abstractions-recovery-baseline/v1",
+  "createdAt": "2026-11-24T13:13:49.848Z",
+  "files": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "bytes": 773968,
+      "sha256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842"
+    },
+    "docs/combat-tracker-data.json": {
+      "bytes": 5983688,
+      "sha256": "770c112140dd5ec4442cb0f61053b807e2aad52b8e0f6cfafa0e859f9eefb962"
+    },
+    "docs/combat-workbook-verification.json": {
+      "bytes": 82754,
+      "sha256": "c22920f045ec275c1709ebf38756f22ef371cbecfb981ec0afd19c24353a1ae8"
+    },
+    "docs/combat-qa-evidence-0.7.0.json": {
+      "bytes": 588368,
+      "sha256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+    }
+  },
+  "scope": "Restored published Café tracker: 54 fighters, 25 stages and 480 costumes. The lost Sunset export is not treated as installed."
+}

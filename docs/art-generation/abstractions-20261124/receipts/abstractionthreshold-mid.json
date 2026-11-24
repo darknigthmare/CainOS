@@ -1,0 +1,11 @@
+{
+  "id": "abstractionthreshold",
+  "plane": "mid",
+  "slot": "mid",
+  "prompt": "Use case: precise-object-edit. Asset type: MID PARALLAX LAYER for existing 2D fighting stage, wide LANDSCAPE 16:9 same pixel composition as reference. Reference is context ONLY for art style, perspective, lighting and ground-line placement. Deliver ONLY the separately painted objects described here on TRUE TRANSPARENT background: Only a pair of slim faceted obsidian boundary spires rising from far LEFT and RIGHT margins, confined to each outer 11% of canvas width, lit by cyan inner edges and thin purple cracks. They stop at ground line y=79% and leave ALL floor below transparent. Add just three tiny suspended rock splinters in upper 20%. All central 78% area and background must be completely TRANSPARENT. NO giant central spike, NO far arches, NO eyes, NO bridge, NO horizon or floor. Match the reference's clean rich hand-painted game environment style and palette exactly. No text, no UI, no characters, no tile grid. This PNG will be composited on the reference; do not repaint any part of the reference background. Keep transparent negative space genuinely empty, no atmospheric opaque or translucent gradient.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stages/abstractionthreshold/far.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-6a698cd4-32ac-46e5-b0fe-121b4ed1e538.png",
+  "destination": "assets/encore/stages/abstractionthreshold/mid.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native generation after filesystem reset; based on the new matching far plane."
+}

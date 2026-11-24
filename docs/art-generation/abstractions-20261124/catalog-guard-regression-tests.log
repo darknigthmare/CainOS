@@ -1,0 +1,28 @@
+✔ the complete 472-costume prefix keeps its published IDs, order and fields (15.052793ms)
+✔ explicit addition order appends mixed batches after all published records, including calm Queenie (11.123483ms)
+✔ ambiguous or incomplete addition registries fail with explicit IDs (0.697609ms)
+✔ presentation version 0.7 retains the 0.5 engine and rejects unknown rule mappings (6.224268ms)
+✔ all fourteen 0.6 and 0.7 replay routes match 0.5 simulation for 900 seeded frames (6331.868179ms)
+✔ all 56 captured legacy CPU duels preserve every frame fingerprint (1257.383842ms)
+✔ the ten historical and ten abstraction low traps bypass standing guard and respect crouching guard in 0.5 (19.156772ms)
+✔ historical versions retain their original tag-derived trap guard behavior (3.087527ms)
+✔ re-importing the same trap recording preserves old rules and exact 0.5 playback (21.62668ms)
+✔ CPU keeps its selected high or low guard across consecutive projectile impacts (1.350781ms)
+✔ legacy CPU recordings keep their original guard decision during blockstun (2.591298ms)
+✔ Ragatha CPU activates useful healing and respects the remaining heal budget (1.605601ms)
+✔ CPU never starts unusable healing when health, budget, resource, cooldown or position prevents it (2.454905ms)
+✔ legacy CPU rules do not newly select Ragatha utility healing (1.467675ms)
+✔ Gloink Queen CPU can land its authored long throw beyond the old 85px cutoff (2.030384ms)
+✔ CPU throw candidates respect actual range and every target protection condition (2.059276ms)
+✔ single-frame stepping is available only in a paused training session (3.584748ms)
+✔ single-frame stepping consumes one explicit edge and clears fractional ticks and pending inputs (0.427997ms)
+✔ playback dummy obeys J2 movement and attack inputs even when a CPU flag was previously set (1.223862ms)
+✔ lastInputs exposes actual dummy decisions through independent copies and resets to neutral (0.75219ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7876.640248

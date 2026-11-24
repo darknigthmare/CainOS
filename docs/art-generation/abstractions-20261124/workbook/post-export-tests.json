@@ -1,0 +1,45 @@
+{
+  "schema": "encore-workbook-post-export-tests/v1",
+  "createdAt": "2026-11-24T14:44:02.834763+00:00",
+  "status": "passed",
+  "exitCode": 0,
+  "command": [
+    "node",
+    "--test",
+    "tests/combat-art-tracker-formats.test.mjs",
+    "tests/combat-workbook-publication.test.mjs",
+    "tests/combat-release-evidence.test.mjs",
+    "tests/combat-costume-additions.test.mjs",
+    "tests/combat-costume-order.test.mjs"
+  ],
+  "suites": [
+    "tests/combat-art-tracker-formats.test.mjs",
+    "tests/combat-workbook-publication.test.mjs",
+    "tests/combat-release-evidence.test.mjs",
+    "tests/combat-costume-additions.test.mjs",
+    "tests/combat-costume-order.test.mjs"
+  ],
+  "totals": {
+    "tests": 32,
+    "suites": 0,
+    "pass": 32,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "log": "docs/art-generation/abstractions-20261124/workbook/post-export-tests.log",
+  "logSha256": "fb7ea9da01582cc049fb6479959bc0836ce3a8df578282759500db2115a58aa3",
+  "publishedArtifacts": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+    "docs/combat-tracker-data.json": "c2d12f402c9e2f9a0567630685eb80213bd808cdbc743bcc90180dd098ade0e5",
+    "docs/combat-workbook-verification.json": "22acdcbd323259ad00ba62f662e8e421f2040f21afc081976a366da07512da73"
+  },
+  "frozenGlobalEvidencePreserved": true,
+  "frozenGlobalEvidence": {
+    "docs/art-generation/abstractions-20261124/verification.json": "f81f9a1c76b45991e60400a2a9f956d0e7632b630627072cef59d253445ccc96",
+    "docs/art-generation/abstractions-20261124/qa-summary.json": "a599fa1cfbaabb5aaf66270470089755ce041e6a563febbb8e6f73fdc579a17e"
+  },
+  "scope": "Separate post-export regression checks. No change to frozen game QA, runtime, builds or their counts.",
+  "runtimeNotModified": true
+}

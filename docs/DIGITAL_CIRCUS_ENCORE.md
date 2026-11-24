@@ -2,18 +2,18 @@
 
 Version jouable : **0.7.0** — sortie initiale le 24 octobre 2026 ; catalogue et
 dessins individuels réunis le **19 novembre 2026**, puis complétés le
-**20 novembre 2026**.
+**20 novembre 2026** et le **24 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 25 arènes partagées, 9 modes, 480 costumes et 179 archives**.
-Le catalogue conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, **51 costumes d’archive**, **45 variantes Circus / 495 PNG** et
-**384 costumes crossover / 3 847 fichiers**. Les quatorze propriétaires historiques
+**64 combattants, 640 techniques, 27 arènes partagées, 9 modes, 484 costumes et 184 archives**.
+Le catalogue contient 64 arrangements de scènes dédiées,
+les escales GLITCH, **52 costumes d’archive**, **45 variantes Circus / 495 PNG** et
+**387 costumes crossover / 3 880 fichiers**. Les quatorze propriétaires historiques
 conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les trois styles
-Murder Drones et les trois styles Meta Runner, soit **6/27** parmi les neuf collections. Ses sept autres séries et
+Murder Drones, les trois styles Meta Runner et les trois styles Sunset Paradise, soit **9/27** parmi les neuf collections. Ses six autres séries et
 les **39 autres PNJ sans crossover** restent ouverts. Aucun choix ne pointe vers
 un dessin absent.
-L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
+L’extension abstractions porte le roster à 64 combattants et **192 finales de spectacle** ;
 les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants d’origine.
 La sortie initiale 0.7.0 ajoutait **42 finales de spectacle**, trois pour chacun des quatorze
 combattants, une galerie avec les **51 costumes**, douze ambiances sonores procédurales
@@ -37,7 +37,53 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Dernière suite — Ragatha, Gangle et Zooble Café
+## Suite du 24 novembre — abstractions, projectiles et arènes originales
+
+Dix combattants reçoivent un corps de simulation distinct et dix techniques chacun :
+les abstractions du cellier et aquatique, Jax abstrait, Queenie abstraite, Ribbit
+abstraite, ainsi que cinq formes **entièrement inventées pour Encore** de Pomni,
+Ragatha, Gangle, Kinger et Zooble. L’état calme de Queenie reste une apparence du
+même combattant ; les anciennes tenues d’abstraction partielle gardent leur kit.
+
+Les onze apparences disposent de **121 PNG** : un portrait, une garde et neuf
+actions chacune. Six portraits publiés sont conservés à l’octet près. Les
+**quinze motifs de projectile** utilisent leurs propres illustrations, y compris
+après renvoi ; la direction, l’ancrage et le cache borné sont traités par le moteur
+commun. L’abstraction aquatique place son origine de tir devant sa tête ; ses
+tendrilles arrière restent décoratives à l’extérieur de son corps de collision.
+
+**Le chapiteau des souvenirs brisés** et **Le seuil de l’abstraction** sont deux
+arènes originales, chacune à trois plans de parallaxe, avec une musique, une
+ambiance sonore et un mouvement de fond propres. Le mode mouvements réduits
+fige leurs effets d’ambiance. Ces scènes ne sont pas attribuées à un épisode.
+
+Les dix routes ajoutent **60 tableaux**, **30 finales**, **dix numéros d’amitié**
+et **50 séquences de présentation**. Le total atteint 64 récits / 384 tableaux,
+192 finales, 64 amitiés et 320 séquences. Les programmes et replays historiques
+conservent leur catalogue d’origine.
+
+Ribbit reçoit aussi trois styles originaux Sunset Paradise : Hommage à Meggy,
+Résidente de Port Aurora et Fusion amphibienne, soit **33 PNG supplémentaires**.
+Le lot complet ajoute **175 chemins d’images actifs**, dont six portraits repris
+à l’identique ; le paquet hors ligne contient **6 082 illustrations**.
+
+Les sources finales passent **461 tests Node, sans échec ni test ignoré**.
+Les deux builds normaux passent également : **6 147 fichiers pour le jeu
+autonome et 6 151 pour CainOS**, chacun avec les 6 082 illustrations et les
+63 fichiers du jeu. La comparaison par SHA-256 ne relève aucune différence.
+Le [bilan de vérification](art-generation/abstractions-20261124/verification.json)
+distingue ces résultats des revues Canvas natives et de la tentative navigateur
+locale arrêtée avant l’ouverture d’une page.
+
+Le [bilan daté](encore-abstractions-20261124.md),
+l’[inventaire natif](art-generation/abstractions-20261124/asset-inventory.json) et le
+[registre des manquants](art-generation/abstractions-20261124/remaining-work.md)
+séparent les preuves techniques, les attributions à confirmer et les créations
+originales. Les onze dessins d’une apparence restent des repères statiques ;
+ils ne constituent pas un cycle complet d’animation. La fidélité canonique 1:1
+reste à comparer sur des plans primaires identifiés.
+
+## Suite précédente — Ragatha, Gangle et Zooble Café
 
 **Trois familles et 33 PNG natifs individuels** complètent les tenues Café.
 Ragatha conserve les grands nœuds bleu clair du tablier et ses plateformes ;
@@ -51,7 +97,7 @@ ont été examinés. Les 66 copies de PNG dans les distributions sont identiques
 les **5 830 anciens fichiers Encore** et les **477 costumes précédents** restent
 inchangés. Le paquet hors ligne contient maintenant **5 907 images**.
 
-Le [bilan courant](COMBAT_CONTINUATION_C_2026-11-20.md), les
+Le [bilan de cette suite](COMBAT_CONTINUATION_C_2026-11-20.md), les
 [galeries et preuves](art-generation/continuation-20261120-c/README.md), le
 [dossier du classeur](art-generation/continuation-20261120-c/workbook/README.md)
 et le [registre des manquants](art-generation/continuation-20261120-c/remaining-work.md)
@@ -452,7 +498,7 @@ des tâches distinctes dans l’Excel.
 
 Chaque combattant possède les dix emplacements CQC : léger, fort, bas, saisie,
 spécial neutre, spécial bas, spécial avant, spécial arrière, finale et utilitaire.
-Les 540 techniques sont décrites dans le codex et dans le classeur avec leurs
+Les 640 techniques sont décrites dans le codex et dans le classeur avec leurs
 frames de démarrage, d’activité et de récupération, leurs dégâts, leurs portées,
 leurs coûts et leur effet.
 
@@ -462,20 +508,22 @@ le palais de sucre, les terrains du cirque et le couloir des portes. Les arènes
 partagent une surface de duel sans danger aléatoire. Les décors ont une géométrie
 dessinée dans Canvas et une palette propre.
 La fausse sortie et les neuf arènes GLITCH avaient porté le catalogue partagé à 22.
-Sous la carte, le bar des néons et le stade de softball le portent maintenant à **25 arènes / 75 plans**.
+Sous la carte, le bar des néons et le stade de softball l’ont porté à 25 arènes.
+Le chapiteau des souvenirs brisés et le seuil de l’abstraction complètent le
+catalogue à **27 arènes / 81 plans**.
 Les arrangements `home-<id>` réutilisent ces décors et ne sont pas comptés comme
-54 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
+64 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
 rendu de secours et suivent les mêmes limites de combat.
 
-Les **51 variantes d’archive et 42 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
+Les **52 variantes d’archive et 45 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
 modifier son kit. Leur attribution repose sur une liste explicite par identité :
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.
 Les ajouts Circus et leurs sources sont déclarés dans
 [`combat/costume-additions.mjs`](../combat/costume-additions.mjs).
 
-Les **179 entrées d’archive** restent consultables et filtrables : 54 combattants,
-51 variantes et 74 autres archives sans kit livré. Leur présence conserve la
+Les **184 entrées d’archive** restent consultables et filtrables : 64 combattants,
+52 variantes et 68 autres archives sans kit livré. Leur présence conserve la
 mémoire du projet sans attester leur statut canonique. Les règles et leurs cas de
 contrôle figurent dans [`combat/data.mjs`](../combat/data.mjs) et
 [`tests/combat-catalog.test.mjs`](../tests/combat-catalog.test.mjs).
@@ -491,7 +539,7 @@ contrôle figurent dans [`combat/data.mjs`](../combat/data.mjs) et
 | Encore. Encore. | Dix vagues ; santé conservée avec 1 200 points récupérés après une victoire |
 | Les répétitions | Six comportements de mannequin, gel et avance d’une image, trois vitesses, historique des commandes, lecture des phases, enregistrement/relecture de 600 images, jauges libres et remise en place |
 | Les défis de Caine | Six exercices mesurables de 60 secondes : dégâts, garde, combo, saisies, quatre techniques, finale |
-| Derrière le rideau | 54 histoires (14 authored + 40 PNJ promus), chacune avec trois tableaux de prologue, quatre rencontres et trois tableaux de fin ; 324 tableaux et 216 briefings au total, plus une feuille de route (intro, quatre adversaires, rival, épilogue), une scène dédiée, trois finales et un numéro d’amitié par artiste |
+| Derrière le rideau | 64 histoires (14 routes d’origine, 40 routes de PNJ promus et dix routes d’abstractions), chacune avec trois tableaux de prologue, quatre rencontres et trois tableaux de fin ; 384 tableaux et 256 briefings au total, plus une feuille de route (intro, quatre adversaires, rival, épilogue), une scène dédiée, trois finales et un numéro d’amitié par artiste |
 | La coupe du cirque | Tableau à huit participants distincts ; quarts, demi-finales et finale, soit trois victoires du joueur. Le rival attitré de l’artiste est placé dans l’autre moitié et l’attend en finale ; intro et couronnement propres à chaque artiste |
 
 Les duels libres respectent les réglages de manches gagnantes et de durée. Les
@@ -511,20 +559,24 @@ production.
 ### Lire et revoir les histoires
 
 Chaque route a un prologue de trois tableaux et un épilogue de trois tableaux,
-soit **84 tableaux** pour les quatorze artistes. Les 56 scènes d’avant-combat
+soit **384 tableaux** pour les 64 combattants. Les **256 scènes d’avant-combat**
 composent aussi le décor et les portraits avec le texte. Le lecteur propose
 précédent, continuer, passer et quitter, avec navigation clavier, retour manette,
 présentation mobile et mouvement réduit. Une fin n’est consultable librement
 qu’après son déblocage ; sa relecture ne redonne ni médaille ni victoire.
 
+Le socle de quatorze artistes de la version 0.7.0 du **24 octobre 2026**
+représentait 84 tableaux et 56 scènes d’avant-combat. Ces sous-ensembles historiques
+restent inclus dans le catalogue courant.
+
 Ces tableaux utilisent les décors et portraits existants. Ce sont des compositions
 narratives originales, sans nouvelle image raster narrative ni doublage. Les
 quatre adversaires, règles, récompenses et checkpoints de chaque route sont
 conservés. Le bouton **La feuille de route** présente les quatre chapitres, leur
-adversaire, leur arène, le marqueur ◆ du rival et l’état de l’épilogue. Les
-87 illustrations proposées pour ces tableaux et pour le tournoi sont décrites dans
-[le brief d’illustrations](COMBAT_TOURNOI_HISTOIRES_ILLUSTRATIONS.md) ; elles ne
-sont pas encore dessinées. Kaufmo n’est pas guéri et ne reçoit pas une voix inventée ; la route
+adversaire, leur arène, le marqueur ◆ du rival et l’état de l’épilogue. Le
+[brief historique d’illustrations](COMBAT_TOURNOI_HISTOIRES_ILLUSTRATIONS.md)
+propose 87 dessins pour les quatorze histoires d’origine et le tournoi ; ces
+illustrations dédiées ne sont pas encore dessinées. Kaufmo n’est pas guéri et ne reçoit pas une voix inventée ; la route
 de Gummigoo se présente comme une simulation, sans affirmer son retour canonique.
 Voir [`story-presentation.mjs`](../combat/story-presentation.mjs),
 [la revue narrative](combat-story-review-0.6.0.json) et
@@ -810,9 +862,9 @@ anciens libellés en faits canoniques.
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
-**670 entrées** : 54 personnages, 540 techniques, 25 arènes partagées et 51 costumes d’archive.
-Les suites illustrées ajoutent 42 fiches de costume distinctes dans
-`combat/costume-additions.mjs`, portant ce sous-total documenté à **712**, hors fiches
+**783 entrées** : 64 personnages, 640 techniques, 27 arènes partagées et 52 costumes d’archive.
+Les suites illustrées ajoutent 45 fiches de costume distinctes dans
+`combat/costume-additions.mjs`, portant ce sous-total documenté à **828**, hors fiches
 de création originale des crossovers.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
@@ -999,7 +1051,7 @@ Les deux reculs gardent leurs distances et durées nominales : **150 pixels /
 actuels des kits sont comparés à l'empreinte publiée en 0.3.0 ; les kits hérités
 restent comparés à la version 0.2.0.
 
-Les aperçus de décor suivent aussi le premier chapitre des 54 histoires. Les
+Les aperçus de décor suivent aussi le premier chapitre des 64 histoires. Les
 liens de référence sont facultatifs, sans dépendance réseau pour jouer.
 Le lac reste sans source primaire précise ; la salle de calibration est une
 création originale. La confirmation primaire du couloir des résidents, les animations de combat
@@ -1013,26 +1065,26 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `combat/engine.mjs` | Simulation indépendante du navigateur et enveloppe fixe |
 | `combat/data.mjs` | Combattants, kits actuels/hérités, arènes et variantes |
 | `combat/fidelity.mjs` | Registre partagé des sources, observations, adaptations et périmètres à revoir |
-| `combat/costume-fidelity.mjs` | 51 revues individuelles et corrections de cadrage des costumes |
+| `combat/costume-fidelity.mjs` | 52 revues individuelles et corrections de cadrage des costumes |
 | `combat/costume-refinements.mjs` | 20 remplacements à alpha natif, découpes, corrections et limites 0.6 |
 | `combat/sprite-catalog.mjs` | Inventaire des atlas dérivé des tables CainOS |
 | `combat/render.mjs` | Rendu Canvas, extraction/cadrage en cache, effets, décors |
 | `combat/render-presentation.mjs` | Détourage conservateur et identité visuelle des projectiles/pièges |
 | `combat/render-poses.mjs` | Origines des 56 cellules animées et présentation des états sans modifier les règles |
-| `combat/render-sequences.mjs` | 70 séquences procédurales finies et résultats neutres en cas d’égalité |
+| `combat/render-sequences.mjs` | 320 séquences procédurales finies et résultats neutres en cas d’égalité |
 | `combat/render-stage-scenery.mjs` | Architecture des trois décors reconstruits, sans modifier la surface de duel |
-| `combat/render-stage-motion.mjs` | 12 couches d’ambiance déterministes, limitées à l’arrière-plan au-dessus du sol |
+| `combat/render-stage-motion.mjs` | 27 couches d’ambiance déterministes, limitées à l’arrière-plan au-dessus du sol |
 | `combat/training.mjs` | Vitesses, gel, historique, relevé de phases et bande manuelle de 600 images |
 | `combat/input.mjs` | Clavier, tactile, manette et impulsions de commandes |
 | `combat/menu-navigation.mjs` | Navigation des menus et restauration du focus |
 | `combat/bindings.mjs` | Mappings J1/J2, conflits, libellés et nettoyage des imports |
 | `combat/session.mjs` | Profils, migrations, replays, défis et compteurs testables |
 | `combat/progression.mjs` | Programmes, checkpoints, santé de survie et tableau du tournoi |
-| `combat/stories.mjs` | 14 routes originales, 56 chapitres et 84 tableaux de prologue/épilogue |
+| `combat/stories.mjs` | 64 routes originales, 256 chapitres et 384 tableaux de prologue/épilogue |
 | `combat/story-presentation.mjs` | Composition narrative, ordre des tableaux et validation |
 | `combat/audio.mjs` | Thèmes, ambiances, effets, volumes séparés et cycle de vie WebAudio |
-| `combat/audio-ambiences.mjs` | Catalogue des 12 ambiances procédurales |
-| `combat/finisher-catalog.mjs` | 162 finales, trois tableaux chacune, références et limites |
+| `combat/audio-ambiences.mjs` | Catalogue des 27 ambiances procédurales |
+| `combat/finisher-catalog.mjs` | 192 finales, trois tableaux chacune, références et limites |
 | `combat/finishers.mjs` | Sélection sur KO final et échantillonnage sans mutation de simulation |
 | `combat/render-finishers.mjs` | Composition des accessoires et des dessins existants |
 | `combat/finisher-gallery.mjs` | Aperçu indépendant, pause, reprise et mouvement réduit |
@@ -1054,16 +1106,30 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 
 ## Classeur de production
 
-Le [dossier de mise à jour du lot courant](art-generation/continuation-20261120-c/workbook/README.md)
-relie les preuves propres à Ragatha, Gangle et Zooble Café. Les compteurs, l’export, le réimport et les résultats de contrôle de cette
-vague sont consignés dans ce dossier ; les nombres ci-dessous décrivent les campagnes
-historiques et ne sont pas réattribués au nouveau lot.
+Le [dossier de mise à jour du 24 novembre](art-generation/abstractions-20261124/workbook/README.md)
+relie les abstractions, les projectiles, les deux arènes et les trois tenues
+Sunset de Ribbit à leurs preuves. Le suivi courant comprend **106 fonctionnalités,
+3 739 tâches de production, 408 scénarios, 2 499 lignes QA et 170 sources**.
+Les lignes QA rassemblent des campagnes et objectifs distincts ; elles ne
+représentent pas 2 499 tests indépendants exécutés dans cette passe.
+
+La réimportation contrôle **90 882 cellules**, dont le périmètre historique de
+83 423 cellules contraint avant l’édition. Les 160 modifications historiques
+prévues actualisent les champs dépendant du catalogue ; les identifiants,
+l’ordre et les notes sont conservés. Les **42 formules** ont été recalculées,
+avec un essai réversible de changement de statut. Les preuves actuelles
+distinguent **461 tests Node réussis et les deux builds vérifiés** de la
+tentative navigateur locale bloquée avant ouverture de page.
+
+Le [dossier Café du 20 novembre](art-generation/continuation-20261120-c/workbook/README.md)
+conserve les résultats propres à Ragatha, Gangle et Zooble Café. Les nombres des
+campagnes antérieures ci-dessous restent historiques.
 
 [`DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) comporte
 désormais **onze feuilles et dix tableaux filtrables** : Synthèse, Fonctionnalités,
 Combattants, Techniques, Arènes, Atlas, Production, Scénarios, Extension PNJ, QA
-et Références. Il lit les catalogues réellement livrés, les 324 tableaux, les 216
-briefings, les 20 remplacements et les preuves de tests. Les statuts « Implémenté », « Partiel »,
+et Références. Il lit les catalogues réellement livrés, les 384 tableaux, les 256
+briefings et les preuves datées. Les statuts « Implémenté », « Partiel »,
 « Prévu » et « À vérifier » distinguent fonctionnement, finition et validation.
 
 Le suivi historique 0.6 contenait **101 fonctionnalités, 632 tâches de production, 85 scénarios et
@@ -1080,8 +1146,9 @@ l’environnement de mise à jour ; voir
 (313 Node et 238 navigateur) des 452 lignes historiques ou objectifs de revue
 conservés. Les statuts QA cumulés sont **999 « Réussi », 0 « Échec »,
 3 « Non exécuté » et 1 « À vérifier »**. Les **39 formules** ont été recalculées
-et leurs résultats contrôlés. Ces comptes figurent dans
-`combat-workbook-verification.json` et la Synthèse.
+et leurs résultats contrôlés. Ces comptes décrivent cette campagne historique ;
+`combat-workbook-verification.json` et la Synthèse décrivent désormais le lot du
+24 novembre et conservent les références aux preuves antérieures.
 Les objectifs peuvent recouper les tests ; les lignes ne représentent pas autant
 de tests indépendants. La comparaison canonique exhaustive reste ouverte. Les
 quatre essais historiques non exécutés concernaient un téléphone physique, deux
@@ -1096,7 +1163,7 @@ fonctionnalités. Une hauteur utilisateur de 180 points est conservée. Les note
 de cette fixture ne sont pas ajoutées au classeur final, qui n’en contenait pas.
 Les neuf rejets d’entrées invalides de la campagne 0.6 restent des preuves historiques.
 
-La publication prépare les quatre sorties courantes et sauvegarde tous les anciens contenus
+La publication prépare les sorties courantes et sauvegarde tous les anciens contenus
 avant le premier remplacement. Une erreur interceptée restaure les octets
 précédents ou l’absence antérieure du fichier. Si cette restauration échoue, les
 sauvegardes, le journal et le verrou sont conservés pour la récupération ; une

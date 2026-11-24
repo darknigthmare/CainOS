@@ -1,0 +1,1903 @@
+{
+  "schema": "encore-abstraction-width-calibration/v1",
+  "basedOnCaptureAt": "2026-11-24T13:41:54.816Z",
+  "basedOnReportSha256": "7859586eecd15a7cf0c3b6543245982716880207a93ab6329e705868781db822",
+  "beforeRuntimeHashes": {
+    "combat/data.mjs": "776c4dd781718c6887e62780b52b6328737e6a9826ef36abe3ce7b993caa60a7",
+    "combat/abstractions-content.mjs": "03e14df2eda3e6026984857b1cb659be00a0d0f3412f96c8b1dfe9b4b4a0f635",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "17e06600eb4efd58fdb48c0fc856d9131070d4c609a5b375d2416c3f2b6f3fb6",
+    "combat/render-poses.mjs": "1e73524eef8fe8cb83b18cd50815e2e094f8a75ce17e98b7dc8c68f373270873",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/projectile-art.mjs": "c1c870adf588879a08e239a2cf7c9f7dcea1fd9975c00b79aafd9ac4f85ad6cd",
+    "combat/offline-manifest.mjs": "5c0368aa0b9a01fac3d924dc4566e3190082898f4ea0a5051bab212dc6181ce1",
+    "scripts/render-combat-abstraction-review.mjs": "10d61b222f7897fff5474b66b65bee925fbc25c3a27b05fea568548342faf59c"
+  },
+  "method": "Native visible bounds from the executed pre-limit Canvas review. Width limits preserve standing art and reduce overgrown horizontal poses uniformly.",
+  "stances": [
+    {
+      "id": "cellarabstraction",
+      "file": "assets/encore/abstractions/cellarabstraction/stance.png",
+      "sha256": "ea415180bb031c040f0187b81cb9f1e5240d4b0362ef2f7b18c8d517a6010d0e",
+      "visibleWidth": 241.11111111111111,
+      "visibleHeight": 280,
+      "maxIllustratedWidth": 290,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "aquaticabstraction",
+      "file": "assets/encore/abstractions/aquaticabstraction/stance.png",
+      "sha256": "0d21d6dc9344823049cfc68d36d79bb6d28b39c95e46e79b539b0edfa162b310",
+      "visibleWidth": 428.45849802371544,
+      "visibleHeight": 200,
+      "maxIllustratedWidth": 480,
+      "reference": "428.46px stance + 12%, tail kept within initial 380px anchoring"
+    },
+    {
+      "id": "abstractedjax",
+      "file": "assets/encore/abstractions/abstractedjax/stance.png",
+      "sha256": "fef47e9ecbe06b3776d2d0f1f5beb3cbb16fd23ffb745e38cccd67272d6d2d08",
+      "visibleWidth": 347.72819472616635,
+      "visibleHeight": 310,
+      "maxIllustratedWidth": 420,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "abstractedqueenie",
+      "file": "assets/encore/abstractions/abstractedqueenie/stance.png",
+      "sha256": "669355161a9d95b31add94ba6235bcc640710fe888d8c254a3142a9397a1ecb0",
+      "visibleWidth": 293.74233128834356,
+      "visibleHeight": 285,
+      "maxIllustratedWidth": 355,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "abstractedribbit",
+      "file": "assets/encore/abstractions/abstractedribbit/stance.png",
+      "sha256": "429f3f01129a96c8fc9237df18016bf49bc1be636ea2a6bbe7279e45c94d8661",
+      "visibleWidth": 246.69064748201438,
+      "visibleHeight": 270,
+      "maxIllustratedWidth": 300,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/stance.png",
+      "sha256": "8a921d8a7bf447e6ae3ea2f09ff0b540427ad682f47eaec5ba5224083eab20e4",
+      "visibleWidth": 95.32928942807625,
+      "visibleHeight": 285,
+      "maxIllustratedWidth": 315,
+      "reference": "Long body height 285px + 10% bend room"
+    },
+    {
+      "id": "originalabstractedpomni",
+      "file": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+      "sha256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e",
+      "visibleWidth": 438.21958456973294,
+      "visibleHeight": 260,
+      "maxIllustratedWidth": 530,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "originalabstractedragatha",
+      "file": "assets/encore/abstractions/originalabstractedragatha/stance.png",
+      "sha256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694",
+      "visibleWidth": 326.8201284796574,
+      "visibleHeight": 275,
+      "maxIllustratedWidth": 395,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "originalabstractedgangle",
+      "file": "assets/encore/abstractions/originalabstractedgangle/stance.png",
+      "sha256": "44f67bba0d055c94fdac488291a8068b1cc563c07a9c3fb908bb9e66f9e94f50",
+      "visibleWidth": 268.2809611829945,
+      "visibleHeight": 295,
+      "maxIllustratedWidth": 325,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "originalabstractedkinger",
+      "file": "assets/encore/abstractions/originalabstractedkinger/stance.png",
+      "sha256": "b5f633dce6d22fe16b8ff1d051de4dab2fcf7c186686bc740cce68cd0f56589c",
+      "visibleWidth": 321.188605108055,
+      "visibleHeight": 315,
+      "maxIllustratedWidth": 390,
+      "reference": "Standing visible width + about 20% gesture room"
+    },
+    {
+      "id": "originalabstractedzooble",
+      "file": "assets/encore/abstractions/originalabstractedzooble/stance.png",
+      "sha256": "4b34fa8cf0a0006058f64ccda5de10e951595554f67a73cf9c68546979722c84",
+      "visibleWidth": 329.4468085106383,
+      "visibleHeight": 280,
+      "maxIllustratedWidth": 400,
+      "reference": "Standing visible width + about 20% gesture room"
+    }
+  ],
+  "actions": [
+    {
+      "id": "cellarabstraction",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/cellarabstraction/intro.png",
+      "sha256": "0d590193a9d6cf9ae587f793e0605f1e58e7124ffd17bf22c896de10c06e9752",
+      "visibleBounds": {
+        "x": 29,
+        "y": 44,
+        "width": 534,
+        "height": 533
+      },
+      "beforeWidth": 280.5253283302064,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 280.5253283302064,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/cellarabstraction/attack.png",
+      "sha256": "ae0568b7a08c2724802872a5227bc498bb4e5ca7da11e83ac8eae21d2f255238",
+      "visibleBounds": {
+        "x": 28,
+        "y": 33,
+        "width": 592,
+        "height": 254
+      },
+      "beforeWidth": 652.5984251968504,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 290,
+      "expectedHeight": 124.42567567567568,
+      "widthLimited": true
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/cellarabstraction/hit.png",
+      "sha256": "a5dfe72b921fe499031aa3c9a84e0cfb124c08d6f05a572da201a12943f6152f",
+      "visibleBounds": {
+        "x": 55,
+        "y": 67,
+        "width": 454,
+        "height": 503
+      },
+      "beforeWidth": 252.72365805168985,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 252.72365805168985,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/cellarabstraction/walk.png",
+      "sha256": "b263cd7831c5a8a8162bd3cf0bb36e2976674cd929d054717be30275dae6da4f",
+      "visibleBounds": {
+        "x": 46,
+        "y": 55,
+        "width": 498,
+        "height": 510
+      },
+      "beforeWidth": 273.4117647058824,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 273.4117647058824,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/cellarabstraction/jump.png",
+      "sha256": "56796d1ca660781774b00f53fb792b02f610bc1d17e247d5fbb3bcfcf2029818",
+      "visibleBounds": {
+        "x": 36,
+        "y": 41,
+        "width": 573,
+        "height": 482
+      },
+      "beforeWidth": 332.8630705394191,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 290,
+      "expectedHeight": 243.94415357766144,
+      "widthLimited": true
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/cellarabstraction/crouch.png",
+      "sha256": "0cdb87682731584ce36f4e71fadf26c3919c7956860c88d71747a2da546da57e",
+      "visibleBounds": {
+        "x": 38,
+        "y": 221,
+        "width": 570,
+        "height": 211
+      },
+      "beforeWidth": 559.7345971563981,
+      "beforeHeight": 207.2,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 290,
+      "expectedHeight": 107.35087719298245,
+      "widthLimited": true
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/cellarabstraction/victory.png",
+      "sha256": "71d6014e89c5d1e7961b4c6b2f3802161ae6fc5f72327dca90b848fa40ba6340",
+      "visibleBounds": {
+        "x": 67,
+        "y": 46,
+        "width": 460,
+        "height": 529
+      },
+      "beforeWidth": 243.47826086956522,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 243.47826086956522,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/cellarabstraction/defeat.png",
+      "sha256": "1d9b48faf97f0f41d4d862e71e7ac46cb90531b6875454868a92b6b11503cab4",
+      "visibleBounds": {
+        "x": 26,
+        "y": 84,
+        "width": 592,
+        "height": 189
+      },
+      "beforeWidth": 649.0074074074074,
+      "beforeHeight": 207.2,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 290,
+      "expectedHeight": 92.58445945945945,
+      "widthLimited": true
+    },
+    {
+      "id": "cellarabstraction",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/cellarabstraction/heavy.png",
+      "sha256": "6adae4f4c9a295cfb07e9628fd4fa1ce8697d6363f82032f828ff4caa954c781",
+      "visibleBounds": {
+        "x": 31,
+        "y": 41,
+        "width": 567,
+        "height": 345
+      },
+      "beforeWidth": 460.17391304347825,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 290,
+      "expectedWidth": 290,
+      "expectedHeight": 176.45502645502646,
+      "widthLimited": true
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/aquaticabstraction/intro.png",
+      "sha256": "6c671227a0f684748cffb17c97ab95f912cc14b3f3d3a1876f183a140e295587",
+      "visibleBounds": {
+        "x": 46,
+        "y": 20,
+        "width": 551,
+        "height": 281
+      },
+      "beforeWidth": 392.1708185053381,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 392.1708185053381,
+      "expectedHeight": 200,
+      "widthLimited": false
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/aquaticabstraction/attack.png",
+      "sha256": "e06966eac1d269132b413da578b71365692a6d9b30dc0671c981a55e5c6bcd24",
+      "visibleBounds": {
+        "x": 19,
+        "y": 49,
+        "width": 610,
+        "height": 214
+      },
+      "beforeWidth": 570.0934579439253,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 480,
+      "expectedHeight": 168.39344262295083,
+      "widthLimited": true
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/aquaticabstraction/hit.png",
+      "sha256": "580df2b2e26e1f88b7f91277bf2909801ac8d609a32ce076955f7a4c9fbfe509",
+      "visibleBounds": {
+        "x": 43,
+        "y": 28,
+        "width": 511,
+        "height": 267
+      },
+      "beforeWidth": 382.77153558052436,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 382.77153558052436,
+      "expectedHeight": 200,
+      "widthLimited": false
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/aquaticabstraction/walk.png",
+      "sha256": "d50c357c7c46c45bb5270bdf8cff0d0d08a910d0ca16ca916929a98c9b7ff387",
+      "visibleBounds": {
+        "x": 23,
+        "y": 22,
+        "width": 597,
+        "height": 277
+      },
+      "beforeWidth": 431.0469314079422,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 431.0469314079422,
+      "expectedHeight": 200,
+      "widthLimited": false
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/aquaticabstraction/jump.png",
+      "sha256": "93d94b7e2036c005c924cbbb6bc4ae1f1bf1d15e53b60f2dc9ebee74204de59b",
+      "visibleBounds": {
+        "x": 37,
+        "y": 21,
+        "width": 568,
+        "height": 278
+      },
+      "beforeWidth": 408.63309352517985,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 408.63309352517985,
+      "expectedHeight": 200,
+      "widthLimited": false
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/aquaticabstraction/crouch.png",
+      "sha256": "4295166e48a034248b32b477a68a5445ea2b1b8f6e890718528f31c4980644a8",
+      "visibleBounds": {
+        "x": 27,
+        "y": 59,
+        "width": 588,
+        "height": 219
+      },
+      "beforeWidth": 397.36986301369865,
+      "beforeHeight": 148,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 397.36986301369865,
+      "expectedHeight": 148,
+      "widthLimited": false
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/aquaticabstraction/victory.png",
+      "sha256": "b5479883b76599c4cd71e5dbe2ed6ab4e144ffa0e847fa42d58cf50bea4ba143",
+      "visibleBounds": {
+        "x": 34,
+        "y": 29,
+        "width": 574,
+        "height": 258
+      },
+      "beforeWidth": 444.9612403100775,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 444.9612403100775,
+      "expectedHeight": 200,
+      "widthLimited": false
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/aquaticabstraction/defeat.png",
+      "sha256": "68735c636d42dc1d2e35ea882330ed6c52739c531188113f748da7243765c8cd",
+      "visibleBounds": {
+        "x": 32,
+        "y": 103,
+        "width": 580,
+        "height": 167
+      },
+      "beforeWidth": 514.0119760479042,
+      "beforeHeight": 148,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 480,
+      "expectedHeight": 138.20689655172413,
+      "widthLimited": true
+    },
+    {
+      "id": "aquaticabstraction",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/aquaticabstraction/heavy.png",
+      "sha256": "a90f9f75daa6e9f3b03d0791b034a8d2e80a2817942728c14b9887b82e97618d",
+      "visibleBounds": {
+        "x": 19,
+        "y": 18,
+        "width": 603,
+        "height": 284
+      },
+      "beforeWidth": 424.6478873239437,
+      "beforeHeight": 200,
+      "maxIllustratedWidth": 480,
+      "expectedWidth": 424.6478873239437,
+      "expectedHeight": 200,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/abstractedjax/intro.png",
+      "sha256": "cee362be32357e455615bf045c8b0d5759220738d50ef716214825c2df3f253f",
+      "visibleBounds": {
+        "x": 26,
+        "y": 15,
+        "width": 588,
+        "height": 531
+      },
+      "beforeWidth": 343.2768361581921,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 343.2768361581921,
+      "expectedHeight": 310,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/abstractedjax/attack.png",
+      "sha256": "7036cb8b299d2074003ec33e900d97cb717b07426ce572d1e199f65923f5ba59",
+      "visibleBounds": {
+        "x": 33,
+        "y": 70,
+        "width": 590,
+        "height": 445
+      },
+      "beforeWidth": 411.0112359550562,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 411.0112359550562,
+      "expectedHeight": 310,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/abstractedjax/hit.png",
+      "sha256": "6dfc64ea755a9f67d9f94100977217e4ad0ab503e39db3717a419a0e75aea527",
+      "visibleBounds": {
+        "x": 39,
+        "y": 43,
+        "width": 562,
+        "height": 491
+      },
+      "beforeWidth": 354.826883910387,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 354.826883910387,
+      "expectedHeight": 310,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/abstractedjax/walk.png",
+      "sha256": "796e954e7834d1036ced80159a734eb85a4c0ca5b61ba8cf21f687a17022d090",
+      "visibleBounds": {
+        "x": 46,
+        "y": 25,
+        "width": 563,
+        "height": 518
+      },
+      "beforeWidth": 336.9305019305019,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 336.9305019305019,
+      "expectedHeight": 310,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/abstractedjax/jump.png",
+      "sha256": "1b2433c0044364d0ab793e566f515eb90a8195b22aa8cee02a16ccfc51423a9f",
+      "visibleBounds": {
+        "x": 66,
+        "y": 23,
+        "width": 520,
+        "height": 461
+      },
+      "beforeWidth": 349.6746203904555,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 349.6746203904555,
+      "expectedHeight": 310,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/abstractedjax/crouch.png",
+      "sha256": "bcc889f1f4c0246e151e99af3e5938811e84db9fc1f95dce19764ac405d4a66e",
+      "visibleBounds": {
+        "x": 31,
+        "y": 123,
+        "width": 581,
+        "height": 371
+      },
+      "beforeWidth": 359.24905660377357,
+      "beforeHeight": 229.4,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 359.24905660377357,
+      "expectedHeight": 229.4,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/abstractedjax/victory.png",
+      "sha256": "57853976565da4315f51928dea596e6b048d371472725fcb6e528c32b80623de",
+      "visibleBounds": {
+        "x": 51,
+        "y": 27,
+        "width": 534,
+        "height": 512
+      },
+      "beforeWidth": 323.3203125,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 323.3203125,
+      "expectedHeight": 310,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/abstractedjax/defeat.png",
+      "sha256": "94c4b29de2d3e2058d4e8fc79cd2d0b1588faeb4456df4c8536e0d7334835e1c",
+      "visibleBounds": {
+        "x": 22,
+        "y": 140,
+        "width": 598,
+        "height": 378
+      },
+      "beforeWidth": 362.9132275132275,
+      "beforeHeight": 229.4,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 362.9132275132275,
+      "expectedHeight": 229.4,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedjax",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/abstractedjax/heavy.png",
+      "sha256": "ebe46eec39f66032d6c043d39f7eca07f2a36e867b588a185f0c128d8833f44c",
+      "visibleBounds": {
+        "x": 31,
+        "y": 152,
+        "width": 593,
+        "height": 364
+      },
+      "beforeWidth": 505.0274725274725,
+      "beforeHeight": 310,
+      "maxIllustratedWidth": 420,
+      "expectedWidth": 420,
+      "expectedHeight": 257.80775716694774,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/abstractedqueenie/intro.png",
+      "sha256": "c55eb6abfebaab79835a5f3f3f3309c7e870b1e747dcc7c74abdcff979fbad23",
+      "visibleBounds": {
+        "x": 26,
+        "y": 15,
+        "width": 587,
+        "height": 537
+      },
+      "beforeWidth": 311.536312849162,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 311.536312849162,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/abstractedqueenie/attack.png",
+      "sha256": "ef240a113bba3605d2bb80f150fa583493b8c92c04fd6f9f0d5c580faf8841a5",
+      "visibleBounds": {
+        "x": 31,
+        "y": 63,
+        "width": 576,
+        "height": 460
+      },
+      "beforeWidth": 356.8695652173913,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 355,
+      "expectedHeight": 283.50694444444446,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/abstractedqueenie/hit.png",
+      "sha256": "efc557a3399c9f13ff6f12d708086b8545cd3f4ca0c102d379775a55024b3fe7",
+      "visibleBounds": {
+        "x": 42,
+        "y": 32,
+        "width": 513,
+        "height": 520
+      },
+      "beforeWidth": 281.16346153846155,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 281.16346153846155,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/abstractedqueenie/walk.png",
+      "sha256": "ea8ced6ed00639f8fd120bc1563ff12da1ceef7fcaa318cd191f2292a902f084",
+      "visibleBounds": {
+        "x": 50,
+        "y": 40,
+        "width": 536,
+        "height": 485
+      },
+      "beforeWidth": 314.96907216494844,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 314.96907216494844,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/abstractedqueenie/jump.png",
+      "sha256": "d1103fd5f33e3f118bb2f24b346a9c9fac153e4015e0980d941892cd061db55f",
+      "visibleBounds": {
+        "x": 58,
+        "y": 44,
+        "width": 542,
+        "height": 444
+      },
+      "beforeWidth": 347.9054054054054,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 347.9054054054054,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/abstractedqueenie/crouch.png",
+      "sha256": "98d4c5efbb3567786c31ab70ccc6b71e81c372fb895917b8d234213c37712c4d",
+      "visibleBounds": {
+        "x": 50,
+        "y": 116,
+        "width": 540,
+        "height": 417
+      },
+      "beforeWidth": 273.10791366906477,
+      "beforeHeight": 210.9,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 273.10791366906477,
+      "expectedHeight": 210.9,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/abstractedqueenie/victory.png",
+      "sha256": "caa9c18672ad49687480fe6c5377ba7cad5583293cd64c7a6cfb92ecc23ccf21",
+      "visibleBounds": {
+        "x": 48,
+        "y": 16,
+        "width": 545,
+        "height": 541
+      },
+      "beforeWidth": 287.1072088724584,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 287.1072088724584,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/abstractedqueenie/defeat.png",
+      "sha256": "da3393a899d7e5e189596e40485ab04d90fb9b1f2b803793878f930f3e4d05d2",
+      "visibleBounds": {
+        "x": 34,
+        "y": 196,
+        "width": 574,
+        "height": 301
+      },
+      "beforeWidth": 402.1813953488372,
+      "beforeHeight": 210.9,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 355,
+      "expectedHeight": 186.15853658536585,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedqueenie",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/abstractedqueenie/heavy.png",
+      "sha256": "87633e4bb3a7d2e84e80f796b7327312eb671da27c1c5678401852ffe08215e7",
+      "visibleBounds": {
+        "x": 28,
+        "y": 148,
+        "width": 599,
+        "height": 374
+      },
+      "beforeWidth": 456.4572192513369,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 355,
+      "expectedWidth": 355,
+      "expectedHeight": 221.65275459098498,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/abstractedribbit/intro.png",
+      "sha256": "fb5f06397a4b890045a3c79fd611367d26ffda6e2ac913c665757419c6dc5705",
+      "visibleBounds": {
+        "x": 6,
+        "y": 17,
+        "width": 570,
+        "height": 603
+      },
+      "beforeWidth": 255.22388059701493,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 255.22388059701493,
+      "expectedHeight": 270,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/abstractedribbit/attack.png",
+      "sha256": "1890343866dc75084ee7568e77744cb1ea632322a8c9c946ebda820d7f50ef5c",
+      "visibleBounds": {
+        "x": 19,
+        "y": 50,
+        "width": 605,
+        "height": 499
+      },
+      "beforeWidth": 327.3547094188377,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 300,
+      "expectedHeight": 247.43801652892563,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/abstractedribbit/hit.png",
+      "sha256": "fa4dc7ff182f67d94f5cd20917dfa35f7a7054100c9abb51c70290a1fe9f285a",
+      "visibleBounds": {
+        "x": 49,
+        "y": 38,
+        "width": 506,
+        "height": 571
+      },
+      "beforeWidth": 239.2644483362522,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 239.2644483362522,
+      "expectedHeight": 270,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/abstractedribbit/walk.png",
+      "sha256": "69e100d406d98d609d7e1b8b3c30241f7988c0a76e479d461cad42b79c3362d0",
+      "visibleBounds": {
+        "x": 34,
+        "y": 31,
+        "width": 571,
+        "height": 525
+      },
+      "beforeWidth": 293.65714285714284,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 293.65714285714284,
+      "expectedHeight": 270,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/abstractedribbit/jump.png",
+      "sha256": "25c317980bd7a785e6f0e73809f39b69726165a3ff1c1a470be5364112c2b972",
+      "visibleBounds": {
+        "x": 56,
+        "y": 44,
+        "width": 475,
+        "height": 501
+      },
+      "beforeWidth": 255.9880239520958,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 255.9880239520958,
+      "expectedHeight": 270,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/abstractedribbit/crouch.png",
+      "sha256": "c88496fe1bdb3d25e9e951ab65ebde1c1cc39b0963b3350a39b655fc4e883b14",
+      "visibleBounds": {
+        "x": 29,
+        "y": 97,
+        "width": 584,
+        "height": 444
+      },
+      "beforeWidth": 262.8,
+      "beforeHeight": 199.8,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 262.8,
+      "expectedHeight": 199.8,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/abstractedribbit/victory.png",
+      "sha256": "3565f1edecf117a1d33119ce13e5298dd11f04f0a923bf1b358191bbabe4e9e6",
+      "visibleBounds": {
+        "x": 37,
+        "y": 23,
+        "width": 513,
+        "height": 593
+      },
+      "beforeWidth": 233.57504215851603,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 233.57504215851603,
+      "expectedHeight": 270,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/abstractedribbit/defeat.png",
+      "sha256": "4446194b610e33381b38b4e85d5366060977629d7936c47e936d8d0025c1c898",
+      "visibleBounds": {
+        "x": 20,
+        "y": 151,
+        "width": 603,
+        "height": 334
+      },
+      "beforeWidth": 360.7167664670659,
+      "beforeHeight": 199.8,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 300,
+      "expectedHeight": 166.16915422885572,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedribbit",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/abstractedribbit/heavy.png",
+      "sha256": "fbd980d59e62c7466a01948e0bdacc13891f842d21e8856f655095135f6f6120",
+      "visibleBounds": {
+        "x": 26,
+        "y": 160,
+        "width": 588,
+        "height": 333
+      },
+      "beforeWidth": 476.7567567567568,
+      "beforeHeight": 270,
+      "maxIllustratedWidth": 300,
+      "expectedWidth": 300,
+      "expectedHeight": 169.89795918367346,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/intro.png",
+      "sha256": "a0d93dc5f34e845846c7b6abc8389b33859b1256b61e55ee268606d2b51ad9f7",
+      "visibleBounds": {
+        "x": 55,
+        "y": 12,
+        "width": 291,
+        "height": 622
+      },
+      "beforeWidth": 133.33601286173632,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 133.33601286173632,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/attack.png",
+      "sha256": "7a626857fe88862ccdf6972211fdc4d767bb72ca34c778b2361f2341bbe3e825",
+      "visibleBounds": {
+        "x": 19,
+        "y": 35,
+        "width": 600,
+        "height": 379
+      },
+      "beforeWidth": 451.1873350923483,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 315,
+      "expectedHeight": 198.975,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/hit.png",
+      "sha256": "9f48f545ac59dad2979cd0b69e2982b1c01f96dca4cf3209ebc87505b345fb72",
+      "visibleBounds": {
+        "x": 33,
+        "y": 29,
+        "width": 355,
+        "height": 592
+      },
+      "beforeWidth": 170.90371621621622,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 170.90371621621622,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/walk.png",
+      "sha256": "ea9f2eb4a903e9ce50261c45c5ab0dd18c8d30167a7f666fc293e7410aaa2dc0",
+      "visibleBounds": {
+        "x": 39,
+        "y": 48,
+        "width": 348,
+        "height": 540
+      },
+      "beforeWidth": 183.66666666666666,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 183.66666666666666,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/jump.png",
+      "sha256": "1cd541e3d1bb3fb3aa340c8e974d2dd122ac5d56b84a1b1b170c99cd3583b019",
+      "visibleBounds": {
+        "x": 55,
+        "y": 33,
+        "width": 305,
+        "height": 510
+      },
+      "beforeWidth": 170.44117647058823,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 170.44117647058823,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/crouch.png",
+      "sha256": "8fe760489faba7854b79bcb5cf5e2d38f125db5748df22f1162f5493e8523c9b",
+      "visibleBounds": {
+        "x": 46,
+        "y": 45,
+        "width": 540,
+        "height": 362
+      },
+      "beforeWidth": 314.6022099447514,
+      "beforeHeight": 210.9,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 314.6022099447514,
+      "expectedHeight": 210.9,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/victory.png",
+      "sha256": "3fa12741fa2312f5ecab10ebf81a1d7d99a7e4a89ad68cf2f3be7a5a474bcca7",
+      "visibleBounds": {
+        "x": 78,
+        "y": 12,
+        "width": 245,
+        "height": 613
+      },
+      "beforeWidth": 113.90701468189233,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 113.90701468189233,
+      "expectedHeight": 285,
+      "widthLimited": false
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/defeat.png",
+      "sha256": "eff58e192a2e24e483e69858694b18104cda426da40ba0607e19afc14083e7d2",
+      "visibleBounds": {
+        "x": 38,
+        "y": 61,
+        "width": 556,
+        "height": 233
+      },
+      "beforeWidth": 503.26351931330476,
+      "beforeHeight": 210.9,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 315,
+      "expectedHeight": 132.00539568345323,
+      "widthLimited": true
+    },
+    {
+      "id": "abstractedqueeniedark",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/heavy.png",
+      "sha256": "2c90dd1ef9276460d618735c52e6b89eff18c484dcb2cbbf5276ec8ded5e33a5",
+      "visibleBounds": {
+        "x": 23,
+        "y": 46,
+        "width": 591,
+        "height": 350
+      },
+      "beforeWidth": 481.24285714285713,
+      "beforeHeight": 285,
+      "maxIllustratedWidth": 315,
+      "expectedWidth": 315,
+      "expectedHeight": 186.5482233502538,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedpomni/intro.png",
+      "sha256": "cfb3cb4d3e8a26ac762d1199c16a9e26e07fa8e3916c03d9d7373d21bac7d865",
+      "visibleBounds": {
+        "x": 67,
+        "y": 69,
+        "width": 534,
+        "height": 483
+      },
+      "beforeWidth": 287.45341614906835,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 287.45341614906835,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/originalabstractedpomni/attack.png",
+      "sha256": "78c873562d72845e316f14a1413fc38a41f97961b7b74031beea915885f13a7e",
+      "visibleBounds": {
+        "x": 39,
+        "y": 128,
+        "width": 577,
+        "height": 383
+      },
+      "beforeWidth": 391.6971279373368,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 391.6971279373368,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedpomni/hit.png",
+      "sha256": "6fd54d706ed1d41ca568bdb8bdd6a4defc99cb54d2d6475fefdb42aa8dd6165e",
+      "visibleBounds": {
+        "x": 49,
+        "y": 100,
+        "width": 537,
+        "height": 440
+      },
+      "beforeWidth": 317.3181818181818,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 317.3181818181818,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/originalabstractedpomni/walk.png",
+      "sha256": "168cf5decbf16588e3707418bdd4f0ba10a0ff3c6101df300a3499fc87049c91",
+      "visibleBounds": {
+        "x": 36,
+        "y": 138,
+        "width": 558,
+        "height": 360
+      },
+      "beforeWidth": 403,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 403,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/originalabstractedpomni/jump.png",
+      "sha256": "a0116bd88b1e5ed83202c13f0d006837eafb7a976042c9b68d09da42113ca879",
+      "visibleBounds": {
+        "x": 30,
+        "y": 89,
+        "width": 557,
+        "height": 410
+      },
+      "beforeWidth": 353.219512195122,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 353.219512195122,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/originalabstractedpomni/crouch.png",
+      "sha256": "f30b81b116e877ec36fd617bbeaf679eb17bb378b5a1659e0c9bb02c4c783f37",
+      "visibleBounds": {
+        "x": 31,
+        "y": 205,
+        "width": 583,
+        "height": 281
+      },
+      "beforeWidth": 399.17864768683273,
+      "beforeHeight": 192.4,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 399.17864768683273,
+      "expectedHeight": 192.4,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedpomni/victory.png",
+      "sha256": "a21327fe653daebe7a3f5139d615e4bb7a69b6ae7c2e95ff9631380df8d7ff99",
+      "visibleBounds": {
+        "x": 62,
+        "y": 83,
+        "width": 515,
+        "height": 480
+      },
+      "beforeWidth": 278.9583333333333,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 278.9583333333333,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/originalabstractedpomni/defeat.png",
+      "sha256": "0ad139e3c9b1d3e716d279d7cb39686cfb6dbbae9a7d3843481c463e7ae427bf",
+      "visibleBounds": {
+        "x": 28,
+        "y": 203,
+        "width": 584,
+        "height": 235
+      },
+      "beforeWidth": 478.1344680851064,
+      "beforeHeight": 192.4,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 478.1344680851064,
+      "expectedHeight": 192.4,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedpomni/heavy.png",
+      "sha256": "58d8d72f65931c0c6f8368e019183ef6cf10975b809ca70d910752f325656248",
+      "visibleBounds": {
+        "x": 48,
+        "y": 81,
+        "width": 493,
+        "height": 486
+      },
+      "beforeWidth": 263.7448559670782,
+      "beforeHeight": 260,
+      "maxIllustratedWidth": 530,
+      "expectedWidth": 263.7448559670782,
+      "expectedHeight": 260,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedragatha/intro.png",
+      "sha256": "81e2d004ec9a011b6ac33e3446638cc3497fb6cb41f781c66eb5de09c2909381",
+      "visibleBounds": {
+        "x": 55,
+        "y": 72,
+        "width": 545,
+        "height": 482
+      },
+      "beforeWidth": 310.9439834024896,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 310.9439834024896,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/originalabstractedragatha/attack.png",
+      "sha256": "93bf2039077190523b88daf593a6940abb594023a7a965a2ba1d77104d13d9d9",
+      "visibleBounds": {
+        "x": 38,
+        "y": 110,
+        "width": 577,
+        "height": 431
+      },
+      "beforeWidth": 368.1554524361949,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 368.1554524361949,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedragatha/hit.png",
+      "sha256": "0866ed9aa0b620ab9c39a0f238fc8af3a45071f812ea9dfa14e5726f20b727e3",
+      "visibleBounds": {
+        "x": 63,
+        "y": 97,
+        "width": 493,
+        "height": 441
+      },
+      "beforeWidth": 307.4263038548753,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 307.4263038548753,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/originalabstractedragatha/walk.png",
+      "sha256": "e49d7db30024baa7c45742696140f1ffdcfe7610b4cabc8328c0df2fb86ee7ee",
+      "visibleBounds": {
+        "x": 59,
+        "y": 116,
+        "width": 537,
+        "height": 413
+      },
+      "beforeWidth": 357.5665859564165,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 357.5665859564165,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/originalabstractedragatha/jump.png",
+      "sha256": "af4572974f81ca28489a53b1711e9069004f6b0d062c450a445afcacc3d3fe63",
+      "visibleBounds": {
+        "x": 58,
+        "y": 68,
+        "width": 541,
+        "height": 444
+      },
+      "beforeWidth": 335.0788288288288,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 335.0788288288288,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/originalabstractedragatha/crouch.png",
+      "sha256": "03ad3eba658828c8acc29061ca83bb2b227828820d1fcd67617d00dfb5b9a3be",
+      "visibleBounds": {
+        "x": 45,
+        "y": 194,
+        "width": 550,
+        "height": 312
+      },
+      "beforeWidth": 358.73397435897436,
+      "beforeHeight": 203.5,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 358.73397435897436,
+      "expectedHeight": 203.5,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedragatha/victory.png",
+      "sha256": "fa005c31fe0db80418407918c92b4efddd216bbf197f07ea93fa76d7a22da2cf",
+      "visibleBounds": {
+        "x": 65,
+        "y": 65,
+        "width": 531,
+        "height": 502
+      },
+      "beforeWidth": 290.88645418326695,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 290.88645418326695,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/originalabstractedragatha/defeat.png",
+      "sha256": "ebc099af0ac00b3aa51f66e7d36e812f27f178be3073d191fcaddb4b55555f25",
+      "visibleBounds": {
+        "x": 26,
+        "y": 196,
+        "width": 591,
+        "height": 283
+      },
+      "beforeWidth": 424.97703180212017,
+      "beforeHeight": 203.5,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 395,
+      "expectedHeight": 189.1455160744501,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedragatha/heavy.png",
+      "sha256": "786abc0f0a627fafea5861df7f7db8dcbccd9358292a2eefa3dc47c29a4804da",
+      "visibleBounds": {
+        "x": 68,
+        "y": 84,
+        "width": 428,
+        "height": 492
+      },
+      "beforeWidth": 239.22764227642276,
+      "beforeHeight": 275,
+      "maxIllustratedWidth": 395,
+      "expectedWidth": 239.22764227642276,
+      "expectedHeight": 275,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedgangle/intro.png",
+      "sha256": "3f1900e8f1b52d131b6ef838dd130047484a547218c62e24f228a22ab86afd51",
+      "visibleBounds": {
+        "x": 49,
+        "y": 72,
+        "width": 544,
+        "height": 518
+      },
+      "beforeWidth": 309.80694980694983,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 309.80694980694983,
+      "expectedHeight": 295,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/originalabstractedgangle/attack.png",
+      "sha256": "40e5f8c654e7d530a1f7903800c25fa4edab8231c6bb69f361a46cf1d8261159",
+      "visibleBounds": {
+        "x": 55,
+        "y": 121,
+        "width": 546,
+        "height": 422
+      },
+      "beforeWidth": 381.6824644549763,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 325,
+      "expectedHeight": 251.1904761904762,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedgangle/hit.png",
+      "sha256": "dab1e3dfa1dbb3ed3354503175b1116dc38eb25368fbd575beaa0aa98085528f",
+      "visibleBounds": {
+        "x": 61,
+        "y": 82,
+        "width": 507,
+        "height": 489
+      },
+      "beforeWidth": 305.8588957055215,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 305.8588957055215,
+      "expectedHeight": 295,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/originalabstractedgangle/walk.png",
+      "sha256": "d3740f14bd9ac7d1793c482c1ca2e32b713f1171f89f227ff1c2af7ea969f402",
+      "visibleBounds": {
+        "x": 83,
+        "y": 106,
+        "width": 487,
+        "height": 442
+      },
+      "beforeWidth": 325.0339366515837,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 325,
+      "expectedHeight": 294.96919917864477,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/originalabstractedgangle/jump.png",
+      "sha256": "6d974b1d28728b502a598107e88c4b0f1eac3a1cf2da838e14ca8c85b49ea18d",
+      "visibleBounds": {
+        "x": 75,
+        "y": 82,
+        "width": 518,
+        "height": 446
+      },
+      "beforeWidth": 342.62331838565024,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 325,
+      "expectedHeight": 279.8262548262548,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/originalabstractedgangle/crouch.png",
+      "sha256": "8353fb8ca081b556a66f9caf9fcc3a1cfa064b029df19cede839f503d7310f4c",
+      "visibleBounds": {
+        "x": 74,
+        "y": 223,
+        "width": 492,
+        "height": 259
+      },
+      "beforeWidth": 414.6857142857143,
+      "beforeHeight": 218.3,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 325,
+      "expectedHeight": 171.08739837398375,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedgangle/victory.png",
+      "sha256": "2169b80de36c50fae7335274239bc799bebf316549fd20a86ebf57e23c56c272",
+      "visibleBounds": {
+        "x": 114,
+        "y": 55,
+        "width": 450,
+        "height": 540
+      },
+      "beforeWidth": 245.83333333333334,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 245.83333333333334,
+      "expectedHeight": 295,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/originalabstractedgangle/defeat.png",
+      "sha256": "1c2fddff3aaa0d64c5bd1ca00d45433c868f6455018fd93f905c23d4516486eb",
+      "visibleBounds": {
+        "x": 45,
+        "y": 219,
+        "width": 582,
+        "height": 217
+      },
+      "beforeWidth": 585.4866359447005,
+      "beforeHeight": 218.3,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 325.00000000000006,
+      "expectedHeight": 121.17697594501719,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedgangle",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedgangle/heavy.png",
+      "sha256": "35d19b2b6768d193f3e70c860e22ca73364844635f0e9fa65a5f2bdd3c4e84ca",
+      "visibleBounds": {
+        "x": 64,
+        "y": 55,
+        "width": 515,
+        "height": 536
+      },
+      "beforeWidth": 283.44216417910445,
+      "beforeHeight": 295,
+      "maxIllustratedWidth": 325,
+      "expectedWidth": 283.44216417910445,
+      "expectedHeight": 295,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedkinger/intro.png",
+      "sha256": "e243f4a0ef548aaef677c11a3a4029a1a4c4c24f559fa567c8d953c15bd30a86",
+      "visibleBounds": {
+        "x": 67,
+        "y": 77,
+        "width": 513,
+        "height": 499
+      },
+      "beforeWidth": 323.8376753507014,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 323.8376753507014,
+      "expectedHeight": 315,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/originalabstractedkinger/attack.png",
+      "sha256": "7f0a8d7b841d89e232f8ad444e9357185b2d9fa362514281e26f754987c4c62c",
+      "visibleBounds": {
+        "x": 43,
+        "y": 143,
+        "width": 552,
+        "height": 392
+      },
+      "beforeWidth": 443.57142857142856,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 390,
+      "expectedHeight": 276.95652173913044,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedkinger/hit.png",
+      "sha256": "4d83237efbc2b18f361bbcb89db911c195c733c77fe54a6afd507854a25275b1",
+      "visibleBounds": {
+        "x": 63,
+        "y": 85,
+        "width": 446,
+        "height": 478
+      },
+      "beforeWidth": 293.9121338912134,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 293.9121338912134,
+      "expectedHeight": 315,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/originalabstractedkinger/walk.png",
+      "sha256": "2dc7e46d5b00e66c6335f15baaf14a482dfadde2b7e92ea082866308d28cc22c",
+      "visibleBounds": {
+        "x": 67,
+        "y": 88,
+        "width": 516,
+        "height": 460
+      },
+      "beforeWidth": 353.3478260869565,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 353.3478260869565,
+      "expectedHeight": 315,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/originalabstractedkinger/jump.png",
+      "sha256": "e3d8ee1241649f360d17a95b808851e99d808e777023b31681efd488f49add71",
+      "visibleBounds": {
+        "x": 52,
+        "y": 87,
+        "width": 542,
+        "height": 457
+      },
+      "beforeWidth": 373.5886214442013,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 373.5886214442013,
+      "expectedHeight": 315,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/originalabstractedkinger/crouch.png",
+      "sha256": "ab8f937a065140e9c7f217529f0f7b2ae936cdd17f34962d920aa957a7d80dd1",
+      "visibleBounds": {
+        "x": 64,
+        "y": 184,
+        "width": 497,
+        "height": 315
+      },
+      "beforeWidth": 367.78,
+      "beforeHeight": 233.1,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 367.78,
+      "expectedHeight": 233.1,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedkinger/victory.png",
+      "sha256": "cc6b6756f65b0bb95ee5bcde77e825bd786826e764764d005ae6ca01630f04d9",
+      "visibleBounds": {
+        "x": 96,
+        "y": 65,
+        "width": 430,
+        "height": 509
+      },
+      "beforeWidth": 266.1100196463654,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 266.1100196463654,
+      "expectedHeight": 315,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/originalabstractedkinger/defeat.png",
+      "sha256": "988abf5ee1f7259308019a19e8a2a83e37751bd371176f2dbec422c90c0a484c",
+      "visibleBounds": {
+        "x": 40,
+        "y": 244,
+        "width": 560,
+        "height": 207
+      },
+      "beforeWidth": 630.6086956521739,
+      "beforeHeight": 233.1,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 390,
+      "expectedHeight": 144.16071428571428,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedkinger",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedkinger/heavy.png",
+      "sha256": "32cfab4a03e26969c19d050e03fd093a2a5406ff2ff0936c0af10a8ddf80e16f",
+      "visibleBounds": {
+        "x": 73,
+        "y": 83,
+        "width": 494,
+        "height": 489
+      },
+      "beforeWidth": 318.22085889570553,
+      "beforeHeight": 315,
+      "maxIllustratedWidth": 390,
+      "expectedWidth": 318.22085889570553,
+      "expectedHeight": 315,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedzooble/intro.png",
+      "sha256": "477b0d51b5ba4e30b1b322420a80de6e33a6b344a221f47728d13d1a193c61fb",
+      "visibleBounds": {
+        "x": 15,
+        "y": 67,
+        "width": 596,
+        "height": 490
+      },
+      "beforeWidth": 340.57142857142856,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 340.57142857142856,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "attack",
+      "file": "assets/encore/abstractions/originalabstractedzooble/attack.png",
+      "sha256": "45671eb86d62062c45549b7f70d152d6d3cde191772732ce43e26f5df91adab5",
+      "visibleBounds": {
+        "x": 40,
+        "y": 123,
+        "width": 579,
+        "height": 395
+      },
+      "beforeWidth": 410.43037974683546,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 400,
+      "expectedHeight": 272.88428324697753,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedzooble/hit.png",
+      "sha256": "dc042d6e0d7cdc9618bad00789b3aadd08cb577c21d8191fb1401dfdeae29097",
+      "visibleBounds": {
+        "x": 66,
+        "y": 84,
+        "width": 439,
+        "height": 472
+      },
+      "beforeWidth": 260.4237288135593,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 260.4237288135593,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "walk",
+      "file": "assets/encore/abstractions/originalabstractedzooble/walk.png",
+      "sha256": "571e7d2cf2a8b4b9ba7fa6a9e668ec339fa7bdc8fa8aa80f45cdca37e8d9f3d2",
+      "visibleBounds": {
+        "x": 23,
+        "y": 100,
+        "width": 574,
+        "height": 441
+      },
+      "beforeWidth": 364.44444444444446,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 364.44444444444446,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "jump",
+      "file": "assets/encore/abstractions/originalabstractedzooble/jump.png",
+      "sha256": "fc2b9d125f1bc68fce244d7e9887f913687db4d26d83ba31b12a27cf072820bf",
+      "visibleBounds": {
+        "x": 37,
+        "y": 112,
+        "width": 572,
+        "height": 408
+      },
+      "beforeWidth": 392.54901960784315,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 392.54901960784315,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "crouch",
+      "file": "assets/encore/abstractions/originalabstractedzooble/crouch.png",
+      "sha256": "a3599fc59ccfad8aa9b9ac175ba4e45d991982fd12ef93224c78df59bcf93150",
+      "visibleBounds": {
+        "x": 72,
+        "y": 170,
+        "width": 484,
+        "height": 342
+      },
+      "beforeWidth": 293.2304093567251,
+      "beforeHeight": 207.2,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 293.2304093567251,
+      "expectedHeight": 207.2,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedzooble/victory.png",
+      "sha256": "12e850d42823c96ed38d7da895853b9e9e6890022d885ecd44b175839811b2de",
+      "visibleBounds": {
+        "x": 106,
+        "y": 68,
+        "width": 453,
+        "height": 504
+      },
+      "beforeWidth": 251.66666666666666,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 251.66666666666666,
+      "expectedHeight": 280,
+      "widthLimited": false
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "defeat",
+      "file": "assets/encore/abstractions/originalabstractedzooble/defeat.png",
+      "sha256": "534fead5187737d462e35ae6bf769b540541b3b76506be8a2618ed9340b860d8",
+      "visibleBounds": {
+        "x": 54,
+        "y": 207,
+        "width": 556,
+        "height": 270
+      },
+      "beforeWidth": 426.6785185185185,
+      "beforeHeight": 207.2,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 400,
+      "expectedHeight": 194.24460431654677,
+      "widthLimited": true
+    },
+    {
+      "id": "originalabstractedzooble",
+      "pose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedzooble/heavy.png",
+      "sha256": "4a635a1393f15e3d0fb1dd3860bc7a6105a3b2bea0341afec7f1e8275f7c5186",
+      "visibleBounds": {
+        "x": 95,
+        "y": 68,
+        "width": 426,
+        "height": 503
+      },
+      "beforeWidth": 237.13717693836978,
+      "beforeHeight": 280,
+      "maxIllustratedWidth": 400,
+      "expectedWidth": 237.13717693836978,
+      "expectedHeight": 280,
+      "widthLimited": false
+    }
+  ]
+}

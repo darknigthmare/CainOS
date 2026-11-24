@@ -1,0 +1,14 @@
+{
+  "id": "originalabstractedragatha",
+  "state": "stance",
+  "prompt": "Use case: precise-object-edit. Produce ONE full-body fighting-game STANCE illustration of the EXACT original hypothetical fully abstracted RAGATHA creature in the reference. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. Change the pose to calm neutral combat idle: all supporting legs planted firmly in an even balanced low stance, forelimbs slightly bent and alert, head directed RIGHT, no airborne limb tuck. Same dark hand-painted angular obsidian facets, saturated jewel-colored body eyes, identical identity markers, volume and proportions. Character viewed from the SIDE facing RIGHT, with slight three-quarter depth so both front limbs and main facial marker are readable. Single complete character centered inside the CENTRAL 76 PERCENT of a square canvas, at least 12 percent clear blank margin on all four sides, all bells/yarn/claws visible. True transparent alpha background, opaque black character. No halo, glow, fog, shadow, ground, environment, checkerboard, particles, text, frame or watermark. New articulated pose, no duplicated floating silhouettes. Original fan-game design, not official canon.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/jump.png",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "result_store_key": "originalRecoveryResult:originalabstractedragatha:stance:1",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-d98f59a7-4a8b-4ea3-a12a-4325605edfc1.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-d98f59a7-4a8b-4ea3-a12a-4325605edfc1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

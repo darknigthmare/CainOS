@@ -1,0 +1,11 @@
+{
+  "id": "cellarabstraction",
+  "pose": "intro",
+  "slot": "intro",
+  "prompt": "Use case: identity-preserve. Asset type: SINGLE 2D UHD fighting-game state sprite, intro. Reference is this character's approved native stance, preserve character design, topology, colored eye identities, materials and crisp rendering 1:1. Lanky black-burgundy quadruped with narrow beak-like top, sparse simple white/yellow/cyan eyes, modest triangular dorsal spikes, FOUR thick feet. Distinct entrance pose: a controlled looming rise, body expanded and pupils scanning toward the RIGHT, clearly different from the neutral stance. Strict side-on fighting-game view, facing RIGHT with modest three-quarter volume. One independent newly drawn complete pose, NOT a duplicate of stance. Retain same scale and proportion relationships; fit entire subject with 8% transparent padding around extreme limbs/tendrils/spires. High detail black faceted mass legible via controlled violet/cyan rim highlights. TRUE transparent alpha outside silhouette, no black/grey background, NO environmental glow or haze, no floor, no shadow, no text/labels, no grid, no other character, no effect cloud. No extra arms, no humanoid face, no costumes beyond reference. This is an original combat adaptation of the provided project design, not an official new scene.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/cellarabstraction/stance.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-d84179de-4c23-491b-bf65-210a80520322.png",
+  "destination": "assets/encore/abstractions/cellarabstraction/intro.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native drawing using retained original prompt and regenerated matching stance."
+}

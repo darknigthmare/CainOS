@@ -1,0 +1,11 @@
+{
+  "id": "aquaticabstraction",
+  "pose": "stance",
+  "slot": "stance",
+  "prompt": "Use case: identity-preserve. Asset type: single native-alpha 2D UHD fighting game stance sprite for Digital Circus Encore. Reference is the existing project archive design; preserve its identity and detailing. A low wide faceted black-purple aquatic abstraction with long tapering streaming tendrils, many white/yellow/cyan eyes. Preserve limbless flowing form and every main eye; do not give it legs or an upright humanoid torso. Reorient so bulky leading head faces RIGHT and thin flowing tendrils trail LEFT. Floating slightly above ground baseline without water or floor. Only change pose to a readable relaxed combat guard facing RIGHT in a side-view fighting game with mild three-quarter volume. No frontal presentation. Entire character including all feet/tendrils/spikes fully inside image with minimum 8% clear padding all sides. Polished crisp hand-painted 2D sprite, matching reference black facets and colored eyes; not a plastic miniature. One single character, one pose, no sheet/grid, no letters, no floor, no scenery, no shadow. True transparent background, no faint background halo.",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-2378d8de-eea8-43bb-bfc2-63deecbc1432.png",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/selection/aquaticabstraction.png",
+  "destination": "assets/encore/abstractions/aquaticabstraction/stance.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New rendering using original recovered prompt and unchanged published selection reference."
+}

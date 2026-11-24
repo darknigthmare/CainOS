@@ -1,0 +1,34 @@
+{
+  "schema": "encore-browser-attempt/v1",
+  "createdAt": "2026-11-24T13:36:51.494221+00:00",
+  "status": "blocked_environment",
+  "attempts": 1,
+  "command": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium COMBAT_TEST_URL=http://127.0.0.1:37303 node tests/combat-render-sequences-browser.mjs",
+  "exitCode": 1,
+  "observedFailure": "Chromium process singleton socket creation failed: Operation not permitted (1).",
+  "checksExecuted": 0,
+  "browserScreenshots": 0,
+  "result": {
+    "createdAt": "2026-11-24T13:36:24.883Z",
+    "fixture": "Native Canvas procedural presentations and ambient layers, independent from gameplay simulation.",
+    "checks": [],
+    "screenshots": [],
+    "measurements": {},
+    "errors": [],
+    "limitations": [
+      "Existing illustrated cells receive finite rigid motion. Dedicated authored combat and outcome animation remains partial.",
+      "Stage layers are an original fan-game adaptation, not canonical video or a 1:1 art certification."
+    ],
+    "sourceHashes": {
+      "combat/render.mjs": "17e06600eb4efd58fdb48c0fc856d9131070d4c609a5b375d2416c3f2b6f3fb6",
+      "combat/render-poses.mjs": "1e73524eef8fe8cb83b18cd50815e2e094f8a75ce17e98b7dc8c68f373270873",
+      "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+      "combat/render-stage-motion.mjs": "22a0ecdca8bd3f5eaf1e759ac30dabd41fa117c00e0844665c89ea5f7c057d3a",
+      "combat/data.mjs": "776c4dd781718c6887e62780b52b6328737e6a9826ef36abe3ce7b993caa60a7",
+      "assets/images/cainos-jax-animation-sheet-0.5.0.png": "7d40d013015ada908d34701173b5d071d559cc41432d295e4db549b624f996fb",
+      "tests/combat-render-sequences-browser.mjs": "bdd7c17f80c192fabe3d72bfdbbfc9ccd08375a3951834ce6e162935bce6c2d1"
+    },
+    "ok": false,
+    "failure": "browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --single-process --no-zygote --user-data-dir=/tmp/playwright_chromiumdev_profile-kzLek5 --remote-debugging-pipe --no-startup-window\n<launched> pid=16\n[pid=16][err] /usr/bin/chromium: 9: [: 5225713664: unexpected operator\n[pid=16][err] [16:16:1124/143625.036324:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)\n[pid=16][err] [1124/143625.036896:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)\nCall log:\n\u001b[2m  - <launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --single-process --no-zygote --user-data-dir=/tmp/playwright_chromiumdev_profile-kzLek5 --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=16\u001b[22m\n\u001b[2m  - [pid=16][err] /usr/bin/chromium: 9: [: 5225713664: unexpected operator\u001b[22m\n\u001b[2m  - [pid=16][err] [16:16:1124/143625.036324:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)\u001b[22m\n\u001b[2m  - [pid=16][err] [1124/143625.036896:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)\u001b[22m\n\u001b[2m  - [pid=16] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=16] <kill>\u001b[22m\n\u001b[2m  - [pid=16] <will force kill>\u001b[22m\n\u001b[2m  - [pid=16] <process did exit: exitCode=null, signal=SIGABRT>\u001b[22m\n\u001b[2m  - [pid=16] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=16] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=16] <gracefully close end>\u001b[22m\n\n    at /tmp/encore-worktree/tests/combat-render-sequences-browser.mjs:24:39"
+  }
+}

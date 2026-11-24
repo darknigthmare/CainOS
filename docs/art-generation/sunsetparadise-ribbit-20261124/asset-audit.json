@@ -1,0 +1,1302 @@
+{
+  "date": "2026-11-24",
+  "expected": 33,
+  "present": 33,
+  "complete": true,
+  "issues": [],
+  "duplicate_byte_groups": [],
+  "missing": [],
+  "total_runtime_bytes": 25391030,
+  "assets": [
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/selection.png",
+      "style": "hommage",
+      "state": "selection",
+      "bytes": 651593,
+      "sha256": "9d794490aa35bfb45eef7cfff6c1f957245443ca373b344022380e963423c7fe",
+      "sha": "7bcef72f50eadbf5da5b8356309d4eaa5c4bb32c",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.8102779240402005,
+      "alphaOpaqueFraction": 0.0010327398894510453,
+      "alpha12BBox": [
+        383,
+        53,
+        913,
+        1187
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        383,
+        53,
+        341,
+        67
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e3816987-0fc2-4523-a1c8-3d33ff72262e.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:selection:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png",
+      "style": "hommage",
+      "state": "stance",
+      "bytes": 774797,
+      "sha256": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d",
+      "sha": "18ca1d696fad9c8160ab3a5b8518cbfdf37aab6a",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7648265582035413,
+      "alphaOpaqueFraction": 0.0012756626959598504,
+      "alpha12BBox": [
+        209,
+        18,
+        1024,
+        1215
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        209,
+        18,
+        230,
+        39
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-85fb4c8d-ee1c-4cce-a08a-624cf7bdfebc.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:stance:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/pomni/hommage/selection.webp": "345a29f624dc76e7b24f52004c05f6fa574a973a018f9caaf4864505ab84ed61"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/intro.png",
+      "style": "hommage",
+      "state": "intro",
+      "bytes": 810291,
+      "sha256": "4a9f2ddac8771443b7078a05a42826e18d71d95982088fbbf0e848ff7b2d1f5b",
+      "sha": "08ffe4dec6e53a980fb6fb5557ba8cb906b08cc2",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7513373472829529,
+      "alphaOpaqueFraction": 0.0009322639642458328,
+      "alpha12BBox": [
+        162,
+        83,
+        1115,
+        1186
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        162,
+        83,
+        139,
+        68
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-94df3523-fa53-4959-a79e-f4bdf05015d2.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:intro:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/attack.png",
+      "style": "hommage",
+      "state": "attack",
+      "bytes": 764690,
+      "sha256": "e96a5970579172f1c15511fc33c72421534ef5d5100df005cf91b3b2c57273f3",
+      "sha": "73d11f41c546178fdc8addb184f84f374a957855",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7659794876490923,
+      "alphaOpaqueFraction": 0.0013443424423026538,
+      "alpha12BBox": [
+        151,
+        123,
+        1166,
+        1131
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        151,
+        123,
+        88,
+        123
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e06249de-abc4-4e94-b30e-0e71b144c08a.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:attack:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/heavy.png",
+      "style": "hommage",
+      "state": "heavy",
+      "bytes": 721796,
+      "sha256": "28d666126bf3b43d4d294abb7d2e1dc3d6ac707033c6796eae357bb3235ed8e6",
+      "sha": "677ad62cfe1d7feaf9f408b4d80cb9c2c67af554",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7862451002088373,
+      "alphaOpaqueFraction": 0.0011230410374202869,
+      "alpha12BBox": [
+        180,
+        102,
+        1128,
+        1154
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        180,
+        102,
+        126,
+        100
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-87a5cab0-827c-4cc8-a7f3-c065347d2aa1.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:heavy:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/hit.png",
+      "style": "hommage",
+      "state": "hit",
+      "bytes": 755398,
+      "sha256": "38ce9b80734d0253f08c2cbddfd51f36cd90e4374c8c269a4d994878cc9eab85",
+      "sha": "21b8976da466e1b7295cd9a31642a095de96b584",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7769599800574366,
+      "alphaOpaqueFraction": 0.0009729630731897163,
+      "alpha12BBox": [
+        223,
+        62,
+        940,
+        1193
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        223,
+        62,
+        314,
+        61
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-f4d38f6c-95d8-4d97-9407-2e97243ee4e2.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:hit:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/walk.png",
+      "style": "hommage",
+      "state": "walk",
+      "bytes": 705491,
+      "sha256": "9b0a67c6ea975f962f6d81457accda9478e3a3e8034bab9488a17c7bcc560eef",
+      "sha": "b11eb4354239cb9dd66122b3d58da0472e9ab58d",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7974710591179994,
+      "alphaOpaqueFraction": 0.0012298761983979814,
+      "alpha12BBox": [
+        224,
+        78,
+        969,
+        1133
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        224,
+        78,
+        285,
+        121
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-febf4973-f54d-423a-8850-c9ff4bc736b5.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:walk:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/jump.png",
+      "style": "hommage",
+      "state": "jump",
+      "bytes": 791796,
+      "sha256": "1c88ddf1ba6ad7712b3934255a9d85ad11279dddfa928c130370ef6b78a07ced",
+      "sha": "d1b07bc063407c7ced72e557f17c62b8c8d0dddd",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7612857357254235,
+      "alphaOpaqueFraction": 0.0013220851170989674,
+      "alpha12BBox": [
+        271,
+        97,
+        1090,
+        1082
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        271,
+        97,
+        164,
+        172
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-183c7b0a-9f2d-4bcc-8eea-ccfde5043cbe.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:jump:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/crouch.png",
+      "style": "hommage",
+      "state": "crouch",
+      "bytes": 867596,
+      "sha256": "2c8c87cc6b432da323c004dc198c9d7b2e4bb0bbf4c0895fa9023ee9d716c1a1",
+      "sha": "a5d68a062c99459bfbbba51529771369be7ab8a6",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7230190344645142,
+      "alphaOpaqueFraction": 0.0011103225658753233,
+      "alpha12BBox": [
+        189,
+        180,
+        1065,
+        1075
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        189,
+        180,
+        189,
+        179
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-43e9dd0f-ff2c-4094-b5b8-03c68015c3b7.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:crouch:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/victory.png",
+      "style": "hommage",
+      "state": "victory",
+      "bytes": 721052,
+      "sha256": "2bee53200bd9898af006bd5bc6cb83f84de86860db4da0e9134ccc7bd9f5838b",
+      "sha": "28b08fcc3db591113f2d99961dafcde7da73bf5e",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.789493397841421,
+      "alphaOpaqueFraction": 0.0009309921170913365,
+      "alpha12BBox": [
+        371,
+        35,
+        921,
+        1204
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        371,
+        35,
+        333,
+        50
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e4e89a8e-e925-4b76-8664-03c95863f16e.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:victory:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/defeat.png",
+      "style": "hommage",
+      "state": "defeat",
+      "bytes": 831676,
+      "sha256": "c29922160ccc5d3f7317773ba0ca5ae834c59b9af7482b2c1c7b7ab0f0964ee8",
+      "sha": "2dffc12afe7a8ee1f94d1fc2eae2752a8e2a54f6",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7365724736664047,
+      "alphaOpaqueFraction": 0.0008425987398538393,
+      "alpha12BBox": [
+        190,
+        205,
+        1057,
+        1113
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        190,
+        205,
+        197,
+        141
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-977c6668-cb66-4385-8487-1259f51f1cc0.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:hommage:defeat:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/selection.png",
+      "style": "resident",
+      "state": "selection",
+      "bytes": 589593,
+      "sha256": "696d417d1cdc05c4288b3970632604c4ea978ccce2cadc782e6aba86a8334a91",
+      "sha": "3a02d6d3faf810c26d861ce45719513d92daf75b",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.8252717301445581,
+      "alphaOpaqueFraction": 0.0012457742878291859,
+      "alpha12BBox": [
+        396,
+        56,
+        915,
+        1177
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        396,
+        56,
+        339,
+        77
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-363e1935-1125-4576-b6ff-c33d01e52f09.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:selection:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png",
+      "style": "resident",
+      "state": "stance",
+      "bytes": 686638,
+      "sha256": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d",
+      "sha": "16075652f3126a6325a19bc45f43e0bfede3e85e",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7944389755016801,
+      "alphaOpaqueFraction": 0.0014244688130359245,
+      "alpha12BBox": [
+        237,
+        43,
+        1000,
+        1184
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        237,
+        43,
+        254,
+        70
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-673ce234-161f-47cd-910d-0a79c136f933.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:stance:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ragatha/resident/stance.webp": "8e3da18dedb16d1eea4a7d2f954b0a9794c745ef9a9fce6f528ea7cb141e219b"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/intro.png",
+      "style": "resident",
+      "state": "intro",
+      "bytes": 696053,
+      "sha256": "8adfdd0d413827239ea5acc6082ec6e08cf1153cda32d9dfff1d4e50b8e5bbbd",
+      "sha": "9108b57538037f792d0b715cc44263c4c92008f3",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7934666483520676,
+      "alphaOpaqueFraction": 0.0009971281691251472,
+      "alpha12BBox": [
+        216,
+        116,
+        1087,
+        1150
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        216,
+        116,
+        167,
+        104
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b20b47a2-902a-4154-96a9-9a6990bdd8dc.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:intro:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/attack.png",
+      "style": "resident",
+      "state": "attack",
+      "bytes": 647650,
+      "sha256": "3242d28e28f013ef5f2be82f1c3ba862d787dbce74d6d58b5016471499ea8b98",
+      "sha": "6e7caa2c6e8cfd12b80fc20b40bd44130eb790f0",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.8022818209798819,
+      "alphaOpaqueFraction": 0.0013634201496200992,
+      "alpha12BBox": [
+        168,
+        127,
+        1115,
+        1120
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        168,
+        127,
+        139,
+        134
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-9d3e4bfd-5fc6-4bca-8553-79e8b59b6a07.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:attack:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/heavy.png",
+      "style": "resident",
+      "state": "heavy",
+      "bytes": 635090,
+      "sha256": "7e2176cc28e0954e7504aaeb76e77b67c3b6c1c530df4f9c4c491649e656a561",
+      "sha": "48260d394483c8845800ce3084d79cdb2775ad1b",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.8069088009279397,
+      "alphaOpaqueFraction": 0.0006155740227762388,
+      "alpha12BBox": [
+        227,
+        147,
+        1134,
+        1141
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        227,
+        147,
+        120,
+        113
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-857583aa-3e09-4fbd-86c0-04b00ec923cd.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:heavy:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/hit.png",
+      "style": "resident",
+      "state": "hit",
+      "bytes": 650246,
+      "sha256": "c5194acd483de0d4eef69e7c94d1a3113adec5786f2475e53a450e9d2172c444",
+      "sha": "45874f981d34d9b1df70a2b49fe6aee4b9d59ef3",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.8056623907165332,
+      "alphaOpaqueFraction": 0.0012241528862027477,
+      "alpha12BBox": [
+        221,
+        90,
+        952,
+        1163
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        221,
+        90,
+        302,
+        91
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ac2b1c61-8b2d-47fa-9bea-9f0f21ec65a3.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:hit:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/walk.png",
+      "style": "resident",
+      "state": "walk",
+      "bytes": 648969,
+      "sha256": "9c6bbe310d8755e0912644ca7b4542225c17ed1f84e725e4c5afef0bfe76e6db",
+      "sha": "18b68fadb461e69a11b7951ef54f9dd11aa2da4b",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.8066722373572034,
+      "alphaOpaqueFraction": 0.0013214491935217194,
+      "alpha12BBox": [
+        275,
+        73,
+        968,
+        1143
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        275,
+        73,
+        286,
+        111
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-8b0e23ea-8faf-474b-90c4-fc5d4883335d.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:walk:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/jump.png",
+      "style": "resident",
+      "state": "jump",
+      "bytes": 696526,
+      "sha256": "11fd216c236aa30d562d3d4d0bc07183fe125dfe08a6c86d9391c0ddf63b6055",
+      "sha": "89756d6a520b3076b94000f1a01eabdaf171b745",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7906965652495745,
+      "alphaOpaqueFraction": 0.0013551531431158729,
+      "alpha12BBox": [
+        264,
+        102,
+        1064,
+        1106
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        264,
+        102,
+        190,
+        148
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ac178f79-f0a6-4886-a4b7-b661ff6745ff.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:jump:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/crouch.png",
+      "style": "resident",
+      "state": "crouch",
+      "bytes": 695616,
+      "sha256": "e4635b5e428a10d75f20617ca4679a36a79bbc1ac44f5208a0b9a69d9f324b0e",
+      "sha": "c78f1550243153568753c3297183db26f77351f2",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.77663565903304,
+      "alphaOpaqueFraction": 0.0008654919886347738,
+      "alpha12BBox": [
+        225,
+        229,
+        1077,
+        1051
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        225,
+        229,
+        177,
+        203
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-72c17586-a729-458a-87e4-537b4fa22095.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:crouch:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/victory.png",
+      "style": "resident",
+      "state": "victory",
+      "bytes": 723803,
+      "sha256": "4360042db9e1d7ac99a6e3618ce7130feb2af552f2e83b4f42ccfa796c4536b0",
+      "sha": "bd2d86aa1082e5c043981e5966bbea68f92268ac",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7357521322517545,
+      "alphaOpaqueFraction": 0.000834331733349613,
+      "alpha12BBox": [
+        356,
+        44,
+        959,
+        1201
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        356,
+        44,
+        295,
+        53
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-8c83b642-e5d3-492f-81b7-a6e1456bd1d5.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:victory:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/defeat.png",
+      "style": "resident",
+      "state": "defeat",
+      "bytes": 687971,
+      "sha256": "d889c549be4a07371d5f19760da50cf4fbfc6a140a4efb624e48f7a8347d043f",
+      "sha": "8f08cec333b20bb3072532fcb2e65cbf5a64c5e9",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7794146450656146,
+      "alphaOpaqueFraction": 0.0006524575902566333,
+      "alpha12BBox": [
+        208,
+        209,
+        1032,
+        1081
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        208,
+        209,
+        222,
+        173
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b18d9900-2c78-4a50-9aed-a3847d0a51e1.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:resident:defeat:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/selection.png",
+      "style": "fusion",
+      "state": "selection",
+      "bytes": 817543,
+      "sha256": "9ccde87698bf2bda2f16cc223eda26426a6b5774d61b84d77d723acbc7ebeb2d",
+      "sha": "74d54394c80503edf25ad03b6a8e19570023fce5",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7073562367568915,
+      "alphaOpaqueFraction": 0.0014829737821427573,
+      "alpha12BBox": [
+        175,
+        105,
+        1044,
+        1141
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        175,
+        105,
+        210,
+        113
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-14d95e1b-3856-433e-8e19-e955deb846a0.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:selection:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png",
+      "style": "fusion",
+      "state": "stance",
+      "bytes": 1009355,
+      "sha256": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87",
+      "sha": "873df904c9600fc3f5b8d0d3612b8b77b9bd4f16",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.6368901810855978,
+      "alphaOpaqueFraction": 0.002249897616304063,
+      "alpha12BBox": [
+        76,
+        65,
+        1128,
+        1197
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        76,
+        65,
+        126,
+        57
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-681bac40-f7c1-485e-8ca5-f9237f514ab9.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:stance:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/selection/ribbit.png": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/intro.png",
+      "style": "fusion",
+      "state": "intro",
+      "bytes": 922848,
+      "sha256": "77d05f5482f962cbf207df1568f3747d7454aa55b6f510c610f368d93a73620e",
+      "sha": "b7e0911b79506066d13c470b0755693e3902a730",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.6834798501255314,
+      "alphaOpaqueFraction": 0.0012890170910820622,
+      "alpha12BBox": [
+        111,
+        122,
+        1145,
+        1148
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        111,
+        122,
+        109,
+        106
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ff66ec0d-9ecb-4375-9729-4619a1a4ecbc.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:intro:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/attack.png",
+      "style": "fusion",
+      "state": "attack",
+      "bytes": 871167,
+      "sha256": "e18055dd4552ae5468a496ab84662fc50c9edcd34b03bccd838677ac6dc8b3a0",
+      "sha": "68921c7af35037a6201f9d24e894f979949a832d",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.6840884289889578,
+      "alphaOpaqueFraction": 0.0016991877984071386,
+      "alpha12BBox": [
+        77,
+        157,
+        1178,
+        1125
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        77,
+        157,
+        76,
+        129
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-21390a7e-5390-4667-8e1d-4bba85c7f5ca.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:attack:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/heavy.png",
+      "style": "fusion",
+      "state": "heavy",
+      "bytes": 804193,
+      "sha256": "b20f069f957080541c70f519c54c6c7e4936ea97a96252aee2522de57b69491c",
+      "sha": "31ec886614d243cb2dc92331f03aaf323bd138cf",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7167876193310593,
+      "alphaOpaqueFraction": 0.001598075949624678,
+      "alpha12BBox": [
+        63,
+        147,
+        1187,
+        1106
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        63,
+        147,
+        67,
+        148
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-6e20d440-0572-4120-9609-242a7e850aca.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:heavy:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/hit.png",
+      "style": "fusion",
+      "state": "hit",
+      "bytes": 837186,
+      "sha256": "e5af0ea8a9b35f932a98353130b545a7339b95142880fd5e2d435b91b49686bb",
+      "sha": "f93ee87c5f13c87017404bb1901f6f4892a35bb2",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7000564700136597,
+      "alphaOpaqueFraction": 0.001637503211414065,
+      "alpha12BBox": [
+        144,
+        131,
+        1017,
+        1154
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        144,
+        131,
+        237,
+        100
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-2ccfbc0e-6788-4b1a-bab4-902c81770ce7.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:hit:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/walk.png",
+      "style": "fusion",
+      "state": "walk",
+      "bytes": 809742,
+      "sha256": "fe97ccb8604ac79555e7e2ec7170a6becada023f795c7bcbf025b93143067ea7",
+      "sha": "ac4141138d1aadc3d431339611a37c7ced6e9927",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7131564957049722,
+      "alphaOpaqueFraction": 0.002008882580527003,
+      "alpha12BBox": [
+        106,
+        119,
+        1101,
+        1124
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        106,
+        119,
+        153,
+        130
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-8722a9c1-e21f-4a5f-9064-007e49dd0076.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:walk:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/jump.png",
+      "style": "fusion",
+      "state": "jump",
+      "bytes": 941907,
+      "sha256": "0b7f922207a262a2efb0bd17167aac2fbc6d2b9c9a9fc31007a86d5956ac6ef3",
+      "sha": "fbc25e4199e70ad22af58d14e149da048049dc36",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.6593510018340036,
+      "alphaOpaqueFraction": 0.0013914007870190193,
+      "alpha12BBox": [
+        93,
+        95,
+        1187,
+        1122
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        93,
+        95,
+        67,
+        132
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-d86afa15-726c-4168-8469-631455460c75.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:jump:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/crouch.png",
+      "style": "fusion",
+      "state": "crouch",
+      "bytes": 844625,
+      "sha256": "7d9ae97ee8212a9647fccfefa738d601b70551bef5d2c4148198e169a650f5b0",
+      "sha": "5bca10beaa17f11942d6aa7e4d77f69ed7424baa",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.7018154346283281,
+      "alphaOpaqueFraction": 0.0016909207919029122,
+      "alpha12BBox": [
+        131,
+        255,
+        1104,
+        1046
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        131,
+        255,
+        150,
+        208
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-3d9db1f3-7adb-471c-8a0f-daa256146632.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:crouch:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/victory.png",
+      "style": "fusion",
+      "state": "victory",
+      "bytes": 884110,
+      "sha256": "2f4d7be795b9baa2c2f525311eba7cac81981843d0f1c59ee9ee2cd15ada1a8d",
+      "sha": "06b2c17d6f95f98afc4b47f84e6d71f8a4069f40",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.6837316758621216,
+      "alphaOpaqueFraction": 0.0013462502130343983,
+      "alpha12BBox": [
+        153,
+        98,
+        1035,
+        1174
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        153,
+        98,
+        219,
+        80
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-482d0a2b-4304-4716-a127-60e501497e03.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:victory:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/defeat.png",
+      "style": "fusion",
+      "state": "defeat",
+      "bytes": 894023,
+      "sha256": "0c5ec3adb5386606993797ecbb9af7dc73f36a4017b82e2791925692a2bd399b",
+      "sha": "24f26104eede1dc629be698e3165690b53fe281a",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaZeroFraction": 0.6679626789170985,
+      "alphaOpaqueFraction": 0.0012368713577477113,
+      "alpha12BBox": [
+        100,
+        160,
+        1117,
+        1106
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Margins": [
+        100,
+        160,
+        137,
+        148
+      ],
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-21ae02b6-a861-4b7e-bc01-362cc0febe1c.png",
+      "nativeBytesVerified": true,
+      "fullResultStoreKey": "sunsetRibbitResult:fusion:defeat:1",
+      "tool": "image_gen__imagegen",
+      "regeneration_after_executor_loss": true,
+      "byte_identical_to_lost_asset": false,
+      "referenceSHA256": {
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87"
+      }
+    }
+  ]
+}

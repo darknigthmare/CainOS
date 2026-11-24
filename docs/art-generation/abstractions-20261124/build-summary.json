@@ -1,0 +1,37 @@
+{
+  "schema": "encore-sequential-build-verification/v1",
+  "recordedAt": "2026-11-24T14:28:33.000099+00:00",
+  "bothBuildsPassed": true,
+  "sourceManifestSha256": "a9f9c4cee6795da2e182d18d408f2f31838c2c47c4da51d5ab4c88560c581e16",
+  "builds": [
+    {
+      "kind": "standalone",
+      "buildCommand": [
+        "npm",
+        "run",
+        "build:combat"
+      ],
+      "buildExitCode": 0,
+      "verificationExitCode": 0,
+      "seconds": 23.691,
+      "report": "docs/art-generation/abstractions-20261124/standalone-build-verification.json",
+      "reportSha256": "8d0e1d11bd81060a198408066e3229df0dfb0f230cf9148427e2f63a4b79164a",
+      "log": "docs/art-generation/abstractions-20261124/standalone-build.log"
+    },
+    {
+      "kind": "cainos",
+      "buildCommand": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "buildExitCode": 0,
+      "verificationExitCode": 0,
+      "seconds": 23.931,
+      "report": "docs/art-generation/abstractions-20261124/cainos-build-verification.json",
+      "reportSha256": "e94b2d9339131c15b6dc6a39e488e74ea2ba70a10e7c8150cebf98ac62a6c05d",
+      "log": "docs/art-generation/abstractions-20261124/cainos-build.log"
+    }
+  ],
+  "method": "Normal build commands into a temporary directory on a disk volume. Each output was verified by SHA-256 before deletion; the two full copies were not kept simultaneously."
+}

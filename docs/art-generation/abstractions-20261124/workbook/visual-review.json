@@ -1,0 +1,554 @@
+{
+  "schema": "encore-abstractions-workbook-visual-review/v1",
+  "status": "accepted",
+  "reviewedAt": "2026-11-24T14:43:34.289Z",
+  "workbookSHA256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+  "planSha256": "d5f1ed8b08b193c0494f310e372b545a2ee98dc50b712bc47381d61684e47f19",
+  "viewCount": 76,
+  "method": "Public Artifact Tool rendered the final exported/reimported workbook at each planned range. All seventy-six resulting PNGs were displayed and visually inspected individually; the six baseline PNGs were reviewed separately before authoring.",
+  "observations": [
+    "All planned modified zones and representative appended families were reviewed: synthesis, feature totals, ten fighters, move groups, two arenas, promoted and original atlas rows, production categories, scenarios, current QA and references.",
+    "The established purple/white table style, green implemented statuses, amber open review or partial statuses, yellow user-note columns, native numeric formats and wrapped review text were preserved.",
+    "Current counts, formulas and sources agree with the native comparison and companion data; no visual overflow, lost review columns, unreadable hash truncation or formula error was found in the rendered scopes.",
+    "Official identity, unconfirmed archival attribution and original Encore designs remain visibly distinct. Procedural/static art, unexecuted browser coverage and open canonical comparison are not marked as complete canonical animation."
+  ],
+  "views": [
+    {
+      "file": "summary-top.png",
+      "sha256": "c5e43336437e00f543b4f6e2e7037ddf5afdf8cd8e6282a05786efd1c5344593",
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "observation": "Accepted: current counts and dated evidence visible, partial art/review statuses retained, complete wrapped text, source layout and note columns preserved."
+    },
+    {
+      "file": "summary-bottom.png",
+      "sha256": "3d8fd78cf3ec82edde5bd3060548669847bacc1008cb960ed71020eee1d968d2",
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "observation": "Accepted: current counts and dated evidence visible, partial art/review statuses retained, complete wrapped text, source layout and note columns preserved."
+    },
+    {
+      "file": "feature-cqc-24.png",
+      "sha256": "6f71c52a90347b8c66dee8a71a5afd372639479b86608331ad6e7646c66ed3b3",
+      "sheet": "Fonctionnalités",
+      "range": "A41:I41",
+      "observation": "Accepted: current counts and dated evidence visible, partial art/review statuses retained, complete wrapped text, source layout and note columns preserved."
+    },
+    {
+      "file": "feature-mod-09.png",
+      "sha256": "eda021ce47643ebfeb25be39f901020c52a8472e2098938794e9ec8615d7c09f",
+      "sheet": "Fonctionnalités",
+      "range": "A50:I50",
+      "observation": "Accepted: current counts and dated evidence visible, partial art/review statuses retained, complete wrapped text, source layout and note columns preserved."
+    },
+    {
+      "file": "feature-pre-01.png",
+      "sha256": "7ed928063de2425d6aa219e523a5f068bf25e6446c224cd98e2726bc334a5400",
+      "sheet": "Fonctionnalités",
+      "range": "A60:I60",
+      "observation": "Accepted: current counts and dated evidence visible, partial art/review statuses retained, complete wrapped text, source layout and note columns preserved."
+    },
+    {
+      "file": "feature-pre-02.png",
+      "sha256": "5102f036d9cf36dd068e3c96d18dd3a289d92da4eb40ebdfbf6c9b191ebffdf4",
+      "sheet": "Fonctionnalités",
+      "range": "A61:I61",
+      "observation": "Accepted: current counts and dated evidence visible, partial art/review statuses retained, complete wrapped text, source layout and note columns preserved."
+    },
+    {
+      "file": "feature-pre-03.png",
+      "sha256": "1b1c7e31a64d1495c2f985854445ae50ad147b319bac58ca2ca859a7c465980c",
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "observation": "Accepted: 484 costumes and 387 crossovers reconcile; remaining crossover work is explicit; current counts, reference qualifications, note fields and wrapped text are legible."
+    },
+    {
+      "file": "feature-pre-04.png",
+      "sha256": "7ad55f655b9e02bf723a056774620aded9508ff70af5ad3fd8b549711f6f1c0d",
+      "sheet": "Fonctionnalités",
+      "range": "A63:I63",
+      "observation": "Accepted: 484 costumes and 387 crossovers reconcile; remaining crossover work is explicit; current counts, reference qualifications, note fields and wrapped text are legible."
+    },
+    {
+      "file": "feature-pre-09.png",
+      "sha256": "dd00f008f0378bbabc624ab28bf422945545d9e8ddea9960e4fca4b0c392f369",
+      "sheet": "Fonctionnalités",
+      "range": "A68:I68",
+      "observation": "Accepted: 484 costumes and 387 crossovers reconcile; remaining crossover work is explicit; current counts, reference qualifications, note fields and wrapped text are legible."
+    },
+    {
+      "file": "feature-prd-06.png",
+      "sha256": "1c6d1d66bdbc270f731ac4f46b2b3325b1e50ddd2aace15a451f2682f2ac3702",
+      "sheet": "Fonctionnalités",
+      "range": "A90:I90",
+      "observation": "Accepted: 484 costumes and 387 crossovers reconcile; remaining crossover work is explicit; current counts, reference qualifications, note fields and wrapped text are legible."
+    },
+    {
+      "file": "feature-prd-10.png",
+      "sha256": "79e523dd60280140f115bcbba88bd6689b0f24a399f360ddef6b4da5d87f9307",
+      "sheet": "Fonctionnalités",
+      "range": "A94:I94",
+      "observation": "Accepted: 484 costumes and 387 crossovers reconcile; remaining crossover work is explicit; current counts, reference qualifications, note fields and wrapped text are legible."
+    },
+    {
+      "file": "feature-prd-11.png",
+      "sha256": "9d3ff1ff405c1192675eb95ed680f048266233013d1640a64677b5ed8d7b9be0",
+      "sheet": "Fonctionnalités",
+      "range": "A95:I95",
+      "observation": "Accepted: 484 costumes and 387 crossovers reconcile; remaining crossover work is explicit; current counts, reference qualifications, note fields and wrapped text are legible."
+    },
+    {
+      "file": "feature-pre-16.png",
+      "sha256": "c4f88e7d3e18eab803b54e4bbaf03832290b798c08b7d7121d796966f2012892",
+      "sheet": "Fonctionnalités",
+      "range": "A100:I100",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "feature-pre-17.png",
+      "sha256": "11f29afb0fbd8dbf0728b249e94f592d85b97e92fc80ca7208bf5cdc98470b32",
+      "sheet": "Fonctionnalités",
+      "range": "A101:I101",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "feature-pre-20.png",
+      "sha256": "7f2cff83ec6857a940d71d3bf8156fc248781e4864e08743738d21b5e90234ef",
+      "sheet": "Fonctionnalités",
+      "range": "A105:I105",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "feature-pre-21.png",
+      "sha256": "27b54480fe6848415966a278a187f6fea53fb634624d19bba69eebd54bf5626b",
+      "sheet": "Fonctionnalités",
+      "range": "A107:I107",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "reference-stage-ambiences.png",
+      "sha256": "9c5d141755ed53c7596296c8967eb135b7833bd5ce9764ea4c03b6d39c07b63f",
+      "sheet": "Références",
+      "range": "A60:E60",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "reference-music.png",
+      "sha256": "31595b45e557598487392650eccf2ce1025bfd3c73764a3d7e1994c0fa577b2e",
+      "sheet": "Références",
+      "range": "A63:E63",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "reference-offline.png",
+      "sha256": "fbbeed0ecfd9662d5952d6bb16125ecdf517b29dfa75c8c68bf517d4997c5ce6",
+      "sheet": "Références",
+      "range": "A64:E64",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "reference-audio-ambiences-07.png",
+      "sha256": "e5506be17d7b4a995ac9717eedc7304dfaca2ed2190fbbb238c1dc348fc3541b",
+      "sheet": "Références",
+      "range": "A67:E67",
+      "observation": "Accepted: sequence/music/ambience counts agree; static narrative art distinguished from composed panels; offline counts and local-source labels legible, source fields and layout preserved."
+    },
+    {
+      "file": "roster-1.png",
+      "sha256": "ccd7fcd55dfca109bf57c8dd99c8761174fffa1b4f48bdbf9969b20dd9a1ed81",
+      "sheet": "Combattants",
+      "range": "A60:P61",
+      "observation": "Accepted: four archive identities, distinct bodies and numeric stats, native paths, width caps and primary-reference limitations visible; labels, status colors and notes retained with no clipped text."
+    },
+    {
+      "file": "roster-review-1.png",
+      "sha256": "6c11c432a6898bdf3814c1a33079690267bedf172b40a788233625611200b0fd",
+      "sheet": "Combattants",
+      "range": "Q60:Z61",
+      "observation": "Accepted: four archive identities, distinct bodies and numeric stats, native paths, width caps and primary-reference limitations visible; labels, status colors and notes retained with no clipped text."
+    },
+    {
+      "file": "roster-2.png",
+      "sha256": "a0f5af51f9aa33ef4c9c6c6f16f00fb01443bb19a2103d74b4c0c39fa0d5d54a",
+      "sheet": "Combattants",
+      "range": "A62:P63",
+      "observation": "Accepted: four archive identities, distinct bodies and numeric stats, native paths, width caps and primary-reference limitations visible; labels, status colors and notes retained with no clipped text."
+    },
+    {
+      "file": "roster-review-2.png",
+      "sha256": "b9f31e6f8e47e0afd882f08ce265e7450c48b04d54c717ad018ed38ca1252216",
+      "sheet": "Combattants",
+      "range": "Q62:Z63",
+      "observation": "Accepted: four archive identities, distinct bodies and numeric stats, native paths, width caps and primary-reference limitations visible; labels, status colors and notes retained with no clipped text."
+    },
+    {
+      "file": "roster-3.png",
+      "sha256": "34a53077914759963868320fbce2d1fe78198cf7bd1f050e3b165882531fd88a",
+      "sheet": "Combattants",
+      "range": "A64:P65",
+      "observation": "Accepted: Ribbit archive attribution and all five original Encore identities are explicit; 10 moves each, role/stats/body dimensions, illustration caps and open reference reviews read clearly."
+    },
+    {
+      "file": "roster-review-3.png",
+      "sha256": "606e30cc5fbc649c3aad0de7e90cf26cb05fca19538a8ccc1e85aafdd7b23f3c",
+      "sheet": "Combattants",
+      "range": "Q64:Z65",
+      "observation": "Accepted: Ribbit archive attribution and all five original Encore identities are explicit; 10 moves each, role/stats/body dimensions, illustration caps and open reference reviews read clearly."
+    },
+    {
+      "file": "roster-4.png",
+      "sha256": "da456aa34c716ded8d1f663ea82b2f29f11f84c4798912584a4e499753781654",
+      "sheet": "Combattants",
+      "range": "A66:P67",
+      "observation": "Accepted: Ribbit archive attribution and all five original Encore identities are explicit; 10 moves each, role/stats/body dimensions, illustration caps and open reference reviews read clearly."
+    },
+    {
+      "file": "roster-review-4.png",
+      "sha256": "42963abc03874f00a7c5d2ca96a4d31cf0b64edfab42bb5579a29bf11f1add77",
+      "sheet": "Combattants",
+      "range": "Q66:Z67",
+      "observation": "Accepted: Ribbit archive attribution and all five original Encore identities are explicit; 10 moves each, role/stats/body dimensions, illustration caps and open reference reviews read clearly."
+    },
+    {
+      "file": "roster-5.png",
+      "sha256": "f0ada4301185ebdb214e00991a66c41ef9ba501dad941f2381f683aa5ce2df1f",
+      "sheet": "Combattants",
+      "range": "A68:P69",
+      "observation": "Accepted: Ribbit archive attribution and all five original Encore identities are explicit; 10 moves each, role/stats/body dimensions, illustration caps and open reference reviews read clearly."
+    },
+    {
+      "file": "roster-review-5.png",
+      "sha256": "066f2d45ad3134360d3097d10e151d1c95ce6603093d0ff21940ed69b36ad888",
+      "sheet": "Combattants",
+      "range": "Q68:Z69",
+      "observation": "Accepted: Ribbit archive attribution and all five original Encore identities are explicit; 10 moves each, role/stats/body dimensions, illustration caps and open reference reviews read clearly."
+    },
+    {
+      "file": "techniques-546.png",
+      "sha256": "d5bf333625ce4366f233406733720a713fd473cf5682b9c3e0c86b5733441a80",
+      "sheet": "Techniques",
+      "range": "A546:M547",
+      "observation": "Accepted: named techniques, typed frame/damage/range values and adaptation status align; source references and open review text remain readable, note columns preserved."
+    },
+    {
+      "file": "techniques-review-546.png",
+      "sha256": "196a30545af8df719699c3cf1410450b5c808ced5ebc0b15e9fd1219ff66dfc7",
+      "sheet": "Techniques",
+      "range": "N546:W547",
+      "observation": "Accepted: named techniques, typed frame/damage/range values and adaptation status align; source references and open review text remain readable, note columns preserved."
+    },
+    {
+      "file": "techniques-566.png",
+      "sha256": "e88e3d4bfa8e1b310143fc6660ed2a97930ce766195c3456de8706dbaf1c7f7b",
+      "sheet": "Techniques",
+      "range": "A566:M567",
+      "observation": "Accepted: named techniques, typed frame/damage/range values and adaptation status align; source references and open review text remain readable, note columns preserved."
+    },
+    {
+      "file": "techniques-review-566.png",
+      "sha256": "dcbe6709589ba9b36d0d4667a19b319c1226dbcfc419a1ac347c48346714fc62",
+      "sheet": "Techniques",
+      "range": "N566:W567",
+      "observation": "Accepted: named techniques, typed frame/damage/range values and adaptation status align; source references and open review text remain readable, note columns preserved."
+    },
+    {
+      "file": "techniques-596.png",
+      "sha256": "eec094182d0a51ed1dc5906325f306af9d2a21523a15e7581efcfb7f92e39dc8",
+      "sheet": "Techniques",
+      "range": "A596:M597",
+      "observation": "Accepted: named techniques, typed frame/damage/range values and adaptation status align; source references and open review text remain readable, note columns preserved."
+    },
+    {
+      "file": "techniques-review-596.png",
+      "sha256": "1c0e56790fdd72f99c1d3a40124ce00bcf9751b28968874ec365852a1bf4f2ce",
+      "sheet": "Techniques",
+      "range": "N596:W597",
+      "observation": "Accepted: named techniques, typed frame/damage/range values and adaptation status align; source references and open review text remain readable, note columns preserved."
+    },
+    {
+      "file": "techniques-636.png",
+      "sha256": "9013cfde31b4b7085ace3d178515c6fb05600cb53aa5863043efbb303278d195",
+      "sheet": "Techniques",
+      "range": "A636:M637",
+      "observation": "Accepted: final technique sample and both original stages are legible; floor/bounds/music and original-source scope agree; partial art and planned interaction fields remain explicit."
+    },
+    {
+      "file": "techniques-review-636.png",
+      "sha256": "10a81e65a34d28535f9df72cdf7fb5db09f584e001923e1d5cd905196ca95b1a",
+      "sheet": "Techniques",
+      "range": "N636:W637",
+      "observation": "Accepted: final technique sample and both original stages are legible; floor/bounds/music and original-source scope agree; partial art and planned interaction fields remain explicit."
+    },
+    {
+      "file": "stages.png",
+      "sha256": "d8842439b576cb690d4826489f256d0eb154ed6b3f7981c8254c2f932339079d",
+      "sheet": "Arènes",
+      "range": "A31:N32",
+      "observation": "Accepted: final technique sample and both original stages are legible; floor/bounds/music and original-source scope agree; partial art and planned interaction fields remain explicit."
+    },
+    {
+      "file": "stages-review.png",
+      "sha256": "d3b57e14b65d7c521a57428bde24f528d6a63763b9c26f2b14a44e5ca039676e",
+      "sheet": "Arènes",
+      "range": "O31:T32",
+      "observation": "Accepted: final technique sample and both original stages are legible; floor/bounds/music and original-source scope agree; partial art and planned interaction fields remain explicit."
+    },
+    {
+      "file": "atlas-cellarabstraction.png",
+      "sha256": "e34decfe104b2deef5e2dce8820b4b6b20bb9ac1f9bd48423069d13370f0d204",
+      "sheet": "Atlas",
+      "range": "A147:S147",
+      "observation": "Accepted: archived cellar entry promoted to playable with ten own techniques; implementation and open canon review separated; preserved portrait/source and notes fit the established row."
+    },
+    {
+      "file": "atlas-review-cellarabstraction.png",
+      "sha256": "7823bc4996e18957e043267dfe6d20e80277d94b3b90c08ae43084a0d42c783e",
+      "sheet": "Atlas",
+      "range": "T147:AG147",
+      "observation": "Accepted: archive attribution explicitly unconfirmed, simulation body 210 × 280 and independent kit disclosed, primary visual comparison remains open; review columns preserved."
+    },
+    {
+      "file": "atlas-aquaticabstraction.png",
+      "sha256": "b8e591f3885e2a3737601c7c3f6facdf29707a2c9ee1323b7c02db9b41052f2c",
+      "sheet": "Atlas",
+      "range": "A148:S148",
+      "observation": "Accepted: aquatic archive promoted with ten own moves, implementation status separate from unconfirmed attribution and unfinished full animation; alternating row style preserved."
+    },
+    {
+      "file": "atlas-review-aquaticabstraction.png",
+      "sha256": "b6a91de60cd974c4587bac9bc6476a774e3c03e8897c2777bda951fef81af98a",
+      "sheet": "Atlas",
+      "range": "T148:AG148",
+      "observation": "Accepted: final 195 × 200 body and decorative rear tendrils are accurately documented; no canonical visual validation claimed; all review/source columns legible."
+    },
+    {
+      "file": "atlas-abstractedjax.png",
+      "sha256": "13764f72f9ddbb3f37507e6498f3901e447f5d7f8a465a616e1b4dff10649ab7",
+      "sheet": "Atlas",
+      "range": "A155:S155",
+      "observation": "Accepted: official abstraction identity distinguished from unverified in-game visual reproduction; playable kit and static poses correctly marked while full animation remains open."
+    },
+    {
+      "file": "atlas-review-abstractedjax.png",
+      "sha256": "ffee2e4a6857cff067db8c580ada199f090c538ecba7a8e033a131b748a622be",
+      "sheet": "Atlas",
+      "range": "T155:AG155",
+      "observation": "Accepted: official episode/store source URLs retained, 175 × 310 simulation body disclosed and explicit no frame-for-frame certification; source and notes fit row."
+    },
+    {
+      "file": "atlas-abstractedqueenie.png",
+      "sha256": "16ad9ec555ac92d111248922ed5fa5dd3e1e85b7c1693a139d25cfd42eb2f2e1",
+      "sheet": "Atlas",
+      "range": "A157:S157",
+      "observation": "Accepted: active Queenie promoted to own playable identity and ten techniques, full-animation and primary visual comparison open, historical atlas metadata preserved."
+    },
+    {
+      "file": "atlas-review-abstractedqueenie.png",
+      "sha256": "5e3a41952918cda80812c439064232575d93da7486464bafafcd32fa455289a5",
+      "sheet": "Atlas",
+      "range": "T157:AG157",
+      "observation": "Accepted: official identity tied to episode 3, 180 × 285 body disclosed, in-game drawings explicitly adaptations with no 1:1 certification."
+    },
+    {
+      "file": "atlas-abstractedribbit.png",
+      "sha256": "fdf661867b74d08f44d4ff308f76eda0d430c72d75e0598f87ce76913328665d",
+      "sheet": "Atlas",
+      "range": "A167:S167",
+      "observation": "Accepted: playable archive Ribbit abstraction records its own kit and eleven poses, while archive attribution remains explicitly unconfirmed."
+    },
+    {
+      "file": "atlas-review-abstractedribbit.png",
+      "sha256": "f2a7b5d81e72d19dbeaf0a499045875ca050ef23ee425cf8040ed5db3a47ba03",
+      "sheet": "Atlas",
+      "range": "T167:AG167",
+      "observation": "Accepted: archive naming is distinguished from canonical approval; 180 × 270 body, independent techniques and open primary-shot comparison are displayed."
+    },
+    {
+      "file": "atlas-abstractedqueeniedark.png",
+      "sha256": "c617ed7916ead16bcb29e92f0da3166be9f0b867553315c98ec66e7ca7054b50",
+      "sheet": "Atlas",
+      "range": "A156:S156",
+      "observation": "Accepted: calm Queenie is one visual variant of abstractedqueenie, with unchanged kit and no extra identity; native stance path and implementation/open review statuses align."
+    },
+    {
+      "file": "atlas-review-abstractedqueeniedark.png",
+      "sha256": "95187dc3f6079b3b96ccaea0facfffcf22b7412ce0c4a6e56241517c0cccebdf",
+      "sheet": "Atlas",
+      "range": "T156:AG156",
+      "observation": "Accepted: detailed real PNG review states five preserved eyes, byte-identical selection, native RGBA, positive alpha margins and unchanged 180 × 285 simulation; all review text fits its expanded row and canonical comparison remains open."
+    },
+    {
+      "file": "atlas-originalabstractedpomni.png",
+      "sha256": "88a3ffdfa0435ac114a2028721b3fe8a5a01aa675801068f58fea24f783419b2",
+      "sheet": "Atlas",
+      "range": "A185:S185",
+      "observation": "Accepted: appended original Pomni row clearly labels an invented Encore creation with its own ten moves and eleven native static poses, no official event claimed; layout matches atlas template."
+    },
+    {
+      "file": "atlas-review-originalabstractedpomni.png",
+      "sha256": "59e26a98627d533b7db6f3ed65cc7e95b9167fdc28693e3bb5288b1f74c66997",
+      "sheet": "Atlas",
+      "range": "T185:AG185",
+      "observation": "Accepted: original design has no canonical source, 165 × 260 simulation body and dedicated kit; explicit absence of 1:1 certification visible."
+    },
+    {
+      "file": "atlas-originalabstractedzooble.png",
+      "sha256": "9a6716db2183faa9f776187668d6638e5c4a0d2c2f69e02ece9f1acbafe36aca",
+      "sheet": "Atlas",
+      "range": "A189:S189",
+      "observation": "Accepted: last appended original atlas row has stable ID, independent kit and poses, explicit Encore origin and no extra official character claim; table style is consistent."
+    },
+    {
+      "file": "atlas-review-originalabstractedzooble.png",
+      "sha256": "f76f40f779174ff2d0f145850313e801d8486adb6ab67dc835babba5892a1342",
+      "sheet": "Atlas",
+      "range": "T189:AG189",
+      "observation": "Accepted: no canonical source claimed, 200 × 280 independent body and original design scope documented; no lost notes or clipped row text observed."
+    },
+    {
+      "file": "production-category-1.png",
+      "sha256": "1853d01ecc91a33a9acbbbcf362f864bbcb85f4c424e509127a083421f11a456",
+      "sheet": "Production",
+      "range": "A3350:J3351",
+      "observation": "Accepted: family and preserved selection entries separate static pose integration from unfinished full animation/canonical comparison; source path, hashes and notes wrap within row."
+    },
+    {
+      "file": "production-category-2.png",
+      "sha256": "5ec225995d2952da64af21a0cbc070b1326904fa00ab5b652dc0fe732d95975e",
+      "sheet": "Production",
+      "range": "A3351:J3352",
+      "observation": "Accepted: selection byte preservation versus new stance provenance are explicit; native dimensions/bytes/SHA and inventory references fully visible with existing status styling."
+    },
+    {
+      "file": "production-category-3.png",
+      "sha256": "dd2cc870e5b4aa1727e16a6076b75eff2e4c5295b1d1f0b76425a3c59d70bd8d",
+      "sheet": "Production",
+      "range": "A3482:J3483",
+      "observation": "Accepted: projectile jiggle/key asset records include native RGBA dimensions, bytes and SHA; simulation anchoring/reflection notes specify original accessories without new canon claims."
+    },
+    {
+      "file": "production-category-4.png",
+      "sha256": "4af3a4a01d3f31c9cf37cfc69cb228e74e74194ade01dab295d59ddacd963340",
+      "sheet": "Production",
+      "range": "A3497:J3498",
+      "observation": "Accepted: stage far RGB and mid RGBA are correctly distinguished; native dimensions, SHA, floor y568 and original arena status visible without text clipping."
+    },
+    {
+      "file": "production-category-5.png",
+      "sha256": "2e61b8513e29f6a915275e367d048334eb6bee53a58d625a00995d2322fd527d",
+      "sheet": "Production",
+      "range": "A3503:J3504",
+      "observation": "Accepted: dedicated home arrangement and first story panel source paths and original narration are visible; shared collision/music and no canonical set claim documented."
+    },
+    {
+      "file": "production-category-6.png",
+      "sha256": "ec2bb25ed15fdc23b305d70dc5dbcc88e11494ec3f283922ebd5a78d06ea748b",
+      "sheet": "Production",
+      "range": "A3504:J3505",
+      "observation": "Accepted: two story-panel entries carry specific scene prose and implementation status; silent original narration and shared portraits/background limitations explicit."
+    },
+    {
+      "file": "production-category-7.png",
+      "sha256": "22afe60449df7dbcd35eb608e2441ac953619ee9141b360c428718d99c1b754a",
+      "sheet": "Production",
+      "range": "A3510:J3511",
+      "observation": "Accepted: long briefing narrative wraps within enlarged rows, differentiates Ragatha/Kinger encounters and preserves nonverbal archive attribution."
+    },
+    {
+      "file": "production-category-8.png",
+      "sha256": "d58a7e7ae6df8d7f5220ef45e2c0b8d939afebf65641732ec3caa3ee82f4e4aa",
+      "sheet": "Production",
+      "range": "A3514:J3515",
+      "observation": "Accepted: procedural finisher entries remain Partiel, with painted scenes and frame animation still outstanding; implemented procedure is not represented as completed canonical art."
+    },
+    {
+      "file": "production-category-9.png",
+      "sha256": "f16c120ab13b00b042803e8a4c3a3419873bb5974030562bc77064dc686bdc8d",
+      "sheet": "Production",
+      "range": "A3517:J3518",
+      "observation": "Accepted: friendship is an original nonverbal presentation and personal sequence uses its own family; procedural/static limitations are clear and no Pomni fallback claimed."
+    },
+    {
+      "file": "production-category-10.png",
+      "sha256": "359aabe9221ab69887a32d2b16b8fa724046e07f4ba8319752df15e39974dc6e",
+      "sheet": "Production",
+      "range": "A3518:J3519",
+      "observation": "Accepted: intro and roundVictory events are individually tracked with own family and no substitution, static procedural animation limitation visible."
+    },
+    {
+      "file": "production-category-11.png",
+      "sha256": "33c3b06f19874f6fcd6211a485f9a9077d9722bb9b1fd9692db9fb1d2929aa3a",
+      "sheet": "Production",
+      "range": "A3703:J3704",
+      "observation": "Accepted: memory stage music84BPM and procedural ambience source modules/statuses align; real-device listening remains open."
+    },
+    {
+      "file": "production-category-12.png",
+      "sha256": "b99104f2517b482f6b5bc544e7cb94455edde7ccd73d984af8b82c6e77ba6754",
+      "sheet": "Production",
+      "range": "A3705:J3706",
+      "observation": "Accepted: reduced-motion stage background entry and threshold72BPM music are separated, with source paths and real-device review scope clear."
+    },
+    {
+      "file": "production-category-13.png",
+      "sha256": "acf25fb88d41c1a712d518c554708817a1507833358621d06939dcdf48086cdb",
+      "sheet": "Production",
+      "range": "A3709:J3710",
+      "observation": "Accepted: Sunset Ribbit Meggy homage family and selection are integrated after native-audit activation; original crossover status and unfinished animation are explicit."
+    },
+    {
+      "file": "production-category-14.png",
+      "sha256": "5ac4da25e29da84c453d3408ae0c6827f2e67ae924a6a755a029f6b176c1512d",
+      "sheet": "Production",
+      "range": "A3710:J3711",
+      "observation": "Accepted: selection/stance Sunset asset rows preserve paths and IDs, native-copy provenance and alpha/proportion review instructions; no full cycle or official costume claim."
+    },
+    {
+      "file": "scenarios-archive.png",
+      "sha256": "fad562a6b34cb226f2b9d8c9172ae12620ba328a3b6307ec81871d4e974e16d8",
+      "sheet": "Scénarios",
+      "range": "A354:K355",
+      "observation": "Accepted: cellar route and first chapter include all four opponents, stage, original silent narration and unconfirmed identity; long text remains within enlarged rows."
+    },
+    {
+      "file": "scenarios-original.png",
+      "sha256": "4ced6df68909aca8144dcba0742bce885a59556fb63f1ba2613098b8f6728e72",
+      "sheet": "Scénarios",
+      "range": "A384:K385",
+      "observation": "Accepted: Pomni original route explicitly separates invented simulation from official Pomni, with four opponents and no official abstraction/cure event claim; narrative and sources fit."
+    },
+    {
+      "file": "qa-1.png",
+      "sha256": "cb1ba31247adae2a29340309474feaae977383f11eb45673df90e8acd75c2fbd",
+      "sheet": "QA",
+      "range": "A2499:I2501",
+      "observation": "Accepted: 142 files/136 new/six preserved and85 targeted tests are distinguished, historical54/480 compatibility and385 recovery checkpoints explicit; source logs visible."
+    },
+    {
+      "file": "qa-2.png",
+      "sha256": "a5ae149a23fbbc6f974bbfd8f4118df8cfdb0698657b0e4b400b4474fc4e1b8a",
+      "sheet": "QA",
+      "range": "A2502:I2504",
+      "observation": "Accepted: frozen461 tests/two builds, browser not executed, and workbook controls are separate rows; historical83423 cells,42 formulas and10 tables stated without upgrading browser coverage."
+    },
+    {
+      "file": "references-new.png",
+      "sha256": "109c45df7c88ae9def17d580ab372dcd002425b2bf154e31ea3f50181092abf9",
+      "sheet": "Références",
+      "range": "A170:E175",
+      "observation": "Accepted: official store confirms identity only; five originals, two arenas and three Sunset designs explicitly fan-game creations; recovery inventory dated and lost-disk evidence excluded from fresh validation."
+    },
+    {
+      "file": "references-footer.png",
+      "sha256": "b8be4b65f19be33939585e134a809a2c9833cb55bfa0f8458f69299d4f9e844c",
+      "sheet": "Références",
+      "range": "A176:E186",
+      "observation": "Accepted: status legend, lore/QA limits and preserved yellow user-note policy are intact; formulas and row counts described without conflating artistic and automated validation."
+    }
+  ],
+  "limitations": [
+    "These are scoped spreadsheet renders, not a desktop Excel application session.",
+    "The review concerns workbook presentation and truthful status reporting. It does not certify canonical 1:1 art or physical-device gameplay.",
+    "Wide multi-column source and review tables retain the existing workbook architecture rather than being redesigned."
+  ]
+}

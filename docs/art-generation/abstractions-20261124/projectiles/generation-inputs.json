@@ -1,0 +1,123 @@
+[
+  {
+    "id": "corruption",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. A compact jagged horizontal faceted black-violet digital corruption shard. Its pointed tip faces RIGHT. Exactly THREE eyes embedded in the shard: one cyan, one magenta, one yellow, each with black slit pupil. Sharp purple rim highlights. Mostly nearly black material. No legs, body, horns or detached orbiting pieces.",
+    "destination": "assets/encore/projectiles/corruption.png"
+  },
+  {
+    "id": "key",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one golden skeleton key, horizontal shaft pointing RIGHT. Large simple circular bow at LEFT, three square teeth below the tip at RIGHT. Bright yellow gold, warm ochre underside and pale ivory upper-left highlights. Broad legible silhouette. The circular hole in the bow is truly transparent. No chain or extra object.",
+    "destination": "assets/encore/projectiles/key.png"
+  },
+  {
+    "id": "juggle",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one perfectly round circus juggling ball, divided into three large curved panels of red, royal blue and golden yellow. Polished toy rubber, dark thin outline, simple bright upper-left highlight. No seam noise or fine patterns.",
+    "destination": "assets/encore/projectiles/juggle.png"
+  },
+  {
+    "id": "button",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one slightly tilted circular periwinkle-blue cloth button with FOUR large evenly spaced dark holes. A SINGLE thick ivory sewing thread forms a clearly visible X through those four holes. Thick blue rim, crisp cel shading. No needle or loose thread ball.",
+    "destination": "assets/encore/projectiles/button.png"
+  },
+  {
+    "id": "comedy-mask",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one white smiling theatrical comedy mask, clean black eye apertures and big smiling mouth aperture. A short red ribbon bow attached at its lower edge. The mask and ribbon form one compact connected object. No head or hair.",
+    "destination": "assets/encore/projectiles/comedy-mask.png"
+  },
+  {
+    "id": "module",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one compact asymmetrical Zooble-like geometric toy module, assembled as ONE connected object from a vivid pink triangle, small golden-yellow block, bent cyan element and purple round joint. Abstract geometric silhouette, no whole character and no limbs beyond the small connected module.",
+    "destination": "assets/encore/projectiles/module.png"
+  },
+  {
+    "id": "pellet",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one small ivory chess pawn turned horizontally, base at LEFT and round pawn head toward RIGHT. Smooth cream body with warm golden shading and a very restrained cyan energetic edge highlight. A broad silhouette readable when tiny. No long trail or detached particles.",
+    "destination": "assets/encore/projectiles/pellet.png"
+  },
+  {
+    "id": "confetti",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one compact connected celebratory bundle: a bright golden five-point star at RIGHT with short cyan and magenta curled ribbons trailing to the LEFT, attached to that star. Clear simple silhouette. No loose confetti cloud or detached stars.",
+    "destination": "assets/encore/projectiles/confetti.png"
+  },
+  {
+    "id": "bubble",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one clean soap bubble, circular, rendered almost entirely as a very THIN crisp cyan and pale pink outline, with two tiny ivory reflective strokes at upper-left. The entire interior is genuinely ALPHA TRANSPARENT so any game background is fully visible through it. No white translucent fill, no chalky thick rim, no fog, no grain, no opaque black background and no shadow.",
+    "destination": "assets/encore/projectiles/bubble.png"
+  },
+  {
+    "id": "candy",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one green gummy crocodile candy seen from the side, head facing RIGHT, tail LEFT, four small stubby candy feet. Yellow gummy belly, simple bumpy back, friendly toy silhouette. It is a small edible candy accessory, not a full anthropomorphic fighter. Clean glossy cel shading.",
+    "destination": "assets/encore/projectiles/candy.png"
+  },
+  {
+    "id": "sugar",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one pink sugar crystal shard, horizontal, broad faceted base on LEFT and pointed triangular tip facing RIGHT. Rose pink flat planes, magenta lower edge and pale pink upper-left highlight. No separate crystal clusters, no loose sugar.",
+    "destination": "assets/encore/projectiles/sugar.png"
+  },
+  {
+    "id": "gloink",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one compact three-dimensional pyramidal geometric Gloink object with a golden-yellow broad face, cyan side and magenta rear edge, with TWO tiny black oval eyes on the yellow face. No arms or legs. Clean faceted 2D illustration of the solid volume.",
+    "destination": "assets/encore/projectiles/gloink.png"
+  },
+  {
+    "id": "fudge",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one compact irregular chocolate-fudge glob, dark brown with warm milk-chocolate highlights and a few smoothly folded bulges. Thick glossy edible material, clean easily readable contour. No face, bowl, dripping puddle, detached droplets or long trails.",
+    "destination": "assets/encore/projectiles/fudge.png"
+  },
+  {
+    "id": "spectral-shot",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one translucent emerald-green spectral arrowhead or ogive pointing RIGHT, a broad pointed head and short forked rear at LEFT. Pale mint internal energetic planes, dark green fine contour. Keep true alpha within translucent regions and outside the compact shape; no long detached trail or particles.",
+    "destination": "assets/encore/projectiles/spectral-shot.png"
+  },
+  {
+    "id": "trick-box",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-after-executor-reset",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D fighting-game projectile sprite for Digital Circus — Encore. Polished UHD 2D cel-shaded toy-like game illustration, crisp confident contour, saturated circus palette, simple clean controlled shading, light from upper-left. Readable silhouette at 32–80 pixels. EXACTLY ONE isolated object, centered, occupying about 80% of the image, entirely visible with transparent empty safety margins on ALL sides. Actual PNG alpha transparency. No character or hand, no scenery, no floor, no cast shadow outside the object, no checkerboard, no vignette, no text, no logo, no watermark, no contact sheet, no separate debris. This is an original fan-game accessory interpretation. Exactly one prank-box accessory, a small purple box at LEFT with its red hinged lid opened upwards, and one thick golden-yellow spring extending horizontally to the RIGHT and ending in a red star. All parts form ONE connected object. Simple thick gold decorative trim, no symbols or text. Entire box, lid and star are inside the image.",
+    "destination": "assets/encore/projectiles/trick-box.png"
+  }
+]
+

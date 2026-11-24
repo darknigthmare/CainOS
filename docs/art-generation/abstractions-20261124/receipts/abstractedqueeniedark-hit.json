@@ -1,0 +1,11 @@
+{
+  "id": "abstractedqueeniedark",
+  "pose": "hit",
+  "slot": "hit",
+  "prompt": "Use case: identity-preserve. Asset type: SINGLE 2D UHD fighting-game state sprite, hit. Reference is this character's approved native stance, preserve character design, topology, colored eye identities, materials and crisp rendering 1:1. Calm limbless tall smooth faceted droplet/cocoon, exactly FIVE eyes in a vertical row violet/cyan/yellow/red/white. NO arms, NO feet, NO added spiky limbs. Movement uses flexible monolith posture. Distinct HIT REACTION pose, recoiling back toward LEFT from an unseen attack arriving from RIGHT, body bent away and eyes tightened. Keep facing the opponent on RIGHT. Strict side-on fighting-game view, facing RIGHT with modest three-quarter volume. One independent newly drawn complete pose, NOT a duplicate of stance. Retain same scale and proportion relationships; fit entire subject with 8% transparent padding around extreme limbs/tendrils/spires. High detail black faceted mass legible via controlled violet/cyan rim highlights. TRUE transparent alpha outside silhouette, no black/grey background, NO environmental glow or haze, no floor, no shadow, no text/labels, no grid, no other character, no effect cloud. No extra arms, no humanoid face, no costumes beyond reference. This is an original combat adaptation of the provided project design, not an official new scene.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/abstractedqueeniedark/stance.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-a598df8b-52d4-4f5d-aa3c-8a8750b3d08e.png",
+  "destination": "assets/encore/abstractions/abstractedqueeniedark/hit.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native drawing using retained original prompt and regenerated matching stance."
+}
