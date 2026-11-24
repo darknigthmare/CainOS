@@ -223,3 +223,23 @@ test('Jax keeps intact artwork for low stance and does not inherit the historica
   assert.equal(crouchParts(fighter('jax'), sourceFrame('jax')), null);
   assert.equal(actorPose(actor('jax', { crouch: true })).low, true);
 });
+
+test('an asymmetric abstraction anchors its head uniformly on either side without shifting legacy art', () => {
+  const f = fighter('aquaticabstraction');
+  const frame = { bounds: { x: 55, y: 46, width: 532, height: 234 }, nativeFacing: 1 };
+  const before = JSON.stringify([f, frame]), front = frame.bounds.x + frame.bounds.width;
+  for (const face of [1, -1]) {
+    const geometry = frameGeometry(f, frame, frame, {}, face);
+    almost(geometry.scale, 200 / 234);
+    almost(geometry.anchor.x, 55 + 532 * 0.78);
+    almost((front - geometry.anchor.x) * geometry.scale, 100.03418803418803);
+    assert.equal(geometry.flip, face);
+    assert.ok(f.moves.special.projectileOrigin[face].forward > (front - geometry.anchor.x) * geometry.scale);
+  }
+  const neutral = frameGeometry(fighter('pomni'), frame, frame, {});
+  almost(neutral.anchor.x, 55 + 532 / 2);
+  const registered = sourceFrame('caine', 6);
+  assert.deepEqual(frameGeometry({ ...fighter('caine'), visual: { ...fighter('caine').visual, anchorX: 0.78 } },
+    registered, registered, {}).anchor, registered.registration.anchor);
+  assert.equal(JSON.stringify([f, frame]), before);
+});

@@ -10,6 +10,12 @@ import { pathToFileURL } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { createHash } from 'node:crypto';
+import { FIGHTERS, VARIANTS } from '../combat/data.mjs';
+import { PRE_ABSTRACTION_FIGHTER_IDS } from '../combat/catalog-history.mjs';
+
+// Preserve the measured historical atlas comparison; full state checks below
+// still visit every current fighter and archive costume.
+const legacyBaseIds = PRE_ABSTRACTION_FIGHTER_IDS.slice(0, 14);
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -50,15 +56,17 @@ try {
       await page.route('**/combat/pose-fixture', route => route.fulfill({ contentType: 'text/html', body: '<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#152133}canvas{display:block}</style></head><body><canvas id="fixture"></canvas></body></html>' }));
       if (phase === 'before') await page.route('**/combat/render.mjs', route => route.fulfill({ contentType: 'text/javascript', body: baselineRenderer }));
       await page.goto(`${base}/combat/pose-fixture`);
-      await page.evaluate(async phase => {
+      await page.evaluate(async ({ phase, legacyBaseIds }) => {
         const { CombatRenderer, getFrame } = await import('/combat/render.mjs');
-        const { FIGHTERS, STAGES, VARIANTS } = await import('/combat/data.mjs');
+        const { FIGHTERS, STAGES, VARIANTS, equipCostume } = await import('/combat/data.mjs');
+        const { warmCombatPoses } = await import('/combat/illustrations.mjs');
         const poses = await import('/combat/render-poses.mjs');
         const canvas = document.getElementById('fixture'), renderer = new CombatRenderer(canvas);
-        const ready = await renderer.preload(FIGHTERS, []);
+        const legacyBases = FIGHTERS.filter(f => legacyBaseIds.includes(f.id));
+        const ready = await renderer.preload(legacyBases, []);
         if (!ready.ok) throw new Error(JSON.stringify(ready));
         const context = canvas.getContext('2d', { willReadFrequently: true });
-        const core = FIGHTERS.filter(f => f.animation), statics = FIGHTERS.filter(f => !f.animation);
+        const core = legacyBases.filter(f => f.animation), statics = legacyBases.filter(f => !f.animation);
         const actor = (f, extra = {}) => ({ f, slot: 0, x: 640, y: 568, face: 1, onGround: true, state: 'idle', hit: 0, flash: 0, buffs: {}, statuses: {}, ...extra });
         const sourceFrame = (f, index) => getFrame(f, ['idle', 'idle', 'walk', 'walk', 'talk', 'talk', 'attack', 'hurt'][index], [0, 24, 0, 8, 0, 10, 0, 0][index], null, index);
         const panel = (height, title, subtitle, width = 1540) => {
@@ -80,8 +88,8 @@ try {
           context.restore();
           context.strokeStyle = '#7897ac'; context.beginPath(); context.moveTo(left + 10, ground); context.lineTo(left + 210, ground); context.stroke();
         };
-        window.poseFixture = { phase, canvas, renderer, getFrame, FIGHTERS, STAGES, VARIANTS, poses, core, statics, actor, sourceFrame, context, panel, cell };
-      }, phase);
+        window.poseFixture = { phase, canvas, renderer, getFrame, FIGHTERS, STAGES, VARIANTS, equipCostume, warmCombatPoses, poses, core, statics, actor, sourceFrame, context, panel, cell };
+      }, { phase, legacyBaseIds });
 
       const shot = async name => {
         const filename = `pose-${name}-${phase}.png`;
@@ -90,7 +98,7 @@ try {
       };
 
       const metrics = await page.evaluate(async () => {
-        const { phase, canvas, context: ctx, renderer, getFrame, core, FIGHTERS, VARIANTS, STAGES, poses, actor, sourceFrame } = window.poseFixture;
+        const { phase, canvas, context: ctx, renderer, getFrame, core, FIGHTERS, VARIANTS, STAGES, equipCostume, warmCombatPoses, poses, actor, sourceFrame } = window.poseFixture;
         const result = { frames: [], faceTorsoPreservation: [], states: [], costumes: [], clock: null, cache: null };
         for (const f of core) {
           const image = new Image(); image.src = new URL(f.animation.src, location.href).href; await image.decode();
@@ -144,6 +152,9 @@ try {
           };
           canvas.width = 1280; canvas.height = 720;
           for (const f of FIGHTERS) {
+            const current = await renderer.preload([f], []);
+            if (!current.ok) throw new Error(JSON.stringify(current));
+            if (f.sprite?.crossoverDirectory) await warmCombatPoses([f], () => true);
             const variants = [
               ['idle', {}, {}], ['walk', { state: 'walk' }, { frame: 8 }], ['jump', { state: 'jump', onGround: false, y: 480 }, {}],
               ['guard', { state: 'guard', block: true }, {}], ['crouch', { state: 'crouch', crouch: true }, {}], ['hit', { hit: 9 }, {}],
@@ -160,10 +171,12 @@ try {
             row.crouchArticulated = !!poses.crouchParts(f, getFrame(f, 'idle', 0));
             result.states.push(row);
           }
-          const costumes = VARIANTS.map(v => { const base = FIGHTERS.find(f => f.id === v.baseFighterId); return { ...base, sprite: v.sprite, animation: null, costume: v.id }; });
+          const costumes = VARIANTS.map(v => equipCostume(FIGHTERS.find(f => f.id === v.baseFighterId), v.id));
           const ready = await renderer.preload(costumes);
           if (!ready.ok) throw new Error(JSON.stringify(ready));
           for (const f of costumes) {
+            const current = await renderer.preload([f], []);
+            if (!current.ok) throw new Error(JSON.stringify(current));
             const frame = getFrame(f, 'idle', 0), a = actor(f, { crouch: true, state: 'crouch' });
             const before = JSON.stringify(a);
             ctx.clearRect(0, 0, 1280, 720); renderer.drawActor(a, 0, true);
@@ -302,13 +315,16 @@ try {
   assert.equal(after.faceTorsoPreservation.length, 2);
   assert.ok(after.faceTorsoPreservation.every(item => item.protectedChanged === 0 && item.opaqueChanged === 0 && item.opaquePixelsCompared > 10000));
   checked('Visage et haut du torse préservés en RGBA ; aucun pixel opaque du torse modifié', { measurements: after.faceTorsoPreservation, scope: 'RGBA exact avant la bande des 16 px de jonction aux hanches. Les franges alpha de cette jonction peuvent se superposer aux jambes rigides ; elles sont comptées séparément.' });
-  assert.equal(after.states.length, 14);
+  assert.equal(FIGHTERS.length, 64);
+  assert.equal(after.states.length, FIGHTERS.length);
+  assert.equal(after.states.filter(f => legacyBaseIds.includes(f.id)).length, 14);
   assert.ok(after.states.every(f => f.deterministic && f.unchanged && f.hashes.idle !== f.hashes.crouch && f.hashes.idle !== f.hashes.guard));
   assert.equal(after.states.filter(f => f.crouchArticulated).length, 2);
-  checked('14 bases × 12 états rendus sans mutation et avec lecture de posture en mouvement réduit', 'Les boucles de présentation sont figées ; bas et garde restent distincts de idle pour les quatorze morphologies.');
-  assert.equal(after.costumes.length, 51);
+  checked(`${FIGHTERS.length} bases × 12 états rendus sans mutation et avec lecture de posture en mouvement réduit`, 'Les boucles de présentation sont figées ; les planches d’atlas conservent les quatorze identités historiques.');
+  assert.equal(VARIANTS.length, 52);
+  assert.equal(after.costumes.length, VARIANTS.length);
   assert.ok(after.costumes.every(c => c.frame && !c.articulated && c.unchanged));
-  checked('Les 51 tenues passent par le dessin intact et ne reçoivent jamais un rig de base', 'Le rendu bas de toutes les tenues est exécuté ; cadres et palette sont couverts par la suite dédiée des tenues.');
+  checked(`Les ${VARIANTS.length} tenues passent par le dessin intact et ne reçoivent jamais un rig de base`, 'Le rendu bas de toutes les tenues est exécuté ; cadres et palette sont couverts par la suite dédiée des tenues.');
   assert.ok(Object.values(after.cache).every(Boolean));
   checked('Recadrage, matte, tolérance et palette possèdent des entrées de cache distinctes', { fixture: after.cacheFixture, checks: after.cache });
   assert.ok(after.clock.unchanged);

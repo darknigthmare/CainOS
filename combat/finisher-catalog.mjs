@@ -1,4 +1,6 @@
 import { FIGHTERS } from './data.mjs';
+import { ABSTRACTION_DEFS } from './abstractions-content.mjs';
+import { buildAbstractionFinales } from './abstractions-narrative.mjs';
 
 /**
  * Original Encore stage finales after a resolved match. The descriptions match
@@ -197,6 +199,12 @@ const rows=[
     ['La lumière se retire','Deux bougies et un trait au sol relient les ornements du tableau.'],
     ['Un dernier arrêt','Les portraits se stabilisent autour du Baron et du rival déjà vaincu.']]],
 ];
+const abstractionFinaleRows = [];
+for (const def of ABSTRACTION_DEFS) {
+  const finale = buildAbstractionFinales(def);
+  performers[def.id] = finale.performer;
+  abstractionFinaleRows.push(...finale.rows);
+}
 // Every promoted PNJ receives three presentation-only finales on a shared
 // geometric stage motif. No winner, loser or fighter illustration is replaced.
 for (const fighter of FIGHTERS) {
@@ -214,9 +222,11 @@ for (const fighter of FIGHTERS) {
     ]]);
   }
 }
+rows.push(...abstractionFinaleRows);
 export const FINISHER_CATALOG=deepFreeze(rows.map(([fighterId,variant,title,panels])=>({
   id: fighterId+'.'+variant,fighterId,variant,title,durationFrames:durations[variant],
   beats:panels.map(([title,description],index)=>({frame:index*durations[variant]/3,title,description})),
   motif:performers[fighterId].motif,sourceIds:performers[fighterId].sourceIds,
-  adaptation:performers[fighterId].adaptation,remainingArtWork,
+  adaptation:performers[fighterId].adaptation,remainingArtWork:performers[fighterId].remainingArtWork || remainingArtWork,
+  ...(performers[fighterId].sourceKind ? { sourceKind: performers[fighterId].sourceKind } : {}),
 })));

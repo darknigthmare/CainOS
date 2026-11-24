@@ -1,5 +1,5 @@
 /**
- * Real wardrobe/selection flows, including all 51 existing costume records.
+ * Real wardrobe/selection flows for every archive costume record.
  * Visual comparisons use the shipped renderer; no game-state mutation hooks.
  * The checks establish UI wiring and source coverage, not canonical art approval.
  */
@@ -45,13 +45,21 @@ async function wardrobeReady(target,id){
 }
 async function assertCostumePixels(variant, kind) {
   const matches = await page.evaluate(async ({ id, fighterId, kind }) => {
+    const { getFighter, equipCostume } = await import('/combat/data.mjs');
+    const { ART_FILES } = await import('/combat/offline-manifest.mjs');
     const { loadFighterIllustration, standingIllustration } = await import('/combat/illustrations.mjs');
+    const appearance = equipCostume(getFighter(fighterId), id);
+    if (appearance.costume !== id) return false;
     const frame = kind === 'stance'
-      ? standingIllustration({ id: fighterId, costume: id })
-      : await loadFighterIllustration(kind, { id });
+      ? standingIllustration(appearance)
+      : await loadFighterIllustration(kind, appearance);
     if (!frame || frame.nativeFacing !== 1) return false;
+    const directory = appearance.sprite?.crossoverDirectory;
+    const stem = directory ? `${directory}/${kind}` : `../assets/encore/${kind}/${id}`;
+    const sourcePath = [stem + '.webp', stem + '.png'].find(file => ART_FILES.includes(file));
+    if (!sourcePath) return false;
     const image = new Image();
-    image.src = `/assets/encore/${kind}/${id}.webp`;
+    image.src = new URL(sourcePath, document.baseURI).href;
     await image.decode();
     const expected = document.createElement('canvas');
     expected.width = frame.width; expected.height = frame.height;
@@ -62,7 +70,7 @@ async function assertCostumePixels(variant, kind) {
     const actual = frame.canvas.getContext('2d').getImageData(0, 0, frame.width, frame.height).data;
     return actual.every((value, index) => value === source[index]);
   }, { id: variant.id, fighterId: variant.fighterId, kind });
-  assert.ok(matches, `${variant.id}: expected its own untinted ${kind} WebP`);
+  assert.ok(matches, `${variant.id}: expected its own untinted published ${kind} image`);
 }
 async function sourceNotes(target,variant){
   assert.ok(variant.fidelity,`Missing own costume record: ${variant.id}`);
@@ -83,6 +91,7 @@ async function sourceNotes(target,variant){
 }
 
 try{
+  assert.equal(VARIANTS.length,52);
   await page.goto(base+'/combat/',{waitUntil:'networkidle'});
   await page.waitForFunction(version=>window.Encore?.version===version,GAME_VERSION);
   await page.locator('[data-nav="settings"]').click();
@@ -149,7 +158,7 @@ try{
     }
   }
   assert.equal(previews.length,VARIANTS.length);
-  checked('All 51 costume choices refresh the actual selected portrait','Every selection matches the pixels decoded independently from its published costume WebP.');
+  checked(`All ${VARIANTS.length} costume choices refresh the actual selected portrait`,'Every selection matches pixels decoded independently from its published WebP or native PNG.');
 
   const pomni=VARIANTS.find(v=>v.fighterId==='pomni'),jax=VARIANTS.find(v=>v.fighterId==='jax');
   await page.locator('[data-fighter="pomni"]').click();
@@ -198,8 +207,8 @@ try{
     if(more)await page.locator('[data-page="1"]').click();
   }
   assert.equal(new Set(wardrobes.map(v=>v.id)).size,VARIANTS.length);
-  checked('All 51 costumes preload their own right-facing stance in the real wardrobe','Each decoded frame matches its own published WebP pixel for pixel.');
-  checked('All 51 wardrobe dialogs show their own references and compatible choices','The comparison uses the combat renderer; each dialog exposes its own references and every recorded framing, transparency, proportion and art issue.');
+  checked(`All ${VARIANTS.length} costumes preload their own right-facing stance in the real wardrobe`,'Each decoded frame matches its own published WebP or native PNG pixel for pixel.');
+  checked(`All ${VARIANTS.length} wardrobe dialogs show their own references and compatible choices`,'The comparison uses the combat renderer; each dialog exposes its own references and every recorded framing, transparency, proportion and art issue.');
 
   const last=wardrobes.at(-1).id,trigger=page.locator(`[data-appearance="${last}"]`);
   await trigger.focus();await page.keyboard.press('Enter');await wardrobeReady(page,last);
@@ -256,7 +265,7 @@ try{
   checked('Selection and wardrobe remain usable with touch at 390 px','Portraits fit their cards, comparison and source notes stay within the dialog, and closing retains the selection.');
 
   assert.deepEqual(errors,[]);
-  await fs.writeFile(path.join(output,'costume-browser-report.json'),JSON.stringify({version:GAME_VERSION,base,scope:'51 costume UI flows; not canonical art certification.',checks,errors,previews,wardrobes},null,2));
+  await fs.writeFile(path.join(output,'costume-browser-report.json'),JSON.stringify({version:GAME_VERSION,base,scope:`${VARIANTS.length} archive costume UI flows; not canonical art certification.`,checks,errors,previews,wardrobes},null,2));
   console.log(`Costume browser QA: ${checks.length} checks passed.`);
 }catch(error){
   await page.screenshot({path:path.join(output,'costume-browser-failure.png'),fullPage:true}).catch(()=>{});

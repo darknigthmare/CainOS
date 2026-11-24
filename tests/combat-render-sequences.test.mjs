@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { FIGHTERS, STAGES } from '../combat/data.mjs';
+import { FIGHTERS, STAGES, equipCostume } from '../combat/data.mjs';
+import { ABSTRACTION_IDS, ABSTRACTION_CALM_ID } from '../combat/abstractions-content.mjs';
 import { FIGHTER_SEQUENCES, SEQUENCE_EVENTS, SEQUENCE_DURATIONS, sequencePose, outcomeEvent } from '../combat/render-sequences.mjs';
 import { stageMotion, drawStageMotion, STAGE_AMBIENCES, AMBIENT_FLOOR } from '../combat/render-stage-motion.mjs';
 import { actorPose } from '../combat/render-poses.mjs';
 
-test('all fourteen fighters have five individually timed immutable presentation sequences', () => {
+test('every playable fighter has five individually timed immutable presentation sequences', () => {
   assert.deepEqual(new Set(Object.keys(FIGHTER_SEQUENCES)), new Set(FIGHTERS.map(f => f.id)));
   const ids = [], motions = new Set();
   for (const f of FIGHTERS) for (const event of SEQUENCE_EVENTS) {
@@ -30,7 +31,7 @@ test('every sequence is finite, continuous at its keyframes and settles exactly'
   }
 });
 
-test('reduced motion uses a fixed settled pose for all seventy sequences', () => {
+test('reduced motion uses a fixed settled pose for every presentation sequence', () => {
   for (const id of Object.keys(FIGHTER_SEQUENCES)) for (const event of SEQUENCE_EVENTS) {
     const fixed = sequencePose(id, event, 0, { reducedMotion: true });
     assert.deepEqual(fixed, sequencePose(id, event, 1000, { reducedMotion: true }));
@@ -110,5 +111,23 @@ test('stage sampling preserves its input and rejects nonfinite presentation cloc
       assert.equal(JSON.stringify(s), before);
     }
     assert.deepEqual(stageMotion(s, NaN), stageMotion(s, 0));
+  }
+});
+
+test('all abstraction events route through their own identity, including the calm Queenie costume', () => {
+  const appearances = ABSTRACTION_IDS.map(id => FIGHTERS.find(f => f.id === id));
+  appearances.push(equipCostume(FIGHTERS.find(f => f.id === 'abstractedqueenie'), ABSTRACTION_CALM_ID));
+  for (const f of appearances) for (const event of SEQUENCE_EVENTS) {
+    const phase = event === 'intro' ? 'intro' : event.startsWith('match') ? 'matchOver' : 'roundOver';
+    const result = event.endsWith('Defeat') ? 1 : 0;
+    const actor = { f, slot: 0, state: 'idle', x: 400, y: 568 }, before = JSON.stringify(actor);
+    const options = { phase, winner: result, roundWinner: result, presentationFrame: 20 };
+    const pose = actorPose(actor, options);
+    assert.equal(pose.sequenceId, f.id + ':' + event);
+    assert.equal(pose.frame, 0);
+    assert.notEqual(pose.sequenceId, 'pomni:' + event);
+    assert.deepEqual(actorPose(actor, { ...options, reducedMotion: true }),
+      actorPose(actor, { ...options, reducedMotion: true, presentationFrame: 20000 }));
+    assert.equal(JSON.stringify(actor), before);
   }
 });

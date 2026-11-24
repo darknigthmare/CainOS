@@ -28,7 +28,8 @@ const appearanceWaves = {
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
   assert.equal(COSTUME_ADDITIONS.length, 45);
-  assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
+  assert.equal(VARIANTS.length, 52, 'the 51 historical costumes are followed by calm abstracted Queenie');
+  assert.equal(VARIANTS.at(-1).id, 'abstractedqueeniedark');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
       date + ': preserve the historical wave and identify every new appearance');

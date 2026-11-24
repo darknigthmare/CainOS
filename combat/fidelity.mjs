@@ -1,5 +1,6 @@
 import { CROSSOVER_STAGES, CROSSOVER_STAGE_SOURCES } from './crossover-stages.mjs';
 import { EXPANSION_DEFS } from './roster-expansion.mjs';
+import { ABSTRACTION_DEFS, ABSTRACTION_SOURCES, abstractionFidelity } from './abstractions-content.mjs';
 import { COSTUME_ADDITION_SOURCES } from './costume-additions.mjs';
 
 /**
@@ -20,6 +21,7 @@ const episode = (id, title, video, scope) => ({ id, title: `GLITCH — ${title}`
 const still = (id, title, file, scope) => ({ id, title: `GLITCH — ${title}`, url: `https://static.wixstatic.com/media/${file}`, kind: 'Visuel officiel', scope: `${scope} Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue.` });
 const merchandise = (id, title, file, page, scope) => ({ id, title: `GLITCH Store — ${title}`, url: `https://glitchproductions.store/cdn/shop/files/${file}`, kind: 'Produit dérivé officiel', scope: `${scope} Photographie consultée sur https://glitchproductions.store/products/${page}. Ce produit stylisé ne mesure pas les proportions ni les poses de la série.` });
 export const FIDELITY_SOURCES = freeze([
+  ...ABSTRACTION_SOURCES,
   ...COSTUME_ADDITION_SOURCES,
   ...CROSSOVER_STAGE_SOURCES,
   { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle et galerie de la série. La page ne documente ni les règles de combat ni les dimensions du jeu.' },
@@ -438,6 +440,7 @@ export const FIGHTER_FIDELITY = freeze({
   abstractedkaufmo: pending(['ep1'], 'La forme abstraite possède un kit original de contact, de charges et d’effets de simulation. Le repli 0.3.0 est une translation physique de 135 pixels sur 15 images actives.', 'Pilote identifié. La silhouette sombre et ses yeux demandent une comparaison sur des frames dédiées ; la forme non abstraite de Kaufmo reste une identité visuelle distincte dans les archives.'),
   baronmildenhall: pending(['ep3'], 'Le personnage du manoir est transformé en combattant de précision. La cadence des tirs, les pièges, les contres et la récupération de stabilité sont créés pour le jeu.', 'Épisode 3 identifié. Apparence, arme, état spectral et gestes à comparer aux plans primaires ; aucun arsenal complet du jeu déclaré canonique.'),
   ...Object.fromEntries(EXPANSION_DEFS.map(def => [def.id, expansionFidelity(def)])),
+  ...Object.fromEntries(ABSTRACTION_DEFS.map(def => [def.id, abstractionFidelity(def)])),
 });
 
 // Each row follows the ten authored slots, but gives a distinct explanation of
@@ -614,6 +617,12 @@ const moveAdaptations = {
   ],
 };
 export const MOVE_FIDELITY = freeze({
+  ...Object.fromEntries(ABSTRACTION_DEFS.flatMap(def => slots.map(slot => [def.id + '.' + slot, {
+    ...abstractionFidelity(def),
+    combatAdaptation: 'Technique ' + slot + ' propre à ' + def.name + '. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.',
+    reviewStatus: 'Adaptation de combat',
+    reviewScope: 'Les sources et le classement décrivent l’identité de la silhouette, sans attester un geste de combat. Les formes originales restent des créations du fan-game.',
+  }]))),
   ...Object.fromEntries(Object.entries(moveAdaptations).flatMap(([fighterId, descriptions]) => slots.map((slot, i) => {
     const parent = FIGHTER_FIDELITY[fighterId];
     return [`${fighterId}.${slot}`, record([...parent.sourceIds], [...parent.observedTraits], descriptions[i], 'Adaptation de combat', 'Les repères observés décrivent l’apparence du personnage, pas l’exécution du coup. Nom, chorégraphie, portée, dégâts, ressources et fenêtres sont créés pour Encore.')];
@@ -625,6 +634,8 @@ export const MOVE_FIDELITY = freeze({
 });
 
 export const STAGE_FIDELITY = freeze({
+  memoryfracture: record([], ['Arches rouge-violet disjointes, miroir ovale fracturé et éclats de verre suspendus dans le décor original du jeu.'], 'Composition originale pour les abstractions inventées : trois plans, piste à y568, lumières et musique créées pour Encore.', 'Création originale Encore', 'Ce lieu est inventé. Les références du cirque fixent une direction artistique ; aucune scène officielle ni reproduction canonique 1:1 n’est revendiquée.'),
+  abstractionthreshold: record([], ['Faille noire facettée, arches d’obsidienne et petits yeux colorés dans le lointain ; passerelle horizontale dégagée.'], 'Composition originale pour les abstractions : parallaxe, piste à y568, pulsations discrètes et ambiance sonore créées pour Encore.', 'Création originale Encore', 'Ce seuil est un lieu de fan-game inventé. Aucun plan officiel, aucune géographie canonique ni dimension mesurée n’est revendiqué.'),
   falseexit: record(['ep1', 'glitch-false-exit'],
     ['Une porte rouge identifiée par le mot EXIT se détache des parois grises du couloir.'],
     'La piste est élargie pour accueillir deux combattants. Le mobilier, les plafonniers et les distances entre les plans sont recomposés pour Encore.',

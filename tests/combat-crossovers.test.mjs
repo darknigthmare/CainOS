@@ -15,7 +15,7 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
   const illustrated = FIGHTERS.filter(fighter => CROSSOVER_SERIES.every(series => CROSSOVER_FUSIONS[series.id]?.[fighter.id]));
   const pending = FIGHTERS.filter(fighter => !illustrated.includes(fighter));
   assert.equal(illustrated.length, 14);
-  assert.equal(pending.length, 40);
+  assert.equal(pending.length, 50);
   assert.equal(CROSSOVER_SERIES.length, 9);
   const fusions = Object.values(CROSSOVER_FUSIONS).reduce((sum, roster) => sum + Object.keys(roster).length, 0);
   assert.equal(fusions, CROSSOVER_SERIES.length * illustrated.length);
@@ -25,7 +25,7 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
     assert.equal(new Set(Object.values(roster)).size, illustrated.length);
   }
   assert.equal(new Set(COSTUMES.map(item => item.id)).size, 303 + fusions + COSTUME_ADDITIONS.length + NPC_CROSSOVER_DEFINITIONS.length);
-  assert.equal(VARIANTS.length, 51);
+  assert.equal(VARIANTS.length, 52);
   assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions + NPC_CROSSOVER_DEFINITIONS.length);
   for (const fighter of illustrated) {
     for (const { id } of CROSSOVER_SERIES) {
@@ -43,7 +43,7 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
       }
     }
   }
-  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, 'circus')).length, 51 + COSTUME_ADDITIONS.length);
+  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, 'circus')).length, VARIANTS.length + COSTUME_ADDITIONS.length);
   assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'resident')).length, 126 + NPC_CROSSOVER_DEFINITIONS.filter(item => item.style === 'resident').length);
   assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'fusion')).length, fusions + NPC_CROSSOVER_DEFINITIONS.filter(item => item.style === 'fusion').length);
   assert.ok(crossoverStylesFor('', 'pomni').includes('fusion'));

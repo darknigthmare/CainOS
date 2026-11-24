@@ -135,7 +135,7 @@ test('the nine episode references retain later costumes without claiming to have
     assert.equal(source.kind, 'Épisode officiel');
     assert.match(source.url, /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/);
   }
-  assert.equal(VARIANTS.length, 51);
+  assert.equal(VARIANTS.length, 52);
   for (const variant of VARIANTS) {
     assert.equal(variant.fidelity, getCostumeFidelity(variant.id));
     assert.notEqual(variant.fidelity, getFighterFidelity(variant.baseFighterId), 'a base appearance review must not certify its costumes');
@@ -175,7 +175,7 @@ test('unknown IDs fail closed and shared review data cannot be mutated by a cons
   assert.throws(() => COSTUME_FIDELITY.workgangle.assetReview.issues.push('mutation'), TypeError);
 });
 
-test('all 51 costumes have an individual technical review independent of canonical evidence', () => {
+test('all 52 costumes have an individual technical review independent of canonical evidence', () => {
   assert.deepEqual(Object.keys(COSTUME_FIDELITY).sort(), VARIANTS.map(v => v.id).sort());
   for (const [id, item] of Object.entries(COSTUME_FIDELITY)) {
     assert.ok(Array.isArray(item.sourceIds) && Array.isArray(item.observedTraits), id);
@@ -183,6 +183,16 @@ test('all 51 costumes have an individual technical review independent of canonic
     assert.ok(item.combatAdaptation.includes('mêmes dix techniques'), id);
     assert.ok(item.reviewStatus && item.reviewScope.length > 30, id);
     const review = item.assetReview;
+    if (id === 'abstractedqueeniedark') {
+      assert.equal(item.sourceKind, 'official-identity');
+      assert.deepEqual(item.observedTraits, []);
+      assert.match(item.reviewStatus, /comparaison visuelle ouverte/);
+      assert.match(review.status, /^Revue technique (?:à reprendre|partielle)/);
+      assert.ok(review.visibleTraits.length >= 1 && review.visibleTraits.every(t => t.length > 15));
+      for (const field of ['identityEvidence', 'framing', 'transparency', 'proportions']) assert.ok(review[field].length > 35, id + ':' + field);
+      assert.ok(Array.isArray(review.issues) && review.issues.length >= 2);
+      continue;
+    }
     assert.match(review.status, /^Revue technique (?:0\.6\.0 )?effectuée/, id);
     assert.ok(review.visibleTraits.length >= 2 && review.visibleTraits.every(t => t.length > 15), id);
     for (const field of ['identityEvidence', 'framing', 'transparency', 'proportions']) assert.ok(review[field].length > 35, `${id}:${field}`);

@@ -96,5 +96,11 @@ export const AUDIO_AMBIENCES = freeze({
   softballfield: ambience('softballfield', 'Souffle sous les tribunes', 'Une brise basse et une légère résonance des structures ; création sonore du jeu, sans public enregistré.', 11.8, [
     air(430, 710, 2.6, 0, 'lowpass', .014), tone(108, 106, 1.8, 3.7, 'sine', .006), air(830, 460, 1.9, 7.4, 'bandpass', .009, .5),
   ]),
+  memoryfracture: ambience('memoryfracture', 'Mémoire suspendue', 'Souffle feutré et tintements éloignés ; création sonore originale Encore.', 11.4, [
+    air(520, 360, 2.3, 0, 'lowpass', .010), tone(1240, 1218, .45, 4.1, 'sine', .006), tone(830, 817, .62, 7.8, 'sine', .005),
+  ]),
+  abstractionthreshold: ambience('abstractionthreshold', 'Résonance de la faille', 'Deux oscillations graves espacées et un souffle faible ; création sonore originale Encore.', 11.9, [
+    tone(64, 62, 2.6, 0, 'sine', .009), air(310, 190, 2.0, 4.3, 'lowpass', .009), tone(96, 94, 1.7, 8.0, 'triangle', .005),
+  ]),
 });
 export const AMBIENCE_STAGE_IDS = Object.freeze(Object.keys(AUDIO_AMBIENCES));

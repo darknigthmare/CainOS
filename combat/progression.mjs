@@ -1,6 +1,7 @@
 import { FIGHTERS, STAGES, DEDICATED_STAGES, COSTUMES } from './data.mjs';
 import { getStoryRoute } from './stories.mjs';
 import { getTournamentRival } from './tournament-lore.mjs';
+import { PRE_ABSTRACTION_FIGHTER_IDS, PRE_ABSTRACTION_STAGE_IDS } from './catalog-history.mjs';
 
 /**
  * JSON checkpoints for Encore's multi-encounter programmes. A checkpoint is
@@ -328,6 +329,8 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
       || !Array.isArray(value.results) || value.results.length > 10) fail('Le point de reprise est corrompu.');
   const contexts = [{ roster, stages, legacyTournament: false }];
   if (roster === FIGHTERS && stages === STAGES) {
+    const previousRoster = PRE_ABSTRACTION_FIGHTER_IDS.map(id => FIGHTERS.find(fighter => fighter.id === id));
+    const previousFullStages = PRE_ABSTRACTION_STAGE_IDS.map(id => STAGES.find(stage => stage.id === id));
     const originalRoster = FIGHTERS.filter(fighter => ORIGINAL_FIGHTER_IDS.has(fighter.id));
     const originalStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id));
     const crossoverStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id) || CROSSOVER_STAGE_IDS.has(stage.id));
@@ -335,11 +338,10 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
     const undermapStages = STAGES.filter(stage => UNDERMAP_STAGE_IDS.has(stage.id));
     const barnoirStages = STAGES.filter(stage => BARNOIR_STAGE_IDS.has(stage.id));
     // These are release catalogs, never an arbitrary subset supplied by a save.
-    contexts.push({ roster: FIGHTERS, stages: originalStages, legacyTournament: false });
-    contexts.push({ roster: FIGHTERS, stages: illustratedStages, legacyTournament: false });
-    contexts.push({ roster: FIGHTERS, stages: undermapStages, legacyTournament: false });
-    contexts.push({ roster: FIGHTERS, stages: barnoirStages, legacyTournament: false });
-    for (const previousStages of [STAGES, barnoirStages, undermapStages, illustratedStages, crossoverStages, originalStages]) {
+    for (const previousStages of [previousFullStages, barnoirStages, undermapStages, illustratedStages, originalStages]) {
+      contexts.push({ roster: previousRoster, stages: previousStages, legacyTournament: false });
+    }
+    for (const previousStages of [previousFullStages, barnoirStages, undermapStages, illustratedStages, crossoverStages, originalStages]) {
       contexts.push({ roster: originalRoster, stages: previousStages, legacyTournament: value.mode === 'tournament' });
     }
   }

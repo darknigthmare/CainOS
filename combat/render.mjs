@@ -1,3 +1,4 @@
+import { projectileArtSpec, ProjectileArtLoader } from './projectile-art.mjs';
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
 import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
@@ -752,6 +753,7 @@ function pillow(ctx, x, y, w, h, angle, fill) {
 
 export class CombatRenderer {
   constructor(target) {
+    this.projectileArt = new ProjectileArtLoader();
     this.canvas = target;
     target.width = LOGICAL_WIDTH; target.height = LOGICAL_HEIGHT;
     this.ctx = target.getContext('2d');
@@ -764,7 +766,10 @@ export class CombatRenderer {
 
   async preload(fighters, stages = []) {
     const missing = [];
+    const requestedSources = new Set();
+    const projectileLoad = this.projectileArt.preload(fighters);
     const fighterLoads = (fighters || []).map(async fighter => {
+      for (const src of [fighter.sprite?.src, fighter.animation?.src].filter(Boolean)) requestedSources.add(sourceURL(src));
       if (fighter.sprite?.crossoverDirectory) {
         if (!await prepareFighter(fighter)) missing.push({ src: fighter.sprite.src, error: 'Illustration de garde indisponible' });
       } else {
@@ -777,8 +782,17 @@ export class CombatRenderer {
       else this.background(stage);
     });
     const results = await Promise.allSettled([...fighterLoads, ...stageLoads]);
-    const errors = [...failures.entries()].map(([src, error]) => ({ src, error })).concat(missing);
-    return { ok: errors.length === 0 && results.every(r => r.status === 'fulfilled'), errors };
+    await projectileLoad;
+    const errors = [...failures.entries()].filter(([src]) => requestedSources.has(src))
+      .map(([src, error]) => ({ src, error })).concat(missing);
+    results.forEach((result, index) => {
+      if (result.status !== 'rejected') return;
+      const fighter = (fighters || [])[index];
+      const stage = stages[index - fighterLoads.length];
+      errors.push({ src: fighter?.sprite?.src || stage?.theme || stage?.id || '',
+        error: result.reason?.message || String(result.reason) });
+    });
+    return { ok: errors.length === 0, errors };
   }
 
   background(stage) {
@@ -931,18 +945,34 @@ export class CombatRenderer {
     if (projectile.dead || projectile.delay > 0) return;
     const ctx = this.ctx, owner = actors[projectile.owner], tag = projectile.def?.tag || projectile.kind;
     const color = effectColor(tag, owner), x = projectile.x, y = projectile.y;
-    const motif = projectilePresentation(projectile, owner);
+    const spec = projectileArtSpec(projectile, owner);
+    const motif = spec?.motif || projectilePresentation(projectile, owner);
+    const artwork = this.projectileArt.peek(spec);
+    if (!artwork) this.projectileArt.load(spec);
     const radius = /explosive|rocket|psychic/.test(tag || '') ? 12 : 7;
     ctx.save();
     ctx.strokeStyle = color; ctx.lineWidth = radius * 0.85; ctx.globalAlpha = 0.24;
     const trail = reducedMotion ? 12 : clamp(Math.abs(projectile.vx || 8) * 3, 18, 70);
     line(ctx, [[x - Math.sign(projectile.vx || 1) * trail, y - (projectile.vy || 0) * 2], [x, y]], color, radius * 0.85);
     ctx.globalAlpha = 1; ctx.translate(x, y);
-    const spins = ['key', 'button', 'module', 'gloink', 'candy', 'sugar', 'juggle', 'corruption'].includes(motif);
+    const spins = spec ? spec.motion === 'spin' : ['key', 'button', 'module', 'gloink', 'candy', 'sugar', 'juggle', 'corruption'].includes(motif);
     const phase = reducedMotion ? 0 : tick * 0.075;
+    // Native accessories face right. Reflections retain the original accessory.
+    if (spec && spec.motion !== 'velocity' && projectile.vx < 0) ctx.scale(-1, 1);
     if (spins) ctx.rotate(phase);
-    else if (['pellet', 'spectral-shot'].includes(motif)) ctx.rotate(Math.atan2(projectile.vy || 0, projectile.vx || 1));
-    objectMotif(ctx, motif, { color, heavy: !!projectile.def?.fuse || projectile.def?.slot === 'super', phase });
+    else if (spec?.motion === 'velocity' || ['pellet', 'spectral-shot'].includes(motif)) ctx.rotate(Math.atan2(projectile.vy || 0, projectile.vx || 1));
+    const heavy = !!projectile.def?.fuse || projectile.def?.slot === 'super';
+    if (artwork) {
+      const { bounds } = artwork;
+      const scale = Math.min(spec.width / bounds.width, spec.height / bounds.height) * (heavy ? 1.25 : 1);
+      const width = bounds.width * scale, height = bounds.height * scale;
+      ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(artwork.canvas, bounds.x, bounds.y, bounds.width, bounds.height,
+        -width / 2, -height / 2, width, height);
+    } else {
+      // Explicit fallback while absent, decoding or unavailable offline.
+      objectMotif(ctx, motif, { color, heavy, phase });
+    }
     ctx.restore();
   }
 

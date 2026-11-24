@@ -30,6 +30,17 @@ const performers = {
   abstractedkaufmo: { title: 'Impulsion abstraite', x: 7, lift: 8, lean: -0.025, beat: 0.19, cells: [0, 0, 0] },
   baronmildenhall: { title: 'Salut spectral', x: 6, lift: 11, lean: 0.03, beat: 0.44, cells: [0, 0, 0] },
   fudge: { title: 'Vague de chocolat', x: 8, lift: 4, lean: -0.03, beat: 0.29, cells: [0, 0, 0] },
+  // Original Encore choreography of dedicated drawings; rigid motion only.
+  cellarabstraction: { title: 'Rassemblement des regards', x: 3.8, lift: 3.6, lean: -0.021, beat: 0.32, cells: [0, 0, 0] },
+  aquaticabstraction: { title: 'Ressac suspendu', x: 8.2, lift: 3.2, lean: -0.018, beat: 0.42, cells: [0, 0, 0] },
+  abstractedjax: { title: 'Arrêt du contour', x: 9.6, lift: 7.4, lean: -0.028, beat: 0.27, cells: [0, 0, 0] },
+  abstractedqueenie: { title: 'Veille silencieuse', x: 4.2, lift: 2.4, lean: 0.012, beat: 0.37, cells: [0, 0, 0] },
+  abstractedribbit: { title: 'Appui du rebond', x: 10.4, lift: 12.8, lean: -0.033, beat: 0.23, cells: [0, 0, 0] },
+  originalabstractedpomni: { title: 'Détour sans porte', x: 7.2, lift: 10.4, lean: -0.031, beat: 0.29, cells: [0, 0, 0] },
+  originalabstractedragatha: { title: 'Tension des fils noirs', x: 5.8, lift: 4.8, lean: 0.024, beat: 0.39, cells: [0, 0, 0] },
+  originalabstractedgangle: { title: 'Retombée des rubans', x: 7.8, lift: 8.6, lean: -0.022, beat: 0.34, cells: [0, 0, 0] },
+  originalabstractedkinger: { title: 'Ancrage du bastion', x: 3.4, lift: 2.8, lean: 0.017, beat: 0.47, cells: [0, 0, 0] },
+  originalabstractedzooble: { title: 'Accord des fragments', x: 8.6, lift: 5.6, lean: -0.037, beat: 0.26, cells: [0, 0, 0] },
 };
 EXPANSION_DEFS.forEach((def, index) => {
   performers[def.id] = {

@@ -1,3 +1,4 @@
+import { ABSTRACTION_IDS } from './abstractions-content.mjs';
 import { FIGHTERS } from './data.mjs';
 import { EXPANSION_IDS } from './roster-expansion.mjs';
 
@@ -85,6 +86,7 @@ export function applySpritePalette(data, width, height, paletteSwap) {
 }
 
 const projectileShapes = Object.freeze({
+  ...Object.fromEntries(ABSTRACTION_IDS.map(id => [id, { special: 'corruption', super: 'corruption' }])),
   pomni: { special: 'juggle' },
   jax: { special: 'key', super: 'trick-box' },
   ragatha: { special: 'button' },
@@ -102,6 +104,7 @@ const projectileShapes = Object.freeze({
   ...Object.fromEntries(EXPANSION_IDS.map(id => [id, { special: 'pellet', super: 'pellet' }])),
 });
 const trapShapes = Object.freeze({
+  ...Object.fromEntries(ABSTRACTION_IDS.map(id => [id, 'corruption'])),
   jax: 'trick-box', gangle: 'ribbon-knot', zooble: 'module', caine: 'stage-mark',
   gummigoo: 'gum', loolilalu: 'candy-tile', gloinkqueen: 'gloink-nest',
   fudge: 'fudge-pool', abstractedkaufmo: 'corruption', baronmildenhall: 'hunting-trap',

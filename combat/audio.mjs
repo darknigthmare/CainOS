@@ -33,6 +33,8 @@ export const AUDIO_THEMES = Object.freeze({
   undermap: theme('undermap', 'Hors de la carte', 78, 47, minor, [0, null, 4, null, 2, null, 1, 3, null, 5, null, 2, 4, null, 1, null], [0, 5, 2, 4], 'sine'),
   barnoir: theme('barnoir', 'Sous les néons', 88, 46, minor, [0, null, 2, 3, null, 4, 2, null, 1, null, 5, 4, null, 2, 1, null], [0, 3, 5, 4], 'triangle', .03),
   softballfield: theme('softballfield', 'Sous les projecteurs', 108, 55, major, [0, 2, 4, null, 3, 1, 2, null, 4, 5, 3, null, 2, 4, 1, 0], [0, 3, 4, 1], 'triangle', .035),
+  memoryfracture: theme('memoryfracture', 'Éclats de mémoire', 84, 57, minor, [0, null, 4, 2, null, 1, null, 5, 3, null, 6, 4, null, 2, 1, null], [0, 5, 3, 1], 'sine', .02),
+  abstractionthreshold: theme('abstractionthreshold', 'Au seuil du silence', 72, 43, [0, 1, 3, 5, 7, 8, 10], [0, null, null, 1, 4, null, 2, null, 5, null, 3, null, 1, null, 0, null], [0, 1, 4, 5], 'triangle'),
 });
 
 // [frequency, end frequency, seconds, delay, waveform, amplitude].

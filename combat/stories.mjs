@@ -1,5 +1,8 @@
 import { FIGHTERS, STAGES } from './data.mjs';
 import { EXPANSION_DEFS, EXPANSION_RIVALS } from './roster-expansion.mjs';
+import { ABSTRACTION_DEFS, ABSTRACTION_RIVALS } from './abstractions-content.mjs';
+import { buildAbstractionStory } from './abstractions-narrative.mjs';
+import { PRE_ABSTRACTION_FIGHTER_IDS } from './catalog-history.mjs';
 
 // These forty routes were authored against the published 22-arena catalog.
 // Adding a selectable arena must not rewrite chapters, panels or saved routes.
@@ -284,7 +287,7 @@ const expansionPanel = (fighterId, kind, index, stageId, composition, cast, summ
 });
 function expansionRoute(def, index) {
   const rivalName = FIGHTERS.find(fighter => fighter.id === def.rivalId)?.name || def.rivalId;
-  const pool = FIGHTERS.map(fighter => fighter.id).filter(id => id !== def.id && id !== def.rivalId);
+  const pool = PRE_ABSTRACTION_FIGHTER_IDS.filter(id => id !== def.id && id !== def.rivalId);
   const used = new Set([def.id, def.rivalId]);
   const pick = start => {
     for (let step = 0; step < pool.length; step++) {
@@ -335,6 +338,7 @@ function expansionRoute(def, index) {
   };
 }
 EXPANSION_DEFS.forEach((def, index) => { stories[def.id] = expansionRoute(def, index); });
+ABSTRACTION_DEFS.forEach((def, index) => { stories[def.id] = buildAbstractionStory(def, index, FIGHTERS, PRE_ABSTRACTION_FIGHTER_IDS); });
 const freeze = value => {
   if (value && typeof value === 'object') { for (const child of Object.values(value)) freeze(child); Object.freeze(value); }
   return value;
@@ -352,7 +356,7 @@ export const STORY_RIVALS = freeze({
   kinger: 'pomni', caine: 'jax', bubble: 'zooble', gummigoo: 'fudge',
   loolilalu: 'gloinkqueen', gloinkqueen: 'zooble', fudge: 'loolilalu',
   abstractedkaufmo: 'ragatha', baronmildenhall: 'kinger',
-  ...EXPANSION_RIVALS
+  ...EXPANSION_RIVALS, ...ABSTRACTION_RIVALS
 });
 export function getStoryRival(fighterId) {
   const route = getStoryRoute(fighterId), rivalId = STORY_RIVALS[fighterId];

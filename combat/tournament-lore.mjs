@@ -7,6 +7,8 @@
 import { STORY_RIVALS } from './stories.mjs';
 import { FIGHTERS } from './data.mjs';
 import { EXPANSION_DEFS } from './roster-expansion.mjs';
+import { ABSTRACTION_DEFS } from './abstractions-content.mjs';
+import { buildAbstractionTournament } from './abstractions-narrative.mjs';
 
 export const TOURNAMENT_SIZE = 8;
 export const TOURNAMENT_WINS = 3;
@@ -111,6 +113,7 @@ for (const def of EXPANSION_DEFS) {
     `${def.name} remporte trois duels et soulève la coupe. Le prix est un rôle dans le prochain spectacle, pas une sortie : ${def.title.toLowerCase()} devient un numéro à part entière, avec ${rivalName} dans le public.`,
     `Un rôle de ${def.role.toLowerCase()} dans le prochain spectacle.`);
 }
+for (const def of ABSTRACTION_DEFS) lore[def.id] = buildAbstractionTournament(def, FIGHTERS);
 const freeze = value => {
   if (value && typeof value === 'object') { for (const child of Object.values(value)) freeze(child); Object.freeze(value); }
   return value;
