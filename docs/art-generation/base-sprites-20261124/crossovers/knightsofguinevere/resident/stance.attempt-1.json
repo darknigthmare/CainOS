@@ -1,0 +1,56 @@
+{
+  "series": "knightsofguinevere",
+  "style": "resident",
+  "label": "Knights of Guinevere · Résident · Réparateur des automates",
+  "identity": "Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/pomni/resident/stance.webp"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/knights-of-guinevere"
+  ],
+  "state": "stance",
+  "id": "glitch-knightsofguinevere-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:knightsofguinevere:resident:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-f6d8508f-adb7-4fbe-8daf-9da009afef96.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-f6d8508f-adb7-4fbe-8daf-9da009afef96.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    202,
+    33,
+    1019,
+    1228
+  ],
+  "alpha12Margins": [
+    202,
+    33,
+    235,
+    26
+  ],
+  "alphaZeroFraction": 0.7664971294409723,
+  "alphaOpaqueFraction": 0.0011929926309175868,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png",
+  "bytes": 789669,
+  "sha256": "f8d5a53457dc2705ee3d1e79e79e8510602a9ec6c951bb74220d7529133763e3",
+  "sha": "23990463bfb12563230b92d0c0e1c701dcdebdb4",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/knightsofguinevere/pomni/resident/stance.webp": "4fc6675140219de8ae2d6e98a2573e346215248b0ed6ba1181efd23db32e91ec"
+  },
+  "auditPass": true
+}

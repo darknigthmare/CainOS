@@ -1,0 +1,60 @@
+{
+  "series": "lackadaisy",
+  "style": "hommage",
+  "label": "Lackadaisy · Hommage · Rocky Rickaby",
+  "identity": "Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/jax/hommage/selection.webp",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/lackadaisy-rocky-official-standee.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/lackadaisy",
+    "https://lackadaisy.com/characters.php",
+    "https://lackadaisy.store/products/rocky-standee"
+  ],
+  "state": "stance",
+  "id": "glitch-lackadaisy-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:lackadaisy:hommage:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-1bc472bf-da61-4302-985c-0bc0f9f91157.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-1bc472bf-da61-4302-985c-0bc0f9f91157.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    202,
+    9,
+    1020,
+    1241
+  ],
+  "alpha12Margins": [
+    202,
+    9,
+    234,
+    13
+  ],
+  "alphaZeroFraction": 0.7288288322662536,
+  "alphaOpaqueFraction": 0.0011281284260382725,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png",
+  "bytes": 791420,
+  "sha256": "5a8c0b84520d6b4e7b4a919eea51f63bcfdacbe5dc911c37f43faa544946e065",
+  "sha": "43995379a41e1e211dc6ca9129c85415339e1497",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/lackadaisy/jax/hommage/selection.webp": "c44b7998a5be50171b90ee87b3698a48cde8e6b656f7dba10acb9c9166361c5d",
+    "docs/art-generation/base-sprites-20261124/crossovers/references/lackadaisy-rocky-official-standee.png": "ca11ba42e8f888d180f5bae9c71d5dac857a7346e7e389a5e2b04b4833396fb4"
+  },
+  "auditPass": true
+}

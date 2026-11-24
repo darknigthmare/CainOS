@@ -1,0 +1,56 @@
+{
+  "series": "knightsofguinevere",
+  "style": "fusion",
+  "label": "Knights of Guinevere · Fusion · Automate des bassins",
+  "identity": "A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/knights-of-guinevere"
+  ],
+  "state": "selection",
+  "id": "glitch-knightsofguinevere-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:knightsofguinevere:fusion:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-894ea4b3-878f-4c19-9862-5a16aaf96aa2.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-894ea4b3-878f-4c19-9862-5a16aaf96aa2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    311,
+    43,
+    999,
+    1200
+  ],
+  "alpha12Margins": [
+    311,
+    43,
+    255,
+    54
+  ],
+  "alphaZeroFraction": 0.7916758875585368,
+  "alphaOpaqueFraction": 0.0006893411577370278,
+  "borderAlphaMax": 0,
+  "file": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/selection.png",
+  "bytes": 796521,
+  "sha256": "54dba5e300c525c27563ccf6dce703a8c3637be3ac6ebb66b5655515aaae9b34",
+  "sha": "95836b9871717a8615737c1779d5b91747c2f80e",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png": "5a7f5d5ad70616fe88b8d5210b67ac9b06a490d3cc613c48a656a594a5fe0763"
+  },
+  "auditPass": true
+}

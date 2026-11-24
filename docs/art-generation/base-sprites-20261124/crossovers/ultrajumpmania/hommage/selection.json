@@ -1,0 +1,57 @@
+{
+  "series": "ultrajumpmania",
+  "style": "hommage",
+  "label": "Ultra Jump Mania · Hommage · Theo",
+  "identity": "Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text.",
+  "references": [
+    "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+  ],
+  "state": "selection",
+  "id": "glitch-ultrajumpmania-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE square character-selection portrait for Digital Circus Encore on genuinely transparent alpha, matching the approved static Ribbit × Ultra Jump Mania hommage sprite in the reference. Original Encore crossover design. Keep EXACT face shape, huge white wedge-pupil eyes, pink cheeks, friendly mouth, bright pink bow motif, palette, materials and outfit/anatomy of that reference. Compose a distinct clean three-quarter bust portrait facing RIGHT, head, complete headgear and torso visible, cropped naturally at the waist. Keep headgear and hands fully inside frame with generous empty transparent margins. No second character, no inset full body, no frame, text or game UI, no glow or background; keep crisp dark contours and clean cel shading. Preserve the approved design without adding accessories or changing anatomy. Specific locked design: Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text. This is only a portrait, no action state or animation. Genuine transparent pixels around the character, no opaque backdrop, no detached artifacts, no floor or ground shadow. Square canvas.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-2a68089d-133d-4201-9d12-f19bdc341fe6.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-2a68089d-133d-4201-9d12-f19bdc341fe6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "image_gen.imagegen",
+  "nativeFacing": "right",
+  "generatedAt": "2026-11-24",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    196,
+    56,
+    1101,
+    1211
+  ],
+  "alpha12Margins": [
+    196,
+    56,
+    153,
+    43
+  ],
+  "alphaZeroFraction": 0.6255236830658639,
+  "alphaOpaqueFraction": 0.0009869533918891763,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/selection.png",
+  "bytes": 987072,
+  "sha256": "901e0cdaf31739b988532e254b453645f864af0e0dac35fd47d195993f9d4793",
+  "sha": "a2ecd1a9364884c6eef9e12f42b4551b147ee31d",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png": "eba5b6de206de44793ba4a1b666246b081e09b582f04501574bb9a577182096c"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Intentional upper-body selection portrait. Eyes, headpiece, hands, upper costume and attached visible accessories preserve the inspected stance design. Lower legs are outside the designed portrait framing; no full-body claim. Native drawing is distinct from the stance, alpha margins remain positive.",
+  "framing": "upper-body",
+  "fullBodyVisible": false,
+  "framingException": "Intentional selection bust explicitly retained by root; associated stance is full body."
+}

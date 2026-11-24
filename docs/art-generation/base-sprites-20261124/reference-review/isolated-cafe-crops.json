@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "file": "cafejax-isolated-goods-detail.png",
+      "source": "animate-cafe-goods.jpg",
+      "cropXYXY": [
+        207,
+        228,
+        254,
+        322
+      ],
+      "sha256": "6df05cfa8ff6ad51c2dfbfce62027c532a98baa61c8bc0df8e50c6354151bb3c",
+      "processing": "Exact native-pixel rectangular crop only; no resizing or image alteration."
+    },
+    {
+      "file": "cafecaine-isolated-goods-detail.png",
+      "source": "animate-cafe-goods.jpg",
+      "cropXYXY": [
+        92,
+        256,
+        145,
+        324
+      ],
+      "sha256": "e8fea2a082007f964627dfa5ae5be96ebcde6784a7faf483ea969e9ff7c8cabf",
+      "processing": "Exact native-pixel rectangular crop only; no resizing or image alteration."
+    }
+  ]
+}

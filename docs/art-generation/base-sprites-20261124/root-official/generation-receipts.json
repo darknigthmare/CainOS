@@ -1,0 +1,68 @@
+{
+  "schema": "encore-base-native-generation/v1",
+  "tool": "image_gen.imagegen",
+  "asOf": "2026-11-24",
+  "records": [
+    {
+      "job": {
+        "id": "ribbitsuitjax",
+        "slot": "stance",
+        "refs": [
+          "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/archive-references/ribbit-suit-jax-plush-1.png",
+          "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/archive-references/ribbit-suit-jax-plush-2.png"
+        ],
+        "prompt": "Use case: identity-preserve. Asset type: one static full-body game sprite for Digital Circus Encore, Ribbit-Suit Jax. The two input images are official reference views of the same plush costume, NOT two characters. Reproduce the exact visible costume, compact proportions, front-facing body and anxious face from image 1 as a polished clean 2D cel-shaded game illustration, on genuinely transparent background. One character only, entire head and all feet visible with at least 6% clear transparent margin. Identity locks: pale lavender rabbit face, two floppy lavender ears down the sides, big yellow eye whites with black rectangular pupils and white highlights, worried curved eyebrows and small downturned mouth, dark pink cheek ovals. Turquoise frog onesie covers body and rounded feet; pale mint belly; frog hood has two large half-lidded white eyes with black pupils and purple vertically segmented eyelids. Keep the ONE bright coral bow on the upper viewer-right side of hood exactly as image 1. No neck bow. Short soft arms slightly spread, short rounded feet, front-facing pose exactly as source. Preserve relative shapes and color placement rather than replacing with normal tall Jax. Smooth cel colors, dark plum outlines, restrained material shading; no photoreal fur, no redesign, no normal pink overalls, no upright rabbit ears, no action pose, no motion, no floor, no glow or halo, no shadow backdrop, no text, no borders, no other objects. Portrait canvas suitable 1024x1536; actual transparent alpha."
+      },
+      "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-4663b40e-3e96-409c-841e-0ecc2e79e42f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "job": {
+        "id": "cocktailzooble",
+        "slot": "stance",
+        "refs": [
+          "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/zooble-artbook-cocktail-detail.png"
+        ],
+        "prompt": "Use case: identity-preserve. Asset type: one static full-body Digital Circus Encore sprite, Zooble cocktail from the exact official artbook sticker reference. Reproduce the visible design, pose and geometry of this ONE reference character on genuine transparent background, as clean crisp 2D cel-shaded raster art. Preserve the same three-arm composition and the exact visible overlaps; do not invent joints hidden by other pieces. Whole figure and every held accessory inside canvas with at least 6% transparent margin. Invariants: pink triangular head, large round yellow spiral disk at viewer-left, single half-lidded white eye with burgundy iris on viewer-right, gold T antenna and cyan lightning antenna. Yellow oval torso with large pink spots and orange star. Three arms: long green flexible arm with yellow dots curves upward to a yellow hand holding the tilted gray cocktail shaker above the head; lower viewer-left red articulated arm ends in white cartoon glove holding a tall glass with red drink and curly straw; viewer-right purple/turquoise segmented arm supports a flat tray with red coconut drink, white bent straw and pink parasol. Two different slender legs and exact asymmetric purple feet, cyan joint on viewer-left, red cuboid joint on viewer-right. Preserve all source colors, relative proportions, topology, direction and the exact relaxed balancing pose. Artwork itself only: remove paper texture, photographed lighting and neighboring stickers. Flat clean fills with restrained cel depth and dark warm outlines; no invented extra limbs, no anatomical rearrangement, no simplified accessories, no additional pose, no frame sequence, no text, no border, no aura, no ground or background. Portrait canvas suitable 1024x1536 with genuine alpha."
+      },
+      "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-961254a3-4bb7-484d-a6ac-be36c089cb15.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "job": {
+        "id": "ribbitsuitjax",
+        "slot": "selection",
+        "refs": [
+          "/workspace/scratch/e51b531817b1/generated_images/exec-729ef69b-bd37-4b72-84fa-5d0cd3baa010.png"
+        ],
+        "prompt": "Use case: precise-object-edit. Clean this one transparent game portrait only. Remove the stray white speckles/debris below the flat cropped turquoise torso near the bottom center and make all space outside the intended character silhouette genuinely fully transparent. Keep the character itself, exact face, eyes, lavender floppy ears, frog hood, coral bow on upper viewer-right, worried expression, pose, turquoise clothing and mint belly unchanged. Maintain crisp clean continuous silhouette including a clean horizontal lower bust crop with empty transparent margin below. Preserve both white eye highlights and white frog eyes. No design changes, no rescaling or pose changes, no additional body parts, no new elements, no text, no black/colored background, no glow, no border. One selection portrait, same square composition, native alpha."
+      },
+      "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-6991384d-07df-4644-8145-f0b1f91091cd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "job": {
+        "id": "cocktailzooble",
+        "slot": "selection",
+        "refs": [
+          "/tmp/encore-worktree/assets/encore/base-costumes/cocktailzooble/stance.png",
+          "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/zooble-artbook-cocktail-detail.png"
+        ],
+        "prompt": "Use case: identity-preserve. Make ONE square character-selection portrait on genuine transparent alpha for Digital Circus Encore, Zooble cocktail. Image 1 is the approved static full-body game sprite; preserve its exact design, colors, topology and pose. Image 2 is the official sticker reference. Frame the pink triangular head, yellow spiral disk, single half-lidded white eye with burgundy iris, gold T antenna and cyan lightning antenna, yellow/pink-spotted torso and ALL THREE ARMS/accessories; legs may be below crop. Keep the curved green/yellow spotted arm over the head holding a gray shaker in yellow hand, the lower left red articulated arm with white glove and red drink/tall glass/curly straw, the right purple/turquoise segmented arm and tray/red coconut/pink parasol/white straw. Keep all accessories entirely inside square and clear transparent side/top margins, do not duplicate or rearrange limbs. Same clean crisp 2D cel shading and dark warm outlines as base. No extra arms, no invented hidden joints, no redesign, no action or animation, no text or border, no paper/background texture, no glow or floor. Real transparent background, square 1024x1024."
+      },
+      "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-255f5cc1-8aef-403e-90ec-2bb0fa8608bc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "rejected": [
+    {
+      "job": {
+        "id": "ribbitsuitjax",
+        "slot": "selection",
+        "refs": [
+          "/tmp/encore-worktree/assets/encore/base-costumes/ribbitsuitjax/stance.png",
+          "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/archive-references/ribbit-suit-jax-plush-1.png"
+        ],
+        "prompt": "Use case: identity-preserve. Make ONE square selection portrait for Digital Circus Encore of Ribbit-Suit Jax, on genuinely transparent alpha. Image 1 is the approved base sprite: keep the exact character design, linework, palette and anxious expression. Image 2 is the official costume reference supporting the visible features. Frame head, frog hood, floppy ears, shoulders and upper torso, with hood and every ear fully inside the image and 6% transparent top/side margin; bust can naturally end near lower belly. Preserve huge yellow eyes with rectangular black pupils, small white circular highlights and lower purple highlight, raised worried eyebrows, tiny downturned mouth, oval dark pink cheeks. Lavender floppy ears down beside the face, turquoise Ribbit frog hood with purple segmented half lids, white frog eyes/black pupils and pink blush. Exactly one coral bow on upper viewer-right of hood. NO neck bow. Mint belly and turquoise short sleeves. Clean 2D cel-shaded raster art exactly matching base sprite; no new pose or expression, no new accessories, no normal tall Jax outfit, no motion, no text, no framing badge, no vignette, no glow, no background or ground. One character only, portrait 1024x1024, real alpha transparency."
+      },
+      "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-729ef69b-bd37-4b72-84fa-5d0cd3baa010.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reason": "White stray pixels below cropped torso; replaced by targeted native image edit before publication."
+    }
+  ]
+}

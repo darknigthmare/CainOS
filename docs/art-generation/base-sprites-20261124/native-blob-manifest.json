@@ -1,0 +1,252 @@
+{
+  "schema": "encore-native-blob-publication/v1",
+  "repository": "darknigthmare/CainOS",
+  "complete": true,
+  "files": 48,
+  "bytes": 42600607,
+  "refsModified": false,
+  "treeCreated": false,
+  "inventorySha256": "0d6d392454b074e6f7073998b513053bc20474db7526a44e00183ab47255bc47",
+  "records": [
+    {
+      "path": "assets/encore/base-costumes/cafecaine/selection.png",
+      "sha": "af65d49967712b5ca7f226c4b93e4c4079ed428b",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/cafecaine/stance.png",
+      "sha": "4179272a9f2159b0114ec42a21eec0acffdd52ee",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/cafejax/selection.png",
+      "sha": "cdb085e5babe17427a15254f99477993141309fe",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/cafejax/stance.png",
+      "sha": "d5422004109e48c818451a8e17080267cef3a669",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/cocktailzooble/selection.png",
+      "sha": "b2f479c113d21ed562336c4e815976dbc71b76d9",
+      "receipt": "docs/art-generation/base-sprites-20261124/root-official/github-blobs.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/cocktailzooble/stance.png",
+      "sha": "9092afd57f21dd367108b664147f9f37aab44039",
+      "receipt": "docs/art-generation/base-sprites-20261124/root-official/github-blobs.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/contortionistzooble/selection.png",
+      "sha": "11619f4648961c457cd79d8daf5df04581f18935",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/contortionistzooble/stance.png",
+      "sha": "f3036841b6e384710e8dab775ed5ed24c87fb869",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/hotdogabel/selection.png",
+      "sha": "c28e74fef90854e9dbc6279e8ca6a4b8869324f8",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/hotdogabel/stance.png",
+      "sha": "d7c2df06d9f0fa2d2ee3fa1579a27546fb250bc5",
+      "receipt": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/ribbitsuitjax/selection.png",
+      "sha": "b034d8c84e6a7b788e1196e55c245fa4997379fb",
+      "receipt": "docs/art-generation/base-sprites-20261124/root-official/github-blobs.json"
+    },
+    {
+      "path": "assets/encore/base-costumes/ribbitsuitjax/stance.png",
+      "sha": "b01fd2f7364908a7a7582adfa7e8f437473446d8",
+      "receipt": "docs/art-generation/base-sprites-20261124/root-official/github-blobs.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gameoverse/ribbit/fusion/selection.png",
+      "sha": "6e68fb7122b9a82c933eef57fba92609401cdc45",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gameoverse.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png",
+      "sha": "ae37e0ee5fab7bfa26551ea86c20e95db9e4f102",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gameoverse.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gameoverse/ribbit/hommage/selection.png",
+      "sha": "d9676cd0519afc7c1bb5d76a453c9b0f21784196",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gameoverse.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png",
+      "sha": "1f43e0a5c399c5ecad45017d31257d0687a12d03",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gameoverse.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gameoverse/ribbit/resident/selection.png",
+      "sha": "8e7df0f0b6e0b0f6479d49f3237b27e6bfb75959",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gameoverse.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png",
+      "sha": "68961d48ded852f850b98daf433186eda874de03",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gameoverse.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/selection.png",
+      "sha": "d9f63578c96f5c76ab455946287678227f03dafe",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gaslightdistrict.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png",
+      "sha": "96e1e7d7cff4836e87b7fb30776febfbf5698869",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gaslightdistrict.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/selection.png",
+      "sha": "3b170f297353067ba3436dbddaa6a227436f13bc",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gaslightdistrict.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png",
+      "sha": "0ef8f2bde091424a120e1bbfd75712d795d5ec4e",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gaslightdistrict.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/selection.png",
+      "sha": "adc3037dcc1b4f901bf8af2c9932c538014cabd5",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gaslightdistrict.json"
+    },
+    {
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png",
+      "sha": "c9c4caf363915c1c8e8d3430765957c954b40409",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-gaslightdistrict.json"
+    },
+    {
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/selection.png",
+      "sha": "95836b9871717a8615737c1779d5b91747c2f80e",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-knightsofguinevere.json"
+    },
+    {
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png",
+      "sha": "fb8973200a9f22eacf147fb4c5d9e8ecbb30febf",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-knightsofguinevere.json"
+    },
+    {
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/selection.png",
+      "sha": "e9b48cd429e8c407b14af495065b467ef17bddea",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-knightsofguinevere.json"
+    },
+    {
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png",
+      "sha": "e0cc72f469c8baf0b9ae5b46ab899193a482c36c",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-knightsofguinevere.json"
+    },
+    {
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/selection.png",
+      "sha": "96cdf5319c94938e033b5baf0b72caddd7106a49",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-knightsofguinevere.json"
+    },
+    {
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png",
+      "sha": "23990463bfb12563230b92d0c0e1c701dcdebdb4",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-knightsofguinevere.json"
+    },
+    {
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/fusion/selection.png",
+      "sha": "b5342966effe8fe3226e84aacf35c6bd178c9151",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-lackadaisy.json"
+    },
+    {
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png",
+      "sha": "665dfa3b6d5a416c964f3fa03f6de329fb446c4c",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-lackadaisy.json"
+    },
+    {
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/hommage/selection.png",
+      "sha": "b32eb11f547fa003f8ea966ce2db6a77f2664971",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-lackadaisy.json"
+    },
+    {
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png",
+      "sha": "43995379a41e1e211dc6ca9129c85415339e1497",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-lackadaisy.json"
+    },
+    {
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/resident/selection.png",
+      "sha": "ffa4fc76768fa6ff9576053ecf435e93aaaded6a",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-lackadaisy.json"
+    },
+    {
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png",
+      "sha": "6151755d3273231c47f4db9a93c593592fc3630d",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-lackadaisy.json"
+    },
+    {
+      "path": "assets/encore/crossovers/smg4/ribbit/fusion/selection.png",
+      "sha": "b65a9e1b00f25379835b08070e8a31c675df697d",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-smg4.json"
+    },
+    {
+      "path": "assets/encore/crossovers/smg4/ribbit/fusion/stance.png",
+      "sha": "7ec747dc84dd69dfdd9e9245bfebc84babda178c",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-smg4.json"
+    },
+    {
+      "path": "assets/encore/crossovers/smg4/ribbit/hommage/selection.png",
+      "sha": "ea59bdfce6a0b56761357585aab7796fe27eaf0f",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-smg4.json"
+    },
+    {
+      "path": "assets/encore/crossovers/smg4/ribbit/hommage/stance.png",
+      "sha": "d52a9ff7dc47ab4fe5aa0ab6ac8f702c08e36ee3",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-smg4.json"
+    },
+    {
+      "path": "assets/encore/crossovers/smg4/ribbit/resident/selection.png",
+      "sha": "4fd67ef7cd6bb6ed16f8b9168a1bff57a5ae2799",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-smg4.json"
+    },
+    {
+      "path": "assets/encore/crossovers/smg4/ribbit/resident/stance.png",
+      "sha": "e95ea63864710d1d6822f73dc5c29c7b60cf6793",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-smg4.json"
+    },
+    {
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/selection.png",
+      "sha": "cb62a4180ea3d62761e8f35c5ed4207a05557a9f",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-ultrajumpmania.json"
+    },
+    {
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png",
+      "sha": "b080715cf3c440077a07132c908b8a55afb8b051",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-ultrajumpmania.json"
+    },
+    {
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/selection.png",
+      "sha": "a2ecd1a9364884c6eef9e12f42b4551b147ee31d",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-ultrajumpmania.json"
+    },
+    {
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png",
+      "sha": "72e891297360c2592a5bdc4bfebe21c211d00aca",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-ultrajumpmania.json"
+    },
+    {
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+      "sha": "37925af5eb4f138b22c674ca2f6c163e1a22d857",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-ultrajumpmania.json"
+    },
+    {
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+      "sha": "9c517f774facf8aaf17adf56ed0d5aa3d014d8ca",
+      "receipt": "docs/art-generation/base-sprites-20261124/crossovers/github-blobs-ultrajumpmania.json"
+    }
+  ]
+}

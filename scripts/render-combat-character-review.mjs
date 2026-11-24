@@ -81,7 +81,7 @@ const report = { schema: 'encore-character-canvas-review/v1', createdAt: new Dat
     'Individual static poses do not establish frame-by-frame animation.',
     'Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification.'],
   partial, additionsOnly, crossoversOnly, introducedOn, appearanceId, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
-for (const file of ['combat/data.mjs','combat/abstractions-content.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/costume-discoveries-20261120.mjs','combat/costume-ribbit-20261120.mjs','combat/costume-next-missing-20261120.mjs','combat/costume-next-wave-20261120.mjs','combat/costume-order.mjs','combat/costume-continuation-20261120-b.mjs','combat/costume-continuation-20261120-c.mjs','combat/crossovers.mjs','combat/crossover-npc-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
+for (const file of ['combat/data.mjs','combat/base-sprite-content.mjs','combat/abstractions-content.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/costume-discoveries-20261120.mjs','combat/costume-ribbit-20261120.mjs','combat/costume-next-missing-20261120.mjs','combat/costume-next-wave-20261120.mjs','combat/costume-order.mjs','combat/costume-continuation-20261120-b.mjs','combat/costume-continuation-20261120-c.mjs','combat/crossovers.mjs','combat/crossover-npc-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
   report.sources[file] = sha(await fs.readFile(path.join(repo, file)));
 }
 function background(ctx, width, height) {
@@ -150,15 +150,16 @@ for (const { id, f } of appearances) {
   }
   const sheet = createCanvas(1080, 1110), sc = sheet.getContext('2d');
   background(sc, sheet.width, sheet.height);
-  sc.fillStyle = '#fff0d4'; sc.font = 'bold 24px sans-serif'; sc.fillText(id + ' / poses individuelles', 18, 32);
+  const baseOnly = f.sprite?.baseOnly === true;
+  sc.fillStyle = '#fff0d4'; sc.font = 'bold 24px sans-serif'; sc.fillText(id + (baseOnly ? ' / garde statique réutilisée' : ' / poses individuelles'), 18, 32);
   let checked = 0;
   for (const [index, pose] of poses.entries()) {
     // Legacy ten-slot crossovers intentionally reuse attack for heavy. The
     // new eleven-slot sets resolve their own heavy through the same loader.
-    const sourcePose = pose === 'heavy' && f.sprite?.crossoverDirectory && !sourceForAppearance('poses', id, f, pose) ? 'attack' : pose;
-    const file = sourceForAppearance('poses', id, f, sourcePose);
+    const sourcePose = baseOnly ? 'stance' : pose === 'heavy' && f.sprite?.crossoverDirectory && !sourceForAppearance('poses', id, f, pose) ? 'attack' : pose;
+    const file = sourceForAppearance(baseOnly ? 'stance' : 'poses', id, f, sourcePose);
     if (!file) { report.missing.push(id + '/' + pose); continue; }
-    const expected = await loadFighterIllustration('poses', f, sourcePose);
+    const expected = await loadFighterIllustration(baseOnly ? 'stance' : 'poses', f, sourcePose);
     assert.ok(expected?.canvas && expected.bounds.height > 0, 'decode ' + file);
     assert.equal(decodedSources.get(expected.canvas), path.resolve(repo, file), id + '/' + pose + ': exact action source');
     const actor = { f, slot: 0, state: pose, x: 640, y: 568, face: 1, onGround: pose !== 'jump' };
@@ -180,8 +181,8 @@ for (const { id, f } of appearances) {
       assert.equal(Math.sign(a), face * expected.nativeFacing, id + '/' + pose + ': facing');
       assert.ok(Math.abs(Math.hypot(a, b) - Math.hypot(c, d)) < 0.0001, 'uniform scale');
       const configuredFactor = f.visual?.poseHeightFactors?.[sourcePose];
-      const poseHeightFactor = Number.isFinite(configuredFactor) && configuredFactor > 0 ? configuredFactor : 1;
-      const height = (f.visual?.height || f.combat?.simulationBody?.height || 230) * (['crouch','defeat'].includes(pose) ? 0.74 : 1) * poseHeightFactor;
+      const poseHeightFactor = !baseOnly && Number.isFinite(configuredFactor) && configuredFactor > 0 ? configuredFactor : 1;
+      const height = (f.visual?.height || f.combat?.simulationBody?.height || 230) * (!baseOnly && ['crouch','defeat'].includes(pose) ? 0.74 : 1) * poseHeightFactor;
       const dimensions = expectedSize(f, expected, height);
       assert.ok(Math.abs(Math.hypot(c, d) * expected.bounds.height - dimensions.height) < 0.01, id + '/' + pose + ': visible height');
       drawChecks.push({face,sourceVerified:true,uniformScale:true,visibleWidth:Math.hypot(a,b)*expected.bounds.width,
@@ -205,7 +206,7 @@ for (const { id, f } of appearances) {
       }
     }
     const bytes = await fs.readFile(path.join(repo, file));
-    report.actions.push({ id, pose, sourcePose, file, sha256: sha(bytes), bytes: bytes.length,
+    report.actions.push({ id, pose, sourcePose, baseOnly, authoredAction: !baseOnly, file, sha256: sha(bytes), bytes: bytes.length,
       visibleBounds: expected.bounds, nativeFacing: expected.nativeFacing, sourceVerified: true, bothFacings: true, uniformScale: true, rendered: true, drawChecks });
     checked++;
   }
@@ -258,13 +259,15 @@ for (let offset = 0; offset < portraits.length; offset += 24) {
 report.counts = { appearances: appearances.length, expectedActions: appearances.length * poses.length,
   actions: report.actions.length, stances: report.stances.length, drawChecks: (report.actions.length + report.stances.length) * 2, archiveEntries: additionsOnly || crossoversOnly ? 0 : ARCHIVE.length,
   portraits: report.portraits.length, expectedPortraits: portraits.length, missing: report.missing.length,
-  aliasedActions: report.actions.filter(action => action.sourcePose !== action.pose).length };
+  authoredActions: report.actions.filter(action => !action.baseOnly).length,
+  reusedStaticGuards: report.actions.filter(action => action.baseOnly).length,
+  aliasedActions: report.actions.filter(action => !action.baseOnly && action.sourcePose !== action.pose).length };
 report.complete = report.missing.length === 0;
 await fs.writeFile(path.join(output, 'character-canvas-review.json'), JSON.stringify(report, null, 2) + '\n');
 const table = items => ['| Apparence | Actions rendues | Planche |', '| --- | ---: | --- |',
   ...items.map(item => {
     const count = report.actions.filter(action => action.id === item.id).length;
-    return `| ${item.name} | ${count}/9 | ${count ? `[${item.id}](actions-${item.id}.jpg)` : 'Non publiée'} |`;
+    return `| ${item.name} | ${count}/9${item.f.sprite?.baseOnly === true ? ' états avec la même garde' : ''} | ${count ? `[${item.id}](actions-${item.id}.jpg)` : 'Non publiée'} |`;
   })].join('\n');
 const reportTarget = reportAt < 0 ? path.join(repo, 'docs', crossoversOnly
   ? `COMBAT_NPC_CROSSOVERS_${reportDate}.md` : additionsOnly
@@ -272,8 +275,9 @@ const reportTarget = reportAt < 0 ? path.join(repo, 'docs', crossoversOnly
 const reportLink = path.relative(output, reportTarget).split(path.sep).join('/');
 const gallery = [
   '# Personnages d’Encore — galerie du ' + reportDate, '',
-  `${report.counts.actions} actions statiques de ${appearances.length} apparences et ${report.counts.portraits} portraits individuels ont été rendus avec les modules Canvas du jeu.`, '',
-  'Chaque planche rassemble des fichiers individuels pour faciliter la revue. Les fichiers de jeu restent séparés. Ce rendu Node/Skia ne constitue pas un parcours navigateur, une animation image par image ou une certification canonique.', '',
+  `${report.counts.actions} états de ${appearances.length} apparences et ${report.counts.portraits} portraits individuels ont été rendus avec les modules Canvas du jeu.`, '',
+  'Les planches distinguent les fichiers d’action individuels des familles explicitement statiques qui réemploient une seule garde. Ce rendu Node/Skia ne constitue pas un parcours navigateur, une animation image par image ou une certification canonique.', '',
+  ...(report.counts.reusedStaticGuards ? [`${report.counts.reusedStaticGuards} états sont des réemplois volontaires de garde statique ; ils ne représentent aucun dessin d’action supplémentaire.`, ''] : []),
   ...(report.counts.aliasedActions ? [`${report.counts.aliasedActions} coups lourds historiques réemploient leur dessin d’attaque, conformément au chargeur ; ces réemplois ne comptent pas comme de nouveaux fichiers.`, ''] : []),
   '[Rapport des sources et contrôles](character-canvas-review.json) · [Bilan de la passe](' + reportLink + ')', '',
   ...(crossoversOnly ? ['## Costumes crossover', '', table(appearances), ''] : additionsOnly ? ['## Variantes supplémentaires', '', table(appearances), ''] : [

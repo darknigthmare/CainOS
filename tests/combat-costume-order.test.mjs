@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { COSTUMES, FIGHTERS, VARIANTS } from '../combat/data.mjs';
+import { COSTUMES, BASE_SPRITE_COSTUMES, FIGHTERS, VARIANTS } from '../combat/data.mjs';
 import { createLegacyCrossoverCostumes } from '../combat/crossovers.mjs';
 import { COSTUME_EXTENSION_ORDER, orderCostumeExtensions } from '../combat/costume-order.mjs';
 import { ABSTRACTION_CALM_ID } from '../combat/abstractions-content.mjs';
@@ -24,8 +24,8 @@ test('explicit addition order appends mixed batches after all published records,
   // it is not part of the historical archive prefix preceding those families.
   const fixedCount = VARIANTS.filter(variant => variant.id !== ABSTRACTION_CALM_ID).length + createLegacyCrossoverCostumes(FIGHTERS).length;
   let published = COSTUMES;
-  let order = [...COSTUME_EXTENSION_ORDER, ABSTRACTION_CALM_ID];
-  assert.equal(published.at(-1).id, ABSTRACTION_CALM_ID);
+  let order = [...COSTUME_EXTENSION_ORDER, ABSTRACTION_CALM_ID, ...BASE_SPRITE_COSTUMES.map(costume => costume.id)];
+  assert.equal(published[fixedCount + COSTUME_EXTENSION_ORDER.length].id, ABSTRACTION_CALM_ID);
   assert.deepEqual(published.slice(fixedCount).map(costume => costume.id), order);
   for (const wave of [1, 2]) {
     const existing = published.slice(fixedCount);

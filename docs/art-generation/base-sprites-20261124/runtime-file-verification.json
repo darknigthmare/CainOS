@@ -1,0 +1,189 @@
+{
+  "schema": "encore-base-sprite-integration-files/v1",
+  "manifest": "docs/art-generation/base-sprites-20261124/crossovers/manifest.json",
+  "manifestSHA256": "8bb0499ce8b479cd843c27ca89476b1fd281b19ebd6f75b6d3b2253986c788f9",
+  "verifiedCrossovers": 18,
+  "verifiedPNG": 36,
+  "records": [
+    {
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/selection.png",
+      "sha256": "e77915690564a96fabef85ecf7e25abca28c121e72c5c6a4d008e984f54224af",
+      "bytes": 604611
+    },
+    {
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png",
+      "sha256": "66617518058f3156e41dd8f903da15e6c1f8eca47d5933bd65335f669b324046",
+      "bytes": 668043
+    },
+    {
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/selection.png",
+      "sha256": "8f926ebc01cf560df105e155b4d2a520ea73e63f9aad4a41d948ac140a817902",
+      "bytes": 754262
+    },
+    {
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png",
+      "sha256": "8a78162e34580917c8f73017ffbb127f8764c073555ca3fced1e27a8db71f716",
+      "bytes": 850428
+    },
+    {
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/selection.png",
+      "sha256": "39a5be66e97bf085fa1f85a8c8674d0d013155e48a1504c194836911cbdd386a",
+      "bytes": 950065
+    },
+    {
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png",
+      "sha256": "dd89be460f5ecb16df9f1c425978f4df4d939472676fd08cd9fc3638a8ab6929",
+      "bytes": 1016550
+    },
+    {
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/selection.png",
+      "sha256": "a7fce57acd0152b4aa0d1e0b280530bbc74791e168189836cf2fbeb1cae66e33",
+      "bytes": 683093
+    },
+    {
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png",
+      "sha256": "b6376f1ebece192ca6123520d096f877cbaabf0e4b36e3899e69acf9ccbe91cc",
+      "bytes": 784146
+    },
+    {
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/selection.png",
+      "sha256": "579dc415bb1ba8413b9b79a5ea51783ab291287c4e897578e9cb0c5dd14b68cd",
+      "bytes": 683406
+    },
+    {
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png",
+      "sha256": "f8d5a53457dc2705ee3d1e79e79e8510602a9ec6c951bb74220d7529133763e3",
+      "bytes": 789669
+    },
+    {
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/selection.png",
+      "sha256": "54dba5e300c525c27563ccf6dce703a8c3637be3ac6ebb66b5655515aaae9b34",
+      "bytes": 796521
+    },
+    {
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png",
+      "sha256": "5a7f5d5ad70616fe88b8d5210b67ac9b06a490d3cc613c48a656a594a5fe0763",
+      "bytes": 906557
+    },
+    {
+      "file": "assets/encore/crossovers/gameoverse/ribbit/hommage/selection.png",
+      "sha256": "c4efcadd5ace1d0f2ab7573f3a018a2d13e3d00fb06f89431223f842eb2e1052",
+      "bytes": 652543
+    },
+    {
+      "file": "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png",
+      "sha256": "dbb21ae1869e362c68db9bdf9636737557da4c6eefb97e905f461698c27e748d",
+      "bytes": 739327
+    },
+    {
+      "file": "assets/encore/crossovers/gameoverse/ribbit/resident/selection.png",
+      "sha256": "19db0b8a135b8511e6c5af3a410f911801f1bffcab74f7078d69bdabb45d25e1",
+      "bytes": 722121
+    },
+    {
+      "file": "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png",
+      "sha256": "818ca927d546defab35ecf16300c5047c00630567fc3210fef6301711e4df700",
+      "bytes": 794946
+    },
+    {
+      "file": "assets/encore/crossovers/gameoverse/ribbit/fusion/selection.png",
+      "sha256": "3b09dd7977cdabaebf9c72740f3857b09d4edb3d1c6ff1446ae54958c1428bb8",
+      "bytes": 690800
+    },
+    {
+      "file": "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png",
+      "sha256": "2025c0a1cbe76d1bb0fc22c3dbcc0599371408797665949a907429e6ca870db7",
+      "bytes": 790077
+    },
+    {
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/hommage/selection.png",
+      "sha256": "f8c2187c0b931eb4c96791cdcce8d02d082ab994664648f17a47c576df150511",
+      "bytes": 700377
+    },
+    {
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png",
+      "sha256": "5a8c0b84520d6b4e7b4a919eea51f63bcfdacbe5dc911c37f43faa544946e065",
+      "bytes": 791420
+    },
+    {
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/resident/selection.png",
+      "sha256": "93a8a398e63e4b1893fe065fe04b1d4589e631439d2f8a671f2061285c828341",
+      "bytes": 724367
+    },
+    {
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png",
+      "sha256": "ee784df7c15e7581620d5043ecd3a0726d6dff43c455fa18379c78688df81e67",
+      "bytes": 800346
+    },
+    {
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/fusion/selection.png",
+      "sha256": "270ce93ddd2ef106f1de75a647f8f42231d735ca72d28e51ae28ec02b35d7998",
+      "bytes": 685322
+    },
+    {
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png",
+      "sha256": "5434f2164688c15d5233c1e39658dcf9499225a99fcde36ea443832548835d28",
+      "bytes": 770720
+    },
+    {
+      "file": "assets/encore/crossovers/smg4/ribbit/hommage/selection.png",
+      "sha256": "001bd73c5685f9768981da76586f17f47465aa84888bcba07f3f421c6ab35faf",
+      "bytes": 572461
+    },
+    {
+      "file": "assets/encore/crossovers/smg4/ribbit/hommage/stance.png",
+      "sha256": "2581b8ca8e4c3a07079d53615d13878ccd965aee2be32ff4e83817874d8c69fd",
+      "bytes": 688359
+    },
+    {
+      "file": "assets/encore/crossovers/smg4/ribbit/resident/selection.png",
+      "sha256": "ea0a00587d30ba842f612e8be82a17e2a0ebfb818e6d02a51250079ba202c702",
+      "bytes": 686417
+    },
+    {
+      "file": "assets/encore/crossovers/smg4/ribbit/resident/stance.png",
+      "sha256": "bee9f3f1f300332743e12002f5849de6ffabb1011845464cd2afccf650f42159",
+      "bytes": 762210
+    },
+    {
+      "file": "assets/encore/crossovers/smg4/ribbit/fusion/selection.png",
+      "sha256": "ddf3116799f0427915944dabaceb86479b739fead4e8df5c788bd82258cf252a",
+      "bytes": 685157
+    },
+    {
+      "file": "assets/encore/crossovers/smg4/ribbit/fusion/stance.png",
+      "sha256": "2bcdc98cabe58de4566a6fea741ef980493563ef191f1b6899cfe7cf44f9eee1",
+      "bytes": 718402
+    },
+    {
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/selection.png",
+      "sha256": "901e0cdaf31739b988532e254b453645f864af0e0dac35fd47d195993f9d4793",
+      "bytes": 987072
+    },
+    {
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png",
+      "sha256": "eba5b6de206de44793ba4a1b666246b081e09b582f04501574bb9a577182096c",
+      "bytes": 740152
+    },
+    {
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+      "sha256": "1e0d350342f8c3f64dc008f5f78eb877b57a41dd8745f954b962373c9bbb9b9c",
+      "bytes": 1033705
+    },
+    {
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+      "sha256": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d",
+      "bytes": 760515
+    },
+    {
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/selection.png",
+      "sha256": "118936ca4f79272fe4f00fb4e13ea18782eba2e4e9f21a896846f0c25d248497",
+      "bytes": 1065258
+    },
+    {
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png",
+      "sha256": "714fb19b60bd1b561ca89490230533dfa3032c82fdce7cd86e0ac1cef7d4050b",
+      "bytes": 822615
+    }
+  ]
+}

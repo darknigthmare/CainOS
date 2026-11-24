@@ -1,0 +1,173 @@
+{
+  "schema": "encore-official-static-base-generation/v1",
+  "createdAt": "2026-11-24T15:28:37.435Z",
+  "mode": "built-in image_gen",
+  "transparentBackground": true,
+  "expectedSlots": [
+    "selection",
+    "stance"
+  ],
+  "actionsRequested": 0,
+  "actionsGenerated": 0,
+  "accepted": [
+    {
+      "id": "contortionistzooble",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-20585e9b-3c07-424b-8bcf-160bd202cfd9.png",
+      "file": "assets/encore/base-costumes/contortionistzooble/stance.png"
+    },
+    {
+      "id": "contortionistzooble",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-5e96fd68-2634-4138-9885-b969af2e1554.png",
+      "file": "assets/encore/base-costumes/contortionistzooble/selection.png"
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "pass": 2,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-4e9ce1cd-4165-4880-9b1f-d21f7f616bb0.png",
+      "file": "assets/encore/base-costumes/hotdogabel/stance.png"
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-55c39e89-0bcd-4875-af93-12e888e4f5a7.png",
+      "file": "assets/encore/base-costumes/hotdogabel/selection.png"
+    },
+    {
+      "id": "cafejax",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-a48591c4-295c-44db-a90e-f6a97dd84f88.png",
+      "file": "assets/encore/base-costumes/cafejax/stance.png"
+    },
+    {
+      "id": "cafejax",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-0fca1181-52f1-48db-9bd5-6dab28a8b6ac.png",
+      "file": "assets/encore/base-costumes/cafejax/selection.png"
+    },
+    {
+      "id": "cafecaine",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-b31a6357-d93a-4006-b92b-5184364ab2ba.png",
+      "file": "assets/encore/base-costumes/cafecaine/stance.png"
+    },
+    {
+      "id": "cafecaine",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-11734ae5-8c64-47d7-a132-ce9fcf3863a7.png",
+      "file": "assets/encore/base-costumes/cafecaine/selection.png"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "contortionistzooble",
+      "slot": "stance",
+      "ref": "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/contortionistzooble-official.jpg",
+      "prompt": "Use case: background-extraction. Asset type: a single faithful static base sprite for Digital Circus Encore, no animation. Edit target: the supplied official Contortionist Zooble product photograph. Produce only the complete folded figure on a genuinely transparent background, preserving the exact visible original sculpture, perspective, pose, proportions, shape placement, surfaces and colors. Remove the stage curtain and floor completely. The entire figure must fit with a clear transparent margin on every side. Keep the pink folded triangular mass, the large raised yellow spiral eye, the separate lower white eye with purple eyelid, orange star, violet ring, mint/cyan hollow forms, yellow/orange ball with white sockets, black-and-white bent segment, dark blue claws and every other visible interlocked piece exactly in their source order and positions. Preserve all occlusions and hidden connections; do not unfold, stand upright, add limbs, infer anatomy, invent attachments, or relocate eyes. No drawing board, reference thumbnail, captions, watermark, background pattern or ground shadow. One object only. Match the observed official static design as closely as possible, not a new interpretation.",
+      "pass": 1
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "ref": "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png",
+      "prompt": "Use case: background-extraction. Asset type: one faithful static base sprite for Digital Circus Encore, no animation. Edit target: supplied official Hotdog Cart Abel product rendering. Isolate Abel AND his entire turquoise hot-dog cart together as one indivisible object on a genuinely transparent background. Keep exactly the same front three-quarter pose, orange articulated figure, gray visor, two black eyes and curved smile, raised mitten hand at image-left, other hand holding the hot dog at image-right, bun/sausage/yellow mustard, condiment bottles, light cart top with three trays, turquoise cart front, large dark wheel at image-left and small caster at image-right. Preserve the cart's printed visible logo text exactly as shown: \"CAINE'S UNEATABLS\". Preserve the small visible orange part behind/below the cart and all source occlusions. The lower body stays hidden behind the cart; never invent two exposed legs, shoes, rear anatomy, or move the cart away. Remove only the beach, trees, sky, ground and backdrop. The complete figure-cart group including both wheels and raised hand must fit with transparent margins on every side. Keep original proportions, visible details, colors and same perspective. No action, extra props, frame, captions, reference inset, new text or watermark.",
+      "pass": 1
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "pass": 2,
+      "prompt": "Make a precise cleanup and safe-canvas-margin edit of the FIRST supplied transparent Hotdog Cart Abel cutout, using the SECOND supplied official source only as verification. The entire existing character-plus-hotdog-cart group is indivisible and must keep exactly the same visible pose, proportions, colors, gray visor, orange face, arm gestures, hotdog, condiment bottles, trays, turquoise cart graphics and lettering, large spoked wheel, small caster, and small orange sliver below the cart. Do not reveal legs or hidden body parts. Remove the isolated reddish speck floating to the left of the face and every detached background speck. The large front tire currently touches the bottom edge: uniformly reduce the complete group just enough to give a clear transparent margin of at least 6% on all four sides, keeping the WHOLE wheel and all silhouettes intact. No cropping. No stretching. No redesign. Do not alter the cart logo spelling: faithfully preserve the source's existing letterforms and Caine emblem as visible. Keep the rendering consistent with the reference and keep every actual subject pixel opaque where appropriate; wheel openings should be transparent. Transparent RGBA background, no scene, shadow, ground, frame, text overlays, labels, duplicate subject or extra object. This is one STATIC BASE sprite, not animation or action.",
+      "refs": [
+        "/workspace/scratch/e51b531817b1/generated_images/exec-b66b942b-a979-4341-b872-2173e63d0ff6.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png"
+      ]
+    },
+    {
+      "id": "cafejax",
+      "slot": "stance",
+      "pass": 1,
+      "refs": [
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/cafejax-reference-detail.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-goods.jpg",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/cafejax-isolated-goods-detail.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg"
+      ],
+      "prompt": "Create ONE faithful transparent STATIC BASE cutout of JAX in his official DECOTTO x The Amazing Digital Circus cafe maid illustration shown by these primary references. The first detail and fourth main poster show his exact colors and decorations; the second official goods sheet and third small native-pixel crop show the same Jax alone as an acrylic stand (fourth character in the top-left lineup), so preserve that complete isolated outline. Reproduce that exact lean, long-limbed rabbit and his static serving pose; do not substitute a generic maid Jax. Match the official clean flat 2D cartoon inked illustration, navy outlines and flat color shading, not 3D/toy rendering. Preserve purple skin, very long uneven tilted ears, yellow half-lidded eyes and broad yellow tooth grin, white frilly headband with large dark-navy bow behind, white ruffled collar, dark navy maid dress and purple small heart bodice detail, broad white apron with TWO LARGE navy bows at its sides, scalloped white hem, little white fluffy upper-stocking cuffs, very long white stockings, navy Mary Jane platform shoes with yellow bow-shaped fastening details. Preserve the visible silver serving tray and red cup on it at image-right, his same extended arm/white-gloved hand and same leg arrangement. Use the isolated reference to distinguish Jax's own arms/legs from the adjacent Ragatha; do NOT include Ragatha or any other character, and do not invent extra visible anatomy or accessories. Copy only the already documented static outfit and pose, no action, no redesign, no alternative costume, no new emblems. One single whole Jax plus his carried tray/cup as one group, fully visible within generous 6% transparent margin on every side, preserving native aspect ratio. Transparent RGBA background, no cafe interior, words, logos, sticker border, acrylic stand edge/base, ground/shadow or extra objects."
+    },
+    {
+      "id": "cafecaine",
+      "slot": "stance",
+      "pass": 1,
+      "refs": [
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/cafecaine-full-reference-detail.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-goods.jpg",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/cafecaine-isolated-goods-detail.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg"
+      ],
+      "prompt": "Create ONE faithful transparent STATIC BASE cutout of CAINE from the official DECOTTO x The Amazing Digital Circus cafe illustration shown in these primary references. The first close detail and fourth main poster show his exact face, costume, hands and tea-serving gesture; the second official goods sheet and third crop show the same Caine alone as an acrylic stand (second character in the top-left lineup), including his complete visible bent-leg outline. Match that exact short floating bent-leg static composition and clean flat 2D inked illustration with navy outlines and restrained flat colors, NOT a 3D toy and NOT standing upright like ringmaster Caine. Preserve his red-gummed tooth head, blue iris on image-left and green iris image-right, open smiling mouth, white frilled maid headband curving along the top with large dark navy bow behind at image-left. He has NO top hat and NO cane. Copy the actual dark navy/black service jacket, light vest/bib, small bow tie, white gloves, slim bent dark legs and two small dark shoes exactly as documented; keep limb occlusions and do not invent unseen joints or lengthen the legs. Preserve the raised hand on image-right holding the SMALL WHITE FACE-SHAPED TEAPOT and the curling dark reddish tea stream to his lower hand and tiny serving vessel exactly as in source. Treat the teapot and stream as parts of this single static group, no independent extra character. Remove ONLY the surrounding cafe poster background and adjacent Gangle/Ribbit and other characters; no decorative cupcake that belongs to the neighboring character, no display platform or sticker/acrylic border. Use the isolated official goods view to keep the known outline; do not expose any body part hidden by his own pose. One whole Caine and attached serving objects, no duplicates, no motion/action variant. All subject contours including shoes and teapot fully visible, uniform scaling with at least 6% transparent padding on all four sides. Transparent RGBA background, no ground, shadow, labels, caption, logo or added details."
+    },
+    {
+      "id": "contortionistzooble",
+      "slot": "selection",
+      "pass": 1,
+      "refs": [
+        "/workspace/scratch/e51b531817b1/generated_images/exec-20585e9b-3c07-424b-8bcf-160bd202cfd9.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/contortionistzooble-official.jpg"
+      ],
+      "prompt": "Create the character-selection portrait for the EXACT Contortionist Zooble folded group in the FIRST transparent reference, verified against the SECOND official figurine render. Keep this single complete low folded assembly intact and in precisely the same visible pose and camera angle. It is an indivisible abstract folded figure, NOT a normal upright Zooble. Keep the pink angular center, large yellow spiral eye high right, small white eye under purple lid low right, orange star and purple hollow ring at left, blue/cyan wing, yellow-orange ball with white sockets, black-white folded rectangular sections, blue claw on the mint/purple joint, green wedges and cyan ring. Preserve every overlap and the same outer contour; do not expose or add any hidden limbs, connections, fingers or anatomy. Use a clean centered SQUARE selection composition with the whole folded group occupying about 82% of the frame, a generous transparent margin on all sides, no contour cut off. Keep the original polished 3D merchandise rendering and exact source colors; no new rim lights, no background, no ground, no shadow, no labels, no frame, no other figure. This is a static selection image, not another pose or animation. Transparent RGBA; clean alpha silhouette with no detached specks; native-aspect-ratio group, no stretching."
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "selection",
+      "pass": 1,
+      "refs": [
+        "/workspace/scratch/e51b531817b1/generated_images/exec-4e9ce1cd-4165-4880-9b1f-d21f7f616bb0.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png"
+      ],
+      "prompt": "Create a faithful square character-selection portrait of the EXACT Hotdog Cart Abel composition in the FIRST accepted transparent reference, verified against the SECOND official source. The portrait MUST include the ENTIRE character-plus-cart together, including BOTH wheels; do not crop out the cart or reveal the legs hidden behind it. Retain exactly the same pose and camera angle: orange block head, gray visor, two black dot eyes and curved smile, left-image hand waving, right-image hand holding hotdog, red/yellow bottles, three tray lids, pale countertop, turquoise cart with the same hotdog graphics and Caine logo lettering copied as source letterforms, large black tire with pale spokes and the small caster. Do not redesign the emblem, alter letters or invent any new decoration. Only the orange sliver already visible below the cart may remain; no new legs. Make a centered square selection composition with the entire indivisible group about 80% of the frame height and clear transparent margin around every contour. Maintain the polished original 3D merchandise appearance and colors. No different pose, no action, no second subject, no extra prop, no scene, beach, ground, cast shadow, sticker border, caption or UI. Transparent RGBA background and clean alpha outline; preserve all opaque subject parts and clear wheel openings, no detached specks. Scale the entire group uniformly, never stretch."
+    },
+    {
+      "id": "cafejax",
+      "slot": "selection",
+      "pass": 1,
+      "refs": [
+        "/workspace/scratch/e51b531817b1/generated_images/exec-a48591c4-295c-44db-a90e-f6a97dd84f88.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/cafejax-reference-detail.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-goods.jpg"
+      ],
+      "prompt": "Create a square character-selection portrait of the exact official DECOTTO cafe maid JAX shown in the first accepted base sprite, verified by the supplied official references. Preserve the SAME leaned serving pose, face, outfit, shapes, flat 2D colors, navy linework and expression; this is a portrait crop/composition, not a new pose. Frame from the tips of BOTH complete long ears down through the apron/upper thighs so his violet face, yellow eyes and tooth grin, white frilly headband and large navy bow behind it, white ruffled collar, purple heart bodice, white apron with TWO BIG navy side bows are clearly visible. Include his documented silver tray with red cup and the gloved serving hand in the lower-right foreground; do not invent a new hand position or move the tray to another side. Keep the other visible long arm/hand consistent with the base. Crop the long legs below the upper stocking region as a clear portrait framing; do not add or remodel anatomy. Remove no costume details within frame. No Ragatha, no other character, no swapped generic maid outfit. Preserve exact clean flat 2D illustration style, not 3D. Transparent RGBA background, absolutely no glow/halo or painted gradient, cafe scene, cast shadow, border, text, logo, vignette or added elements. A clean subject-only cutout, ample transparent padding around ears, bow and tray; never crop the ears. One static portrait only."
+    },
+    {
+      "id": "cafecaine",
+      "slot": "selection",
+      "pass": 1,
+      "refs": [
+        "/workspace/scratch/e51b531817b1/generated_images/exec-b31a6357-d93a-4006-b92b-5184364ab2ba.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/cafecaine-full-reference-detail.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-goods.jpg"
+      ],
+      "prompt": "Create a faithful square character-selection portrait of the exact CAINE cafe serving illustration in the FIRST accepted static base, verified by the official references. Preserve exactly the same short floating bent-leg pose, red-gummed tooth head, blue eye at image-left and green eye image-right, white upper frill/teeth contour and dark navy bow/headpiece behind, dark navy service jacket, light vest/bib and bow tie, white gloves, short bent dark legs and small dark shoes. This is the DECOTTO cafe version, so NO top hat and NO cane. Keep the whole raised right-image hand with its little white face-shaped teapot, curved red tea stream, lower white glove, striped cup and saucer: these objects remain attached to the same static serving composition, not a second character. Use a square portrait layout that contains the complete recognizable grouping including the head, both shoes and every serving object with about 8% transparent margin. Preserve the source angle, relative proportions, overlaps, 2D flat color shading and navy linework, no redesign or new pose. No adjacent characters or cupcake, no background scene, platform, ground, shadow, glow, frame, lettering, labels or other objects. Clean transparent RGBA cutout, no detached background specks or halo; scale the entire existing group uniformly and never stretch."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-b66b942b-a979-4341-b872-2173e63d0ff6.png",
+      "reason": "Large tire reached the lower visible-alpha image edge; replaced by pass 2 with complete margin."
+    }
+  ],
+  "postprocessing": "Native PNG byte copies only. No resize, alpha cleanup, crop, recolor, raster redraw or metadata rewriting of delivered art.",
+  "canonicalPixelCertification": false
+}

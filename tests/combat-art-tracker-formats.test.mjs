@@ -57,3 +57,35 @@ test('a mixed-format crossover counts its actual PNG heavy and preserves editori
   assert.match(data.production[0][7], /coup fort/);
   assert.equal(data.production[0].at(-1), 'Comparer les proportions du visage');
 });
+
+test('a declared static base needs only portrait and stance and preserves its review note', () => {
+  const directory = '../assets/encore/crossovers/static-fixture/ribbit/fusion';
+  const costume = {
+    id: 'static-base-tracker-fixture', fighterId: 'ribbit', name: 'Ribbit — base statique',
+    baseOnly: true, presentation: 'static', authoredSlots: ['selection', 'stance'],
+    crossover: { series: 'static-fixture', style: 'fusion' },
+    sprite: { baseOnly: true, crossoverDirectory: directory },
+  };
+  const data = { production: [], stages: [], scenarios: [], sources: [], features: [], counts: {}, illustratedAssets: {} };
+  const content = { FIGHTERS, VARIANTS, COSTUMES: [costume], STAGES: [] };
+  updateCrossoverTracker(data, { ART_FILES: [`${directory}/selection.png`] }, content);
+  assert.equal(data.production.length, 0, 'a portrait alone cannot publish the family');
+  const ART_FILES = ['selection', 'stance'].map(slot => `${directory}/${slot}.png`);
+  updateCrossoverTracker(data, { ART_FILES }, content);
+  assert.equal(data.production.length, 1);
+  assert.equal(data.production[0][4], 'Implémenté');
+  assert.equal(data.crossoverArt.costumeDrawings, 2);
+  assert.equal(data.counts.variants, 1);
+  assert.match(data.production[0][8], /neuf poses d’action sont hors périmètre/);
+  assert.doesNotMatch(data.production[0][8], /À illustrer/);
+  data.production[0][9] = 'Conserver les proportions de la base';
+  updateCrossoverTracker(data, { ART_FILES: [...ART_FILES, `${directory}/attack.png`, `${directory}/heavy.png`] }, content);
+  assert.equal(data.production.length, 1, 'an update does not duplicate the family');
+  assert.equal(data.crossoverArt.costumeDrawings, 2, 'unrequested action files do not redefine the two-slot contract');
+  assert.equal(data.production[0].at(-1), 'Conserver les proportions de la base');
+  const ordinary = { ...costume, baseOnly: false, sprite: { ...costume.sprite, baseOnly: false } };
+  const fullPoseData = { production: [], stages: [], scenarios: [], sources: [], features: [], counts: {}, illustratedAssets: {} };
+  updateCrossoverTracker(fullPoseData, { ART_FILES }, { ...content, COSTUMES: [ordinary] });
+  assert.equal(fullPoseData.production[0][4], 'Partiel', 'ordinary families still require their authored action slots');
+  assert.match(fullPoseData.production[0][8], /À illustrer en priorité/);
+});

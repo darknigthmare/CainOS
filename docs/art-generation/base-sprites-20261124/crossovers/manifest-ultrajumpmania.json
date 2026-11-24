@@ -1,0 +1,505 @@
+{
+  "complete": true,
+  "series": "ultrajumpmania",
+  "baseOnly": true,
+  "presentation": "static",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "appearances": [
+    {
+      "id": "glitch-ultrajumpmania-ribbit-hommage",
+      "series": "ultrajumpmania",
+      "style": "hommage",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/selection.png",
+        "stance": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png"
+      },
+      "framing": {
+        "selection": "upper-body",
+        "stance": "full-body"
+      },
+      "name": "Ultra Jump Mania · Hommage · Theo",
+      "identity": "Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text.",
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "series": "ultrajumpmania",
+      "style": "resident",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+        "stance": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png"
+      },
+      "framing": {
+        "selection": "upper-body",
+        "stance": "full-body"
+      },
+      "name": "Ultra Jump Mania · Résident · Éclaireur du lagon",
+      "identity": "Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-fusion",
+      "series": "ultrajumpmania",
+      "style": "fusion",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/selection.png",
+        "stance": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png"
+      },
+      "framing": {
+        "selection": "upper-body",
+        "stance": "full-body"
+      },
+      "name": "Ultra Jump Mania · Fusion · Têtard des cocotiers",
+      "identity": "Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow.",
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    }
+  ],
+  "records": [
+    {
+      "id": "glitch-ultrajumpmania-ribbit-hommage",
+      "series": "ultrajumpmania",
+      "style": "hommage",
+      "state": "selection",
+      "label": "Ultra Jump Mania · Hommage · Theo",
+      "identity": "Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png"
+      ],
+      "referencesSHA256": {
+        "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png": "eba5b6de206de44793ba4a1b666246b081e09b582f04501574bb9a577182096c"
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-2a68089d-133d-4201-9d12-f19bdc341fe6.png",
+      "prompt": "Use case: identity-preserve. Create ONE square character-selection portrait for Digital Circus Encore on genuinely transparent alpha, matching the approved static Ribbit × Ultra Jump Mania hommage sprite in the reference. Original Encore crossover design. Keep EXACT face shape, huge white wedge-pupil eyes, pink cheeks, friendly mouth, bright pink bow motif, palette, materials and outfit/anatomy of that reference. Compose a distinct clean three-quarter bust portrait facing RIGHT, head, complete headgear and torso visible, cropped naturally at the waist. Keep headgear and hands fully inside frame with generous empty transparent margins. No second character, no inset full body, no frame, text or game UI, no glow or background; keep crisp dark contours and clean cel shading. Preserve the approved design without adding accessories or changing anatomy. Specific locked design: Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text. This is only a portrait, no action state or animation. Genuine transparent pixels around the character, no opaque backdrop, no detached artifacts, no floor or ground shadow. Square canvas.",
+      "framing": "upper-body",
+      "fullBodyVisible": false,
+      "visualReviewNotes": "Intentional upper-body selection portrait. Eyes, headpiece, hands, upper costume and attached visible accessories preserve the inspected stance design. Lower legs are outside the designed portrait framing; no full-body claim. Native drawing is distinct from the stance, alpha margins remain positive.",
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/selection.png",
+      "sha256": "901e0cdaf31739b988532e254b453645f864af0e0dac35fd47d195993f9d4793",
+      "sha": "a2ecd1a9364884c6eef9e12f42b4551b147ee31d",
+      "bytes": 987072,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        196,
+        56,
+        1101,
+        1211
+      ],
+      "alpha12Margins": [
+        196,
+        56,
+        153,
+        43
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.6255236830658639,
+      "alpha240Fraction": 0.35599192631426324,
+      "accepted": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-hommage",
+      "series": "ultrajumpmania",
+      "style": "hommage",
+      "state": "stance",
+      "label": "Ultra Jump Mania · Hommage · Theo",
+      "identity": "Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/ultrajumpmania/gummigoo/hommage/selection.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/ultrajumpmania/gummigoo/hommage/selection.webp": "851011bfea9df85c215248db6123f4c20ea16a96e496fcc837fb471f110c9960",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg": "f6f48dbb0c682e8dff49108295982c8c67e763b75d1982d9147cc35c34115754"
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-559b40f7-fa0b-42d5-a261-bbba300dd239.png",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Theo of Ultra Jump Mania. Yellow short-sleeve island shirt with simple cream tropical flower pattern worn open over Ribbit's natural cream belly, coral-red shorts with a braided tan rope belt; small palm-leaf headpiece with a short white coconut-palm stalk and two golden seed beads, perched BEHIND the eyes and shaped like Theo's green hair/palm tuft without human hair. Bright pink bow tied at neckline. Bare four-finger green hands, tan low sandal straps around the three-toed webbed feet. Normal long slender frog legs, lime skin, huge white wedge-pupil eyes unobstructed. Warm yellow, coral, palm-green palette; third official pilot thumbnail anchors Theo's shirt, head tuft and bright tropical mood. No cowboy hat, crocodile snout, new tail, background fruit, held weapon or text.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Whole figure inspected, right-facing three-quarter guard, two wedge-pupil eyes and pink bow/cheek identity intact; all hands, three-toed feet and attached accessories visible. Distinct clothing versus coconut/leaf anatomical fusion. No action image or animation.",
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png",
+      "sha256": "eba5b6de206de44793ba4a1b666246b081e09b582f04501574bb9a577182096c",
+      "sha": "72e891297360c2592a5bdc4bfebe21c211d00aca",
+      "bytes": 740152,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        223,
+        26,
+        1000,
+        1212
+      ],
+      "alpha12Margins": [
+        223,
+        26,
+        254,
+        42
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7716163142378202,
+      "alpha240Fraction": 0.2023356201145171,
+      "accepted": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "series": "ultrajumpmania",
+      "style": "resident",
+      "state": "selection",
+      "label": "Ultra Jump Mania · Résident · Éclaireur du lagon",
+      "identity": "Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png"
+      ],
+      "referencesSHA256": {
+        "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d"
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5887ae1f-d015-4707-b853-4dab8b199af3.png",
+      "prompt": "Use case: identity-preserve. Create ONE square character-selection portrait for Digital Circus Encore on genuinely transparent alpha, matching the approved static Ribbit × Ultra Jump Mania resident sprite in the reference. Original Encore crossover design. Keep EXACT face shape, huge white wedge-pupil eyes, pink cheeks, friendly mouth, bright pink bow motif, palette, materials and outfit/anatomy of that reference. Compose a distinct clean three-quarter bust portrait facing RIGHT, head, complete headgear and torso visible, cropped naturally at the waist. Keep headgear and hands fully inside frame with generous empty transparent margins. No second character, no inset full body, no frame, text or game UI, no glow or background; keep crisp dark contours and clean cel shading. Preserve the approved design without adding accessories or changing anatomy. Specific locked design: Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame. This is only a portrait, no action state or animation. Genuine transparent pixels around the character, no opaque backdrop, no detached artifacts, no floor or ground shadow. Square canvas.",
+      "framing": "upper-body",
+      "fullBodyVisible": false,
+      "visualReviewNotes": "Intentional upper-body selection portrait. Eyes, headpiece, hands, upper costume and attached visible accessories preserve the inspected stance design. Lower legs are outside the designed portrait framing; no full-body claim. Native drawing is distinct from the stance, alpha margins remain positive.",
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+      "sha256": "1e0d350342f8c3f64dc008f5f78eb877b57a41dd8745f954b962373c9bbb9b9c",
+      "sha": "37925af5eb4f138b22c674ca2f6c163e1a22d857",
+      "bytes": 1033705,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        256,
+        50,
+        1057,
+        1228
+      ],
+      "alpha12Margins": [
+        256,
+        50,
+        197,
+        26
+      ],
+      "borderAlphaMax": 0,
+      "alphaZeroFraction": 0.6255243189894412,
+      "alpha240Fraction": 0.3594596175809976,
+      "accepted": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "series": "ultrajumpmania",
+      "style": "resident",
+      "state": "stance",
+      "label": "Ultra Jump Mania · Résident · Éclaireur du lagon",
+      "identity": "Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/ultrajumpmania/gummigoo/resident/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/ultrajumpmania/gummigoo/resident/stance.webp": "ef51bf69d609647ac48576e4c29cdc270a288efcc09b30ad9c4d27b728dbe1fa"
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-35571e0c-b8ae-4e48-bbfa-62720fb69844.png",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Whole figure inspected, right-facing three-quarter guard, two wedge-pupil eyes and pink bow/cheek identity intact; all hands, three-toed feet and attached accessories visible. Distinct clothing versus coconut/leaf anatomical fusion. No action image or animation.",
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+      "sha256": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d",
+      "sha": "9c517f774facf8aaf17adf56ed0d5aa3d014d8ca",
+      "bytes": 760515,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        208,
+        31,
+        1000,
+        1219
+      ],
+      "alpha12Margins": [
+        208,
+        31,
+        254,
+        35
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7739590566964024,
+      "alpha240Fraction": 0.20955589641059297,
+      "accepted": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-fusion",
+      "series": "ultrajumpmania",
+      "style": "fusion",
+      "state": "selection",
+      "label": "Ultra Jump Mania · Fusion · Têtard des cocotiers",
+      "identity": "Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png"
+      ],
+      "referencesSHA256": {
+        "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png": "714fb19b60bd1b561ca89490230533dfa3032c82fdce7cd86e0ac1cef7d4050b"
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b68f49d5-e3b9-4ba8-ae5f-96e34fe75c42.png",
+      "prompt": "Use case: identity-preserve. Create ONE square character-selection portrait for Digital Circus Encore on genuinely transparent alpha, matching the approved static Ribbit × Ultra Jump Mania fusion sprite in the reference. Original Encore crossover design. Keep EXACT face shape, huge white wedge-pupil eyes, pink cheeks, friendly mouth, bright pink bow motif, palette, materials and outfit/anatomy of that reference. Compose a distinct clean three-quarter bust portrait facing RIGHT, head, complete headgear and torso visible, cropped naturally at the waist. Keep headgear and hands fully inside frame with generous empty transparent margins. No second character, no inset full body, no frame, text or game UI, no glow or background; keep crisp dark contours and clean cel shading. Preserve the approved design without adding accessories or changing anatomy. Specific locked design: Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow. This is only a portrait, no action state or animation. Genuine transparent pixels around the character, no opaque backdrop, no detached artifacts, no floor or ground shadow. Square canvas.",
+      "framing": "upper-body",
+      "fullBodyVisible": false,
+      "visualReviewNotes": "Intentional upper-body selection portrait. Eyes, headpiece, hands, upper costume and attached visible accessories preserve the inspected stance design. Lower legs are outside the designed portrait framing; no full-body claim. Native drawing is distinct from the stance, alpha margins remain positive.",
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/selection.png",
+      "sha256": "118936ca4f79272fe4f00fb4e13ea18782eba2e4e9f21a896846f0c25d248497",
+      "sha": "cb62a4180ea3d62761e8f35c5ed4207a05557a9f",
+      "bytes": 1065258,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        115,
+        52,
+        1154,
+        1235
+      ],
+      "alpha12Margins": [
+        115,
+        52,
+        100,
+        19
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.5924810939920484,
+      "alpha240Fraction": 0.3868513897473857,
+      "accepted": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-fusion",
+      "series": "ultrajumpmania",
+      "style": "fusion",
+      "state": "stance",
+      "label": "Ultra Jump Mania · Fusion · Têtard des cocotiers",
+      "identity": "Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/ultrajumpmania/gummigoo/fusion/stance.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/ultrajumpmania/gummigoo/fusion/stance.webp": "efb299ceb49bbb0e8c278d149fe79b3cf46d5dc9529248761d82f6338db33686",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg": "f6f48dbb0c682e8dff49108295982c8c67e763b75d1982d9147cc35c34115754"
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-a8b6726a-1f64-4fff-8f4f-b198015cd4a4.png",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Whole figure inspected, right-facing three-quarter guard, two wedge-pupil eyes and pink bow/cheek identity intact; all hands, three-toed feet and attached accessories visible. Distinct clothing versus coconut/leaf anatomical fusion. No action image or animation.",
+      "file": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png",
+      "sha256": "714fb19b60bd1b561ca89490230533dfa3032c82fdce7cd86e0ac1cef7d4050b",
+      "sha": "b080715cf3c440077a07132c908b8a55afb8b051",
+      "bytes": 822615,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        198,
+        32,
+        1020,
+        1220
+      ],
+      "alpha12Margins": [
+        198,
+        32,
+        234,
+        34
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7234107633880991,
+      "alpha240Fraction": 0.245715782860079,
+      "accepted": true
+    }
+  ]
+}

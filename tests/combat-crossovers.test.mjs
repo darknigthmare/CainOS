@@ -3,13 +3,16 @@ import assert from 'node:assert/strict';
 import { closeSync, fstatSync, openSync, readSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { ART_FILES } from '../combat/offline-manifest.mjs';
-import { COSTUMES, COSTUME_ADDITIONS, CROSSOVER_COSTUMES, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
+import { COSTUMES, COSTUME_ADDITIONS, BASE_SPRITE_COSTUMES, CROSSOVER_COSTUMES, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
 import { CROSSOVER_FUSIONS } from '../combat/crossover-fusions.mjs';
 import { NPC_CROSSOVER_DEFINITIONS } from '../combat/crossover-npc-additions.mjs';
 import { CROSSOVER_SERIES, createCrossoverCostumes, crossoverStylesFor, matchesCostumeFilter } from '../combat/crossovers.mjs';
 import { updateCrossoverTracker } from '../scripts/combat-crossover-tracker.mjs';
 import { createProgram, validateProgram } from '../combat/progression.mjs';
 import { GAME_VERSION, emptyProfile, validateProfile, validateReplay } from '../combat/session.mjs';
+const staticCrossovers = BASE_SPRITE_COSTUMES.filter(costume => costume.crossover);
+const npcDefinitions = [...NPC_CROSSOVER_DEFINITIONS,
+  ...staticCrossovers.map(costume => ({ ...costume, ...costume.crossover }))];
 
 test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC groups coexist', () => {
   const illustrated = FIGHTERS.filter(fighter => CROSSOVER_SERIES.every(series => CROSSOVER_FUSIONS[series.id]?.[fighter.id]));
@@ -24,9 +27,9 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
     assert.deepEqual(Object.keys(roster).sort(), illustrated.map(fighter => fighter.id).sort());
     assert.equal(new Set(Object.values(roster)).size, illustrated.length);
   }
-  assert.equal(new Set(COSTUMES.map(item => item.id)).size, VARIANTS.length + 252 + fusions + COSTUME_ADDITIONS.length + NPC_CROSSOVER_DEFINITIONS.length);
+  assert.equal(new Set(COSTUMES.map(item => item.id)).size, VARIANTS.length + 252 + fusions + COSTUME_ADDITIONS.length + NPC_CROSSOVER_DEFINITIONS.length + BASE_SPRITE_COSTUMES.length);
   assert.equal(VARIANTS.length, 52);
-  assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions + NPC_CROSSOVER_DEFINITIONS.length);
+  assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions + npcDefinitions.length);
   for (const fighter of illustrated) {
     for (const { id } of CROSSOVER_SERIES) {
       const choices = CROSSOVER_COSTUMES.filter(item => item.fighterId === fighter.id && matchesCostumeFilter(item, id));
@@ -43,14 +46,14 @@ test('the fourteen complete crossover wardrobes and the explicitly reviewed NPC 
       }
     }
   }
-  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, 'circus')).length, VARIANTS.length + COSTUME_ADDITIONS.length);
-  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'resident')).length, 126 + NPC_CROSSOVER_DEFINITIONS.filter(item => item.style === 'resident').length);
-  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'fusion')).length, fusions + NPC_CROSSOVER_DEFINITIONS.filter(item => item.style === 'fusion').length);
+  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, 'circus')).length, VARIANTS.length + COSTUME_ADDITIONS.length + BASE_SPRITE_COSTUMES.filter(costume => !costume.crossover).length);
+  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'resident')).length, 126 + npcDefinitions.filter(item => item.style === 'resident').length);
+  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'fusion')).length, fusions + npcDefinitions.filter(item => item.style === 'fusion').length);
   assert.ok(crossoverStylesFor('', 'pomni').includes('fusion'));
   assert.deepEqual(crossoverStylesFor('circus', 'pomni'), []);
   assert.deepEqual(crossoverStylesFor('murderdrones', 'unknown-fighter'), []);
   for (const fighter of pending) {
-    const reviewed = NPC_CROSSOVER_DEFINITIONS.filter(entry => entry.fighterId === fighter.id);
+    const reviewed = npcDefinitions.filter(entry => entry.fighterId === fighter.id);
     assert.deepEqual(CROSSOVER_COSTUMES.filter(costume => costume.fighterId === fighter.id).map(item => item.id), reviewed.map(item => item.id), fighter.id);
     assert.deepEqual(crossoverStylesFor('', fighter.id).sort(), [...new Set(reviewed.map(item => item.style))].sort(), fighter.id);
     for (const series of CROSSOVER_SERIES) {
@@ -85,7 +88,7 @@ test('the published Murder Drones Ribbit group retains its historical positions 
     assert.deepEqual(equipped.visual, owner.visual);
   }
   for (const series of CROSSOVER_SERIES.filter(item => item.id !== 'murderdrones')) {
-    const reviewed = NPC_CROSSOVER_DEFINITIONS.filter(item => item.fighterId === 'ribbit' && item.series === series.id);
+    const reviewed = npcDefinitions.filter(item => item.fighterId === 'ribbit' && item.series === series.id);
     assert.deepEqual(crossoverStylesFor(series.id, 'ribbit').sort(), reviewed.map(item => item.style).sort());
   }
 });
@@ -135,13 +138,14 @@ test('the production tracker counts individual published poses and preserves not
   assert.equal(data.crossoverArt.costumeDrawings, 10);
 });
 
-test('historical crossover views remain WebP and new NPC families publish all eleven native PNG slots', () => {
+test('historical crossover views and full NPC families keep every slot while declared static bases publish their two native drawings', () => {
   const filenames = new Set(ART_FILES);
   const states = ['selection', 'stance', 'attack', 'victory', 'intro', 'walk', 'jump', 'crouch', 'hit', 'defeat'];
   for (const costume of CROSSOVER_COSTUMES) {
-    const native = NPC_CROSSOVER_DEFINITIONS.some(entry => entry.id === costume.id);
+    const baseOnly = costume.sprite.baseOnly === true;
+    const native = baseOnly || NPC_CROSSOVER_DEFINITIONS.some(entry => entry.id === costume.id);
     const extension = native ? '.png' : '.webp';
-    for (const state of native ? [...states, 'heavy'] : states) {
+    for (const state of baseOnly ? ['selection', 'stance'] : native ? [...states, 'heavy'] : states) {
       const file = costume.sprite.crossoverDirectory + '/' + state + extension;
       assert.ok(filenames.has(file), costume.id + '/' + state);
       if (native) {

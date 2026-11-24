@@ -1,0 +1,54 @@
+{
+  "series": "ultrajumpmania",
+  "style": "resident",
+  "label": "Ultra Jump Mania · Résident · Éclaireur du lagon",
+  "identity": "Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+  "references": [
+    "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+  ],
+  "state": "selection",
+  "id": "glitch-ultrajumpmania-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE square character-selection portrait for Digital Circus Encore on genuinely transparent alpha, matching the approved static Ribbit × Ultra Jump Mania resident sprite in the reference. Original Encore crossover design. Keep EXACT face shape, huge white wedge-pupil eyes, pink cheeks, friendly mouth, bright pink bow motif, palette, materials and outfit/anatomy of that reference. Compose a distinct clean three-quarter bust portrait facing RIGHT, head, complete headgear and torso visible, cropped naturally at the waist. Keep headgear and hands fully inside frame with generous empty transparent margins. No second character, no inset full body, no frame, text or game UI, no glow or background; keep crisp dark contours and clean cel shading. Preserve the approved design without adding accessories or changing anatomy. Specific locked design: Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame. This is only a portrait, no action state or animation. Genuine transparent pixels around the character, no opaque backdrop, no detached artifacts, no floor or ground shadow. Square canvas.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5887ae1f-d015-4707-b853-4dab8b199af3.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-5887ae1f-d015-4707-b853-4dab8b199af3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "image_gen.imagegen",
+  "nativeFacing": "right",
+  "generatedAt": "2026-11-24",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    256,
+    50,
+    1057,
+    1228
+  ],
+  "alpha12Margins": [
+    256,
+    50,
+    197,
+    26
+  ],
+  "alphaZeroFraction": 0.6255243189894412,
+  "alphaOpaqueFraction": 0.0009163658748146283,
+  "borderAlphaMax": 0,
+  "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+  "bytes": 1033705,
+  "sha256": "1e0d350342f8c3f64dc008f5f78eb877b57a41dd8745f954b962373c9bbb9b9c",
+  "sha": "37925af5eb4f138b22c674ca2f6c163e1a22d857",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "/tmp/encore-worktree/assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Distinct upper-body selection portrait inspected against approved base: right-facing, same face/palette/outfit or transformed coconut/leaf anatomy. Entire headgear and hands within frame; intentional bust crop, no animation or new action state."
+}

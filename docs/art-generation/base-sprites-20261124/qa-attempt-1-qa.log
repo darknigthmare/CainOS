@@ -1,0 +1,42 @@
+
+$ node --check app.js
+
+$ node --check episodes.js
+
+$ node scripts/audit-runtime.mjs
+AUDIT CAINOS: OK | 248 ids uniques | 9 campagnes a actes variables | Remember v2 | borne FPS 275 | journal, profils, atelier et controles presents
+
+$ node scripts/audit-game-contract.mjs
+CONTRAT GAMEPLAY: OK | 211 actes | 179 avatars animes | 73 types de props rendus
+
+$ node scripts/audit-gamedev-guides.mjs
+{
+  "pass": true,
+  "upstreamCommit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+  "guides": 10,
+  "files": 35,
+  "verifiedBytes": 221774,
+  "localLinks": 42,
+  "errors": []
+}
+
+$ node scripts/audit-combat-assets.mjs
+{
+  "pass": true,
+  "fighters": 64,
+  "archiveEntries": 184,
+  "selectableVariants": 52,
+  "animationSheets": 7,
+  "animationFrames": 56,
+  "animationStateReferences": 105,
+  "images": 55,
+  "imageBytes": 62367376,
+  "references": 304,
+  "uniqueCrops": 244,
+  "nativeAlphaReferences": 93,
+  "runtimeMatteReferences": 211,
+  "violations": 0,
+  "report": "audit-combat/assets-report.json"
+}
+
+$ node scripts/build-combat-offline.mjs

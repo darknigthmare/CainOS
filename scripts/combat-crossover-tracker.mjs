@@ -30,16 +30,20 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
   for (const costume of COSTUMES.filter(item => item.crossover)) {
     const directory = costume.sprite.crossoverDirectory.replace(/^\.\.\//, '');
     const fusion = costume.crossover.style === 'fusion';
-    const published = [...states, 'heavy'].filter(key => imagePath(directory+'/'+key));
+    const baseOnly = costume.baseOnly === true || costume.sprite.baseOnly === true;
+    const expected = baseOnly ? ['selection', 'stance'] : states;
+    const published = (baseOnly ? expected : [...states, 'heavy']).filter(key => imagePath(directory+'/'+key));
     if (!published.includes('selection') || !published.includes('stance')) continue;
-    const missing = states.filter(key => !published.includes(key));
+    const missing = expected.filter(key => !published.includes(key));
     costumeDrawings += published.length;
     publishRow(data.production,productions,[
       'COST-'+costume.id,'Costume crossover',original.get(costume.fighterId).name,costume.name,
       missing.length ? 'Partiel' : 'Implémenté','P1',directory+'/',
       (fusion ? 'Corps reconçu pour cet univers. ' : '') +
         published.length + ' dessins individuels. ' + published.map(key => stateLabels[key]).join(', ') + '.',
-      missing.length
+      baseOnly
+        ? 'Deux bases statiques attendues et présentes : portrait et garde. Les neuf poses d’action sont hors périmètre de cette famille ; les états utilisent sa garde sans animation. Kit et statistiques du combattant conservés.'
+        : missing.length
         ? 'À illustrer en priorité : ' + missing.map(key => stateLabels[key]).join(', ') + '. Le moteur conserve la garde de cette apparence.'
         : 'Les techniques et les statistiques sont celles du combattant. Références dans docs/COMBAT_CROSSOVERS_GLITCH.md.', '',
     ]);
@@ -115,7 +119,7 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
   data.counts.features=data.features.length;
   data.counts.stages=data.stages.length;
   data.counts.scenarios=data.scenarios.length;
-  data.counts.archiveVariants=VARIANTS.length; data.counts.variants=VARIANTS.length+outfits;
+  data.counts.archiveVariants=VARIANTS.length; data.counts.variants=COSTUMES.length;
   data.counts.production=data.production.length;
   data.crossoverArt={collections:collections.size,outfits,costumeDrawings,heavyAttacks:heavies,stageLayers:layers,escalePanels:panels};
   data.illustratedAssets.crossovers=costumeDrawings;

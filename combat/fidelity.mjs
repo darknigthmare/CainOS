@@ -2,6 +2,7 @@ import { CROSSOVER_STAGES, CROSSOVER_STAGE_SOURCES } from './crossover-stages.mj
 import { EXPANSION_DEFS } from './roster-expansion.mjs';
 import { ABSTRACTION_DEFS, ABSTRACTION_SOURCES, abstractionFidelity } from './abstractions-content.mjs';
 import { COSTUME_ADDITION_SOURCES } from './costume-additions.mjs';
+import { BASE_SPRITE_SOURCES } from './base-sprite-content.mjs';
 
 /**
  * Shared provenance for the codex and the planning workbook.
@@ -23,6 +24,7 @@ const merchandise = (id, title, file, page, scope) => ({ id, title: `GLITCH Stor
 export const FIDELITY_SOURCES = freeze([
   ...ABSTRACTION_SOURCES,
   ...COSTUME_ADDITION_SOURCES,
+  ...BASE_SPRITE_SOURCES,
   ...CROSSOVER_STAGE_SOURCES,
   { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle et galerie de la série. La page ne documente ni les règles de combat ni les dimensions du jeu.' },
   episode('ep1', 'Pilot', 'HwAPLk_sQ3w', 'Référence du cirque, de ses résidents, de Caine, Bubble, Kaufmo et des Gloinks. Les plans non décrits dans les visuels consultés restent à revoir.'),

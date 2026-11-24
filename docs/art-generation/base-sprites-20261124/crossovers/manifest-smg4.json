@@ -1,0 +1,512 @@
+{
+  "complete": true,
+  "series": "smg4",
+  "baseOnly": true,
+  "presentation": "static",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "appearances": [
+    {
+      "id": "glitch-smg4-ribbit-hommage",
+      "series": "smg4",
+      "style": "hommage",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/smg4/ribbit/hommage/selection.png",
+        "stance": "assets/encore/crossovers/smg4/ribbit/hommage/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "SMG4 · Hommage · SMG4",
+      "identity": "Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2949486881"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-resident",
+      "series": "smg4",
+      "style": "resident",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/smg4/ribbit/resident/selection.png",
+        "stance": "assets/encore/crossovers/smg4/ribbit/resident/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "SMG4 · Résident · Accessoiriste des Showgrounds",
+      "identity": "Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2992370946"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-fusion",
+      "series": "smg4",
+      "style": "fusion",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/smg4/ribbit/fusion/selection.png",
+        "stance": "assets/encore/crossovers/smg4/ribbit/fusion/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "SMG4 · Fusion · Amphibien élastique",
+      "identity": "True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    }
+  ],
+  "records": [
+    {
+      "id": "glitch-smg4-ribbit-hommage",
+      "series": "smg4",
+      "style": "hommage",
+      "state": "selection",
+      "label": "SMG4 · Hommage · SMG4",
+      "identity": "Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/ribbit/hommage/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/smg4/ribbit/hommage/stance.png": "2581b8ca8e4c3a07079d53615d13878ccd965aee2be32ff4e83817874d8c69fd"
+      },
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2949486881"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-810e3bc7-bb72-4cfe-9036-39ebc0866794.png",
+      "result_store_key": "ribbitBaseResult:smg4:hommage:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright welcoming portrait. Cap, clothing/accessories or elastic anatomical redesign match the validated stance. Complete single figure with visible toes and fingertips.",
+      "file": "assets/encore/crossovers/smg4/ribbit/hommage/selection.png",
+      "sha256": "001bd73c5685f9768981da76586f17f47465aa84888bcba07f3f421c6ab35faf",
+      "sha": "ea59bdfce6a0b56761357585aab7796fe27eaf0f",
+      "bytes": 572461,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        384,
+        30,
+        934,
+        1224
+      ],
+      "alpha12Margins": [
+        384,
+        30,
+        320,
+        30
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.8106804636645987,
+      "alpha240Fraction": 0.17706846861971515,
+      "accepted": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-hommage",
+      "series": "smg4",
+      "style": "hommage",
+      "state": "stance",
+      "label": "SMG4 · Hommage · SMG4",
+      "identity": "Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/jax/hommage/selection.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/smg4-official-2023-model.jpg"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/smg4/jax/hommage/selection.webp": "1003d3991edf17aa1b8205566700ae6f2f92214fea5ffc6f892e9d8add2f054a",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/smg4-official-2023-model.jpg": "e321a50951a6b702ec31b5257196cb789c907d145c9169eed47b938aab136d52"
+      },
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2949486881"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-0f39943c-6695-43e8-b152-a68827272596.png",
+      "result_store_key": "ribbitBaseResult:smg4:hommage:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Blue cap, shirt and white overalls preserve frog proportions; whole body and attached camera visible.",
+      "file": "assets/encore/crossovers/smg4/ribbit/hommage/stance.png",
+      "sha256": "2581b8ca8e4c3a07079d53615d13878ccd965aee2be32ff4e83817874d8c69fd",
+      "sha": "d52a9ff7dc47ab4fe5aa0ab6ac8f702c08e36ee3",
+      "bytes": 688359,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        220,
+        35,
+        1020,
+        1230
+      ],
+      "alpha12Margins": [
+        220,
+        35,
+        234,
+        24
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.77541087022326,
+      "alpha240Fraction": 0.20954508570977975,
+      "accepted": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-resident",
+      "series": "smg4",
+      "style": "resident",
+      "state": "selection",
+      "label": "SMG4 · Résident · Accessoiriste des Showgrounds",
+      "identity": "Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/ribbit/resident/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/smg4/ribbit/resident/stance.png": "bee9f3f1f300332743e12002f5849de6ffabb1011845464cd2afccf650f42159"
+      },
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2992370946"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-3c930657-eea5-4f62-a774-e92fcfc5eac9.png",
+      "result_store_key": "ribbitBaseResult:smg4:resident:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright welcoming portrait. Cap, clothing/accessories or elastic anatomical redesign match the validated stance. Complete single figure with visible toes and fingertips.",
+      "file": "assets/encore/crossovers/smg4/ribbit/resident/selection.png",
+      "sha256": "ea0a00587d30ba842f612e8be82a17e2a0ebfb818e6d02a51250079ba202c702",
+      "sha": "4fd67ef7cd6bb6ed16f8b9168a1bff57a5ae2799",
+      "bytes": 686417,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        364,
+        37,
+        965,
+        1223
+      ],
+      "alpha12Margins": [
+        364,
+        37,
+        289,
+        31
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7804728218981556,
+      "alpha240Fraction": 0.2078497134528361,
+      "accepted": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-resident",
+      "series": "smg4",
+      "style": "resident",
+      "state": "stance",
+      "label": "SMG4 · Résident · Accessoiriste des Showgrounds",
+      "identity": "Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/jax/resident/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/smg4/jax/resident/stance.webp": "10829376f7368abba263ea2e648ef4ee0474cef6a11451ed1b5d2a7909edcb29"
+      },
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2992370946"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b3bdf4b0-4bbc-491d-b488-fed9aaf06609.png",
+      "result_store_key": "ribbitBaseResult:smg4:resident:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Workwear, tools and clapper cap distinct from homage; complete silhouette.",
+      "file": "assets/encore/crossovers/smg4/ribbit/resident/stance.png",
+      "sha256": "bee9f3f1f300332743e12002f5849de6ffabb1011845464cd2afccf650f42159",
+      "sha": "e95ea63864710d1d6822f73dc5c29c7b60cf6793",
+      "bytes": 762210,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        210,
+        42,
+        1003,
+        1221
+      ],
+      "alpha12Margins": [
+        210,
+        42,
+        251,
+        33
+      ],
+      "borderAlphaMax": 0,
+      "alphaZeroFraction": 0.7594231155676635,
+      "alpha240Fraction": 0.2231220540840284,
+      "accepted": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-fusion",
+      "series": "smg4",
+      "style": "fusion",
+      "state": "selection",
+      "label": "SMG4 · Fusion · Amphibien élastique",
+      "identity": "True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/ribbit/fusion/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/smg4/ribbit/fusion/stance.png": "2bcdc98cabe58de4566a6fea741ef980493563ef191f1b6899cfe7cf44f9eee1"
+      },
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5728b381-4a94-492f-af78-68e5fa178d8f.png",
+      "result_store_key": "ribbitBaseResult:smg4:fusion:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright welcoming portrait. Cap, clothing/accessories or elastic anatomical redesign match the validated stance. Complete single figure with visible toes and fingertips.",
+      "file": "assets/encore/crossovers/smg4/ribbit/fusion/selection.png",
+      "sha256": "ddf3116799f0427915944dabaceb86479b739fead4e8df5c788bd82258cf252a",
+      "sha": "b65a9e1b00f25379835b08070e8a31c675df697d",
+      "bytes": 685157,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        305,
+        19,
+        1046,
+        1234
+      ],
+      "alpha12Margins": [
+        305,
+        19,
+        208,
+        20
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7578123211464939,
+      "alpha240Fraction": 0.21912972586606433,
+      "accepted": true
+    },
+    {
+      "id": "glitch-smg4-ribbit-fusion",
+      "series": "smg4",
+      "style": "fusion",
+      "state": "stance",
+      "label": "SMG4 · Fusion · Amphibien élastique",
+      "identity": "True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/jax/fusion/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/smg4/jax/fusion/stance.webp": "73cc566312ad367b8982203092573bde10caad125ad3dcd63ba15d7ffe35b75d"
+      },
+      "sourceUrls": [
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-4b9293f9-942a-4a11-a766-669ced42dcb6.png",
+      "result_store_key": "ribbitBaseResult:smg4:fusion:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Broad bean torso and enlarged glove-like hands/webbed feet are visibly redesigned; complete silhouette.",
+      "file": "assets/encore/crossovers/smg4/ribbit/fusion/stance.png",
+      "sha256": "2bcdc98cabe58de4566a6fea741ef980493563ef191f1b6899cfe7cf44f9eee1",
+      "sha": "7ec747dc84dd69dfdd9e9245bfebc84babda178c",
+      "bytes": 718402,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        145,
+        34,
+        1092,
+        1229
+      ],
+      "alpha12Margins": [
+        145,
+        34,
+        162,
+        25
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7550543205919685,
+      "alpha240Fraction": 0.22593156444831086,
+      "accepted": true
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "encore-base-native-assets/v1",
+  "assets": [
+    {
+      "id": "ribbitsuitjax",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/ribbitsuitjax/stance.png",
+      "sourcePath": "/workspace/scratch/e51b531817b1/generated_images/exec-4663b40e-3e96-409c-841e-0ecc2e79e42f.png",
+      "bytes": 1836532,
+      "sha256": "c86f4a62c23e715a8c3d7b51e5cf1c5828521840f0a3d89ce7e423ce70d3d973",
+      "gitSha1": "b01fd2f7364908a7a7582adfa7e8f437473446d8",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        1004,
+        1536
+      ],
+      "visibleBounds": [
+        66,
+        133,
+        958,
+        1440
+      ],
+      "opaqueComponentsLargest": [
+        952048
+      ],
+      "nativeCopyIdentical": true
+    },
+    {
+      "id": "cocktailzooble",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/cocktailzooble/stance.png",
+      "sourcePath": "/workspace/scratch/e51b531817b1/generated_images/exec-961254a3-4bb7-484d-a6ac-be36c089cb15.png",
+      "bytes": 1583483,
+      "sha256": "ff5313afc976af86e1ab76f08aebad7d8483ae4dd4742802b7f05618c96f1331",
+      "gitSha1": "9092afd57f21dd367108b664147f9f37aab44039",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        29,
+        63,
+        1004,
+        1506
+      ],
+      "visibleBounds": [
+        31,
+        106,
+        993,
+        1457
+      ],
+      "opaqueComponentsLargest": [
+        496301
+      ],
+      "nativeCopyIdentical": true
+    },
+    {
+      "id": "ribbitsuitjax",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/ribbitsuitjax/selection.png",
+      "sourcePath": "/workspace/scratch/e51b531817b1/generated_images/exec-6991384d-07df-4644-8145-f0b1f91091cd.png",
+      "bytes": 1275402,
+      "sha256": "51fcd4e1336e4d3a99e7ba24a7c31202339b4f57e142a440d81f7c640680b120",
+      "gitSha1": "b034d8c84e6a7b788e1196e55c245fa4997379fb",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        40,
+        1245,
+        1230
+      ],
+      "visibleBounds": [
+        164,
+        52,
+        1088,
+        1207
+      ],
+      "opaqueComponentsLargest": [
+        929626
+      ],
+      "nativeCopyIdentical": true
+    },
+    {
+      "id": "cocktailzooble",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/cocktailzooble/selection.png",
+      "sourcePath": "/workspace/scratch/e51b531817b1/generated_images/exec-255f5cc1-8aef-403e-90ec-2bb0fa8608bc.png",
+      "bytes": 1146927,
+      "sha256": "d8bb9f76fd17c975605d484d14bc2684948aa15dee15a93a5c69893ec39f3b4f",
+      "gitSha1": "b2f479c113d21ed562336c4e815976dbc71b76d9",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        50,
+        23,
+        1240,
+        1237
+      ],
+      "visibleBounds": [
+        54,
+        25,
+        1218,
+        1234
+      ],
+      "opaqueComponentsLargest": [
+        675196
+      ],
+      "nativeCopyIdentical": true
+    }
+  ]
+}

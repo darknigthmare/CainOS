@@ -1,0 +1,59 @@
+{
+  "schema": "encore-base-sprite-review/v1",
+  "reviewedOn": "2026-11-24",
+  "scope": "Two native static images per costume. Official source appearance reviewed; exact pixel/canonical equivalence not certified.",
+  "tool": "image_gen.imagegen",
+  "families": [
+    {
+      "id": "ribbitsuitjax",
+      "fighterId": "jax",
+      "sourceUrl": "https://glitchproductions.store/products/ribbit-suit-jax-plush",
+      "sourceKind": "official-merchandise-design",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "baseOnly": true,
+      "presentation": "static",
+      "status": "verified-base-files",
+      "sha256": {
+        "selection": "51fcd4e1336e4d3a99e7ba24a7c31202339b4f57e142a440d81f7c640680b120",
+        "stance": "c86f4a62c23e715a8c3d7b51e5cf1c5828521840f0a3d89ce7e423ce70d3d973"
+      },
+      "visibleTraits": [
+        "Jax's lavender worried face and drooping ears",
+        "Turquoise frog suit, pale belly, frog hood with purple segmented lids",
+        "Coral bow at upper viewer-right; no neck bow",
+        "Compact source proportions retained"
+      ],
+      "review": "Full-body base and selection portrait inspected. One failed selection candidate with stray white debris replaced with a targeted native image edit. Final alpha >32 has a single continuous component. Source is a merchandise design; not an episode-wide official pose certification.",
+      "canonicalOneToOneCertified": false
+    },
+    {
+      "id": "cocktailzooble",
+      "fighterId": "zooble",
+      "sourceUrl": "https://glitchproductions.store/products/digital-circus-artbook",
+      "sourceImageUrl": "https://glitchproductions.store/cdn/shop/files/Tier2_3_Stickers_1.webp?v=1789097565&width=1600",
+      "sourceKind": "official-artbook-sticker-design",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "baseOnly": true,
+      "presentation": "static",
+      "status": "verified-base-files",
+      "sha256": {
+        "selection": "d8bb9f76fd17c975605d484d14bc2684948aa15dee15a93a5c69893ec39f3b4f",
+        "stance": "ff5313afc976af86e1ab76f08aebad7d8483ae4dd4742802b7f05618c96f1331"
+      },
+      "visibleTraits": [
+        "Pink triangular head, spiral eye disk, T and lightning antennas",
+        "Yellow torso with pink spots and orange star",
+        "Three arms preserve their visible overlaps: gray shaker, red drink, coconut on tray",
+        "Asymmetric legs and feet retained on stance"
+      ],
+      "review": "Full-body composition retained from the exact public source sticker. Selection is an upper-body portrait preserving all three arms/accessories. No unfolded or hidden anatomy asserted. Native alpha inspected; no opaque background.",
+      "canonicalOneToOneCertified": false
+    }
+  ]
+}

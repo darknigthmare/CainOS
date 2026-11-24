@@ -1,0 +1,53 @@
+{
+  "schema": "encore-base-recovery-checkpoint/v1",
+  "createdAt": "2026-11-24T17:21:53.368294+00:00",
+  "remoteBaseline": "11d2ae9d0e2d5a26568f6294b6832be78983d1a6",
+  "nativeRecoveredPngs": 48,
+  "appearances": 24,
+  "previousAssetsUnchanged": 6086,
+  "remoteHistoricalFilesPreserved": 1161,
+  "qa": {
+    "tests": 467,
+    "pass": 467,
+    "fail": 0,
+    "skipped": 0,
+    "bothBuildsPassed": true
+  },
+  "builds": {
+    "standalone": {
+      "expectedIllustrations": 6130,
+      "verifiedIllustrations": 6130,
+      "expectedCombatFiles": 64,
+      "verifiedCombatFiles": 64,
+      "expectedEntryFiles": 2,
+      "verifiedEntryFiles": 2,
+      "expectedFiles": 6196,
+      "verifiedFiles": 6196,
+      "verifiedBytes": 3416229740,
+      "failures": 0
+    },
+    "cainos": {
+      "expectedIllustrations": 6130,
+      "verifiedIllustrations": 6130,
+      "expectedCombatFiles": 64,
+      "verifiedCombatFiles": 64,
+      "expectedEntryFiles": 6,
+      "verifiedEntryFiles": 6,
+      "expectedFiles": 6200,
+      "verifiedFiles": 6200,
+      "verifiedBytes": 3418803620,
+      "failures": 0
+    }
+  },
+  "workbook": {
+    "recovered": true,
+    "cellsChecked": 91743,
+    "variants": 508,
+    "originalIdsAndNotesPreserved": true
+  },
+  "newImageGenerationsInThisCheckpoint": 0,
+  "limitations": [
+    "Recovered previous work; newly generated next batch is separate.",
+    "No browser execution or pixel-exact canonical certification claimed by this checkpoint."
+  ]
+}

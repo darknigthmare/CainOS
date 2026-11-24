@@ -81,6 +81,9 @@ async function readFrame(path, kind, nativeFacing) {
 }
 
 export function loadFighterIllustration(kind, fighter, pose) {
+  // A declared static base owns only its portrait and standing drawing. Even
+  // if an old or stray action file exists, never present it as authored motion.
+  if (kind === 'poses' && fighter?.sprite?.baseOnly === true) return null;
   // Archive entries use the appearance ID directly. Match actors keep the
   // fighter's simulation ID and carry their chosen appearance in costume.
   const appearanceId = fighter?.costume || fighter?.id;
@@ -102,7 +105,9 @@ export function loadFighterIllustration(kind, fighter, pose) {
     retryAt.delete(path);
   }
   if (!pending.has(path)) {
-    const nativeFacing = getCostumeNativeFacing(appearanceId, kind === 'poses' ? pose : kind);
+    const nativeFacing = fighter.sprite?.baseOnly === true
+      ? (fighter.sprite.nativeFacing === -1 ? -1 : 1)
+      : getCostumeNativeFacing(appearanceId, kind === 'poses' ? pose : kind);
     const task = decoders[nextDecoder].then(() => readFrame(path, kind, nativeFacing)).then(frame => {
       if (frame) {
         if (cache.size >= limits[kind].count) cache.delete(cache.keys().next().value);
@@ -123,14 +128,16 @@ export function loadFighterIllustration(kind, fighter, pose) {
 
 /** Queue only the current pair, two drawings at a time, after the duel can start. */
 export async function warmCombatPoses(fighters, isCurrent) {
+  const illustrated = fighters.filter(fighter => fighter?.sprite?.baseOnly !== true);
+  if (!illustrated.length) return;
   for (const pose of [...ACTION_ART, 'heavy']) {
     if (!isCurrent()) return;
-    await Promise.all(fighters.map(fighter => loadFighterIllustration('poses', fighter, pose)));
+    await Promise.all(illustrated.map(fighter => loadFighterIllustration('poses', fighter, pose)));
   }
 }
 
 export function actionIllustration(fighter, pose) {
-  if (!pose) return null;
+  if (!pose || fighter?.sprite?.baseOnly === true) return null;
   const directory = fighter?.sprite?.crossoverDirectory;
   // The crossover attack drawing serves both normal strikes unless the costume
   // has its own heavy. Historical atlases retain their original move selection.

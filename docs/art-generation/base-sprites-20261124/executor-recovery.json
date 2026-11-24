@@ -1,0 +1,46 @@
+{
+  "schema": "encore-executor-recovery/v1",
+  "date": "2026-11-24",
+  "interruption": {
+    "qa": {
+      "completed": [
+        "syntax app.js",
+        "syntax episodes.js",
+        "audit-runtime",
+        "audit-game-contract",
+        "audit-gamedev-guides",
+        "audit-combat-assets"
+      ],
+      "interruptedCommand": "node scripts/build-combat-offline.mjs",
+      "exitCode": -9,
+      "fullNodeSuiteExecuted": false,
+      "report": "docs/art-generation/base-sprites-20261124/qa-attempt-1-qa-summary.json",
+      "log": "docs/art-generation/base-sprites-20261124/qa-attempt-1-qa.log"
+    },
+    "canvas": {
+      "exitCode": 137,
+      "completedFamilies": 1,
+      "completedStateDirectionChecks": 20,
+      "globalSuccess": false
+    },
+    "workbook": {
+      "preparationExitCode": 137,
+      "newExportCreated": false
+    },
+    "executor": "Transport disconnected; recovery timed out. Environment became unavailable and was subsequently restored."
+  },
+  "recovery": {
+    "sourceCheckoutPreserved": true,
+    "temporarySymlinkRestored": "/tmp/encore-worktree",
+    "filesReverified": 48,
+    "nativeOriginalsReverified": 48,
+    "bytes": 42600607,
+    "byteDifferences": 0,
+    "crossoverManifestSha256": "8bb0499ce8b479cd843c27ca89476b1fd281b19ebd6f75b6d3b2253986c788f9",
+    "previousWorkbookSha256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+    "approximateAvailableMemoryAfterRecoveryMiB": 9016,
+    "noOtherProjectFilesRemoved": true,
+    "noAssetRegenerationRequired": true
+  },
+  "followingVerification": "Heavy checks are sequenced: bounded native Canvas review, Node QA and both builds, then workbook publication. Final outcomes belong to verification.json; interrupted attempts are not successes."
+}

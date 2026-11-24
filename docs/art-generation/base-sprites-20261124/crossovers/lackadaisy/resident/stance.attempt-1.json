@@ -1,0 +1,57 @@
+{
+  "series": "lackadaisy",
+  "style": "resident",
+  "label": "Lackadaisy · Résident · Coursier du Little Daisy",
+  "identity": "Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/jax/resident/stance.webp"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/lackadaisy",
+    "https://lackadaisy.com/characters.php"
+  ],
+  "state": "stance",
+  "id": "glitch-lackadaisy-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:lackadaisy:resident:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-20c90aa7-9f7a-466e-a215-1c48245b6aa7.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-20c90aa7-9f7a-466e-a215-1c48245b6aa7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    198,
+    32,
+    1037,
+    1235
+  ],
+  "alpha12Margins": [
+    198,
+    32,
+    217,
+    19
+  ],
+  "alphaZeroFraction": 0.7543058385415474,
+  "alphaOpaqueFraction": 0.0011344876618107542,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png",
+  "bytes": 800346,
+  "sha256": "ee784df7c15e7581620d5043ecd3a0726d6dff43c455fa18379c78688df81e67",
+  "sha": "6151755d3273231c47f4db9a93c593592fc3630d",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/lackadaisy/jax/resident/stance.webp": "e893a2acf95c0621cefeb65cc0a473241f0cb84fcb27f48c243cf2190e2a8923"
+  },
+  "auditPass": true
+}

@@ -1,0 +1,451 @@
+{
+  "schema": "encore-static-bases-visual-review/v1",
+  "createdAt": "2026-11-24T16:10:10.525268+00:00",
+  "status": "accepted-static-base-presentation",
+  "scope": "Visual reviews of the 24 existing production Canvas sheets, separately from numeric renderer checks.",
+  "individualSheetsReviewed": 24,
+  "individualViewsReviewed": 72,
+  "overview": {
+    "file": "docs/art-generation/base-sprites-20261124/canvas/bases-overview.jpg",
+    "bytes": 513195,
+    "sha256": "1089cf8703bbc56501a6fabab38ae6a106223ad3abb13f4f73db5a624488e712"
+  },
+  "overviewVisuallyReviewedBy": [
+    "runtime_audit",
+    "original_abstraction_art"
+  ],
+  "reviews": [
+    {
+      "file": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "bytes": 6999,
+      "sha256": "24aa81577f78e3dc3f45a8d55260ad367f4fd14be8b1b6daf0c557adf028e57e",
+      "reviewer": "original_abstraction_art",
+      "individualSheets": 18
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/canvas-review.json",
+      "bytes": 3047,
+      "sha256": "03701d00ff67fdc2b1b48a1b2ec8f10d51450e6924d9fee0f6bc5a2cf187f4af",
+      "reviewer": "canon_abstractions",
+      "individualSheets": 4
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/root-official/canvas-review.json",
+      "bytes": 2853,
+      "sha256": "c408b40ae883a0fa8e9e5d05f224db837521c0aae516fdc67f51ec8b492b9ed2",
+      "reviewer": "runtime_audit",
+      "individualSheets": 2
+    }
+  ],
+  "appearances": [
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-knightsofguinevere-ribbit-hommage.jpg",
+        "bytes": 57193,
+        "sha256": "0f28a0cd9b740ab25f85d2952c2923224688e679abf7c63f28a05c612109c4ca"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-resident",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-knightsofguinevere-ribbit-resident.jpg",
+        "bytes": 56663,
+        "sha256": "93a7f2005751753781f7cfb95fa2f91993ee6f9e482fd7d1b5833f6141b377fe"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-fusion",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-knightsofguinevere-ribbit-fusion.jpg",
+        "bytes": 60472,
+        "sha256": "706bac893f76166fd2cb51888dcb27ee7469bf8bdb636af6607345ae57bbe432"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-hommage",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gaslightdistrict-ribbit-hommage.jpg",
+        "bytes": 52601,
+        "sha256": "db3b5e08913739ff9de2509d101a22c1edcc9a3fc52c23135147457736179dac"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-resident",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gaslightdistrict-ribbit-resident.jpg",
+        "bytes": 55118,
+        "sha256": "3cc0e238c4aa73e7c07f1ab1c754ebd4d1385a473b7f9452db2098e773de6669"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-fusion",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gaslightdistrict-ribbit-fusion.jpg",
+        "bytes": 62837,
+        "sha256": "235a52047418d2333bbe42f7b18071be91298cda2977d67a879523daeb5f070b"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-hommage",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gameoverse-ribbit-hommage.jpg",
+        "bytes": 57318,
+        "sha256": "5aa82e8681f453696fe99342e23608d27b7abbadba2fa4774b50c3994c1b9c0a"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-resident",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gameoverse-ribbit-resident.jpg",
+        "bytes": 59202,
+        "sha256": "8919425caeb8505837b48162d9a4e534137aded73b5c1c3410ff06c3d385a66f"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-fusion",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gameoverse-ribbit-fusion.jpg",
+        "bytes": 57949,
+        "sha256": "b45a5cd0a4b39818162c44373df2231cc7cb05b5091ba90e0e2f0375c798d288"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-hommage",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-lackadaisy-ribbit-hommage.jpg",
+        "bytes": 53699,
+        "sha256": "190d8990872a46bfcb995b3bf9a856df23429a178603e5b265e42602f06646c9"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-resident",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-lackadaisy-ribbit-resident.jpg",
+        "bytes": 52916,
+        "sha256": "c2f7260ee9ed6facdba386521c85a12a7b7b2944970c2311c8468ba592f73eb7"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-fusion",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-lackadaisy-ribbit-fusion.jpg",
+        "bytes": 55604,
+        "sha256": "fafd15a32cbe048089bd44f8a71164c61bf3f461fee5402585d2c85c0029ad29"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-smg4-ribbit-hommage",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-smg4-ribbit-hommage.jpg",
+        "bytes": 52372,
+        "sha256": "3cc8aa4cf59f5fe709422dfea0908671fe10dc9a063dd0cb9bdd46932fca4b23"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-smg4-ribbit-resident",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-smg4-ribbit-resident.jpg",
+        "bytes": 55452,
+        "sha256": "2cfec223c340665d89fabd2171961a3fe847c2b1edf5d51bf436339d847d0d69"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-smg4-ribbit-fusion",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-smg4-ribbit-fusion.jpg",
+        "bytes": 54660,
+        "sha256": "253d5ab4bac3f739282ddcd0270966555830cc9c922acc52b5960689afe53eac"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-hommage",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-ultrajumpmania-ribbit-hommage.jpg",
+        "bytes": 63800,
+        "sha256": "245c4523be35d6b636a944a329bc2977cd6ddc181a0969ef533aff5d30fdc3dc"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-ultrajumpmania-ribbit-resident.jpg",
+        "bytes": 63541,
+        "sha256": "28fdec88ab4442a3ffa45120a6433dc90ec7ca210fade2deba443df7d796e90b"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-fusion",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-ultrajumpmania-ribbit-fusion.jpg",
+        "bytes": 64075,
+        "sha256": "a9f83170509893eb0f177e068578cac302a4a042e596ca528e79a7e68f5ce3e4"
+      },
+      "reviewer": "original_abstraction_art",
+      "review": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "contortionistzooble",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-contortionistzooble.jpg",
+        "bytes": 65933,
+        "sha256": "3d72b6a5cdc2b2a965075fae7774e81c0cb25d6e6f378edc723028d4815fdf3e"
+      },
+      "reviewer": "canon_abstractions",
+      "review": "docs/art-generation/base-sprites-20261124/official-costumes/canvas-review.json",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "hotdogabel",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-hotdogabel.jpg",
+        "bytes": 61435,
+        "sha256": "132377289380490546d4c3b964e62ffc19c409c69b3303267f8e13ae171e9677"
+      },
+      "reviewer": "canon_abstractions",
+      "review": "docs/art-generation/base-sprites-20261124/official-costumes/canvas-review.json",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "cafejax",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-cafejax.jpg",
+        "bytes": 60689,
+        "sha256": "403e6a16d0c15a2c8667bb37866d45df5ce4fabe7a0dab0a8964a9f82a5db26e"
+      },
+      "reviewer": "canon_abstractions",
+      "review": "docs/art-generation/base-sprites-20261124/official-costumes/canvas-review.json",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "cafecaine",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-cafecaine.jpg",
+        "bytes": 72438,
+        "sha256": "2b9131f47251e5a84cfe8bf3c4397d30e29623a8510996f8e9640b3d17ace196"
+      },
+      "reviewer": "canon_abstractions",
+      "review": "docs/art-generation/base-sprites-20261124/official-costumes/canvas-review.json",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "ribbitsuitjax",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-ribbitsuitjax.jpg",
+        "bytes": 77862,
+        "sha256": "c322941e0a87c4720305e550238b08144262aaaad45cb32a57e6fcd467b77da5"
+      },
+      "reviewer": "runtime_audit",
+      "review": "docs/art-generation/base-sprites-20261124/root-official/canvas-review.json",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    },
+    {
+      "id": "cocktailzooble",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-cocktailzooble.jpg",
+        "bytes": 71148,
+        "sha256": "a77849fc970e94def4d64529702cff529ad5ddd64ad453a0d76f413e81927968"
+      },
+      "reviewer": "runtime_audit",
+      "review": "docs/art-generation/base-sprites-20261124/root-official/canvas-review.json",
+      "accepted": true,
+      "views": [
+        "own-selection-portrait",
+        "own-stance-facing-right",
+        "same-stance-facing-left"
+      ]
+    }
+  ],
+  "numericEvidence": {
+    "file": "docs/art-generation/base-sprites-20261124/canvas/base-canvas-review.json",
+    "bytes": 298389,
+    "sha256": "0b5fbc939aa28ef26692a6907bb904daf828121c1cef3977f663f083db957c5e",
+    "summary": {
+      "appearances": 24,
+      "authoredDrawings": 48,
+      "sourceAndFacingChecks": 480,
+      "actualStateDraws": 1440,
+      "portraits": 24,
+      "peakWorkerRSSBytes": 138723328,
+      "pass": true
+    }
+  },
+  "nativeImagesModifiedForReview": false,
+  "actionDrawingsAdded": 0,
+  "browserExecuted": false,
+  "canonicalPixelCertification": false,
+  "limitations": [
+    "These are two-drawing static families. Repeated states and mirrored guards are not additional artwork or animation.",
+    "Review accepts readable, uncropped guards and preserved proportions/accessories at the shown production scale.",
+    "Intentional selection portraits may crop the body; all guards are complete. In particular the three Ultra Jump Mania portraits remain declared upper-body crops.",
+    "The six referenced Circus appearances retain the scope of their separate source reviews; crossover interpretations are original Encore designs.",
+    "Native Skia proof does not certify browser DOM, physical-device behavior or canonical pixel-perfect fidelity."
+  ]
+}

@@ -1,0 +1,1461 @@
+{
+  "schema": "encore-base-sprite-native-inventory/v1",
+  "recordedAt": "2026-11-24T15:45:23.259576+00:00",
+  "complete": true,
+  "families": 24,
+  "files": 48,
+  "officialReferenceFamilies": 6,
+  "originalCrossoverFamilies": 18,
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "actionPngsAdded": 0,
+  "animationFramesAdded": 0,
+  "nativePngsUnmodified": true,
+  "uniqueNativeImages": 48,
+  "bytes": 42600607,
+  "portraitFraming": "Selection framing follows each family: the three Ultra Jump Mania portraits are intentional bust crops; all stance figures retain their complete visible source composition. A documented portrait may meet the lower canvas edge; stance silhouettes must have clear margins on all four sides.",
+  "assets": [
+    {
+      "id": "contortionistzooble",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/contortionistzooble/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-20585e9b-3c07-424b-8bcf-160bd202cfd9.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 1312024,
+      "sha256": "049c3321b85af39607750a96c44e59d51fcf5b36d6026797dea25f273e9e1d7f",
+      "gitSha1": "f3036841b6e384710e8dab775ed5ed24c87fb869",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        18,
+        63,
+        1215,
+        1214
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "contortionistzooble",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/contortionistzooble/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-5e96fd68-2634-4138-9885-b969af2e1554.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 1269907,
+      "sha256": "b10ef7764390e499d60a0c32f1284e08a6cd43147a72d595f4f661bcee82ac84",
+      "gitSha1": "11619f4648961c457cd79d8daf5df04581f18935",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        19,
+        65,
+        1217,
+        1215
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/hotdogabel/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-4e9ce1cd-4165-4880-9b1f-d21f7f616bb0.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 868289,
+      "sha256": "d7c0b13f9bdea51206b600e64c08112191de3fe460f58bc219b455a8d84ab205",
+      "gitSha1": "d7c2df06d9f0fa2d2ee3fa1579a27546fb250bc5",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        273,
+        84,
+        941,
+        1194
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/hotdogabel/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-55c39e89-0bcd-4875-af93-12e888e4f5a7.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 871632,
+      "sha256": "bd25d79ed10cfe2674e4072c8c8e2005d821f8406c855c66b6f0443e720390b5",
+      "gitSha1": "c28e74fef90854e9dbc6279e8ca6a4b8869324f8",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        270,
+        83,
+        943,
+        1198
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "cafejax",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/cafejax/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-a48591c4-295c-44db-a90e-f6a97dd84f88.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 1566181,
+      "sha256": "399520cbd1dfb461682f0333b60afbb7a4c94c5eabb95ccfb5b59af00de65ac7",
+      "gitSha1": "d5422004109e48c818451a8e17080267cef3a669",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBoundsAlphaAbove12": [
+        88,
+        23,
+        936,
+        1533
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "cafejax",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/cafejax/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-0fca1181-52f1-48db-9bd5-6dab28a8b6ac.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 992078,
+      "sha256": "5a76b310aec47ac24aeea1692134deabd4f79b22b1c0f519d9e7272335d80791",
+      "gitSha1": "cdb085e5babe17427a15254f99477993141309fe",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        66,
+        10,
+        1158,
+        1254
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "cafecaine",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/cafecaine/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-b31a6357-d93a-4006-b92b-5184364ab2ba.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 1079993,
+      "sha256": "5cdb20466d705131ba74dda2d3df4bd692fc97887da88fc19eff5c2c4b9fc59c",
+      "gitSha1": "4179272a9f2159b0114ec42a21eec0acffdd52ee",
+      "width": 1172,
+      "height": 1342,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        93,
+        59,
+        1109,
+        1282
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "cafecaine",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/cafecaine/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-11734ae5-8c64-47d7-a132-ce9fcf3863a7.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 926119,
+      "sha256": "22b15aea61f1cbcf282cdf46fe8fc108154f0095acbddc78c2ecc27af431e8e3",
+      "gitSha1": "af65d49967712b5ca7f226c4b93e4c4079ed428b",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        194,
+        50,
+        1102,
+        1149
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "ribbitsuitjax",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/ribbitsuitjax/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-4663b40e-3e96-409c-841e-0ecc2e79e42f.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/root-official/review.json",
+      "bytes": 1836532,
+      "sha256": "c86f4a62c23e715a8c3d7b51e5cf1c5828521840f0a3d89ce7e423ce70d3d973",
+      "gitSha1": "b01fd2f7364908a7a7582adfa7e8f437473446d8",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBoundsAlphaAbove12": [
+        66,
+        132,
+        958,
+        1440
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "cocktailzooble",
+      "slot": "stance",
+      "path": "assets/encore/base-costumes/cocktailzooble/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-961254a3-4bb7-484d-a6ac-be36c089cb15.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/root-official/review.json",
+      "bytes": 1583483,
+      "sha256": "ff5313afc976af86e1ab76f08aebad7d8483ae4dd4742802b7f05618c96f1331",
+      "gitSha1": "9092afd57f21dd367108b664147f9f37aab44039",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBoundsAlphaAbove12": [
+        31,
+        105,
+        993,
+        1457
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "ribbitsuitjax",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/ribbitsuitjax/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-6991384d-07df-4644-8145-f0b1f91091cd.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/root-official/review.json",
+      "bytes": 1275402,
+      "sha256": "51fcd4e1336e4d3a99e7ba24a7c31202339b4f57e142a440d81f7c640680b120",
+      "gitSha1": "b034d8c84e6a7b788e1196e55c245fa4997379fb",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        164,
+        52,
+        1088,
+        1207
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "cocktailzooble",
+      "slot": "selection",
+      "path": "assets/encore/base-costumes/cocktailzooble/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-255f5cc1-8aef-403e-90ec-2bb0fa8608bc.png",
+      "kind": "official-reference-adaptation",
+      "portraitLowerCropIntentional": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/root-official/review.json",
+      "bytes": 1146927,
+      "sha256": "d8bb9f76fd17c975605d484d14bc2684948aa15dee15a93a5c69893ec39f3b4f",
+      "gitSha1": "b2f479c113d21ed562336c4e815976dbc71b76d9",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        54,
+        25,
+        1218,
+        1234
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-07b5a82b-b125-42aa-8f06-1797db00fdec.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/knightsofguinevere/hommage/selection.json",
+      "bytes": 683093,
+      "sha256": "a7fce57acd0152b4aa0d1e0b280530bbc74791e168189836cf2fbeb1cae66e33",
+      "gitSha1": "e9b48cd429e8c407b14af495065b467ef17bddea",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        336,
+        25,
+        980,
+        1220
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-43018f19-b419-453f-ada7-4b9f4f68a86d.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/knightsofguinevere/hommage/stance.json",
+      "bytes": 784146,
+      "sha256": "b6376f1ebece192ca6123520d096f877cbaabf0e4b36e3899e69acf9ccbe91cc",
+      "gitSha1": "e0cc72f469c8baf0b9ae5b46ab899193a482c36c",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        211,
+        19,
+        1019,
+        1218
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-b25e1b11-5b85-4f70-8909-8b1259793f6b.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/knightsofguinevere/resident/selection.json",
+      "bytes": 683406,
+      "sha256": "579dc415bb1ba8413b9b79a5ea51783ab291287c4e897578e9cb0c5dd14b68cd",
+      "gitSha1": "96cdf5319c94938e033b5baf0b72caddd7106a49",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        354,
+        31,
+        965,
+        1224
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-f6d8508f-adb7-4fbe-8daf-9da009afef96.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/knightsofguinevere/resident/stance.json",
+      "bytes": 789669,
+      "sha256": "f8d5a53457dc2705ee3d1e79e79e8510602a9ec6c951bb74220d7529133763e3",
+      "gitSha1": "23990463bfb12563230b92d0c0e1c701dcdebdb4",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        202,
+        33,
+        1019,
+        1228
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-894ea4b3-878f-4c19-9862-5a16aaf96aa2.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/knightsofguinevere/fusion/selection.json",
+      "bytes": 796521,
+      "sha256": "54dba5e300c525c27563ccf6dce703a8c3637be3ac6ebb66b5655515aaae9b34",
+      "gitSha1": "95836b9871717a8615737c1779d5b91747c2f80e",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        311,
+        43,
+        999,
+        1200
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-4d313a75-14b3-4ed7-ab98-681da9af6bfa.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/knightsofguinevere/fusion/stance.json",
+      "bytes": 906557,
+      "sha256": "5a7f5d5ad70616fe88b8d5210b67ac9b06a490d3cc613c48a656a594a5fe0763",
+      "gitSha1": "fb8973200a9f22eacf147fb4c5d9e8ecbb30febf",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        155,
+        70,
+        1043,
+        1183
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-61f7b5fb-2cee-4b01-8064-6b822df34501.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gaslightdistrict/hommage/selection.json",
+      "bytes": 604611,
+      "sha256": "e77915690564a96fabef85ecf7e25abca28c121e72c5c6a4d008e984f54224af",
+      "gitSha1": "3b170f297353067ba3436dbddaa6a227436f13bc",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        353,
+        40,
+        965,
+        1215
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-e7bb6bec-4c66-4aaa-8ca3-2e4ab4aeeb7f.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gaslightdistrict/hommage/stance.json",
+      "bytes": 668043,
+      "sha256": "66617518058f3156e41dd8f903da15e6c1f8eca47d5933bd65335f669b324046",
+      "gitSha1": "0ef8f2bde091424a120e1bbfd75712d795d5ec4e",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        243,
+        47,
+        1008,
+        1210
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-24894a74-f223-4b53-b454-76974acf1723.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gaslightdistrict/resident/selection.json",
+      "bytes": 754262,
+      "sha256": "8f926ebc01cf560df105e155b4d2a520ea73e63f9aad4a41d948ac140a817902",
+      "gitSha1": "adc3037dcc1b4f901bf8af2c9932c538014cabd5",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        336,
+        24,
+        961,
+        1226
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-7dd90654-3dff-4d05-b5f4-1be38ce1f061.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gaslightdistrict/resident/stance.json",
+      "bytes": 850428,
+      "sha256": "8a78162e34580917c8f73017ffbb127f8764c073555ca3fced1e27a8db71f716",
+      "gitSha1": "c9c4caf363915c1c8e8d3430765957c954b40409",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        207,
+        34,
+        1011,
+        1229
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-ff8f083e-a0f6-4ce0-9abb-ef53b4453e6b.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gaslightdistrict/fusion/selection.json",
+      "bytes": 950065,
+      "sha256": "39a5be66e97bf085fa1f85a8c8674d0d013155e48a1504c194836911cbdd386a",
+      "gitSha1": "d9f63578c96f5c76ab455946287678227f03dafe",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        160,
+        43,
+        1124,
+        1228
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-c13921f2-3681-4208-acce-4255a6f6f1ab.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gaslightdistrict/fusion/stance.json",
+      "bytes": 1016550,
+      "sha256": "dd89be460f5ecb16df9f1c425978f4df4d939472676fd08cd9fc3638a8ab6929",
+      "gitSha1": "96e1e7d7cff4836e87b7fb30776febfbf5698869",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        100,
+        61,
+        1137,
+        1207
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/ribbit/hommage/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-466431e4-0d03-4856-a11a-8427e3ff83f2.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gameoverse/hommage/selection.json",
+      "bytes": 652543,
+      "sha256": "c4efcadd5ace1d0f2ab7573f3a018a2d13e3d00fb06f89431223f842eb2e1052",
+      "gitSha1": "d9676cd0519afc7c1bb5d76a453c9b0f21784196",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        363,
+        31,
+        958,
+        1222
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-76587951-57ce-4892-89da-4a3945d43618.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gameoverse/hommage/stance.json",
+      "bytes": 739327,
+      "sha256": "dbb21ae1869e362c68db9bdf9636737557da4c6eefb97e905f461698c27e748d",
+      "gitSha1": "1f43e0a5c399c5ecad45017d31257d0687a12d03",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        175,
+        33,
+        1015,
+        1225
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/ribbit/resident/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-5f912133-c953-48b0-918b-1c05df9159e2.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gameoverse/resident/selection.json",
+      "bytes": 722121,
+      "sha256": "19db0b8a135b8511e6c5af3a410f911801f1bffcab74f7078d69bdabb45d25e1",
+      "gitSha1": "8e7df0f0b6e0b0f6479d49f3237b27e6bfb75959",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        289,
+        40,
+        1002,
+        1223
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-c57c8e5b-c147-4329-8b44-b2c0a2dd107d.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gameoverse/resident/stance.json",
+      "bytes": 794946,
+      "sha256": "818ca927d546defab35ecf16300c5047c00630567fc3210fef6301711e4df700",
+      "gitSha1": "68961d48ded852f850b98daf433186eda874de03",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        181,
+        52,
+        1037,
+        1216
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/ribbit/fusion/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-e687b174-885f-48fa-a07c-a32209fa97b4.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gameoverse/fusion/selection.json",
+      "bytes": 690800,
+      "sha256": "3b09dd7977cdabaebf9c72740f3857b09d4edb3d1c6ff1446ae54958c1428bb8",
+      "gitSha1": "6e68fb7122b9a82c933eef57fba92609401cdc45",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        341,
+        49,
+        1037,
+        1218
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-6b1973de-c51e-4464-a3a3-8ebeed07c904.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/gameoverse/fusion/stance.json",
+      "bytes": 790077,
+      "sha256": "2025c0a1cbe76d1bb0fc22c3dbcc0599371408797665949a907429e6ca870db7",
+      "gitSha1": "ae37e0ee5fab7bfa26551ea86c20e95db9e4f102",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        178,
+        63,
+        1085,
+        1196
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/hommage/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-ef9fcc1c-2ac3-4522-b4e8-cb6ed26b6e3c.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/lackadaisy/hommage/selection.json",
+      "bytes": 700377,
+      "sha256": "f8c2187c0b931eb4c96791cdcce8d02d082ab994664648f17a47c576df150511",
+      "gitSha1": "b32eb11f547fa003f8ea966ce2db6a77f2664971",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        366,
+        11,
+        982,
+        1237
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-1bc472bf-da61-4302-985c-0bc0f9f91157.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/lackadaisy/hommage/stance.json",
+      "bytes": 791420,
+      "sha256": "5a8c0b84520d6b4e7b4a919eea51f63bcfdacbe5dc911c37f43faa544946e065",
+      "gitSha1": "43995379a41e1e211dc6ca9129c85415339e1497",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        202,
+        9,
+        1020,
+        1241
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/resident/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-548115aa-7b03-49d4-add1-87a3b5a23605.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/lackadaisy/resident/selection.json",
+      "bytes": 724367,
+      "sha256": "93a8a398e63e4b1893fe065fe04b1d4589e631439d2f8a671f2061285c828341",
+      "gitSha1": "ffa4fc76768fa6ff9576053ecf435e93aaaded6a",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        364,
+        23,
+        1026,
+        1222
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-20c90aa7-9f7a-466e-a215-1c48245b6aa7.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/lackadaisy/resident/stance.json",
+      "bytes": 800346,
+      "sha256": "ee784df7c15e7581620d5043ecd3a0726d6dff43c455fa18379c78688df81e67",
+      "gitSha1": "6151755d3273231c47f4db9a93c593592fc3630d",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        198,
+        32,
+        1037,
+        1235
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/fusion/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-48d9dba5-2b8e-41b2-ac6f-979ba2407043.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/lackadaisy/fusion/selection.json",
+      "bytes": 685322,
+      "sha256": "270ce93ddd2ef106f1de75a647f8f42231d735ca72d28e51ae28ec02b35d7998",
+      "gitSha1": "b5342966effe8fe3226e84aacf35c6bd178c9151",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        263,
+        50,
+        987,
+        1203
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-c819edbd-63b3-4c89-8668-e53ffb12c63f.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/lackadaisy/fusion/stance.json",
+      "bytes": 770720,
+      "sha256": "5434f2164688c15d5233c1e39658dcf9499225a99fcde36ea443832548835d28",
+      "gitSha1": "665dfa3b6d5a416c964f3fa03f6de329fb446c4c",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        177,
+        66,
+        1059,
+        1199
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-smg4-ribbit-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/ribbit/hommage/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-810e3bc7-bb72-4cfe-9036-39ebc0866794.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/smg4/hommage/selection.json",
+      "bytes": 572461,
+      "sha256": "001bd73c5685f9768981da76586f17f47465aa84888bcba07f3f421c6ab35faf",
+      "gitSha1": "ea59bdfce6a0b56761357585aab7796fe27eaf0f",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        384,
+        30,
+        934,
+        1224
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-smg4-ribbit-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/ribbit/hommage/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-0f39943c-6695-43e8-b152-a68827272596.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/smg4/hommage/stance.json",
+      "bytes": 688359,
+      "sha256": "2581b8ca8e4c3a07079d53615d13878ccd965aee2be32ff4e83817874d8c69fd",
+      "gitSha1": "d52a9ff7dc47ab4fe5aa0ab6ac8f702c08e36ee3",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        220,
+        35,
+        1020,
+        1230
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-smg4-ribbit-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/ribbit/resident/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-3c930657-eea5-4f62-a774-e92fcfc5eac9.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/smg4/resident/selection.json",
+      "bytes": 686417,
+      "sha256": "ea0a00587d30ba842f612e8be82a17e2a0ebfb818e6d02a51250079ba202c702",
+      "gitSha1": "4fd67ef7cd6bb6ed16f8b9168a1bff57a5ae2799",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        364,
+        37,
+        965,
+        1223
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-smg4-ribbit-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/ribbit/resident/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-b3bdf4b0-4bbc-491d-b488-fed9aaf06609.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/smg4/resident/stance.json",
+      "bytes": 762210,
+      "sha256": "bee9f3f1f300332743e12002f5849de6ffabb1011845464cd2afccf650f42159",
+      "gitSha1": "e95ea63864710d1d6822f73dc5c29c7b60cf6793",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        210,
+        42,
+        1003,
+        1221
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-smg4-ribbit-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/ribbit/fusion/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-5728b381-4a94-492f-af78-68e5fa178d8f.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/smg4/fusion/selection.json",
+      "bytes": 685157,
+      "sha256": "ddf3116799f0427915944dabaceb86479b739fead4e8df5c788bd82258cf252a",
+      "gitSha1": "b65a9e1b00f25379835b08070e8a31c675df697d",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        305,
+        19,
+        1045,
+        1234
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-smg4-ribbit-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/ribbit/fusion/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-4b9293f9-942a-4a11-a766-669ced42dcb6.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/smg4/fusion/stance.json",
+      "bytes": 718402,
+      "sha256": "2bcdc98cabe58de4566a6fea741ef980493563ef191f1b6899cfe7cf44f9eee1",
+      "gitSha1": "7ec747dc84dd69dfdd9e9245bfebc84babda178c",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        145,
+        34,
+        1092,
+        1229
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-2a68089d-133d-4201-9d12-f19bdc341fe6.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/ultrajumpmania/hommage/selection.json",
+      "bytes": 987072,
+      "sha256": "901e0cdaf31739b988532e254b453645f864af0e0dac35fd47d195993f9d4793",
+      "gitSha1": "a2ecd1a9364884c6eef9e12f42b4551b147ee31d",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        196,
+        56,
+        1101,
+        1210
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/hommage/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-559b40f7-fa0b-42d5-a261-bbba300dd239.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/ultrajumpmania/hommage/stance.json",
+      "bytes": 740152,
+      "sha256": "eba5b6de206de44793ba4a1b666246b081e09b582f04501574bb9a577182096c",
+      "gitSha1": "72e891297360c2592a5bdc4bfebe21c211d00aca",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        223,
+        26,
+        1000,
+        1212
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-5887ae1f-d015-4707-b853-4dab8b199af3.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/ultrajumpmania/resident/selection.json",
+      "bytes": 1033705,
+      "sha256": "1e0d350342f8c3f64dc008f5f78eb877b57a41dd8745f954b962373c9bbb9b9c",
+      "gitSha1": "37925af5eb4f138b22c674ca2f6c163e1a22d857",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        256,
+        50,
+        1057,
+        1228
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-35571e0c-b8ae-4e48-bbfa-62720fb69844.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/ultrajumpmania/resident/stance.json",
+      "bytes": 760515,
+      "sha256": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d",
+      "gitSha1": "9c517f774facf8aaf17adf56ed0d5aa3d014d8ca",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        208,
+        31,
+        1000,
+        1219
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/selection.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-b68f49d5-e3b9-4ba8-ae5f-96e34fe75c42.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/ultrajumpmania/fusion/selection.json",
+      "bytes": 1065258,
+      "sha256": "118936ca4f79272fe4f00fb4e13ea18782eba2e4e9f21a896846f0c25d248497",
+      "gitSha1": "cb62a4180ea3d62761e8f35c5ed4207a05557a9f",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        115,
+        52,
+        1154,
+        1235
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-ribbit-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png",
+      "nativePath": "/workspace/scratch/e51b531817b1/generated_images/exec-a8b6726a-1f64-4fff-8f4f-b198015cd4a4.png",
+      "kind": "original-crossover",
+      "portraitLowerCropIntentional": false,
+      "reviewPath": "docs/art-generation/base-sprites-20261124/crossovers/ultrajumpmania/fusion/stance.json",
+      "bytes": 822615,
+      "sha256": "714fb19b60bd1b561ca89490230533dfa3032c82fdce7cd86e0ac1cef7d4050b",
+      "gitSha1": "b080715cf3c440077a07132c908b8a55afb8b051",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundsAlphaAbove12": [
+        198,
+        32,
+        1020,
+        1220
+      ],
+      "nativeBytesVerified": true,
+      "baseOnly": true,
+      "presentation": "static",
+      "canonicalPixelCertification": false
+    }
+  ]
+}

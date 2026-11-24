@@ -1,0 +1,59 @@
+{
+  "series": "gaslightdistrict",
+  "style": "hommage",
+  "label": "Gaslight District · Hommage · Melancholy Hill",
+  "identity": "Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-mel-official-figure.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/gummigoo/hommage/selection.webp"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gaslight-district",
+    "https://glitchproductions.store/products/mel-animatez"
+  ],
+  "state": "stance",
+  "id": "glitch-gaslightdistrict-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gaslightdistrict:hommage:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e7bb6bec-4c66-4aaa-8ca3-2e4ab4aeeb7f.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-e7bb6bec-4c66-4aaa-8ca3-2e4ab4aeeb7f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    243,
+    47,
+    1008,
+    1210
+  ],
+  "alpha12Margins": [
+    243,
+    47,
+    246,
+    44
+  ],
+  "alphaZeroFraction": 0.8015085379099481,
+  "alphaOpaqueFraction": 0.0014327358195401509,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png",
+  "bytes": 668043,
+  "sha256": "66617518058f3156e41dd8f903da15e6c1f8eca47d5933bd65335f669b324046",
+  "sha": "0ef8f2bde091424a120e1bbfd75712d795d5ec4e",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-mel-official-figure.png": "0be012598b4234e4743c7f0188efe6dc556b5298b290157bbf182aefc99ed79e",
+    "assets/encore/crossovers/gaslightdistrict/gummigoo/hommage/selection.webp": "86ee609d1d9d27e8b7af0eaec0af4dda1a743d087786af0c93a79cf3416dbc87"
+  },
+  "auditPass": true
+}

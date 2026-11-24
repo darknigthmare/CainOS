@@ -1,0 +1,15 @@
+{
+  "schema": "encore-tracker-static-base-recovery/v1",
+  "createdAt": "2026-11-24T17:20:43.841017+00:00",
+  "status": "recovered-identical-export-and-published-locally",
+  "workbookSHA256": "b3ffd3b5b62f40e0e7cbdbcc553a706f9aacbfa0d167d46a73b3efc2fb68832f",
+  "source": "base-sprites-tracker-20261124 final export, existing primary-runtime authoring/recalculation/reimport proofs retained",
+  "recoveryNativeComparison": "recovery-native-comparison.json",
+  "cellsChecked": 91743,
+  "differences": 0,
+  "existingFinalViewsInspected": 39,
+  "reexportPerformedDuringRecovery": false,
+  "newGameTestsClaimedByRecovery": false,
+  "publication": "publication.json",
+  "gitPublicationClaimedByRecovery": false
+}

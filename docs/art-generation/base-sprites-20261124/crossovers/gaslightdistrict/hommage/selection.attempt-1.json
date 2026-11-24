@@ -1,0 +1,57 @@
+{
+  "series": "gaslightdistrict",
+  "style": "hommage",
+  "label": "Gaslight District · Hommage · Melancholy Hill",
+  "identity": "Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gaslight-district",
+    "https://glitchproductions.store/products/mel-animatez"
+  ],
+  "state": "selection",
+  "id": "glitch-gaslightdistrict-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gaslightdistrict:hommage:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-61f7b5fb-2cee-4b01-8064-6b822df34501.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-61f7b5fb-2cee-4b01-8064-6b822df34501.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    353,
+    40,
+    965,
+    1215
+  ],
+  "alpha12Margins": [
+    353,
+    40,
+    289,
+    39
+  ],
+  "alphaZeroFraction": 0.8220208888176654,
+  "alphaOpaqueFraction": 0.0010613564504272134,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/selection.png",
+  "bytes": 604611,
+  "sha256": "e77915690564a96fabef85ecf7e25abca28c121e72c5c6a4d008e984f54224af",
+  "sha": "3b170f297353067ba3436dbddaa6a227436f13bc",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png": "66617518058f3156e41dd8f903da15e6c1f8eca47d5933bd65335f669b324046"
+  },
+  "auditPass": true
+}

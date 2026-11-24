@@ -1,0 +1,55 @@
+{
+  "status": "accepted_as_baseline",
+  "reviewedAt": "2026-11-24T15:44:07.318898+00:00",
+  "workbookSHA256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+  "method": "Six PNG rendered with public Artifact APIs and visually inspected at native scale.",
+  "observations": [
+    "Eleven-sheet workbook retains its existing violet summary, striped tables and yellow notes columns.",
+    "Baseline Production rows are tall but not truncated; preserve their existing heights. New static rows may use content-based heights.",
+    "Historical QA and references footer remain legible. New delivery claims will be appended and dated separately."
+  ],
+  "views": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "file": "baseline-summary-top.png",
+      "sha256": "c5e43336437e00f543b4f6e2e7037ddf5afdf8cd8e6282a05786efd1c5344593",
+      "accepted": true
+    },
+    {
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "file": "baseline-summary-bottom.png",
+      "sha256": "3d8fd78cf3ec82edde5bd3060548669847bacc1008cb960ed71020eee1d968d2",
+      "accepted": true
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "file": "baseline-costumes-feature.png",
+      "sha256": "1b1c7e31a64d1495c2f985854445ae50ad147b319bac58ca2ca859a7c465980c",
+      "accepted": true
+    },
+    {
+      "sheet": "Production",
+      "range": "A3743:J3744",
+      "file": "baseline-production.png",
+      "sha256": "b0744fdd32a742e0b07ba762fd77e7662e78a3a107645a34c057830eca0be159",
+      "accepted": true
+    },
+    {
+      "sheet": "QA",
+      "range": "A2503:I2504",
+      "file": "baseline-qa.png",
+      "sha256": "f43b710a91b64e2279016d06cf87db020dc87ff674c76ff8f033c161169c076e",
+      "accepted": true
+    },
+    {
+      "sheet": "Références",
+      "range": "A173:E180",
+      "file": "baseline-references.png",
+      "sha256": "293b1bc8ede8cbb7c271e70c0c3449459245f5f5cf9a99a66e19d36e1b712ebb",
+      "accepted": true
+    }
+  ]
+}

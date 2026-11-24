@@ -2,6 +2,7 @@
 import { CROSSOVER_DESIGNS } from './crossover-designs.mjs';
 import { CROSSOVER_FUSIONS } from './crossover-fusions.mjs';
 import { NPC_CROSSOVER_DEFINITIONS } from './crossover-npc-additions.mjs';
+import { createBaseSpriteCostumes, publishedBaseSpriteDefinitions } from './base-sprite-content.mjs';
 
 export const CROSSOVER_SERIES = Object.freeze(Object.entries(CROSSOVER_DESIGNS).map(
   ([id, design]) => Object.freeze({ id, name: design.label })
@@ -29,6 +30,9 @@ export function crossoverStylesFor(series, fighterId) {
   const styles = new Set(legacyStylesFor(series, fighterId));
   for (const entry of NPC_CROSSOVER_DEFINITIONS) {
     if (entry.fighterId === fighterId && (!series || entry.series === series)) styles.add(entry.style);
+  }
+  for (const entry of publishedBaseSpriteDefinitions()) {
+    if (entry.crossover && entry.fighterId === fighterId && (!series || entry.crossover.series === series)) styles.add(entry.crossover.style);
   }
   return Object.keys(CROSSOVER_STYLES).filter(style => styles.has(style));
 }
@@ -71,7 +75,8 @@ export function createNpcCrossoverCostumes(fighters) {
 }
 
 export function createCrossoverCostumes(fighters) {
-  return [...createLegacyCrossoverCostumes(fighters), ...createNpcCrossoverCostumes(fighters)];
+  return [...createLegacyCrossoverCostumes(fighters), ...createNpcCrossoverCostumes(fighters),
+    ...createBaseSpriteCostumes(fighters).filter(costume => costume.crossover)];
 }
 
 export function matchesCostumeFilter(costume, series = '', style = '') {

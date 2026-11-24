@@ -1,0 +1,61 @@
+{
+  "series": "gaslightdistrict",
+  "style": "resident",
+  "label": "Gaslight District · Résident · Gardien des écluses",
+  "identity": "Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/gummigoo/resident/stance.webp"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gaslight-district"
+  ],
+  "state": "stance",
+  "id": "glitch-gaslightdistrict-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gaslightdistrict:resident:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-7dd90654-3dff-4d05-b5f4-1be38ce1f061.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-7dd90654-3dff-4d05-b5f4-1be38ce1f061.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    207,
+    34,
+    1011,
+    1229
+  ],
+  "alpha12Margins": [
+    207,
+    34,
+    243,
+    25
+  ],
+  "alphaZeroFraction": 0.7532330354667297,
+  "alphaOpaqueFraction": 0.0008413268926993429,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png",
+  "bytes": 850428,
+  "sha256": "8a78162e34580917c8f73017ffbb127f8764c073555ca3fced1e27a8db71f716",
+  "sha": "c9c4caf363915c1c8e8d3430765957c954b40409",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/gaslightdistrict/gummigoo/resident/stance.webp": "d3d5fcc64d43ae0add63170430644f719a699afed2d3246551a81f2f64ca285f"
+  },
+  "auditPass": true,
+  "nativeFacing": "right",
+  "visualReviewNotes": "All three complete stances inspected. Brown Mel-inspired wraps, weathered lock-keeper coat and an organic lantern-bellied fin-tailed fusion remain distinct. Frog eye and cheek identity retained, no cut limbs or haze. Facing right.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

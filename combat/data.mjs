@@ -2,6 +2,7 @@ import { CROSSOVER_STAGES } from './crossover-stages.mjs';
 import { createLegacyCrossoverCostumes, createNpcCrossoverCostumes } from './crossovers.mjs';
 import { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { orderCostumeExtensions } from './costume-order.mjs';
+import { createBaseSpriteCostumes } from './base-sprite-content.mjs';
 export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
@@ -423,10 +424,12 @@ const archiveVariants = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && en
 export const VARIANTS = [...archiveVariants.filter(entry => entry.id !== ABSTRACTION_CALM_ID), ...archiveVariants.filter(entry => entry.id === ABSTRACTION_CALM_ID)];
 const LEGACY_CROSSOVER_COSTUMES = createLegacyCrossoverCostumes(FIGHTERS);
 const NPC_CROSSOVER_COSTUMES = createNpcCrossoverCostumes(FIGHTERS);
-export const CROSSOVER_COSTUMES = [...LEGACY_CROSSOVER_COSTUMES, ...NPC_CROSSOVER_COSTUMES];
+export const BASE_SPRITE_COSTUMES = createBaseSpriteCostumes(FIGHTERS);
+export const CROSSOVER_COSTUMES = [...LEGACY_CROSSOVER_COSTUMES, ...NPC_CROSSOVER_COSTUMES, ...BASE_SPRITE_COSTUMES.filter(costume => costume.crossover)];
 // Circus and NPC additions share an explicit append order across publications.
 export const COSTUMES = [...VARIANTS.filter(entry => entry.id !== ABSTRACTION_CALM_ID), ...LEGACY_CROSSOVER_COSTUMES,
-  ...orderCostumeExtensions([...COSTUME_ADDITIONS, ...NPC_CROSSOVER_COSTUMES]), ...VARIANTS.filter(entry => entry.id === ABSTRACTION_CALM_ID)];
+  ...orderCostumeExtensions([...COSTUME_ADDITIONS, ...NPC_CROSSOVER_COSTUMES]), ...VARIANTS.filter(entry => entry.id === ABSTRACTION_CALM_ID),
+  ...BASE_SPRITE_COSTUMES];
 
 export function equipCostume(fighter, id) {
   const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);

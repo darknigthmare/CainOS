@@ -1,0 +1,230 @@
+{
+  "schema": "encore-qa-summary/v1",
+  "recordedAt": "2026-11-24T16:06:07.726657+00:00",
+  "pass": true,
+  "testConcurrency": 1,
+  "testResults": {
+    "tests": 467,
+    "suites": 0,
+    "pass": 467,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "app.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.051
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "episodes.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.051
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.09
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-game-contract.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.106
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-gamedev-guides.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.052
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-combat-assets.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.136
+    },
+    {
+      "command": [
+        "node",
+        "scripts/build-combat-offline.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.508
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/app.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.04
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/input.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.045
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/render.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.166
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/offline.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.092
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/combat-abstractions.test.mjs",
+        "tests/combat-art-tracker-formats.test.mjs",
+        "tests/combat-assets.test.mjs",
+        "tests/combat-audio-ambiences.test.mjs",
+        "tests/combat-audio-cues.test.mjs",
+        "tests/combat-audio.test.mjs",
+        "tests/combat-barnoir.test.mjs",
+        "tests/combat-base-sprites.test.mjs",
+        "tests/combat-bindings.test.mjs",
+        "tests/combat-build-output.test.mjs",
+        "tests/combat-catalog.test.mjs",
+        "tests/combat-costume-additions.test.mjs",
+        "tests/combat-costume-order.test.mjs",
+        "tests/combat-crossovers.test.mjs",
+        "tests/combat-engine.test.mjs",
+        "tests/combat-fidelity.test.mjs",
+        "tests/combat-finisher-gallery.test.mjs",
+        "tests/combat-finishers-render.test.mjs",
+        "tests/combat-finishers.test.mjs",
+        "tests/combat-illustration-formats.test.mjs",
+        "tests/combat-input.test.mjs",
+        "tests/combat-metarunner.test.mjs",
+        "tests/combat-offline.test.mjs",
+        "tests/combat-program-compatibility.test.mjs",
+        "tests/combat-progression.test.mjs",
+        "tests/combat-projectile-art.test.mjs",
+        "tests/combat-readability.test.mjs",
+        "tests/combat-release-evidence.test.mjs",
+        "tests/combat-render-matte.test.mjs",
+        "tests/combat-render-poses.test.mjs",
+        "tests/combat-render-sequences.test.mjs",
+        "tests/combat-render.test.mjs",
+        "tests/combat-roster-completeness.test.mjs",
+        "tests/combat-rules.test.mjs",
+        "tests/combat-session-backup.test.mjs",
+        "tests/combat-session.test.mjs",
+        "tests/combat-softballfield.test.mjs",
+        "tests/combat-stage-scenery.test.mjs",
+        "tests/combat-story-presentation.test.mjs",
+        "tests/combat-training.test.mjs",
+        "tests/combat-undermap.test.mjs",
+        "tests/combat-workbook-publication.test.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 22.984
+    }
+  ],
+  "combatSourceHashes": {
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/abstractions-narrative.mjs": "8a7c4ba6a8a5ba05789ae9f7c5aa7bddbdc6dcab66c43eca920a9081e6a18018",
+    "combat/app.mjs": "15877928f8efa1bc97f28779a21aaea29a7412e6f5266b588cf7999a2cd7a724",
+    "combat/audio-ambiences.mjs": "cb822a6e2fbe4f6c359c0f986647a924680e8b47ef661accc0ff44908157c30b",
+    "combat/audio.mjs": "35edb1c4486adf3324ee182e60325d5b838e3b673c722eb9fd519cb76c597c47",
+    "combat/base-sprite-content.mjs": "21b91894350052bf8bb3e11d62c562fc7c765381e22e54f425fa8b180543aa8b",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/catalog-history.mjs": "dc1a40f1d3d3d3bb07485b2530db5d5949184f7fc6d482f46ac90cc14436fc54",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-fidelity.mjs": "4321b91147455c55e8e07ec86d8b5434144dd69de112b5e98354b27f5676c25a",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "c141fa3cc90a18996582c593b1eb6f824412c4a583fdaa95839819b5f74dc1d1",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/crossover-designs.mjs": "10823e3ae1857472b3ccecdfff9018026d1e73c356fc13496e9d3096fb194935",
+    "combat/crossover-fusions.mjs": "2af5a8490395331a92b95f567c155b7237e7355b5cac03a0c45a8d2e1b19241b",
+    "combat/crossover-npc-additions.mjs": "f56896170b3da27f4479797f1314e339d2918dbcd76cc3850c465369c356eba5",
+    "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
+    "combat/crossover-sunset-recovery-20261124.mjs": "fb2e7d6a5c2cb7cdf7f05416b5e2a6ed30276c996d2dee82c94151eef33d876c",
+    "combat/crossover-visits.mjs": "fc173219e61473341930bad12e52aefea45b69acfb7f029a03296b4ca8a0efbc",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/finisher-catalog.mjs": "f741daefc7acb7e63a8aae481f9a1ceb378a2cc31be08f2328db4470352d9b18",
+    "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+    "combat/finishers.mjs": "cf41cd5f1137ea8b1b04629980c6985b5b74c9f43e75ebd064a1f1ef37857d38",
+    "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
+    "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+    "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+    "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/index.html": "da82a06a72d3bbea1b0d743b939c747b1545d1a9d2234b06d2e8e2203ed12bd8",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+    "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+    "combat/offline-manifest.mjs": "b72d0be09ce28693b728d92518df1563ebd0b2ffb9565732fd895d780073a321",
+    "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+    "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+    "combat/projectile-art.mjs": "c1c870adf588879a08e239a2cf7c9f7dcea1fd9975c00b79aafd9ac4f85ad6cd",
+    "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+    "combat/render-finishers.mjs": "7834ffe5ec5c90d1665ac3e71a036cf24618c755d7bb956eeaeaabc74806b4a6",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-stage-motion.mjs": "22a0ecdca8bd3f5eaf1e759ac30dabd41fa117c00e0844665c89ea5f7c057d3a",
+    "combat/render-stage-scenery.mjs": "0b4edde9d16659675651b6daa114ec03b8a8cf7434c47eb09dd2645eb53ca544",
+    "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+    "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/sprite-catalog.mjs": "f1d3aabb923df18d8616363840aca370dd3472a9ad92ac51c84d49430a3251fe",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+    "combat/story-presentation.mjs": "900ad5dfefc205f868561a7624352152f2d7f51300b5197c16c677bb7692fd54",
+    "combat/style.css": "adc88414a74d24bee7a1e8b08ca31fb9e8d5270d47199dc64eb4914815a36df7",
+    "combat/sw.js": "b10302d7cacdbb4301cb0dbba59d146484cca5516633a1be2adf14497ded6a49",
+    "combat/tournament-lore.mjs": "ff18e3fdcc6a5fe46f442452d74fd1744ae135c6c76a117696470bd17c6ad21a",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+  },
+  "log": "docs/art-generation/base-sprites-20261124/qa.log"
+}

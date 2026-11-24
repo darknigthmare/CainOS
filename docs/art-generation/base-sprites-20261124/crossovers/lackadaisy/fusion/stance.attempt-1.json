@@ -1,0 +1,57 @@
+{
+  "series": "lackadaisy",
+  "style": "fusion",
+  "label": "Lackadaisy · Fusion · Chat des bayous",
+  "identity": "An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/jax/fusion/stance.webp"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/lackadaisy",
+    "https://lackadaisy.com/characters.php"
+  ],
+  "state": "stance",
+  "id": "glitch-lackadaisy-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:lackadaisy:fusion:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-c819edbd-63b3-4c89-8668-e53ffb12c63f.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-c819edbd-63b3-4c89-8668-e53ffb12c63f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    177,
+    66,
+    1059,
+    1199
+  ],
+  "alpha12Margins": [
+    177,
+    66,
+    195,
+    55
+  ],
+  "alphaZeroFraction": 0.7656386326116873,
+  "alphaOpaqueFraction": 0.0011656479170959152,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png",
+  "bytes": 770720,
+  "sha256": "5434f2164688c15d5233c1e39658dcf9499225a99fcde36ea443832548835d28",
+  "sha": "665dfa3b6d5a416c964f3fa03f6de329fb446c4c",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/lackadaisy/jax/fusion/stance.webp": "11bdfcc585e0a504a4209c0604d1869c9ab6f2894a6abb4572b793ba50f21b2c"
+  },
+  "auditPass": true
+}

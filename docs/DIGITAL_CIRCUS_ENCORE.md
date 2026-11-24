@@ -5,13 +5,14 @@ dessins individuels réunis le **19 novembre 2026**, puis complétés le
 **20 novembre 2026** et le **24 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**64 combattants, 640 techniques, 27 arènes partagées, 9 modes, 484 costumes et 184 archives**.
+**64 combattants, 640 techniques, 27 arènes partagées, 9 modes, 508 costumes et 184 archives**.
 Le catalogue contient 64 arrangements de scènes dédiées,
-les escales GLITCH, **52 costumes d’archive**, **45 variantes Circus / 495 PNG** et
-**387 costumes crossover / 3 880 fichiers**. Les quatorze propriétaires historiques
-conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les trois styles
-Murder Drones, les trois styles Meta Runner et les trois styles Sunset Paradise, soit **9/27** parmi les neuf collections. Ses six autres séries et
-les **39 autres PNJ sans crossover** restent ouverts. Aucun choix ne pointe vers
+les escales GLITCH, **52 costumes d’archive**, **51 variantes Circus / 507 PNG** et
+**405 costumes crossover / 3 916 fichiers**. Les quatorze propriétaires historiques
+conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les **27/27 bases**
+des neuf collections. Ses neuf tenues antérieures gardent leurs onze dessins ;
+ses dix-huit nouvelles tenues ont seulement un portrait et une garde statique.
+Les **39 autres PNJ sans crossover** restent ouverts. Aucun choix ne pointe vers
 un dessin absent.
 L’extension abstractions porte le roster à 64 combattants et **192 finales de spectacle** ;
 les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants d’origine.
@@ -37,7 +38,27 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Suite du 24 novembre — abstractions, projectiles et arènes originales
+## Suite du 24 novembre — sprites de base uniquement
+
+**24 apparences et 48 PNG natifs distincts** complètent les bases manquantes
+retenues dans cette passe. Les six variantes Circus sont Zooble contorsionniste,
+Abel avec son chariot à hot-dogs, Jax Café, Caine Café, Jax en combinaison de
+Ribbit et Zooble au cocktail. Leurs compositions visibles guident les silhouettes,
+couleurs, accessoires et occultations. Les dix-huit autres sont des créations
+originales pour Ribbit : trois styles dans chacun des six univers restants.
+
+Chaque nouvelle apparence possède exactement un portrait et une garde. Le moteur
+réutilise cette garde sans déformation pendant ses autres états. Aucun dessin
+d’action ni cycle animé n’est ajouté. Les 484 anciennes tenues conservent leur
+ordre et leurs données. Le paquet hors ligne contient désormais **6 130 images**.
+
+Le [bilan et la galerie](COMBAT_BASE_SPRITES_2026-11-24.md),
+l’[inventaire des 48 PNG](art-generation/base-sprites-20261124/asset-inventory.json),
+la [vérification datée](art-generation/base-sprites-20261124/verification.json)
+et le [registre courant](art-generation/base-sprites-20261124/remaining-work.md)
+décrivent les résultats de cette passe sans réécrire les contrôles historiques.
+
+## Suite précédente du 24 novembre — abstractions, projectiles et arènes originales
 
 Dix combattants reçoivent un corps de simulation distinct et dix techniques chacun :
 les abstractions du cellier et aquatique, Jax abstrait, Queenie abstraite, Ribbit

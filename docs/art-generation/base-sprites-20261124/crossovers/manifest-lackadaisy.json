@@ -1,0 +1,521 @@
+{
+  "complete": true,
+  "series": "lackadaisy",
+  "baseOnly": true,
+  "presentation": "static",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "appearances": [
+    {
+      "id": "glitch-lackadaisy-ribbit-hommage",
+      "series": "lackadaisy",
+      "style": "hommage",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/lackadaisy/ribbit/hommage/selection.png",
+        "stance": "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Lackadaisy · Hommage · Rocky Rickaby",
+      "identity": "Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php",
+        "https://lackadaisy.store/products/rocky-standee"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-resident",
+      "series": "lackadaisy",
+      "style": "resident",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/lackadaisy/ribbit/resident/selection.png",
+        "stance": "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Lackadaisy · Résident · Coursier du Little Daisy",
+      "identity": "Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-fusion",
+      "series": "lackadaisy",
+      "style": "fusion",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/lackadaisy/ribbit/fusion/selection.png",
+        "stance": "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Lackadaisy · Fusion · Chat des bayous",
+      "identity": "An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    }
+  ],
+  "records": [
+    {
+      "id": "glitch-lackadaisy-ribbit-hommage",
+      "series": "lackadaisy",
+      "style": "hommage",
+      "state": "selection",
+      "label": "Lackadaisy · Hommage · Rocky Rickaby",
+      "identity": "Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png": "5a8c0b84520d6b4e7b4a919eea51f63bcfdacbe5dc911c37f43faa544946e065"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php",
+        "https://lackadaisy.store/products/rocky-standee"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ef9fcc1c-2ac3-4522-b4e8-cb6ed26b6e3c.png",
+      "result_store_key": "ribbitBaseResult:lackadaisy:hommage:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright portrait faithful to the inspected stance: same period costume, colors, headgear, frog body, attached accessories and all visible extremities. Positive native margin; no clipping.",
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/hommage/selection.png",
+      "sha256": "f8c2187c0b931eb4c96791cdcce8d02d082ab994664648f17a47c576df150511",
+      "sha": "b32eb11f547fa003f8ea966ce2db6a77f2664971",
+      "bytes": 700377,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        366,
+        11,
+        982,
+        1237
+      ],
+      "alpha12Margins": [
+        366,
+        11,
+        272,
+        17
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.758020268156254,
+      "alpha240Fraction": 0.21645948276519922,
+      "accepted": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-hommage",
+      "series": "lackadaisy",
+      "style": "hommage",
+      "state": "stance",
+      "label": "Lackadaisy · Hommage · Rocky Rickaby",
+      "identity": "Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/jax/hommage/selection.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/lackadaisy-rocky-official-standee.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/lackadaisy/jax/hommage/selection.webp": "c44b7998a5be50171b90ee87b3698a48cde8e6b656f7dba10acb9c9166361c5d",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/lackadaisy-rocky-official-standee.png": "ca11ba42e8f888d180f5bae9c71d5dac857a7346e7e389a5e2b04b4833396fb4"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php",
+        "https://lackadaisy.store/products/rocky-standee"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-1bc472bf-da61-4302-985c-0bc0f9f91157.png",
+      "result_store_key": "ribbitBaseResult:lackadaisy:hommage:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Rocky Rickaby as shown in the official acrylic standee: a blue-teal 1920s long suit coat and matching tailored trousers, golden mustard waistcoat, pale cream shirt, broad dark teal fedora with a bright yellow hatband fitted behind the huge frog eyes. Ribbit's small bright pink bow replaces a necktie; tiny violin-shaped brass lapel pin, brown ankle gaiters above bare green three-toed webbed feet. Preserve Ribbit's smooth lime frog face and thin long limbs, four-finger green hands, wide white eyes, pink round cheeks. No biological cat ears, fur, whiskers, cat tail, human hair or human features. All clothes cleanly tailored to Ribbit. The official standee provides blue/teal and mustard costume colors; the older Jax image only supplies Encore linework and period tailoring. No large handheld violin, no lettering, no standee backdrop.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Teal suit and gold waistcoat reflect the public Rocky standee; frog remains unchanged. Narrow but positive top/bottom margins, no cut hat or toes.",
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/hommage/stance.png",
+      "sha256": "5a8c0b84520d6b4e7b4a919eea51f63bcfdacbe5dc911c37f43faa544946e065",
+      "sha": "43995379a41e1e211dc6ca9129c85415339e1497",
+      "bytes": 791420,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        202,
+        9,
+        1020,
+        1241
+      ],
+      "alpha12Margins": [
+        202,
+        9,
+        234,
+        13
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7288288322662536,
+      "alpha240Fraction": 0.2530028311317659,
+      "accepted": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-resident",
+      "series": "lackadaisy",
+      "style": "resident",
+      "state": "selection",
+      "label": "Lackadaisy · Résident · Coursier du Little Daisy",
+      "identity": "Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png": "ee784df7c15e7581620d5043ecd3a0726d6dff43c455fa18379c78688df81e67"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-548115aa-7b03-49d4-add1-87a3b5a23605.png",
+      "result_store_key": "ribbitBaseResult:lackadaisy:resident:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright portrait faithful to the inspected stance: same period costume, colors, headgear, frog body, attached accessories and all visible extremities. Positive native margin; no clipping.",
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/resident/selection.png",
+      "sha256": "93a8a398e63e4b1893fe065fe04b1d4589e631439d2f8a671f2061285c828341",
+      "sha": "ffa4fc76768fa6ff9576053ecf435e93aaaded6a",
+      "bytes": 724367,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        364,
+        23,
+        1026,
+        1222
+      ],
+      "alpha12Margins": [
+        364,
+        23,
+        228,
+        32
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7764245324053937,
+      "alpha240Fraction": 0.20797053893251324,
+      "accepted": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-resident",
+      "series": "lackadaisy",
+      "style": "resident",
+      "state": "stance",
+      "label": "Lackadaisy · Résident · Coursier du Little Daisy",
+      "identity": "Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/jax/resident/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/lackadaisy/jax/resident/stance.webp": "e893a2acf95c0621cefeb65cc0a473241f0cb84fcb27f48c243cf2190e2a8923"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-20c90aa7-9f7a-466e-a215-1c48245b6aa7.png",
+      "result_store_key": "ribbitBaseResult:lackadaisy:resident:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Period courier cap, rolled sleeves, olive waistcoat, navy cropped trousers and messenger satchel match the original design. Natural frog body and complete limbs; whole silhouette visible.",
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png",
+      "sha256": "ee784df7c15e7581620d5043ecd3a0726d6dff43c455fa18379c78688df81e67",
+      "sha": "6151755d3273231c47f4db9a93c593592fc3630d",
+      "bytes": 800346,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        198,
+        32,
+        1037,
+        1235
+      ],
+      "alpha12Margins": [
+        198,
+        32,
+        217,
+        19
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7543058385415474,
+      "alpha240Fraction": 0.22747049950525144,
+      "accepted": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-fusion",
+      "series": "lackadaisy",
+      "style": "fusion",
+      "state": "selection",
+      "label": "Lackadaisy · Fusion · Chat des bayous",
+      "identity": "An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png": "5434f2164688c15d5233c1e39658dcf9499225a99fcde36ea443832548835d28"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-48d9dba5-2b8e-41b2-ac6f-979ba2407043.png",
+      "result_store_key": "ribbitBaseResult:lackadaisy:fusion:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "New upright portrait keeps feline ears, fur, whiskers, striped attached tail, period clothing and frog eyes/webbed feet of the stance. Complete single figure; all extremities remain inside the canvas.",
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/fusion/selection.png",
+      "sha256": "270ce93ddd2ef106f1de75a647f8f42231d735ca72d28e51ae28ec02b35d7998",
+      "sha": "b5342966effe8fe3226e84aacf35c6bd178c9151",
+      "bytes": 685322,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        263,
+        50,
+        987,
+        1203
+      ],
+      "alpha12Margins": [
+        263,
+        50,
+        267,
+        51
+      ],
+      "borderAlphaMax": 0,
+      "alphaZeroFraction": 0.7934602891162952,
+      "alpha240Fraction": 0.18852526778741838,
+      "accepted": true
+    },
+    {
+      "id": "glitch-lackadaisy-ribbit-fusion",
+      "series": "lackadaisy",
+      "style": "fusion",
+      "state": "stance",
+      "label": "Lackadaisy · Fusion · Chat des bayous",
+      "identity": "An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/jax/fusion/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/lackadaisy/jax/fusion/stance.webp": "11bdfcc585e0a504a4209c0604d1869c9ab6f2894a6abb4572b793ba50f21b2c"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/lackadaisy",
+        "https://lackadaisy.com/characters.php"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-c819edbd-63b3-4c89-8668-e53ffb12c63f.png",
+      "result_store_key": "ribbitBaseResult:lackadaisy:fusion:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Feline ears, fur, whiskers and striped tail form an anatomical redesign; Ribbit eyes, cheeks and webbed toes retained.",
+      "file": "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png",
+      "sha256": "5434f2164688c15d5233c1e39658dcf9499225a99fcde36ea443832548835d28",
+      "sha": "665dfa3b6d5a416c964f3fa03f6de329fb446c4c",
+      "bytes": 770720,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        177,
+        66,
+        1059,
+        1199
+      ],
+      "alpha12Margins": [
+        177,
+        66,
+        195,
+        55
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7656386326116873,
+      "alpha240Fraction": 0.20964428978783045,
+      "accepted": true
+    }
+  ]
+}

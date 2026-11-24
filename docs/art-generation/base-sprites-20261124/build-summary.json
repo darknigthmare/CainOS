@@ -1,0 +1,37 @@
+{
+  "schema": "encore-sequential-build-verification/v1",
+  "recordedAt": "2026-11-24T16:07:30.250577+00:00",
+  "bothBuildsPassed": true,
+  "sourceManifestSha256": "b72d0be09ce28693b728d92518df1563ebd0b2ffb9565732fd895d780073a321",
+  "builds": [
+    {
+      "kind": "standalone",
+      "buildCommand": [
+        "npm",
+        "run",
+        "build:combat"
+      ],
+      "buildExitCode": 0,
+      "verificationExitCode": 0,
+      "seconds": 17.204,
+      "report": "docs/art-generation/base-sprites-20261124/standalone-build-verification.json",
+      "reportSha256": "9362099625f3aff1e37f0dabd68031b14404d56d75afcc25f65e96f49c3d70d4",
+      "log": "docs/art-generation/base-sprites-20261124/standalone-build.log"
+    },
+    {
+      "kind": "cainos",
+      "buildCommand": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "buildExitCode": 0,
+      "verificationExitCode": 0,
+      "seconds": 18.823,
+      "report": "docs/art-generation/base-sprites-20261124/cainos-build-verification.json",
+      "reportSha256": "321033e4d2aa4dee165e021cae8e3ef2fcaca3712e8bf4fe8be2a67722e4c23a",
+      "log": "docs/art-generation/base-sprites-20261124/cainos-build.log"
+    }
+  ],
+  "method": "Normal build commands into a temporary directory on a disk volume. Each output was verified by SHA-256 before deletion; the two full copies were not kept simultaneously."
+}

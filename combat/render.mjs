@@ -859,13 +859,19 @@ export class CombatRenderer {
     const ctx = this.ctx, f = actor.f || actor.def;
     if (!f) return;
     const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
-    const stance = (pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
+    const baseOnly = f.sprite?.baseOnly === true;
+    if (baseOnly) {
+      // Two authored bases are a deliberate static presentation. Keep the
+      // actual actor position and facing, without inventing a pose animation.
+      pose.lean = 0; pose.lift = 0; pose.xOffset = 0; pose.alpha = 1;
+    }
+    const stance = (baseOnly || pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
     const action = illustratedAction(pose, actor.attack);
     const actionArt = actionIllustration(f, action);
     const artwork = stance || actionArt || (f.sprite?.crossoverDirectory && standingIllustration(f));
     // Shift weight around the foot support of the single standing drawing.
     // Use simulation frames so pausing a match also holds its pose.
-    if (stance && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
+    if (stance && !baseOnly && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
     if (actionArt && action === 'walk' && !reducedMotion) {
       const step = Math.sin(tick * TAU / 24);
       pose.lean += 0.018 * step;

@@ -1,0 +1,56 @@
+{
+  "series": "knightsofguinevere",
+  "style": "hommage",
+  "label": "Knights of Guinevere · Hommage · Guinevere",
+  "identity": "Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/knights-of-guinevere"
+  ],
+  "state": "selection",
+  "id": "glitch-knightsofguinevere-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:knightsofguinevere:hommage:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-07b5a82b-b125-42aa-8f06-1797db00fdec.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-07b5a82b-b125-42aa-8f06-1797db00fdec.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    336,
+    25,
+    980,
+    1220
+  ],
+  "alpha12Margins": [
+    336,
+    25,
+    274,
+    34
+  ],
+  "alphaZeroFraction": 0.7845821600543333,
+  "alphaOpaqueFraction": 0.000806351095950693,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/selection.png",
+  "bytes": 683093,
+  "sha256": "a7fce57acd0152b4aa0d1e0b280530bbc74791e168189836cf2fbeb1cae66e33",
+  "sha": "e9b48cd429e8c407b14af495065b467ef17bddea",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png": "b6376f1ebece192ca6123520d096f877cbaabf0e4b36e3899e69acf9ccbe91cc"
+  },
+  "auditPass": true
+}

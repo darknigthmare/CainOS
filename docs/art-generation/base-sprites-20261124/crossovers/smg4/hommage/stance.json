@@ -1,0 +1,63 @@
+{
+  "series": "smg4",
+  "style": "hommage",
+  "label": "SMG4 · Hommage · SMG4",
+  "identity": "Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/jax/hommage/selection.webp",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/smg4-official-2023-model.jpg"
+  ],
+  "sourceUrls": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2949486881"
+  ],
+  "state": "stance",
+  "id": "glitch-smg4-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:smg4:hommage:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-0f39943c-6695-43e8-b152-a68827272596.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-0f39943c-6695-43e8-b152-a68827272596.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    220,
+    35,
+    1020,
+    1230
+  ],
+  "alpha12Margins": [
+    220,
+    35,
+    234,
+    24
+  ],
+  "alphaZeroFraction": 0.77541087022326,
+  "alphaOpaqueFraction": 0.0009774145382304537,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/smg4/ribbit/hommage/stance.png",
+  "bytes": 688359,
+  "sha256": "2581b8ca8e4c3a07079d53615d13878ccd965aee2be32ff4e83817874d8c69fd",
+  "sha": "d52a9ff7dc47ab4fe5aa0ab6ac8f702c08e36ee3",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/smg4/jax/hommage/selection.webp": "1003d3991edf17aa1b8205566700ae6f2f92214fea5ffc6f892e9d8add2f054a",
+    "docs/art-generation/base-sprites-20261124/crossovers/references/smg4-official-2023-model.jpg": "e321a50951a6b702ec31b5257196cb789c907d145c9169eed47b938aab136d52"
+  },
+  "auditPass": true,
+  "nativeFacing": "right",
+  "visualReviewNotes": "Blue cap, shirt and white overalls preserve frog proportions; whole body and attached camera visible.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

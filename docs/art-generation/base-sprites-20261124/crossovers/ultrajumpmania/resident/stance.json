@@ -1,0 +1,58 @@
+{
+  "series": "ultrajumpmania",
+  "style": "resident",
+  "label": "Ultra Jump Mania · Résident · Éclaireur du lagon",
+  "identity": "Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/ultrajumpmania/gummigoo/resident/stance.webp"
+  ],
+  "sourceUrls": [
+    "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+  ],
+  "state": "stance",
+  "id": "glitch-ultrajumpmania-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original lagoon scout wearing simple island survival clothing on Ribbit's normal lime frog body. Olive-green woven leaf brim hat fitted behind the eye mounds, small orange shell compass badge and two green leaves in hatband; turquoise short sleeveless wrap vest, tan rope harness and compact cream shell canteen at hip, green knee-length wrap shorts with pale curling wave pattern, one coral-red neck scarf tied under the small pink bow. Green four-fingered hands and long thin legs, bare three-toed webbed feet with simple rope ankle loops. Use the existing lagoon resident's foliage/shell/rope materials but no crocodile snout or tail, pirate coat, giant sword or magic effect. Every accessory is attached and inside frame.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-35571e0c-b8ae-4e48-bbfa-62720fb69844.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-35571e0c-b8ae-4e48-bbfa-62720fb69844.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "image_gen.imagegen",
+  "nativeFacing": "right",
+  "generatedAt": "2026-11-24",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    208,
+    31,
+    1000,
+    1219
+  ],
+  "alpha12Margins": [
+    208,
+    31,
+    254,
+    35
+  ],
+  "alphaZeroFraction": 0.7739590566964024,
+  "alphaOpaqueFraction": 0.0011503857512419587,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+  "bytes": 760515,
+  "sha256": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d",
+  "sha": "9c517f774facf8aaf17adf56ed0d5aa3d014d8ca",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/ultrajumpmania/gummigoo/resident/stance.webp": "ef51bf69d609647ac48576e4c29cdc270a288efcc09b30ad9c4d27b728dbe1fa"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Whole figure inspected, right-facing three-quarter guard, two wedge-pupil eyes and pink bow/cheek identity intact; all hands, three-toed feet and attached accessories visible. Distinct clothing versus coconut/leaf anatomical fusion. No action image or animation.",
+  "framing": "full-body",
+  "fullBodyVisible": true
+}

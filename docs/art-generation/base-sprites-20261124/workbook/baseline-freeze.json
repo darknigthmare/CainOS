@@ -1,0 +1,23 @@
+{
+  "schema": "encore-static-base-tracker-baseline/v1",
+  "createdAt": "2026-11-24T15:31:04.214401+00:00",
+  "files": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "sha256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+      "bytes": 837889
+    },
+    "docs/combat-tracker-data.json": {
+      "sha256": "c2d12f402c9e2f9a0567630685eb80213bd808cdbc743bcc90180dd098ade0e5",
+      "bytes": 6515871
+    },
+    "docs/combat-workbook-verification.json": {
+      "sha256": "22acdcbd323259ad00ba62f662e8e421f2040f21afc081976a366da07512da73",
+      "bytes": 352634
+    },
+    "docs/combat-qa-evidence-0.7.0.json": {
+      "sha256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+      "bytes": 588368
+    }
+  },
+  "scope": "Installed reviewed 64-fighter, 640-move, 27-stage, 184-archive, 484-costume tracker, 90,882 native cells. Preserve all historical rows and user notes."
+}

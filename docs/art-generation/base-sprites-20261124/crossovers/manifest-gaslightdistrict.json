@@ -1,0 +1,514 @@
+{
+  "complete": true,
+  "series": "gaslightdistrict",
+  "baseOnly": true,
+  "presentation": "static",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "appearances": [
+    {
+      "id": "glitch-gaslightdistrict-ribbit-hommage",
+      "series": "gaslightdistrict",
+      "style": "hommage",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/selection.png",
+        "stance": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Gaslight District · Hommage · Melancholy Hill",
+      "identity": "Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district",
+        "https://glitchproductions.store/products/mel-animatez"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-resident",
+      "series": "gaslightdistrict",
+      "style": "resident",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/selection.png",
+        "stance": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Gaslight District · Résident · Gardien des écluses",
+      "identity": "Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-fusion",
+      "series": "gaslightdistrict",
+      "style": "fusion",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/selection.png",
+        "stance": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Gaslight District · Fusion · Têtard des brumes",
+      "identity": "Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    }
+  ],
+  "records": [
+    {
+      "id": "glitch-gaslightdistrict-ribbit-hommage",
+      "series": "gaslightdistrict",
+      "style": "hommage",
+      "state": "selection",
+      "label": "Gaslight District · Hommage · Melancholy Hill",
+      "identity": "Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png": "66617518058f3156e41dd8f903da15e6c1f8eca47d5933bd65335f669b324046"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district",
+        "https://glitchproductions.store/products/mel-animatez"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-61f7b5fb-2cee-4b01-8064-6b822df34501.png",
+      "result_store_key": "ribbitBaseResult:gaslightdistrict:hommage:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright portrait; same verified stance design, palette, clothing/accessories and frog anatomy. Full headgear, hands and feet visible with genuine alpha.",
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/selection.png",
+      "sha256": "e77915690564a96fabef85ecf7e25abca28c121e72c5c6a4d008e984f54224af",
+      "sha": "3b170f297353067ba3436dbddaa6a227436f13bc",
+      "bytes": 604611,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        353,
+        40,
+        965,
+        1215
+      ],
+      "alpha12Margins": [
+        353,
+        40,
+        289,
+        39
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.8220208888176654,
+      "alpha240Fraction": 0.16316845106822442,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-hommage",
+      "series": "gaslightdistrict",
+      "style": "hommage",
+      "state": "stance",
+      "label": "Gaslight District · Hommage · Melancholy Hill",
+      "identity": "Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-mel-official-figure.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/gummigoo/hommage/selection.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-mel-official-figure.png": "0be012598b4234e4743c7f0188efe6dc556b5298b290157bbf182aefc99ed79e",
+        "assets/encore/crossovers/gaslightdistrict/gummigoo/hommage/selection.webp": "86ee609d1d9d27e8b7af0eaec0af4dda1a743d087786af0c93a79cf3416dbc87"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district",
+        "https://glitchproductions.store/products/mel-animatez"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e7bb6bec-4c66-4aaa-8ca3-2e4ab4aeeb7f.png",
+      "result_store_key": "ribbitBaseResult:gaslightdistrict:hommage:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Melancholy Hill's visible outfit in the official figurine reference: a snug rusty-brown segmented wrap suit, cream rolled cowl collar, oversized flared brown wrist cuffs, dark-brown ankle gaiters. Fit the suit to Ribbit's very long thin green limbs and slim torso, leaving four green fingers and three webbed toes exposed. His pale belly becomes a pale inset shirt panel, pink bow tie on the cowl. A small orange fabric crest tied behind the eye mounds echoes Mel's swept orange tuft without giving Ribbit a human face or hiding either huge white eye. Preserve bright lime frog skin, both black wedge pupils, rosy cheeks and frog smile. Use the historical Gummigoo reference only for the brown worn-leather palette and Encore ink style, not its cowboy hat, long coat, snout or tail. No weapon, no stitches on skin, no glowing eyes.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "All three complete stances inspected. Brown Mel-inspired wraps, weathered lock-keeper coat and an organic lantern-bellied fin-tailed fusion remain distinct. Frog eye and cheek identity retained, no cut limbs or haze. Facing right.",
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/hommage/stance.png",
+      "sha256": "66617518058f3156e41dd8f903da15e6c1f8eca47d5933bd65335f669b324046",
+      "sha": "0ef8f2bde091424a120e1bbfd75712d795d5ec4e",
+      "bytes": 668043,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        243,
+        47,
+        1008,
+        1210
+      ],
+      "alpha12Margins": [
+        243,
+        47,
+        246,
+        44
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.8015085379099481,
+      "alpha240Fraction": 0.1819631723937944,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-resident",
+      "series": "gaslightdistrict",
+      "style": "resident",
+      "state": "selection",
+      "label": "Gaslight District · Résident · Gardien des écluses",
+      "identity": "Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png": "8a78162e34580917c8f73017ffbb127f8764c073555ca3fced1e27a8db71f716"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-24894a74-f223-4b53-b454-76974acf1723.png",
+      "result_store_key": "ribbitBaseResult:gaslightdistrict:resident:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright portrait; same verified stance design, palette, clothing/accessories and frog anatomy. Full headgear, hands and feet visible with genuine alpha.",
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/selection.png",
+      "sha256": "8f926ebc01cf560df105e155b4d2a520ea73e63f9aad4a41d948ac140a817902",
+      "sha": "adc3037dcc1b4f901bf8af2c9932c538014cabd5",
+      "bytes": 754262,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        336,
+        24,
+        961,
+        1226
+      ],
+      "alpha12Margins": [
+        336,
+        24,
+        293,
+        28
+      ],
+      "borderAlphaMax": 0,
+      "alphaZeroFraction": 0.7849783404429589,
+      "alpha240Fraction": 0.2036589770787706,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-resident",
+      "series": "gaslightdistrict",
+      "style": "resident",
+      "state": "stance",
+      "label": "Gaslight District · Résident · Gardien des écluses",
+      "identity": "Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/gummigoo/resident/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/gaslightdistrict/gummigoo/resident/stance.webp": "d3d5fcc64d43ae0add63170430644f719a699afed2d3246551a81f2f64ca285f"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-7dd90654-3dff-4d05-b5f4-1be38ce1f061.png",
+      "result_store_key": "ribbitBaseResult:gaslightdistrict:resident:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original canal lock keeper in the Gaslight District. Keep Ribbit's natural lime frog body and very long slender legs. Worn dark petrol-green knee-length dock coat with ochre edging and rolled cuffs, rust-red neck scarf with pink bow tie pinned at front, brown leather belt with a large simple brass key and small warm-yellow glass lantern fixed to hip; small battered brown brim hat fitted between the eyes, with a brass band; dark slate cropped trousers. Bare green four-finger hands and three-toed webbed feet, brown ankle straps. Lantern yellow remains inside glass with no glow, no floating effects. Modest wear on clothing, no gore. Costume based on the second reference but no crocodile head, snout, tail, spines or cowboy anatomy.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "All three complete stances inspected. Brown Mel-inspired wraps, weathered lock-keeper coat and an organic lantern-bellied fin-tailed fusion remain distinct. Frog eye and cheek identity retained, no cut limbs or haze. Facing right.",
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/resident/stance.png",
+      "sha256": "8a78162e34580917c8f73017ffbb127f8764c073555ca3fced1e27a8db71f716",
+      "sha": "c9c4caf363915c1c8e8d3430765957c954b40409",
+      "bytes": 850428,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        207,
+        34,
+        1011,
+        1229
+      ],
+      "alpha12Margins": [
+        207,
+        34,
+        243,
+        25
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7532330354667297,
+      "alpha240Fraction": 0.22547369947269216,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-fusion",
+      "series": "gaslightdistrict",
+      "style": "fusion",
+      "state": "selection",
+      "label": "Gaslight District · Fusion · Têtard des brumes",
+      "identity": "Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png": "dd89be460f5ecb16df9f1c425978f4df4d939472676fd08cd9fc3638a8ab6929"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ff8f083e-a0f6-4ce0-9abb-ef53b4453e6b.png",
+      "result_store_key": "ribbitBaseResult:gaslightdistrict:fusion:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Portrait differs naturally from stance; same fin tail, lantern-organ belly, gills, palette and limb anatomy; whole body visible.",
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/selection.png",
+      "sha256": "39a5be66e97bf085fa1f85a8c8674d0d013155e48a1504c194836911cbdd386a",
+      "sha": "d9f63578c96f5c76ab455946287678227f03dafe",
+      "bytes": 950065,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        160,
+        43,
+        1124,
+        1228
+      ],
+      "alpha12Margins": [
+        160,
+        43,
+        130,
+        26
+      ],
+      "borderAlphaMax": 0,
+      "alphaZeroFraction": 0.7222584698661254,
+      "alpha240Fraction": 0.25910769747334844,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-ribbit-fusion",
+      "series": "gaslightdistrict",
+      "style": "fusion",
+      "state": "stance",
+      "label": "Gaslight District · Fusion · Têtard des brumes",
+      "identity": "Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/gummigoo/fusion/stance.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-official-banner.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/gaslightdistrict/gummigoo/fusion/stance.webp": "bd4f2e5adc6558b775618bfd9f72e0aa298849adf2b6482250a832e617b7796f",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-official-banner.png": "0b4c726763729483beae35ba1907804d17d0ba667a2e6c57314e3b3fc090d006"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gaslight-district"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-c13921f2-3681-4208-acce-4255a6f6f1ab.png",
+      "result_store_key": "ribbitBaseResult:gaslightdistrict:fusion:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "All three complete stances inspected. Brown Mel-inspired wraps, weathered lock-keeper coat and an organic lantern-bellied fin-tailed fusion remain distinct. Frog eye and cheek identity retained, no cut limbs or haze. Facing right.",
+      "file": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png",
+      "sha256": "dd89be460f5ecb16df9f1c425978f4df4d939472676fd08cd9fc3638a8ab6929",
+      "sha": "96e1e7d7cff4836e87b7fb30776febfbf5698869",
+      "bytes": 1016550,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        100,
+        61,
+        1137,
+        1207
+      ],
+      "alpha12Margins": [
+        100,
+        61,
+        117,
+        47
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7166197355066658,
+      "alpha240Fraction": 0.2596641306034406,
+      "accepted": true
+    }
+  ]
+}

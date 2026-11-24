@@ -1,0 +1,29 @@
+{
+  "schema": "encore-native-github-blobs/v1",
+  "assets": [
+    {
+      "path": "assets/encore/base-costumes/ribbitsuitjax/stance.png",
+      "sha": "b01fd2f7364908a7a7582adfa7e8f437473446d8",
+      "sha256": "c86f4a62c23e715a8c3d7b51e5cf1c5828521840f0a3d89ce7e423ce70d3d973",
+      "bytes": 1836532
+    },
+    {
+      "path": "assets/encore/base-costumes/cocktailzooble/stance.png",
+      "sha": "9092afd57f21dd367108b664147f9f37aab44039",
+      "sha256": "ff5313afc976af86e1ab76f08aebad7d8483ae4dd4742802b7f05618c96f1331",
+      "bytes": 1583483
+    },
+    {
+      "path": "assets/encore/base-costumes/ribbitsuitjax/selection.png",
+      "sha": "b034d8c84e6a7b788e1196e55c245fa4997379fb",
+      "sha256": "51fcd4e1336e4d3a99e7ba24a7c31202339b4f57e142a440d81f7c640680b120",
+      "bytes": 1275402
+    },
+    {
+      "path": "assets/encore/base-costumes/cocktailzooble/selection.png",
+      "sha": "b2f479c113d21ed562336c4e815976dbc71b76d9",
+      "sha256": "d8bb9f76fd17c975605d484d14bc2684948aa15dee15a93a5c69893ec39f3b4f",
+      "bytes": 1146927
+    }
+  ]
+}

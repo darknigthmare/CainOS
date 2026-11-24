@@ -15,7 +15,41 @@ The playable game version is **0.7.0**. The original GLITCH wardrobe dates from 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **64 fighters, 640 techniques, 27 shared arenas, 484 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains **52 archive costumes, 45 additional illustrated Circus appearances / 495 PNGs, and 387 crossovers / 3,880 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit has nine appearances across Murder Drones, Meta Runner and Sunset Paradise out of the 27 possible across the nine collections; the other 39 still have none. Combat techniques and stories are original fan-game adaptations.
+The game combines **64 fighters, 640 techniques, 27 shared arenas, 508 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains **52 archive costumes, 51 additional illustrated Circus appearances / 507 PNGs, and 405 crossovers / 3,916 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit now has all 27 crossover bases across the nine collections: nine earlier families have eleven drawings each, and eighteen new families have only their portrait and static stance. The other 39 NPCs still have no crossover wardrobe. Combat techniques and stories are original fan-game adaptations.
+
+### Base sprites only — 24 November 2026
+
+The next pass adds **24 appearances and 48 distinct native PNGs**, exactly one
+selection portrait and one stance per appearance. Six reference-based Circus
+variants are Contortionist Zooble, Hotdog Cart Abel, Café Jax, Café Caine,
+Ribbit-Suit Jax and Cocktail Zooble. The folded body, cart and visible overlaps
+remain part of their documented composition; hidden anatomy is not invented.
+
+Ribbit gains three original styles in each of the six remaining collections:
+The Gaslight District, Knights of Guinevere, Gameoverse, Lackadaisy, SMG4 and
+Ultra Jump Mania. Its nine collections therefore all have their base artwork.
+These are original Encore designs, with separate clothing homages, residents
+and transformed fusion bodies.
+
+The new families use their own static stance throughout the existing combat
+states. They add no action drawings or animation frames. Their geometry remains
+fixed while the actor moves and turns. The existing 484-costume prefix, fighter
+kits, replays and old presentations are preserved. The current offline pack
+contains **6,130 illustrations / 3,414,702,166 bytes**.
+
+The frozen runtime passes **467 Node tests**, with no failures or skipped tests.
+Both normal builds pass byte verification: **6,196 files** for the standalone
+game and **6,200** for CainOS, each including the same 6,130 illustrations and
+64 game files. The native renderer passes **480 state/direction checks** and
+1,440 actual drawing calls. All 24 individual review sheets were visually checked.
+
+[Dated report and gallery](docs/COMBAT_BASE_SPRITES_2026-11-24.md),
+[48-file native inventory](docs/art-generation/base-sprites-20261124/asset-inventory.json),
+[verification](docs/art-generation/base-sprites-20261124/verification.json)
+and [remaining work](docs/art-generation/base-sprites-20261124/remaining-work.md)
+separate this base-only pass from the earlier action-art work. Official reference
+identity and original design remain distinct; general canonical 1:1 fidelity
+is not certified.
 
 ### Abstractions, projectiles and two original arenas — 24 November 2026
 
@@ -35,7 +69,7 @@ complete frame-by-frame animation remains separate work.
 Three original **Ribbit × Sunset Paradise** outfits add **33 further PNGs**:
 Hommage à Meggy, Résidente de Port Aurora and Fusion amphibienne. The complete
 lot therefore adds **175 runtime image paths**, including six reused portraits.
-The current offline pack contains **6,082 illustrations**.
+That abstraction checkpoint contained **6,082 illustrations**.
 
 The final source passes **461 Node tests, with zero failures or skipped tests**.
 Both normal builds pass: the standalone output has **6,147 verified files** and
@@ -357,7 +391,7 @@ start an arcade, boss, survival or tournament programme and survive a reload.
 - **192 theatrical endings**: three per fighter, selected after a real final KO.
   They present the already saved result and can be skipped or disabled.
 - **Codex gallery**: preview each fighter's endings with their compatible costumes
-  from the **484-outfit wardrobe**; pause, resume and replay without altering a
+  from the **508-outfit wardrobe**; pause, resume and replay without altering a
   profile, match or saved replay.
 - **27 procedural arena ambience layers** with an independent volume and toggle,
   plus distinct trap and KO cues. Music and ambience remain separate.

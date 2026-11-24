@@ -1,0 +1,60 @@
+{
+  "series": "smg4",
+  "style": "fusion",
+  "label": "SMG4 · Fusion · Amphibien élastique",
+  "identity": "True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/ribbit/fusion/stance.png"
+  ],
+  "sourceUrls": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379"
+  ],
+  "state": "selection",
+  "id": "glitch-smg4-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: True body redesign into an original theatrical rubber-hose cartoon amphibian for the SMG4 world. Ribbit's unmistakable lime frog face, two huge white wedge-pupil eyes, round pink cheeks and broad curved smile. Elastic one-piece lime body with a compact bean-shaped torso and long smooth hose arms, comically oversized broad four-finger hands with pale cream glove-like natural skin surfaces and green wrists; long flexible green legs ending in oversized soft three-toed frog feet, bright blue natural ankle bands. The oval cream belly incorporates a pink bow-shaped patch. A small blue stage cap sits behind eyes, a navy waist band with two gold fasteners echoes show clothing. Visible physical remodeling: enlarged hands/feet, curved bendy limbs and broad belly, coherent connected anatomy, no robot joints, no detached gloves, no motion smear, no stretch attack or spring. Use second-reference playful geometric treatment but avoid rabbit ears, red overalls, joystick antennae or purple body.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:smg4:fusion:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5728b381-4a94-492f-af78-68e5fa178d8f.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-5728b381-4a94-492f-af78-68e5fa178d8f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    305,
+    19,
+    1046,
+    1234
+  ],
+  "alpha12Margins": [
+    305,
+    19,
+    208,
+    20
+  ],
+  "alphaZeroFraction": 0.7578123211464939,
+  "alphaOpaqueFraction": 0.0011809100829498714,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/smg4/ribbit/fusion/selection.png",
+  "bytes": 685157,
+  "sha256": "ddf3116799f0427915944dabaceb86479b739fead4e8df5c788bd82258cf252a",
+  "sha": "b65a9e1b00f25379835b08070e8a31c675df697d",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/crossovers/smg4/ribbit/fusion/stance.png": "2bcdc98cabe58de4566a6fea741ef980493563ef191f1b6899cfe7cf44f9eee1"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Distinct upright welcoming portrait. Cap, clothing/accessories or elastic anatomical redesign match the validated stance. Complete single figure with visible toes and fingertips.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

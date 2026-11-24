@@ -1,0 +1,60 @@
+{
+  "series": "ultrajumpmania",
+  "style": "fusion",
+  "label": "Ultra Jump Mania · Fusion · Têtard des cocotiers",
+  "identity": "Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/ultrajumpmania/gummigoo/fusion/stance.webp",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg"
+  ],
+  "sourceUrls": [
+    "https://www.youtube.com/watch?v=HZoOzz1CrAk"
+  ],
+  "state": "stance",
+  "id": "glitch-ultrajumpmania-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Genuinely transformed tropical platform-world frog: a compact spherical coconut-brown torso with textured but clean simple coconut-husk plates, cream oval coconut-flesh belly, lime-green frog face and huge white wedge-pupil eyes, pink cheeks and friendly frog smile. Large strong green frog thighs with golden-yellow underside, shorter springy lower legs ending in three broad webbed toes; slender green arms with four leaf-tipped rounded fingers, one green leaf-shaped tadpole tail attached at the back and curving behind body, all inside frame. A small palm-leaf crest sprouts between the eyes with two yellow coconut buds, and a pink two-leaf throat frill forms Ribbit's bow motif. No separate full outfit: anatomy is coconut and foliage, not a standard frog in a leaf skirt. Short red fabric waist sash with cream zigzag pattern, no cowboy hat, crocodile snout, gun or coconut projectile. Opaque solid connected anatomy, no floating leaves or glow.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-a8b6726a-1f64-4fff-8f4f-b198015cd4a4.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-a8b6726a-1f64-4fff-8f4f-b198015cd4a4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "image_gen.imagegen",
+  "nativeFacing": "right",
+  "generatedAt": "2026-11-24",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    198,
+    32,
+    1020,
+    1220
+  ],
+  "alpha12Margins": [
+    198,
+    32,
+    234,
+    34
+  ],
+  "alphaZeroFraction": 0.7234107633880991,
+  "alphaOpaqueFraction": 0.0011656479170959152,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/ultrajumpmania/ribbit/fusion/stance.png",
+  "bytes": 822615,
+  "sha256": "714fb19b60bd1b561ca89490230533dfa3032c82fdce7cd86e0ac1cef7d4050b",
+  "sha": "b080715cf3c440077a07132c908b8a55afb8b051",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/ultrajumpmania/gummigoo/fusion/stance.webp": "efb299ceb49bbb0e8c278d149fe79b3cf46d5dc9529248761d82f6338db33686",
+    "docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg": "f6f48dbb0c682e8dff49108295982c8c67e763b75d1982d9147cc35c34115754"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Whole figure inspected, right-facing three-quarter guard, two wedge-pupil eyes and pink bow/cheek identity intact; all hands, three-toed feet and attached accessories visible. Distinct clothing versus coconut/leaf anatomical fusion. No action image or animation.",
+  "framing": "full-body",
+  "fullBodyVisible": true
+}
