@@ -1,0 +1,690 @@
+{
+  "schema": "encore-base-sprite-generation/v1",
+  "date": "2026-11-25",
+  "generator": "image_gen built-in",
+  "scope": "12 individual static base PNGs, 6 original Queenie crossover appearances, no animation or action frames",
+  "identitySource": "Official GLITCH Queenie Animatez full figure; plush images are secondary only. The full-figure eye alignment/proportions take precedence over plush distortion.",
+  "sourceScope": "These are original Encore fan-game appearances, not canonical appearances of Queenie in Murder Drones or Meta Runner. Reference identity fidelity and original adaptation are distinguished; no pixel-exact certification.",
+  "sourceUrls": [
+    "https://glitchproductions.store/products/queenie-animatez",
+    "https://glitchproductions.store/products/queenie-plush",
+    "https://www.glitchprod.com/murder-drones",
+    "https://www.glitchprod.com/meta-runner"
+  ],
+  "references": [
+    {
+      "file": "references/queenie-animatez.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Animatez_Queenie_01.png?v=1773977928&width=1600",
+      "role": "Primary full figure anatomy/identity; retail plinth excluded",
+      "sha256": "dde44262ce0fa517bda6a186c3f5f84df8c9550d156eac3c1f3a51e963cd3911",
+      "bytes": 876695
+    },
+    {
+      "file": "references/queenie-full.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/QueeniePlush_1_29c13958-7d62-4471-a396-1be87cc0f24d.png?v=1773700593&width=1200",
+      "role": "Secondary plush identity; eye placement strongly stylized, not anatomical authority",
+      "sha256": "72a96c3526fad81b8c4a32177d515a0b8ec382ff625523e5b68a7306574e22c6",
+      "bytes": 1116487
+    },
+    {
+      "file": "references/queenie-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/QueeniePlush_1.png?v=1773700593&width=1200",
+      "role": "Secondary close-up",
+      "sha256": "0962859a2c165e11575e961a42d7969a6667ac0c4f5d7cc88412b809a7ae5ac1",
+      "bytes": 227787
+    },
+    {
+      "file": "references/murder-drones.png",
+      "url": "https://static.wixstatic.com/media/84ed6a_3b3aa17317da49288e8d6c758e0216d3~mv2.png",
+      "role": "Official universe visual mood",
+      "sha256": "2ba5f19ed8278a4a26f8d8ac3e5deb2eb408713c823805b3bf4d8e4de71ed98b",
+      "bytes": 436637
+    },
+    {
+      "file": "references/meta-runner.png",
+      "url": "https://static.wixstatic.com/media/84ed6a_b2069ac00a43427ebe27c7d8084adc31~mv2.png",
+      "role": "Official universe visual mood",
+      "sha256": "bbce976351a7f0bc13fdd3da2f71df2069dd5bb48b13289c35546ba6e842cd32",
+      "bytes": 586568
+    }
+  ],
+  "appearances": [
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "fighterId": "queenie",
+      "world": "murderdrones",
+      "style": "hommage",
+      "name": "Hommage · Uzi",
+      "designDescription": "Original Queenie wardrobe homage to Uzi from Murder Drones: charcoal cropped hoodie with rich purple lining and seam piping, worn openly over a burgundy tapered royal robe; hood folded below the chess crown so the whole crown stays visible; small simple white skull emblem on chest, silver chain with purple triangular charm, white ermine collar partly visible. Wood face and white gloves remain organic, not robot. Elegant tough expression. No gun. Final reviewed correction: garment is sleeveless so no arms/sleeve connections are depicted; hands remain independent.",
+      "directory": "../assets/encore/crossovers/murderdrones/queenie/hommage",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/queenie-animatez",
+        "https://www.glitchprod.com/murder-drones"
+      ],
+      "scope": "Original Encore crossover; two static bases only. No new action drawings or animation.",
+      "sha256": {
+        "selection": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+        "stance": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866"
+      },
+      "status": "verified-base-files",
+      "visibleTraits": [
+        "Couronne en bois brun clair et boule sommitale ; yeux blancs mi-clos, iris orange et cils noirs inférieurs.",
+        "Gilet à capuche anthracite sans manches, liserés violets, petit crâne blanc et pendentif triangulaire violet.",
+        "Robe bordeaux bordée d’hermine blanche tachetée ; deux gants blancs détachés, aucune jambe ni bouche."
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "fighterId": "queenie",
+      "world": "murderdrones",
+      "style": "resident",
+      "name": "Résidente · Archiviste de Copper-9",
+      "designDescription": "Original Queenie as a Copper-9 industrial records keeper: dark olive-charcoal structured long workcoat tailored to her tapered chess body, red inner panel, pale wool collar, narrow yellow reflective markings, small square utility pouches; one round clipped inspection lens resting on side of crown without hiding eyes. A compact brass-and-black inspection lamp is attached to belt, no separate scenery. White floating gloves are lightly scuffed. Preserve wood face and body; NO robot limbs.",
+      "directory": "../assets/encore/crossovers/murderdrones/queenie/resident",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/queenie-animatez",
+        "https://www.glitchprod.com/murder-drones"
+      ],
+      "scope": "Original Encore crossover; two static bases only. No new action drawings or animation.",
+      "sha256": {
+        "selection": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+        "stance": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d"
+      },
+      "status": "verified-base-files",
+      "visibleTraits": [
+        "Identité de reine d’échecs en bois, visage sans bouche et deux gants blancs flottants.",
+        "Long manteau de travail sans manches olive/charbon à col laine pâle et bandes jaunes, sacoches carrées.",
+        "Loupe d’inspection en cuivre sur le côté de la couronne et petite lampe chaude à la ceinture."
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "fighterId": "queenie",
+      "world": "murderdrones",
+      "style": "fusion",
+      "name": "Fusion · Reine automate",
+      "designDescription": "Original complete Murder Drones / Queenie mechanical fusion: the chess queen anatomy itself becomes gunmetal and bronze industrial drone chassis; crenellated bronze head with ball finial and tiny amber diode in each crown point, curved glossy black eye panels containing expressive white eye shapes and amber iris graphics beneath bronze lids, two small black lower lash-like sensors. Long tapered body built from segmented burgundy and gunmetal armor shaped like her royal robe; white ceramic collar with black oval sensor vents recalls ermine; two independently floating white mechanical four-digit glove modules, with articulated bronze knuckles. Circular bronze chess-base foot integrated into body, no legs. One narrow segmented utility cable with small amber capsule follows close to her silhouette. Clean coherent robot redesign, no gore.",
+      "directory": "../assets/encore/crossovers/murderdrones/queenie/fusion",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/queenie-animatez",
+        "https://www.glitchprod.com/murder-drones"
+      ],
+      "scope": "Original Encore crossover; two static bases only. No new action drawings or animation.",
+      "sha256": {
+        "selection": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+        "stance": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187"
+      },
+      "status": "verified-base-files",
+      "visibleTraits": [
+        "Couronne métallique cuivrée à diodes ambre, boule sommitale et yeux sur dômes noirs.",
+        "Corps de reine effilé en blindage bordeaux ; col et bandes en céramique blanche à évents noirs et capteurs ambre.",
+        "Deux gants mécaniques blancs flottants, base d’échecs intégrée et câble utilitaire court ; aucune jambe ni bouche."
+      ]
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "fighterId": "queenie",
+      "world": "metarunner",
+      "style": "hommage",
+      "name": "Hommage · Tari",
+      "designDescription": "Original Queenie wardrobe homage to Tari from Meta Runner: cobalt-blue athletic jacket with cyan zipper trim and white side panels, collar folded beneath the whole chess crown, burgundy long tapered royal robe beneath jacket. One floating glove replaced by a white and silver segmented gaming cybernetic glove with cyan circular wrist connector; the other floating glove remains white cloth. Small duck-shaped yellow pin on jacket. Preserve tan wood face and queen crown exactly, no hair, no legs, no headphones hiding crown. Final reviewed correction: garment is sleeveless so no arms/sleeve connections are depicted; hands remain independent.",
+      "directory": "../assets/encore/crossovers/metarunner/queenie/hommage",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/queenie-animatez",
+        "https://www.glitchprod.com/meta-runner"
+      ],
+      "scope": "Original Encore crossover; two static bases only. No new action drawings or animation.",
+      "sha256": {
+        "selection": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+        "stance": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600"
+      },
+      "status": "verified-base-files",
+      "visibleTraits": [
+        "Couronne et tête en bois, yeux chauds mi-clos sans bouche.",
+        "Gilet sportif sans manches bleu cobalt/blanc à liserés cyan, petit pin canard jaune.",
+        "Un gant blanc en tissu et un gant cybernétique segmenté à anneau cyan, tous deux détachés ; robe bordeaux et bord d’hermine."
+      ]
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "fighterId": "queenie",
+      "world": "metarunner",
+      "style": "resident",
+      "name": "Résidente · Stratège de Silica City",
+      "designDescription": "Original Queenie as Silica City esports tournament strategist: long teal and white technical coat with asymmetric dark navy panels over the tapered chess body, thin magenta piping, high folded collar, short burgundy sash and small blank credential badge. A slim white-and-cyan earpiece clipped beside crown, never hiding it. Both white floating gloves present; one carries a tiny translucent cyan rectangular wrist-interface attached to cuff (no text). Tan wood face preserved. No hair or human anatomy.",
+      "directory": "../assets/encore/crossovers/metarunner/queenie/resident",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/queenie-animatez",
+        "https://www.glitchprod.com/meta-runner"
+      ],
+      "scope": "Original Encore crossover; two static bases only. No new action drawings or animation.",
+      "sha256": {
+        "selection": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+        "stance": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f"
+      },
+      "status": "verified-base-files",
+      "visibleTraits": [
+        "Couronne de reine en bois et oreillette blanche/cyan latérale, visage sans bouche.",
+        "Long manteau sans manches turquoise/blanc/bleu nuit à liserés magenta, ceinture bordeaux et badge clair.",
+        "Gants blancs détachés, petit écran cyan fixé à un poignet, silhouette d’échecs effilée sans jambes."
+      ]
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "fighterId": "queenie",
+      "world": "metarunner",
+      "style": "fusion",
+      "name": "Fusion · Avatar royal",
+      "designDescription": "Original complete Queenie and Meta Runner synthetic game-avatar fusion: retain the exact queen chess profile but turn the crown and tapered body into opaque deep cobalt shell panels with translucent cyan insets and fine copper edge circuits; central sphere finial is glowing cyan glass. Large expressive white eyes with warm orange iris graphics on separate raised dark glass panels, half lids and lower lash-shaped copper sensors. Collar and long robe silhouette become layered white/cobalt hard-surface coat panels with a burgundy central strip; two independently hovering white articulated cybernetic glove modules with cyan wrist rings. Integrated circular chess-base pedestal, no separate display stand, no human legs. Crisp polygonal cybernetic design, no floating particles or trails.",
+      "directory": "../assets/encore/crossovers/metarunner/queenie/fusion",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/queenie-animatez",
+        "https://www.glitchprod.com/meta-runner"
+      ],
+      "scope": "Original Encore crossover; two static bases only. No new action drawings or animation.",
+      "sha256": {
+        "selection": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+        "stance": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c"
+      },
+      "status": "verified-base-files",
+      "visibleTraits": [
+        "Silhouette de reine d’échecs intégralement synthétique : coque cobalt, panneaux cyan translucides, filets cuivrés, boule sommitale cyan.",
+        "Yeux blancs mi-clos avec iris orange et capteurs inférieurs cuivrés ; aucun nez ni bouche.",
+        "Deux gants cybernétiques indépendants à anneaux cyan ; longue coque évasée blanche/bleue/bordeaux et base intégrée sans jambes."
+      ]
+    }
+  ],
+  "files": [
+    {
+      "world": "murderdrones",
+      "style": "hommage",
+      "name": "Hommage · Uzi",
+      "slot": "selection",
+      "prompt": "Use case: identity-preserve. Asset type: character selection portrait, transparent. Create ONE distinct selection portrait of this exact original Queenie crossover shown in the reference. Preserve every design/material/color detail: crown and finial, eyes/irises, collar, sleeveless vest, accessories, both disconnected gloves and tapered robe. Portrait composition from crown to lower torso, no chess-base visible, fully keep crown and both gloves inside frame with 8 percent safety margin. Slight three-quarter frontal view, gaze at viewer, serene self-confident expression, both detached gloved hands resting together near upper chest rather than fighting guard; visible air gap at wrists, no arms or sleeves. Do not just crop the image; redraw the expression and hand arrangement. Refined detailed 2D cel-shaded painted game artwork, crisp edges, native true alpha, no shadow or glow background, no text, no other subjects. No human hair/mouth/legs. Original Encore fan-game crossover.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-ae0d2616-d02f-4e5e-a885-d4346444ed19.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "tool": "image_gen built-in",
+      "review": "Distinct portrait gaze/hand grouping. Whole crown and both gloves visible, intentional lower-torso crop. No humanoid limbs.",
+      "path": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+      "bytes": 1854418,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 935113,
+      "lowAlphaPixels": 9132,
+      "visibleAlphaBounds": [
+        179,
+        36,
+        799,
+        1515
+      ],
+      "margins": [
+        179,
+        36,
+        225,
+        21
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "murderdrones",
+      "style": "hommage",
+      "name": "Hommage · Uzi",
+      "design": "Original Queenie wardrobe homage to Uzi from Murder Drones: charcoal cropped hoodie with rich purple lining and seam piping, worn openly over a burgundy tapered royal robe; hood folded below the chess crown so the whole crown stays visible; small simple white skull emblem on chest, silver chain with purple triangular charm, white ermine collar partly visible. Wood face and white gloves remain organic, not robot. Elegant tough expression. No gun.",
+      "slot": "stance",
+      "prompt": "Use case: stylized-concept. Asset type: native transparent base stance sprite for a 2D fighting game. Queenie from The Amazing Digital Circus, using the provided official Animatez image as identity/anatomy reference only. Preserve the tan-brown wooden chess-queen head with crenellated crown and ball finial, half-lidded protruding white eyes with orange/red-brown irises and two short black lower lashes, NO mouth, slender tapered robe-covered chess body, two separate floating cartoon white gloves, no visible arms, no human legs or feet. Remove the separate retail display plinth entirely. Retain the long queen chess silhouette, NOT a human female. Costume/design: Original Queenie wardrobe homage to Uzi from Murder Drones: charcoal cropped hoodie with rich purple lining and seam piping, worn openly over a burgundy tapered royal robe; hood folded below the chess crown so the whole crown stays visible; small simple white skull emblem on chest, silver chain with purple triangular charm, white ermine collar partly visible. Wood face and white gloves remain organic, not robot. Elegant tough expression. No gun. Render one single character, full body, relaxed static fighting guard, facing RIGHT in readable three-quarter side view, eyes looking toward the right, floating forward glove held ready and other close to chest. Tall portrait composition 1024x1536, entire crown, gloves and base fully inside frame with generous 8 percent transparent safety margins. Refined detailed 2D cel-shaded painted game sprite, precise dark contours, rich material shading; no photography or toy seams, no vector icon look. Background completely transparent with native alpha. No aura, floor, shadow outside character, text, logos, grid, multiple views, animation frames or additional subjects. This is an original fan-game crossover; preserve Queenie identity faithfully.\nCORRECTION: Precise character anatomy correction, change only this: the two hands must float independently in empty transparent space, because Queenie has no arms. REMOVE BOTH SLEEVES and any arm connections entirely; turn the upper garment into the same design as a sleeveless hooded vest / sleeveless sports vest. Preserve all costume details on the torso, pose direction, crown, wood face, eye expression, robe, proportions, gloves (one robotic glove for blue outfit), light and style. Position the same two gloves near the chest/forward with visible transparent gaps separating every glove/wrist cuff from the vest. No elbow/arm or robe fabric connecting to hands. Retain complete full-body silhouette. Pure transparent alpha background, no aura or ground shadow. Single character only.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-7851f783-1b5f-4891-918c-a69fd255c41d.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "correction": true,
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+      "tool": "image_gen built-in",
+      "review": "Wood crown, warm half-lidded eyes and tapered queen base retained. Sleeve attachments removed so hands are detached. Full silhouette visible; no human legs or separate retail stand. Original fan-game crossover.",
+      "path": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+      "bytes": 1667309,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 1018345,
+      "lowAlphaPixels": 12814,
+      "visibleAlphaBounds": [
+        205,
+        65,
+        881,
+        1500
+      ],
+      "margins": [
+        205,
+        65,
+        143,
+        36
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "murderdrones",
+      "style": "resident",
+      "name": "Résidente · Archiviste de Copper-9",
+      "slot": "selection",
+      "prompt": "Use case: identity-preserve. Create ONE distinct transparent character selection portrait of this exact Queenie Copper-9 records-keeper design. Preserve wood crown and ball, attached brass inspection lens, half-lidded warm eyes and lower lashes, sleeveless olive/charcoal coat, pale wool collar, narrow yellow markings, utility pouches, small hanging warm lamp, and both separate floating white gloves. Compose crown to lower torso, looking calmly toward viewer, disconnected gloved hands gently brought together at chest. No sleeve or arm connections; wrist openings remain detached. Redraw the expression and hands, not merely a crop. Entire crown/lens and gloves stay within generous margin. Refined 2D cel-shaded painted sprite, native true alpha, no scenery, no glow or floor shadows, no text, no human legs or hair. Only one character.\nCORRECTION: Precise character identity correction: REMOVE the tiny curved mouth line beneath the eyes. Queenie has NO mouth. Replace only that tiny smile line with uninterrupted matching tan wood texture. Preserve absolutely everything else: eyes, eyelids, crown, lens, clothes, gloves, pose, framing, colors, lighting, alpha transparency. Do not add any other feature.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-a2808dcb-ed93-4550-b5d1-421e2c953b27.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "tool": "image_gen built-in",
+      "correction": true,
+      "review": "Distinct frontal portrait with changed floating hand grouping, no mouth, full crown and gloves, deliberate lower torso crop.",
+      "path": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+      "bytes": 1212445,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 1005950,
+      "lowAlphaPixels": 14749,
+      "visibleAlphaBounds": [
+        252,
+        30,
+        878,
+        1386
+      ],
+      "margins": [
+        252,
+        30,
+        244,
+        16
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "murderdrones",
+      "style": "resident",
+      "name": "Résidente · Archiviste de Copper-9",
+      "slot": "stance",
+      "prompt": "Use case: stylized-concept. Asset type: native transparent base stance sprite for a 2D fighting game. Queenie from The Amazing Digital Circus, using the provided official Animatez image as identity/anatomy reference only. Preserve the tan-brown wooden chess-queen head with crenellated crown and ball finial, half-lidded protruding white eyes with orange/red-brown irises and two short black lower lashes, NO mouth, slender tapered robe-covered chess body, two separate floating cartoon white gloves, no visible arms, no human legs or feet. Remove the separate retail display plinth entirely. Retain the long queen chess silhouette, NOT a human female. Costume/design: Original Queenie as a Copper-9 industrial records keeper: dark olive-charcoal structured long workcoat tailored to her tapered chess body, red inner panel, pale wool collar, narrow yellow reflective markings, small square utility pouches; one round clipped inspection lens resting on side of crown without hiding eyes. A compact brass-and-black inspection lamp is attached to belt, no separate scenery. White floating gloves are lightly scuffed. Preserve wood face and body; NO robot limbs. CRITICAL: coat is SLEEVELESS; hands FLOAT separately with visible empty space at the wrists, no arms or connected sleeves. One single character full body, relaxed static combat guard facing RIGHT in three-quarter side view. One glove forward, one near chest. Tall portrait 1024x1536, full crown, gloves and integrated robe base visible with 8 percent transparent margins. Detailed polished 2D cel-shaded painted sprite with precise contours and material shading, coherent with the Queenie reference. No photography or toy seams. Pure native-alpha transparency, no background aura, shadows, floor, text, grid, multi-view sheet, animation frames, or extra subjects. Original fan-game adaptation.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-ac6cb0f9-e609-4649-807e-904697533cd3.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+      "tool": "image_gen built-in",
+      "review": "Complete silhouette, facing right, detached gloves, costume details and wood identity clear.",
+      "path": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+      "bytes": 2021765,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 974708,
+      "lowAlphaPixels": 21641,
+      "visibleAlphaBounds": [
+        145,
+        54,
+        925,
+        1509
+      ],
+      "margins": [
+        145,
+        54,
+        99,
+        27
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "murderdrones",
+      "style": "fusion",
+      "name": "Fusion · Reine automate",
+      "slot": "selection",
+      "prompt": "Use case: identity-preserve. Create ONE distinct transparent character selection portrait of this exact original Queenie mechanical fusion. Preserve all materials/colors/design and precise crown, large eyes, segmented neck, ceramic vented collar, burgundy segmented chest, warm amber lights and separate floating mechanical white glove modules. NO MOUTH, NO NOSE, NO HUMAN HAIR; lower face is continuous uninterrupted bronze. Three-quarter frontal portrait from entire crown through mid-torso, gaze toward viewer, pose changes to one gloved palm open beside chest and one touching collar. The hands remain floating detached with visible wrist openings and no arms. Crown and gloves complete inside 8 percent transparent margins. Detailed 2D cel-shaded polished painted artwork. Native alpha, no cast shadows, scenery, aura, letters, extra character or multiple views. Do not just crop the existing stance; redraw gaze/hand arrangement without changing design.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-25a18277-6b0a-4e81-a940-9d4ea7ee177b.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "tool": "image_gen built-in",
+      "correction": false,
+      "review": "Distinct frontal portrait with changed floating hand grouping, no mouth, full crown and gloves, deliberate lower torso crop.",
+      "path": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+      "bytes": 1452362,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 905320,
+      "lowAlphaPixels": 16864,
+      "visibleAlphaBounds": [
+        59,
+        15,
+        1097,
+        1388
+      ],
+      "margins": [
+        59,
+        15,
+        25,
+        14
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "murderdrones",
+      "style": "fusion",
+      "name": "Fusion · Reine automate",
+      "slot": "stance",
+      "prompt": "Use case: stylized-concept. Asset type: ONE native transparent base stance for a 2D fighting game. Queenie from The Amazing Digital Circus, using the provided official Animatez image as identity/anatomy reference only. Preserve the tan-brown wooden chess-queen head with crenellated crown and ball finial, half-lidded protruding white eyes with orange/red-brown irises and two short black lower lashes, NO mouth, slender tapered robe-covered chess body, two separate floating cartoon white gloves, no visible arms, no human legs or feet. Remove the separate retail display plinth entirely. Retain the long queen chess silhouette, NOT a human female. Original crossover design: Original complete Murder Drones / Queenie mechanical fusion: the chess queen anatomy itself becomes gunmetal and bronze industrial drone chassis; crenellated bronze head with ball finial and tiny amber diode in each crown point, curved glossy black eye panels containing expressive white eye shapes and amber iris graphics beneath bronze lids, two small black lower lash-like sensors. Long tapered body built from segmented burgundy and gunmetal armor shaped like her royal robe; white ceramic collar with black oval sensor vents recalls ermine; two independently floating white mechanical four-digit glove modules, with articulated bronze knuckles. Circular bronze chess-base foot integrated into body, no legs. One narrow segmented utility cable with small amber capsule follows close to her silhouette. Clean coherent robot redesign, no gore. CRITICAL anatomy: any coat is SLEEVELESS, gloves are two separate floating modules with empty transparent gaps at wrists, NO visible arms, NO connected sleeves, NO human legs. One single character, full body relaxed guard facing RIGHT in readable three-quarter side view, both eyes looking right. Full crown, both floating gloves and body/base entirely contained with generous 8 percent margins. Tall portrait format 1024x1536. Detailed 2D cel-shaded painted game illustration, polished material edges, consistent Queenie proportions. Native true alpha background, no aura, fog, cast shadow, floor, words, frame, scenery, multiple poses or animation sheet. Original Encore creation with recognizable Queenie identity.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-5338d263-d08a-483c-8127-a571488b081e.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+      "tool": "image_gen built-in",
+      "review": "Whole queen silhouette, crown and detached gloves preserved. No mouth, hair or humanoid legs. Facing right, material redesign distinct from other styles.",
+      "path": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+      "bytes": 1849177,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 1021765,
+      "lowAlphaPixels": 28119,
+      "visibleAlphaBounds": [
+        182,
+        59,
+        816,
+        1480
+      ],
+      "margins": [
+        182,
+        59,
+        208,
+        56
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "metarunner",
+      "style": "hommage",
+      "name": "Hommage · Tari",
+      "slot": "selection",
+      "prompt": "Use case: identity-preserve. Asset type: character selection portrait, transparent. Create ONE distinct selection portrait of this exact original Queenie crossover shown in the reference. Preserve every design/material/color detail: crown and finial, eyes/irises, collar, sleeveless vest, accessories, both disconnected gloves and tapered robe. Portrait composition from crown to lower torso, no chess-base visible, fully keep crown and both gloves inside frame with 8 percent safety margin. Slight three-quarter frontal view, gaze at viewer, serene self-confident expression, both detached gloved hands resting together near upper chest rather than fighting guard; visible air gap at wrists, no arms or sleeves. Do not just crop the image; redraw the expression and hand arrangement. Refined detailed 2D cel-shaded painted game artwork, crisp edges, native true alpha, no shadow or glow background, no text, no other subjects. No human hair/mouth/legs. Original Encore fan-game crossover.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-ff3e98ff-86ac-465f-a66e-c94e80c210f1.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "tool": "image_gen built-in",
+      "review": "Distinct portrait gaze/hand grouping. Whole crown and both gloves visible, intentional lower-torso crop. No humanoid limbs.",
+      "path": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+      "bytes": 943287,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentPixels": 1062041,
+      "lowAlphaPixels": 10114,
+      "visibleAlphaBounds": [
+        294,
+        27,
+        846,
+        1382
+      ],
+      "margins": [
+        294,
+        27,
+        276,
+        20
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "metarunner",
+      "style": "hommage",
+      "name": "Hommage · Tari",
+      "design": "Original Queenie wardrobe homage to Tari from Meta Runner: cobalt-blue athletic jacket with cyan zipper trim and white side panels, collar folded beneath the whole chess crown, burgundy long tapered royal robe beneath jacket. One floating glove replaced by a white and silver segmented gaming cybernetic glove with cyan circular wrist connector; the other floating glove remains white cloth. Small duck-shaped yellow pin on jacket. Preserve tan wood face and queen crown exactly, no hair, no legs, no headphones hiding crown.",
+      "slot": "stance",
+      "prompt": "Use case: stylized-concept. Asset type: native transparent base stance sprite for a 2D fighting game. Queenie from The Amazing Digital Circus, using the provided official Animatez image as identity/anatomy reference only. Preserve the tan-brown wooden chess-queen head with crenellated crown and ball finial, half-lidded protruding white eyes with orange/red-brown irises and two short black lower lashes, NO mouth, slender tapered robe-covered chess body, two separate floating cartoon white gloves, no visible arms, no human legs or feet. Remove the separate retail display plinth entirely. Retain the long queen chess silhouette, NOT a human female. Costume/design: Original Queenie wardrobe homage to Tari from Meta Runner: cobalt-blue athletic jacket with cyan zipper trim and white side panels, collar folded beneath the whole chess crown, burgundy long tapered royal robe beneath jacket. One floating glove replaced by a white and silver segmented gaming cybernetic glove with cyan circular wrist connector; the other floating glove remains white cloth. Small duck-shaped yellow pin on jacket. Preserve tan wood face and queen crown exactly, no hair, no legs, no headphones hiding crown. Render one single character, full body, relaxed static fighting guard, facing RIGHT in readable three-quarter side view, eyes looking toward the right, floating forward glove held ready and other close to chest. Tall portrait composition 1024x1536, entire crown, gloves and base fully inside frame with generous 8 percent transparent safety margins. Refined detailed 2D cel-shaded painted game sprite, precise dark contours, rich material shading; no photography or toy seams, no vector icon look. Background completely transparent with native alpha. No aura, floor, shadow outside character, text, logos, grid, multiple views, animation frames or additional subjects. This is an original fan-game crossover; preserve Queenie identity faithfully.\nCORRECTION: Precise character anatomy correction, change only this: the two hands must float independently in empty transparent space, because Queenie has no arms. REMOVE BOTH SLEEVES and any arm connections entirely; turn the upper garment into the same design as a sleeveless hooded vest / sleeveless sports vest. Preserve all costume details on the torso, pose direction, crown, wood face, eye expression, robe, proportions, gloves (one robotic glove for blue outfit), light and style. Position the same two gloves near the chest/forward with visible transparent gaps separating every glove/wrist cuff from the vest. No elbow/arm or robe fabric connecting to hands. Retain complete full-body silhouette. Pure transparent alpha background, no aura or ground shadow. Single character only.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-71084273-8326-4977-a6c7-d36efdbc8ee5.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "correction": true,
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+      "tool": "image_gen built-in",
+      "review": "Wood crown, warm half-lidded eyes and tapered queen base retained. Sleeve attachments removed so hands are detached. Full silhouette visible; no human legs or separate retail stand. Original fan-game crossover.",
+      "path": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+      "bytes": 1513934,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 1070425,
+      "lowAlphaPixels": 15031,
+      "visibleAlphaBounds": [
+        201,
+        65,
+        915,
+        1502
+      ],
+      "margins": [
+        201,
+        65,
+        109,
+        34
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "metarunner",
+      "style": "resident",
+      "name": "Résidente · Stratège de Silica City",
+      "slot": "selection",
+      "prompt": "Use case: identity-preserve. Asset type: ONE transparent character selection portrait. Re-illustrate this exact Queenie crossover with identical crown, all outfit/body panels, color palette, material details and detached white glove modules. Original Queenie as Silica City esports tournament strategist: long teal and white technical coat with asymmetric dark navy panels over the tapered chess body, thin magenta piping, high folded collar, short burgundy sash and small blank credential badge. A slim white-and-cyan earpiece clipped beside crown, never hiding it. Both white floating gloves present; one carries a tiny translucent cyan rectangular wrist-interface attached to cuff (no text). Tan wood face preserved. No hair or human anatomy. Preserve the design in the input image over any wording discrepancy. NO MOUTH, NO NOSE, NO HAIR OR HUMAN LIMBS. Lower face is uninterrupted matching wood or blue chassis. Frame entire crown/finial and both gloves with safe margins, down to mid/lower torso; intentional portrait crop excludes base. Frontal slight-three-quarter head angle with eyes looking toward viewer, quiet confident attitude; hands brought gently together near chest, fingers steepled, clearly detached wrists without sleeves or arms. Pose and gaze differ from stance. Keep earpiece/wrist display if present, keep cybernetic joints for mechanical fusion. Detailed clean 2D painted cel-shaded game sprite. True native-alpha transparent background, no aura, drop shadow, glow beyond body, frame, text, label, extra subject, scene, or multi-view sheet. Original Encore fan-game crossover, retain Queenie chess anatomy.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-b8ceaba0-832c-418f-96f1-0733e5e6eb7a.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "tool": "image_gen built-in",
+      "review": "Distinct selection with hands together, preserved outfit/earpiece/wrist screen and wood head. Lower robe remains visible; composition intentionally excludes full foot/base.",
+      "path": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+      "bytes": 1646849,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 1016325,
+      "lowAlphaPixels": 15627,
+      "visibleAlphaBounds": [
+        184,
+        49,
+        816,
+        1522
+      ],
+      "margins": [
+        184,
+        49,
+        208,
+        14
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "metarunner",
+      "style": "resident",
+      "name": "Résidente · Stratège de Silica City",
+      "slot": "stance",
+      "prompt": "Use case: stylized-concept. Asset type: ONE native transparent base stance for a 2D fighting game. Queenie from The Amazing Digital Circus, using the provided official Animatez image as identity/anatomy reference only. Preserve the tan-brown wooden chess-queen head with crenellated crown and ball finial, half-lidded protruding white eyes with orange/red-brown irises and two short black lower lashes, NO mouth, slender tapered robe-covered chess body, two separate floating cartoon white gloves, no visible arms, no human legs or feet. Remove the separate retail display plinth entirely. Retain the long queen chess silhouette, NOT a human female. Original crossover design: Original Queenie as Silica City esports tournament strategist: long teal and white technical coat with asymmetric dark navy panels over the tapered chess body, thin magenta piping, high folded collar, short burgundy sash and small blank credential badge. A slim white-and-cyan earpiece clipped beside crown, never hiding it. Both white floating gloves present; one carries a tiny translucent cyan rectangular wrist-interface attached to cuff (no text). Tan wood face preserved. No hair or human anatomy. CRITICAL anatomy: any coat is SLEEVELESS, gloves are two separate floating modules with empty transparent gaps at wrists, NO visible arms, NO connected sleeves, NO human legs. One single character, full body relaxed guard facing RIGHT in readable three-quarter side view, both eyes looking right. Full crown, both floating gloves and body/base entirely contained with generous 8 percent margins. Tall portrait format 1024x1536. Detailed 2D cel-shaded painted game illustration, polished material edges, consistent Queenie proportions. Native true alpha background, no aura, fog, cast shadow, floor, words, frame, scenery, multiple poses or animation sheet. Original Encore creation with recognizable Queenie identity.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-49af81f0-d0e7-411e-882e-d7c311665d6b.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+      "tool": "image_gen built-in",
+      "review": "Whole queen silhouette, crown and detached gloves preserved. No mouth, hair or humanoid legs. Facing right, material redesign distinct from other styles.",
+      "path": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+      "bytes": 1670178,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 1034666,
+      "lowAlphaPixels": 35420,
+      "visibleAlphaBounds": [
+        112,
+        78,
+        825,
+        1491
+      ],
+      "margins": [
+        112,
+        78,
+        199,
+        45
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "metarunner",
+      "style": "fusion",
+      "name": "Fusion · Avatar royal",
+      "slot": "selection",
+      "prompt": "Use case: identity-preserve. Asset type: ONE transparent character selection portrait. Re-illustrate this exact Queenie crossover with identical crown, all outfit/body panels, color palette, material details and detached white glove modules. Original complete Queenie and Meta Runner synthetic game-avatar fusion: retain the exact queen chess profile but turn the crown and tapered body into opaque deep cobalt shell panels with translucent cyan insets and fine copper edge circuits; central sphere finial is glowing cyan glass. Large expressive white eyes with warm orange iris graphics on separate raised dark glass panels, half lids and lower lash-shaped copper sensors. Collar and long robe silhouette become layered white/cobalt hard-surface coat panels with a burgundy central strip; two independently hovering white articulated cybernetic glove modules with cyan wrist rings. Integrated circular chess-base pedestal, no separate display stand, no human legs. Crisp polygonal cybernetic design, no floating particles or trails. Preserve the design in the input image over any wording discrepancy. NO MOUTH, NO NOSE, NO HAIR OR HUMAN LIMBS. Lower face is uninterrupted matching wood or blue chassis. Frame entire crown/finial and both gloves with safe margins, down to mid/lower torso; intentional portrait crop excludes base. Frontal slight-three-quarter head angle with eyes looking toward viewer, quiet confident attitude; hands brought gently together near chest, fingers steepled, clearly detached wrists without sleeves or arms. Pose and gaze differ from stance. Keep earpiece/wrist display if present, keep cybernetic joints for mechanical fusion. Detailed clean 2D painted cel-shaded game sprite. True native-alpha transparent background, no aura, drop shadow, glow beyond body, frame, text, label, extra subject, scene, or multi-view sheet. Original Encore fan-game crossover, retain Queenie chess anatomy.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-f7f63fb6-21e7-48c0-8763-12c58021defd.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "tool": "image_gen built-in",
+      "review": "Selection is full-body despite portrait brief; accepted as a valid selection illustration. Both detached mechanical hands steepled, distinct from right-facing open-palm stance; complete crown, base and identity retained.",
+      "path": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+      "bytes": 1777988,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 1012020,
+      "lowAlphaPixels": 21852,
+      "visibleAlphaBounds": [
+        145,
+        57,
+        826,
+        1492
+      ],
+      "margins": [
+        145,
+        57,
+        198,
+        44
+      ],
+      "status": "native-files-reviewed"
+    },
+    {
+      "world": "metarunner",
+      "style": "fusion",
+      "name": "Fusion · Avatar royal",
+      "slot": "stance",
+      "prompt": "Use case: stylized-concept. Asset type: one native transparent static stance for a 2D fighting game. Queenie from The Amazing Digital Circus, using the provided official Animatez image as identity/anatomy reference only. Preserve the tan-brown wooden chess-queen head with crenellated crown and ball finial, half-lidded protruding white eyes with orange/red-brown irises and two short black lower lashes, NO mouth, slender tapered robe-covered chess body, two separate floating cartoon white gloves, no visible arms, no human legs or feet. Remove the separate retail display plinth entirely. Retain the long queen chess silhouette, NOT a human female. Original complete crossover redesign: Original complete Queenie and Meta Runner synthetic game-avatar fusion: retain the exact queen chess profile but turn the crown and tapered body into opaque deep cobalt shell panels with translucent cyan insets and fine copper edge circuits; central sphere finial is glowing cyan glass. Large expressive white eyes with warm orange iris graphics on separate raised dark glass panels, half lids and lower lash-shaped copper sensors. Collar and long robe silhouette become layered white/cobalt hard-surface coat panels with a burgundy central strip; two independently hovering white articulated cybernetic glove modules with cyan wrist rings. Integrated circular chess-base pedestal, no separate display stand, no human legs. Crisp polygonal cybernetic design, no floating particles or trails. One character, full-body relaxed guard facing RIGHT three-quarter side view. Two disconnected floating hands, one palm forward and one near chest, visible gaps from any torso or sleeves. No arms or human legs. NO MOUTH/NO NOSE/NO HAIR. Full crown, finial, gloves, integrated base entirely visible with 8 percent safety margins in tall portrait 1024x1536. Detailed 2D cel-shaded painted game sprite with clean contours, intentional material colors, bright but contained lighting. Native true transparency, no background halo, particles, floor, cast shadows, words, frames, diagrams or multi-pose sheet. This is an original Encore fan-game design.",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-6217d9c7-9b22-4ed2-8d4c-e38e98d24172.png",
+      "destination": "/workspace/scratch/c7a56010b070/CainOS/assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "reference": "/workspace/scratch/c7a56010b070/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+      "tool": "image_gen built-in",
+      "correction": false,
+      "review": "Complete cyan/cobalt/copper queen chassis, integrated base and two detached glove modules. No human anatomy; entire silhouette visible.",
+      "path": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+      "bytes": 1824011,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPixels": 965371,
+      "lowAlphaPixels": 45734,
+      "visibleAlphaBounds": [
+        120,
+        59,
+        939,
+        1489
+      ],
+      "margins": [
+        120,
+        59,
+        85,
+        47
+      ],
+      "status": "native-files-reviewed"
+    }
+  ],
+  "corrections": [
+    "Murder Drones homage and Meta Runner homage: removed attached sleeves/arm links to preserve floating hands.",
+    "Murder Drones resident selection: removed generated mouth line; official Queenie is mouthless."
+  ],
+  "unexecuted": [
+    "In-engine rendering, runtime and packaging checks are owned by parent/root.",
+    "No animation, complete-angle canonical or pixel-by-pixel certification."
+  ],
+  "summary": {
+    "files": 12,
+    "appearances": 6,
+    "bytes": 19433723,
+    "nativeAlpha": true,
+    "minVisibleMargin": 14,
+    "bytePreservingCopies": true
+  }
+}

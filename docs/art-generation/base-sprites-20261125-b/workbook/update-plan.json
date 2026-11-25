@@ -1,0 +1,3976 @@
+{
+  "schema": "encore-tracker-static-base-plan/v2",
+  "createdAt": "2026-11-25T08:19:50.370Z",
+  "phase": "final-evidence-confirmed-awaiting-workbook-review",
+  "baselineHashes": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "b3ffd3b5b62f40e0e7cbdbcc553a706f9aacbfa0d167d46a73b3efc2fb68832f",
+    "docs/combat-tracker-data.json": "04a353cf620a90f907dcfabc4a653eb42369358b8df09e2e60bae0fbc94f276a",
+    "docs/combat-workbook-verification.json": "e9ac96875318ab7d49541dbc1d575d355371cd3adfac6815de6b1563a2c5f951",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+  },
+  "baselineSnapshotHashes": {
+    "manifest.json": "c2a10df21e3ae16d3aa72d29fe3da428aebcbec21a688775435fa4fe70233fa2",
+    "sheet-1.json": "664406c6911e8a65fba01ef90a3b3f6d202824b9221bc344bf73fcc9d8deb761",
+    "sheet-2.json": "478ec3343efe0b1d72625deb3e61ce75676c9d3e11c47caf7e50f56a039f76a0",
+    "sheet-3.json": "7d6f07b9c2634f9d3e198d7b6d4e8ed6f072214e536f07319f96e3229490ba50",
+    "sheet-4.json": "196531afe5f287fec585f475abe1bbde017703a6736ec0a56161775688967b1a",
+    "sheet-5.json": "5cf44a5fa5b97f4bc354f5455e2a71750e8b146e5ac933e0de4ff5ada2659ab4",
+    "sheet-6.json": "b8e739178dc4a0b8f27aaa6343eafb2fd7dfb441b3f13f6c690de972ae95a146",
+    "sheet-7.json": "f879e0f677097173a9b550d02654e6d60a649d8185c81d2b815f983c831f3dc9",
+    "sheet-8.json": "96836cbe98b906fa9b05050182ec79dbb4f29e06e88ce78ebb99e7cbe5a70387",
+    "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
+    "sheet-10.json": "5f521cd798d5a5173298c152d60b2cdad50eddeb7664fcba4a63782859dbd1bd",
+    "sheet-11.json": "8de631e4f379757181d7004f73c90ed91b89f65a5cf5e060cdb0a86f58f39a49"
+  },
+  "historicalCellsConstrained": 91743,
+  "approvedChangedCells": [
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G16",
+      "before": [
+        "string",
+        "Télécharger 6130 illustrations (3414702166 octets) à la demande puis jouer sans réseau. Un pack incomplet après éviction reste incomplet si sa réparation échoue.",
+        null
+      ],
+      "value": "Télécharger 6202 illustrations (3510209132 octets) à la demande puis jouer sans réseau. Un pack incomplet après éviction reste incomplet si sa réparation échoue.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "F62",
+      "before": [
+        "string",
+        "combat/data.mjs · combat/base-sprite-content.mjs · combat/crossovers.mjs · combat/app.mjs",
+        null
+      ],
+      "value": "combat/data.mjs · combat/base-sprite-content.mjs · combat/base-sprite-continuation-20261125-b.mjs · combat/crossovers.mjs",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G62",
+      "before": [
+        "string",
+        "508 tenues équipables : 52 variantes d’archive, 51 tenues Circus et 405 crossovers dans neuf collections. Les 24 nouvelles familles possèdent chacune un portrait et une garde statique.",
+        null
+      ],
+      "value": "540 tenues équipables : 52 variantes d’archive, 56 tenues Circus et 432 crossovers dans neuf collections. Les 56 familles de base statiques possèdent chacune un portrait et une garde.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "H62",
+      "before": [
+        "string",
+        "Les 484 apparences de départ conservent leur ordre. Ribbit couvre les neuf séries : neuf familles historiques à onze dessins et dix-huit familles nouvelles à deux bases. Les 39 autres PNJ promus et les dix abstractions restent sans tenue crossover ; les fusions sont originales.",
+        null
+      ],
+      "value": "Les 508 apparences publiées et le préfixe local de 522 conservent leur ordre. Ribbit et Queenie couvrent les neuf séries et trois styles. Les 38 autres PNJ promus et les dix abstractions restent sans tenue crossover ; les fusions sont originales.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "F95",
+      "before": [
+        "string",
+        "combat/fidelity.mjs / combat/costume-fidelity.mjs / combat/base-sprite-content.mjs / combat/data.mjs",
+        null
+      ],
+      "value": "combat/fidelity.mjs / combat/costume-fidelity.mjs / combat/base-sprite-content.mjs / combat/base-sprite-continuation-20261125-b.mjs",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G95",
+      "before": [
+        "string",
+        "Documenter 64 combattants, 640 techniques, 27 arènes, 52 variantes d’archive, 51 tenues Circus et 405 crossovers avec leurs repères, classifications et limites de référence.",
+        null
+      ],
+      "value": "Documenter 64 combattants, 640 techniques, 36 arènes (27 partagées et neuf crossovers), 52 variantes d’archive, 56 tenues Circus et 432 crossovers avec leurs références.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "H95",
+      "before": [
+        "string",
+        "Les six apparences officielles nouvelles sont comparées à leurs vues commerciales documentées ; les dix-huit crossovers sont des créations originales. Le contrat de ces 24 familles est limité à deux bases statiques, sans certification graphique globale.",
+        null
+      ],
+      "value": "Les deux lots ajoutent cinq apparences issues de vues officielles et 27 crossovers originaux de Queenie. Chaque famille demande deux bases statiques. Références visibles et créations originales restent distinctes ; aucune certification graphique 1:1.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "F112",
+      "before": [
+        "string",
+        "combat/base-sprite-content.mjs / combat/illustrations.mjs / combat/render.mjs",
+        null
+      ],
+      "value": "combat/base-sprite-content.mjs / combat/base-sprite-continuation-20261125-b.mjs / combat/illustrations.mjs / combat/render.mjs",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G112",
+      "before": [
+        "string",
+        "Ajouter 24 familles seulement lorsque leurs deux PNG sont présents et vérifiés : sélection et garde. Le choix du costume conserve la silhouette entière, les accessoires et les occultations documentées.",
+        null
+      ],
+      "value": "Activer les 56 familles statiques lorsque leurs deux PNG sont présents et vérifiés : sélection et garde. Les lots A et B ajoutent 32 familles. Le choix du costume conserve la silhouette, les accessoires et les occultations documentées.",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3509",
+      "before": [
+        "string",
+        "Le programme ferme la scène de les regards sans nom. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de les regards sans nom. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3529",
+      "before": [
+        "string",
+        "Le programme ferme la scène de le ressac du signal. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de le ressac du signal. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3549",
+      "before": [
+        "string",
+        "Le programme ferme la scène de le contour du silence. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de le contour du silence. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3569",
+      "before": [
+        "string",
+        "Le programme ferme la scène de la lumière tenue à distance. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de la lumière tenue à distance. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3589",
+      "before": [
+        "string",
+        "Le programme ferme la scène de le bond interrompu. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de le bond interrompu. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3609",
+      "before": [
+        "string",
+        "Le programme ferme la scène de le labyrinthe sans porte. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de le labyrinthe sans porte. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3629",
+      "before": [
+        "string",
+        "Le programme ferme la scène de la couture hors du cadre. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de la couture hors du cadre. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3649",
+      "before": [
+        "string",
+        "Le programme ferme la scène de les rubans sans masque. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de les rubans sans masque. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3669",
+      "before": [
+        "string",
+        "Le programme ferme la scène de le bastion aux mille regards. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de le bastion aux mille regards. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Production",
+      "cell": "H3689",
+      "before": [
+        "string",
+        "Le programme ferme la scène de les fragments indociles. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Le seuil de l’abstraction",
+        null
+      ],
+      "value": "La salle de calibration referme la scène de les fragments indociles. Les silhouettes et les archives conservent leurs identités distinctes.\nComposition : solo · Arène : Salle de calibration",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B11",
+      "before": [
+        "number",
+        508,
+        "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3816,\"Costume crossover\")+COUNTIFS('Production'!B6:B3816,\"Tenue Circus\")"
+      ],
+      "value": 540,
+      "formula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3920,\"Costume crossover\")+COUNTIFS('Production'!B6:B3920,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B12",
+      "before": [
+        "number",
+        64,
+        "=COUNTIFS('Production'!B6:B3816,\"Arrangement d’arène\")"
+      ],
+      "value": 64,
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B16",
+      "before": [
+        "number",
+        2601,
+        "=COUNTIFS('Production'!E$6:E$3816,B$14)"
+      ],
+      "value": 2705,
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C16",
+      "before": [
+        "number",
+        987,
+        "=COUNTIFS('Production'!E$6:E$3816,C$14)"
+      ],
+      "value": 987,
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D16",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!E$6:E$3816,D$14)"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E16",
+      "before": [
+        "number",
+        169,
+        "=COUNTIFS('Production'!E$6:E$3816,E$14)"
+      ],
+      "value": 169,
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F16",
+      "before": [
+        "number",
+        3811,
+        "=COUNTA('Production'!A6:A3816)"
+      ],
+      "value": 3915,
+      "formula": "=COUNTA('Production'!A6:A3920)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H19",
+      "before": [
+        "string",
+        "64 routes et 384 tableaux",
+        "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3816,\"Tableau d’histoire\")&\" tableaux\""
+      ],
+      "value": "64 routes et 384 tableaux",
+      "formula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3920,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H20",
+      "before": [
+        "string",
+        "256 briefings de rencontre",
+        "=COUNTIFS('Production'!B6:B3816,\"Briefing illustré\")&\" briefings de rencontre\""
+      ],
+      "value": "256 briefings de rencontre",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H21",
+      "before": [
+        "string",
+        "27 thèmes musicaux d’arènes",
+        "=COUNTIFS('Production'!B6:B3816,\"Arène\",'Production'!D6:D3816,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+      ],
+      "value": "27 thèmes musicaux d’arènes",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Arène\",'Production'!D6:D3920,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B22",
+      "before": [
+        "number",
+        2485,
+        "=COUNTIFS('QA'!D6:D2512,B21)"
+      ],
+      "value": 2493,
+      "formula": "=COUNTIFS('QA'!D6:D2523,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C22",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('QA'!D6:D2512,C21)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('QA'!D6:D2523,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D22",
+      "before": [
+        "number",
+        19,
+        "=COUNTIFS('QA'!D6:D2512,D21)"
+      ],
+      "value": 20,
+      "formula": "=COUNTIFS('QA'!D6:D2523,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E22",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('QA'!D6:D2512,E21)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('QA'!D6:D2523,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F22",
+      "before": [
+        "number",
+        2507,
+        "=COUNTA('QA'!A6:A2512)"
+      ],
+      "value": 2518,
+      "formula": "=COUNTA('QA'!A6:A2523)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H22",
+      "before": [
+        "string",
+        "26 motifs sonores synthétiques",
+        "=COUNTIFS('Production'!B6:B3816,\"Motif sonore\")&\" motifs sonores synthétiques\""
+      ],
+      "value": "26 motifs sonores synthétiques",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B23",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('QA'!D6:D2512,\"Partiel\")"
+      ],
+      "value": 3,
+      "formula": "=COUNTIFS('QA'!D6:D2523,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H23",
+      "before": [
+        "string",
+        "320 séquences de présentation",
+        "=COUNTIFS('Production'!B6:B3816,\"Présentation individuelle\")&\" séquences de présentation\""
+      ],
+      "value": "320 séquences de présentation",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H24",
+      "before": [
+        "string",
+        "27 ambiances visuelles animées",
+        "=COUNTIFS('Production'!B6:B3816,\"Animation d’arène\")&\" ambiances visuelles animées\""
+      ],
+      "value": "27 ambiances visuelles animées",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H25",
+      "before": [
+        "string",
+        "20 costumes historiques redessinés",
+        "=COUNTIFS('Production'!B6:B3816,\"Costume\")&\" costumes historiques redessinés\""
+      ],
+      "value": "20 costumes historiques redessinés",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H27",
+      "before": [
+        "string",
+        "834 fiches, hors tenues crossover",
+        "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3816,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+      ],
+      "value": "839 fiches, hors tenues crossover",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3920,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H31",
+      "before": [
+        "string",
+        "192 présentations de KO",
+        "=COUNTIFS('Production'!B6:B3816,\"Finition visuelle\")&\" présentations de KO\""
+      ],
+      "value": "192 présentations de KO",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H32",
+      "before": [
+        "string",
+        "27 ambiances sonores originales",
+        "=COUNTIFS('Production'!B6:B3816,\"Arène\",'Production'!D6:D3816,\"Ambiance sonore\",'Production'!E6:E3816,\"Implémenté\")&\" ambiances sonores originales\""
+      ],
+      "value": "27 ambiances sonores originales",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Arène\",'Production'!D6:D3920,\"Ambiance sonore\",'Production'!E6:E3920,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H2",
+      "before": [
+        "string",
+        "Version 0.7.0 · bases statiques · 24 novembre 2026",
+        null
+      ],
+      "value": "Version 0.7.0 · bases statiques · 25 novembre 2026",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H7",
+      "before": [
+        "string",
+        "Sprites de base statiques",
+        null
+      ],
+      "value": "Sprites de base et motifs dédiés",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H8",
+      "before": [
+        "string",
+        "6 apparences officielles · 18 crossovers originaux",
+        null
+      ],
+      "value": "5 apparences de référence · 27 créations de Queenie",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H9",
+      "before": [
+        "string",
+        "Validation des costumes et du lore",
+        null
+      ],
+      "value": "36 arènes : 27 partagées et 9 crossovers",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H13",
+      "before": [
+        "string",
+        "467 tests Node et deux builds validés",
+        null
+      ],
+      "value": "469 tests Node et deux builds validés",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H14",
+      "before": [
+        "string",
+        "Campagne navigateur complète et appareils physiques ouverts",
+        null
+      ],
+      "value": "Navigateur et périphériques physiques : validation ouverte",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H16",
+      "before": [
+        "string",
+        "24 familles · 48 PNG natifs · deux bases chacune",
+        null
+      ],
+      "value": "32 familles · 64 bases · 8 projectiles natifs",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "A23",
+      "before": [
+        "string",
+        "Constat historique partiel",
+        null
+      ],
+      "value": "Contrôles partiels datés",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H30",
+      "before": [
+        "string",
+        "24 nouvelles bases statiques · aucun dessin d’action requis",
+        null
+      ],
+      "value": "56 familles statiques au total · aucune nouvelle animation",
+      "formula": null
+    }
+  ],
+  "approvedRowHeightChanges": [],
+  "evidenceHashes": {
+    "docs/art-generation/base-sprites-20261124/integration-baseline.json": "9076a438ee9fb8f69023a3bfe7aea53234a5ee26ec1fd9d42f63b529e76e6ebc",
+    "docs/art-generation/base-sprites-20261125-b/verification.json": "a779ec3dbca91a83acb085ec5cedd20a4c4841cae233ec04bf98212a165a75cc",
+    "docs/art-generation/base-sprites-20261125-b/logs/qa.log": "a3306d6f29d47826bf3f417cdc1552ee90a6eeb573d820531259333291715e86",
+    "docs/art-generation/base-sprites-20261125-b/logs/build-standalone.log": "1e3bff35adcd3099f141f6455380013a208169cc00e0b228308c85cbfea5515c",
+    "docs/art-generation/base-sprites-20261125-b/catalog-preservation.json": "107fb4c41c83af83d0e2870302ba064272d12ea3f30275daca938512e85c9b3f",
+    "docs/art-generation/base-sprites-20261125-b/prior-assets-preservation.json": "8c9aa6e2a0ef19d4bbb8e36fe3a2973eff1da84ab5013aa77bb5d5a69fbeddcf",
+    "docs/art-generation/base-sprites-20261125-b/canvas-all/visual-review.json": "13c1eb389310db2d33a8993b3016c745de0e335bd97c2a1fc54f2be04b23de97",
+    "docs/art-generation/base-sprites-20261125-b/canvas-projectiles-current/visual-review.json": "36d921c5e22547783f7d751a6b10c09fbff307acf3fa1abe086e4348fb905cbb",
+    "docs/art-generation/base-sprites-20261125-b/browser-preflight.json": "db93657acdb05c99347a08f595eddd8f2bcc9755616112285219c89a0d7e62bc",
+    "docs/art-generation/base-sprites-20261125-b/build-cainos.json": "8c2368e0241a1f0b32bdc148495682164ffbee5f20493514943dca5e6bb6442b",
+    "docs/art-generation/base-sprites-20261125-b/build-standalone.json": "55cf2dee8b9517e5abc4a66b9e2c446c36937c0b9274791bd2bea07c070b0a7b",
+    "docs/art-generation/base-sprites-20261125-b/canvas-all/base-canvas-review.json": "bd79c5fe2382add3a641cc787b5b9e5a99cc3ee6ec0e7d871f27fae7d3cdbfe5",
+    "docs/art-generation/base-sprites-20261125-b/canvas-projectiles-current/projectile-canvas-review.json": "e36bb787393539e591286df0bd702938ac97f75b0a3dbb5286f5221fc01a9c8e",
+    "docs/art-generation/base-sprites-20261125-b/asset-inventory.json": "0495a4d9bb6c4803adccb4cd7ae3c811df13b3604f39d170834c5fc6696c1d39",
+    "docs/art-generation/base-sprites-20261125/official/manifest.json": "efcdfdf4d49c7ffa731102877e58f5f2776ebf46d76490752a2c49318d003294",
+    "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json": "0c7ec0ac5777cb23af0f8a3ddb678946cc6377c40222530be3794e53ed888b49",
+    "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json": "fe7fb1d8e8437645a6082abb98c52d45fcbb2048e6bbc5cd7220208feee81522",
+    "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json": "a577d7f2b38ceff49ffe07612ce2a1de41122a046f823f8681c8113499a90216",
+    "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json": "499e5932903255858b855b90a8152d6336d12e88604fa33d7b9967b666d13edd",
+    "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json": "3a88c7d45117a10c0f1886823cc902c8e209c22dbf8505771594440a0ed242bc",
+    "docs/art-generation/base-sprites-20261125/projectiles-manifest.json": "36877a4b355d0d7f503f4b97d13c52efc6be8d35f05641bdc0bdbedcd1e620f6",
+    "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json": "e41630321dca7159024f8236a1e5b43692c75de6825383a5016c2ac27f2b63ad"
+  },
+  "runtimeSourceHashes": {
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/abstractions-narrative.mjs": "ca3a9f21b14a226f20946dddbf2d1dae9c04bebc3f3beb3f60503d6a63683abe",
+    "combat/app.mjs": "15877928f8efa1bc97f28779a21aaea29a7412e6f5266b588cf7999a2cd7a724",
+    "combat/audio-ambiences.mjs": "cb822a6e2fbe4f6c359c0f986647a924680e8b47ef661accc0ff44908157c30b",
+    "combat/audio.mjs": "35edb1c4486adf3324ee182e60325d5b838e3b673c722eb9fd519cb76c597c47",
+    "combat/base-sprite-content.mjs": "a4bf5eda522961ecf35dfb0dd0be5393eefbbb44d128f3eb7f575a225325da28",
+    "combat/base-sprite-continuation-20261125-b.mjs": "62f1da85c2f2b834b8d4e6a6417caaecbf7df80998affe63bf917a7b25dbd7e1",
+    "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/catalog-history.mjs": "dc1a40f1d3d3d3bb07485b2530db5d5949184f7fc6d482f46ac90cc14436fc54",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-fidelity.mjs": "4321b91147455c55e8e07ec86d8b5434144dd69de112b5e98354b27f5676c25a",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "c141fa3cc90a18996582c593b1eb6f824412c4a583fdaa95839819b5f74dc1d1",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/crossover-designs.mjs": "10823e3ae1857472b3ccecdfff9018026d1e73c356fc13496e9d3096fb194935",
+    "combat/crossover-fusions.mjs": "2af5a8490395331a92b95f567c155b7237e7355b5cac03a0c45a8d2e1b19241b",
+    "combat/crossover-npc-additions.mjs": "f56896170b3da27f4479797f1314e339d2918dbcd76cc3850c465369c356eba5",
+    "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
+    "combat/crossover-sunset-recovery-20261124.mjs": "fb2e7d6a5c2cb7cdf7f05416b5e2a6ed30276c996d2dee82c94151eef33d876c",
+    "combat/crossover-visits.mjs": "fc173219e61473341930bad12e52aefea45b69acfb7f029a03296b4ca8a0efbc",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/finisher-catalog.mjs": "f741daefc7acb7e63a8aae481f9a1ceb378a2cc31be08f2328db4470352d9b18",
+    "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+    "combat/finishers.mjs": "cf41cd5f1137ea8b1b04629980c6985b5b74c9f43e75ebd064a1f1ef37857d38",
+    "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
+    "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+    "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+    "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/index.html": "da82a06a72d3bbea1b0d743b939c747b1545d1a9d2234b06d2e8e2203ed12bd8",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+    "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+    "combat/offline-manifest.mjs": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c",
+    "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+    "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+    "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+    "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+    "combat/render-finishers.mjs": "7834ffe5ec5c90d1665ac3e71a036cf24618c755d7bb956eeaeaabc74806b4a6",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-stage-motion.mjs": "22a0ecdca8bd3f5eaf1e759ac30dabd41fa117c00e0844665c89ea5f7c057d3a",
+    "combat/render-stage-scenery.mjs": "0b4edde9d16659675651b6daa114ec03b8a8cf7434c47eb09dd2645eb53ca544",
+    "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+    "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/sprite-catalog.mjs": "f1d3aabb923df18d8616363840aca370dd3472a9ad92ac51c84d49430a3251fe",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+    "combat/story-presentation.mjs": "900ad5dfefc205f868561a7624352152f2d7f51300b5197c16c677bb7692fd54",
+    "combat/style.css": "adc88414a74d24bee7a1e8b08ca31fb9e8d5270d47199dc64eb4914815a36df7",
+    "combat/sw.js": "b10302d7cacdbb4301cb0dbba59d146484cca5516633a1be2adf14497ded6a49",
+    "combat/tournament-lore.mjs": "ff18e3fdcc6a5fe46f442452d74fd1744ae135c6c76a117696470bd17c6ad21a",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+  },
+  "qaSourceHashes": {
+    "tests/combat-abstractions.test.mjs": "d75662c7e03e30793f5df8ca3f001457b7945e32258a21179d5bdba0504142f1",
+    "tests/combat-accessibility-browser.mjs": "98c2ed08643e434cf17b260d3dcf6d0338a0951b3bb768f4e190f72cd8787ce5",
+    "tests/combat-action-art-browser.mjs": "d0a69ebcd8ffe885b2a08649aaba55d2a5ecca12c4d58db9209fcd29a6d267fd",
+    "tests/combat-art-tracker-formats.test.mjs": "243b1877d3f5a21edb75ac6e37cb0b1285533b96b198845020b365154bfdd7ca",
+    "tests/combat-assets.test.mjs": "e21a2cdb8f2217e7f8a17e78dde0d02d174ad00e21e34f78cafa98601dac943f",
+    "tests/combat-audio-ambiences-browser.mjs": "8c85851d77b1cd178b0a3dd7c4c4a8d1b90c6ede3e079ee1e4280ea14e230bb3",
+    "tests/combat-audio-ambiences.test.mjs": "d265b7fa7bbb3cc1cc9af3b5e35c335682aacdd3ceb674728b749ebfc986b123",
+    "tests/combat-audio-cues.test.mjs": "1b240cc155982c773be0863a3e9c54ee76ed0df607e0940a6687a9711e5f5929",
+    "tests/combat-audio.test.mjs": "f0cf66cd0f5acaf123376e3b35534bcc035df826dbbb47a4357f2f50fdc8e95c",
+    "tests/combat-barnoir.test.mjs": "a332d296c68cad4cb607e18793b8b84c0cabc9940ee6fc47467293e9d76a10e1",
+    "tests/combat-base-sprites.test.mjs": "9cded1f93ebccf8b40a44863d2d169a4e46662bcdffe2f6fe13854d6f0a2141d",
+    "tests/combat-bindings.test.mjs": "552a6e00f8758eb5b327ef81f098421af81a792e3068453a83008bc2f249609c",
+    "tests/combat-browser.mjs": "cdf550a9128081254f0eccc7ad3d563a144e26be026fd121b110c1a509e5e637",
+    "tests/combat-build-output.test.mjs": "6ae28c032e1979783f221693b6b94aa34bb36175b0a337a5e0d0edda1b17bc70",
+    "tests/combat-catalog.test.mjs": "b2324baa8475549efa21bce7183c6f6b987915ed6a86507a5337e80cc264d4d5",
+    "tests/combat-costume-additions.test.mjs": "8b475d4cc441cba637b94bfc3d6134f1d7802e57a2e4ff3a7ff7dd88fd85a7bc",
+    "tests/combat-costume-browser.mjs": "e2f198ed93f1805259a671dc08204d5b303990730c4f7c9016d87a3e33ab86ee",
+    "tests/combat-costume-order.test.mjs": "8f81d64965cf5e67324e73e004dc3b01ce9201e97427253207f87c2e4e0809c2",
+    "tests/combat-costume-refinements-browser.mjs": "a4c45bb21411e8a17c91fd8c756a94c6d98491bfd2b4b1c481130f417f9f4333",
+    "tests/combat-crossovers-browser.mjs": "c5f48a42ec4c85968c029a7f324950e2b7a6a7bb331627b162223c86444423a4",
+    "tests/combat-crossovers.test.mjs": "aedcbb8a6a8248eb2470efda8b040f9cb9a251beff9909dc59e1d300264dc420",
+    "tests/combat-encore-browser.mjs": "46eab52322e5bcdde8e85a26686bc5e83e30df709a28caae49b7c51b003241c8",
+    "tests/combat-engine.test.mjs": "7b30b513c1af531cdb767b5c60b7c8f02fc7055e4b1fceb1d5f29913a17a3e24",
+    "tests/combat-fidelity-browser.mjs": "4f7b18367b18c2825c1bc1c2855a2554724afb9e02726d8f319c847de745c82d",
+    "tests/combat-fidelity.test.mjs": "b9c38e76c5d75b72213d85f9c362136e579ae2131bcd5566ea64e222cad903a8",
+    "tests/combat-finisher-gallery.test.mjs": "bb3ed6fae25e8604b4d9b4bb23315dde4fe215b30c39a152a39cc627645907c2",
+    "tests/combat-finishers-browser.mjs": "1a1876007fa5c71761ed40acb73d509eb382ff24d1d6cd7df89891cdaebc4bb8",
+    "tests/combat-finishers-render.test.mjs": "bc9c6435f55f6cb01d50e246f5b6b849316ca4f2b919f0417ebd3b7926ba7265",
+    "tests/combat-finishers.test.mjs": "0c995a56be68af5895414d2267aaccf0ebb43ee66e53622a96c751919562ca67",
+    "tests/combat-illustration-formats.test.mjs": "806aeec261b9b01d5e92fbcef50df2336dc0210a36d21d4dcfb26efb473b31ed",
+    "tests/combat-input-browser.mjs": "eda1e597a3a7a9a0c9cdf1302489551d11bdb0542fb571dad5300ecf4c6431b1",
+    "tests/combat-input.test.mjs": "f6bbb79897363cd69300fb41bded0020970dd85e3d05447dd365d0d671efe60d",
+    "tests/combat-merge-browser.mjs": "ff5b845f18201a787756db61d5703b363072c4055f45b3d04402c72aece85b6b",
+    "tests/combat-metarunner.test.mjs": "be593644262135b805d8316b557c64d5e195b231b979f56fe78dabf4651c694f",
+    "tests/combat-offline-browser.mjs": "2129be0ff5184d35586ddc8dccfc561a28433538b4179d206f02e467f360e294",
+    "tests/combat-offline.test.mjs": "2d6e8d8e8b32e3cb555ab72e7f8018a34375a411c6ab6c3cceb6bf51a10cfeda",
+    "tests/combat-profile-backup-browser.mjs": "6e93bc5a622b3b572759b89bed39f97727597bda50e6333b7733bc30d1f02b5f",
+    "tests/combat-profile-recovery-browser.mjs": "fbdd2eff9126b3dc30bba5a1ed339587ab3b74a7ef8cdd216a20aae90517b2f6",
+    "tests/combat-program-compatibility.test.mjs": "47baad912f6c57b0af87538e817fed4a90e8408e939ff1667a00db53bae97fcb",
+    "tests/combat-progression-browser.mjs": "a8470b99a0e5b8c1b631fca253340a46b87d37d4180bcb55c6b42ed86b1bd902",
+    "tests/combat-progression.test.mjs": "3d89a2e5d21b23719dc36a8bda0c37b70c9ccdab5b4940f842726fe29c2c1d6f",
+    "tests/combat-projectile-art.test.mjs": "12d46160c6390e6c7a23fd81b523899093865a97b050c417f82e21d7b3c7fc6d",
+    "tests/combat-readability-browser.mjs": "f2e52c8c71d3eaaf59438d3664b07f48ac96b77503c9485812bc43c6c61b1dda",
+    "tests/combat-readability.test.mjs": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+    "tests/combat-recovery-browser.mjs": "544d8fc82c38dd774573e1783dc24ad6c6d68e3cd7aaab0a932c390c2aebeb22",
+    "tests/combat-reduced-motion-browser.mjs": "c21e5509c519b3a604b60691901e41c0913a51bd0c98cb6ca7d7ea6332fef8e2",
+    "tests/combat-release-evidence.test.mjs": "89317fae370aff317a3e28ecf4631775a5c44a1e40f8bde25e8fced4fa36d4c5",
+    "tests/combat-render-browser.mjs": "7fd9369b5bfc82b39e4ef7dfedc0b8d1dd9f45c13c2b259e9800f6c490d8177b",
+    "tests/combat-render-jax-browser.mjs": "2f82e8152c5857e4e079746d5e171cf9780e228c506cdd4f9546c0704a0351f8",
+    "tests/combat-render-matte.test.mjs": "28f7b0791b9bae5ca55fedf8d84a9a3700e8555533c39b7471abe92ca7a16a4e",
+    "tests/combat-render-poses-browser.mjs": "895d584819ed93a0f259e2f70744a2dc0a380f8f5c4e4d7a9c453d9eb285af0d",
+    "tests/combat-render-poses.test.mjs": "222fafdf82ac33f12502f74dbf29dadf7968d0de898545cfef518415c80ebff1",
+    "tests/combat-render-sequences-browser.mjs": "6614a955fddb96af3e18e2268f7f47f03f1375afffc688ec8cfffe85aedc73af",
+    "tests/combat-render-sequences.test.mjs": "7a68ac75ef2f34831c35dad491a785e7c3fbfd7f505082faa28f60257ed13fcc",
+    "tests/combat-render.test.mjs": "12782fc6f79383dce449336c6fb88564fc26f0e735622040f3e616df2b99b1cb",
+    "tests/combat-roster-browser.mjs": "2521b5dd658c8bc3915624e460bd5e6f4236884abe347b5127c792c1915aff09",
+    "tests/combat-roster-completeness.test.mjs": "89328c24369d030d10a3ea75b5eb8b5f73b7bdfdc352f27fd9110dd20c95b65c",
+    "tests/combat-rules.test.mjs": "a65a177a555e99310bf6614583ded05d1761eddc1010dc8ff211e7dae0204b9a",
+    "tests/combat-session-backup.test.mjs": "ceea8de2ea6e0bd02e8feb945a6d6aa1e1c48567d0838bda351eb308b6f5f96a",
+    "tests/combat-session.test.mjs": "4c32d25ac554845abbe01bde7426b2d20416eb8580c7b5b760b041d807fe9592",
+    "tests/combat-softballfield.test.mjs": "df3be4bfe202aa13f0c67017f1208e5ae754ef40437b92bc65c0e20d40f8e293",
+    "tests/combat-stage-art-browser.mjs": "14a88ed23b7a3b91a855e7d2b6a49cd31e4c4b12b87ead7a607c9375764d00d1",
+    "tests/combat-stage-scenery-browser.mjs": "8128a719cace7d9464c07cbb7b8a8225f6e1e596c4c7777338fe48897de4c483",
+    "tests/combat-stage-scenery.test.mjs": "e0ab486405e0e6638251d95865f9c8dfcf2a2c9d7ebad5e02791f5e75932a5fa",
+    "tests/combat-story-presentation-browser.mjs": "90a88f6a10492b20b15e4f04381da161897a7a1313dde584b7412b9a8147b3ad",
+    "tests/combat-story-presentation.test.mjs": "37dc2736d33b5518745d531bde209e4c8d0d9a16dd0c140531fcc814894f9bae",
+    "tests/combat-training-browser.mjs": "95a819987fb8ef813d0631bdc9c8f809974bdcccc743116a394cbcc0b3f68754",
+    "tests/combat-training.test.mjs": "f1156033a8263fec59e56f097809889e447b64ab9530308f2b904c7513d37ede",
+    "tests/combat-undermap.test.mjs": "007f96cdf8363befaae5d2ecef143afbc56cf715702d9cfd02ab16d221b5261b",
+    "tests/combat-visits-browser.mjs": "f20a7058194c911597a9deac31142a65dc8f6d6a0270a31dcd8d8d4797f08c47",
+    "tests/combat-workbook-publication.test.mjs": "b56f6c5f7c627d397a359b30c3fd3346a3adfaa8b3fc6620cb70aa1ca9b9ae0a"
+  },
+  "authoringSourceHashes": {
+    "scripts/prepare-combat-base-sprites-tracker-20261125.mjs": "7ce6b1e115a4dcaa0e837c59ef5e30040f3327b4417798ccd506d548ab273bac",
+    "scripts/publish-combat-base-sprites-workbook-20261125.mjs": "cc211ec3794baf79136577b001d00f2beb5add27fca937ad469f3455462b90fb",
+    "scripts/update-combat-abstractions-workbook-20261124.mjs": "6c4674b7c44ab0da03089ecd6709153fd763b684c6f65784bd6dd03c2a71d78f",
+    "scripts/inspect-combat-workbook-native.py": "44d1a662c0f87804689fb090424eb700ab709b1f1335f7097bd3673f92764c8b",
+    "scripts/workbook-publication.mjs": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e"
+  },
+  "counts": {
+    "fighters": 64,
+    "moves": 640,
+    "stages": 27,
+    "modes": 9,
+    "atlas": 184,
+    "variants": 540,
+    "archiveOnly": 68,
+    "storyRoutes": 64,
+    "storyChapters": 256,
+    "storyPanels": 384,
+    "storyBriefings": 256,
+    "musicThemes": 27,
+    "soundEffects": 26,
+    "offlineImages": 6202,
+    "offlineBytes": 3510209132,
+    "features": 107,
+    "production": 3915,
+    "scenarios": 408,
+    "qa": 2518,
+    "presentationSequences": 320,
+    "animatedStages": 27,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 192,
+    "audioAmbiences": 27,
+    "archiveVariants": 52,
+    "dedicatedStages": 64,
+    "friendships": 64,
+    "costumeAdditions": 56,
+    "pendingCostumeAdditions": 0,
+    "pendingCostumeArtFiles": 0,
+    "crossovers": 432,
+    "baseOnlyCostumes": 56,
+    "baseOnlyOfficialCostumes": 11,
+    "baseOnlyCrossoverCostumes": 45,
+    "sharedStages": 27,
+    "crossoverStages": 9,
+    "totalStages": 36,
+    "projectileMotifs": 23,
+    "sheets": 11,
+    "nativeTables": 10,
+    "sources": 214,
+    "addedProductionRows": 104,
+    "updatedStoryRows": 10,
+    "addedQaRows": 11,
+    "declaredArtFiles": 72,
+    "verifiedArtFiles": 72,
+    "totalNativeCells": 93042
+  },
+  "appendedProductionIds": [
+    "BASE36-family-bunnyjax",
+    "BASE36-asset-bunnyjax-selection",
+    "BASE36-asset-bunnyjax-stance",
+    "BASE36-family-maidribbit",
+    "BASE36-asset-maidribbit-selection",
+    "BASE36-asset-maidribbit-stance",
+    "BASE36-family-ghostlyvacuum",
+    "BASE36-asset-ghostlyvacuum-selection",
+    "BASE36-asset-ghostlyvacuum-stance",
+    "BASE36-family-mingtrophy",
+    "BASE36-asset-mingtrophy-selection",
+    "BASE36-asset-mingtrophy-stance",
+    "BASE36-family-disappearingguymicrophone",
+    "BASE36-asset-disappearingguymicrophone-selection",
+    "BASE36-asset-disappearingguymicrophone-stance",
+    "COST-glitch-murderdrones-queenie-hommage",
+    "BASE36-asset-glitch-murderdrones-queenie-hommage-selection",
+    "BASE36-asset-glitch-murderdrones-queenie-hommage-stance",
+    "COST-glitch-murderdrones-queenie-resident",
+    "BASE36-asset-glitch-murderdrones-queenie-resident-selection",
+    "BASE36-asset-glitch-murderdrones-queenie-resident-stance",
+    "COST-glitch-murderdrones-queenie-fusion",
+    "BASE36-asset-glitch-murderdrones-queenie-fusion-selection",
+    "BASE36-asset-glitch-murderdrones-queenie-fusion-stance",
+    "COST-glitch-metarunner-queenie-hommage",
+    "BASE36-asset-glitch-metarunner-queenie-hommage-selection",
+    "BASE36-asset-glitch-metarunner-queenie-hommage-stance",
+    "COST-glitch-metarunner-queenie-resident",
+    "BASE36-asset-glitch-metarunner-queenie-resident-selection",
+    "BASE36-asset-glitch-metarunner-queenie-resident-stance",
+    "COST-glitch-metarunner-queenie-fusion",
+    "BASE36-asset-glitch-metarunner-queenie-fusion-selection",
+    "BASE36-asset-glitch-metarunner-queenie-fusion-stance",
+    "COST-glitch-sunsetparadise-queenie-hommage",
+    "BASE36-asset-glitch-sunsetparadise-queenie-hommage-selection",
+    "BASE36-asset-glitch-sunsetparadise-queenie-hommage-stance",
+    "COST-glitch-sunsetparadise-queenie-resident",
+    "BASE36-asset-glitch-sunsetparadise-queenie-resident-selection",
+    "BASE36-asset-glitch-sunsetparadise-queenie-resident-stance",
+    "COST-glitch-sunsetparadise-queenie-fusion",
+    "BASE36-asset-glitch-sunsetparadise-queenie-fusion-selection",
+    "BASE36-asset-glitch-sunsetparadise-queenie-fusion-stance",
+    "COST-glitch-gaslightdistrict-queenie-hommage",
+    "BASE37-asset-glitch-gaslightdistrict-queenie-hommage-selection",
+    "BASE37-asset-glitch-gaslightdistrict-queenie-hommage-stance",
+    "COST-glitch-gaslightdistrict-queenie-resident",
+    "BASE37-asset-glitch-gaslightdistrict-queenie-resident-selection",
+    "BASE37-asset-glitch-gaslightdistrict-queenie-resident-stance",
+    "COST-glitch-gaslightdistrict-queenie-fusion",
+    "BASE37-asset-glitch-gaslightdistrict-queenie-fusion-selection",
+    "BASE37-asset-glitch-gaslightdistrict-queenie-fusion-stance",
+    "COST-glitch-knightsofguinevere-queenie-hommage",
+    "BASE37-asset-glitch-knightsofguinevere-queenie-hommage-selection",
+    "BASE37-asset-glitch-knightsofguinevere-queenie-hommage-stance",
+    "COST-glitch-knightsofguinevere-queenie-resident",
+    "BASE37-asset-glitch-knightsofguinevere-queenie-resident-selection",
+    "BASE37-asset-glitch-knightsofguinevere-queenie-resident-stance",
+    "COST-glitch-knightsofguinevere-queenie-fusion",
+    "BASE37-asset-glitch-knightsofguinevere-queenie-fusion-selection",
+    "BASE37-asset-glitch-knightsofguinevere-queenie-fusion-stance",
+    "COST-glitch-gameoverse-queenie-hommage",
+    "BASE37-asset-glitch-gameoverse-queenie-hommage-selection",
+    "BASE37-asset-glitch-gameoverse-queenie-hommage-stance",
+    "COST-glitch-gameoverse-queenie-resident",
+    "BASE37-asset-glitch-gameoverse-queenie-resident-selection",
+    "BASE37-asset-glitch-gameoverse-queenie-resident-stance",
+    "COST-glitch-gameoverse-queenie-fusion",
+    "BASE37-asset-glitch-gameoverse-queenie-fusion-selection",
+    "BASE37-asset-glitch-gameoverse-queenie-fusion-stance",
+    "COST-glitch-lackadaisy-queenie-hommage",
+    "BASE37-asset-glitch-lackadaisy-queenie-hommage-selection",
+    "BASE37-asset-glitch-lackadaisy-queenie-hommage-stance",
+    "COST-glitch-lackadaisy-queenie-resident",
+    "BASE37-asset-glitch-lackadaisy-queenie-resident-selection",
+    "BASE37-asset-glitch-lackadaisy-queenie-resident-stance",
+    "COST-glitch-lackadaisy-queenie-fusion",
+    "BASE37-asset-glitch-lackadaisy-queenie-fusion-selection",
+    "BASE37-asset-glitch-lackadaisy-queenie-fusion-stance",
+    "COST-glitch-smg4-queenie-hommage",
+    "BASE37-asset-glitch-smg4-queenie-hommage-selection",
+    "BASE37-asset-glitch-smg4-queenie-hommage-stance",
+    "COST-glitch-smg4-queenie-resident",
+    "BASE37-asset-glitch-smg4-queenie-resident-selection",
+    "BASE37-asset-glitch-smg4-queenie-resident-stance",
+    "COST-glitch-smg4-queenie-fusion",
+    "BASE37-asset-glitch-smg4-queenie-fusion-selection",
+    "BASE37-asset-glitch-smg4-queenie-fusion-stance",
+    "COST-glitch-ultrajumpmania-queenie-hommage",
+    "BASE37-asset-glitch-ultrajumpmania-queenie-hommage-selection",
+    "BASE37-asset-glitch-ultrajumpmania-queenie-hommage-stance",
+    "COST-glitch-ultrajumpmania-queenie-resident",
+    "BASE37-asset-glitch-ultrajumpmania-queenie-resident-selection",
+    "BASE37-asset-glitch-ultrajumpmania-queenie-resident-stance",
+    "COST-glitch-ultrajumpmania-queenie-fusion",
+    "BASE37-asset-glitch-ultrajumpmania-queenie-fusion-selection",
+    "BASE37-asset-glitch-ultrajumpmania-queenie-fusion-stance",
+    "BASE36-projectile-queenie-royal",
+    "BASE36-projectile-ribbit-lily",
+    "BASE36-projectile-kaufmo-ball",
+    "BASE36-projectile-ming-star",
+    "BASE37-projectile-ghostly-wisp",
+    "BASE37-projectile-orbsman-orb",
+    "BASE37-projectile-oyster-pearl",
+    "BASE37-projectile-abel-program"
+  ],
+  "appendedQaIds": [
+    "BASE36-native",
+    "BASE36-official",
+    "BASE36-original",
+    "BASE36-projectiles",
+    "BASE36-static",
+    "BASE36-prefix",
+    "BASE36-endings",
+    "BASE36-search",
+    "BASE36-global",
+    "BASE36-browser",
+    "TRACKER36-update"
+  ],
+  "appendedSourceIds": [
+    "glitch-base-20261125-bunnyjax",
+    "glitch-base-20261125-maidribbit",
+    "glitch-base-20261125-ghostlyvacuum",
+    "glitch-base-20261125-mingtrophy",
+    "glitch-base-20261125-disappearingguymicrophone",
+    "encore-queenie-murderdrones-hommage-20261125",
+    "encore-queenie-murderdrones-resident-20261125",
+    "encore-queenie-murderdrones-fusion-20261125",
+    "encore-queenie-metarunner-hommage-20261125",
+    "encore-queenie-metarunner-resident-20261125",
+    "encore-queenie-metarunner-fusion-20261125",
+    "encore-queenie-sunsetparadise-hommage-20261125",
+    "encore-queenie-sunsetparadise-resident-20261125",
+    "encore-queenie-sunsetparadise-fusion-20261125",
+    "encore-queenie-gaslightdistrict-hommage-20261125-b",
+    "encore-queenie-gaslightdistrict-resident-20261125-b",
+    "encore-queenie-gaslightdistrict-fusion-20261125-b",
+    "encore-queenie-knightsofguinevere-hommage-20261125-b",
+    "encore-queenie-knightsofguinevere-resident-20261125-b",
+    "encore-queenie-knightsofguinevere-fusion-20261125-b",
+    "encore-queenie-gameoverse-hommage-20261125-b",
+    "encore-queenie-gameoverse-resident-20261125-b",
+    "encore-queenie-gameoverse-fusion-20261125-b",
+    "encore-queenie-lackadaisy-hommage-20261125-b",
+    "encore-queenie-lackadaisy-resident-20261125-b",
+    "encore-queenie-lackadaisy-fusion-20261125-b",
+    "encore-queenie-smg4-hommage-20261125-b",
+    "encore-queenie-smg4-resident-20261125-b",
+    "encore-queenie-smg4-fusion-20261125-b",
+    "encore-queenie-ultrajumpmania-hommage-20261125-b",
+    "encore-queenie-ultrajumpmania-resident-20261125-b",
+    "encore-queenie-ultrajumpmania-fusion-20261125-b"
+  ],
+  "appendedFeatureIds": [],
+  "coverageChanges": {
+    "addedFighters": 0,
+    "addedTechniques": 0,
+    "addedStages": 0,
+    "addedOfficialCostumes": 5,
+    "addedOriginalCrossoverCostumes": 27,
+    "addedPngs": 72,
+    "recoveredPngs": 43,
+    "generatedThisSessionPngs": 29,
+    "addedBasePngs": 64,
+    "addedProjectilePngs": 8,
+    "newActionPngs": 0,
+    "newAnimations": 0,
+    "requiredSlotsPerNewFamily": 2,
+    "priorCostumesPreserved": 508,
+    "localPrefixPreserved": 522,
+    "historicalRowsPreservedExceptDeclaredCellChanges": true,
+    "updatedStoryRowIds": [
+      "ABS34-panel-cellarabstraction-epilogue-3",
+      "ABS34-panel-aquaticabstraction-epilogue-3",
+      "ABS34-panel-abstractedjax-epilogue-3",
+      "ABS34-panel-abstractedqueenie-epilogue-3",
+      "ABS34-panel-abstractedribbit-epilogue-3",
+      "ABS34-panel-originalabstractedpomni-epilogue-3",
+      "ABS34-panel-originalabstractedragatha-epilogue-3",
+      "ABS34-panel-originalabstractedgangle-epilogue-3",
+      "ABS34-panel-originalabstractedkinger-epilogue-3",
+      "ABS34-panel-originalabstractedzooble-epilogue-3"
+    ],
+    "updatedFeatureIds": [
+      "PRE-03",
+      "PRD-11",
+      "INT-11",
+      "PRE-BASE-35"
+    ],
+    "historicalNotesPreserved": true,
+    "historicalCoverageSnapshotsPreserved": true
+  },
+  "formulas": [
+    {
+      "cell": "B7",
+      "formula": "=COUNTA('Combattants'!A6:A69)",
+      "value": 64
+    },
+    {
+      "cell": "B8",
+      "formula": "=COUNTA('Techniques'!A6:A645)",
+      "value": 640
+    },
+    {
+      "cell": "B9",
+      "formula": "=COUNTA('Arènes'!A6:A32)",
+      "value": 27
+    },
+    {
+      "cell": "B10",
+      "formula": "=COUNTA('Atlas'!A6:A189)",
+      "value": 184
+    },
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3920,\"Costume crossover\")+COUNTIFS('Production'!B6:B3920,\"Tenue Circus\")",
+      "value": 540
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Arrangement d’arène\")",
+      "value": 64
+    },
+    {
+      "cell": "B15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$112,B$14)",
+      "value": 86
+    },
+    {
+      "cell": "C15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$112,C$14)",
+      "value": 7
+    },
+    {
+      "cell": "D15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$112,D$14)",
+      "value": 12
+    },
+    {
+      "cell": "E15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$112,E$14)",
+      "value": 2
+    },
+    {
+      "cell": "F15",
+      "formula": "=COUNTA('Fonctionnalités'!A6:A112)",
+      "value": 107
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,B$14)",
+      "value": 2705
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,C$14)",
+      "value": 987
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,D$14)",
+      "value": 54
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3920,E$14)",
+      "value": 169
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3920)",
+      "value": 3915
+    },
+    {
+      "cell": "B17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$413,B$14)",
+      "value": 403
+    },
+    {
+      "cell": "C17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$413,C$14)",
+      "value": 0
+    },
+    {
+      "cell": "D17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$413,D$14)",
+      "value": 4
+    },
+    {
+      "cell": "E17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$413,E$14)",
+      "value": 1
+    },
+    {
+      "cell": "F17",
+      "formula": "=COUNTA('Scénarios'!A6:A413)",
+      "value": 408
+    },
+    {
+      "cell": "B18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$189,B$14)",
+      "value": 116
+    },
+    {
+      "cell": "C18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$189,C$14)",
+      "value": 68
+    },
+    {
+      "cell": "D18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$189,D$14)",
+      "value": 0
+    },
+    {
+      "cell": "E18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$189,E$14)",
+      "value": 0
+    },
+    {
+      "cell": "F18",
+      "formula": "=COUNTA('Atlas'!A6:A189)",
+      "value": 184
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3920,\"Tableau d’histoire\")&\" tableaux\"",
+      "value": "64 routes et 384 tableaux"
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "value": "256 briefings de rencontre"
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Arène\",'Production'!D6:D3920,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "value": "27 thèmes musicaux d’arènes"
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2523,B21)",
+      "value": 2493
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2523,C21)",
+      "value": 0
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2523,D21)",
+      "value": 20
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2523,E21)",
+      "value": 2
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2523)",
+      "value": 2518
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "value": "26 motifs sonores synthétiques"
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2523,\"Partiel\")",
+      "value": 3
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "value": "320 séquences de présentation"
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "value": "27 ambiances visuelles animées"
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Costume\")&\" costumes historiques redessinés\"",
+      "value": "20 costumes historiques redessinés"
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3920,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "value": "839 fiches, hors tenues crossover"
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Finition visuelle\")&\" présentations de KO\"",
+      "value": "192 présentations de KO"
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3920,\"Arène\",'Production'!D6:D3920,\"Ambiance sonore\",'Production'!E6:E3920,\"Implémenté\")&\" ambiances sonores originales\"",
+      "value": "27 ambiances sonores originales"
+    }
+  ],
+  "statusMutationCell": "E6",
+  "scopes": [
+    [
+      "Synthèse",
+      "A1:H18",
+      "summary-top"
+    ],
+    [
+      "Synthèse",
+      "A19:H35",
+      "summary-bottom"
+    ],
+    [
+      "Fonctionnalités",
+      "A16:I16",
+      "feature-int-11"
+    ],
+    [
+      "Fonctionnalités",
+      "A62:I62",
+      "feature-pre-03"
+    ],
+    [
+      "Fonctionnalités",
+      "A95:I95",
+      "feature-prd-11"
+    ],
+    [
+      "Fonctionnalités",
+      "A112:I112",
+      "feature-pre-base-35"
+    ],
+    [
+      "Production",
+      "A3509:J3509",
+      "story-ending-cellarabstraction"
+    ],
+    [
+      "Production",
+      "A3529:J3529",
+      "story-ending-aquaticabstraction"
+    ],
+    [
+      "Production",
+      "A3549:J3549",
+      "story-ending-abstractedjax"
+    ],
+    [
+      "Production",
+      "A3569:J3569",
+      "story-ending-abstractedqueenie"
+    ],
+    [
+      "Production",
+      "A3589:J3589",
+      "story-ending-abstractedribbit"
+    ],
+    [
+      "Production",
+      "A3609:J3609",
+      "story-ending-originalabstractedpomni"
+    ],
+    [
+      "Production",
+      "A3629:J3629",
+      "story-ending-originalabstractedragatha"
+    ],
+    [
+      "Production",
+      "A3649:J3649",
+      "story-ending-originalabstractedgangle"
+    ],
+    [
+      "Production",
+      "A3669:J3669",
+      "story-ending-originalabstractedkinger"
+    ],
+    [
+      "Production",
+      "A3689:J3689",
+      "story-ending-originalabstractedzooble"
+    ],
+    [
+      "Production",
+      "A3817:J3819",
+      "base-family-bunnyjax"
+    ],
+    [
+      "Production",
+      "A3820:J3822",
+      "base-family-maidribbit"
+    ],
+    [
+      "Production",
+      "A3823:J3825",
+      "base-family-ghostlyvacuum"
+    ],
+    [
+      "Production",
+      "A3826:J3828",
+      "base-family-mingtrophy"
+    ],
+    [
+      "Production",
+      "A3829:J3831",
+      "base-family-disappearingguymicrophone"
+    ],
+    [
+      "Production",
+      "A3832:J3834",
+      "base-family-glitch-murderdrones-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3835:J3837",
+      "base-family-glitch-murderdrones-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3838:J3840",
+      "base-family-glitch-murderdrones-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3841:J3843",
+      "base-family-glitch-metarunner-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3844:J3846",
+      "base-family-glitch-metarunner-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3847:J3849",
+      "base-family-glitch-metarunner-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3850:J3852",
+      "base-family-glitch-sunsetparadise-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3853:J3855",
+      "base-family-glitch-sunsetparadise-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3856:J3858",
+      "base-family-glitch-sunsetparadise-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3859:J3861",
+      "base-family-glitch-gaslightdistrict-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3862:J3864",
+      "base-family-glitch-gaslightdistrict-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3865:J3867",
+      "base-family-glitch-gaslightdistrict-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3868:J3870",
+      "base-family-glitch-knightsofguinevere-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3871:J3873",
+      "base-family-glitch-knightsofguinevere-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3874:J3876",
+      "base-family-glitch-knightsofguinevere-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3877:J3879",
+      "base-family-glitch-gameoverse-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3880:J3882",
+      "base-family-glitch-gameoverse-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3883:J3885",
+      "base-family-glitch-gameoverse-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3886:J3888",
+      "base-family-glitch-lackadaisy-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3889:J3891",
+      "base-family-glitch-lackadaisy-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3892:J3894",
+      "base-family-glitch-lackadaisy-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3895:J3897",
+      "base-family-glitch-smg4-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3898:J3900",
+      "base-family-glitch-smg4-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3901:J3903",
+      "base-family-glitch-smg4-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3904:J3906",
+      "base-family-glitch-ultrajumpmania-queenie-hommage"
+    ],
+    [
+      "Production",
+      "A3907:J3909",
+      "base-family-glitch-ultrajumpmania-queenie-resident"
+    ],
+    [
+      "Production",
+      "A3910:J3912",
+      "base-family-glitch-ultrajumpmania-queenie-fusion"
+    ],
+    [
+      "Production",
+      "A3913:J3914",
+      "projectiles-1"
+    ],
+    [
+      "Production",
+      "A3915:J3916",
+      "projectiles-2"
+    ],
+    [
+      "Production",
+      "A3917:J3918",
+      "projectiles-3"
+    ],
+    [
+      "Production",
+      "A3919:J3920",
+      "projectiles-4"
+    ],
+    [
+      "QA",
+      "A2513:I2514",
+      "qa-1"
+    ],
+    [
+      "QA",
+      "A2515:I2516",
+      "qa-2"
+    ],
+    [
+      "QA",
+      "A2517:I2518",
+      "qa-3"
+    ],
+    [
+      "QA",
+      "A2519:I2520",
+      "qa-4"
+    ],
+    [
+      "QA",
+      "A2521:I2522",
+      "qa-5"
+    ],
+    [
+      "QA",
+      "A2523:I2523",
+      "qa-6"
+    ],
+    [
+      "Références",
+      "A188:E190",
+      "references-1"
+    ],
+    [
+      "Références",
+      "A191:E193",
+      "references-2"
+    ],
+    [
+      "Références",
+      "A194:E196",
+      "references-3"
+    ],
+    [
+      "Références",
+      "A197:E199",
+      "references-4"
+    ],
+    [
+      "Références",
+      "A200:E202",
+      "references-5"
+    ],
+    [
+      "Références",
+      "A203:E205",
+      "references-6"
+    ],
+    [
+      "Références",
+      "A206:E208",
+      "references-7"
+    ],
+    [
+      "Références",
+      "A209:E211",
+      "references-8"
+    ],
+    [
+      "Références",
+      "A212:E214",
+      "references-9"
+    ],
+    [
+      "Références",
+      "A215:E217",
+      "references-10"
+    ],
+    [
+      "Références",
+      "A218:E219",
+      "references-11"
+    ],
+    [
+      "Références",
+      "A220:E230",
+      "references-footer"
+    ]
+  ],
+  "historicalFooterShift": 32,
+  "assetSlotChecks": [
+    {
+      "id": "bunnyjax",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+      "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92",
+      "bytes": 748230,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "bunnyjax",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+      "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2",
+      "bytes": 952942,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "maidribbit",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/maidribbit/selection.png",
+      "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525",
+      "bytes": 996202,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "maidribbit",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/maidribbit/stance.png",
+      "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47",
+      "bytes": 1190985,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+      "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d",
+      "bytes": 811820,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+      "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46",
+      "bytes": 724718,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+      "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8",
+      "bytes": 1222562,
+      "width": 1173,
+      "height": 1341,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+      "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9",
+      "bytes": 1136644,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+      "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+      "bytes": 672095,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+      "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+      "bytes": 749405,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+      "bytes": 1854418,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+      "bytes": 1667309,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+      "bytes": 1212445,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+      "bytes": 2021765,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+      "bytes": 1452362,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+      "bytes": 1849177,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+      "bytes": 943287,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+      "bytes": 1513934,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+      "bytes": 1646849,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+      "bytes": 1670178,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+      "bytes": 1777988,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+      "bytes": 1824011,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+      "bytes": 1018233,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+      "bytes": 1564333,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+      "bytes": 1017935,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+      "bytes": 1704161,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+      "bytes": 1439512,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+      "bytes": 2046369,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+      "sha256": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55",
+      "bytes": 1284867,
+      "width": 1162,
+      "height": 1353,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png",
+      "sha256": "17020e8971441ea8060cee41d0084b5796b03346561d239fb7c317c26b44d76d",
+      "bytes": 1702472,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+      "sha256": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772",
+      "bytes": 1422922,
+      "width": 1145,
+      "height": 1374,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png",
+      "sha256": "da9661920ea0fe76bba2977ba08c0eed5b8ce11722cd9471ce50195771f6954c",
+      "bytes": 1943378,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+      "sha256": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613",
+      "bytes": 1635594,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png",
+      "sha256": "93483b178e2193fe94420a31d8b70036f8bb893145afb2c1a1c7611203fd19e3",
+      "bytes": 2105246,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+      "sha256": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564",
+      "bytes": 1275253,
+      "width": 1312,
+      "height": 1199,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+      "sha256": "cda07be8d5a6a8af1d1e901447987393c9bcb5f9581b20adccace0e47bf6707d",
+      "bytes": 1893766,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+      "sha256": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f",
+      "bytes": 1435198,
+      "width": 1082,
+      "height": 1453,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+      "sha256": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089",
+      "bytes": 1921290,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+      "sha256": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b",
+      "bytes": 1517530,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+      "sha256": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed",
+      "bytes": 2023659,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+      "sha256": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d",
+      "bytes": 999706,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png",
+      "sha256": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef",
+      "bytes": 1497345,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+      "sha256": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2",
+      "bytes": 953650,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png",
+      "sha256": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd",
+      "bytes": 1624310,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+      "sha256": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d",
+      "bytes": 1055209,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+      "sha256": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4",
+      "bytes": 1797074,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/selection.png",
+      "sha256": "32645937f63eb76af693af825fd54e9d56d09f361b63ce31d185650e55d8173c",
+      "bytes": 1020936,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/stance.png",
+      "sha256": "4c0b36ae31dc665e5686027a3fac43a36c1582e7608621a4a204c9d387b0586c",
+      "bytes": 863504,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/resident/selection.png",
+      "sha256": "02b9d853f8c5fa5750d69a1f7fd6f9647a6bfb247edc6530b0b6991eabdeca93",
+      "bytes": 1371150,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/resident/stance.png",
+      "sha256": "9e308b2c7560cd5e0a5c04c4609abd2ac3843cd2fc5f6e8180338557666b1749",
+      "bytes": 983614,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/selection.png",
+      "sha256": "215a970a38cdbb0af7eb18ed3ebbafed3083aed5d4416ef4695224d6059402b7",
+      "bytes": 1381805,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/stance.png",
+      "sha256": "2bae7a524f6bf95ec43a457dddba8ea07d186b2fba597af880922368e44b3dd4",
+      "bytes": 1226692,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+      "sha256": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9",
+      "bytes": 867505,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+      "sha256": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92",
+      "bytes": 1509113,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+      "sha256": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247",
+      "bytes": 1011921,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/resident/stance.png",
+      "sha256": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193",
+      "bytes": 1695604,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+      "sha256": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524",
+      "bytes": 977798,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/fusion/stance.png",
+      "sha256": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3",
+      "bytes": 1701631,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png",
+      "sha256": "53e25f49fec589df7de0713fea5790a0858fd2ebe7810218c2ff82d27217a011",
+      "bytes": 1313360,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+      "sha256": "e765c28222b21d4c6fcce318380e1ee05ba7f13f241d60bf67aa450dfedf011e",
+      "bytes": 1711323,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/selection.png",
+      "sha256": "a9ce7ac1b8eed55dfc65ef0ad262526bc4a7a6c6c66418b292ddc338ea707ce3",
+      "bytes": 821312,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/stance.png",
+      "sha256": "c4a49ef34f742cf146472fab68a4bb2c69365f4a63d3a269e7b8a4e69e73bd66",
+      "bytes": 1886881,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/selection.png",
+      "sha256": "3c9c8875800bc1d2a731335497d64c002c18e503b05cb7da549f01f68274c303",
+      "bytes": 1701434,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/stance.png",
+      "sha256": "33f7c9594e33230e260645d6087abb0fb84704668bba2f18e070d43770d3bd3b",
+      "bytes": 2101965,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e",
+      "bytes": 477139,
+      "width": 1659,
+      "height": 948,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "queenie"
+    },
+    {
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746",
+      "bytes": 897786,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "ribbit"
+    },
+    {
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2",
+      "bytes": 836267,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "kaufmo"
+    },
+    {
+      "id": "ming-star",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2",
+      "bytes": 971882,
+      "width": 1429,
+      "height": 1100,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "ming"
+    },
+    {
+      "id": "ghostly-wisp",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ghostly-wisp.png",
+      "sha256": "a1c33623c887a1974ae458acd6e58b33c7841599557b8c4fee2e37ade352a072",
+      "bytes": 375002,
+      "width": 1774,
+      "height": 887,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "ghostly"
+    },
+    {
+      "id": "orbsman-orb",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/orbsman-orb.png",
+      "sha256": "69e3ada5e8794f6aa9bdccb4dd1604d492cc651dbcd893ee74cd2726946607ab",
+      "bytes": 775388,
+      "width": 1263,
+      "height": 1246,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "orbsman"
+    },
+    {
+      "id": "oyster-pearl",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/oyster-pearl.png",
+      "sha256": "e8ca85a34d1fcf774259aa002e7bbaf325b465b96dcc2ceda26e3eeae6fdf337",
+      "bytes": 773164,
+      "width": 1263,
+      "height": 1246,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "oyster"
+    },
+    {
+      "id": "abel-program",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/abel-program.png",
+      "sha256": "de5831b5684dfe7964ac43785a84b201b61dd8fa188a747d677add71985ee8f1",
+      "bytes": 734452,
+      "width": 1402,
+      "height": 1122,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "abel"
+    }
+  ],
+  "historicalProjectileAssets": [
+    {
+      "id": "juggle",
+      "file": "assets/encore/projectiles/juggle.png",
+      "sha256": "15cd61429c67cdeed36792df9f53af708ffa5a72cca47fde0ce1953b2a31e3ca",
+      "bytes": 936859
+    },
+    {
+      "id": "key",
+      "file": "assets/encore/projectiles/key.png",
+      "sha256": "fcf0d139cc3e144cd5f55598d2605fc480f4f83b9ca4c8f1f8f91cfc363bb8bb",
+      "bytes": 664395
+    },
+    {
+      "id": "button",
+      "file": "assets/encore/projectiles/button.png",
+      "sha256": "263a67aa5a58c50f251ac19df9fab00a120ca07dd5b8ad1f33a7153ace6db749",
+      "bytes": 1132725
+    },
+    {
+      "id": "comedy-mask",
+      "file": "assets/encore/projectiles/comedy-mask.png",
+      "sha256": "cd3b666ee0f213f0dc863937ec2ca83dc8c2a6f802869e6a1e3bf64625655579",
+      "bytes": 806419
+    },
+    {
+      "id": "module",
+      "file": "assets/encore/projectiles/module.png",
+      "sha256": "342fb24d122dedfb8672ed427ea6e5eeac239dafca5e2f5be53ae2004d58408e",
+      "bytes": 1196827
+    },
+    {
+      "id": "pellet",
+      "file": "assets/encore/projectiles/pellet.png",
+      "sha256": "72490295bfff9cd71f630395bec9f1397a0e2a0b967f4eb9c53b172d7dbc2428",
+      "bytes": 724802
+    },
+    {
+      "id": "confetti",
+      "file": "assets/encore/projectiles/confetti.png",
+      "sha256": "02a7a7443b1bec53d46942e0a0186b1cfcc86fbe8b75c221d7cdc1f3a26e49f7",
+      "bytes": 768164
+    },
+    {
+      "id": "bubble",
+      "file": "assets/encore/projectiles/bubble.png",
+      "sha256": "3ed90d71c9b06225cc248105ccf02e8276b7df255929e66fed3ba3a9e745a36d",
+      "bytes": 281076
+    },
+    {
+      "id": "candy",
+      "file": "assets/encore/projectiles/candy.png",
+      "sha256": "9306842e2e251f9091c51c110e2e2abc24ce56126d2c42c0b51ccd31049a6305",
+      "bytes": 944913
+    },
+    {
+      "id": "sugar",
+      "file": "assets/encore/projectiles/sugar.png",
+      "sha256": "98ce93981f5a28e5166b16b5e7616c581cdf4931f77ad6128a4f996371e4f1c3",
+      "bytes": 644393
+    },
+    {
+      "id": "gloink",
+      "file": "assets/encore/projectiles/gloink.png",
+      "sha256": "ef86cfcb1deb2d32395938fecfac6bf8b7766aafb7632cc063b0c060dd93dd13",
+      "bytes": 1092596
+    },
+    {
+      "id": "fudge",
+      "file": "assets/encore/projectiles/fudge.png",
+      "sha256": "468d99ed362df36d6166860ed36a51fad1727b01f6387a2bbe90455d292e1c32",
+      "bytes": 1182029
+    },
+    {
+      "id": "corruption",
+      "file": "assets/encore/projectiles/corruption.png",
+      "sha256": "1af3b8388e103e5eb181cedecbfe1a4bbe7de5a3d6b887def2373ba20038c0c0",
+      "bytes": 628053
+    },
+    {
+      "id": "spectral-shot",
+      "file": "assets/encore/projectiles/spectral-shot.png",
+      "sha256": "c85fb471b3f40bb7fd487c301f3a70da6279c7ae014c696f8b76cdd8a054a6d1",
+      "bytes": 888358
+    },
+    {
+      "id": "trick-box",
+      "file": "assets/encore/projectiles/trick-box.png",
+      "sha256": "79a6490f4ad351db76c7145da03e2553719f15cad1fabc2843f4c100b468f58b",
+      "bytes": 956600
+    }
+  ],
+  "activeAssetDigests": [
+    {
+      "id": "bunnyjax",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+      "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92",
+      "bytes": 748230,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "bunnyjax",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+      "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2",
+      "bytes": 952942,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "maidribbit",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/maidribbit/selection.png",
+      "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525",
+      "bytes": 996202,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "maidribbit",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/maidribbit/stance.png",
+      "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47",
+      "bytes": 1190985,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+      "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d",
+      "bytes": 811820,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+      "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46",
+      "bytes": 724718,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+      "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8",
+      "bytes": 1222562,
+      "width": 1173,
+      "height": 1341,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+      "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9",
+      "bytes": 1136644,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+      "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+      "bytes": 672095,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+      "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+      "bytes": 749405,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+      "bytes": 1854418,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+      "bytes": 1667309,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+      "bytes": 1212445,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+      "bytes": 2021765,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+      "bytes": 1452362,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+      "bytes": 1849177,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+      "bytes": 943287,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+      "bytes": 1513934,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+      "bytes": 1646849,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+      "bytes": 1670178,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+      "bytes": 1777988,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+      "bytes": 1824011,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+      "bytes": 1018233,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+      "bytes": 1564333,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+      "bytes": 1017935,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+      "bytes": 1704161,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+      "bytes": 1439512,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+      "bytes": 2046369,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+      "sha256": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55",
+      "bytes": 1284867,
+      "width": 1162,
+      "height": 1353,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png",
+      "sha256": "17020e8971441ea8060cee41d0084b5796b03346561d239fb7c317c26b44d76d",
+      "bytes": 1702472,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+      "sha256": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772",
+      "bytes": 1422922,
+      "width": 1145,
+      "height": 1374,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png",
+      "sha256": "da9661920ea0fe76bba2977ba08c0eed5b8ce11722cd9471ce50195771f6954c",
+      "bytes": 1943378,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+      "sha256": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613",
+      "bytes": 1635594,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png",
+      "sha256": "93483b178e2193fe94420a31d8b70036f8bb893145afb2c1a1c7611203fd19e3",
+      "bytes": 2105246,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+      "sha256": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564",
+      "bytes": 1275253,
+      "width": 1312,
+      "height": 1199,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+      "sha256": "cda07be8d5a6a8af1d1e901447987393c9bcb5f9581b20adccace0e47bf6707d",
+      "bytes": 1893766,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+      "sha256": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f",
+      "bytes": 1435198,
+      "width": 1082,
+      "height": 1453,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+      "sha256": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089",
+      "bytes": 1921290,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+      "sha256": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b",
+      "bytes": 1517530,
+      "width": 1122,
+      "height": 1402,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+      "sha256": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed",
+      "bytes": 2023659,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+      "sha256": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d",
+      "bytes": 999706,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png",
+      "sha256": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef",
+      "bytes": 1497345,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+      "sha256": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2",
+      "bytes": 953650,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png",
+      "sha256": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd",
+      "bytes": 1624310,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+      "sha256": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d",
+      "bytes": 1055209,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+      "sha256": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4",
+      "bytes": 1797074,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/selection.png",
+      "sha256": "32645937f63eb76af693af825fd54e9d56d09f361b63ce31d185650e55d8173c",
+      "bytes": 1020936,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/stance.png",
+      "sha256": "4c0b36ae31dc665e5686027a3fac43a36c1582e7608621a4a204c9d387b0586c",
+      "bytes": 863504,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/resident/selection.png",
+      "sha256": "02b9d853f8c5fa5750d69a1f7fd6f9647a6bfb247edc6530b0b6991eabdeca93",
+      "bytes": 1371150,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/resident/stance.png",
+      "sha256": "9e308b2c7560cd5e0a5c04c4609abd2ac3843cd2fc5f6e8180338557666b1749",
+      "bytes": 983614,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/selection.png",
+      "sha256": "215a970a38cdbb0af7eb18ed3ebbafed3083aed5d4416ef4695224d6059402b7",
+      "bytes": 1381805,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/stance.png",
+      "sha256": "2bae7a524f6bf95ec43a457dddba8ea07d186b2fba597af880922368e44b3dd4",
+      "bytes": 1226692,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+      "sha256": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9",
+      "bytes": 867505,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+      "sha256": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92",
+      "bytes": 1509113,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+      "sha256": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247",
+      "bytes": 1011921,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/resident/stance.png",
+      "sha256": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193",
+      "bytes": 1695604,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+      "sha256": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524",
+      "bytes": 977798,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/fusion/stance.png",
+      "sha256": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3",
+      "bytes": 1701631,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png",
+      "sha256": "53e25f49fec589df7de0713fea5790a0858fd2ebe7810218c2ff82d27217a011",
+      "bytes": 1313360,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+      "sha256": "e765c28222b21d4c6fcce318380e1ee05ba7f13f241d60bf67aa450dfedf011e",
+      "bytes": 1711323,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/selection.png",
+      "sha256": "a9ce7ac1b8eed55dfc65ef0ad262526bc4a7a6c6c66418b292ddc338ea707ce3",
+      "bytes": 821312,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/stance.png",
+      "sha256": "c4a49ef34f742cf146472fab68a4bb2c69365f4a63d3a269e7b8a4e69e73bd66",
+      "bytes": 1886881,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/selection.png",
+      "sha256": "3c9c8875800bc1d2a731335497d64c002c18e503b05cb7da549f01f68274c303",
+      "bytes": 1701434,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/stance.png",
+      "sha256": "33f7c9594e33230e260645d6087abb0fb84704668bba2f18e070d43770d3bd3b",
+      "bytes": 2101965,
+      "width": 1024,
+      "height": 1536,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "static-base",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "baseOnly": true
+    },
+    {
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e",
+      "bytes": 477139,
+      "width": 1659,
+      "height": 948,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "queenie"
+    },
+    {
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746",
+      "bytes": 897786,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "ribbit"
+    },
+    {
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2",
+      "bytes": 836267,
+      "width": 1254,
+      "height": 1254,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "kaufmo"
+    },
+    {
+      "id": "ming-star",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2",
+      "bytes": 971882,
+      "width": 1429,
+      "height": 1100,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "ming"
+    },
+    {
+      "id": "ghostly-wisp",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ghostly-wisp.png",
+      "sha256": "a1c33623c887a1974ae458acd6e58b33c7841599557b8c4fee2e37ade352a072",
+      "bytes": 375002,
+      "width": 1774,
+      "height": 887,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "ghostly"
+    },
+    {
+      "id": "orbsman-orb",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/orbsman-orb.png",
+      "sha256": "69e3ada5e8794f6aa9bdccb4dd1604d492cc651dbcd893ee74cd2726946607ab",
+      "bytes": 775388,
+      "width": 1263,
+      "height": 1246,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "orbsman"
+    },
+    {
+      "id": "oyster-pearl",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/oyster-pearl.png",
+      "sha256": "e8ca85a34d1fcf774259aa002e7bbaf325b465b96dcc2ceda26e3eeae6fdf337",
+      "bytes": 773164,
+      "width": 1263,
+      "height": 1246,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "oyster"
+    },
+    {
+      "id": "abel-program",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/abel-program.png",
+      "sha256": "de5831b5684dfe7964ac43785a84b201b61dd8fa188a747d677add71985ee8f1",
+      "bytes": 734452,
+      "width": 1402,
+      "height": 1122,
+      "nativeBytesVerified": true,
+      "published": true,
+      "kind": "projectile",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "evidence": "docs/art-generation/base-sprites-20261125-b/asset-inventory.json",
+      "owner": "abel"
+    },
+    {
+      "id": "juggle",
+      "file": "assets/encore/projectiles/juggle.png",
+      "sha256": "15cd61429c67cdeed36792df9f53af708ffa5a72cca47fde0ce1953b2a31e3ca",
+      "bytes": 936859
+    },
+    {
+      "id": "key",
+      "file": "assets/encore/projectiles/key.png",
+      "sha256": "fcf0d139cc3e144cd5f55598d2605fc480f4f83b9ca4c8f1f8f91cfc363bb8bb",
+      "bytes": 664395
+    },
+    {
+      "id": "button",
+      "file": "assets/encore/projectiles/button.png",
+      "sha256": "263a67aa5a58c50f251ac19df9fab00a120ca07dd5b8ad1f33a7153ace6db749",
+      "bytes": 1132725
+    },
+    {
+      "id": "comedy-mask",
+      "file": "assets/encore/projectiles/comedy-mask.png",
+      "sha256": "cd3b666ee0f213f0dc863937ec2ca83dc8c2a6f802869e6a1e3bf64625655579",
+      "bytes": 806419
+    },
+    {
+      "id": "module",
+      "file": "assets/encore/projectiles/module.png",
+      "sha256": "342fb24d122dedfb8672ed427ea6e5eeac239dafca5e2f5be53ae2004d58408e",
+      "bytes": 1196827
+    },
+    {
+      "id": "pellet",
+      "file": "assets/encore/projectiles/pellet.png",
+      "sha256": "72490295bfff9cd71f630395bec9f1397a0e2a0b967f4eb9c53b172d7dbc2428",
+      "bytes": 724802
+    },
+    {
+      "id": "confetti",
+      "file": "assets/encore/projectiles/confetti.png",
+      "sha256": "02a7a7443b1bec53d46942e0a0186b1cfcc86fbe8b75c221d7cdc1f3a26e49f7",
+      "bytes": 768164
+    },
+    {
+      "id": "bubble",
+      "file": "assets/encore/projectiles/bubble.png",
+      "sha256": "3ed90d71c9b06225cc248105ccf02e8276b7df255929e66fed3ba3a9e745a36d",
+      "bytes": 281076
+    },
+    {
+      "id": "candy",
+      "file": "assets/encore/projectiles/candy.png",
+      "sha256": "9306842e2e251f9091c51c110e2e2abc24ce56126d2c42c0b51ccd31049a6305",
+      "bytes": 944913
+    },
+    {
+      "id": "sugar",
+      "file": "assets/encore/projectiles/sugar.png",
+      "sha256": "98ce93981f5a28e5166b16b5e7616c581cdf4931f77ad6128a4f996371e4f1c3",
+      "bytes": 644393
+    },
+    {
+      "id": "gloink",
+      "file": "assets/encore/projectiles/gloink.png",
+      "sha256": "ef86cfcb1deb2d32395938fecfac6bf8b7766aafb7632cc063b0c060dd93dd13",
+      "bytes": 1092596
+    },
+    {
+      "id": "fudge",
+      "file": "assets/encore/projectiles/fudge.png",
+      "sha256": "468d99ed362df36d6166860ed36a51fad1727b01f6387a2bbe90455d292e1c32",
+      "bytes": 1182029
+    },
+    {
+      "id": "corruption",
+      "file": "assets/encore/projectiles/corruption.png",
+      "sha256": "1af3b8388e103e5eb181cedecbfe1a4bbe7de5a3d6b887def2373ba20038c0c0",
+      "bytes": 628053
+    },
+    {
+      "id": "spectral-shot",
+      "file": "assets/encore/projectiles/spectral-shot.png",
+      "sha256": "c85fb471b3f40bb7fd487c301f3a70da6279c7ae014c696f8b76cdd8a054a6d1",
+      "bytes": 888358
+    },
+    {
+      "id": "trick-box",
+      "file": "assets/encore/projectiles/trick-box.png",
+      "sha256": "79a6490f4ad351db76c7145da03e2553719f15cad1fabc2843f4c100b468f58b",
+      "bytes": 956600
+    }
+  ],
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-1a9ef920f4fe",
+    "artVersion": "c3a873743de8943b",
+    "artFiles": 6202,
+    "artBytes": 3510209132,
+    "sha256": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c"
+  },
+  "qaEvidence": {
+    "final": {
+      "command": "ENCORE_BUILD_OUTPUT=/tmp/cainos-6f9ceeefa959-build CAINOS_BUILD_OUTPUT=/tmp/cainos-6f9ceeefa959-build npm run qa",
+      "exitCode": 0,
+      "tests": 469,
+      "pass": 469,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "bothBuildsPassed": true,
+      "fullGateLog": "docs/art-generation/base-sprites-20261125-b/logs/qa.log",
+      "note": "Full gate and both normal builds passed. CainOS output verified immediately; standalone rebuilt at same source state and verified independently. Temporary build removed after successful comparisons."
+    },
+    "canvas": {
+      "bases": {
+        "report": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-canvas-review.json",
+        "reportSHA256": "bd79c5fe2382add3a641cc787b5b9e5a99cc3ee6ec0e7d871f27fae7d3cdbfe5",
+        "appearances": 32,
+        "authoredDrawings": 64,
+        "sourceAndFacingChecks": 640,
+        "actualStateDraws": 1920,
+        "portraits": 32,
+        "peakWorkerRSSBytes": 140144640,
+        "nativeAssetHashesVerified": 64,
+        "sourceFilesCurrentAndIdentical": 13,
+        "pass": true,
+        "visuallyReviewedSheets": 32,
+        "visualReview": "docs/art-generation/base-sprites-20261125-b/canvas-all/visual-review.json"
+      },
+      "projectiles": {
+        "report": "docs/art-generation/base-sprites-20261125-b/canvas-projectiles-current/projectile-canvas-review.json",
+        "reportSHA256": "e36bb787393539e591286df0bd702938ac97f75b0a3dbb5286f5221fc01a9c8e",
+        "images": 23,
+        "simulatedShots": 46,
+        "actualReflections": 44,
+        "nativeDrawChecks": 90,
+        "scenes": 0,
+        "aquaticOriginChecks": 0,
+        "pass": true,
+        "visualReview": "docs/art-generation/base-sprites-20261125-b/canvas-projectiles-current/visual-review.json"
+      },
+      "sourceHashesCurrent": true
+    },
+    "browser": {
+      "localStatus": "not_executed",
+      "localAssertions": 0,
+      "reason": "Installed Chromium wrapper has no underlying /usr/lib/chromium/chromium executable; no browser executable found in runtime caches. Native Canvas validation is separate.",
+      "preflight": "docs/art-generation/base-sprites-20261125-b/browser-preflight.json",
+      "currentRemoteStatus": "Read GitHub Actions on the exact publication commit; no browser success claimed by this local report."
+    },
+    "browserAssertionsExecutedByWorkbookUpdate": 0
+  }
+}

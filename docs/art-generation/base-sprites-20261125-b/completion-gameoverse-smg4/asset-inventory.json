@@ -1,0 +1,312 @@
+{
+  "assets": [
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png",
+      "bytes": 1497345,
+      "sha256": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 960529,
+      "alphaFractionTransparent": 0.6106878916422526,
+      "alphaVisibleBounds12": [
+        116,
+        10,
+        889,
+        1528
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-e3ea7fe5-d0f6-404e-bf1f-a6adf2fcb60c.png",
+      "nativeSha256": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+      "bytes": 999706,
+      "sha256": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 929915,
+      "alphaFractionTransparent": 0.5913548733367419,
+      "alphaVisibleBounds12": [
+        231,
+        23,
+        1147,
+        1230
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4d089c12-29c2-43f4-a5b0-0c671bb4f308.png",
+      "nativeSha256": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png",
+      "bytes": 1624310,
+      "sha256": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 901497,
+      "alphaFractionTransparent": 0.5731563568115234,
+      "alphaVisibleBounds12": [
+        103,
+        9,
+        902,
+        1530
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-6b930664-6b61-4b5a-be9c-944e58c9ced1.png",
+      "nativeSha256": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+      "bytes": 953650,
+      "sha256": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 973538,
+      "alphaFractionTransparent": 0.6190957675470393,
+      "alphaVisibleBounds12": [
+        237,
+        34,
+        1117,
+        1220
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-10c49c25-81c4-4b2f-8584-70e4bcf42bce.png",
+      "nativeSha256": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+      "bytes": 1797074,
+      "sha256": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1017229,
+      "alphaFractionTransparent": 0.6467367808024088,
+      "alphaVisibleBounds12": [
+        152,
+        35,
+        863,
+        1509
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cfebfef4-355b-4159-a76b-fec142944ebc.png",
+      "nativeSha256": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+      "bytes": 1055209,
+      "sha256": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1008098,
+      "alphaFractionTransparent": 0.6410732863767364,
+      "alphaVisibleBounds12": [
+        258,
+        39,
+        1112,
+        1223
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-bfbd095b-2fdb-4ee0-b21a-4fdeef1f6388.png",
+      "nativeSha256": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+      "bytes": 1509113,
+      "sha256": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 984627,
+      "alphaFractionTransparent": 0.6260089874267578,
+      "alphaVisibleBounds12": [
+        168,
+        8,
+        882,
+        1529
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-570add06-7199-4e44-a67a-57e6cdbf4a0c.png",
+      "nativeSha256": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+      "bytes": 867505,
+      "sha256": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1025614,
+      "alphaFractionTransparent": 0.6522121237558155,
+      "alphaVisibleBounds12": [
+        275,
+        26,
+        1034,
+        1227
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4dea0c87-9d63-4c07-b27c-f34ebbc1d20d.png",
+      "nativeSha256": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/queenie/resident/stance.png",
+      "bytes": 1695604,
+      "sha256": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 950685,
+      "alphaFractionTransparent": 0.6044292449951172,
+      "alphaVisibleBounds12": [
+        93,
+        18,
+        933,
+        1521
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-15d9e7d9-c204-4cbe-b14b-d4f020a9d351.png",
+      "nativeSha256": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+      "bytes": 1011921,
+      "sha256": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 964384,
+      "alphaFractionTransparent": 0.6132745231209095,
+      "alphaVisibleBounds12": [
+        119,
+        17,
+        1139,
+        1238
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-64c1c674-0cef-4526-9465-094dedead407.png",
+      "nativeSha256": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/queenie/fusion/stance.png",
+      "bytes": 1701631,
+      "sha256": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 923012,
+      "alphaFractionTransparent": 0.5868352254231771,
+      "alphaVisibleBounds12": [
+        102,
+        9,
+        898,
+        1526
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cf0e2933-f1e2-425d-a9ec-08ea6d6b3594.png",
+      "nativeSha256": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3",
+      "nativeBytesUnchanged": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+      "bytes": 977798,
+      "sha256": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 989830,
+      "alphaFractionTransparent": 0.6294562344675666,
+      "alphaVisibleBounds12": [
+        240,
+        12,
+        1124,
+        1236
+      ],
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-62e0ffb3-7076-429d-9b99-2f04e9e8ac90.png",
+      "nativeSha256": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524",
+      "nativeBytesUnchanged": true
+    }
+  ],
+  "summary": {
+    "count": 12,
+    "bytes": 15690866,
+    "alphaValidated": 12,
+    "nativeUnchanged": 12,
+    "visualReview": "All 12 final outputs inspected in tool-rendered image previews; existing gameplay renderer review remains with integration.",
+    "canonicalFidelityClaim": false
+  }
+}

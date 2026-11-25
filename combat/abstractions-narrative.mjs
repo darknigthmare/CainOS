@@ -43,8 +43,11 @@ export function buildAbstractionStory(def, index, fighters, legacyIds) {
     { title: 'La distance conservée', stageId: 'cellar', composition: 'duet', cast: [def.id, def.rivalId],
       summary: rivalName + ' retrouve le passage libre tandis que la reconstruction de ' + def.name + ' reste dans son tableau.',
       dialogue: [narration('Le résultat du match ne guérit personne, ne rétablit aucune ancienne apparence et ne modifie pas l’histoire officielle.')] },
-    { title: 'Le tableau se referme', stageId: 'abstractionthreshold', composition: 'solo', cast: [def.id],
-      summary: 'Le programme ferme la scène de ' + def.title.toLowerCase() + '. Les silhouettes et les archives conservent leurs identités distinctes.',
+    // One centered portrait has the same contain-scaled pixels in the desktop
+    // "wide" and "solo" layouts. Closing on the calibration stage keeps this
+    // final tableau visibly separate from the threshold entrance above.
+    { title: 'Le tableau se referme', stageId: 'training', composition: 'solo', cast: [def.id],
+      summary: 'La salle de calibration referme la scène de ' + def.title.toLowerCase() + '. Les silhouettes et les archives conservent leurs identités distinctes.',
       dialogue: [narration('La fin de ce parcours appartient au fan-game Encore. Elle ne promet ni sortie du cirque, ni retour, ni événement canonique.')] },
   ];
   for (const [kind, panels] of Object.entries({ prologue, epilogue })) {

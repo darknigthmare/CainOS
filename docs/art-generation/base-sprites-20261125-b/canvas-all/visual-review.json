@@ -1,0 +1,1060 @@
+{
+  "schema": "encore-current-static-base-visual-review/v1",
+  "reviewedAt": "2026-11-25T08:18:12.765Z",
+  "status": "reviewed",
+  "result": "pass-with-observations",
+  "offlineVersion": "0.7.0-1a9ef920f4fe",
+  "method": "All 32 current individual Canvas sheets were opened with view_image, followed by the current 32-family overview. Visual inspection covers portrait and full stance in both facings; source, transform and static-state checks come from the associated production-render report.",
+  "technicalReport": {
+    "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-canvas-review.json",
+    "bytes": 409365,
+    "sha256": "bd79c5fe2382add3a641cc787b5b9e5a99cc3ee6ec0e7d871f27fae7d3cdbfe5"
+  },
+  "overview": {
+    "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/bases-overview.jpg",
+    "bytes": 849099,
+    "sha256": "008442117eca9244c462ed7f9db421e1470d8bb2350245eee872a870877e8973"
+  },
+  "summary": {
+    "appearances": 32,
+    "authoredDrawings": 64,
+    "sourceAndFacingChecks": 640,
+    "actualStateDraws": 1920,
+    "portraits": 32,
+    "peakWorkerRSSBytes": 140144640,
+    "nativeAssetHashesVerified": 64,
+    "sourceFilesCurrentAndIdentical": 13,
+    "pass": true,
+    "individuallyInspectedSheets": 32,
+    "overviewInspected": true,
+    "blockingVisualIssues": 0
+  },
+  "integrity": {
+    "sourceSha256VerifiedAtReview": {
+      "combat/base-sprite-content.mjs": "a4bf5eda522961ecf35dfb0dd0be5393eefbbb44d128f3eb7f575a225325da28",
+      "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+      "combat/base-sprite-continuation-20261125-b.mjs": "62f1da85c2f2b834b8d4e6a6417caaecbf7df80998affe63bf917a7b25dbd7e1",
+      "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+      "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+      "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+      "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+      "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+      "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+      "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/offline-manifest.mjs": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c",
+      "scripts/render-combat-base-sprite-review.mjs": "add929f5b73f2bd84af922cbb581617436d0d745561daae957f75fe7a3a6f525"
+    },
+    "nativeFilesVerifiedAtReview": 64,
+    "sheetSha256VerifiedAtReview": 33
+  },
+  "observations": [
+    "Les 32 portraits et les 64 vues de garde sont présents, correctement cadrés et lisibles sur le fond quadrillé de Canvas.",
+    "Aucun fond rectangulaire opaque, écrasement de proportions ou rognage essentiel constaté sur les feuilles actuelles.",
+    "Les 27 variantes Queenie gardent leurs formes de pièce d’échecs, avec palettes et matériaux différenciés selon les univers ; les variantes de fusion ont leurs attributs propres.",
+    "Le texte du trophée Ming apparaît inversé dans la garde gauche. C’est le miroir intégral prévu, pas une perte de l’image.",
+    "L’overview permet de lire les 32 paires ; son détail réduit ne remplace pas les feuilles individuelles ouvertes séparément."
+  ],
+  "appearances": [
+    {
+      "id": "bunnyjax",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-bunnyjax.jpg",
+        "bytes": 52149,
+        "sha256": "0d695d0a62cec3d355e0d738dff314b6fbc557060e1dbb0bd054983e5925ba1a"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+          "bytes": 748230,
+          "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92"
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "bytes": 952942,
+          "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Portrait frontal et garde avec regard latéral distincts ; oreilles entières, nœud rose et bouton jaune lisibles.",
+        "Le miroir inverse proprement la garde ; silhouette et extrémités restent dans le cadre."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "maidribbit",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-maidribbit.jpg",
+        "bytes": 58878,
+        "sha256": "4b917855d6eda044969fe49eed3548337ab143cb853a53f956edb90d8c5b0274"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/base-costumes/maidribbit/selection.png",
+          "bytes": 996202,
+          "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525"
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/maidribbit/stance.png",
+          "bytes": 1190985,
+          "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Yeux sombres brillants, peau verte, coiffe et dentelle blanche restent distincts sur le fond quadrillé.",
+        "Le vêtement et la base entiers sont visibles dans les deux gardes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "ghostlyvacuum",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-ghostlyvacuum.jpg",
+        "bytes": 47965,
+        "sha256": "a861bc551494a75312b4cf8cce9e9ed9fa1ad1017b6fa32358bccdea630355ef"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+          "bytes": 811820,
+          "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d"
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "bytes": 724718,
+          "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Spectre menthe et machine grise avec tuyau conservés ; aucun élément de la silhouette aspirateur ne manque.",
+        "La buse et le regard changent de côté avec le miroir ; pas de rectangle opaque autour de l’ensemble."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "mingtrophy",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-mingtrophy.jpg",
+        "bytes": 61497,
+        "sha256": "c76ed94224d3745b69e5a699a8738480197c13884f8cd46512efb5a68a13f4f9"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+          "bytes": 1222562,
+          "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8"
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "bytes": 1136644,
+          "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Couronne de lauriers, silhouette menthe, socle rouge et or et plaque de trophée bien visibles.",
+        "Le texte de la plaque devient miroir dans la garde gauche : conséquence visible du miroir intégral, déjà connue."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-disappearingguymicrophone.jpg",
+        "bytes": 46400,
+        "sha256": "1bc5d688880ed0889db35b9ab933dd53153460b699b6fa0a53da28ea12ce998a"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+          "bytes": 672095,
+          "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a"
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "bytes": 749405,
+          "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Visage rouge sans traits, grand chapeau brun et microphone sur pied conservés.",
+        "L’orientation native gauche est correctement inversée pour la colonne droite ; chapeau, pieds et pied de micro restent entiers."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-murderdrones-queenie-hommage.jpg",
+        "bytes": 56042,
+        "sha256": "e5ab87d9d2ba19746bf0dc9485e00a95f4e2b0ed0e36c217c94636c0b27f7327"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+          "bytes": 1854418,
+          "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "bytes": 1667309,
+          "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Tête de reine en bois et yeux orangés, tenue violette à capuche et gants détachés cohérents entre portrait et garde.",
+        "Le bas de robe et la couronne restent entiers dans les deux orientations."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-murderdrones-queenie-resident.jpg",
+        "bytes": 55547,
+        "sha256": "32b2bab54ef594dd24eb51853e138a3a694e9015e6fb7c17f95f5359cbee9673"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+          "bytes": 1212445,
+          "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "bytes": 2021765,
+          "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Loupe latérale, vêtement sombre, sangles et pochettes distinguent clairement cette résidente.",
+        "Portrait et garde reprennent les mêmes couleurs et accessoires ; socle entier."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-murderdrones-queenie-fusion.jpg",
+        "bytes": 60783,
+        "sha256": "c8d22cab9bd87e0724f5d2bcf669672d83759cf08c53930bf6892e2bcfd70096"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+          "bytes": 1452362,
+          "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "bytes": 1849177,
+          "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Tête et mains mécaniques couleur bronze, robe bordeaux et col d’hermine lisibles.",
+        "La silhouette garde sa base de pièce d’échecs ; pas de compression ou de membre coupé visible."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-metarunner-queenie-hommage.jpg",
+        "bytes": 53808,
+        "sha256": "ce7070789cdf4dc45949da20cebb0f9d7baee787cf9368c131f836104867e86a"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+          "bytes": 943287,
+          "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "bytes": 1513934,
+          "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Veste bleue à liserés cyan, gants blancs et une main mécanique, jupe bordeaux et tête en bois concordent.",
+        "Le regard et les mains s’inversent avec la garde gauche sans déformer la veste."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-metarunner-queenie-resident.jpg",
+        "bytes": 55077,
+        "sha256": "cf0850057a7ecb89feb61abc059de6ae63c7792aaefa6f8fb8ee5c3b08701121"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+          "bytes": 1646849,
+          "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "bytes": 1670178,
+          "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Long manteau magenta et turquoise, dispositif cyan et petits détails numériques lisibles.",
+        "La grande silhouette reste proportionnée et ancrée ; les deux bases sont complètes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-metarunner-queenie-fusion.jpg",
+        "bytes": 61284,
+        "sha256": "2575abe80bcabb2fda4e47dcdb5c74828e9d725c8157dbd5aed9f05f9c44c39a"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+          "bytes": 1777988,
+          "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "bytes": 1824011,
+          "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Tête bleue, couronne et robe à accents cyan, blancs et or, mains segmentées visibles.",
+        "Les lignes verticales et le socle polygonal restent réguliers dans les deux orientations."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-sunsetparadise-queenie-hommage.jpg",
+        "bytes": 65566,
+        "sha256": "7bdd9a2f06100a90e87d827297b5ed18c364dee6646b2260657f22e68cf6620c"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+          "bytes": 1018233,
+          "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "bytes": 1564333,
+          "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Lunettes orange et violettes sur la couronne, tunique blanche et foulard rose identifiables.",
+        "Portrait buste et garde entière partagent les mêmes accessoires ; gants détachés lisibles."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-sunsetparadise-queenie-resident.jpg",
+        "bytes": 61185,
+        "sha256": "a5787519a84dab39cf2585b9b05468227c3e2c2661897635ebc583d29f4ec3da"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+          "bytes": 1017935,
+          "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "bytes": 1704161,
+          "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Cape vert profond à bordure dorée, foulard rouge et chaînes conservés.",
+        "Le miroir garde la silhouette nette et toute la bordure inférieure visible."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-sunsetparadise-queenie-fusion.jpg",
+        "bytes": 67622,
+        "sha256": "46289cf26e023e37415335a0b1f16dc9ceac0f17d078cb6d4c74ac417c2dc427"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+          "bytes": 1439512,
+          "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "bytes": 2046369,
+          "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Couronne de corail, vêtement rouge organique et bijoux turquoise reconnaissables.",
+        "Les branches de corail et la base de coquillage restent entières dans les gardes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-gaslightdistrict-queenie-hommage.jpg",
+        "bytes": 59268,
+        "sha256": "f9ddc039c66458cef202a1a0da0176cab686c67c2d99963381502e0874444c73"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+          "bytes": 1284867,
+          "sha256": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png",
+          "bytes": 1702472,
+          "sha256": "17020e8971441ea8060cee41d0084b5796b03346561d239fb7c317c26b44d76d"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Écharpe crème et panneaux de cuivre superposés cohérents entre portrait et garde.",
+        "Tête de reine, gants blancs détachés et socle d’hermine restent complets et bien orientés."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-gaslightdistrict-queenie-resident.jpg",
+        "bytes": 61223,
+        "sha256": "e08cf01b7628dbcf2cae9b2880488d68d0cb3f94bc75fb6fdad696850392bec7"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+          "bytes": 1422922,
+          "sha256": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png",
+          "bytes": 1943378,
+          "sha256": "da9661920ea0fe76bba2977ba08c0eed5b8ce11722cd9471ce50195771f6954c"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Manteau sombre bleu pétrole, broche coquillage et ceinture orange à cartes/pochettes lisibles.",
+        "La silhouette et les gants ne se confondent pas avec le fond ; les deux orientations conservent le socle."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-gaslightdistrict-queenie-fusion.jpg",
+        "bytes": 60582,
+        "sha256": "5e2945c06f1448f4795bc1a0b6babcbd95ff3b09aacd6cb128b3624d74b54283"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+          "bytes": 1635594,
+          "sha256": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png",
+          "bytes": 2105246,
+          "sha256": "93483b178e2193fe94420a31d8b70036f8bb893145afb2c1a1c7611203fd19e3"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Couronne de pierre usée, corail, algues et lanterne ambrée visibles ; mains vert d’eau distinctes.",
+        "Les déchirures du vêtement restent transparentes sur le quadrillage ; aucune boîte de fond visible."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-knightsofguinevere-queenie-hommage.jpg",
+        "bytes": 65509,
+        "sha256": "a1b069466c148e6f7891aa76a9f075a7b5f4790d7abad3ee84f6fbe41dd34097"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+          "bytes": 1275253,
+          "sha256": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+          "bytes": 1893766,
+          "sha256": "cda07be8d5a6a8af1d1e901447987393c9bcb5f9581b20adccace0e47bf6707d"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Coiffe violette à étoiles, robe lavande à liserés or et tête en bois cohérentes.",
+        "Le miroir conserve les deux volumes de la coiffe et la silhouette entière."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-knightsofguinevere-queenie-resident.jpg",
+        "bytes": 57715,
+        "sha256": "9147a687e90304e0e357b1d34784e4654cf3cf0019defb7f195c3459e413bc3d"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+          "bytes": 1435198,
+          "sha256": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+          "bytes": 1921290,
+          "sha256": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Gilet crème, col bleu, petite pierre ambre, ceinture bordeaux, clés et pochettes visibles.",
+        "Portrait buste et garde entière conservent les mêmes détails ; les gants flottants sont distincts."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-knightsofguinevere-queenie-fusion.jpg",
+        "bytes": 65624,
+        "sha256": "c391b1b3c50fc0af2cad2dc2812c41689b0e0ce38a1ade3655c14619c4a0f1a2"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+          "bytes": 1517530,
+          "sha256": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+          "bytes": 2023659,
+          "sha256": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Porcelaine crème et lavande, ornements dorés, cou articulé et médaillon mécanique bien lisibles.",
+        "Le socle complet, les broderies et les gants restent proportionnés et cohérents au miroir."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-gameoverse-queenie-hommage.jpg",
+        "bytes": 63194,
+        "sha256": "c43ff0f6a21d2da7a6f875437681df3ccf9f9ea8e09b7c118410caf1306b3a09"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+          "bytes": 999706,
+          "sha256": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png",
+          "bytes": 1497345,
+          "sha256": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Gilet jaune, écusson rond à étoile, gants jaunes et robe noire/jaune reconnaissables.",
+        "Les deux gardes sont entières ; couronne en bois et yeux rouges conservés."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-gameoverse-queenie-resident.jpg",
+        "bytes": 63283,
+        "sha256": "ec6ecc1e335ee50cd202192bcccdaa6eff9f4b37848f961d3994caec55e84272"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+          "bytes": 953650,
+          "sha256": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png",
+          "bytes": 1624310,
+          "sha256": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Manteau bordeaux et vert, motifs losanges, col d’hermine et petites clés lisibles.",
+        "La silhouette conique et les deux gants restent distincts et non rognés."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-gameoverse-queenie-fusion.jpg",
+        "bytes": 62367,
+        "sha256": "9e66bef773d1bcad735ac15be424e6a4ae6b65f00b1fbefff34e35ebeaaea975"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+          "bytes": 1055209,
+          "sha256": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+          "bytes": 1797074,
+          "sha256": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Corps cristallin violet à facettes, montures dorées et grand losange vert cohérents.",
+        "Les facettes ne sont pas étirées ; socle polygonal complet dans les deux sens."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-lackadaisy-queenie-hommage.jpg",
+        "bytes": 64765,
+        "sha256": "4e77e4d3c12c322c46f2f4eaeac94ec5a685215efebc1df99e12d44eae8682d8"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/selection.png",
+          "bytes": 1020936,
+          "sha256": "32645937f63eb76af693af825fd54e9d56d09f361b63ce31d185650e55d8173c"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/stance.png",
+          "bytes": 863504,
+          "sha256": "4c0b36ae31dc665e5686027a3fac43a36c1582e7608621a4a204c9d387b0586c"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Chapeau et manteau bleu pétrole, gilet jaune et chaîne dorée cohérents entre buste et garde.",
+        "Le volume de pièce d’échecs reste complet ; pas de jambe ajoutée par le rendu."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-lackadaisy-queenie-resident.jpg",
+        "bytes": 68294,
+        "sha256": "1180651a1fe6a083b387453fbec727dd76f1ab771fe0d02164c1a8a1daf8cbe1"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/lackadaisy/queenie/resident/selection.png",
+          "bytes": 1371150,
+          "sha256": "02b9d853f8c5fa5750d69a1f7fd6f9647a6bfb247edc6530b0b6991eabdeca93"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/lackadaisy/queenie/resident/stance.png",
+          "bytes": 983614,
+          "sha256": "9e308b2c7560cd5e0a5c04c4609abd2ac3843cd2fc5f6e8180338557666b1749"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Plume verte, col de fourrure claire, robe bordeaux et multiples chaînes dorées distincts.",
+        "La plume ne dépasse pas du cadre ; le miroir préserve la robe et le socle entiers."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-lackadaisy-queenie-fusion.jpg",
+        "bytes": 68565,
+        "sha256": "d73674e3876baac193ca5846f2a019d20bea642b8b0f41d465546bf2c76b0163"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/selection.png",
+          "bytes": 1381805,
+          "sha256": "215a970a38cdbb0af7eb18ed3ebbafed3083aed5d4416ef4695224d6059402b7"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/stance.png",
+          "bytes": 1226692,
+          "sha256": "2bae7a524f6bf95ec43a457dddba8ea07d186b2fba597af880922368e44b3dd4"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Oreilles, museau, moustaches et queue rayée identifient la variante féline, avec nœud vert et robe art déco.",
+        "La queue reste entièrement visible sur son côté respectif dans les deux gardes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-smg4-queenie-hommage.jpg",
+        "bytes": 59261,
+        "sha256": "6569a30eca07dcd9091eac35e3121b61b2ef7980965cc3fed550ec89923de206"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+          "bytes": 867505,
+          "sha256": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+          "bytes": 1509113,
+          "sha256": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Casquette bleue, symbole de caméra, tenue blanche et bleue et bretelles jaunes cohérents.",
+        "Tête de reine et gants détachés restent lisibles ; base de robe complète."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-smg4-queenie-resident.jpg",
+        "bytes": 62454,
+        "sha256": "75d4531b26ffd453ff43348b1770860fb43cc54e660269c3bf5e0046cd05261e"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+          "bytes": 1011921,
+          "sha256": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/smg4/queenie/resident/stance.png",
+          "bytes": 1695604,
+          "sha256": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Casque autour du cou, veste magenta, étoile rose et petit crayon/accessoire jaune visibles.",
+        "L’accessoire change de côté avec le miroir sans perte ; socle entier."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-smg4-queenie-fusion.jpg",
+        "bytes": 62108,
+        "sha256": "a8084e27490387bb0f6e14d42adb8cb14dd942dfd0f16db3cababe5f6dbb9591"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+          "bytes": 977798,
+          "sha256": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/smg4/queenie/fusion/stance.png",
+          "bytes": 1701631,
+          "sha256": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Tête dorée à facettes, plastron blanc/bleu, cœur lumineux cyan et cape rouge cohérents.",
+        "Le miroir préserve le volume mécanique et la cape ; aucun élément essentiel coupé."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-ultrajumpmania-queenie-hommage.jpg",
+        "bytes": 70834,
+        "sha256": "aa3badcb38b06893965fdd04dd80ef4a5870a94cdc42d7c96edcd7164c002ceb"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png",
+          "bytes": 1313360,
+          "sha256": "53e25f49fec589df7de0713fea5790a0858fd2ebe7810218c2ff82d27217a011"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "bytes": 1711323,
+          "sha256": "e765c28222b21d4c6fcce318380e1ee05ba7f13f241d60bf67aa450dfedf011e"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Feuilles et fruits près de la couronne, chemise jaune à fleurs, nœud rose et jupe corail cohérents.",
+        "Les feuilles, gants et base sont entièrement visibles dans les deux gardes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-ultrajumpmania-queenie-resident.jpg",
+        "bytes": 67851,
+        "sha256": "6915b7e47bf5bb391b739702269b8eaaf9bbef74c14081bfc45ae394bccd6943"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/selection.png",
+          "bytes": 821312,
+          "sha256": "a9ce7ac1b8eed55dfc65ef0ad262526bc4a7a6c6c66418b292ddc338ea707ce3"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/stance.png",
+          "bytes": 1886881,
+          "sha256": "c4a49ef34f742cf146472fab68a4bb2c69365f4a63d3a269e7b8a4e69e73bd66"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Couronne en bois, fleur blanche, cape de feuilles, robe tressée et foulard rouge identifiables.",
+        "Le motif tressé et la base d’hermine gardent leurs proportions ; silhouette entière."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "status": "reviewed",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261125-b/canvas-all/base-glitch-ultrajumpmania-queenie-fusion.jpg",
+        "bytes": 73243,
+        "sha256": "9085647aef743a31963874b9202d910a9ec5587bca588864f8cdee580580a17c"
+      },
+      "nativeFiles": {
+        "selection": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/selection.png",
+          "bytes": 1701434,
+          "sha256": "3c9c8875800bc1d2a731335497d64c002c18e503b05cb7da549f01f68274c303"
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/stance.png",
+          "bytes": 2101965,
+          "sha256": "33f7c9594e33230e260645d6087abb0fb84704668bba2f18e070d43770d3bd3b"
+        }
+      },
+      "inspectedViews": [
+        "portrait",
+        "stance-right",
+        "stance-left"
+      ],
+      "observations": [
+        "Palmes sur la couronne, texture de bois, collier de fleurs, feuillage rouge et racines tressées cohérents.",
+        "Le miroir préserve la couronne de palmes et la base de racines ; pas d’aplat opaque autour du personnage."
+      ],
+      "blockingIssues": []
+    }
+  ],
+  "limitations": [
+    "Revue Canvas native sous Node/Skia, sans navigateur, DOM, commandes, audio, service worker ou appareil physique.",
+    "Une garde réemployée dans dix états reste un seul dessin de garde ; cette revue ne crée ni animation ni dessin d’action supplémentaire.",
+    "Pas de certification de fidélité canonique 1:1 ; cette revue contrôle le rendu des PNG installés.",
+    "Les feuilles JPEG composées ne prouvent pas seules chaque valeur alpha des PNG. Les fichiers natifs sont inchangés et leur SHA256 a été revérifié.",
+    "Le premier passage a rencontré ENOSPC après 28 familles. La reprise a conservé ces captures seulement après vérification des SHA des sources et des PNG, puis rendu les quatre dernières familles ; les 32 JPEG ont été redécodés pour l’overview."
+  ],
+  "changes": "Only new review artifacts in canvas-all and canvas-projectiles-current; no runtime, manifest or native asset modification."
+}

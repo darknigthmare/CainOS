@@ -1,0 +1,319 @@
+{
+  "appearances": [
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55",
+        "stance": "17020e8971441ea8060cee41d0084b5796b03346561d239fb7c317c26b44d76d"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+        "stance": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png"
+      },
+      "observations": [
+        "Existing full-body stance reviewed and preserved without pixel changes.",
+        "Selection portrait preserves the supplied costume and queen-chess identity; both detached gloves and crown are complete.",
+        "Native RGBA transparency verified. Fine edge anti-aliasing retained.",
+        "Original Encore crossover; no canonical costume or pixel-exact certification claimed."
+      ],
+      "raster": {
+        "selection": {
+          "dimensions": [
+            1162,
+            1353
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 897928,
+          "visibleBounds": [
+            108,
+            27,
+            1049,
+            1328
+          ],
+          "bytes": 1284867
+        },
+        "stance": {
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 982052,
+          "visibleBounds": [
+            137,
+            34,
+            879,
+            1505
+          ],
+          "bytes": 1702472
+        }
+      },
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772",
+        "stance": "da9661920ea0fe76bba2977ba08c0eed5b8ce11722cd9471ce50195771f6954c"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+        "stance": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png"
+      },
+      "observations": [
+        "Existing full-body stance reviewed and preserved without pixel changes.",
+        "Selection portrait preserves the supplied costume and queen-chess identity; both detached gloves and crown are complete.",
+        "Native RGBA transparency verified. Fine edge anti-aliasing retained.",
+        "Original Encore crossover; no canonical costume or pixel-exact certification claimed."
+      ],
+      "raster": {
+        "selection": {
+          "dimensions": [
+            1145,
+            1374
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 919204,
+          "visibleBounds": [
+            61,
+            21,
+            1048,
+            1369
+          ],
+          "bytes": 1422922
+        },
+        "stance": {
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 954981,
+          "visibleBounds": [
+            111,
+            34,
+            880,
+            1506
+          ],
+          "bytes": 1943378
+        }
+      },
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613",
+        "stance": "93483b178e2193fe94420a31d8b70036f8bb893145afb2c1a1c7611203fd19e3"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+        "stance": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png"
+      },
+      "observations": [
+        "Existing full-body stance reviewed and preserved without pixel changes.",
+        "Selection portrait preserves the supplied costume and queen-chess identity; both detached gloves and crown are complete.",
+        "Native RGBA transparency verified. Fine edge anti-aliasing retained.",
+        "Original Encore crossover; no canonical costume or pixel-exact certification claimed."
+      ],
+      "raster": {
+        "selection": {
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 900096,
+          "visibleBounds": [
+            87,
+            8,
+            1049,
+            1392
+          ],
+          "bytes": 1635594
+        },
+        "stance": {
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 997402,
+          "visibleBounds": [
+            144,
+            22,
+            845,
+            1517
+          ],
+          "bytes": 2105246
+        }
+      },
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564",
+        "stance": "cda07be8d5a6a8af1d1e901447987393c9bcb5f9581b20adccace0e47bf6707d"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+        "stance": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png"
+      },
+      "observations": [
+        "Selection and full-body stance reviewed side by side; head proportions, orange eyes, detached gloves and selected costume preserved.",
+        "Complete crown, gloves and stance base remain inside the image bounds.",
+        "Native RGBA transparency verified; no post-generation pixel editing.",
+        "Original Encore crossover; no canonical costume or pixel-exact certification claimed.",
+        "Existing stance preserved byte-for-byte; royal-blue star headpiece behind the wooden crown retained in portrait."
+      ],
+      "raster": {
+        "selection": {
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 915163,
+          "visibleBounds": [
+            170,
+            13,
+            1159,
+            1159
+          ],
+          "bytes": 1275253
+        },
+        "stance": {
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 900448,
+          "visibleBounds": [
+            155,
+            41,
+            869,
+            1508
+          ],
+          "bytes": 1893766
+        }
+      },
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f",
+        "stance": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+        "stance": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png"
+      },
+      "observations": [
+        "Selection and full-body stance reviewed side by side; head proportions, orange eyes, detached gloves and selected costume preserved.",
+        "Complete crown, gloves and stance base remain inside the image bounds.",
+        "Native RGBA transparency verified; no post-generation pixel editing.",
+        "Original Encore crossover; no canonical costume or pixel-exact certification claimed.",
+        "Cream waistcoat, slate robe, brass key, amber badge and two pouches match the approved written design."
+      ],
+      "raster": {
+        "selection": {
+          "dimensions": [
+            1082,
+            1453
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 918662,
+          "visibleBounds": [
+            94,
+            14,
+            987,
+            1437
+          ],
+          "bytes": 1435198
+        },
+        "stance": {
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 972609,
+          "visibleBounds": [
+            162,
+            35,
+            839,
+            1513
+          ],
+          "bytes": 1921290
+        }
+      },
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b",
+        "stance": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+        "stance": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png"
+      },
+      "observations": [
+        "Selection and full-body stance reviewed side by side; head proportions, orange eyes, detached gloves and selected costume preserved.",
+        "Complete crown, gloves and stance base remain inside the image bounds.",
+        "Native RGBA transparency verified; no post-generation pixel editing.",
+        "Original Encore crossover; no canonical costume or pixel-exact certification claimed.",
+        "Body transformation uses ivory/lavender porcelain panels, brass neck, hatch and detached porcelain gloves, not a human in costume."
+      ],
+      "raster": {
+        "selection": {
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 870632,
+          "visibleBounds": [
+            62,
+            13,
+            1081,
+            1381
+          ],
+          "bytes": 1517530
+        },
+        "stance": {
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaZeroPixels": 989791,
+          "visibleBounds": [
+            149,
+            28,
+            828,
+            1487
+          ],
+          "bytes": 2023659
+        }
+      },
+      "issues": [],
+      "nativeFacing": 1
+    }
+  ]
+}

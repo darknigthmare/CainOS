@@ -1,0 +1,100 @@
+{
+  "records": [
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-84bc2664-f485-48fc-8ea3-33535ad05beb.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-af2c5ced-6e66-4b16-96ef-59339b34aba9.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-6c8ff15d-fc26-440f-acea-85474c32c72a.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-0493df3b-fa34-4854-b6e8-91c3f96ca0ac.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-135f3fb7-c26b-43cc-bf67-40e8858a67ed.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-e0af60a8-131f-48e4-bbbe-6440c79d1bf0.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-62bc74ec-5a93-45cc-96cf-86d7167374c3.png",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json"
+    },
+    {
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-eca66725-ad5b-43c1-a534-1d63d084ff93.png",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json"
+    },
+    {
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-d765e317-3d89-4932-9b03-dd5765fc60b8.png",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json"
+    },
+    {
+      "id": "ming-star",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-58aa2924-fc4d-4dda-b70a-63a8eaaf1461.png",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json"
+    }
+  ],
+  "followupPrompts": [
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance-corrected",
+      "ref": "/workspace/scratch/c7a56010b070/generated_images/exec-8a46a6b8-f694-41d2-bb36-d761eade1efd.png",
+      "prompt": "Use case: precise-object-edit. Edit ONLY one feature in this exact sprite: remove the entire separate dark black oval toy display pedestal under Queenie. Keep the rounded white black-spotted hem of her OWN robe as her lowest contour. There must be no stand, platform, disc or shadow underneath her. Preserve absolutely all Queenie costume design, face, head, eyes, crown, goggles, gloves, proportions, facing, outline, colors, stance and full-body composition. Keep native fully transparent background and generous margins. ONE single isolated sprite, no other objects, no text. Crisp 2D cel-shaded UHD art. Do not change to a human body or add feet."
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "ref": "/workspace/scratch/c7a56010b070/generated_images/exec-0493df3b-fa34-4854-b6e8-91c3f96ca0ac.png",
+      "prompt": "Use case: identity-preserve. Create a distinct character selection PORTRAIT of exactly the Queenie lighthouse keeper character in the reference. Keep exact face/crown wood anatomy, white eyes and orange-brown irises, bottom lashes, teal maritime cape with ochre trim, burgundy scarf, lighthouse clasp, cream wrap and floating white hands. Square 1024x1024 transparent PNG. Three-quarter view looking right, serene dignified greeting, both detached gloves gently clasped in front of chest. Portrait cropped at mid torso at lower frame; crown ball, all head points, eyes and both hands comfortably contained with clear 8% side/top margin. Native transparent background with zero shadow/glow, no environment, no disc/pedestal, no typography. Match reference's crisp hand-drawn 2D cel-shaded illustration exactly. Only one character, never a sheet. No human face/hair/arms/legs."
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "ref": "/workspace/scratch/c7a56010b070/generated_images/exec-e0af60a8-131f-48e4-bbbe-6440c79d1bf0.png",
+      "prompt": "Use case: identity-preserve. Create a distinct character selection PORTRAIT of exactly the coral-shell Queenie in reference. Preserve her same coral-orange queen crown and branching crown tips with round central ball, gentle pores, eye placement white eyes orange-brown irises and lower lashes, shell-white collar with black speckles, teal jewel, burgundy red fan-corals and shell-white floating gloved hands with thin teal joints. Square 1024x1024 transparent PNG, chest/upper body portrait looking slightly right with one pearl hand raised calmly near chest and other floating lower, composed regal expression. All crown branches, ball and hands fully within margins. Cropping at mid torso only. No black base, no scenery, no glow, shadow, text, human hair, legs or duplicate characters. Exact same UHD 2D hand-drawn cel-shaded art, no new redesign and no animation."
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "ref": "/workspace/scratch/c7a56010b070/generated_images/exec-af2c5ced-6e66-4b16-96ef-59339b34aba9.png",
+      "prompt": "Use case: identity-preserve. Create a distinct character selection portrait of exactly this Queenie × Meggy homage from the reference: identical warm brown chess queen head, crown ball, orange strap and dark goggles, white eyes with orange/red-brown irises and black lower lashes, white navy-trimmed sleeveless sports tunic with orange seams and the existing small pink triangular motif, spotted white ermine collar, burgundy sash, detached white gloves. Square 1024x1024 native transparent image. Upper body portrait, crowned head and goggles fully inside frame with 8% top/side margin, crop only at mid torso. New poised expression still facing slightly right, one floating hand resting lightly at collar and the other raised in greeting. Exact same high-quality crisp 2D cel shading; one character only. No pedestal, black base, floor shadow, background glow, text, human hair, mouth, arms or legs. The requested two drawings are separate static poses, no animation."
+    }
+  ]
+}

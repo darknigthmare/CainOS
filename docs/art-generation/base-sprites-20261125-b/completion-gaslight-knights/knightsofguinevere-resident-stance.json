@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: stylized-concept. Asset: ONE full-body static 2D fighting-game sprite, original Queenie x Knights of Guinevere backstage-warden design for Encore. First reference establishes polished 2D art style and full chess-queen proportions; second establishes Queenie identity only, exclude the commercial display stand. Keep the natural honey-brown turned-wood head, tall scalloped queen chess crown with round orb, two protruding half-lidded white eyes with orange irises, two black lower lashes per eye, no mouth or nose. One continuous tapered queen-chess torso without arms or legs. NEW CLOTHING: cream sleeveless work waistcoat over muted slate-blue tapered robe, brass buttons, navy pointed collar, narrow maroon velvet sash carrying a small brass wind-up key and two cream tool pouches, small amber solid-glass badge below collar, pale spotted ermine at full rounded base. Exactly two white floating gloves independent of torso, in a calm guard posture at chest height, one open one curled. Entire figure visible with generous margin, standing vertical in slight three-quarter view facing screen right, no perspective tilt. Fine dark outlines, detailed hand-painted 2D cel shading, clean textile and brass materials, not simple vector. No hat or star headpiece from first reference: crown fully visible. Truly transparent RGBA background, hard clean silhouette with antialiasing only, no halo, glow, shadow, vignette, ground, text, labels, scene, second figure or animation grid. One full character per image.",
+  "sources": [
+    "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+    "docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png"
+  ],
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-41175880-6663-4ee5-83d7-7d0f41a8e5fb.png",
+  "installed": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Complete static queen-chess silhouette; cream waistcoat, slate robe, navy collar, amber badge, maroon sash, brass key and two pouches. Full detached gloves and no human limbs.",
+  "sha256": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089",
+  "bytes": 1921290
+}

@@ -1,0 +1,152 @@
+{
+  "schema": "encore-native-base-review/v1",
+  "createdOn": "2026-11-25",
+  "complete": true,
+  "scope": "Native single static images. No animation. Original Encore designs.",
+  "assets": [
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-84bc2664-f485-48fc-8ea3-33535ad05beb.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+      "bytes": 1018233,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        185,
+        45,
+        1114,
+        1214
+      ],
+      "transparentFraction": 0.637713066194557,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-af2c5ced-6e66-4b16-96ef-59339b34aba9.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+      "bytes": 1564333,
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        122,
+        78,
+        853,
+        1386
+      ],
+      "transparentFraction": 0.6656316121419271,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-6c8ff15d-fc26-440f-acea-85474c32c72a.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+      "bytes": 1017935,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        218,
+        60,
+        964,
+        1234
+      ],
+      "transparentFraction": 0.6605942324275238,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-0493df3b-fa34-4854-b6e8-91c3f96ca0ac.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+      "bytes": 1704161,
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        189,
+        100,
+        867,
+        1461
+      ],
+      "transparentFraction": 0.6615645090738932,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-135f3fb7-c26b-43cc-bf67-40e8858a67ed.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+      "bytes": 1439512,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        210,
+        23,
+        1051,
+        1233
+      ],
+      "transparentFraction": 0.5816824757267971,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-e0af60a8-131f-48e4-bbbe-6440c79d1bf0.png",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+      "bytes": 2046369,
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        146,
+        81,
+        849,
+        1470
+      ],
+      "transparentFraction": 0.6135476430257162,
+      "nativeBytesVerified": true,
+      "accepted": true
+    }
+  ]
+}

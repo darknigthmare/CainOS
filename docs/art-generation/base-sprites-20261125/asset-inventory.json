@@ -1,0 +1,758 @@
+{
+  "schema": "encore-static-base-assets/v1",
+  "createdOn": "2026-11-25",
+  "baselineCommit": "616a585274506f20c54386d8be07a76e75e1f198",
+  "complete": true,
+  "families": 14,
+  "characterImages": 28,
+  "projectileImages": 4,
+  "animations": 0,
+  "assets": [
+    {
+      "id": "bunnyjax",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+      "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92",
+      "bytes": 748230,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        309,
+        121,
+        943,
+        1110
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6838887489857018,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "bunnyjax",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+      "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2",
+      "bytes": 952942,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        230,
+        96,
+        1008,
+        1158
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6224884198316583,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "maidribbit",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/maidribbit/selection.png",
+      "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525",
+      "bytes": 996202,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        313,
+        68,
+        940,
+        1182
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6600829498714162,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "maidribbit",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/maidribbit/stance.png",
+      "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47",
+      "bytes": 1190985,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        289,
+        23,
+        958,
+        1221
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6117502143062455,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+      "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d",
+      "bytes": 811820,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        268,
+        24,
+        1000,
+        1241
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.694076880616795,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+      "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46",
+      "bytes": 724718,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        300,
+        75,
+        967,
+        1218
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.7337292593525281,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+      "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8",
+      "bytes": 1222562,
+      "width": 1173,
+      "height": 1341,
+      "mode": "RGBA",
+      "alphaBounds": [
+        211,
+        35,
+        949,
+        1301
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5902562821322155,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+      "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9",
+      "bytes": 1136644,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        271,
+        27,
+        972,
+        1230
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6312412719489022,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+      "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+      "bytes": 672095,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        228,
+        82,
+        1008,
+        1185
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.731402414983377,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+      "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+      "bytes": 749405,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        208,
+        19,
+        1050,
+        1217
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6929640143566107,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+      "bytes": 1854418,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        179,
+        36,
+        799,
+        1515
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5945288340250651,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+      "bytes": 1667309,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        205,
+        65,
+        881,
+        1500
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6474463144938151,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+      "bytes": 1212445,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaBounds": [
+        252,
+        30,
+        878,
+        1386
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6394926016055495,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+      "bytes": 2021765,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        145,
+        54,
+        925,
+        1509
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6197026570638021,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+      "bytes": 1452362,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaBounds": [
+        59,
+        15,
+        1097,
+        1388
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5755210915905722,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+      "bytes": 1849177,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        182,
+        59,
+        816,
+        1480
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6496206919352213,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+      "bytes": 943287,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaBounds": [
+        294,
+        27,
+        846,
+        1382
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6751502183028574,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+      "bytes": 1513934,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        201,
+        65,
+        915,
+        1502
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6805578867594401,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+      "bytes": 1646849,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        184,
+        49,
+        816,
+        1522
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6461620330810547,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+      "bytes": 1670178,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        112,
+        78,
+        825,
+        1491
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6578229268391927,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+      "bytes": 1777988,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        145,
+        57,
+        826,
+        1492
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6434249877929688,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+      "bytes": 1824011,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        120,
+        59,
+        939,
+        1489
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6137663523356119,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+      "bytes": 1018233,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        185,
+        45,
+        1114,
+        1214
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.637713066194557,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+      "bytes": 1564333,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        122,
+        78,
+        853,
+        1386
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6656316121419271,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+      "bytes": 1017935,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        218,
+        60,
+        964,
+        1234
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6605942324275238,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+      "bytes": 1704161,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        189,
+        100,
+        867,
+        1461
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6615645090738932,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+      "bytes": 1439512,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        210,
+        23,
+        1051,
+        1233
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5816824757267971,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+      "bytes": 2046369,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        146,
+        81,
+        849,
+        1470
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6135476430257162,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json"
+    },
+    {
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-62bc74ec-5a93-45cc-96cf-86d7167374c3.png",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e",
+      "bytes": 477139,
+      "width": 1659,
+      "height": 948,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        167,
+        238,
+        1491,
+        722
+      ],
+      "transparentFraction": 0.8243241696614554,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-eca66725-ad5b-43c1-a534-1d63d084ff93.png",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746",
+      "bytes": 897786,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        184,
+        205,
+        1058,
+        1087
+      ],
+      "transparentFraction": 0.5959258920100018,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-d765e317-3d89-4932-9b03-dd5765fc60b8.png",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2",
+      "bytes": 836267,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        191,
+        214,
+        1042,
+        1084
+      ],
+      "transparentFraction": 0.633011047264384,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "ming-star",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-58aa2924-fc4d-4dda-b70a-63a8eaaf1461.png",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2",
+      "bytes": 971882,
+      "width": 1429,
+      "height": 1100,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        132,
+        120,
+        1294,
+        997
+      ],
+      "transparentFraction": 0.6018926140339717,
+      "nativeBytesVerified": true,
+      "accepted": true
+    }
+  ],
+  "summary": {
+    "files": 32,
+    "bytes": 40612943,
+    "nativeRGBA": true,
+    "distinctImages": 32
+  }
+}

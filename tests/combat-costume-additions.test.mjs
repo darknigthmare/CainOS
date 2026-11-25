@@ -292,7 +292,8 @@ test('Cafe Kinger and Pomni preserve all 472 published costumes and bind 22 nati
     }
   }
   assert.deepEqual(COSTUME_CONTINUATION_B_DEFINITIONS, definitions);
-  assert.equal(COSTUMES.some(value => value.id === 'maidribbit'), false, 'Cafe does not close the separate Pendantz candidate');
+  assert.equal(COSTUME_ADDITIONS.some(value => value.id === 'maidribbit'), false,
+    'the historical Cafe waves remain separate from the later Pendantz base costume');
 });
 
 test('Cafe Ribbit preserves the 468-costume prefix and binds every installed pose to its frozen owner and accepted receipt', () => {
@@ -316,7 +317,8 @@ test('Cafe Ribbit preserves the 468-costume prefix and binds every installed pos
   const outfit = COSTUME_ADDITIONS.find(value => value.id === 'caferibbit');
   assert.equal(outfit.fighterId, 'ribbit');
   assert.equal(outfit.baseFighterId, 'ribbit');
-  assert.equal(COSTUMES.some(value => value.id === 'maidribbit'), false, 'the separate Pendantz candidate remains unclosed');
+  assert.equal(COSTUME_NEXT_WAVE_DEFINITIONS.some(value => value.id === 'maidribbit'), false,
+    'the frozen Cafe Ribbit definition does not contain the later Pendantz base costume');
   const completion = JSON.parse(read(wave + 'generation-completion.json'));
   assert.deepEqual(completion.order, ['caferibbit']);
   assert.equal(completion.counts.cumulativeAppearances, 40);

@@ -1,0 +1,12 @@
+{
+  "asset": "gameoverse/hommage/stance",
+  "prompt": "Use case: identity-preserve. Asset type: one full-body static fighting-game sprite of Queenie for Digital Circus Encore, original Gameoverse homage to Kit. Edit target is Queenie in image 1; image 2 gives the project's clean 2D linework and chess body, image 3 is costume-color reference ONLY, do not copy Ribbit anatomy.\nPreserve Queenie's tall honey-brown turned-wood queen chess head, crown peaks and spherical finial, two protruding white eyes with red-orange irises and black lower lashes, half-lidded wooden eyelids, no mouth or nose. One continuous tapered chess-piece body with broad rounded lower base; exactly two independent floating gloves with NO attached arms, no legs, no tail.\nReplace clothing with bright golden-yellow cropped sleeveless puffer jacket, charcoal zipper panels, pale seam piping, yellow headband low behind crown; a long charcoal-and-yellow robe following the chess body. Two detached floating compact round yellow mechanical gauntlets with red wrist-ring trim; violet star crystal inset on back of forward glove. No cat ears, fur, human anatomy or hair.\nPose: full silhouette from crown finial to bottom of robe, relaxed combat guard, body three-quarter facing RIGHT, eyes looking RIGHT, two fists ready but motionless. All crown and glove tips fully inside canvas with generous clear margins. Remove commercial display plinth entirely; the rounded garment hem is part of her continuous body. No scenery, ground shadow, effect, text, watermark, multiple views or animation. Refined hand-painted 2D cel shading, crisp dark outlines, detailed but readable at game scale. True transparent RGBA background. Portrait 1024x1536 composition.",
+  "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-e3ea7fe5-d0f6-404e-bf1f-a6adf2fcb60c.png",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "references": [
+    "/workspace/scratch/6f9ceeefa959/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+    "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/stance/queenie.png",
+    "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png"
+  ]
+}

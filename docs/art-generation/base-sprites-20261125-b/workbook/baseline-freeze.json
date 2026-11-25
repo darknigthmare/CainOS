@@ -1,0 +1,23 @@
+{
+  "schema": "encore-tracker-static-base-baseline/v1",
+  "createdAt": "2026-11-25T07:59:32.586Z",
+  "files": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "bytes": 846197,
+      "sha256": "b3ffd3b5b62f40e0e7cbdbcc553a706f9aacbfa0d167d46a73b3efc2fb68832f"
+    },
+    "docs/combat-tracker-data.json": {
+      "bytes": 6896330,
+      "sha256": "04a353cf620a90f907dcfabc4a653eb42369358b8df09e2e60bae0fbc94f276a"
+    },
+    "docs/combat-workbook-verification.json": {
+      "bytes": 57718,
+      "sha256": "e9ac96875318ab7d49541dbc1d575d355371cd3adfac6815de6b1563a2c5f951"
+    },
+    "docs/combat-qa-evidence-0.7.0.json": {
+      "bytes": 588368,
+      "sha256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+    }
+  },
+  "scope": "Published 508-costume tracker before recovered lot A and continuation B. Preserve all existing notes, IDs, order and historical evidence."
+}

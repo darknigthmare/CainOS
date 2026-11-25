@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { FIGHTERS, COSTUMES, BASE_SPRITE_COSTUMES, CROSSOVER_COSTUMES, STAGES, equipCostume } from '../combat/data.mjs';
 import { BASE_SPRITE_ART_SLOTS, BASE_SPRITE_DEFINITIONS, baseSpriteFiles,
   publishedBaseSpriteDefinitions, createBaseSpriteCostumes } from '../combat/base-sprite-content.mjs';
+import { CONTINUATION_B_BASE_DEFINITIONS, CONTINUATION_B_BASE_REVIEWS } from '../combat/base-sprite-continuation-20261125-b.mjs';
 import { ACTION_ART, loadFighterIllustration, actionIllustration, standingIllustration, warmCombatPoses } from '../combat/illustrations.mjs';
 import { CombatRenderer, drawPortrait, getFrame } from '../combat/render.mjs';
 import { createProgram, validateProgram } from '../combat/progression.mjs';
@@ -13,6 +14,8 @@ import { GAME_VERSION, emptyProfile, validateProfile, validateReplay } from '../
 const sha = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const fixtureBytes = readFileSync(new URL('../docs/art-generation/base-sprites-20261124/integration-baseline.json', import.meta.url));
 const baseline = JSON.parse(fixtureBytes);
+const continuationFixtureBytes = readFileSync(new URL('../docs/art-generation/base-sprites-20261125-b/integration-baseline-522.json', import.meta.url));
+const continuationBaseline = JSON.parse(continuationFixtureBytes);
 
 test('the 64 fighters and complete 484-costume prefix retain their published order and fields', () => {
   assert.equal(sha(fixtureBytes), '9076a438ee9fb8f69023a3bfe7aea53234a5ee26ec1fd9d42f63b529e76e6ebc');
@@ -24,6 +27,46 @@ test('the 64 fighters and complete 484-costume prefix retain their published ord
   assert.deepEqual(COSTUMES.slice(484), BASE_SPRITE_COSTUMES);
   assert.equal(sha(CROSSOVER_COSTUMES.slice(0, baseline.crossoverCount)), baseline.crossoversSHA256);
   assert.equal(new Set(COSTUMES.map(costume => costume.id)).size, COSTUMES.length);
+});
+
+test('the 522-costume continuation keeps its complete saved wardrobe prefix and fighter kits', () => {
+  assert.equal(sha(continuationFixtureBytes), '9a45765d00dc4e9b650cbb60ab045c954fd59101100aaeb5e122f6f47a0f41ce');
+  assert.equal(continuationBaseline.fighterCount, 64);
+  assert.equal(continuationBaseline.costumeCount, 522);
+  assert.equal(continuationBaseline.crossoverCount, 414);
+  assert.deepEqual(FIGHTERS.map(fighter => fighter.id), continuationBaseline.fighterIds);
+  assert.equal(sha(FIGHTERS), continuationBaseline.fightersSHA256);
+  const prefix = COSTUMES.slice(0, continuationBaseline.costumeCount);
+  assert.deepEqual(prefix.map(costume => costume.id), continuationBaseline.costumeIds);
+  assert.equal(sha(prefix), continuationBaseline.costumesSHA256);
+  assert.equal(sha(CROSSOVER_COSTUMES.slice(0, continuationBaseline.crossoverCount)), continuationBaseline.crossoversSHA256);
+});
+
+test('the six remaining Queenie collections append all 18 reviewed static families after the 522-costume prefix', () => {
+  const series = ['gaslightdistrict', 'knightsofguinevere', 'gameoverse', 'lackadaisy', 'smg4', 'ultrajumpmania'];
+  const styles = ['hommage', 'resident', 'fusion'];
+  const expected = series.flatMap(world => styles.map(style => `glitch-${world}-queenie-${style}`));
+  assert.deepEqual(CONTINUATION_B_BASE_DEFINITIONS.map(definition => definition.id), expected);
+  assert.deepEqual(Object.keys(CONTINUATION_B_BASE_REVIEWS).sort(), [...expected].sort());
+  assert.deepEqual(COSTUMES.slice(522, 540).map(costume => costume.id), expected,
+    'The complete continuation must be selectable, with no missing pair silently filtered out');
+  assert.deepEqual(CROSSOVER_COSTUMES.slice(414, 432).map(costume => costume.id), expected);
+  const queenie = CROSSOVER_COSTUMES.filter(costume => costume.fighterId === 'queenie');
+  assert.equal(queenie.length, 27, 'Three previously completed worlds plus the six remaining collections');
+  for (const definition of CONTINUATION_B_BASE_DEFINITIONS) {
+    assert.equal(definition.fighterId, 'queenie');
+    assert.equal(definition.canonicalCostumeClaim, false, 'Crossovers remain original Encore adaptations');
+    const costume = BASE_SPRITE_COSTUMES.find(item => item.id === definition.id);
+    assert.ok(costume, definition.id + ': reviewed pair must be active in both entry paths');
+    assert.equal(costume.baseOnly, true);
+    assert.equal(costume.presentation, 'static');
+    assert.equal(costume.animation, null);
+    assert.deepEqual(costume.authoredSlots, ['selection', 'stance']);
+    assert.deepEqual(costume.assetReview.issues, []);
+    assert.ok(costume.assetReview.visibleTraits.length > 0, 'Actual visual inspection must be recorded');
+    const evidence = readFileSync(new URL('../' + costume.assetReview.captureId, import.meta.url), 'utf8');
+    assert.ok(evidence.includes(definition.id), definition.id + ': linked visual review exists');
+  }
 });
 
 test('a static family activates only after both native files have a recorded review and are published', () => {

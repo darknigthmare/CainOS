@@ -1,0 +1,12 @@
+{
+  "asset": "gameoverse/fusion/stance",
+  "prompt": "Use case: identity-preserve. Asset type: one static full-body sprite for Digital Circus Encore. Reference 1 is Queenie's identity and chess anatomy. Reference 2 gives game linework only; omit its glow. Preserve tall queen-chess head/crown and round top finial, exactly two white protruding half-lidded eyes with red-orange irises, black lower lashes, no nose or mouth. Single continuous tapered chess body with integrated wide bottom; exactly two detached floating gloves, no arms or legs. Original crossover appearance, not an official costume.\nPose: motionless relaxed combat guard in three-quarter view facing RIGHT, eyes looking right. Full silhouette inside frame with 50px clear top/bottom margin and 80px side margins, crown finial, gloves and base all visible. No separate commercial display plinth or scene. Crisp dark outlines, polished hand-painted 2D cel shading. Genuine transparent RGBA, no glow or backdrop, no floor shadow, text, label, watermark, extra views or animation. Portrait 1024x1536.\nDesign: Physically transform Queenie into an original Gameoverse crystalline queen-chess avatar. Translucent smoky-violet faceted crown and tapered continuous body, hard polished amber spherical top finial. Pearl-white eyes with orange irises, heavy violet half-lids and black lower-lash inserts preserve recognizable Queenie identity. Body interlocks violet crystal plates with charcoal sockets and thin gold geometric edges. A large solid jade diamond core is inset in chest. Two completely detached articulated gauntlet hands of pale lilac crystal with yellow wrist rings float in guard. Wide integrated hexagonal chess base, no clothing or cape, no floating shards, no external glow, no human limbs.",
+  "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cfebfef4-355b-4159-a76b-fec142944ebc.png",
+  "output": "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "references": [
+    "/workspace/scratch/6f9ceeefa959/CainOS/docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png",
+    "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/stance/queenie.png"
+  ]
+}

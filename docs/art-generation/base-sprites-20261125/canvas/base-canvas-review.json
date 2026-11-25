@@ -1,0 +1,6634 @@
+{
+  "schema": "encore-static-base-canvas-review/v1",
+  "createdAt": "2026-11-25T06:12:25.601Z",
+  "offlineVersion": "0.7.0-4ad2d50212cf",
+  "method": "Production Canvas2D renderer, native Skia; exact source path, uniform scale, facing, anchor and static reuse checked.",
+  "selectedId": null,
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "authoredDrawings": 28,
+  "browserTestStatus": "not_executed",
+  "sources": {
+    "combat/base-sprite-content.mjs": "c6a890b9ad613bb9ed41269f2900cecd2d89cecaf7dd5f4fe28c773ffcdb6a63",
+    "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "571872f93c90b33e9014886da375f3e29ff2c846b3e015f79f76ec51013f0db7",
+    "scripts/render-combat-base-sprite-review.mjs": "8b00c3cdc4867bad457c8150cf5a35fc969259b0bac62ae84f7a5adf9eed2368"
+  },
+  "appearances": [
+    {
+      "id": "bunnyjax",
+      "fighterId": "jax",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+          "bytes": 748230,
+          "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92",
+          "bounds": {
+            "x": 94,
+            "y": 37,
+            "width": 195,
+            "height": 303
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "bytes": 952942,
+          "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2",
+          "bounds": {
+            "x": 117,
+            "y": 49,
+            "width": 398,
+            "height": 542
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": 0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 488.41326904296875,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/bunnyjax/stance.png",
+          "matrix": {
+            "a": -0.4797047972679138,
+            "b": 0,
+            "c": 0,
+            "d": 0.4797047972679138,
+            "e": 791.5867309570312,
+            "f": 284.4944763183594
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 190.9225093126297,
+      "visibleHeight": 260.0000001192093,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-bunnyjax.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Lapin mauve, grandes oreilles et nœud rose entiers ; portrait distinct et profil de garde inversé proprement."
+      }
+    },
+    {
+      "id": "maidribbit",
+      "fighterId": "ribbit",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/maidribbit/selection.png",
+          "bytes": 996202,
+          "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525",
+          "bounds": {
+            "x": 96,
+            "y": 21,
+            "width": 192,
+            "height": 341
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/maidribbit/stance.png",
+          "bytes": 1190985,
+          "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47",
+          "bounds": {
+            "x": 147,
+            "y": 12,
+            "width": 342,
+            "height": 611
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": 0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 541.1129150390625,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/maidribbit/stance.png",
+          "matrix": {
+            "a": -0.3109656274318695,
+            "b": 0,
+            "c": 0,
+            "d": 0.3109656274318695,
+            "e": 738.8870849609375,
+            "f": 374.2684326171875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 106.35024458169937,
+      "visibleHeight": 189.99999836087227,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-maidribbit.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Coiffe blanche, grands yeux verts, tablier et mains entièrement visibles dans les trois vues."
+      }
+    },
+    {
+      "id": "ghostlyvacuum",
+      "fighterId": "ghostly",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+          "bytes": 811820,
+          "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d",
+          "bounds": {
+            "x": 82,
+            "y": 7,
+            "width": 224,
+            "height": 373
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "bytes": 724718,
+          "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46",
+          "bounds": {
+            "x": 153,
+            "y": 38,
+            "width": 341,
+            "height": 584
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": 0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 523.6729736328125,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+          "matrix": {
+            "a": -0.3595890402793884,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595890402793884,
+            "e": 756.3270263671875,
+            "f": 344.33563232421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 122.61986273527145,
+      "visibleHeight": 209.99999952316284,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-ghostlyvacuum.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Fantôme turquoise et appareil avec tuyaux entièrement visibles ; les deux gardes conservent tous les accessoires."
+      }
+    },
+    {
+      "id": "mingtrophy",
+      "fighterId": "ming",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+          "bytes": 1222562,
+          "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8",
+          "bounds": {
+            "x": 61,
+            "y": 10,
+            "width": 211,
+            "height": 363
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "bytes": 1136644,
+          "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9",
+          "bounds": {
+            "x": 138,
+            "y": 14,
+            "width": 358,
+            "height": 614
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": 0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 539.3240966796875,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/mingtrophy/stance.png",
+          "matrix": {
+            "a": -0.31758958101272583,
+            "b": 0,
+            "c": 0,
+            "d": 0.31758958101272583,
+            "e": 740.6759033203125,
+            "f": 368.5537414550781
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 113.69707000255585,
+      "visibleHeight": 195.00000274181366,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-mingtrophy.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Couronne de laurier, figurine et socle entiers. La garde gauche inverse aussi les inscriptions du socle, conséquence attendue du miroir statique."
+      }
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "fighterId": "disappearingguy",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+          "bytes": 672095,
+          "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+          "bounds": {
+            "x": 70,
+            "y": 25,
+            "width": 239,
+            "height": 338
+          },
+          "nativeFacing": -1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "bytes": 749405,
+          "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+          "bounds": {
+            "x": 106,
+            "y": 10,
+            "width": 430,
+            "height": 611
+          },
+          "nativeFacing": -1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 144.27169024944305,
+      "visibleHeight": 205.000006377697,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-disappearingguymicrophone.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Chapeau, corps rouge, micro et pied entiers ; nativeFacing −1 corrigé, micro orienté à droite dans la garde droite."
+      }
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+          "bytes": 1854418,
+          "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+          "bounds": {
+            "x": 45,
+            "y": 9,
+            "width": 155,
+            "height": 370
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "bytes": 1667309,
+          "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+          "bounds": {
+            "x": 85,
+            "y": 27,
+            "width": 283,
+            "height": 598
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 558.5660400390625,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3595317602157593,
+            "b": 0,
+            "c": 0,
+            "d": 0.3595317602157593,
+            "e": 721.4339599609375,
+            "f": 343.29266357421875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 101.74748814105988,
+      "visibleHeight": 214.99999260902405,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-murderdrones-queenie-hommage.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Couronne bois, gilet violet sans manches, robe et gants détachés complets ; portrait et garde distincts."
+      }
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+          "bytes": 1212445,
+          "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+          "bounds": {
+            "x": 69,
+            "y": 8,
+            "width": 171,
+            "height": 372
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "bytes": 2021765,
+          "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+          "bounds": {
+            "x": 60,
+            "y": 22,
+            "width": 326,
+            "height": 607
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 561.01318359375,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.35420098900794983,
+            "b": 0,
+            "c": 0,
+            "d": 0.35420098900794983,
+            "e": 718.98681640625,
+            "f": 345.20758056640625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 115.46952241659164,
+      "visibleHeight": 215.00000032782555,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-murderdrones-queenie-resident.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Lentille, col clair, manteau de travail, sacoches, lampe et mains flottantes visibles ; aucun membre humain ajouté."
+      }
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+          "bytes": 1452362,
+          "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+          "bounds": {
+            "x": 16,
+            "y": 4,
+            "width": 284,
+            "height": 376
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "bytes": 1849177,
+          "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+          "bounds": {
+            "x": 76,
+            "y": 24,
+            "width": 264,
+            "height": 593
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 564.5868530273438,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36256325244903564,
+            "b": 0,
+            "c": 0,
+            "d": 0.36256325244903564,
+            "e": 715.4131469726562,
+            "f": 344.2984619140625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 95.71669864654541,
+      "visibleHeight": 215.00000870227814,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-murderdrones-queenie-fusion.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Couronne bronze, yeux de verre, robe mécanique, gants robotiques et base circulaire complets."
+      }
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+          "bytes": 943287,
+          "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+          "bounds": {
+            "x": 80,
+            "y": 7,
+            "width": 152,
+            "height": 372
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "bytes": 1513934,
+          "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+          "bounds": {
+            "x": 84,
+            "y": 27,
+            "width": 298,
+            "height": 599
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 556.3689575195312,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3589315414428711,
+            "b": 0,
+            "c": 0,
+            "d": 0.3589315414428711,
+            "e": 723.6310424804688,
+            "f": 343.308837890625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 106.96159934997559,
+      "visibleHeight": 214.99999332427979,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-metarunner-queenie-hommage.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Gilet bleu et blanc sans manches, emblème de canard, gant cybernétique, gant blanc et robe entièrement visibles."
+      }
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+          "bytes": 1646849,
+          "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+          "bounds": {
+            "x": 46,
+            "y": 12,
+            "width": 158,
+            "height": 369
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "bytes": 1670178,
+          "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+          "bounds": {
+            "x": 47,
+            "y": 33,
+            "width": 297,
+            "height": 589
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 568.6375122070312,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.36502546072006226,
+            "b": 0,
+            "c": 0,
+            "d": 0.36502546072006226,
+            "e": 711.3624877929688,
+            "f": 340.95416259765625
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 108.41256183385849,
+      "visibleHeight": 214.99999636411667,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-metarunner-queenie-resident.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Manteau turquoise, blanc et bordeaux, liserés magenta et écran de poignet conservés ; silhouette de reine entière."
+      }
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+          "bytes": 1777988,
+          "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+          "bounds": {
+            "x": 36,
+            "y": 14,
+            "width": 171,
+            "height": 359
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "bytes": 1824011,
+          "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+          "bounds": {
+            "x": 50,
+            "y": 25,
+            "width": 341,
+            "height": 596
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 560.4572143554688,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.36073824763298035,
+            "b": 0,
+            "c": 0,
+            "d": 0.36073824763298035,
+            "e": 719.5427856445312,
+            "f": 343.9815673828125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 123.0117424428463,
+      "visibleHeight": 214.9999955892563,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-metarunner-queenie-fusion.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Corps de reine bleu, cyan et cuivre, mains mécaniques détachées et base entière ; sélection aux mains jointes distincte de la garde."
+      }
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+          "bytes": 1018233,
+          "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+          "bounds": {
+            "x": 57,
+            "y": 14,
+            "width": 284,
+            "height": 358
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "bytes": 1564333,
+          "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+          "bounds": {
+            "x": 51,
+            "y": 32,
+            "width": 305,
+            "height": 545
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 559.7201538085938,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.39449542760849,
+            "b": 0,
+            "c": 0,
+            "d": 0.39449542760849,
+            "e": 720.2798461914062,
+            "f": 340.37615966796875
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 120.32110542058945,
+      "visibleHeight": 215.00000804662704,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-sunsetparadise-queenie-hommage.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Lunettes, tenue blanche à accents orange, robe et mains détachées entières dans les gardes ; portrait distinct."
+      }
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+          "bytes": 1017935,
+          "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+          "bounds": {
+            "x": 67,
+            "y": 18,
+            "width": 228,
+            "height": 359
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "bytes": 1704161,
+          "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+          "bounds": {
+            "x": 79,
+            "y": 42,
+            "width": 283,
+            "height": 567
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": 0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 556.388916015625,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+          "matrix": {
+            "a": -0.3791887164115906,
+            "b": 0,
+            "c": 0,
+            "d": 0.3791887164115906,
+            "e": 723.611083984375,
+            "f": 337.0740661621094
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 107.31040674448013,
+      "visibleHeight": 215.00000220537186,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-sunsetparadise-queenie-resident.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Cape verte, foulard bordeaux, boutons dorés, robe crème et gants flottants complets."
+      }
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+          "bytes": 1439512,
+          "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+          "bounds": {
+            "x": 64,
+            "y": 7,
+            "width": 258,
+            "height": 370
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "bytes": 2046369,
+          "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+          "bounds": {
+            "x": 61,
+            "y": 34,
+            "width": 293,
+            "height": 579
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": 0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 562.9490356445312,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+          "matrix": {
+            "a": -0.3713298738002777,
+            "b": 0,
+            "c": 0,
+            "d": 0.3713298738002777,
+            "e": 717.0509643554688,
+            "f": 340.3747863769531
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 108.79965302348137,
+      "visibleHeight": 214.9999969303608,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2,
+      "visualReview": {
+        "inspectedAt": "2026-11-25",
+        "sheet": "base-glitch-sunsetparadise-queenie-fusion.jpg",
+        "method": "Individual full-sheet visual inspection after production rendering.",
+        "portrait": "pass",
+        "guardRight": "pass",
+        "guardLeft": "pass",
+        "clipping": "none_observed",
+        "sourceMismatch": "none_observed",
+        "observations": "Couronne de corail, robe marine, bijoux turquoise, gants et base en coquille entièrement visibles."
+      }
+    }
+  ],
+  "sheets": [
+    "base-bunnyjax.jpg",
+    "base-maidribbit.jpg",
+    "base-ghostlyvacuum.jpg",
+    "base-mingtrophy.jpg",
+    "base-disappearingguymicrophone.jpg",
+    "base-glitch-murderdrones-queenie-hommage.jpg",
+    "base-glitch-murderdrones-queenie-resident.jpg",
+    "base-glitch-murderdrones-queenie-fusion.jpg",
+    "base-glitch-metarunner-queenie-hommage.jpg",
+    "base-glitch-metarunner-queenie-resident.jpg",
+    "base-glitch-metarunner-queenie-fusion.jpg",
+    "base-glitch-sunsetparadise-queenie-hommage.jpg",
+    "base-glitch-sunsetparadise-queenie-resident.jpg",
+    "base-glitch-sunsetparadise-queenie-fusion.jpg",
+    "bases-overview.jpg"
+  ],
+  "limitations": [
+    "A repeated stance is one authored base, not nine action drawings or frame-by-frame animation.",
+    "Native Canvas does not exercise DOM, input, audio, service workers or a physical device.",
+    "Technical rendering checks do not certify canonical 1:1 identity or hidden anatomy."
+  ],
+  "summary": {
+    "appearances": 14,
+    "authoredDrawings": 28,
+    "sourceAndFacingChecks": 280,
+    "actualStateDraws": 840,
+    "portraits": 14,
+    "visuallyReviewedSheets": 14,
+    "peakWorkerRSSBytes": 138293248,
+    "sourceFilesCurrentAndIdentical": 12,
+    "nativeAssetHashesVerified": 28,
+    "pass": true
+  },
+  "scope": "Exactly the fourteen CONTINUATION_BASE_DEFINITIONS added on 2026-11-25.",
+  "collection": "Fourteen sequential Node workers, each with --expose-gc --max-old-space-size=128. No simultaneous native-image workers. The overview decodes only finished JPEG review sheets.",
+  "execution": [
+    {
+      "id": "bunnyjax",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 138207232
+    },
+    {
+      "id": "maidribbit",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137977856
+    },
+    {
+      "id": "ghostlyvacuum",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137965568
+    },
+    {
+      "id": "mingtrophy",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137519104
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 138293248
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134766592
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 136261632
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134762496
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 135516160
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134950912
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134828032
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137162752
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 136060928
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 138194944
+    }
+  ],
+  "sheetHashes": {
+    "base-bunnyjax.jpg": "0d695d0a62cec3d355e0d738dff314b6fbc557060e1dbb0bd054983e5925ba1a",
+    "base-maidribbit.jpg": "4b917855d6eda044969fe49eed3548337ab143cb853a53f956edb90d8c5b0274",
+    "base-ghostlyvacuum.jpg": "a861bc551494a75312b4cf8cce9e9ed9fa1ad1017b6fa32358bccdea630355ef",
+    "base-mingtrophy.jpg": "c76ed94224d3745b69e5a699a8738480197c13884f8cd46512efb5a68a13f4f9",
+    "base-disappearingguymicrophone.jpg": "1bc5d688880ed0889db35b9ab933dd53153460b699b6fa0a53da28ea12ce998a",
+    "base-glitch-murderdrones-queenie-hommage.jpg": "e5ab87d9d2ba19746bf0dc9485e00a95f4e2b0ed0e36c217c94636c0b27f7327",
+    "base-glitch-murderdrones-queenie-resident.jpg": "32b2bab54ef594dd24eb51853e138a3a694e9015e6fb7c17f95f5359cbee9673",
+    "base-glitch-murderdrones-queenie-fusion.jpg": "c8d22cab9bd87e0724f5d2bcf669672d83759cf08c53930bf6892e2bcfd70096",
+    "base-glitch-metarunner-queenie-hommage.jpg": "ce7070789cdf4dc45949da20cebb0f9d7baee787cf9368c131f836104867e86a",
+    "base-glitch-metarunner-queenie-resident.jpg": "cf0850057a7ecb89feb61abc059de6ae63c7792aaefa6f8fb8ee5c3b08701121",
+    "base-glitch-metarunner-queenie-fusion.jpg": "2575abe80bcabb2fda4e47dcdb5c74828e9d725c8157dbd5aed9f05f9c44c39a",
+    "base-glitch-sunsetparadise-queenie-hommage.jpg": "7bdd9a2f06100a90e87d827297b5ed18c364dee6646b2260657f22e68cf6620c",
+    "base-glitch-sunsetparadise-queenie-resident.jpg": "a5787519a84dab39cf2585b9b05468227c3e2c2661897635ebc583d29f4ec3da",
+    "base-glitch-sunsetparadise-queenie-fusion.jpg": "46289cf26e023e37415335a0b1f16dc9ceac0f17d078cb6d4c74ac417c2dc427",
+    "bases-overview.jpg": "e7ae70a9a7da8f7f71634e88d523f56a7cabe4151912889ba83dd4a6caf7938c"
+  },
+  "visualReview": {
+    "status": "pass",
+    "inspectedAt": "2026-11-25",
+    "individualSheets": 14,
+    "clipping": "none_observed",
+    "sourceMismatch": "none_observed",
+    "notes": [
+      "Ming left-facing pedestal lettering is mirrored with the static image; no independent lettering redraw is provided.",
+      "Disappearing Guy has nativeFacing -1, verified by the production transformation and the microphone direction.",
+      "All nine Queenie redesigns retain the chess-queen body and detached hands, without humanoid legs."
+    ]
+  }
+}

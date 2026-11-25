@@ -1,0 +1,1613 @@
+{
+  "schema": "encore-recovered-art-independent-review/v1",
+  "reviewedOn": "2026-11-25",
+  "status": "reviewed",
+  "scope": "Recovered lot A 32 PNG and already-generated lot B 4 projectile PNG; no image mutation.",
+  "assetCount": 36,
+  "bytes": 43270949,
+  "assets": [
+    {
+      "group": "recovered-A",
+      "id": "bunnyjax",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+      "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92",
+      "bytes": 748230,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1075426,
+      "alphaZeroFraction": 0.6838887489857018,
+      "nonzeroAlphaBounds": [
+        41,
+        17,
+        1210,
+        1254
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        309,
+        121,
+        943,
+        1110
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "bunnyjax",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+      "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2",
+      "bytes": 952942,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 978873,
+      "alphaZeroFraction": 0.6224884198316583,
+      "nonzeroAlphaBounds": [
+        0,
+        0,
+        1218,
+        1220
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        230,
+        96,
+        1008,
+        1158
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "maidribbit",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/maidribbit/selection.png",
+      "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525",
+      "bytes": 996202,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1037991,
+      "alphaZeroFraction": 0.6600829498714162,
+      "nonzeroAlphaBounds": [
+        0,
+        19,
+        1236,
+        1254
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        313,
+        68,
+        940,
+        1182
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "maidribbit",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/maidribbit/stance.png",
+      "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47",
+      "bytes": 1190985,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 961987,
+      "alphaZeroFraction": 0.6117502143062455,
+      "nonzeroAlphaBounds": [
+        0,
+        21,
+        1226,
+        1226
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        289,
+        23,
+        958,
+        1221
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "ghostlyvacuum",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+      "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d",
+      "bytes": 811820,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1091447,
+      "alphaZeroFraction": 0.694076880616795,
+      "nonzeroAlphaBounds": [
+        0,
+        21,
+        1202,
+        1245
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        268,
+        24,
+        1000,
+        1241
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "ghostlyvacuum",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+      "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46",
+      "bytes": 724718,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1153801,
+      "alphaZeroFraction": 0.7337292593525281,
+      "nonzeroAlphaBounds": [
+        49,
+        17,
+        1226,
+        1222
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        300,
+        75,
+        967,
+        1218
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "mingtrophy",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+      "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8",
+      "bytes": 1222562,
+      "mode": "RGBA",
+      "width": 1173,
+      "height": 1341,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 928469,
+      "alphaZeroFraction": 0.5902562821322155,
+      "nonzeroAlphaBounds": [
+        0,
+        32,
+        1159,
+        1323
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        211,
+        35,
+        949,
+        1301
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "mingtrophy",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+      "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9",
+      "bytes": 1136644,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 992637,
+      "alphaZeroFraction": 0.6312412719489022,
+      "nonzeroAlphaBounds": [
+        49,
+        20,
+        1232,
+        1238
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        271,
+        27,
+        972,
+        1230
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "disappearingguymicrophone",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+      "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+      "bytes": 672095,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1150142,
+      "alphaZeroFraction": 0.731402414983377,
+      "nonzeroAlphaBounds": [
+        0,
+        39,
+        1216,
+        1198
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        228,
+        82,
+        1008,
+        1185
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "disappearingguymicrophone",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+      "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+      "bytes": 749405,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1089697,
+      "alphaZeroFraction": 0.6929640143566107,
+      "nonzeroAlphaBounds": [
+        49,
+        16,
+        1214,
+        1230
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        208,
+        19,
+        1050,
+        1217
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+      "bytes": 1854418,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 935113,
+      "alphaZeroFraction": 0.5945288340250651,
+      "nonzeroAlphaBounds": [
+        0,
+        34,
+        998,
+        1521
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        179,
+        36,
+        799,
+        1515
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+      "bytes": 1667309,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1018345,
+      "alphaZeroFraction": 0.6474463144938151,
+      "nonzeroAlphaBounds": [
+        0,
+        11,
+        1010,
+        1536
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        205,
+        65,
+        881,
+        1500
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+      "bytes": 1212445,
+      "mode": "RGBA",
+      "width": 1122,
+      "height": 1402,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1005950,
+      "alphaZeroFraction": 0.6394926016055495,
+      "nonzeroAlphaBounds": [
+        0,
+        19,
+        1050,
+        1388
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        252,
+        30,
+        878,
+        1386
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+      "bytes": 2021765,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 974708,
+      "alphaZeroFraction": 0.6197026570638021,
+      "nonzeroAlphaBounds": [
+        0,
+        21,
+        1006,
+        1520
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        145,
+        54,
+        925,
+        1509
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+      "bytes": 1452362,
+      "mode": "RGBA",
+      "width": 1122,
+      "height": 1402,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 905320,
+      "alphaZeroFraction": 0.5755210915905722,
+      "nonzeroAlphaBounds": [
+        0,
+        13,
+        1104,
+        1402
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        59,
+        15,
+        1097,
+        1388
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+      "bytes": 1849177,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1021765,
+      "alphaZeroFraction": 0.6496206919352213,
+      "nonzeroAlphaBounds": [
+        0,
+        15,
+        1010,
+        1532
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        182,
+        59,
+        816,
+        1480
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+      "bytes": 943287,
+      "mode": "RGBA",
+      "width": 1122,
+      "height": 1402,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1062041,
+      "alphaZeroFraction": 0.6751502183028574,
+      "nonzeroAlphaBounds": [
+        35,
+        25,
+        1108,
+        1386
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        294,
+        27,
+        846,
+        1382
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+      "bytes": 1513934,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1070425,
+      "alphaZeroFraction": 0.6805578867594401,
+      "nonzeroAlphaBounds": [
+        25,
+        23,
+        1004,
+        1505
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        201,
+        65,
+        915,
+        1502
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+      "bytes": 1646849,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1016325,
+      "alphaZeroFraction": 0.6461620330810547,
+      "nonzeroAlphaBounds": [
+        0,
+        19,
+        1004,
+        1536
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        184,
+        49,
+        816,
+        1522
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+      "bytes": 1670178,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1034666,
+      "alphaZeroFraction": 0.6578229268391927,
+      "nonzeroAlphaBounds": [
+        0,
+        0,
+        1023,
+        1536
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        112,
+        78,
+        825,
+        1491
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+      "bytes": 1777988,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1012020,
+      "alphaZeroFraction": 0.6434249877929688,
+      "nonzeroAlphaBounds": [
+        0,
+        19,
+        1010,
+        1536
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        145,
+        57,
+        826,
+        1492
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+      "bytes": 1824011,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 965371,
+      "alphaZeroFraction": 0.6137663523356119,
+      "nonzeroAlphaBounds": [
+        0,
+        19,
+        1010,
+        1536
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        120,
+        59,
+        939,
+        1490
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+      "bytes": 1018233,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1002814,
+      "alphaZeroFraction": 0.637713066194557,
+      "nonzeroAlphaBounds": [
+        97,
+        42,
+        1174,
+        1254
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        185,
+        45,
+        1114,
+        1214
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+      "bytes": 1564333,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1046948,
+      "alphaZeroFraction": 0.6656316121419271,
+      "nonzeroAlphaBounds": [
+        63,
+        61,
+        962,
+        1480
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        122,
+        78,
+        853,
+        1386
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+      "bytes": 1017935,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1038795,
+      "alphaZeroFraction": 0.6605942324275238,
+      "nonzeroAlphaBounds": [
+        41,
+        37,
+        1208,
+        1240
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        218,
+        60,
+        964,
+        1234
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+      "bytes": 1704161,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 1040551,
+      "alphaZeroFraction": 0.6615645090738932,
+      "nonzeroAlphaBounds": [
+        55,
+        63,
+        985,
+        1510
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        189,
+        100,
+        867,
+        1461
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+      "bytes": 1439512,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 914705,
+      "alphaZeroFraction": 0.5816824757267971,
+      "nonzeroAlphaBounds": [
+        23,
+        21,
+        1216,
+        1240
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        210,
+        23,
+        1051,
+        1233
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+      "bytes": 2046369,
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 965027,
+      "alphaZeroFraction": 0.6135476430257162,
+      "nonzeroAlphaBounds": [
+        0,
+        37,
+        1006,
+        1536
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        146,
+        81,
+        849,
+        1470
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e",
+      "bytes": 477139,
+      "mode": "RGBA",
+      "width": 1659,
+      "height": 948,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1296441,
+      "alphaZeroFraction": 0.8243241696614554,
+      "nonzeroAlphaBounds": [
+        89,
+        44,
+        1589,
+        922
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        167,
+        238,
+        1491,
+        722
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746",
+      "bytes": 897786,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 937103,
+      "alphaZeroFraction": 0.5959258920100018,
+      "nonzeroAlphaBounds": [
+        0,
+        0,
+        1236,
+        1254
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        184,
+        205,
+        1058,
+        1087
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2",
+      "bytes": 836267,
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 995420,
+      "alphaZeroFraction": 0.633011047264384,
+      "nonzeroAlphaBounds": [
+        154,
+        35,
+        1044,
+        1254
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        191,
+        214,
+        1042,
+        1084
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-A",
+      "id": "ming-star",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2",
+      "bytes": 971882,
+      "mode": "RGBA",
+      "width": 1429,
+      "height": 1100,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 946115,
+      "alphaZeroFraction": 0.6018926140339717,
+      "nonzeroAlphaBounds": [
+        0,
+        28,
+        1415,
+        1062
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        132,
+        120,
+        1294,
+        997
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-B-projectiles",
+      "id": "ghostly-wisp",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/ghostly-wisp.png",
+      "sha256": "a1c33623c887a1974ae458acd6e58b33c7841599557b8c4fee2e37ade352a072",
+      "bytes": 375002,
+      "mode": "RGBA",
+      "width": 1774,
+      "height": 887,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1307374,
+      "alphaZeroFraction": 0.830849969940351,
+      "nonzeroAlphaBounds": [
+        136,
+        51,
+        1718,
+        671
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        349,
+        253,
+        1423,
+        665
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-B-projectiles",
+      "id": "orbsman-orb",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/orbsman-orb.png",
+      "sha256": "69e3ada5e8794f6aa9bdccb4dd1604d492cc651dbcd893ee74cd2726946607ab",
+      "bytes": 775388,
+      "mode": "RGBA",
+      "width": 1263,
+      "height": 1246,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 974329,
+      "alphaZeroFraction": 0.6191334042490999,
+      "nonzeroAlphaBounds": [
+        0,
+        19,
+        1223,
+        1246
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        194,
+        202,
+        1052,
+        1084
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-B-projectiles",
+      "id": "oyster-pearl",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/oyster-pearl.png",
+      "sha256": "e8ca85a34d1fcf774259aa002e7bbaf325b465b96dcc2ceda26e3eeae6fdf337",
+      "bytes": 773164,
+      "mode": "RGBA",
+      "width": 1263,
+      "height": 1246,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1047139,
+      "alphaZeroFraction": 0.6654002229144347,
+      "nonzeroAlphaBounds": [
+        0,
+        37,
+        1190,
+        1246
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        230,
+        238,
+        1023,
+        1040
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    },
+    {
+      "group": "recovered-B-projectiles",
+      "id": "abel-program",
+      "slot": "projectile",
+      "file": "assets/encore/projectiles/abel-program.png",
+      "sha256": "de5831b5684dfe7964ac43785a84b201b61dd8fa188a747d677add71985ee8f1",
+      "bytes": 734452,
+      "mode": "RGBA",
+      "width": 1402,
+      "height": 1122,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 1034264,
+      "alphaZeroFraction": 0.6574920981231295,
+      "nonzeroAlphaBounds": [
+        0,
+        9,
+        1293,
+        1122
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        313,
+        185,
+        1060,
+        960
+      ],
+      "visibleHasMargins": true,
+      "checks": {
+        "sha256": true,
+        "bytes": true,
+        "dimensions": true,
+        "alphaExtrema": true,
+        "realTransparency": true,
+        "visiblePixels": true
+      }
+    }
+  ],
+  "inventoryIssues": [],
+  "historicalCanvasSourceComparison": [
+    {
+      "report": "docs/art-generation/base-sprites-20261125/canvas/base-canvas-review.json",
+      "createdAt": "2026-11-25T06:12:25.601Z",
+      "checkedSources": []
+    },
+    {
+      "report": "docs/art-generation/base-sprites-20261125-b/canvas-projectiles/projectile-canvas-review.json",
+      "createdAt": "2026-11-25T06:55:28.557Z",
+      "checkedSources": [
+        {
+          "file": "combat/data.mjs",
+          "recordedSha256": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+          "currentSha256": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+          "matches": true
+        },
+        {
+          "file": "combat/abstractions-content.mjs",
+          "recordedSha256": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+          "currentSha256": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+          "matches": true
+        },
+        {
+          "file": "combat/engine.mjs",
+          "recordedSha256": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+          "currentSha256": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+          "matches": true
+        },
+        {
+          "file": "combat/projectile-art.mjs",
+          "recordedSha256": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+          "currentSha256": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+          "matches": true
+        },
+        {
+          "file": "combat/render-presentation.mjs",
+          "recordedSha256": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+          "currentSha256": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+          "matches": true
+        },
+        {
+          "file": "combat/render.mjs",
+          "recordedSha256": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+          "currentSha256": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+          "matches": true
+        },
+        {
+          "file": "combat/render-sequences.mjs",
+          "recordedSha256": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+          "currentSha256": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+          "matches": true
+        },
+        {
+          "file": "combat/render-poses.mjs",
+          "recordedSha256": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+          "currentSha256": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+          "matches": true
+        },
+        {
+          "file": "combat/offline-manifest.mjs",
+          "recordedSha256": "02359224c47f2082c5b19dfcff40f48d43eb531a532f4cb6ce91b68ec8d50dd9",
+          "currentSha256": "02359224c47f2082c5b19dfcff40f48d43eb531a532f4cb6ce91b68ec8d50dd9",
+          "matches": true
+        },
+        {
+          "file": "scripts/render-combat-projectile-review.mjs",
+          "recordedSha256": "5f0c11acc9f08568aefca54b991a831fd535a647b19f0cfb9f18a5823d91478f",
+          "currentSha256": "5f0c11acc9f08568aefca54b991a831fd535a647b19f0cfb9f18a5823d91478f",
+          "matches": true
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "All 36 files match the recovered manifest SHA-256, byte size, dimensions and alpha extrema. No inventory discrepancy.",
+    "All 36 PNGs contain genuine transparency and visible content, with visible alpha >= 12 bounds strictly inside image dimensions.",
+    "The 14-family Canvas overview shows 28 individual character drawings. Full guard silhouettes and portrait identities remain legible over a checkerboard; Ghostly apparatus, Disappearing Guy microphone and Queenie mechanized body remain intact in both facing directions.",
+    "The eight recovered projectiles are visible individually in the 23-motif production-renderer gallery. The four B additions are distinct, legible at native game size and unchanged after reflection except orientation.",
+    "All recorded hashes of sources used by the two historical Canvas reports matched current files at review time; these remain historical captures, not newly rerun Canvas simulations.",
+    "Four B projectile owners map to their dedicated PNG for every current projectile slot. Reflected-owner lookups preserve the original move motif. All four use fixed art motion and all four paths are published in ART_FILES.",
+    "Renderer code chooses artwork by original move name, flips fixed art for vx < 0, uses uniform scale within declared dimensions and does not mutate projectile simulation.",
+    "Low-alpha RGB residue outside silhouettes may appear in a raw viewer. The checked Canvas composites show transparent surroundings; no art regeneration or pixel edit was performed.",
+    "Selection and guard files are distinct drawings; no new animation or action frame was requested or added."
+  ],
+  "limitations": [
+    "This review does not certify canonical or pixel-exact 1:1 equivalence. Official merchandise adaptations and original Encore crossover/projectile designs keep their existing provenance labels.",
+    "Canvas evidence already existed and was inspected, with source hashes checked. No new browser, DOM, input, audio, service-worker or physical-device campaign was run in this review.",
+    "Current runtime assertions test art lookup for normal/reflected ownership; physical reflection traces come from the existing Canvas report.",
+    "Ming trophy lettering mirrors with the whole static sprite when facing left, as documented by the recovered batch; no separate text-unmirroring behavior is introduced."
+  ],
+  "currentRuntimeChecks": {
+    "method": "Direct import and assertions of current projectileArtSpec for every projectile slot of the four owners; reflected-owner resolution uses unchanged move definition.",
+    "pass": true,
+    "movesChecked": 4,
+    "mappings": [
+      {
+        "owner": "ghostly",
+        "slot": "special",
+        "moveName": "Projectile de Ghostly",
+        "motif": "ghostly-wisp",
+        "normalResolution": "ghostly-wisp",
+        "reflectedResolution": "ghostly-wisp",
+        "motion": "fixed",
+        "published": true
+      },
+      {
+        "owner": "orbsman",
+        "slot": "special",
+        "moveName": "Projectile de Orbsman",
+        "motif": "orbsman-orb",
+        "normalResolution": "orbsman-orb",
+        "reflectedResolution": "orbsman-orb",
+        "motion": "fixed",
+        "published": true
+      },
+      {
+        "owner": "oyster",
+        "slot": "special",
+        "moveName": "Projectile de The Oyster",
+        "motif": "oyster-pearl",
+        "normalResolution": "oyster-pearl",
+        "reflectedResolution": "oyster-pearl",
+        "motion": "fixed",
+        "published": true
+      },
+      {
+        "owner": "abel",
+        "slot": "special",
+        "moveName": "Projectile de Abel",
+        "motif": "abel-program",
+        "normalResolution": "abel-program",
+        "reflectedResolution": "abel-program",
+        "motion": "fixed",
+        "published": true
+      }
+    ]
+  },
+  "historicalProjectileCanvas": [
+    {
+      "id": "ghostly-wisp",
+      "fighter": "ghostly",
+      "slot": "special",
+      "moveName": "Projectile de Ghostly",
+      "reflectable": true,
+      "drawChecks": 4,
+      "allExactSources": true,
+      "allUniformScale": true,
+      "allFacingVerified": true,
+      "rightReflectionRecorded": true,
+      "leftReflectionRecorded": true
+    },
+    {
+      "id": "orbsman-orb",
+      "fighter": "orbsman",
+      "slot": "special",
+      "moveName": "Projectile de Orbsman",
+      "reflectable": true,
+      "drawChecks": 4,
+      "allExactSources": true,
+      "allUniformScale": true,
+      "allFacingVerified": true,
+      "rightReflectionRecorded": true,
+      "leftReflectionRecorded": true
+    },
+    {
+      "id": "oyster-pearl",
+      "fighter": "oyster",
+      "slot": "special",
+      "moveName": "Projectile de The Oyster",
+      "reflectable": true,
+      "drawChecks": 4,
+      "allExactSources": true,
+      "allUniformScale": true,
+      "allFacingVerified": true,
+      "rightReflectionRecorded": true,
+      "leftReflectionRecorded": true
+    },
+    {
+      "id": "abel-program",
+      "fighter": "abel",
+      "slot": "special",
+      "moveName": "Projectile de Abel",
+      "reflectable": true,
+      "drawChecks": 4,
+      "allExactSources": true,
+      "allUniformScale": true,
+      "allFacingVerified": true,
+      "rightReflectionRecorded": true,
+      "leftReflectionRecorded": true
+    }
+  ],
+  "visualEvidenceReviewed": [
+    "docs/art-generation/base-sprites-20261125/canvas/bases-overview.jpg",
+    "docs/art-generation/base-sprites-20261125/canvas/base-ghostlyvacuum.jpg",
+    "docs/art-generation/base-sprites-20261125/canvas/base-disappearingguymicrophone.jpg",
+    "docs/art-generation/base-sprites-20261125/canvas/base-glitch-murderdrones-queenie-fusion.jpg",
+    "docs/art-generation/base-sprites-20261125-b/canvas-projectiles/projectiles-native-and-reflected.png"
+  ]
+}

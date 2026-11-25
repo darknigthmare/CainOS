@@ -89,7 +89,8 @@ try {
 
   await page.locator('#archive-search').fill('Pomni'); await page.locator('#archive-filter').selectOption('playable'); await advance(250);
   assert.equal(await page.locator('#archive-filter').inputValue(), 'playable');
-  assert.deepEqual(await page.locator('.archive-card h3').allTextContents(), ['Pomni']);
+  assert.deepEqual(await page.locator('.archive-card').evaluateAll(cards => cards.map(card => card.dataset.archiveId)), ['pomni', 'originalabstractedpomni']);
+  assert.deepEqual(await page.locator('.archive-card h3').allTextContents(), ['Pomni', 'Pomni — abstraction originale']);
   checked('an immediate filter change supersedes the pending search render');
 
   await nav('settings');

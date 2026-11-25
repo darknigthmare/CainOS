@@ -102,10 +102,11 @@ function backdrop(ctx, width, height) {
     ctx.fillStyle='#253247'; ctx.fillRect(x,y,20,20);
   }
 }
-const gallery=createCanvas(1280,1650), renderer=new CombatRenderer(gallery);
-gallery.width=1280; gallery.height=1650;
-const ctx=renderer.ctx; backdrop(ctx,1280,1650);
-ctx.fillStyle='#fff2d0'; ctx.font='bold 24px sans-serif'; ctx.fillText('ENCORE / 15 PROJECTILES / RENDU NATIF',20,36);
+const galleryHeight=Object.keys(PROJECTILE_ART).length*100+150;
+const gallery=createCanvas(1280,galleryHeight), renderer=new CombatRenderer(gallery);
+gallery.width=1280; gallery.height=galleryHeight;
+const ctx=renderer.ctx; backdrop(ctx,1280,galleryHeight);
+ctx.fillStyle='#fff2d0'; ctx.font='bold 24px sans-serif'; ctx.fillText(`ENCORE / ${Object.keys(PROJECTILE_ART).length} PROJECTILES / RENDU NATIF`,20,36);
 ctx.font='15px sans-serif';
 for(const [label,x] of [['Motif',20],['Tir → · 1×',260],['Tir ← · 1×',430],['Renvoi ← · 1×',590],['Renvoi → · 1×',760],['Détail · 3×',1010]]) ctx.fillText(label,x,68);
 let sampled=[];

@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: identity-preserve. Asset: ONE selection bust portrait for Digital Circus Encore. Use the supplied Queenie backstage-warden full-body sprite as exact design reference. Show complete crown orb down to below the maroon sash and its key/pouches, framing as an enlarged bust. Preserve identical warm honey-brown wooden chess head, protruding half-lidded white eyes with orange irises, black lower lashes, navy pointed collar, small amber badge, cream sleeveless vest with brass buttons, slate-blue robe section, maroon sash, small brass winding key and two cream pouches. Both detached white gloves fully in frame beside bust, same relaxed guard gesture. Detailed polished 2D cel shading and thin dark outlines, same proportions. No arms, legs, mouth, nose, human face, hat or extra props. One figure slightly facing screen right. Real transparent RGBA alpha background, clean outside silhouette without glow, haze, vignette, scene, ground shadow, text, label or grid. Portrait/bust only, no full lower skirt; complete crown and fingers with margin.",
+  "source": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-3348e4be-e3f2-4abb-ace5-9c5699a1e26b.png",
+  "installed": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Bust preserves natural wooden head, cream vest, navy collar, amber badge, maroon sash with key and pouches. Two white detached gloves fully visible; no extra anatomy.",
+  "sha256": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f",
+  "bytes": 1435198
+}

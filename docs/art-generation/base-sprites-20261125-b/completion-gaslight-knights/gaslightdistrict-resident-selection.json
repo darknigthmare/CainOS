@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: identity-preserve. Asset: one fighter-selection bust portrait for Digital Circus Encore. The reference is Queenie as Dame des écluses, an original Gaslight District crossover. Create a separate high-quality selection portrait from complete wooden crown orb to waist, preserving exactly the same warm turned-wood chess queen head, protruding half-lidded white eyes with orange irises and black lower lashes, sleeveless petrol-blue oilskin mantle, raised charcoal collar, brass scallop-shell brooch, copper sash and chart pouches, cream ermine front, and two detached white gloves. Slight three-quarter right-facing angle. One figure only, clean hand-painted 2D cel shading matching reference. The floating gloves are fully framed near the bust; NO arms, legs, mouth, nose or human anatomy. Full crown clear with margin. Intentional bust end at waist, no lower skirt. Actual transparent alpha everywhere outside character; no background gradient, glow, haze, ground shadow, labels, text, or frame. Do not copy the ambient surround in the reference. Preserve costume design, materials and colors 1:1 with supplied sprite.",
+  "source": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png",
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-b8c2c2ca-769a-4cd2-a68b-e57604b5dbed.png",
+  "installed": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Bust preserves shell brooch, charcoal collar, petrol mantle, copper sash and two chart pouches; complete head and both floating gloves.",
+  "sha256": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772",
+  "bytes": 1422922
+}

@@ -1,0 +1,12 @@
+{
+  "asset": "smg4/hommage/stance",
+  "prompt": "Use case: precise-object-edit. Make only one change to this Queenie SMG4 game sprite: REMOVE THE PINK BOW TIE at the neck, replacing that small occupied area with the same uninterrupted royal-blue shirtfront and natural wooden neck beneath it. Keep ALL other details exactly unchanged, including crown/finial, cap, face, eyes, detached gloves, white long overall dress, blue panels, two gold buttons, hanging camera and integrated hem. The pink bow belongs to Ribbit and must be absent on this Queenie design. Preserve entire full-body right-facing static guard, original proportions, canvas dimensions, complete margins and 2D rendering. Preserve actual alpha transparency; no background, no glow, no extra props, no text. No new pose or animation.",
+  "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-570add06-7199-4e44-a67a-57e6cdbf4a0c.png",
+  "output": "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "references": [
+    "/workspace/scratch/6f9ceeefa959/generated_images/exec-04e482f5-d403-4809-ba46-09401f348117.png"
+  ],
+  "change": "Retrait natif du nœud rose hérité de Ribbit."
+}

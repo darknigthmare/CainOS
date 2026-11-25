@@ -1,0 +1,34 @@
+{
+  "createdAt": "2026-11-25T08:17:46.533Z",
+  "checks": [
+    {
+      "file": "docs/art-generation/base-sprites-20261125/integration-baseline.json",
+      "preservedFighters": 64,
+      "preservedCostumes": 508,
+      "preservedCrossovers": 405,
+      "pass": true
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261125-b/integration-baseline-522.json",
+      "preservedFighters": 64,
+      "preservedCostumes": 522,
+      "preservedCrossovers": 414,
+      "pass": true
+    }
+  ],
+  "counts": {
+    "fighters": 64,
+    "costumes": 540,
+    "crossovers": 432,
+    "sharedStages": 27,
+    "baseOnlyCostumes": 56,
+    "projectileMotifs": 23,
+    "offlineIllustrations": 6202,
+    "queenieCrossovers": 27
+  },
+  "versions": {
+    "offline": "0.7.0-1a9ef920f4fe",
+    "art": "c3a873743de8943b"
+  },
+  "pass": true
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "style": "hommage",
+    "prompt": "Use case: stylized-concept. Asset type: ONE upper-body selection portrait for Digital Circus Encore. Turn the exact supplied Queenie × Ultra Jump Mania hommage game sprite into a close-up portrait, preserving her precise crown shape, coconut finial and ornaments, orange eyes, lower lashes, material textures, glove design and clothing. Only change composition: bring head and upper chest forward, slight three-quarter right-facing presentation, both detached gloves visible. Keep entire crown and any leaves or flower within a comfortable transparent margin. Crop lower torso only at the bottom, no full-body duplicate. Same warm hand-painted 2D cel shading and crisp dark outlines. Actual transparent alpha outside the character; no aura, no glow, no scenery, no floor, no display stand. Portrait square canvas, high resolution. One character, no text, border or multiple views. Original Encore crossover appearance, not a canonical costume.",
+    "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-1c80158c-b7d9-4f4f-8c6c-56940950047c.png",
+    "target": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png"
+  },
+  {
+    "style": "resident",
+    "prompt": "Use case: stylized-concept. Asset type: ONE upper-body selection portrait for Digital Circus Encore. Turn the exact supplied Queenie × Ultra Jump Mania resident game sprite into a close-up portrait, preserving her precise crown shape, coconut finial and ornaments, orange eyes, lower lashes, material textures, glove design and clothing. Only change composition: bring head and upper chest forward, slight three-quarter right-facing presentation, both detached gloves visible. Keep entire crown and any leaves or flower within a comfortable transparent margin. Crop lower torso only at the bottom, no full-body duplicate. Same warm hand-painted 2D cel shading and crisp dark outlines. Actual transparent alpha outside the character; no aura, no glow, no scenery, no floor, no display stand. Portrait square canvas, high resolution. One character, no text, border or multiple views. Original Encore crossover appearance, not a canonical costume.",
+    "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-290fde14-fd08-406e-b04f-a27087bcd815.png",
+    "target": "assets/encore/crossovers/ultrajumpmania/queenie/resident/selection.png"
+  },
+  {
+    "style": "fusion",
+    "prompt": "Use case: stylized-concept. Asset type: ONE upper-body selection portrait for Digital Circus Encore. Turn the exact supplied Queenie × Ultra Jump Mania fusion game sprite into a close-up portrait, preserving her precise crown shape, coconut finial and ornaments, orange eyes, lower lashes, material textures, glove design and clothing. Only change composition: bring head and upper chest forward, slight three-quarter right-facing presentation, both detached gloves visible. Keep entire crown and any leaves or flower within a comfortable transparent margin. Crop lower torso only at the bottom, no full-body duplicate. Same warm hand-painted 2D cel shading and crisp dark outlines. Actual transparent alpha outside the character; no aura, no glow, no scenery, no floor, no display stand. Portrait square canvas, high resolution. One character, no text, border or multiple views. Original Encore crossover appearance, not a canonical costume.",
+    "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-8cde40ea-e6b9-410b-b257-516c86ce5a2c.png",
+    "target": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/selection.png"
+  }
+]

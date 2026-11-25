@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: identity-preserve. Asset: ONE selection bust portrait for Digital Circus Encore. Create the exact same original Queenie porcelain automaton from the supplied full-body sprite in enlarged bust framing. Show complete ivory scalloped crown with royal-blue enamel edge and brass orb; prominent half-lidded white eyes with orange irises and black lower lash pieces; brass mechanical neck; ivory/lavender upper body with navy floral filigree, gold seams, round brass inspection hatch; gold waist tabs. Both detached white porcelain gloves with gold wrist rings fully in frame, matching reference. End torso below waist tabs, no lower skirt. Preserve material colors, proportions, all facial shapes and details. Fine dark outlines, intricate high-quality hand-painted 2D cel shading matching reference. One calm static figure in slight three-quarter right. No arms, legs, human anatomy, mouth, nose, weapon, text, labels, frame, duplicate, grid, ground, shadow, haze or glow. Real transparent RGBA background with empty alpha outside silhouette and generous crown/glove margin.",
+  "source": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-f716568e-c0d6-4b88-8b97-698916683dc2.png",
+  "installed": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Bust preserves ivory porcelain crown, brass orb/neck, orange eyes, two floating porcelain gloves, floral upper panels and round brass hatch. Matches the full-body automaton design.",
+  "sha256": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b",
+  "bytes": 1517530
+}

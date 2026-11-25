@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: stylized-concept. Asset: ONE full-body static 2D fighting-game sprite, original Queenie x Knights of Guinevere queen-automaton physical fusion for Encore. First reference is 2D style and proportions; second is recognizable Queenie chess-piece identity only, exclude commercial stand. Transform the body itself into a theme-park chess automaton while preserving the continuous tapered chess queen silhouette and distinct Queenie sleepy face. Scalloped IVORY PORCELAIN crown/head with subtle royal blue enamel rim, small BRASS orb at top, two prominent half-lidded white eye domes with orange irises and two short black lower lash pieces per eye; NO mouth or nose. Narrow exposed brass neck column. Continuous mechanical bell/skirt torso built from four overlapping tapered ivory and lavender panels, precise gold seams, subtle navy floral filigree and a small round brass inspection hatch at the upper torso; full integrated circular chess base. Exactly two detached articulated white porcelain gloves with gold wrist rings floating near chest in calm guard, no connecting arms. Whole full figure in slight three-quarter view facing right, vertically standing, centered with crown and base completely inside frame. Fine dark outlines, intricate polished hand-painted 2D cel shading matching first reference; clean porcelain and metal materials. No human legs, feet, hair, extra key behind silhouette, weapons, scenery, floor, shadow, glow, vignette, text, label or grid. Real transparent RGBA alpha everywhere outside silhouette, no ambient haze. One character and one static pose only.",
+  "sources": [
+    "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+    "docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png"
+  ],
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-614c5f79-f650-4da6-90c6-6f40cc490973.png",
+  "installed": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Complete porcelain-and-brass queen automaton with chess crown, orange eyes, visible brass neck, floral lavender/ivory body panels, round hatch and two floating porcelain gloves. No human anatomy.",
+  "sha256": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed",
+  "bytes": 2023659
+}

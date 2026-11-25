@@ -1,0 +1,7 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 build:combat
+> node scripts/build-combat.mjs
+
+Offline manifest: 0.7.0-4ad2d50212cf / 6162 illustrations / 3455315109 bytes / art bc96bca6d061bb86.
+Standalone ready: /workspace/scratch/c7a56010b070/outputs/game-build (6162 illustrations).

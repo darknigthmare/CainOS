@@ -1,0 +1,293 @@
+{
+  "schema": "encore-static-base-canvas-batch/v1",
+  "startedAt": "2026-11-25T08:11:26.197Z",
+  "completedAt": "2026-11-25T08:14:38.107Z",
+  "complete": true,
+  "expected": 32,
+  "execution": [
+    {
+      "id": "bunnyjax",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1022,
+      "workerLog": "families/bunnyjax.log",
+      "peakRSSBytes": 137936896,
+      "resumedVerified": true
+    },
+    {
+      "id": "maidribbit",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1016,
+      "workerLog": "families/maidribbit.log",
+      "peakRSSBytes": 137986048,
+      "resumedVerified": true
+    },
+    {
+      "id": "ghostlyvacuum",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 981,
+      "workerLog": "families/ghostlyvacuum.log",
+      "peakRSSBytes": 137764864,
+      "resumedVerified": true
+    },
+    {
+      "id": "mingtrophy",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 984,
+      "workerLog": "families/mingtrophy.log",
+      "peakRSSBytes": 137752576,
+      "resumedVerified": true
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 942,
+      "workerLog": "families/disappearingguymicrophone.log",
+      "peakRSSBytes": 137113600,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 925,
+      "workerLog": "families/glitch-murderdrones-queenie-hommage.log",
+      "peakRSSBytes": 136556544,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 954,
+      "workerLog": "families/glitch-murderdrones-queenie-resident.log",
+      "peakRSSBytes": 137220096,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 969,
+      "workerLog": "families/glitch-murderdrones-queenie-fusion.log",
+      "peakRSSBytes": 135311360,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 914,
+      "workerLog": "families/glitch-metarunner-queenie-hommage.log",
+      "peakRSSBytes": 135573504,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1193,
+      "workerLog": "families/glitch-metarunner-queenie-resident.log",
+      "peakRSSBytes": 134569984,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 986,
+      "workerLog": "families/glitch-metarunner-queenie-fusion.log",
+      "peakRSSBytes": 135475200,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1506,
+      "workerLog": "families/glitch-sunsetparadise-queenie-hommage.log",
+      "peakRSSBytes": 135245824,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 2039,
+      "workerLog": "families/glitch-sunsetparadise-queenie-resident.log",
+      "peakRSSBytes": 137297920,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1693,
+      "workerLog": "families/glitch-sunsetparadise-queenie-fusion.log",
+      "peakRSSBytes": 140144640,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1034,
+      "workerLog": "families/glitch-gaslightdistrict-queenie-hommage.log",
+      "peakRSSBytes": 135782400,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 944,
+      "workerLog": "families/glitch-gaslightdistrict-queenie-resident.log",
+      "peakRSSBytes": 135700480,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1052,
+      "workerLog": "families/glitch-gaslightdistrict-queenie-fusion.log",
+      "peakRSSBytes": 137895936,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1019,
+      "workerLog": "families/glitch-knightsofguinevere-queenie-hommage.log",
+      "peakRSSBytes": 135671808,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1002,
+      "workerLog": "families/glitch-knightsofguinevere-queenie-resident.log",
+      "peakRSSBytes": 135446528,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 896,
+      "workerLog": "families/glitch-knightsofguinevere-queenie-fusion.log",
+      "peakRSSBytes": 136245248,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 926,
+      "workerLog": "families/glitch-gameoverse-queenie-hommage.log",
+      "peakRSSBytes": 135667712,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 901,
+      "workerLog": "families/glitch-gameoverse-queenie-resident.log",
+      "peakRSSBytes": 135819264,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1021,
+      "workerLog": "families/glitch-gameoverse-queenie-fusion.log",
+      "peakRSSBytes": 136187904,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 929,
+      "workerLog": "families/glitch-lackadaisy-queenie-hommage.log",
+      "peakRSSBytes": 137539584,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1005,
+      "workerLog": "families/glitch-lackadaisy-queenie-resident.log",
+      "peakRSSBytes": 137539584,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 916,
+      "workerLog": "families/glitch-lackadaisy-queenie-fusion.log",
+      "peakRSSBytes": 138588160,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 925,
+      "workerLog": "families/glitch-smg4-queenie-hommage.log",
+      "peakRSSBytes": 135684096,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 913,
+      "workerLog": "families/glitch-smg4-queenie-resident.log",
+      "peakRSSBytes": 135639040,
+      "resumedVerified": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1092,
+      "workerLog": "families/glitch-smg4-queenie-fusion.log",
+      "peakRSSBytes": 135864320
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1071,
+      "workerLog": "families/glitch-ultrajumpmania-queenie-hommage.log",
+      "peakRSSBytes": 135974912
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 979,
+      "workerLog": "families/glitch-ultrajumpmania-queenie-resident.log",
+      "peakRSSBytes": 136400896
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "elapsedMs": 1144,
+      "workerLog": "families/glitch-ultrajumpmania-queenie-fusion.log",
+      "peakRSSBytes": 137744384
+    }
+  ]
+}

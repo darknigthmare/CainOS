@@ -1,0 +1,2238 @@
+{
+  "schema": "encore-static-base-assets/v2",
+  "createdAt": "2026-11-25T08:16:58.427995+00:00",
+  "baselineCommit": "616a585274506f20c54386d8be07a76e75e1f198",
+  "complete": true,
+  "families": 32,
+  "characterImages": 64,
+  "projectileImages": 8,
+  "animations": 0,
+  "scope": "Lot A recovered and lot B completed: 72 distinct individual native PNGs; no extra action drawings.",
+  "assets": [
+    {
+      "id": "bunnyjax",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/bunnyjax/selection.png",
+      "sha256": "4356b91156d0943fb1a5531076b1a48efee20d753d3c8b10a0015c4d64b42f92",
+      "bytes": 748230,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        309,
+        121,
+        943,
+        1110
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6838887489857018,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        309,
+        121,
+        943,
+        1110
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-ab1855b5-9113-4641-9857-af48e92dacd2.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "2a087b78df806178f02b2e17f82f00b2dfa62f29"
+    },
+    {
+      "id": "bunnyjax",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/bunnyjax/stance.png",
+      "sha256": "2a31778947de274e3c3d9e5997e79b219e5b33df4d728891f30bdd587f8b1ac2",
+      "bytes": 952942,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        230,
+        96,
+        1008,
+        1158
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6224884198316583,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        230,
+        96,
+        1008,
+        1158
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-3c7f53a1-4e6c-4465-aa23-6ed85e8237ce.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "6dff2a772219a5ad1178167042d481faa417ab7c"
+    },
+    {
+      "id": "maidribbit",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/maidribbit/selection.png",
+      "sha256": "d61047b9c5a14da86360869c8f1cd0fff215591471d121267677f69fcc422525",
+      "bytes": 996202,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        313,
+        68,
+        940,
+        1182
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6600829498714162,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        313,
+        68,
+        940,
+        1182
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-0158bdba-bf8d-4702-99c9-560f12b6c194.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "0ae2939af30376614ddb73fc2b8bad50679641dd"
+    },
+    {
+      "id": "maidribbit",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/maidribbit/stance.png",
+      "sha256": "2b3106c5f37ad585b103070dbf422f9c35b4304e58adedeea1d56bfa61997a47",
+      "bytes": 1190985,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        289,
+        23,
+        958,
+        1221
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6117502143062455,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        289,
+        23,
+        958,
+        1221
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-84a7fd91-2932-4d09-b451-54d7a0542c0c.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "7981b7bc9b91bbad802f4ce529d2c52faad442c1"
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/selection.png",
+      "sha256": "ed1db40962dc766338f9169bcc5baeed5498a594e66568a3317db0c786603e4d",
+      "bytes": 811820,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        268,
+        24,
+        1000,
+        1241
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.694076880616795,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        268,
+        24,
+        1000,
+        1241
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-845d67fb-0172-4d37-92d5-263de581e434.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "679fea752596b4115f54c2c9bca4b2fbc4cd168a"
+    },
+    {
+      "id": "ghostlyvacuum",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/ghostlyvacuum/stance.png",
+      "sha256": "f870ff78ffb83cddc48404662feb9a805a83b73007287904ea2991280bd8cb46",
+      "bytes": 724718,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        300,
+        75,
+        967,
+        1218
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.7337292593525281,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        300,
+        75,
+        967,
+        1218
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-672d7de7-2ebf-4182-8e65-73044cc470ea.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "b037aabc14b9965744042537957ffc21edd06658"
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/mingtrophy/selection.png",
+      "sha256": "4af03a7b5ba483604a1f8ccc2ac7c67260cb0de50c4c367f020aaac21985c3e8",
+      "bytes": 1222562,
+      "width": 1173,
+      "height": 1341,
+      "mode": "RGBA",
+      "alphaBounds": [
+        211,
+        35,
+        949,
+        1301
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5902562821322155,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        211,
+        35,
+        949,
+        1301
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-96350c2e-769b-43be-935b-f7c7335c214e.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "1f96521c232af9b1cc0256f14b101af07938a031"
+    },
+    {
+      "id": "mingtrophy",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/mingtrophy/stance.png",
+      "sha256": "21d048326a8eb088af316edc194ab1776b50235b5f7839d3b3c6dce4774504e9",
+      "bytes": 1136644,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        271,
+        27,
+        972,
+        1230
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6312412719489022,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        271,
+        27,
+        972,
+        1230
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-760f2962-b127-48af-b65d-0b98e553856c.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "d11a862cbeb90501097179ac027bfa8cd8265f3b"
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "selection",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+      "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+      "bytes": 672095,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        228,
+        82,
+        1008,
+        1185
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.731402414983377,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        228,
+        82,
+        1008,
+        1185
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-fab809cd-b251-46d8-a665-83dfc9203f43.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "dde463f385d65b3593f164161173ff55dc6ac79a"
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "slot": "stance",
+      "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+      "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+      "bytes": 749405,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        208,
+        19,
+        1050,
+        1217
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6929640143566107,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/official/manifest.json",
+      "visibleAlphaBounds": [
+        208,
+        19,
+        1050,
+        1217
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-f0993885-cb5c-4062-a2ad-a1863eff7e33.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "53927a2bd9e5ecf366b264ea8b041263c9de43b0"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/selection.png",
+      "sha256": "5eac5afae5c052e4dd2fe37875f8a2e731b065270abd897536b2fbe841ee7eec",
+      "bytes": 1854418,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        179,
+        36,
+        799,
+        1515
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5945288340250651,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        179,
+        36,
+        799,
+        1515
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-ae0d2616-d02f-4e5e-a885-d4346444ed19.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "02fe9f35938756cd677ecb719262b305fa0af162"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/hommage/stance.png",
+      "sha256": "3b8158f529ec6380290a7048148ba91ee14c74acde0e262fdffa5dd52602d866",
+      "bytes": 1667309,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        205,
+        65,
+        881,
+        1500
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6474463144938151,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        205,
+        65,
+        881,
+        1500
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-7851f783-1b5f-4891-918c-a69fd255c41d.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "400e4134e27ed2e7a58ae9a31acf09d74362d5c9"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/selection.png",
+      "sha256": "c82c8b6be12f0d47cd568b6303eb76108080d72ec2221014b84f279da484e821",
+      "bytes": 1212445,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaBounds": [
+        252,
+        30,
+        878,
+        1386
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6394926016055495,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        252,
+        30,
+        878,
+        1386
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-a2808dcb-ed93-4550-b5d1-421e2c953b27.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "b7f5183e26b2e609f1cde136548c5c7fb1617da6"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/resident/stance.png",
+      "sha256": "9f319af88fd03208ac18a693f06808b992566d8bb8ce3fb8de977e9981580e0d",
+      "bytes": 2021765,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        145,
+        54,
+        925,
+        1509
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6197026570638021,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        145,
+        54,
+        925,
+        1509
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-ac6cb0f9-e609-4649-807e-904697533cd3.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "6f6ed1f9415bf0d724a1191b84e12731921ba3a8"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/selection.png",
+      "sha256": "c8389a97707cf4bebe569ef7bc8c3ff7376aa1d6d9ec2a5cafc52d08e7037537",
+      "bytes": 1452362,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaBounds": [
+        59,
+        15,
+        1097,
+        1388
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5755210915905722,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        59,
+        15,
+        1097,
+        1388
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-25a18277-6b0a-4e81-a940-9d4ea7ee177b.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "f402544f4144120187c5cb1cf4e10722347abaa9"
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/queenie/fusion/stance.png",
+      "sha256": "e0925ad654e36f6e2e6922e2ba12aa7ad90d8ffda2d03ee9cb02b28d27387187",
+      "bytes": 1849177,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        182,
+        59,
+        816,
+        1480
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6496206919352213,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        182,
+        59,
+        816,
+        1480
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-5338d263-d08a-483c-8127-a571488b081e.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "0423f7eb67a46afe1b71b9af7e4e2d003dc8dbd5"
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/selection.png",
+      "sha256": "b23bb46429bcaa235883ab19212711efa93b64d25dbfc52c76a3e11c24930545",
+      "bytes": 943287,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaBounds": [
+        294,
+        27,
+        846,
+        1382
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6751502183028574,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        294,
+        27,
+        846,
+        1382
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-ff3e98ff-86ac-465f-a66e-c94e80c210f1.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "6d3c4bc26fde5fd2a5e1a48703c659d705259c76"
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/hommage/stance.png",
+      "sha256": "3dc25863027a3d919f8314da12d91e6a371863fa0ea47d67ad4601676693c600",
+      "bytes": 1513934,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        201,
+        65,
+        915,
+        1502
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6805578867594401,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        201,
+        65,
+        915,
+        1502
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-71084273-8326-4977-a6c7-d36efdbc8ee5.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "c1c709a9c4f645eb3c8a5a5703ac96b34032d513"
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/selection.png",
+      "sha256": "a9eb5cfdbcf6f7f4cebb7db8b95c9342d69341b65589950016315929137ec71d",
+      "bytes": 1646849,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        184,
+        49,
+        816,
+        1522
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6461620330810547,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        184,
+        49,
+        816,
+        1522
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-b8ceaba0-832c-418f-96f1-0733e5e6eb7a.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "1647cd41de20803e0beed5fc4d0f0d49f1fa6060"
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/resident/stance.png",
+      "sha256": "9dbbda86cdd9ddb4941ad9b383e62463097cc6843c3257ad0b39ac11f184c93f",
+      "bytes": 1670178,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        112,
+        78,
+        825,
+        1491
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6578229268391927,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        112,
+        78,
+        825,
+        1491
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-49af81f0-d0e7-411e-882e-d7c311665d6b.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "f7de82b5aba08b24fb3674d1cc70a658f7342090"
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/selection.png",
+      "sha256": "6520d1c07a553d6edee3dfb1830b8a06e6204e4c176f3895f359ca43dbe708f2",
+      "bytes": 1777988,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        145,
+        57,
+        826,
+        1492
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6434249877929688,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        145,
+        57,
+        826,
+        1492
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-f7f63fb6-21e7-48c0-8763-12c58021defd.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "36e69a7ab7c47fb5855749aac2efd079cc5306b5"
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/queenie/fusion/stance.png",
+      "sha256": "e229701223586eced3e51a807c3e31badd8b071f8a4aebdc8445b259313a023c",
+      "bytes": 1824011,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        120,
+        59,
+        939,
+        1489
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6137663523356119,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/queenie-two-worlds/manifest.json",
+      "visibleAlphaBounds": [
+        120,
+        59,
+        939,
+        1490
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-6217d9c7-9b22-4ed2-8d4c-e38e98d24172.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "6a89b98a108359a2a5969e82acb3ca9db08c75b8"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/selection.png",
+      "sha256": "40a535573dc7ec929374106e67a26d4ac1677a861ac8312e1de76b6d4adc4ee9",
+      "bytes": 1018233,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        185,
+        45,
+        1114,
+        1214
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.637713066194557,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "visibleAlphaBounds": [
+        185,
+        45,
+        1114,
+        1214
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-84bc2664-f485-48fc-8ea3-33535ad05beb.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "f2752e440c658b54b7c1143fe6d2d72b4cfecb5b"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/hommage/stance.png",
+      "sha256": "8016f5322042d805bf355c2744c08d1ce002abf6276be0ccf1b78268fc8e2369",
+      "bytes": 1564333,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        122,
+        78,
+        853,
+        1386
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6656316121419271,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "visibleAlphaBounds": [
+        122,
+        78,
+        853,
+        1386
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-af2c5ced-6e66-4b16-96ef-59339b34aba9.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "e36354ae9932dadf0116b1c737e921db794782db"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/selection.png",
+      "sha256": "8ab419d9d59d5544364d6da2302f2173fd14818914a78c1a1d7ea7397c1df1a8",
+      "bytes": 1017935,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        218,
+        60,
+        964,
+        1234
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6605942324275238,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "visibleAlphaBounds": [
+        218,
+        60,
+        964,
+        1234
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-6c8ff15d-fc26-440f-acea-85474c32c72a.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "1b6c234a152c817e3b55b8c5461c6f31ee2b3622"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/resident/stance.png",
+      "sha256": "6ca97e79c939ae1a7abb4439aedad5b8b7e1da5f75ccf842cca9375ac3d4fea9",
+      "bytes": 1704161,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        189,
+        100,
+        867,
+        1461
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6615645090738932,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "visibleAlphaBounds": [
+        189,
+        100,
+        867,
+        1461
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-0493df3b-fa34-4854-b6e8-91c3f96ca0ac.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "da011bc632c9ea983089858719c392d3004e8e1c"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/selection.png",
+      "sha256": "63824c9e50ac7f0e432071123f6d7892b851436444ae90f7fda06c7c25361790",
+      "bytes": 1439512,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        210,
+        23,
+        1051,
+        1233
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5816824757267971,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "visibleAlphaBounds": [
+        210,
+        23,
+        1051,
+        1233
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-135f3fb7-c26b-43cc-bf67-40e8858a67ed.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "d5e91cd22d6c5260e3e5726f6b863ff532386720"
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/sunsetparadise/queenie/fusion/stance.png",
+      "sha256": "0007991718905bd90460f312b4331d9cdf2c43cd74bd508abdbff628b6247363",
+      "bytes": 2046369,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaBounds": [
+        146,
+        81,
+        849,
+        1470
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6135476430257162,
+      "nativeBytesVerified": true,
+      "reviewPath": "docs/art-generation/base-sprites-20261125/root-sunset/manifest.json",
+      "visibleAlphaBounds": [
+        146,
+        81,
+        849,
+        1470
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-e0af60a8-131f-48e4-bbbe-6440c79d1bf0.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "5db8bdfcba34ce1d50b41e220f5f558318605921"
+    },
+    {
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-62bc74ec-5a93-45cc-96cf-86d7167374c3.png",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e",
+      "bytes": 477139,
+      "width": 1659,
+      "height": 948,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        167,
+        238,
+        1491,
+        722
+      ],
+      "transparentFraction": 0.8243241696614554,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        167,
+        238,
+        1491,
+        722
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-62bc74ec-5a93-45cc-96cf-86d7167374c3.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "d3bc1e216d2b6639b6b548e7bad7bc9b6d052f31"
+    },
+    {
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-eca66725-ad5b-43c1-a534-1d63d084ff93.png",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746",
+      "bytes": 897786,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        184,
+        205,
+        1058,
+        1087
+      ],
+      "transparentFraction": 0.5959258920100018,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        184,
+        205,
+        1058,
+        1087
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-eca66725-ad5b-43c1-a534-1d63d084ff93.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "44fdb42741a6ca8b772562365095a04610283211"
+    },
+    {
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-d765e317-3d89-4932-9b03-dd5765fc60b8.png",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2",
+      "bytes": 836267,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        191,
+        214,
+        1042,
+        1084
+      ],
+      "transparentFraction": 0.633011047264384,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        191,
+        214,
+        1042,
+        1084
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-d765e317-3d89-4932-9b03-dd5765fc60b8.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "b71b2a909dffdf7fdcb5c02c147c8c92c7629391"
+    },
+    {
+      "id": "ming-star",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-58aa2924-fc4d-4dda-b70a-63a8eaaf1461.png",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2",
+      "bytes": 971882,
+      "width": 1429,
+      "height": 1100,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        132,
+        120,
+        1294,
+        997
+      ],
+      "transparentFraction": 0.6018926140339717,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        132,
+        120,
+        1294,
+        997
+      ],
+      "nativeSource": "/workspace/scratch/c7a56010b070/generated_images/exec-58aa2924-fc4d-4dda-b70a-63a8eaaf1461.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "f4fc7d4fee6c8c7caef2462348bf838be68ab68b"
+    },
+    {
+      "id": "ghostly-wisp",
+      "owner": "ghostly",
+      "name": "Flamme spectrale de Ghostly",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-22249ddd-169e-42a4-9e87-c1eeb90a8914.png",
+      "file": "assets/encore/projectiles/ghostly-wisp.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "a1c33623c887a1974ae458acd6e58b33c7841599557b8c4fee2e37ade352a072",
+      "bytes": 375002,
+      "width": 1774,
+      "height": 887,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        136,
+        51,
+        1718,
+        671
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        349,
+        253,
+        1423,
+        665
+      ],
+      "transparentFraction": 0.830849969940351,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory.",
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        349,
+        253,
+        1423,
+        665
+      ],
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-22249ddd-169e-42a4-9e87-c1eeb90a8914.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "3041c108346230a03daab0d5ad277286473dddea"
+    },
+    {
+      "id": "orbsman-orb",
+      "owner": "orbsman",
+      "name": "Orbe d’Orbsman",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-0ed43cef-31a6-4253-ab40-0fe223b66ff2.png",
+      "file": "assets/encore/projectiles/orbsman-orb.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "69e3ada5e8794f6aa9bdccb4dd1604d492cc651dbcd893ee74cd2726946607ab",
+      "bytes": 775388,
+      "width": 1263,
+      "height": 1246,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1223,
+        1246
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        194,
+        202,
+        1052,
+        1084
+      ],
+      "transparentFraction": 0.6191334042490999,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory.",
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        194,
+        202,
+        1052,
+        1084
+      ],
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-0ed43cef-31a6-4253-ab40-0fe223b66ff2.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "7ae23485262fe9f538bb58421b91716e60f8af86"
+    },
+    {
+      "id": "oyster-pearl",
+      "owner": "oyster",
+      "name": "Perle de l’Huître",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-1e8ded86-4ea8-4e0c-8b5e-82d2991d23ac.png",
+      "file": "assets/encore/projectiles/oyster-pearl.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "e8ca85a34d1fcf774259aa002e7bbaf325b465b96dcc2ceda26e3eeae6fdf337",
+      "bytes": 773164,
+      "width": 1263,
+      "height": 1246,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        37,
+        1190,
+        1246
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        230,
+        238,
+        1023,
+        1040
+      ],
+      "transparentFraction": 0.6654002229144347,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory.",
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        230,
+        238,
+        1023,
+        1040
+      ],
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-1e8ded86-4ea8-4e0c-8b5e-82d2991d23ac.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "b393521d587e9c318a74d24462ce50c7fa3a7a99"
+    },
+    {
+      "id": "abel-program",
+      "owner": "abel",
+      "name": "Programme d’Abel",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-e28910c2-c1fa-4084-a280-461f460359ea.png",
+      "file": "assets/encore/projectiles/abel-program.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "de5831b5684dfe7964ac43785a84b201b61dd8fa188a747d677add71985ee8f1",
+      "bytes": 734452,
+      "width": 1402,
+      "height": 1122,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1293,
+        1122
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        313,
+        185,
+        1060,
+        960
+      ],
+      "transparentFraction": 0.6574920981231295,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory.",
+      "mode": "RGBA",
+      "visibleAlphaBounds": [
+        313,
+        185,
+        1060,
+        960
+      ],
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-e28910c2-c1fa-4084-a280-461f460359ea.png",
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "865b5d825997f5afb040d028d6972a5d1479e1ed"
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/selection.png",
+      "sha256": "32645937f63eb76af693af825fd54e9d56d09f361b63ce31d185650e55d8173c",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1020936,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        276,
+        18,
+        1084,
+        1241
+      ],
+      "transparentFraction": 0.6393950840563785,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-53beb64e-60c8-45ae-8e6b-c33598fbeb01.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "c7f65a94632b16755268e72c885088df4403d332"
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/hommage/stance.png",
+      "sha256": "4c0b36ae31dc665e5686027a3fac43a36c1582e7608621a4a204c9d387b0586c",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 863504,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        304,
+        12,
+        935,
+        1248
+      ],
+      "transparentFraction": 0.7168747408611422,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-040e22bb-d5d9-401e-aa98-0339aa09e50c.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "4630ae027dd2e5ad85650a2b648f043f79d27120"
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/resident/selection.png",
+      "sha256": "02b9d853f8c5fa5750d69a1f7fd6f9647a6bfb247edc6530b0b6991eabdeca93",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1371150,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        167,
+        12,
+        1103,
+        1243
+      ],
+      "transparentFraction": 0.554967326246601,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-7e6c217e-e87f-4d0d-b8c0-ec0538811457.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "a3a184532a9a4604082ca6e998753b8df391e91b"
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/resident/stance.png",
+      "sha256": "9e308b2c7560cd5e0a5c04c4609abd2ac3843cd2fc5f6e8180338557666b1749",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 983614,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        295,
+        6,
+        930,
+        1247
+      ],
+      "transparentFraction": 0.7057785103617388,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-aa3b91ad-1870-43e9-8314-359c6c7d9cb9.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "f701f0986189d1c9c45e6e175b738649b6e8869a"
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/selection.png",
+      "sha256": "215a970a38cdbb0af7eb18ed3ebbafed3083aed5d4416ef4695224d6059402b7",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1381805,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        252,
+        14,
+        1132,
+        1244
+      ],
+      "transparentFraction": 0.5752571039022815,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-18dcff45-ee2d-4dda-bb8e-e3ef7a693268.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "de2837904296be50d070e0571b9f8d49e7ea25a9"
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/lackadaisy/queenie/fusion/stance.png",
+      "sha256": "2bae7a524f6bf95ec43a457dddba8ea07d186b2fba597af880922368e44b3dd4",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1226692,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        244,
+        9,
+        1005,
+        1251
+      ],
+      "transparentFraction": 0.6658507767170573,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-e377fd07-dffa-49f0-90cc-3483d2a23bab.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "d44e735b0c5bcb08d15c90bd43cb5f1db776abd8"
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png",
+      "sha256": "53e25f49fec589df7de0713fea5790a0858fd2ebe7810218c2ff82d27217a011",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1313360,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        78,
+        9,
+        1137,
+        1243
+      ],
+      "transparentFraction": 0.4971268972779927,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-1c80158c-b7d9-4f4f-8c6c-56940950047c.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "b3c78f431875b974c2634f78f6b8eaaa3d1f39de"
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+      "sha256": "e765c28222b21d4c6fcce318380e1ee05ba7f13f241d60bf67aa450dfedf011e",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1711323,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        107,
+        13,
+        876,
+        1527
+      ],
+      "transparentFraction": 0.5767409006754557,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-566c59b6-13f2-4512-81c9-79d0e721b72b.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "910eefecb00e30c087233ed3c49e396a3ea6e1f0"
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/selection.png",
+      "sha256": "a9ce7ac1b8eed55dfc65ef0ad262526bc4a7a6c6c66418b292ddc338ea707ce3",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 821312,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        287,
+        105,
+        994,
+        1090
+      ],
+      "transparentFraction": 0.7294183334223626,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-3ebbcb35-e202-4a83-8c9e-9d45f8a482a0.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "1afb446160ddfea9824fb79093feb34e17b365dd"
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/resident/stance.png",
+      "sha256": "c4a49ef34f742cf146472fab68a4bb2c69365f4a63d3a269e7b8a4e69e73bd66",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1886881,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        140,
+        12,
+        852,
+        1533
+      ],
+      "transparentFraction": 0.5704167683919271,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-5846d9ed-3774-49d5-b4ad-f0d45e45e656.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "aedaf11cb3d0ef368d12992deb7d9f9015a5b5ab"
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/selection.png",
+      "sha256": "3c9c8875800bc1d2a731335497d64c002c18e503b05cb7da549f01f68274c303",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 1701434,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        105,
+        13,
+        1125,
+        1253
+      ],
+      "transparentFraction": 0.5098129367205166,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-8cde40ea-e6b9-410b-b257-516c86ce5a2c.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "e0dc22ba537360bc3bab1b8891605b57336ece42"
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/stance.png",
+      "sha256": "33f7c9594e33230e260645d6087abb0fb84704668bba2f18e070d43770d3bd3b",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-lackadaisy-ultra/reviews.json",
+      "bytes": 2101965,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        161,
+        16,
+        869,
+        1514
+      ],
+      "transparentFraction": 0.6052665710449219,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-2a2a8d76-8990-4d19-8735-0ffb363175a0.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "72a35c50636a338401a6f5ed8de492b94eae0718"
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+      "sha256": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1284867,
+      "width": 1162,
+      "height": 1353,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        108,
+        26,
+        1049,
+        1328
+      ],
+      "transparentFraction": 0.5711334409541874,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-f388f817-3353-4761-a1fb-2a510dff3968.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "f542c6e293c487236c2c00da489c5ba563675629"
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png",
+      "sha256": "17020e8971441ea8060cee41d0084b5796b03346561d239fb7c317c26b44d76d",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1702472,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        137,
+        34,
+        879,
+        1505
+      ],
+      "transparentFraction": 0.6243718465169271,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-2720371f-4760-43c8-a2d3-583a4e4fd357.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "42de90712e30c569467e1c9c4c80c6ca9300430b"
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+      "sha256": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1422922,
+      "width": 1145,
+      "height": 1374,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        61,
+        21,
+        1048,
+        1369
+      ],
+      "transparentFraction": 0.5842782047125976,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-b8c2c2ca-769a-4cd2-a68b-e57604b5dbed.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "d99f86ab2e14a7ca08030520322edeb108a09221"
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png",
+      "sha256": "da9661920ea0fe76bba2977ba08c0eed5b8ce11722cd9471ce50195771f6954c",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1943378,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        111,
+        33,
+        880,
+        1507
+      ],
+      "transparentFraction": 0.6071605682373047,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-dcc63c41-660f-4aaa-a958-8dd26a94bdf1.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "1575c16ef6c0168bea130e9e5e59aa3da62fc319"
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+      "sha256": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1635594,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        87,
+        8,
+        1049,
+        1393
+      ],
+      "transparentFraction": 0.5722001418905002,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-664576a1-26a9-4bd5-ad46-1069a369acb9.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "d96b04f0396c4caeec55cf2422c62d8d33a68915"
+    },
+    {
+      "id": "glitch-gaslightdistrict-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png",
+      "sha256": "93483b178e2193fe94420a31d8b70036f8bb893145afb2c1a1c7611203fd19e3",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 2105246,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        144,
+        21,
+        846,
+        1517
+      ],
+      "transparentFraction": 0.634131113688151,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-bbd0bd7e-9fe8-4dca-b904-4a5ffac893a1.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "a8ce314db94c0270a4aba79005561c39e4d8d46e"
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+      "sha256": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1275253,
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        170,
+        13,
+        1159,
+        1159
+      ],
+      "transparentFraction": 0.581762113753331,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-bb14bdd9-0fc0-4274-9e29-6a1e23656765.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "e1799b1b873d6181733998670ec74765d4ee6636"
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+      "sha256": "cda07be8d5a6a8af1d1e901447987393c9bcb5f9581b20adccace0e47bf6707d",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1893766,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        155,
+        41,
+        869,
+        1508
+      ],
+      "transparentFraction": 0.5724894205729166,
+      "nativeSource": "/workspace/scratch/0259e839f9d6/generated_images/exec-8bce318d-41fd-40a1-ba05-405a2a528e8b.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "recovered",
+      "gitBlobSHA": "f5f6ef64ec03aa24b36bd0ce2db6d06aea65cdbd"
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+      "sha256": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1435198,
+      "width": 1082,
+      "height": 1453,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        94,
+        13,
+        987,
+        1437
+      ],
+      "transparentFraction": 0.5843363148206338,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-3348e4be-e3f2-4abb-ace5-9c5699a1e26b.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "1f2f5c1110500d54c44d7320f220f353f77f5fe8"
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+      "sha256": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1921290,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        162,
+        34,
+        839,
+        1514
+      ],
+      "transparentFraction": 0.6183681488037109,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-41175880-6663-4ee5-83d7-7d0f41a8e5fb.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "4aecf1b60c1c87317c931b223d78d057a3e41071"
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+      "sha256": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 1517530,
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        62,
+        13,
+        1082,
+        1381
+      ],
+      "transparentFraction": 0.5534695787276135,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-f716568e-c0d6-4b88-8b97-698916683dc2.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "3adb76b212f68a928dfdadd22e0b22d8dbb1947f"
+    },
+    {
+      "id": "glitch-knightsofguinevere-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+      "sha256": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gaslight-knights/reviews.json",
+      "bytes": 2023659,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        149,
+        28,
+        828,
+        1487
+      ],
+      "transparentFraction": 0.6292921702067057,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-614c5f79-f650-4da6-90c6-6f40cc490973.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "891ab1ec2fc5844018b63d89d2a226d541988343"
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+      "sha256": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 999706,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        231,
+        23,
+        1147,
+        1232
+      ],
+      "transparentFraction": 0.5913548733367419,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4d089c12-29c2-43f4-a5b0-0c671bb4f308.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "7d70534d7ac169ee24706fb1ea5c9b84dfbb6245"
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png",
+      "sha256": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1497345,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        116,
+        10,
+        889,
+        1528
+      ],
+      "transparentFraction": 0.6106878916422526,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-e3ea7fe5-d0f6-404e-bf1f-a6adf2fcb60c.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "5a64437d6fafe2538a46a65ddf9f262dd6968581"
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+      "sha256": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 953650,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        237,
+        34,
+        1117,
+        1221
+      ],
+      "transparentFraction": 0.6190957675470393,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-10c49c25-81c4-4b2f-8584-70e4bcf42bce.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "dcb5d28bbaa79f17ad2d15f21b38b57b6dd30bfa"
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png",
+      "sha256": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1624310,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        103,
+        9,
+        902,
+        1530
+      ],
+      "transparentFraction": 0.5731563568115234,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-6b930664-6b61-4b5a-be9c-944e58c9ced1.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "9d553112cafc953a97b951d1e67e078554bd2784"
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+      "sha256": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1055209,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        258,
+        39,
+        1112,
+        1223
+      ],
+      "transparentFraction": 0.6410732863767364,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-bfbd095b-2fdb-4ee0-b21a-4fdeef1f6388.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "c880fad3bc4f11874fbed8aea23721469e9b8787"
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+      "sha256": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1797074,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        152,
+        35,
+        863,
+        1509
+      ],
+      "transparentFraction": 0.6467367808024088,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cfebfef4-355b-4159-a76b-fec142944ebc.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "a67e1ed4cf5212ee689c837114a59f27196c1ee8"
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+      "sha256": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 867505,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        275,
+        26,
+        1034,
+        1227
+      ],
+      "transparentFraction": 0.6522121237558155,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4dea0c87-9d63-4c07-b27c-f34ebbc1d20d.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "27f74cb111778c1b23ea760112eb9177e1a09297"
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+      "sha256": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1509113,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        168,
+        8,
+        882,
+        1529
+      ],
+      "transparentFraction": 0.6260089874267578,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-570add06-7199-4e44-a67a-57e6cdbf4a0c.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "2c50ca45d86a20c147261d5f0ba59de560f113fd"
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+      "sha256": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1011921,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        119,
+        17,
+        1139,
+        1238
+      ],
+      "transparentFraction": 0.6132745231209095,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-64c1c674-0cef-4526-9465-094dedead407.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "737324a33cb0dc380224c9dbb27f295dc948d60f"
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/resident/stance.png",
+      "sha256": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1695604,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        93,
+        18,
+        933,
+        1521
+      ],
+      "transparentFraction": 0.6044292449951172,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-15d9e7d9-c204-4cbe-b14b-d4f020a9d351.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "9b51bcc065acd69360252794cf23288d7951930f"
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+      "sha256": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 977798,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleAlphaBounds": [
+        240,
+        12,
+        1124,
+        1236
+      ],
+      "transparentFraction": 0.6294562344675666,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-62e0ffb3-7076-429d-9b99-2f04e9e8ac90.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "40f982ec23d13845fc37c0f361d437e7a0b3e239"
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/smg4/queenie/fusion/stance.png",
+      "sha256": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/completion-gameoverse-smg4/reviews.json",
+      "bytes": 1701631,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleAlphaBounds": [
+        101,
+        9,
+        898,
+        1527
+      ],
+      "transparentFraction": 0.5868352254231771,
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cf0e2933-f1e2-425d-a9ec-08ea6d6b3594.png",
+      "nativeBytesVerified": true,
+      "nativeVerificationPerformedThisSession": true,
+      "origin": "generated-this-session",
+      "gitBlobSHA": "f3fa90d77dccc7fca52ff8525969d786b258bd03"
+    }
+  ],
+  "summary": {
+    "files": 72,
+    "bytes": 95506966,
+    "nativeCopiesIdentical": 72,
+    "actualSourceFilesAvailableAndCompared": 72,
+    "rgbaFiles": 72,
+    "recovered": 43,
+    "generated-this-session": 29
+  }
+}

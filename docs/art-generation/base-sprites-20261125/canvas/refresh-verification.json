@@ -1,0 +1,121 @@
+{
+  "schema": "encore-static-base-canvas-refresh/v1",
+  "createdAt": "2026-11-25T06:12:26.489Z",
+  "reason": "Historical PWA resources restored; final offline manifest regenerated. All fourteen workers and the aggregate rerun against the final freeze.",
+  "previousOfflineVersion": "0.7.0-dfb320016b96",
+  "finalOfflineVersion": "0.7.0-4ad2d50212cf",
+  "summary": {
+    "appearances": 14,
+    "authoredDrawings": 28,
+    "sourceAndFacingChecks": 280,
+    "actualStateDraws": 840,
+    "portraits": 14,
+    "visuallyReviewedSheets": 14,
+    "peakWorkerRSSBytes": 138293248,
+    "sourceFilesCurrentAndIdentical": 12,
+    "nativeAssetHashesVerified": 28,
+    "pass": true
+  },
+  "sourceChanges": [
+    {
+      "file": "combat/offline-manifest.mjs",
+      "previousSha256": "26e664f5d494464bea9720bced382ba14fd4b185eb1b752bdb56f01475800bd9",
+      "finalSha256": "571872f93c90b33e9014886da375f3e29ff2c846b3e015f79f76ec51013f0db7"
+    }
+  ],
+  "sheets": [
+    {
+      "file": "base-bunnyjax.jpg",
+      "previousSha256": "0d695d0a62cec3d355e0d738dff314b6fbc557060e1dbb0bd054983e5925ba1a",
+      "finalSha256": "0d695d0a62cec3d355e0d738dff314b6fbc557060e1dbb0bd054983e5925ba1a",
+      "identical": true
+    },
+    {
+      "file": "base-maidribbit.jpg",
+      "previousSha256": "4b917855d6eda044969fe49eed3548337ab143cb853a53f956edb90d8c5b0274",
+      "finalSha256": "4b917855d6eda044969fe49eed3548337ab143cb853a53f956edb90d8c5b0274",
+      "identical": true
+    },
+    {
+      "file": "base-ghostlyvacuum.jpg",
+      "previousSha256": "a861bc551494a75312b4cf8cce9e9ed9fa1ad1017b6fa32358bccdea630355ef",
+      "finalSha256": "a861bc551494a75312b4cf8cce9e9ed9fa1ad1017b6fa32358bccdea630355ef",
+      "identical": true
+    },
+    {
+      "file": "base-mingtrophy.jpg",
+      "previousSha256": "c76ed94224d3745b69e5a699a8738480197c13884f8cd46512efb5a68a13f4f9",
+      "finalSha256": "c76ed94224d3745b69e5a699a8738480197c13884f8cd46512efb5a68a13f4f9",
+      "identical": true
+    },
+    {
+      "file": "base-disappearingguymicrophone.jpg",
+      "previousSha256": "1bc5d688880ed0889db35b9ab933dd53153460b699b6fa0a53da28ea12ce998a",
+      "finalSha256": "1bc5d688880ed0889db35b9ab933dd53153460b699b6fa0a53da28ea12ce998a",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-murderdrones-queenie-hommage.jpg",
+      "previousSha256": "e5ab87d9d2ba19746bf0dc9485e00a95f4e2b0ed0e36c217c94636c0b27f7327",
+      "finalSha256": "e5ab87d9d2ba19746bf0dc9485e00a95f4e2b0ed0e36c217c94636c0b27f7327",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-murderdrones-queenie-resident.jpg",
+      "previousSha256": "32b2bab54ef594dd24eb51853e138a3a694e9015e6fb7c17f95f5359cbee9673",
+      "finalSha256": "32b2bab54ef594dd24eb51853e138a3a694e9015e6fb7c17f95f5359cbee9673",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-murderdrones-queenie-fusion.jpg",
+      "previousSha256": "c8d22cab9bd87e0724f5d2bcf669672d83759cf08c53930bf6892e2bcfd70096",
+      "finalSha256": "c8d22cab9bd87e0724f5d2bcf669672d83759cf08c53930bf6892e2bcfd70096",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-metarunner-queenie-hommage.jpg",
+      "previousSha256": "ce7070789cdf4dc45949da20cebb0f9d7baee787cf9368c131f836104867e86a",
+      "finalSha256": "ce7070789cdf4dc45949da20cebb0f9d7baee787cf9368c131f836104867e86a",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-metarunner-queenie-resident.jpg",
+      "previousSha256": "cf0850057a7ecb89feb61abc059de6ae63c7792aaefa6f8fb8ee5c3b08701121",
+      "finalSha256": "cf0850057a7ecb89feb61abc059de6ae63c7792aaefa6f8fb8ee5c3b08701121",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-metarunner-queenie-fusion.jpg",
+      "previousSha256": "2575abe80bcabb2fda4e47dcdb5c74828e9d725c8157dbd5aed9f05f9c44c39a",
+      "finalSha256": "2575abe80bcabb2fda4e47dcdb5c74828e9d725c8157dbd5aed9f05f9c44c39a",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-sunsetparadise-queenie-hommage.jpg",
+      "previousSha256": "7bdd9a2f06100a90e87d827297b5ed18c364dee6646b2260657f22e68cf6620c",
+      "finalSha256": "7bdd9a2f06100a90e87d827297b5ed18c364dee6646b2260657f22e68cf6620c",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-sunsetparadise-queenie-resident.jpg",
+      "previousSha256": "a5787519a84dab39cf2585b9b05468227c3e2c2661897635ebc583d29f4ec3da",
+      "finalSha256": "a5787519a84dab39cf2585b9b05468227c3e2c2661897635ebc583d29f4ec3da",
+      "identical": true
+    },
+    {
+      "file": "base-glitch-sunsetparadise-queenie-fusion.jpg",
+      "previousSha256": "46289cf26e023e37415335a0b1f16dc9ceac0f17d078cb6d4c74ac417c2dc427",
+      "finalSha256": "46289cf26e023e37415335a0b1f16dc9ceac0f17d078cb6d4c74ac417c2dc427",
+      "identical": true
+    },
+    {
+      "file": "bases-overview.jpg",
+      "previousSha256": "e7ae70a9a7da8f7f71634e88d523f56a7cabe4151912889ba83dd4a6caf7938c",
+      "finalSha256": "e7ae70a9a7da8f7f71634e88d523f56a7cabe4151912889ba83dd4a6caf7938c",
+      "identical": true
+    }
+  ],
+  "changedSheets": [],
+  "priorIndividualVisualReviewRetained": true,
+  "finalReportSha256": "9cc36d5cc704fd0fdd9d6e9d1c0990025b4077879320b9cc2b714b5fd7850523"
+}

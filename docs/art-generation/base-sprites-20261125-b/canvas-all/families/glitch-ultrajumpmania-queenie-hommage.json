@@ -1,0 +1,496 @@
+{
+  "schema": "encore-static-base-canvas-review/v1",
+  "createdAt": "2026-11-25T08:14:34.594Z",
+  "offlineVersion": "0.7.0-1a9ef920f4fe",
+  "method": "Production Canvas2D renderer, native Skia; exact source path, uniform scale, facing, anchor and static reuse checked.",
+  "selectedId": "glitch-ultrajumpmania-queenie-hommage",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "authoredDrawings": 2,
+  "browserTestStatus": "not_executed",
+  "sources": {
+    "combat/base-sprite-content.mjs": "a4bf5eda522961ecf35dfb0dd0be5393eefbbb44d128f3eb7f575a225325da28",
+    "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+    "combat/base-sprite-continuation-20261125-b.mjs": "62f1da85c2f2b834b8d4e6a6417caaecbf7df80998affe63bf917a7b25dbd7e1",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c",
+    "scripts/render-combat-base-sprite-review.mjs": "add929f5b73f2bd84af922cbb581617436d0d745561daae957f75fe7a3a6f525"
+  },
+  "appearances": [
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "fighterId": "queenie",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png",
+          "bytes": 1313360,
+          "sha256": "53e25f49fec589df7de0713fea5790a0858fd2ebe7810218c2ff82d27217a011",
+          "bounds": {
+            "x": 24,
+            "y": 3,
+            "width": 324,
+            "height": 378
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "bytes": 1711323,
+          "sha256": "e765c28222b21d4c6fcce318380e1ee05ba7f13f241d60bf67aa450dfedf011e",
+          "bounds": {
+            "x": 45,
+            "y": 5,
+            "width": 320,
+            "height": 631
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": 0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 570.1505737304688,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png",
+          "matrix": {
+            "a": -0.3407289981842041,
+            "b": 0,
+            "c": 0,
+            "d": 0.3407289981842041,
+            "e": 709.8494262695312,
+            "f": 351.2963562011719
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 109.03327941894531,
+      "visibleHeight": 214.9999978542328,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2
+    }
+  ],
+  "sheets": [
+    "base-glitch-ultrajumpmania-queenie-hommage.jpg"
+  ],
+  "limitations": [
+    "A repeated stance is one authored base, not nine action drawings or frame-by-frame animation.",
+    "Native Canvas does not exercise DOM, input, audio, service workers or a physical device.",
+    "Technical rendering checks do not certify canonical 1:1 identity or hidden anatomy."
+  ],
+  "summary": {
+    "appearances": 1,
+    "authoredDrawings": 2,
+    "sourceAndFacingChecks": 20,
+    "actualStateDraws": 60,
+    "portraits": 1,
+    "peakRSSBytes": 135974912,
+    "pass": true
+  }
+}

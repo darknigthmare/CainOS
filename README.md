@@ -15,7 +15,39 @@ The playable game version is **0.7.0**. The original GLITCH wardrobe dates from 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **64 fighters, 640 techniques, 27 shared arenas, 508 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains **52 archive costumes, 51 additional illustrated Circus appearances / 507 PNGs, and 405 crossovers / 3,916 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit now has all 27 crossover bases across the nine collections: nine earlier families have eleven drawings each, and eighteen new families have only their portrait and static stance. The other 39 NPCs still have no crossover wardrobe. Combat techniques and stories are original fan-game adaptations.
+The game combines **64 fighters, 640 techniques, 27 shared arenas, 540 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**, for 36 distinct shared/crossover arenas. The wardrobe contains **52 archive costumes, 56 additional illustrated Circus appearances / 517 PNGs, and 432 crossovers / 3,970 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit and Queenie now each have all 27 crossover bases across the nine collections. Ribbit's nine earlier families retain eleven drawings each; its eighteen newer families and Queenie's 27 families have their portrait and static stance. The other 38 NPCs still have no crossover wardrobe. Combat techniques, crossover designs and projectile motifs are original fan-game adaptations.
+
+### Recovered and completed static bases — 25 November 2026
+
+This continuation integrates **72 distinct native PNGs: 43 recovered from the
+unfinished authoring checkout and 29 generated to complete the remaining pairs**.
+The 32 new selectable appearances each have exactly one portrait and one static
+stance; eight existing fighters also receive an individual projectile motif.
+No animation cycle or extra action drawing is added.
+
+- Five reference-based appearances: Bunny Jax, Maid Ribbit Pendantz, Ghostly
+  with vacuum, Ming with trophy and Disappearing Guy with microphone.
+- Queenie's 27 original crossover appearances cover all nine collections,
+  with three distinct treatments per universe: clothing homage, resident and
+  transformed fusion. The six collections completed here are The Gaslight
+  District, Knights of Guinevere, Gameoverse, Lackadaisy, SMG4 and Ultra Jump Mania.
+- Dedicated static projectile artwork for Queenie, Ribbit, Kaufmo, Ming,
+  Ghostly, Orbsman, Oyster and Abel. Their existing move rules and reflection
+  behavior are retained; the catalog now contains 23 motifs.
+
+**469 Node tests pass.** Both normal builds contain all **6,202 illustrations**;
+6,274 CainOS files and 6,270 standalone files match their sources by SHA-256.
+The current production Canvas review covers all 32 appearances (640 checks,
+1,920 draws) and all 23 projectile motifs (46 shots, 44 actual reflections,
+90 drawing checks). All 6,134 previously tracked asset files remain unchanged.
+
+See the [dated delivery and evidence](docs/art-generation/base-sprites-20261125-b/README.md),
+[32-appearance gallery](docs/art-generation/base-sprites-20261125-b/canvas-all/bases-overview.jpg),
+[native PNG inventory](docs/art-generation/base-sprites-20261125-b/asset-inventory.json)
+and [remaining-work register](docs/art-generation/base-sprites-20261125-b/remaining-work.md).
+The workbook is synchronized with this lot. Native Canvas checks do not certify
+browser interaction or canonical pixel-exact fidelity; those limits remain
+explicit in the evidence.
 
 ### Base sprites only — 24 November 2026
 
