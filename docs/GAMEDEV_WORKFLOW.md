@@ -204,3 +204,24 @@ Aucune commande d'installation des guides n'est exécutée par cette intégratio
 L'audit technique réutilise les deux fonctions de lecture décrites ci-dessus ;
 les autres scripts d'assets du snapshot restent des outils optionnels à examiner
 avant un usage ciblé.
+
+## Guide de combat associé à la bible — 25 novembre 2026
+
+La [matrice du guide général](bible/COMBAT_GAMES_GUIDE_INTEGRATION.md) complète
+cette méthode avec 30 rubriques et 100 exigences adaptées à Encore. Lire les
+[associations des personnages](bible/ASSOCIATIONS_PERSONNAGES.md) et les
+[fiches A–J](bible/MODELES_ET_CRITERES.md) pour relier une tâche aux données réelles.
+Le [guide original](bible/references/Combat_Games_Guide_General_v1.0.txt) reste intact.
+
+La phase active conserve les bases et scènes fixes. La campagne commune, les
+liaisons d’arènes, les phases de boss et les termes éditoriaux de conclusion
+restent qualifiés selon leur état de conception ou d’intégration. Toute nouvelle
+production ou modification du moteur doit reprendre les contraintes utilisateur
+et les critères associés, sans fermer automatiquement les autres axes de statut.
+
+Les scripts `build-combat-guide-associations.mjs` et `build-combat-guide.mjs`
+reconstruisent les associations et les documents depuis les sources actuelles.
+Leur option `--check` contrôle la cohérence sans écriture. La feuille **Guide combat**
+se vérifie séparément avec [sa preuve de publication](combat-guide-workbook-verification.json).
+Le compte d’arènes courant est 27, dont neuf crossovers, plus 64 arrangements dédiés ;
+les mentions historiques de 36 ne doivent pas être reprises comme inventaire actuel.

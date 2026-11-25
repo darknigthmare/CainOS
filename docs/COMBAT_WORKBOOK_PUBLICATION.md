@@ -1,5 +1,39 @@
 # Publication du classeur de suivi
 
+## Association du guide à la bible — 25 novembre 2026
+
+La passe documentaire ajoute **Guide combat** : 30 rubriques, 100 exigences
+associées et une colonne de notes utilisateur. Les 93 042 cellules des onze
+feuilles précédentes ont été comparées, ainsi que leurs styles, tables,
+validations et notes. Les 42 formules sont préservées, recalculées puis
+réimportées. Deux textes sont corrigés : `Synthèse!H9` et
+`Fonctionnalités!G95` indiquent désormais **27 arènes, dont 18 hors crossovers
+et 9 escales GLITCH**. Le JSON compagnon conserve cette même répartition.
+
+Le [rapport canonique courant](combat-workbook-verification.json) porte les
+empreintes du XLSX et du JSON enrichis. Il renvoie au
+[contrôle de cette passe](combat-guide-workbook-verification.json), à ses
+[rendus](verification/guide-workbook-20261125/guide-overview.png) et à la
+[copie intégrale du rapport précédent](verification/guide-workbook-20261125/previous-workbook-verification.json).
+Cette copie garde exactement ses octets d’origine ; ses résultats QA restent
+historiques. **Aucun test du jeu n’a été réexécuté par cette mise à jour du
+classeur.** `releaseReviewed` reste `false` et aucune preuve de campagne QA
+complète n’est attribuée à cette passe. Le gate de
+`scripts/package-combat-release.mjs` reste donc fermé jusqu’à une revue du jeu
+accompagnée des preuves requises.
+
+Le générateur [update-combat-workbook-guide.mjs](../scripts/update-combat-workbook-guide.mjs)
+utilise le moteur tableur principal pour son mode `--build`. Le mode
+`--publish-staged` reprend les fichiers déjà vérifiés en contrôlant leurs
+empreintes, sans réimporter ni réécrire le classeur. L’historique et les rendus
+sont préparés avant le remplacement des quatre fichiers canoniques : XLSX,
+JSON de suivi, rapport canonique et rapport détaillé du guide. Ce remplacement
+utilise `publishWorkbookArtifacts`, avec staging, sauvegardes et restauration
+sur erreur interceptée. Les limites d’atomicité décrites ci-dessous restent
+applicables.
+
+## Publication historique de la version 0.7
+
 Le générateur `scripts/build-combat-workbook.mjs` publie ensemble quatre résultats validés pour Encore 0.7 :
 
 - `DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx` ;

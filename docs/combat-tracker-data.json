@@ -38,9 +38,9 @@
     "baseOnlyCostumes": 56,
     "baseOnlyOfficialCostumes": 11,
     "baseOnlyCrossoverCostumes": 45,
-    "sharedStages": 27,
+    "sharedStages": 18,
     "crossoverStages": 9,
-    "totalStages": 36,
+    "totalStages": 27,
     "projectileMotifs": 23
   },
   "qaSummary": {
@@ -1037,7 +1037,7 @@
       "Implémenté",
       "P0",
       "combat/fidelity.mjs / combat/costume-fidelity.mjs / combat/base-sprite-content.mjs / combat/base-sprite-continuation-20261125-b.mjs",
-      "Documenter 64 combattants, 640 techniques, 36 arènes (27 partagées et neuf crossovers), 52 variantes d’archive, 56 tenues Circus et 432 crossovers avec leurs références.",
+      "Documenter 64 combattants, 640 techniques, 27 arènes (18 partagées et neuf crossovers), 52 variantes d’archive, 56 tenues Circus et 432 crossovers avec leurs références.",
       "Les deux lots ajoutent cinq apparences issues de vues officielles et 27 crossovers originaux de Queenie. Chaque famille demande deux bases statiques. Références visibles et créations originales restent distinctes ; aucune certification graphique 1:1.",
       ""
     ],
@@ -154013,5 +154013,551 @@
       "evidence": "docs/art-generation/base-sprites-20261124/verification.json",
       "historicalRowsPreserved": true
     }
-  ]
+  ],
+  "guideIntegration": {
+    "schema": "encore-general-guide-tracker/v1",
+    "asOf": "2026-11-25",
+    "sourceCommit": "abb53b227c76c47832f44810aab1aa102286388c",
+    "sourceGuide": "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+    "sections": 30,
+    "requirements": 100,
+    "characterAssociations": 64,
+    "plannedGlobalChapters": 12,
+    "plannedGlobalScenes": 36,
+    "plannedStageLinks": 6,
+    "bossContracts": 4,
+    "sheet": "Guide combat",
+    "design": "docs/bible/guide-design.json",
+    "integration": "docs/bible/guide-integration.json",
+    "scope": "Documentation et associations. Les éléments conçus ne sont pas comptés comme intégrés dans le jeu.",
+    "phase": "static-base-assets-and-documentation",
+    "rows": [
+      {
+        "id": "EN-G00",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "documenté",
+        "requirementIds": [
+          "EN-G00-01",
+          "EN-G00-02",
+          "EN-G00-03"
+        ],
+        "links": [
+          "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+          "AGENTS.md",
+          "docs/GAMEDEV_WORKFLOW.md"
+        ]
+      },
+      {
+        "id": "EN-G01",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "existant",
+        "requirementIds": [
+          "EN-G01-01",
+          "EN-G01-02",
+          "EN-G01-03"
+        ],
+        "links": [
+          "combat/data.mjs",
+          "combat/session.mjs",
+          "combat/engine.mjs",
+          "combat/index.html",
+          "scripts/build-combat.mjs"
+        ]
+      },
+      {
+        "id": "EN-G02",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G02-01",
+          "EN-G02-02",
+          "EN-G02-03",
+          "EN-G02-04"
+        ],
+        "links": [
+          "docs/bible/character-associations.json",
+          "combat/fidelity.mjs",
+          "combat/costume-fidelity.mjs"
+        ]
+      },
+      {
+        "id": "EN-G03",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "existant",
+        "requirementIds": [
+          "EN-G03-01",
+          "EN-G03-02",
+          "EN-G03-03",
+          "EN-G03-04"
+        ],
+        "links": [
+          "combat/data.mjs",
+          "combat/roster-expansion.mjs",
+          "combat/abstractions-content.mjs",
+          "combat/base-sprite-content.mjs"
+        ]
+      },
+      {
+        "id": "EN-G04",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "existant",
+        "requirementIds": [
+          "EN-G04-01",
+          "EN-G04-02",
+          "EN-G04-03"
+        ],
+        "links": [
+          "combat/engine.mjs",
+          "combat/session.mjs",
+          "combat/input.mjs",
+          "combat/bindings.mjs",
+          "tests/combat-rules.test.mjs"
+        ]
+      },
+      {
+        "id": "EN-G05",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G05-01",
+          "EN-G05-02",
+          "EN-G05-03",
+          "EN-G05-04"
+        ],
+        "links": [
+          "docs/bible/character-associations.json",
+          "combat/data.mjs",
+          "combat/engine.mjs",
+          "combat/training.mjs"
+        ]
+      },
+      {
+        "id": "EN-G06",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G06-01",
+          "EN-G06-02",
+          "EN-G06-03",
+          "EN-G06-04"
+        ],
+        "links": [
+          "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+          "combat/finisher-catalog.mjs",
+          "combat/finishers.mjs",
+          "combat/friendship-catalog.mjs"
+        ]
+      },
+      {
+        "id": "EN-G07",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G07-01",
+          "EN-G07-02",
+          "EN-G07-03"
+        ],
+        "links": [
+          "combat/stories.mjs",
+          "combat/tournament-lore.mjs",
+          "combat/render-sequences.mjs",
+          "docs/bible/character-associations.json"
+        ]
+      },
+      {
+        "id": "EN-G08",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "existant",
+        "requirementIds": [
+          "EN-G08-01",
+          "EN-G08-02",
+          "EN-G08-03"
+        ],
+        "links": [
+          "combat/stories.mjs",
+          "combat/story-presentation.mjs",
+          "combat/progression.mjs",
+          "docs/bible/character-associations.json"
+        ]
+      },
+      {
+        "id": "EN-G09",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "conçu, non intégré",
+        "requirementIds": [
+          "EN-G09-01",
+          "EN-G09-02",
+          "EN-G09-03"
+        ],
+        "links": [
+          "docs/bible/CAMPAGNE_GLOBALE.md",
+          "docs/bible/guide-design.json",
+          "combat/stories.mjs",
+          "combat/progression.mjs"
+        ]
+      },
+      {
+        "id": "EN-G10",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G10-01",
+          "EN-G10-02",
+          "EN-G10-03",
+          "EN-G10-04"
+        ],
+        "links": [
+          "docs/bible/character-associations.json",
+          "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+          "combat/illustrations.mjs",
+          "combat/story-presentation.mjs"
+        ]
+      },
+      {
+        "id": "EN-G11",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G11-01",
+          "EN-G11-02",
+          "EN-G11-03",
+          "EN-G11-04"
+        ],
+        "links": [
+          "docs/bible/ARENES_TRANSITIONS_BOSS.md",
+          "combat/session.mjs",
+          "combat/engine.mjs",
+          "docs/COMBAT_GLOINK_QUEEN_0.7.0.md"
+        ]
+      },
+      {
+        "id": "EN-G12",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G12-01",
+          "EN-G12-02",
+          "EN-G12-03"
+        ],
+        "links": [
+          "combat/data.mjs",
+          "combat/session.mjs",
+          "combat/app.mjs",
+          "combat/crossover-visits.mjs"
+        ]
+      },
+      {
+        "id": "EN-G13",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "existant",
+        "requirementIds": [
+          "EN-G13-01",
+          "EN-G13-02",
+          "EN-G13-03"
+        ],
+        "links": [
+          "combat/data.mjs",
+          "combat/stage-parallax.mjs",
+          "combat/render-stage-scenery.mjs",
+          "docs/COMBAT_DECORS_ET_POSES.md"
+        ]
+      },
+      {
+        "id": "EN-G14",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G14-01",
+          "EN-G14-02",
+          "EN-G14-03"
+        ],
+        "links": [
+          "combat/render-stage-motion.mjs",
+          "combat/render-stage-scenery.mjs",
+          "combat/readability.mjs",
+          "docs/bible/ARENES_TRANSITIONS_BOSS.md"
+        ]
+      },
+      {
+        "id": "EN-G15",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "conçu, non intégré",
+        "requirementIds": [
+          "EN-G15-01",
+          "EN-G15-02",
+          "EN-G15-03",
+          "EN-G15-04"
+        ],
+        "links": [
+          "docs/bible/ARENES_TRANSITIONS_BOSS.md",
+          "docs/bible/guide-design.json",
+          "combat/engine.mjs",
+          "combat/session.mjs"
+        ]
+      },
+      {
+        "id": "EN-G16",
+        "priority": "P1",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G16-01",
+          "EN-G16-02",
+          "EN-G16-03"
+        ],
+        "links": [
+          "combat/projectile-art.mjs",
+          "combat/render-presentation.mjs",
+          "combat/engine.mjs",
+          "combat/roster-expansion.mjs"
+        ]
+      },
+      {
+        "id": "EN-G17",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G17-01",
+          "EN-G17-02",
+          "EN-G17-03",
+          "EN-G17-04"
+        ],
+        "links": [
+          "docs/COMBAT_ART_BRIEF_0.6.0.md",
+          "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+          "combat/base-sprite-content.mjs",
+          "combat/fidelity.mjs"
+        ]
+      },
+      {
+        "id": "EN-G18",
+        "priority": "P1",
+        "decision": "différée pour les nouvelles animations",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G18-01",
+          "EN-G18-02",
+          "EN-G18-03"
+        ],
+        "links": [
+          "combat/render-poses.mjs",
+          "combat/render-finishers.mjs",
+          "combat/audio.mjs",
+          "combat/audio-ambiences.mjs"
+        ]
+      },
+      {
+        "id": "EN-G19",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G19-01",
+          "EN-G19-02",
+          "EN-G19-03"
+        ],
+        "links": [
+          "combat/app.mjs",
+          "combat/menu-navigation.mjs",
+          "combat/input.mjs",
+          "combat/style.css"
+        ]
+      },
+      {
+        "id": "EN-G20",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G20-01",
+          "EN-G20-02",
+          "EN-G20-03"
+        ],
+        "links": [
+          "combat/training.mjs",
+          "combat/session.mjs",
+          "tests/combat-training.test.mjs"
+        ]
+      },
+      {
+        "id": "EN-G21",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G21-01",
+          "EN-G21-02",
+          "EN-G21-03"
+        ],
+        "links": [
+          "combat/engine.mjs",
+          "combat/session.mjs",
+          "tests/combat-engine.test.mjs"
+        ]
+      },
+      {
+        "id": "EN-G22",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G22-01",
+          "EN-G22-02",
+          "EN-G22-03"
+        ],
+        "links": [
+          "combat/readability.mjs",
+          "combat/bindings.mjs",
+          "combat/session.mjs",
+          "tests/combat-accessibility-browser.mjs"
+        ]
+      },
+      {
+        "id": "EN-G23",
+        "priority": "P0",
+        "decision": "local et replays retenus ; réseau différé",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G23-01",
+          "EN-G23-02",
+          "EN-G23-03"
+        ],
+        "links": [
+          "combat/session.mjs",
+          "combat/engine.mjs",
+          "combat/input.mjs",
+          "tests/combat-session.test.mjs"
+        ]
+      },
+      {
+        "id": "EN-G24",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "partiel",
+        "requirementIds": [
+          "EN-G24-01",
+          "EN-G24-02",
+          "EN-G24-03"
+        ],
+        "links": [
+          "combat/progression.mjs",
+          "combat/session.mjs",
+          "combat/offline.mjs",
+          "tests/combat-profile-backup-browser.mjs"
+        ]
+      },
+      {
+        "id": "EN-G25",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "documenté",
+        "requirementIds": [
+          "EN-G25-01",
+          "EN-G25-02",
+          "EN-G25-03",
+          "EN-G25-04"
+        ],
+        "links": [
+          "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+          "docs/combat-tracker-data.json",
+          "docs/bible/guide-integration.json"
+        ]
+      },
+      {
+        "id": "EN-G26",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "documenté",
+        "requirementIds": [
+          "EN-G26-01",
+          "EN-G26-02",
+          "EN-G26-03",
+          "EN-G26-04"
+        ],
+        "links": [
+          "docs/GAMEDEV_WORKFLOW.md",
+          "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md"
+        ]
+      },
+      {
+        "id": "EN-G27",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "documenté",
+        "requirementIds": [
+          "EN-G27-01",
+          "EN-G27-02",
+          "EN-G27-03"
+        ],
+        "links": [
+          "docs/bible/character-associations.json",
+          "docs/bible/guide-design.json",
+          "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md"
+        ]
+      },
+      {
+        "id": "EN-G28",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "documenté",
+        "requirementIds": [
+          "EN-G28-01",
+          "EN-G28-02",
+          "EN-G28-03"
+        ],
+        "links": [
+          "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md",
+          "scripts/build-combat-guide.mjs",
+          "scripts/build-combat-guide-associations.mjs"
+        ]
+      },
+      {
+        "id": "EN-G29",
+        "priority": "P0",
+        "decision": "retenue",
+        "runtimeStatus": "documenté",
+        "requirementIds": [
+          "EN-G29-01",
+          "EN-G29-02",
+          "EN-G29-03"
+        ],
+        "links": [
+          "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+          "combat/fidelity.mjs",
+          "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md"
+        ]
+      }
+    ],
+    "verification": "docs/combat-guide-workbook-verification.json",
+    "stageCountCorrection": {
+      "previous": {
+        "sharedStages": 27,
+        "crossoverStages": 9,
+        "totalStages": 36
+      },
+      "current": {
+        "sharedStages": 18,
+        "crossoverStages": 9,
+        "totalStages": 27
+      },
+      "basis": "STAGES contient déjà les neuf CROSSOVER_STAGES ; les 64 arrangements dédiés sont comptés séparément."
+    }
+  }
 }

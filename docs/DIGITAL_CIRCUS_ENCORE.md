@@ -1,21 +1,28 @@
 # Digital Circus — Encore · Le Grand Duel
 
-Version jouable : **0.7.0** — sortie initiale le 24 octobre 2026 ; catalogue et
-dessins individuels réunis le **19 novembre 2026**, puis complétés le
-**20 novembre 2026** et le **24 novembre 2026**.
+Version jouable : **0.7.0**, règles de simulation **0.5.0** — sortie initiale le
+24 octobre 2026 ; catalogue et dessins individuels complétés les 19, 20, 24 et
+**25 novembre 2026**. Le guide général de combat est associé à la bible le
+**25 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**64 combattants, 640 techniques, 27 arènes partagées, 9 modes, 508 costumes et 184 archives**.
-Le catalogue contient 64 arrangements de scènes dédiées,
-les escales GLITCH, **52 costumes d’archive**, **51 variantes Circus / 507 PNG** et
-**405 costumes crossover / 3 916 fichiers**. Les quatorze propriétaires historiques
-conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les **27/27 bases**
-des neuf collections. Ses neuf tenues antérieures gardent leurs onze dessins ;
-ses dix-huit nouvelles tenues ont seulement un portrait et une garde statique.
-Les **39 autres PNJ sans crossover** restent ouverts. Aucun choix ne pointe vers
-un dessin absent.
-L’extension abstractions porte le roster à 64 combattants et **192 finales de spectacle** ;
-les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants d’origine.
+**64 combattants, 640 techniques, 27 arènes au total, 9 modes, 540 costumes et
+184 archives**. Les 27 arènes comprennent **18 décors hors crossovers et neuf
+escales GLITCH**. Les **64 arrangements dédiés** réutilisent ces décors ; ils sont
+comptés séparément et ne constituent pas 64 nouveaux lieux peints.
+
+Le catalogue des apparences comprend **52 costumes d’archive**, **56 variantes
+Circus / 517 PNG** et **432 crossovers / 3 970 fichiers**. Les quatorze propriétaires
+historiques conservent chacun leurs 27 crossovers. Ribbit et Queenie possèdent
+également leurs **27/27 bases** dans les neuf collections. Les neuf familles
+antérieures de Ribbit gardent leurs onze dessins ; ses dix-huit familles nouvelles
+et les 27 de Queenie ont un portrait et une garde statique. Les **38 autres PNJ
+de l’extension sans crossover** restent ouverts.
+
+Les sources actuelles relient **64 routes, 256 rencontres, 384 tableaux,
+192 finales de spectacle, 64 numéros d’amitié et 23 motifs de projectile**.
+Les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants
+d’origine et ne remplacent pas ce comptage courant.
 La sortie initiale 0.7.0 ajoutait **42 finales de spectacle**, trois pour chacun des quatorze
 combattants, une galerie avec les **51 costumes**, douze ambiances sonores procédurales
 et deux signaux distincts pour les pièges et les KO. Les finales sont des compositions
@@ -37,6 +44,39 @@ et identité. Elle est consignée dans
 d’épisode contradictoires avec la route générée. Les dessins individuels du
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
+
+## Guide général associé à la bible — 25 novembre 2026
+
+Le [guide fourni v1.0](bible/references/Combat_Games_Guide_General_v1.0.txt) est
+conservé intégralement. Ses **30 rubriques** sont adaptées au contexte d’Encore
+et associées à **100 exigences identifiables**. La [matrice d’intégration](bible/COMBAT_GAMES_GUIDE_INTEGRATION.md)
+précise les décisions, les sources de jeu, les critères d’acceptation et les écarts.
+
+- [Index de la bible associée](bible/README.md) : point d’entrée pour les prochaines passes.
+- [Associations des 64 personnages](bible/ASSOCIATIONS_PERSONNAGES.md) : identités,
+  techniques, rivaux, routes, tableaux, finales, apparences et rôles globaux proposés.
+- [La Répétition impossible](bible/CAMPAGNE_GLOBALE.md) : campagne commune originale
+  en trois actes, douze chapitres et 36 briefs de scènes fixes, **conçue mais non intégrée**.
+- [Arènes, connexions et boss](bible/ARENES_TRANSITIONS_BOSS.md) : présentation,
+  interactions, dangers et transitions traités séparément ; six liaisons proposées
+  et quatre contrats de boss reliés au Boss Rush existant.
+- [Direction artistique et Derniers Actes](bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md) :
+  identité, anatomie, conclusions après verdict et alternatives pour chaque gabarit.
+- [Fiches A–J et critères](bible/MODELES_ET_CRITERES.md) : champs connus, points à
+  compléter et preuves nécessaires avant de déclarer chaque étape terminée.
+
+Les intrigues, connexions et termes éditoriaux nouveaux sont des créations Encore.
+Les sources de la série, attributions d’archive, adaptations de combat et crossovers
+restent distincts. « Fidélité 1:1 » concerne la référence d’identité ; elle ne fixe
+pas un format d’image carré. Les nouveaux cycles d’animation restent différés.
+Cette intégration ajoute de la documentation et du suivi ; elle ne livre aucun
+nouveau mode, transfert d’arène, dessin ou animation.
+
+Le [classeur](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) reçoit la feuille **Guide combat**.
+Ses onze feuilles précédentes, notes et 42 formules sont conservées. Le compte
+courant des arènes est corrigé à 27 : l’ancien total 36 comptait deux fois les
+crossovers. La [preuve du classeur enrichi](combat-guide-workbook-verification.json)
+porte ses empreintes et ses contrôles ; les anciens résultats QA restent historiques.
 
 ## Suite du 24 novembre — sprites de base uniquement
 
@@ -536,7 +576,7 @@ Les arrangements `home-<id>` réutilisent ces décors et ne sont pas comptés co
 64 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
 rendu de secours et suivent les mêmes limites de combat.
 
-Les **52 variantes d’archive et 45 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
+Les **52 variantes d’archive et 56 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
 modifier son kit. Leur attribution repose sur une liste explicite par identité :
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.

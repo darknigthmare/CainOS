@@ -1,0 +1,2617 @@
+{
+  "schema": "encore-general-guide-design/v1",
+  "version": "1.0",
+  "asOf": "2026-11-25",
+  "timezone": "Europe/Paris",
+  "sourceGuide": "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+  "baselineCommit": "abb53b227c76c47832f44810aab1aa102286388c",
+  "project": {
+    "id": "digital-circus-encore",
+    "title": "Digital Circus — Encore · Le Grand Duel",
+    "phase": "static-base-assets-and-documentation",
+    "sharedRuntime": "combat/",
+    "entries": [
+      "CainOS / Circus Combat",
+      "standalone /combat/"
+    ],
+    "canon": "Les intrigues, techniques chiffrées, Derniers Actes, Rappels, connexions et crossovers sont des adaptations ou créations Encore, sauf fait explicitement sourcé."
+  },
+  "sections": [
+    {
+      "id": "EN-G00",
+      "section": "00",
+      "title": "Utilisation du guide et priorités",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "documenté",
+      "adaptation": "Le guide v1.0 devient la référence commune, complétée par les décisions Encore et les données observées.",
+      "requirements": [
+        {
+          "id": "EN-G00-01",
+          "text": "Conserver le guide original avec son SHA-256 et relier chaque rubrique à des fichiers et critères."
+        },
+        {
+          "id": "EN-G00-02",
+          "text": "Maintenir séparément conception, assets, intégration, validation et publication."
+        },
+        {
+          "id": "EN-G00-03",
+          "text": "Respecter la phase actuelle de dessins fixes ; planifier les animations sans les lancer."
+        }
+      ],
+      "verification": "Les sections 00 à 29 sont présentes une seule fois et chaque exigence a un identifiant stable.",
+      "links": [
+        "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+        "AGENTS.md",
+        "docs/GAMEDEV_WORKFLOW.md"
+      ]
+    },
+    {
+      "id": "EN-G01",
+      "section": "01",
+      "title": "Identité du projet et périmètre",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "existant",
+      "adaptation": "Digital Circus — Encore, Le Grand Duel : duel latéral Canvas partagé entre CainOS et l’autonome. Le moteur reste celui du dépôt.",
+      "requirements": [
+        {
+          "id": "EN-G01-01",
+          "text": "Conserver les deux entrées sur un seul runtime et les mêmes données."
+        },
+        {
+          "id": "EN-G01-02",
+          "text": "Piliers : identité reconnaissable, neutral lisible, humour inquiet, progression narrative située, sauvegardes compatibles."
+        },
+        {
+          "id": "EN-G01-03",
+          "text": "Cibler navigateur avec clavier, tactile et manettes déjà prévus ; ne pas annoncer de port console ni d’exécutable natif."
+        }
+      ],
+      "verification": "Vérifier version, cadence, dimensions, entrées et modes dans les constantes actuelles.",
+      "links": [
+        "combat/data.mjs",
+        "combat/session.mjs",
+        "combat/engine.mjs",
+        "combat/index.html",
+        "scripts/build-combat.mjs"
+      ]
+    },
+    {
+      "id": "EN-G02",
+      "section": "02",
+      "title": "Fidélité au lore et sources",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Séparer les références documentées du dépôt, les attributions à confirmer, les adaptations jouables et les créations originales Encore ; le statut de l’identité ne valide pas automatiquement ses pouvoirs.",
+      "requirements": [
+        {
+          "id": "EN-G02-01",
+          "text": "Attacher à chaque fait une référence et sa portée : page officielle, épisode identifié, entretien primaire ou archive de projet."
+        },
+        {
+          "id": "EN-G02-02",
+          "text": "Classer séparément canon attesté, adaptation jouable, original compatible, crossover et à confirmer."
+        },
+        {
+          "id": "EN-G02-03",
+          "text": "Queenie conserve sa tête, son corps et ses appendices documentés, sans bras ni épaules humains inventés ; Chinese Room ne reçoit ni poings humains ni biographie inventée."
+        },
+        {
+          "id": "EN-G02-04",
+          "text": "Une comparaison visuelle encore ouverte demeure ouverte après une réussite technique."
+        }
+      ],
+      "verification": "Les 64 fiches gardent leurs sources, verrous et limites ; aucun label de génération ne devient une preuve canonique.",
+      "links": [
+        "docs/bible/character-associations.json",
+        "combat/fidelity.mjs",
+        "combat/costume-fidelity.mjs"
+      ]
+    },
+    {
+      "id": "EN-G03",
+      "section": "03",
+      "title": "Roster, variantes et costumes",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "existant",
+      "adaptation": "Conserver les 64 identités jouables et les IDs de costumes. Les PNJ du catalogue ne deviennent pas automatiquement des nouveaux combattants.",
+      "requirements": [
+        {
+          "id": "EN-G03-01",
+          "text": "Relier chaque combattant à sa fiche, sa route, son rival, ses dix slots, ses finales et ses images."
+        },
+        {
+          "id": "EN-G03-02",
+          "text": "Différencier identité, variante de règles, transformation, costume et palette."
+        },
+        {
+          "id": "EN-G03-03",
+          "text": "Les crossovers Hommage/Résident/Fusion sont des créations Encore ; ils ne transfèrent pas automatiquement les pouvoirs de leur univers."
+        },
+        {
+          "id": "EN-G03-04",
+          "text": "Pour les bases baseOnly, deux sources suffisent au lot statique : portrait et garde ; les autres actions ne sont pas annoncées comme animées."
+        }
+      ],
+      "verification": "Les liens couvrent exactement FIGHTERS et ne changent ni ordre des costumes ni corps de collision.",
+      "links": [
+        "combat/data.mjs",
+        "combat/roster-expansion.mjs",
+        "combat/abstractions-content.mjs",
+        "combat/base-sprite-content.mjs"
+      ]
+    },
+    {
+      "id": "EN-G04",
+      "section": "04",
+      "title": "Fondations du combat",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "existant",
+      "adaptation": "Simulation fixe à 60 Hz, terrain logique 1280 × 720, règles historiques et ressources déjà présentes.",
+      "requirements": [
+        {
+          "id": "EN-G04-01",
+          "text": "Documenter les dix actions, marche, saut, dash, garde, déchope, chutes et orientation avec leurs commandes réelles."
+        },
+        {
+          "id": "EN-G04-02",
+          "text": "Distinguer paramètres d’interface et défauts internes du moteur ; citer les durées et manches de DEFAULT_SETTINGS."
+        },
+        {
+          "id": "EN-G04-03",
+          "text": "Conserver les résultats double KO/chrono et les anciennes règles de replay ; tout changement de simulation nécessite une tâche dédiée."
+        }
+      ],
+      "verification": "Lire engine/session/input/bindings ; contrôler les tests de règles existants avant toute évolution.",
+      "links": [
+        "combat/engine.mjs",
+        "combat/session.mjs",
+        "combat/input.mjs",
+        "combat/bindings.mjs",
+        "tests/combat-rules.test.mjs"
+      ]
+    },
+    {
+      "id": "EN-G05",
+      "section": "05",
+      "title": "Movesets, spéciaux et ressources",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "La bible relie 640 techniques aux dix slots existants et sépare chiffres du code et justification éditoriale.",
+      "requirements": [
+        {
+          "id": "EN-G05-01",
+          "text": "Extraire startup/active/recovery, dégâts, portée, coûts et propriétés réellement définies sans inventer les valeurs absentes."
+        },
+        {
+          "id": "EN-G05-02",
+          "text": "Pour chaque coup, préciser ancrage, interprétation jouable, signal lisible, réponse adverse et limite de pouvoir."
+        },
+        {
+          "id": "EN-G05-03",
+          "text": "Compléter à terme le résultat en garde/contre/whiff, les cancels et l’avantage à partir du moteur ; ne pas calculer l’avantage avec la seule récupération."
+        },
+        {
+          "id": "EN-G05-04",
+          "text": "Distinguer STABILITÉ et jauge de combat de toute guérison ou capacité officielle."
+        }
+      ],
+      "verification": "Les noms et slots des 64 × 10 techniques correspondent au runtime ; l’analyse d’équilibrage reste une vérification distincte.",
+      "links": [
+        "docs/bible/character-associations.json",
+        "combat/data.mjs",
+        "combat/engine.mjs",
+        "combat/training.mjs"
+      ]
+    },
+    {
+      "id": "EN-G06",
+      "section": "06",
+      "title": "Ultimes, finishers et conclusions",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Super en combat, finale de spectacle après KO, victoire et outro restent distincts. Dernier Acte et Rappel sont les termes originaux de la bible.",
+      "requirements": [
+        {
+          "id": "EN-G06-01",
+          "text": "Conserver les 192 IDs et titres actuels des finales impact/special/super ; toute nouvelle proposition éditoriale reste séparée du nom utilisé dans le runtime."
+        },
+        {
+          "id": "EN-G06-02",
+          "text": "Un Dernier Acte ferme le duel après le résultat acquis ; un Rappel offre une conclusion amicale cohérente."
+        },
+        {
+          "id": "EN-G06-03",
+          "text": "Prévoir des cibles humanoïdes, sans membres, géantes et composites/abstraites avec une alternative par cadrage."
+        },
+        {
+          "id": "EN-G06-04",
+          "text": "Aucun finisher arcade ne prouve une mort persistante, une sortie réelle ou une restauration d’abstraction."
+        }
+      ],
+      "verification": "Contrôler KO, cible, distance, caméra, passage abrégé et retour résultat pour toute future intégration ; vérifier 3 finales et 1 Rappel par fiche.",
+      "links": [
+        "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+        "combat/finisher-catalog.mjs",
+        "combat/finishers.mjs",
+        "combat/friendship-catalog.mjs"
+      ]
+    },
+    {
+      "id": "EN-G07",
+      "section": "07",
+      "title": "Présentation et relations",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Les rivaux actuels sont conservés comme choix de routes Encore. Ils ne constituent pas une matrice d’hostilité canonique.",
+      "requirements": [
+        {
+          "id": "EN-G07-01",
+          "text": "Associer raison, escalade et résolution au rival de chaque route."
+        },
+        {
+          "id": "EN-G07-02",
+          "text": "Prioriser les dialogues pour rival principal, partenaires, boss et miroir, puis utiliser des répliques génériques fidèles."
+        },
+        {
+          "id": "EN-G07-03",
+          "text": "Éviter les connaissances hors période et les répliques humaines ajoutées aux formes muettes."
+        }
+      ],
+      "verification": "Le rival existe, apparaît dans les quatre rencontres et garde une motivation spécifique.",
+      "links": [
+        "combat/stories.mjs",
+        "combat/tournament-lore.mjs",
+        "combat/render-sequences.mjs",
+        "docs/bible/character-associations.json"
+      ]
+    },
+    {
+      "id": "EN-G08",
+      "section": "08",
+      "title": "Histoires individuelles",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "existant",
+      "adaptation": "64 routes de quatre affrontements, trois tableaux d’introduction et trois de conclusion, reliés aux combattants et aux sources de jeu ; les améliorations de mise en scène restent à produire.",
+      "requirements": [
+        {
+          "id": "EN-G08-01",
+          "text": "Relier chaque affrontement à un motif, un adversaire, un stage et une conséquence."
+        },
+        {
+          "id": "EN-G08-02",
+          "text": "Séparer les nouvelles intentions de dialogues du texte actuellement joué."
+        },
+        {
+          "id": "EN-G08-03",
+          "text": "Conserver sauvegarde, reprise et galerie ; documenter les doublons de cast encore observés au lieu de les déclarer corrigés."
+        }
+      ],
+      "verification": "256 rencontres et 384 briefs reliés à STORY_ROUTES ; ordre, IDs et checkpoint conservés.",
+      "links": [
+        "combat/stories.mjs",
+        "combat/story-presentation.mjs",
+        "combat/progression.mjs",
+        "docs/bible/character-associations.json"
+      ]
+    },
+    {
+      "id": "EN-G09",
+      "section": "09",
+      "title": "Campagne globale distincte",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "conçu, non intégré",
+      "adaptation": "La Répétition impossible : une intrigue commune originale en trois actes et douze chapitres, distincte des routes et de l’Arcade.",
+      "requirements": [
+        {
+          "id": "EN-G09-01",
+          "text": "Établir incident, menace, points de vue alternés, révélations et résolution commune."
+        },
+        {
+          "id": "EN-G09-02",
+          "text": "Pour chaque chapitre, définir personnage jouable, adversaire, lieu, enjeu, trois scènes fixes et checkpoint."
+        },
+        {
+          "id": "EN-G09-03",
+          "text": "Prévoir échec, reprise, difficulté et sélection des chapitres sans bonus sur le duel normalisé."
+        }
+      ],
+      "verification": "Les 12 chapitres et 36 briefs sont liés à des IDs existants ; le mode ne sera livré qu’après un parcours complet et une reprise testée.",
+      "links": [
+        "docs/bible/CAMPAGNE_GLOBALE.md",
+        "docs/bible/guide-design.json",
+        "combat/stories.mjs",
+        "combat/progression.mjs"
+      ]
+    },
+    {
+      "id": "EN-G10",
+      "section": "10",
+      "title": "Illustrations et cinématiques",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Les 384 tableaux individuels existants et leurs compositions sont inventoriés. Les peintures dédiées, compositions du lecteur et futurs tableaux globaux se comptent séparément.",
+      "requirements": [
+        {
+          "id": "EN-G10-01",
+          "text": "Chaque brief fixe cast, tenue, action unique, cadrage, lumière, émotion, raccord et réserve de texte."
+        },
+        {
+          "id": "EN-G10-02",
+          "text": "Garder les sous-titres hors de l’image ; cible de composition 16:9 et dimensions natives consignées."
+        },
+        {
+          "id": "EN-G10-03",
+          "text": "Revoir les 84 peintures intro/outro avant remplacement ; les 300 compositions existantes ne sont pas automatiquement des pannes."
+        },
+        {
+          "id": "EN-G10-04",
+          "text": "La campagne globale ajoute 36 briefs planifiés, pas 36 fichiers générés."
+        }
+      ],
+      "verification": "Comparer chaque brief aux scènes et images correspondantes, puis examiner le rendu avec les textes ; un sprite isolé et une illustration de groupe sont des unités différentes.",
+      "links": [
+        "docs/bible/character-associations.json",
+        "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+        "combat/illustrations.mjs",
+        "combat/story-presentation.mjs"
+      ]
+    },
+    {
+      "id": "EN-G11",
+      "section": "11",
+      "title": "Boss, machines et Boss Rush",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Le mode boss actuel utilise Gloink Queen, The Fudge, Kaufmo abstrait et Caine. Les phases scénarisées et la sélection Boss Combat restent à concevoir/intégrer selon le contrat.",
+      "requirements": [
+        {
+          "id": "EN-G11-01",
+          "text": "Conserver l’ordre actuel du Boss Rush et distinguer duel libre, sélection de boss et rencontre à phases."
+        },
+        {
+          "id": "EN-G11-02",
+          "text": "Décrire annonces, ouvertures, réponses pour tous les gabarits et résultat de chaque boss."
+        },
+        {
+          "id": "EN-G11-03",
+          "text": "Aucune machine canonique autonome n’est ajoutée sans source ; une machine de spectacle originale relève d’une extension P2."
+        },
+        {
+          "id": "EN-G11-04",
+          "text": "Évaluer les grands corps et les prises sans immunité qui supprime toutes les réponses d’un style."
+        }
+      ],
+      "verification": "Quatre contrats reliés aux combattants réels ; chaque phase future exige un test jouable dédié, hors validation documentaire.",
+      "links": [
+        "docs/bible/ARENES_TRANSITIONS_BOSS.md",
+        "combat/session.mjs",
+        "combat/engine.mjs",
+        "docs/COMBAT_GLOINK_QUEEN_0.7.0.md"
+      ]
+    },
+    {
+      "id": "EN-G12",
+      "section": "12",
+      "title": "Modes de jeu",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Conserver les neuf modes actuels et les Escales GLITCH. La campagne globale et Boss Combat seront des parcours explicites supplémentaires.",
+      "requirements": [
+        {
+          "id": "EN-G12-01",
+          "text": "Lister entrée, sélection, partie, résultat, revanche/sortie et sauvegarde de chaque mode."
+        },
+        {
+          "id": "EN-G12-02",
+          "text": "Conserver Versus CPU, local, Arcade, Histoires, tournoi, Boss Rush, survie, entraînement et défis."
+        },
+        {
+          "id": "EN-G12-03",
+          "text": "Différer tag, coopération, équipes simultanées et parties réseau ; ne pas les inférer de l’existence du moteur."
+        }
+      ],
+      "verification": "Une entrée de menu ne ferme pas une tâche de mode ; vérifier son parcours complet dans les deux distributions.",
+      "links": [
+        "combat/data.mjs",
+        "combat/session.mjs",
+        "combat/app.mjs",
+        "combat/crossover-visits.mjs"
+      ]
+    },
+    {
+      "id": "EN-G13",
+      "section": "13",
+      "title": "Arènes et lisibilité",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "existant",
+      "adaptation": "27 arènes au catalogue, dont 18 hors crossovers et 9 escales GLITCH, plus 64 arrangements par combattant. Les arrangements réutilisés ne sont pas 64 lieux supplémentaires.",
+      "requirements": [
+        {
+          "id": "EN-G13-01",
+          "text": "Conserver plan de sol, taille logique, profondeur, limites et contraste des pieds."
+        },
+        {
+          "id": "EN-G13-02",
+          "text": "Attribuer lieu attesté, adaptation, original ou crossover à chaque décor."
+        },
+        {
+          "id": "EN-G13-03",
+          "text": "Relier plans de parallaxe, objets et aperçu sans masquer les signes de combat."
+        }
+      ],
+      "verification": "Les 18 arènes hors crossovers et les 9 escales GLITCH se recomptent depuis STAGES : 27 au total ; les 64 arrangements dédiés restent séparés.",
+      "links": [
+        "combat/data.mjs",
+        "combat/stage-parallax.mjs",
+        "combat/render-stage-scenery.mjs",
+        "docs/COMBAT_DECORS_ET_POSES.md"
+      ]
+    },
+    {
+      "id": "EN-G14",
+      "section": "14",
+      "title": "Arènes vivantes et statiques",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Le rendu possède des ambiances et reducedMotion. La bible sépare maintenant présentation, interactions, dangers et transitions.",
+      "requirements": [
+        {
+          "id": "EN-G14-01",
+          "text": "Présentation vivant/statique/réduit ne change pas implicitement les règles de collision ou dégâts."
+        },
+        {
+          "id": "EN-G14-02",
+          "text": "Décrire déclencheur, fréquence, priorité et état de chaque événement de fond."
+        },
+        {
+          "id": "EN-G14-03",
+          "text": "Les profils Compétition, Spectacle et Confort sont des contrats cibles ; les options nouvelles ne sont pas annoncées comme présentes."
+        }
+      ],
+      "verification": "Deux rendus du même match gardent la même simulation ; un danger conserve son signal lisible dans le rendu statique.",
+      "links": [
+        "combat/render-stage-motion.mjs",
+        "combat/render-stage-scenery.mjs",
+        "combat/readability.mjs",
+        "docs/bible/ARENES_TRANSITIONS_BOSS.md"
+      ]
+    },
+    {
+      "id": "EN-G15",
+      "section": "15",
+      "title": "Connexions et interactions d’arènes",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "conçu, non intégré",
+      "adaptation": "Six connexions utilisent des endpoints déjà catalogués. Leur géographie et leur déclenchement sont des créations Encore, non des faits de la série.",
+      "requirements": [
+        {
+          "id": "EN-G15-01",
+          "text": "Définir départ, arrivée, côté, seuil, commande, contre-jeu, durée et états des deux combattants."
+        },
+        {
+          "id": "EN-G15-02",
+          "text": "Au transfert, conserver vie/jauges/manches ; vider les attaques et objets transitoires selon une règle explicite ; figer le chrono pendant le transfert."
+        },
+        {
+          "id": "EN-G15-03",
+          "text": "Priorité au KO/chrono ; pas de double transfert ni de boucle sans contrôle ; annoncer les règles avant le match."
+        },
+        {
+          "id": "EN-G15-04",
+          "text": "Une scène suivante dans une route n’est pas une transition de stage pendant un combat."
+        }
+      ],
+      "verification": "Pour chaque lien, charger réellement l’arrivée, vérifier positions, collisions, interruption, replay et absence de combo infini.",
+      "links": [
+        "docs/bible/ARENES_TRANSITIONS_BOSS.md",
+        "docs/bible/guide-design.json",
+        "combat/engine.mjs",
+        "combat/session.mjs"
+      ]
+    },
+    {
+      "id": "EN-G16",
+      "section": "16",
+      "title": "Ennemis, soutiens et projectiles",
+      "priority": "P1",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Les 23 motifs illustrent des attaques déjà définies. Un motif n’est ni un nouveau personnage ni une nouvelle capacité canonique.",
+      "requirements": [
+        {
+          "id": "EN-G16-01",
+          "text": "Relier chaque projectile à ses propriétaires et slots, son image, son point d’émission et ses règles de renvoi."
+        },
+        {
+          "id": "EN-G16-02",
+          "text": "Distinguer art, trajectoire, impact et son ; un renvoi change le propriétaire sans changer le motif original."
+        },
+        {
+          "id": "EN-G16-03",
+          "text": "Classer ennemi, soutien, PNJ et prop avec leurs usages ; un PNJ jouable en duel n’est pas automatiquement un système de hordes."
+        }
+      ],
+      "verification": "Les motifs et mouvements liés existent dans le code ; trajectoire, impact, réflexion et cache se vérifient dans les tests dédiés.",
+      "links": [
+        "combat/projectile-art.mjs",
+        "combat/render-presentation.mjs",
+        "combat/engine.mjs",
+        "combat/roster-expansion.mjs"
+      ]
+    },
+    {
+      "id": "EN-G17",
+      "section": "17",
+      "title": "Direction artistique et assets",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Conserver l’esthétique 2D UHD, la silhouette de chaque univers et la phase de bases fixes ; un sujet exploitable par image autonome.",
+      "requirements": [
+        {
+          "id": "EN-G17-01",
+          "text": "Exiger alpha réel pour les sprites détourés, corps entier si demandé, marges et ancrages cohérents."
+        },
+        {
+          "id": "EN-G17-02",
+          "text": "Vérifier les asymétries, accessoires, anatomies et gabarits contre une source nommée."
+        },
+        {
+          "id": "EN-G17-03",
+          "text": "Tracer source native, dimensions, SHA-256, destination et revue ; ne pas qualifier un agrandissement de natif."
+        },
+        {
+          "id": "EN-G17-04",
+          "text": "Réutiliser un asset vérifié avant de produire un doublon ; les fonds et scènes complètes peuvent être opaques."
+        }
+      ],
+      "verification": "Valider la source puis son rendu à la taille de jeu ; qualité technique et comparaison canonique restent distinctes.",
+      "links": [
+        "docs/COMBAT_ART_BRIEF_0.6.0.md",
+        "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+        "combat/base-sprite-content.mjs",
+        "combat/fidelity.mjs"
+      ]
+    },
+    {
+      "id": "EN-G18",
+      "section": "18",
+      "title": "Animations, VFX, son et caméra",
+      "priority": "P1",
+      "decision": "différée pour les nouvelles animations",
+      "runtimeStatus": "partiel",
+      "adaptation": "Les présentations, sons et effets existants restent documentés. Toute production supplémentaire d’animations attend la phase dédiée.",
+      "requirements": [
+        {
+          "id": "EN-G18-01",
+          "text": "Planifier états, entrées/sorties et points d’émission sans lancer de nouveaux cycles."
+        },
+        {
+          "id": "EN-G18-02",
+          "text": "Séparer horloge visuelle et simulation ; cadrer les grands adversaires et les retours de caméra."
+        },
+        {
+          "id": "EN-G18-03",
+          "text": "Associer indices visuels/sonores et options de confort, sans confondre PNG de projectile et VFX animé."
+        }
+      ],
+      "verification": "Les nouveaux livrables de cette intégration sont documentaires ; aucun cycle ou audio nouveau ne doit apparaître dans le bilan.",
+      "links": [
+        "combat/render-poses.mjs",
+        "combat/render-finishers.mjs",
+        "combat/audio.mjs",
+        "combat/audio-ambiences.mjs"
+      ]
+    },
+    {
+      "id": "EN-G19",
+      "section": "19",
+      "title": "Interface et expérience",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Étendre les parcours existants avec des états explicites disponible/verrouillé/prévu et des liens vers le codex.",
+      "requirements": [
+        {
+          "id": "EN-G19-01",
+          "text": "Détailler démarrage, sélection, combat, pause, résultat, revanche, galerie et reprise pour les deux entrées."
+        },
+        {
+          "id": "EN-G19-02",
+          "text": "Afficher les quatre axes de règles de stage avant tout match qui les utilise."
+        },
+        {
+          "id": "EN-G19-03",
+          "text": "Conserver navigation clavier/manette/tactile, focus, remappage et traitement des interruptions."
+        }
+      ],
+      "verification": "Toute évolution d’interface exige le parcours navigateur concerné ; une maquette ou un texte de bible ne constitue pas une livraison UI.",
+      "links": [
+        "combat/app.mjs",
+        "combat/menu-navigation.mjs",
+        "combat/input.mjs",
+        "combat/style.css"
+      ]
+    },
+    {
+      "id": "EN-G20",
+      "section": "20",
+      "title": "Tutoriels et entraînement",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Les Répétitions et les six défis existants servent de base. La bible ajoute un programme d’apprentissage par personnage à développer.",
+      "requirements": [
+        {
+          "id": "EN-G20-01",
+          "text": "Conserver dummy, remise à zéro, hitboxes, ressources, enregistrement et vitesse d’entraînement."
+        },
+        {
+          "id": "EN-G20-02",
+          "text": "Pour chaque kit, expliquer approche, anti-saut, punition, défense, ressource et un combo accessible."
+        },
+        {
+          "id": "EN-G20-03",
+          "text": "Ajouter un exercice de transition seulement après intégration du système, puis un exercice de boss."
+        }
+      ],
+      "verification": "Chaque exercice a un objectif observable, une réinitialisation et une explication d’échec ; vérifier changement de côté et gabarits.",
+      "links": [
+        "combat/training.mjs",
+        "combat/session.mjs",
+        "tests/combat-training.test.mjs"
+      ]
+    },
+    {
+      "id": "EN-G21",
+      "section": "21",
+      "title": "IA et difficulté",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Utiliser l’IA et les difficultés existantes ; écrire les intentions par style sans revendiquer une nouvelle IA de campagne.",
+      "requirements": [
+        {
+          "id": "EN-G21-01",
+          "text": "Régler réaction, erreurs et ressources dans les règles observées plutôt qu’en donnant des pouvoirs non documentés."
+        },
+        {
+          "id": "EN-G21-02",
+          "text": "Prévoir réponses aux projectiles, prises et différentes tailles ; intégrer interactions/transitions seulement quand elles existent."
+        },
+        {
+          "id": "EN-G21-03",
+          "text": "Conserver graine, situations reproductibles et exceptions de boss explicitement définies."
+        }
+      ],
+      "verification": "Rejouer une situation à graine et difficulté fixes, puis mesurer les différences entre profils.",
+      "links": [
+        "combat/engine.mjs",
+        "combat/session.mjs",
+        "tests/combat-engine.test.mjs"
+      ]
+    },
+    {
+      "id": "EN-G22",
+      "section": "22",
+      "title": "Équilibrage et accessibilité",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Le duel conserve ses règles normalisées. Les choix narratifs et costumes restent séparés des avantages compétitifs.",
+      "requirements": [
+        {
+          "id": "EN-G22-01",
+          "text": "Vérifier coins, sorties de pression, prises, petites/grandes tailles, projectiles et boucles."
+        },
+        {
+          "id": "EN-G22-02",
+          "text": "Conserver remappage, lisibilité renforcée, sous-titres, volumes séparés, réduction de mouvements et passage des scènes."
+        },
+        {
+          "id": "EN-G22-03",
+          "text": "Ne pas annoncer une difficulté, un confort ou une cadence comme validés sans le test approprié."
+        }
+      ],
+      "verification": "Comparer états et résultats entre profils de présentation ; tests matériels et revue visuelle restent identifiés séparément.",
+      "links": [
+        "combat/readability.mjs",
+        "combat/bindings.mjs",
+        "combat/session.mjs",
+        "tests/combat-accessibility-browser.mjs"
+      ]
+    },
+    {
+      "id": "EN-G23",
+      "section": "23",
+      "title": "Multijoueur, réseau et replays",
+      "priority": "P0",
+      "decision": "local et replays retenus ; réseau différé",
+      "runtimeStatus": "partiel",
+      "adaptation": "Local et replays sont présents. Rollback, matchmaking et crossplay ne font pas partie des fonctions actuelles.",
+      "requirements": [
+        {
+          "id": "EN-G23-01",
+          "text": "Conserver attribution des côtés, profils et reconnexion des périphériques."
+        },
+        {
+          "id": "EN-G23-02",
+          "text": "Conserver les replays avec leur version de règles et signaler l’incompatibilité d’un futur format de transition."
+        },
+        {
+          "id": "EN-G23-03",
+          "text": "Avant une extension réseau, décider snapshot, entrées, aléatoire, événements et service ; ne pas déduire le rollback d’un pas fixe."
+        }
+      ],
+      "verification": "Tester le replay avec sa version et l’état complet du match ; les nouvelles transitions demanderont un contrat de sérialisation séparé.",
+      "links": [
+        "combat/session.mjs",
+        "combat/engine.mjs",
+        "combat/input.mjs",
+        "tests/combat-session.test.mjs"
+      ]
+    },
+    {
+      "id": "EN-G24",
+      "section": "24",
+      "title": "Progression et sauvegardes",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "partiel",
+      "adaptation": "Les profils, programmes sauvegardés, déblocages et replays existants restent l’autorité. La campagne globale devra disposer d’un espace de progression versionné.",
+      "requirements": [
+        {
+          "id": "EN-G24-01",
+          "text": "Préserver routes, difficultés, galerie, costumes et paramètres lors des mises à jour."
+        },
+        {
+          "id": "EN-G24-02",
+          "text": "Ajouter un futur globalCampaignRun distinct sans écraser program/story, avec chapitre, checkpoint et scènes vues."
+        },
+        {
+          "id": "EN-G24-03",
+          "text": "Les récompenses globales restent cosmétiques/narratives ; pas de statistiques imposées au duel."
+        }
+      ],
+      "verification": "Fermeture/reprise, sauvegarde corrompue, import ancien et retour hors ligne sont des cas de validation requis.",
+      "links": [
+        "combat/progression.mjs",
+        "combat/session.mjs",
+        "combat/offline.mjs",
+        "tests/combat-profile-backup-browser.mjs"
+      ]
+    },
+    {
+      "id": "EN-G25",
+      "section": "25",
+      "title": "Inventaires et statistiques",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "documenté",
+      "adaptation": "Le classeur conserve ses onze feuilles historiques et reçoit une table Guide combat. Le JSON de liaison décrit les populations et leur statut.",
+      "requirements": [
+        {
+          "id": "EN-G25-01",
+          "text": "Compter séparément combattants, techniques, costumes, motifs, arènes, arrangements, briefs et fichiers."
+        },
+        {
+          "id": "EN-G25-02",
+          "text": "Relier les 64 fiches d’association, 256 rencontres, 384 tableaux et 192 finales aux données présentes."
+        },
+        {
+          "id": "EN-G25-03",
+          "text": "Conserver toutes les notes utilisateur et historiques ; ne pas additionner des tests historiques aux contrôles de cette passe."
+        },
+        {
+          "id": "EN-G25-04",
+          "text": "La campagne globale, les connexions et les nouvelles fiches restent des plans tant que leur exécution n’est pas testée."
+        }
+      ],
+      "verification": "Comparer les anciennes cellules, formules et objets du classeur ; vérifier les liens JSON et les identifiants.",
+      "links": [
+        "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+        "docs/combat-tracker-data.json",
+        "docs/bible/guide-integration.json"
+      ]
+    },
+    {
+      "id": "EN-G26",
+      "section": "26",
+      "title": "Validation et ordre de production",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "documenté",
+      "adaptation": "La prochaine tranche de travail peut utiliser deux styles, une scène et une route ; la présente tâche livre la bible et ses associations.",
+      "requirements": [
+        {
+          "id": "EN-G26-01",
+          "text": "Définir terminé séparément pour fiche, sprite, combattant, arène, boss, route et mode."
+        },
+        {
+          "id": "EN-G26-02",
+          "text": "Prioriser identités et bases fixes manquantes, puis une route et un chapitre représentatifs."
+        },
+        {
+          "id": "EN-G26-03",
+          "text": "Pour une future transition, prouver d’abord un lien jouable complet avant d’étendre aux six connexions."
+        },
+        {
+          "id": "EN-G26-04",
+          "text": "Publier le commit et son état réel de PR ; ne pas assimiler PR ouverte et production."
+        }
+      ],
+      "verification": "Les preuves portent une commande, une date, un périmètre et une révision ; tout test absent reste non exécuté.",
+      "links": [
+        "docs/GAMEDEV_WORKFLOW.md",
+        "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md"
+      ]
+    },
+    {
+      "id": "EN-G27",
+      "section": "27",
+      "title": "Fiches types et contrats",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "documenté",
+      "adaptation": "Relier les fiches d’association tirées du runtime aux modèles A-J du guide, puis ajouter les contrats communs pour chapitre global, lien de stage, boss et projectile.",
+      "requirements": [
+        {
+          "id": "EN-G27-01",
+          "text": "Chaque fiche a un ID stable, une source ou une justification, des dépendances et les six axes de statut."
+        },
+        {
+          "id": "EN-G27-02",
+          "text": "Les champs mécaniques inconnus restent à définir, sans zéro fictif ni chemin d’image inventé."
+        },
+        {
+          "id": "EN-G27-03",
+          "text": "Ajouter aux finishers conditions, morphologies, remplacement, retour résultat et statut du nom."
+        }
+      ],
+      "verification": "Valider champs et liaisons ; une fiche de contenu ne termine pas ses tâches d’asset ou d’intégration.",
+      "links": [
+        "docs/bible/character-associations.json",
+        "docs/bible/guide-design.json",
+        "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md"
+      ]
+    },
+    {
+      "id": "EN-G28",
+      "section": "28",
+      "title": "Instruction pour les prochaines passes",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "documenté",
+      "adaptation": "Le travail repart du guide utilisateur, des sources actuelles et des écarts recensés, avec la phase statique comme limite de production.",
+      "requirements": [
+        {
+          "id": "EN-G28-01",
+          "text": "Lire les décisions de périmètre et la matrice avant toute nouvelle génération ou implémentation."
+        },
+        {
+          "id": "EN-G28-02",
+          "text": "Sélectionner un lot cohérent depuis les IDs ouverts, puis produire, relier, vérifier et publier selon l’autorisation."
+        },
+        {
+          "id": "EN-G28-03",
+          "text": "Rendre un bilan par étape avec sources, restants et état de PR."
+        }
+      ],
+      "verification": "La commande de validation de la bible et du guide réussit sans modifier les modules du jeu.",
+      "links": [
+        "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md",
+        "scripts/build-combat-guide.mjs",
+        "scripts/build-combat-guide-associations.mjs"
+      ]
+    },
+    {
+      "id": "EN-G29",
+      "section": "29",
+      "title": "Références et vocabulaire",
+      "priority": "P0",
+      "decision": "retenue",
+      "runtimeStatus": "documenté",
+      "adaptation": "Le guide commun conserve ses inspirations SF6, GG Isuka, MKX/11/1 et Injustice 2. Elles servent à choisir des structures, sans importer leurs pouvoirs ou leur violence.",
+      "requirements": [
+        {
+          "id": "EN-G29-01",
+          "text": "Conserver les cinq références du guide dans leur contexte et dater les nouvelles consultations."
+        },
+        {
+          "id": "EN-G29-02",
+          "text": "Utiliser les sources GLITCH pour l’identité du Circus ; les archives du dépôt établissent le jeu existant."
+        },
+        {
+          "id": "EN-G29-03",
+          "text": "Distinguer super, Dernier Acte, Rappel et outro dans toute nouvelle fiche."
+        }
+      ],
+      "verification": "Les sources sont attribuées avec leur portée et les propositions originales ne sont pas présentées comme officielles.",
+      "links": [
+        "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+        "combat/fidelity.mjs",
+        "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md"
+      ]
+    }
+  ],
+  "campaign": {
+    "id": "EN-CAM-GLOBAL-01",
+    "title": "La Répétition impossible",
+    "status": "designed-not-integrated",
+    "continuity": "Récit alternatif original d’Encore dans une répétition simulée ; aucune nouvelle suite officielle d’épisodes. Les absents/disparus n’y sont que des instances de scénario explicitement annoncées.",
+    "premise": "Un programme de spectacle relance les attractions dès qu’une case reste vide. Les résidents réunissent des repères contradictoires pour obtenir une fin de répétition et un intervalle où ils peuvent répondre.",
+    "conflict": "Caine veut maintenir un spectacle continu. Les résidents veulent un choix local et la possibilité de clore une épreuve. Les PNJ protègent leur passage ou leur rôle, sans menace universelle ajoutée.",
+    "acts": [
+      {
+        "id": 1,
+        "title": "Des consignes qui se contredisent",
+        "chapters": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Ce que répéter ne répare pas",
+        "chapters": [
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Accepter la fin d’un numéro",
+        "chapters": [
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "id": "EN-CAM-CH01",
+        "order": 1,
+        "act": 1,
+        "title": "Deux premières places",
+        "playerId": "pomni",
+        "opponentId": "jax",
+        "stageId": "bigtop",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Comprendre pourquoi deux programmes donnent des rôles contradictoires au même instant.",
+        "whyFight": "Jax garde la feuille qu’il a annotée ; il transforme la restitution en défi annoncé.",
+        "revelation": "La même heure figure en tête de deux numéros différents, même après la farce de Jax.",
+        "consequence": "Pomni conserve les deux programmes comme preuve et demande de vérifier leur origine.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch01/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH01 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH01-INTRO",
+            "role": "intro",
+            "stageId": "bigtop",
+            "cast": [
+              "pomni",
+              "jax"
+            ],
+            "assetId": "en-global-ch01-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Pomni rapproche deux feuilles dont les cases colorées ne s’alignent pas ; Jax regarde par-dessus le canapé.",
+            "framing": "Plan moyen, feuilles lisibles par formes sans faux texte, piste largement dégagée.",
+            "emotion": "Doute concret, ironie retenue.",
+            "dialogue": [
+              {
+                "speakerId": "pomni",
+                "text": "Deux débuts. À la même heure. Lequel est censé être le nôtre ?"
+              }
+            ],
+            "continuity": "Deux feuilles rouge et bleue restent identifiables jusqu’au chapitre 12.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH01-RIVAL",
+            "role": "rival",
+            "stageId": "bigtop",
+            "cast": [
+              "pomni",
+              "jax"
+            ],
+            "assetId": "en-global-ch01-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Jax coince la feuille bleue sous un accessoire de piste et recule jusqu’à sa marque de duel.",
+            "framing": "Deux silhouettes entières, séparation nette au centre.",
+            "emotion": "Provocation chez Jax ; Pomni choisit de répondre.",
+            "dialogue": [
+              {
+                "speakerId": "jax",
+                "text": "Tu voulais une réponse claire. Voilà une ligne de départ."
+              }
+            ],
+            "continuity": "Aucune téléportation de Pomni ; sa place de départ est visible.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH01-OUTRO",
+            "role": "outro",
+            "stageId": "bigtop",
+            "cast": [
+              "pomni",
+              "jax"
+            ],
+            "assetId": "en-global-ch01-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Pomni ramasse la seconde feuille ; une troisième case apparaît déjà sur le panneau en arrière-plan.",
+            "framing": "Feuille au premier plan, panneau lointain inquiétant.",
+            "emotion": "Petite victoire, problème élargi.",
+            "dialogue": [
+              {
+                "speakerId": "pomni",
+                "text": "Ta blague n’explique pas pourquoi il en imprime encore."
+              }
+            ],
+            "continuity": "L’anomalie appartient au scénario Encore ; elle ne révèle pas le fonctionnement officiel du monde.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH02",
+        "order": 2,
+        "act": 1,
+        "title": "Le rangement recommence",
+        "playerId": "ragatha",
+        "opponentId": "bubble",
+        "stageId": "backstage",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Retrouver la liste de montage avant que les accessoires ne repartent dans un autre décor.",
+        "whyFight": "Bubble suit une seconde consigne de rangement ; Ragatha propose une répétition pour déterminer qui garde le passage.",
+        "revelation": "Les instructions se remplacent à chaque fin de tâche, comme si aucun numéro ne pouvait se terminer.",
+        "consequence": "Ragatha accroche une feuille au couloir et fait appel aux autres au lieu de tout reprendre seule.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch02/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH02 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH02-INTRO",
+            "role": "intro",
+            "stageId": "backstage",
+            "cast": [
+              "ragatha",
+              "bubble"
+            ],
+            "assetId": "en-global-ch02-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Ragatha tient une liste tandis que Bubble pousse une boîte dans la direction opposée.",
+            "framing": "Couloir en profondeur, espace latéral libre pour le combat.",
+            "emotion": "Fatigue contenue et décalage comique.",
+            "dialogue": [
+              {
+                "speakerId": "ragatha",
+                "text": "Je viens de finir cette liste. Pourquoi me demandes-tu de recommencer ?"
+              }
+            ],
+            "continuity": "La boîte reste un accessoire, sans hitbox ni interaction promise.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH02-RIVAL",
+            "role": "rival",
+            "stageId": "backstage",
+            "cast": [
+              "ragatha",
+              "bubble"
+            ],
+            "assetId": "en-global-ch02-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Bubble oriente son corps sphérique et son regard vers deux flèches opposées au-dessus de la même porte, sans bras ajouté.",
+            "framing": "Plan à deux, panneaux hauts, visages sans texte devant eux.",
+            "emotion": "Assurance absurde de Bubble.",
+            "dialogue": [
+              {
+                "speakerId": "bubble",
+                "text": "Les deux flèches sont très convaincantes !"
+              }
+            ],
+            "continuity": "Le duel est un accord de passage dans la simulation.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH02-OUTRO",
+            "role": "outro",
+            "stageId": "backstage",
+            "cast": [
+              "ragatha",
+              "bubble"
+            ],
+            "assetId": "en-global-ch02-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Ragatha accroche la consigne contradictoire à hauteur des autres ; sa main se retire enfin du décor.",
+            "framing": "Plan large calme, feuille au centre, Ragatha détachée de la charge.",
+            "emotion": "Décision de partager la responsabilité.",
+            "dialogue": [
+              {
+                "speakerId": "ragatha",
+                "text": "Cette fois, on va lire la consigne ensemble."
+              }
+            ],
+            "continuity": "La feuille rejoint les programmes du chapitre 1.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH03",
+        "order": 3,
+        "act": 1,
+        "title": "Le bon moment pour parler",
+        "playerId": "gangle",
+        "opponentId": "zooble",
+        "stageId": "spudsy",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Comparer le rythme du service à celui des annonces du programme.",
+        "whyFight": "Zooble accepte de tester la routine que Gangle essaie d’expliquer, avec une limite de temps convenue.",
+        "revelation": "Les annonces couvrent systématiquement le moment où un résident pourrait répondre.",
+        "consequence": "Gangle marque sur la feuille un intervalle vide que la campagne cherchera à préserver.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch03/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH03 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH03-INTRO",
+            "role": "intro",
+            "stageId": "spudsy",
+            "cast": [
+              "gangle",
+              "zooble"
+            ],
+            "assetId": "en-global-ch03-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Gangle place son carnet à côté d’un plateau immobile ; Zooble observe les annonces au-dessus du comptoir.",
+            "framing": "Comptoir en diagonale de fond, premier plan libre.",
+            "emotion": "Hésitation, écoute.",
+            "dialogue": [
+              {
+                "speakerId": "gangle",
+                "text": "Le problème, c’est le moment où personne ne peut répondre."
+              }
+            ],
+            "continuity": "Le masque ne se répare pas comme récompense.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH03-RIVAL",
+            "role": "rival",
+            "stageId": "spudsy",
+            "cast": [
+              "gangle",
+              "zooble"
+            ],
+            "assetId": "en-global-ch03-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Zooble indique une marque au sol et attend le signal de Gangle.",
+            "framing": "Deux corps entiers, intervalle visuel volontaire entre eux.",
+            "emotion": "Coopération sous forme d’épreuve.",
+            "dialogue": [
+              {
+                "speakerId": "zooble",
+                "text": "Alors tu donnes le signal. Je commence quand tu es prête."
+              }
+            ],
+            "continuity": "La rivalité est une fonction de chapitre, pas une hostilité officielle.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH03-OUTRO",
+            "role": "outro",
+            "stageId": "spudsy",
+            "cast": [
+              "gangle",
+              "zooble"
+            ],
+            "assetId": "en-global-ch03-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Gangle entoure une case laissée blanche dans son carnet.",
+            "framing": "Vue rapprochée du carnet puis visage en retrait, sans texte intégré à l’image.",
+            "emotion": "Assurance fragile.",
+            "dialogue": [
+              {
+                "speakerId": "gangle",
+                "text": "Je veux garder cette case vide jusqu’au bout."
+              }
+            ],
+            "continuity": "Le motif de la case vide revient dans l’épilogue.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH04",
+        "order": 4,
+        "act": 1,
+        "title": "Les pièces du programme",
+        "playerId": "zooble",
+        "opponentId": "gloinkqueen",
+        "stageId": "gloink",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Récupérer les repères emportés dans le nid sans abandonner les pièces utiles du décor.",
+        "whyFight": "La Reine réclame une épreuve avant de céder les repères qu’elle considère comme une collection.",
+        "revelation": "Les Gloinks n’ont pas créé les doublons : ils ramassent les marqueurs rejetés à chaque nouveau tour.",
+        "consequence": "Zooble récupère des repères de couleurs et choisit une route vers Candy Canyon.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch04/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH04 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH04-INTRO",
+            "role": "intro",
+            "stageId": "gloink",
+            "cast": [
+              "zooble",
+              "gloinkqueen"
+            ],
+            "assetId": "en-global-ch04-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Zooble distingue ses repères parmi les formes du nid ; la Reine domine le fond.",
+            "framing": "Échelle convaincante, pas de réduction du boss à la taille humaine.",
+            "emotion": "Agacement précis et curiosité.",
+            "dialogue": [
+              {
+                "speakerId": "zooble",
+                "text": "Ce ne sont pas des trophées. Ce sont nos repères de sortie de scène."
+              }
+            ],
+            "continuity": "Aucune pièce anatomique de Zooble n’est arrachée pour servir de prop.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH04-RIVAL",
+            "role": "rival",
+            "stageId": "gloink",
+            "cast": [
+              "zooble",
+              "gloinkqueen"
+            ],
+            "assetId": "en-global-ch04-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Un Gloink dépose un marqueur devant Gloink Queen ; Zooble reste hors de son volume corporel pendant que le passage se ferme.",
+            "framing": "Cadre large préservant sa silhouette et les pieds de Zooble.",
+            "emotion": "Possessivité cérémonielle.",
+            "dialogue": [
+              {
+                "speakerId": "gloinkqueen",
+                "text": "Le nid ne rend pas une collection sans spectacle."
+              }
+            ],
+            "continuity": "La réplique est une création Encore.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH04-OUTRO",
+            "role": "outro",
+            "stageId": "gloink",
+            "cast": [
+              "zooble",
+              "gloinkqueen"
+            ],
+            "assetId": "en-global-ch04-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Zooble aligne les marqueurs récupérés en laissant une place pour la case vide.",
+            "framing": "Objets en bas du cadre, personnages encore présents.",
+            "emotion": "Première structure compréhensible.",
+            "dialogue": [
+              {
+                "speakerId": "zooble",
+                "text": "On garde ce qui sert. Le reste n’a pas à décider pour nous."
+              }
+            ],
+            "continuity": "Fin de l’acte I : l’anomalie devient un parcours à examiner.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH05",
+        "order": 5,
+        "act": 2,
+        "title": "Le détour qui revient",
+        "playerId": "gummigoo",
+        "opponentId": "fudge",
+        "stageId": "candy",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Protéger un passage annoté et vérifier pourquoi il ramène les convois à leur point de départ.",
+        "whyFight": "The Fudge bloque ce passage ; la simulation de Gummigoo défend l’espace du convoi.",
+        "revelation": "Le détour s’est superposé à une instruction de retour de scène.",
+        "consequence": "Le groupe comprend que les attractions sont rejouées par un programme de répétition.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch05/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH05 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH05-INTRO",
+            "role": "intro",
+            "stageId": "candy",
+            "cast": [
+              "gummigoo",
+              "fudge"
+            ],
+            "assetId": "en-global-ch05-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Gummigoo immobilise le convoi devant une trace de roue qui revient sur elle-même.",
+            "framing": "Horizon de canyon, convoi loin du plan de duel.",
+            "emotion": "Prudence concrète.",
+            "dialogue": [
+              {
+                "speakerId": "gummigoo",
+                "text": "On a déjà suivi cette trace. Elle revient derrière nous."
+              }
+            ],
+            "continuity": "Gummigoo est une instance de scénario Encore, sans résurrection canonique.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH05-RIVAL",
+            "role": "rival",
+            "stageId": "candy",
+            "cast": [
+              "gummigoo",
+              "fudge"
+            ],
+            "assetId": "en-global-ch05-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "The Fudge occupe l’ouverture tandis que Gummigoo garde une bande de route libre.",
+            "framing": "Rapport de masses lisible et limite sûre de la piste.",
+            "emotion": "Menace lourde, décision de protéger le passage.",
+            "dialogue": [
+              {
+                "speakerId": "gummigoo",
+                "text": "Tu peux prendre la route vide. Pas ceux qui attendent derrière."
+              }
+            ],
+            "continuity": "Ne pas inventer un système de véhicule destructible : duel standard.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH05-OUTRO",
+            "role": "outro",
+            "stageId": "candy",
+            "cast": [
+              "gummigoo",
+              "fudge"
+            ],
+            "assetId": "en-global-ch05-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Gummigoo pose le marqueur sur deux tracés qui se chevauchent.",
+            "framing": "Plan moyen avec carrefour au fond.",
+            "emotion": "Compréhension partagée.",
+            "dialogue": [
+              {
+                "speakerId": "gummigoo",
+                "text": "Ce n’est pas une nouvelle route. C’est une ancienne consigne qui repasse."
+              }
+            ],
+            "continuity": "La carte devient une hypothèse de groupe, pas un plan officiel de la série.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH06",
+        "order": 6,
+        "act": 2,
+        "title": "Une règle peut s’arrêter",
+        "playerId": "loolilalu",
+        "opponentId": "gummigoo",
+        "stageId": "kingdom",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Obtenir un passage du palais sans relancer indéfiniment son cérémonial.",
+        "whyFight": "Loolilalu demande une démonstration réglée ; Gummigoo teste si l’épreuve s’arrête lorsqu’elle a été gagnée.",
+        "revelation": "La victoire seule ne ferme pas le programme : il faut aussi accepter la fin de l’épreuve.",
+        "consequence": "Loolilalu écrit une condition de fin simple que les autres pourront présenter à Caine.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch06/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH06 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH06-INTRO",
+            "role": "intro",
+            "stageId": "kingdom",
+            "cast": [
+              "loolilalu",
+              "gummigoo"
+            ],
+            "assetId": "en-global-ch06-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Loolilalu regarde un ruban de réception refermé après le passage précédent.",
+            "framing": "Arches de sucre et porte centrale, composition symétrique.",
+            "emotion": "Perplexité digne.",
+            "dialogue": [
+              {
+                "speakerId": "loolilalu",
+                "text": "Une réception ne peut pas recommencer à chaque invité."
+              }
+            ],
+            "continuity": "Le lieu reste un décor de duel adapté.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH06-RIVAL",
+            "role": "rival",
+            "stageId": "kingdom",
+            "cast": [
+              "loolilalu",
+              "gummigoo"
+            ],
+            "assetId": "en-global-ch06-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Les deux personnages se placent de part et d’autre du ruban sans le toucher.",
+            "framing": "Plan d’ensemble, règle matérialisée par le ruban.",
+            "emotion": "Test accepté.",
+            "dialogue": [
+              {
+                "speakerId": "gummigoo",
+                "text": "Alors, quand l’épreuve est finie, on laisse la route ouverte."
+              }
+            ],
+            "continuity": "Aucune hostilité officielle n’est attribuée à cette rencontre.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH06-OUTRO",
+            "role": "outro",
+            "stageId": "kingdom",
+            "cast": [
+              "loolilalu",
+              "gummigoo"
+            ],
+            "assetId": "en-global-ch06-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Loolilalu maintient le ruban ouvert pendant que Gummigoo reprend le marqueur.",
+            "framing": "Cadre ouvert sur l’extérieur.",
+            "emotion": "Accord limité mais réel.",
+            "dialogue": [
+              {
+                "speakerId": "loolilalu",
+                "text": "Que l’on note ceci : terminé signifie terminé."
+              }
+            ],
+            "continuity": "La condition de fin sera rapprochée de la case vide.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH07",
+        "order": 7,
+        "act": 2,
+        "title": "La lumière qui attend",
+        "playerId": "kinger",
+        "opponentId": "baronmildenhall",
+        "stageId": "manor",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Trouver un signal qui reste lisible quand les annonces cessent.",
+        "whyFight": "Une simulation muette du Baron occupe l’accès aux repères du manoir ; Kinger suit le parcours de duel prévu.",
+        "revelation": "Un petit repère constant est plus utile qu’un nouvel ordre spectaculaire.",
+        "consequence": "Kinger conserve une veilleuse comme signal de pause destiné au groupe.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch07/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH07 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH07-INTRO",
+            "role": "intro",
+            "stageId": "manor",
+            "cast": [
+              "kinger",
+              "baronmildenhall"
+            ],
+            "assetId": "en-global-ch07-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Kinger place une petite lumière sous un portrait sombre.",
+            "framing": "Perspective profonde, détail lumineux proche de la base du personnage.",
+            "emotion": "Attention calme.",
+            "dialogue": [
+              {
+                "speakerId": "kinger",
+                "text": "On n’a pas besoin que tout brille pour savoir où attendre."
+              }
+            ],
+            "continuity": "La lumière ne lui attribue pas un nouveau pouvoir.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH07-RIVAL",
+            "role": "rival",
+            "stageId": "manor",
+            "cast": [
+              "kinger",
+              "baronmildenhall"
+            ],
+            "assetId": "en-global-ch07-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Le Baron reste silencieux devant le passage, silhouette entière discernable.",
+            "framing": "Grand vide entre les deux figures.",
+            "emotion": "Inquiétude sans nouvelle biographie.",
+            "dialogue": [
+              {
+                "speakerId": "narration",
+                "text": "La silhouette marque le passage. Elle ne donne aucune réponse."
+              }
+            ],
+            "continuity": "Aucune parole officielle ou relation familiale supplémentaire n’est inventée.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH07-OUTRO",
+            "role": "outro",
+            "stageId": "manor",
+            "cast": [
+              "kinger",
+              "baronmildenhall"
+            ],
+            "assetId": "en-global-ch07-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Kinger déplace la veilleuse hors de l’axe des annonces.",
+            "framing": "Petit cercle de lumière stable et reste du manoir assombri.",
+            "emotion": "Soulagement discret.",
+            "dialogue": [
+              {
+                "speakerId": "kinger",
+                "text": "Voilà. Si quelqu’un hésite, on saura où l’attendre."
+              }
+            ],
+            "continuity": "Le même accessoire accompagne le chapitre final.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH08",
+        "order": 8,
+        "act": 2,
+        "title": "La limite du cellier",
+        "playerId": "pomni",
+        "opponentId": "abstractedkaufmo",
+        "stageId": "cellar",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Récupérer un repère de programme sans présenter le duel comme un sauvetage d’une abstraction.",
+        "whyFight": "Une simulation de Kaufmo abstrait occupe la zone de calibration du cellier ; Pomni doit maintenir sa distance dans un duel délimité.",
+        "revelation": "La répétition ne résout ni l’abstraction ni la mémoire des personnes : elle masque seulement ce que le programme n’explique pas.",
+        "consequence": "Pomni refuse qu’un score de victoire soit interprété comme une guérison.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch08/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH08 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH08-INTRO",
+            "role": "intro",
+            "stageId": "cellar",
+            "cast": [
+              "pomni",
+              "abstractedkaufmo"
+            ],
+            "assetId": "en-global-ch08-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Pomni se tient à la lisière de la lumière avec le programme plié ; les yeux de l’abstraction restent dans le fond.",
+            "framing": "Cadre large avec séparation nette des deux espaces.",
+            "emotion": "Crainte attentive.",
+            "dialogue": [
+              {
+                "speakerId": "pomni",
+                "text": "Je veux récupérer le repère. Je n’ai pas dit que je pouvais tout réparer."
+              }
+            ],
+            "continuity": "Forme abstraite intacte, aucune transformation en clown.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH08-RIVAL",
+            "role": "rival",
+            "stageId": "cellar",
+            "cast": [
+              "pomni",
+              "abstractedkaufmo"
+            ],
+            "assetId": "en-global-ch08-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "La silhouette abstraite coupe l’axe du passage ; Pomni garde une distance lisible.",
+            "framing": "Duel latéral, masse et yeux distincts des effets.",
+            "emotion": "Menace et retenue.",
+            "dialogue": [
+              {
+                "speakerId": "narration",
+                "text": "Le parcours fixe une limite. Le combat n’apporte aucune réponse sur ce qui se trouve au-delà."
+              }
+            ],
+            "continuity": "Pas de dialogue humain attribué à l’abstraction.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH08-OUTRO",
+            "role": "outro",
+            "stageId": "cellar",
+            "cast": [
+              "pomni",
+              "abstractedkaufmo"
+            ],
+            "assetId": "en-global-ch08-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Pomni reprend le repère sans quitter des yeux la zone sombre.",
+            "framing": "Repère en premier plan, abstraction encore perceptible.",
+            "emotion": "Victoire de parcours, question irrésolue.",
+            "dialogue": [
+              {
+                "speakerId": "pomni",
+                "text": "On peut finir une épreuve sans prétendre avoir réglé le reste."
+              }
+            ],
+            "continuity": "Fin de l’acte II ; aucune sortie ni restauration promise.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH09",
+        "order": 9,
+        "act": 3,
+        "title": "Le gag qui ne passe plus",
+        "playerId": "jax",
+        "opponentId": "caine",
+        "stageId": "falseexit",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Faire reconnaître à Caine la contradiction entre panneau et résultat.",
+        "whyFight": "Jax lance un défi formel à Caine sur les limites de l’annonce du programme.",
+        "revelation": "Caine s’appuie sur une routine qui relance un numéro dès qu’une case est vide.",
+        "consequence": "Jax garde le dernier panneau intact afin que les autres puissent montrer ce qui manque au lieu de le masquer.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch09/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH09 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH09-INTRO",
+            "role": "intro",
+            "stageId": "falseexit",
+            "cast": [
+              "jax",
+              "caine"
+            ],
+            "assetId": "en-global-ch09-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Jax pointe un panneau de sortie sans ouvrir la porte ; Caine présente une nouvelle fiche.",
+            "framing": "Porte rouge au fond, personnages de profil.",
+            "emotion": "Sarcasme dirigé contre une règle.",
+            "dialogue": [
+              {
+                "speakerId": "jax",
+                "text": "Si je gagne, tu lis la petite ligne. Celle que tu sautes toujours."
+              }
+            ],
+            "continuity": "La fausse sortie reste un décor, sans accès au monde réel.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH09-RIVAL",
+            "role": "rival",
+            "stageId": "falseexit",
+            "cast": [
+              "jax",
+              "caine"
+            ],
+            "assetId": "en-global-ch09-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Caine déroule un programme trop long devant les deux marques de départ.",
+            "framing": "Papier en arrière-plan, pieds et mains dégagés.",
+            "emotion": "Enthousiasme excessif, opposition sèche.",
+            "dialogue": [
+              {
+                "speakerId": "caine",
+                "text": "Une case vide ? Voilà justement la place parfaite pour un nouveau numéro !"
+              }
+            ],
+            "continuity": "Création de scénario, pas explication officielle de Caine.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH09-OUTRO",
+            "role": "outro",
+            "stageId": "falseexit",
+            "cast": [
+              "jax",
+              "caine"
+            ],
+            "assetId": "en-global-ch09-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Jax replie le programme et laisse la case vide visible au-dessus du pli.",
+            "framing": "Objet central, sourire plus discret.",
+            "emotion": "Choix de ne pas ajouter une autre farce.",
+            "dialogue": [
+              {
+                "speakerId": "jax",
+                "text": "Pour une fois, je vais laisser ce trou exactement où il est."
+              }
+            ],
+            "continuity": "Le panneau et les deux feuilles rejoignent le final.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH10",
+        "order": 10,
+        "act": 3,
+        "title": "Le droit de ne rien déclencher",
+        "playerId": "zooble",
+        "opponentId": "bubble",
+        "stageId": "training",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Démontrer qu’une pause volontaire n’est pas une erreur de programme.",
+        "whyFight": "Bubble répète les signaux de démarrage ; Zooble teste un arrêt convenu entre les manches du parcours.",
+        "revelation": "Les personnages peuvent décider d’une fin de répétition si cette décision devient explicite.",
+        "consequence": "Le groupe prépare une consigne compréhensible : laisser répondre, puis accepter la fin.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch10/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH10 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH10-INTRO",
+            "role": "intro",
+            "stageId": "training",
+            "cast": [
+              "zooble",
+              "bubble"
+            ],
+            "assetId": "en-global-ch10-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Zooble place la case vide au milieu de la grille ; Bubble attend près d’un panneau lumineux.",
+            "framing": "Orthogonal, repères de mesure clairs.",
+            "emotion": "Patience ferme.",
+            "dialogue": [
+              {
+                "speakerId": "zooble",
+                "text": "On ne manque pas une consigne. On choisit de ne rien ajouter."
+              }
+            ],
+            "continuity": "L’arrêt est narratif ; aucune nouvelle commande de combat n’est revendiquée.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH10-RIVAL",
+            "role": "rival",
+            "stageId": "training",
+            "cast": [
+              "zooble",
+              "bubble"
+            ],
+            "assetId": "en-global-ch10-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Bubble hésite au-dessus du repère de départ pendant que Zooble garde une posture neutre.",
+            "framing": "Espace central vide, personnages à chaque extrémité.",
+            "emotion": "Comique de l’attente.",
+            "dialogue": [
+              {
+                "speakerId": "bubble",
+                "text": "Je peux attendre très fort ?"
+              }
+            ],
+            "continuity": "Le match reste le duel standard du chapitre.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH10-OUTRO",
+            "role": "outro",
+            "stageId": "training",
+            "cast": [
+              "zooble",
+              "bubble"
+            ],
+            "assetId": "en-global-ch10-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Zooble tourne le panneau vers le groupe plutôt que vers un nouveau parcours.",
+            "framing": "Cadre simple, grille et case vide toujours visibles.",
+            "emotion": "Clarté obtenue.",
+            "dialogue": [
+              {
+                "speakerId": "zooble",
+                "text": "Oui. Et tu peux nous laisser décider quand c’est fini."
+              }
+            ],
+            "continuity": "Aucun effet de piratage ou maîtrise du code ajouté.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH11",
+        "order": 11,
+        "act": 3,
+        "title": "Le programme tient ensemble",
+        "playerId": "ragatha",
+        "opponentId": "jax",
+        "stageId": "memoryfracture",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Réunir les feuilles contradictoires en conservant les choix de chacun.",
+        "whyFight": "Jax soumet l’assemblage à une dernière épreuve de répétition, convenue avant le final.",
+        "revelation": "Les raccords peuvent tenir sans effacer les contradictions ni confier tout le travail à Ragatha.",
+        "consequence": "Ragatha demande à Jax de porter sa part du programme jusqu’à la piste.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch11/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH11 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH11-INTRO",
+            "role": "intro",
+            "stageId": "memoryfracture",
+            "cast": [
+              "ragatha",
+              "jax"
+            ],
+            "assetId": "en-global-ch11-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Ragatha dispose les deux programmes sous les arches disjointes ; Jax tient un morceau de ruban.",
+            "framing": "Décor original large, action précise sur un panneau posé.",
+            "emotion": "Concentration et fatigue reconnue.",
+            "dialogue": [
+              {
+                "speakerId": "ragatha",
+                "text": "Je peux assembler les feuilles. Je ne vais pas les porter pour tout le monde."
+              }
+            ],
+            "continuity": "Memoryfracture est un lieu original Encore, sans souvenir humain révélé.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH11-RIVAL",
+            "role": "rival",
+            "stageId": "memoryfracture",
+            "cast": [
+              "ragatha",
+              "jax"
+            ],
+            "assetId": "en-global-ch11-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Jax retire volontairement un accessoire inutile, puis se place sur sa marque.",
+            "framing": "Deux personnages entiers, panneau hors du plan de collision.",
+            "emotion": "Dernière provocation contenue.",
+            "dialogue": [
+              {
+                "speakerId": "jax",
+                "text": "Très bien. On teste si ça tient, puis je porte ma moitié."
+              }
+            ],
+            "continuity": "Duel accepté ; pas de sabotage létal.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH11-OUTRO",
+            "role": "outro",
+            "stageId": "memoryfracture",
+            "cast": [
+              "ragatha",
+              "jax"
+            ],
+            "assetId": "en-global-ch11-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Ragatha lâche une extrémité ; le panneau reste tenu par Jax.",
+            "framing": "Composition à deux, petit espace libre entre les feuilles.",
+            "emotion": "Confiance concrète.",
+            "dialogue": [
+              {
+                "speakerId": "ragatha",
+                "text": "Merci. On peut y aller."
+              }
+            ],
+            "continuity": "Les deux feuilles, la case vide et le ruban arrivent ensemble au chapitre 12.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          }
+        ]
+      },
+      {
+        "id": "EN-CAM-CH12",
+        "order": 12,
+        "act": 3,
+        "title": "Après les applaudissements",
+        "playerId": "pomni",
+        "opponentId": "caine",
+        "stageId": "bigtop",
+        "narrativeStatus": "original-encore-alternative-simulation",
+        "implementation": "not-integrated",
+        "objective": "Obtenir de Caine la clôture du programme commun et un intervalle de réponse.",
+        "whyFight": "Caine accepte un dernier duel de démonstration ; la condition de fin a été formulée avant le match.",
+        "revelation": "La répétition peut se terminer à son échelle, même si la captivité et les questions personnelles demeurent.",
+        "consequence": "Épilogue : la piste se calme, le groupe choisit comment occuper la pause et la case vide reste ouverte.",
+        "gameplay": {
+          "format": "duel-standard",
+          "win": "Remporter le duel selon les manches et le chrono sélectionnés.",
+          "failure": "Défaite : reprise du même combat ou retour au menu, sans perte des chapitres déjà débloqués.",
+          "checkpoint": "global-campaign/ch12/before-fight",
+          "resume": "Relire le résumé, revoir ou passer la scène, puis reprendre le combat à son état initial.",
+          "difficulty": "Profil existant easy/normal/hard ; pas de bonus de statistiques transféré au Versus.",
+          "reward": "Déblocage du chapitre suivant et des scènes EN-CAM-CH12 effectivement vues ; dernier chapitre : épilogue."
+        },
+        "scenes": [
+          {
+            "id": "EN-CAM-CH12-INTRO",
+            "role": "intro",
+            "stageId": "bigtop",
+            "cast": [
+              "pomni",
+              "caine"
+            ],
+            "assetId": "en-global-ch12-intro",
+            "status": "brief-only-image-not-produced",
+            "action": "Pomni présente le programme assemblé ; la veilleuse de Kinger éclaire la case vide.",
+            "framing": "Retour au cadrage du chapitre 1, accessoire changé de fonction.",
+            "emotion": "Détermination modeste.",
+            "dialogue": [
+              {
+                "speakerId": "pomni",
+                "text": "Quand le match sera fini, tu nous laisseras répondre avant d’annoncer la suite."
+              }
+            ],
+            "continuity": "Caine accepte la condition avant le duel ; aucun changement arbitraire après KO.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH12-RIVAL",
+            "role": "rival",
+            "stageId": "bigtop",
+            "cast": [
+              "pomni",
+              "caine"
+            ],
+            "assetId": "en-global-ch12-rival",
+            "status": "brief-only-image-not-produced",
+            "action": "Caine baisse le programme pour voir Pomni sur sa marque.",
+            "framing": "Face-à-face large, aucun personnage caché sous un effet.",
+            "emotion": "Surprise, place laissée à l’autre.",
+            "dialogue": [
+              {
+                "speakerId": "caine",
+                "text": "Un final qui se termine vraiment… Voilà une contrainte nouvelle."
+              }
+            ],
+            "continuity": "L’adversaire reste identifiable et entier après le résultat.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "Ambiance du lieu, silence sous la réplique décisive ; aucune nouvelle prise audio livrée."
+          },
+          {
+            "id": "EN-CAM-CH12-OUTRO",
+            "role": "outro",
+            "stageId": "bigtop",
+            "cast": [
+              "pomni",
+              "caine",
+              "ragatha",
+              "jax",
+              "gangle",
+              "zooble",
+              "kinger",
+              "bubble"
+            ],
+            "assetId": "en-global-ch12-outro",
+            "status": "brief-only-image-not-produced",
+            "action": "Le groupe reste autour de la piste sans qu’un nouveau panneau s’allume ; la case vide est visible entre les deux feuilles.",
+            "framing": "Ensemble 16:9 avec espace central libre, aucun portrait promotionnel aligné.",
+            "emotion": "Repos imparfait, humour discret, question ouverte.",
+            "dialogue": [
+              {
+                "speakerId": "gangle",
+                "text": "On peut laisser la case comme ça."
+              },
+              {
+                "speakerId": "pomni",
+                "text": "Oui. Pour maintenant."
+              }
+            ],
+            "continuity": "Ni sortie réelle, ni guérison, ni révélation de vies humaines ; la résolution appartient à Encore.",
+            "light": "Reprendre la palette et la direction de lumière du stage ; conserver les couleurs d’identité.",
+            "costumes": "Apparences de base cohérentes sur les trois tableaux ; aucun crossover automatique.",
+            "textSafeArea": "Réserver le quart inférieur aux sous-titres séparés ; ne pas peindre le dialogue dans le PNG.",
+            "nativeFormat": "Composition cible 16:9 ; master souhaité 3840 × 2160, dimensions réelles et source native à consigner.",
+            "soundIntent": "La musique existante s’atténue ; conserver un silence après la dernière réplique, à intégrer ultérieurement."
+          }
+        ]
+      }
+    ],
+    "saveContract": {
+      "newNamespace": "globalCampaignRun",
+      "proposedSchema": 1,
+      "fields": [
+        "campaignId",
+        "chapterId",
+        "checkpointId",
+        "difficulty",
+        "seenSceneIds",
+        "unlockedChapterIds",
+        "rulesVersion"
+      ],
+      "migration": "Champ absent dans un ancien profil : campagne non commencée ; ne pas transformer une route story en chapitre global.",
+      "exit": "Sauvegarder le checkpoint confirmé avant toute fermeture ; reprendre le combat au début sans modifier les profils de duel.",
+      "rewards": "Scènes, illustrations futures et entrées de codex. Aucun bonus de dégâts, vie ou vitesse en Versus.",
+      "acceptance": [
+        "premier lancement",
+        "12 chapitres jusqu’à l’épilogue",
+        "défaite puis reprise",
+        "quitter entre scène et combat",
+        "changer de difficulté",
+        "import ancien profil",
+        "mode hors ligne",
+        "passer puis revoir une scène"
+      ]
+    }
+  },
+  "stageProfiles": [
+    {
+      "id": "EN-STAGE-COMPETITION",
+      "name": "Compétition",
+      "presentation": "au choix local, vivant/statique/réduit",
+      "interactions": false,
+      "hazards": false,
+      "transitions": false,
+      "status": "target-contract-not-current-menu"
+    },
+    {
+      "id": "EN-STAGE-SPECTACLE",
+      "name": "Spectacle",
+      "presentation": "au choix local",
+      "interactions": "selon contrat d’objet annoncé",
+      "hazards": "désactivés par défaut ; chaque danger futur a une fiche",
+      "transitions": "uniquement liens déclarés et version de règles compatible",
+      "status": "target-contract-not-current-menu"
+    },
+    {
+      "id": "EN-STAGE-COMFORT",
+      "name": "Confort / performance",
+      "presentation": "statique ou réduit",
+      "interactions": "hérite du profil de match",
+      "hazards": "hérite du profil de match, signaux fixes équivalents",
+      "transitions": "hérite du profil de match, présentation réduite équivalente",
+      "status": "presentation-contract-not-new-gameplay-profile"
+    }
+  ],
+  "transitionRules": {
+    "status": "design-only",
+    "coordinateSystem": "Repère logique existant 1280 × 720, sol y=568, limites actuelles x=65..1215.",
+    "allowedModes": [
+      "future-global-campaign",
+      "future-spectacle-versus",
+      "future-stage-training"
+    ],
+    "disabledModes": [
+      "current-all-modes",
+      "future-competition-default",
+      "legacy-replays"
+    ],
+    "activation": "Proposition : une attaque autorisée touche en direction de la liaison, dans la zone signalée. L’attaque doit être gardable/esquivable ; aucun simple contact involontaire avec le bord ne transfère.",
+    "thresholds": "Compteur de rupture par liaison, cible initiale 2 impacts admissibles. Paramètre de conception à équilibrer, distinct des valeurs actuelles.",
+    "priority": "Résoudre collision/dégâts puis KO ou temps écoulé avant de considérer le transfert. Un seul événement de transfert par tick ; départ simultané opposé annule les deux transferts et laisse le duel au même stage.",
+    "presentation": "Durée cible 90 ticks de simulation d’événement (1,5 s), horloge de combat et acteurs gelés. Mode réduit : coupe fondue discrète de même durée, mêmes états et mêmes signaux.",
+    "state": "Conserver vie, ressources, manches, statistiques et RNG ; vider hitboxes actives, projectiles, pièges et contacts persistants au transfert. Le combo est clos sans dégâts supplémentaires. Ces règles ne sont pas implémentées.",
+    "arrival": "Replacer les deux acteurs au sol, centres initiaux x=420 et x=860, face à face. Ajuster les centres au gabarit si les hurtboxes se recouvrent ; prouver aucune intersection avec les limites.",
+    "recovery": "30 ticks de neutralisation partagée après l’arrivée ; puis contrôle simultané. Transfert consommé pour le match, pas de retour dans la même manche.",
+    "loading": "Précharger la destination avant le round. Si elle est indisponible, désactiver la liaison avant le départ et afficher l’état ; aucun chargement bloquant après impact.",
+    "replay": "Nouvelle version de règles et format de replay obligatoires pour les liens actifs ; les anciennes versions restent sans transition.",
+    "verification": [
+      "garde et esquive",
+      "coin gauche/droit",
+      "corps géant et petit",
+      "KO sur impact de rupture",
+      "chrono expirant au même tick",
+      "double déclenchement",
+      "pause et périphérique débranché",
+      "destination indisponible",
+      "match rejoué à l’identique",
+      "aucune boucle retirant indéfiniment le contrôle"
+    ],
+    "id": "EN-LINK-RULES-01"
+  },
+  "stageLinks": [
+    {
+      "id": "EN-LINK-001",
+      "fromStageId": "bigtop",
+      "toStageId": "backstage",
+      "name": "Derrière le rideau",
+      "sourceStatus": "original-encore",
+      "status": "design-only-not-integrated",
+      "direction": "one-way-per-match",
+      "side": "droite",
+      "trigger": "Rupture du panneau latéral signalé par deux impacts admissibles dirigés à droite.",
+      "counterplay": "Garder l’impact, reculer de la zone ou changer de côté avant la frappe.",
+      "arrivalLandmark": "Couloir des portes, entrée dégagée à gauche.",
+      "assetsRequired": [
+        "rideau source statique",
+        "cadre d’arrivée",
+        "signal fixe de rupture"
+      ],
+      "ruleContract": "EN-LINK-RULES-01"
+    },
+    {
+      "id": "EN-LINK-002",
+      "fromStageId": "bigtop",
+      "toStageId": "grounds",
+      "name": "Au pied du chapiteau",
+      "sourceStatus": "original-encore",
+      "status": "design-only-not-integrated",
+      "direction": "one-way-per-match",
+      "side": "gauche",
+      "trigger": "Ouverture du passage de toile marqué après deux impacts vers la gauche.",
+      "counterplay": "Défendre ou ramener le duel au centre.",
+      "arrivalLandmark": "Pelouse avec chapiteau en fond, sol continu.",
+      "assetsRequired": [
+        "passage de toile",
+        "repère au sol",
+        "vignette de raccord"
+      ],
+      "ruleContract": "EN-LINK-RULES-01"
+    },
+    {
+      "id": "EN-LINK-003",
+      "fromStageId": "backstage",
+      "toStageId": "falseexit",
+      "name": "La porte mal étiquetée",
+      "sourceStatus": "original-encore",
+      "status": "design-only-not-integrated",
+      "direction": "one-way-per-match",
+      "side": "droite",
+      "trigger": "Porte de décor préparée pour un transfert, jamais présentée comme la vraie sortie.",
+      "counterplay": "Éviter la zone et contrer l’attaque admissible.",
+      "arrivalLandmark": "Bureaux gris, porte rouge au fond hors collision.",
+      "assetsRequired": [
+        "porte de spectacle",
+        "panneau sans texte peint",
+        "état ouvert du cadre"
+      ],
+      "ruleContract": "EN-LINK-RULES-01"
+    },
+    {
+      "id": "EN-LINK-004",
+      "fromStageId": "backstage",
+      "toStageId": "cellar",
+      "name": "La trappe de répétition",
+      "sourceStatus": "original-encore",
+      "status": "design-only-not-integrated",
+      "direction": "one-way-per-match",
+      "side": "gauche",
+      "trigger": "Paroi de scène qui révèle une trappe de spectacle ; transfert par séquence, sans chute libre jouable.",
+      "counterplay": "Bloquer l’attaque de rupture ; la trappe n’a pas d’activation au simple contact.",
+      "arrivalLandmark": "Lumière centrale du cellier, deux acteurs déjà debout.",
+      "assetsRequired": [
+        "trappe fermée/ouverte en deux images",
+        "signal de bord",
+        "arrivée sous lumière"
+      ],
+      "ruleContract": "EN-LINK-RULES-01"
+    },
+    {
+      "id": "EN-LINK-005",
+      "fromStageId": "candy",
+      "toStageId": "undermap",
+      "name": "Sous le parcours",
+      "sourceStatus": "original-encore",
+      "status": "design-only-not-integrated",
+      "direction": "one-way-per-match",
+      "side": "droite",
+      "trigger": "Découpe originale du plancher de répétition après impacts signalés ; aucune géographie physique canonique revendiquée.",
+      "counterplay": "Garde ou sortie de zone ; effet de faille purement visuel jusqu’au transfert validé.",
+      "arrivalLandmark": "Sol quadrillé bleu sous la carte, ancrages au même niveau.",
+      "assetsRequired": [
+        "fragment de sol sans acteur",
+        "vignette verticale de passage",
+        "repères quadrillés d’arrivée"
+      ],
+      "ruleContract": "EN-LINK-RULES-01"
+    },
+    {
+      "id": "EN-LINK-006",
+      "fromStageId": "memoryfracture",
+      "toStageId": "abstractionthreshold",
+      "name": "Le seuil du dernier numéro",
+      "sourceStatus": "original-encore",
+      "status": "design-only-not-integrated",
+      "direction": "one-way-per-match",
+      "side": "droite",
+      "trigger": "Cadre de miroir original qui s’ouvre après rupture contrôlée.",
+      "counterplay": "Défendre la frappe, rester au centre ou utiliser le profil sans transitions.",
+      "arrivalLandmark": "Passerelle minérale horizontale, regard au fond.",
+      "assetsRequired": [
+        "cadre de miroir intact/rompu",
+        "signal fixe lumineux",
+        "raccord de passerelle"
+      ],
+      "ruleContract": "EN-LINK-RULES-01"
+    }
+  ],
+  "bosses": [
+    {
+      "fighterId": "gloinkqueen",
+      "role": "Contrôle de l’espace et grand gabarit.",
+      "source": "combat/session.mjs#makeRun",
+      "current": "duel-standard-in-existing-boss-rush",
+      "proposedPhases": "Projet P1 : 3 phases lisibles par palette d’arène et actions déjà identifiées, à équilibrer ; aucune phase nouvelle livrée.",
+      "telegraph": "Distinguer préparation de charge, occupation de sol et récupération du corps.",
+      "counterplay": "Laisser une ouverture visible après l’engagement ; ne pas immuniser toutes les prises sans alternative.",
+      "finish": "Résultat de duel standard ; Dernier Acte par cadrage compatible, sans détruire ni guérir le personnage.",
+      "checks": [
+        "petit gabarit",
+        "grande hitbox",
+        "approche courte portée",
+        "projectile",
+        "projections compatibles selon moteur",
+        "défaite/reprise",
+        "victoire/retour au menu"
+      ]
+    },
+    {
+      "fighterId": "fudge",
+      "role": "Pression lourde et portée.",
+      "source": "combat/session.mjs#makeRun",
+      "current": "duel-standard-in-existing-boss-rush",
+      "proposedPhases": "Projet P1 : pression puis ralentissement après action lourde ; aucun changement de kit compétitif.",
+      "telegraph": "Masse, direction de mouvement et départ du projectile annoncés séparément.",
+      "counterplay": "Approche par fenêtres de récupération ; coût et durée des barrières observables.",
+      "finish": "Résultat de duel standard ; Dernier Acte par cadrage compatible, sans détruire ni guérir le personnage.",
+      "checks": [
+        "petit gabarit",
+        "grande hitbox",
+        "approche courte portée",
+        "projectile",
+        "projections compatibles selon moteur",
+        "défaite/reprise",
+        "victoire/retour au menu"
+      ]
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "role": "Portée et menace de la forme abstraite.",
+      "source": "combat/session.mjs#makeRun",
+      "current": "duel-standard-in-existing-boss-rush",
+      "proposedPhases": "Projet P1 : variations de rythme dans une simulation bornée ; aucun retour à une forme normale après le duel.",
+      "telegraph": "Yeux et silhouette visibles ; flashs réduits possibles sans masquer la préparation.",
+      "counterplay": "Pouvoir punir une action manquée ; éviter une accumulation d’effets rendant les pieds illisibles.",
+      "finish": "Résultat de duel standard ; Dernier Acte par cadrage compatible, sans détruire ni guérir le personnage.",
+      "checks": [
+        "petit gabarit",
+        "grande hitbox",
+        "approche courte portée",
+        "projectile",
+        "projections compatibles selon moteur",
+        "défaite/reprise",
+        "victoire/retour au menu"
+      ]
+    },
+    {
+      "fighterId": "caine",
+      "role": "Maître du dernier numéro, duel de contrôle.",
+      "source": "combat/session.mjs#makeRun",
+      "current": "duel-standard-in-existing-boss-rush",
+      "proposedPhases": "Projet P1 : fermer les séquences annoncées une à une, puis duel final normalisé ; les exceptions doivent appartenir à une configuration de campagne séparée.",
+      "telegraph": "Accessoire ou annonce courte avant chaque pattern supplémentaire envisagé.",
+      "counterplay": "Toute mise en scène de pouvoir laisse un signal, une durée et une réponse ; aucune victoire automatique narrative.",
+      "finish": "Résultat de duel standard ; Dernier Acte par cadrage compatible, sans détruire ni guérir le personnage.",
+      "checks": [
+        "petit gabarit",
+        "grande hitbox",
+        "approche courte portée",
+        "projectile",
+        "projections compatibles selon moteur",
+        "défaite/reprise",
+        "victoire/retour au menu"
+      ]
+    }
+  ],
+  "finisherContract": {
+    "terms": {
+      "super": "Action pendant le combat, peut contribuer au KO.",
+      "lastAct": "Dernier Acte : nom éditorial original pour conclusion après KO acquis.",
+      "friendly": "Rappel : alternative amicale originale.",
+      "victory": "Présentation courte du vainqueur.",
+      "outro": "Résolution narrative d’une route ou campagne."
+    },
+    "conditions": "Utiliser les conditions actuelles de finishers.mjs ; un futur déclenchement manuel demande sa propre commande, distance et validation. Aucun dégât ajouté après le verdict.",
+    "morphologies": [
+      {
+        "id": "humanoid",
+        "rule": "Respecter tenue, visage et accessoires ; cadrer une conséquence de spectacle."
+      },
+      {
+        "id": "limbless-or-small",
+        "rule": "Aucun poing, bras, épaule ou prise au cou inventé ; placer un accessoire ou un cadre autour de la silhouette."
+      },
+      {
+        "id": "giant",
+        "rule": "Élargir le plan, préserver le gabarit ; remplacer la saisie par un effet de décor compatible."
+      },
+      {
+        "id": "abstract-or-composite",
+        "rule": "Conserver yeux, fragments et volume ; aucune guérison, recomposition humaine ou traduction arbitraire des gestes."
+      }
+    ],
+    "presentation": "Trois temps écrits, support statique ou séquence existante ; nouvelle animation différée. Si cible incompatible : image d’arrêt et annonce de victoire, sans modifier le résultat.",
+    "skip": "Le joueur doit pouvoir abréger la présentation selon le mode ; en local, aucun contrôle anticipé d’un seul côté. Retour vers résultat/revanche par le cycle existant.",
+    "nameStatus": "Tous les nouveaux titres sont des propositions originales de bible, pas des noms officiels de la série."
+  },
+  "deferred": [
+    {
+      "id": "EN-P2-NET",
+      "item": "Rollback, matchmaking et crossplay",
+      "reason": "Services et contrat de synchronisation non retenus pour cette livraison."
+    },
+    {
+      "id": "EN-P2-TAG",
+      "item": "Tag, assistance et coopération simultanée",
+      "reason": "Nouveaux systèmes de combat, distincts du duel existant."
+    },
+    {
+      "id": "EN-P2-HUB",
+      "item": "Exploration libre, avatar et équipement RPG",
+      "reason": "La campagne globale proposée reste en chapitres de duels ; coût et déplacement à décider avant extension."
+    },
+    {
+      "id": "EN-P2-MACHINE",
+      "item": "Machine de spectacle originale combattable",
+      "reason": "Aucune machine autonome canonique justifiée dans le roster actuel ; éventuel boss original à spécifier séparément."
+    },
+    {
+      "id": "EN-ANIM-NEXT",
+      "item": "Nouveaux cycles d’animation, voix et cinématiques animées",
+      "reason": "Production actuelle demandée : sprites et scènes fixes."
+    }
+  ],
+  "sources": [
+    {
+      "id": "user-guide-v1",
+      "kind": "user-provided-design",
+      "path": "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+      "scope": "30 rubriques et fiches A-J ; propositions à adapter, non attestation de fonctionnalités existantes."
+    },
+    {
+      "id": "glitch-premise-20261125",
+      "kind": "primary-source",
+      "url": "https://www.glitchprod.com/digital-circus",
+      "consultedOn": "2026-11-25",
+      "scope": "Synopsis et genre seulement : comédie psychologique surréaliste, Pomni enfermée dans une réalité virtuelle. Aucun scénario Encore, pouvoir ou boss attesté par cette page."
+    },
+    {
+      "id": "runtime-baseline-abb53b2",
+      "kind": "project-primary-source",
+      "url": "https://github.com/darknigthmare/CainOS/tree/abb53b227c76c47832f44810aab1aa102286388c/combat",
+      "scope": "Données et règles du jeu publié sur la branche ; distinctes du canon de la série et des propositions de cette intégration."
+    }
+  ]
+}
