@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "fighters": 64,
+  "archiveEntries": 184,
+  "selectableVariants": 52,
+  "animationSheets": 7,
+  "animationFrames": 56,
+  "animationStateReferences": 105,
+  "images": 55,
+  "imageBytes": 62367376,
+  "references": 304,
+  "uniqueCrops": 244,
+  "nativeAlphaReferences": 93,
+  "runtimeMatteReferences": 211,
+  "violations": 0,
+  "report": "docs/art-generation/recovery-20261127/qa/asset-audit.json"
+}

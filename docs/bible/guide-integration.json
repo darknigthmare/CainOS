@@ -44,10 +44,10 @@
       "moves": 640,
       "modes": 9,
       "archiveEntries": 184,
-      "costumes": 540,
+      "costumes": 546,
       "archiveCostumes": 52,
       "additionalCircusCostumes": 56,
-      "crossoverCostumes": 432,
+      "crossoverCostumes": 438,
       "stages": 27,
       "nonCrossoverStages": 18,
       "crossoverStages": 9,
@@ -61,11 +61,11 @@
       "finishers": 192,
       "friendships": 64,
       "projectileMotifs": 23,
-      "imagesDeclaredInOfflineManifest": 6202,
-      "bytesDeclaredInOfflineManifest": 3510209132
+      "imagesDeclaredInOfflineManifest": 6218,
+      "bytesDeclaredInOfflineManifest": 3528752273
     },
-    "offlineVersion": "0.7.0-1a9ef920f4fe",
-    "artVersion": "c3a873743de8943b",
+    "offlineVersion": "0.7.0-b6d11b136010",
+    "artVersion": "4ff4b4b0442d97b2",
     "inventoryScope": "Comptage des définitions et du manifeste publiés ; aucune nouvelle inspection de tous les fichiers image ou mesure de performances dans cette passe.",
     "modes": [
       {
@@ -263,7 +263,7 @@
     "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
     "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
     "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
-    "combat/offline-manifest.mjs": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c"
+    "combat/offline-manifest.mjs": "7275eaf815b54def24b6542c6a2894cf8cb8eb9c2356abeee5800cb8665d4647"
   },
   "associationFile": "docs/bible/character-associations.json",
   "designFile": "docs/bible/guide-design.json",

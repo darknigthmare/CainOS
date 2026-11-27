@@ -231,3 +231,62 @@ avec `publishWorkbookArtifacts`, après la revue et la réimportation. La
 vérification conserve `releaseReviewed: false` et `fullCiExecuted: false` :
 cette publication du suivi n’affirme pas qu’une campagne navigateur complète
 ou une validation canonique a eu lieu.
+
+## Extensions et reprise vérifiable du 27 novembre 2026
+
+Le générateur
+[update-combat-workbook-extensions-20261127.mjs](../scripts/update-combat-workbook-extensions-20261127.mjs)
+importe le classeur existant avec le runtime principal `@oai/artifact-tool`.
+Il conserve les douze feuilles historiques et ajoute deux feuilles :
+**Extensions combat**, avec les 38 sections 30–67, et **Fiches extensions**,
+avec 254 fiches de conception. Ces fiches comprennent les provocations,
+sélections et désélections des 64 combattants, les duos, les bonus, les salles
+du hub, les règles d’accès et leurs cas de contrôle.
+
+Les états de conception, de ressources, d’intégration et de tests occupent
+des colonnes distinctes. Une proposition documentée ne reçoit donc pas le
+statut d’une fonctionnalité jouable testée. Les références des fiches renvoient
+aux données versionnées de la bible ; une colonne jaune reste disponible pour
+les notes utilisateur.
+
+La préparation des ajouts de production s’effectue avec
+[build-combat-tracker-continuation-20261127.mjs](../scripts/build-combat-tracker-continuation-20261127.mjs).
+Chaque PNG ajouté au suivi doit correspondre à ses octets, à ses dimensions
+et à son SHA-256, puis apparaître dans le manifeste hors ligne et dans le
+catalogue ou la configuration des scènes. Le
+[constat de récupération](art-generation/recovery-20261127/recovery.json)
+reste distinct : les 79 PNG annoncés le 26 novembre, sans source récupérée,
+ne sont pas comptabilisés comme des ajouts livrés.
+
+Les nouvelles scènes sont des peintures complètes à échelle uniforme. Elles
+conservent un léger déplacement de caméra et leur ambiance audio, tandis que
+les boucles visuelles procédurales additionnelles sont désactivées. Les lignes
+historiques de premier plan et d’animation indiquent cette portée ; les anciens
+plans restent disponibles en repli. Le compteur d’ambiances visuelles désigne
+les effets procéduraux actifs, séparément du nombre d’arènes et des ambiances
+audio.
+
+### Contrôles avant publication
+
+La [revue de cette passe](combat-extensions-workbook-verification.json)
+consigne les cellules modifiées explicitement, les lignes ajoutées, les
+empreintes des fichiers et les aperçus effectivement examinés. Le contrôle
+natif compare les **93 392 cellules** du classeur source : valeurs, formules,
+notes, styles effectifs et éléments de mise en page. Les tables existantes
+sont étendues sans réordonner leurs identifiants ; les plages de Synthèse
+suivent ces ajouts en conservant les **42 formules**.
+
+Le générateur recalcule les formules, recherche les erreurs, vérifie les
+totaux indépendamment, exporte puis réimporte le fichier. Les tableaux du
+classeur doivent être identiques à leur JSON compagnon après réimportation.
+Les vues modifiées doivent être relues avant que `--publish-staged` soit
+autorisé. Les sources et les preuves sont à nouveau contrôlées par empreinte
+au moment de cette publication.
+
+Le [rapport précédent](verification/extensions-workbook-20261127/previous-workbook-verification.json)
+est conservé intégralement. Les campagnes QA historiques gardent leur date et
+leur portée ; les résultats du jeu de cette reprise restent liés à leurs
+propres preuves. Le générateur de classeur n’exécute pas lui-même les tests
+du jeu. La vérification canonique conserve `releaseReviewed: false`, et ne
+prétend ni ouverture dans Excel bureau, ni validation des périphériques
+physiques, ni certification de fidélité visuelle 1:1.

@@ -761,10 +761,13 @@ export class CombatRenderer {
     this.ctx.imageSmoothingEnabled = false;
     this.backgrounds = new Map();
     this.stageArt = new Map();
+    this.previewRequest = 0;
     this.lastState = null;
   }
 
   async preload(fighters, stages = []) {
+    // A combat preload supersedes any pending menu scenery preview.
+    this.previewRequest += 1;
     const missing = [];
     const requestedSources = new Set();
     const projectileLoad = this.projectileArt.preload(fighters);
@@ -805,10 +808,12 @@ export class CombatRenderer {
   }
 
   async previewStage(stage) {
+    const request = ++this.previewRequest;
+    const needed = () => this.canvas.isConnected && this.previewRequest === request;
     const options = { stage, reducedMotion: true };
     this.render(null, options);
-    const paintings = await loadStagePlanes(stage, () => this.canvas.isConnected);
-    if (paintings && this.canvas.isConnected) {
+    const paintings = await loadStagePlanes(stage, needed);
+    if (paintings && needed()) {
       this.stageArt.set(stage.theme || stage.id, paintings);
       this.render(null, options);
     }
@@ -830,7 +835,9 @@ export class CombatRenderer {
       const camera = paintings && stageCamera(actors, options.reducedMotion);
       if (camera) drawStagePlanes(ctx, paintings.layers, camera);
       else ctx.drawImage(this.background(stage), 0, 0);
-      drawStageMotion(ctx, stage, options.ambientFrame ?? tick, options.reducedMotion, !!paintings);
+      // Historical procedural decoration has coordinates belonging to the old
+      // scenery. It must not float over a newly reconstructed complete room.
+      if (!paintings?.fullScene) drawStageMotion(ctx, stage, options.ambientFrame ?? tick, options.reducedMotion, !!paintings);
     }
     if (!state) { ctx.restore(); return; }
     if (finisher) {

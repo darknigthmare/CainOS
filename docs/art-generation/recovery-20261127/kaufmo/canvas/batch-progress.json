@@ -1,0 +1,43 @@
+{
+  "schema": "encore-static-base-canvas-batch/v1",
+  "complete": true,
+  "expected": 6,
+  "execution": [
+    {
+      "id": "glitch-murderdrones-kaufmo-hommage",
+      "status": 0,
+      "signal": null,
+      "peakRSSBytes": 136527872
+    },
+    {
+      "id": "glitch-murderdrones-kaufmo-resident",
+      "status": 0,
+      "signal": null,
+      "peakRSSBytes": 135536640
+    },
+    {
+      "id": "glitch-murderdrones-kaufmo-fusion",
+      "status": 0,
+      "signal": null,
+      "peakRSSBytes": 135553024
+    },
+    {
+      "id": "glitch-metarunner-kaufmo-hommage",
+      "status": 0,
+      "signal": null,
+      "peakRSSBytes": 135979008
+    },
+    {
+      "id": "glitch-metarunner-kaufmo-resident",
+      "status": 0,
+      "signal": null,
+      "peakRSSBytes": 136626176
+    },
+    {
+      "id": "glitch-metarunner-kaufmo-fusion",
+      "status": 0,
+      "signal": null,
+      "peakRSSBytes": 136855552
+    }
+  ]
+}

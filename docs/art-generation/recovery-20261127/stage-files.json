@@ -1,0 +1,46 @@
+[
+  {
+    "id": "falseexit",
+    "source": "/workspace/scratch/8db10b0df53d/stage-references/falseexit-native.png",
+    "path": "assets/encore/stages/falseexit/scene-20261127.png",
+    "bytes": 1672108,
+    "sha256": "c0486dbb5efdf41e7d0c99c2eed1c332308adb25cf482e18e4fdf2121534ce06",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "nativeBytesUnmodified": true
+  },
+  {
+    "id": "undermap",
+    "source": "/workspace/scratch/8db10b0df53d/generated_images/exec-c420058f-ca70-4419-9265-f9aed51f0337.png",
+    "path": "assets/encore/stages/undermap/scene-20261127.png",
+    "bytes": 1138176,
+    "sha256": "e6f2ca94b13de0f2c9f6a540e15eeea13fa9f4b211c2f3e6058f7bae26826a6a",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "nativeBytesUnmodified": true
+  },
+  {
+    "id": "kingdom",
+    "source": "/workspace/scratch/8db10b0df53d/generated_images/exec-ab1f96c3-a90e-4a38-9495-d46d23d11a33.png",
+    "path": "assets/encore/stages/kingdom/scene-20261127.png",
+    "bytes": 1922459,
+    "sha256": "305bc431e97abe9309c4ecda7a2a5ab985ff0bcf0670d9aa566e2cee52c5e92c",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "nativeBytesUnmodified": true
+  },
+  {
+    "id": "spudsy",
+    "source": "/workspace/scratch/8db10b0df53d/generated_images/exec-eca60e05-b328-4f1e-b5cd-85ea7c69128a.png",
+    "path": "assets/encore/stages/spudsy/scene-20261127.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "bytes": 2056936,
+    "sha256": "5d9dbfcb24cd4490a340d20f7006ffb363cd2cc7c25b5ac37c9b931ea14a5724",
+    "nativeBytesUnmodified": true
+  }
+]

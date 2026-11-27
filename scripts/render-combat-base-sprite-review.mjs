@@ -137,7 +137,7 @@ const report = {
     'Native Canvas does not exercise DOM, input, audio, service workers or a physical device.',
     'Technical rendering checks do not certify canonical 1:1 identity or hidden anatomy.'],
 };
-const sourceNames = ['combat/base-sprite-content.mjs', 'combat/base-sprite-continuation-20261125.mjs', 'combat/base-sprite-continuation-20261125-b.mjs', 'combat/data.mjs', 'combat/crossovers.mjs',
+const sourceNames = ['combat/base-sprite-content.mjs', 'combat/base-sprite-continuation-20261125.mjs', 'combat/base-sprite-continuation-20261125-b.mjs', 'combat/base-sprite-continuation-20261127.mjs', 'combat/data.mjs', 'combat/crossovers.mjs',
   'combat/fidelity.mjs', 'combat/illustrations.mjs', 'combat/render.mjs', 'combat/render-poses.mjs',
   'combat/render-sequences.mjs', 'combat/engine.mjs', 'combat/offline-manifest.mjs', 'scripts/render-combat-base-sprite-review.mjs'];
 for (const file of sourceNames) report.sources[file] = sha(await fs.readFile(path.join(root, file)));

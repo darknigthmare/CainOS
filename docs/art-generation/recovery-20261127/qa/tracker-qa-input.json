@@ -1,0 +1,106 @@
+{
+  "qaRows": [
+    [
+      "REC27-node",
+      "Validation locale du 27 novembre",
+      "473 tests Node réussis",
+      "Réussi",
+      "P1",
+      "node --test --test-concurrency=2 --test-reporter=tap tests/combat-*.test.mjs",
+      "docs/art-generation/recovery-20261127/qa/node-tests.log",
+      "473 passés, zéro échec, zéro ignoré ; quatre régressions du nouveau chargement de scènes incluses.",
+      ""
+    ],
+    [
+      "REC27-contracts",
+      "Validation locale du 27 novembre",
+      "Syntaxe, contrats CainOS, guides et audit raster",
+      "Réussi",
+      "P1",
+      "15 commandes de syntaxe/contrat et audit de 55 images de référence, 304 régions ; aucune violation.",
+      "docs/art-generation/recovery-20261127/verification.json",
+      "La revue des nouveaux PNG est portée séparément par les bilans Canvas.",
+      ""
+    ],
+    [
+      "REC27-base-canvas",
+      "Canvas natif du 27 novembre",
+      "Six familles : 120 contrôles, 360 rendus",
+      "Réussi",
+      "P1",
+      "Renderer de production Skia, un worker par famille ; sources exactes, échelle uniforme, ancrage, miroir et même garde statique.",
+      "docs/art-generation/recovery-20261127/kaufmo/canvas/base-canvas-review.json",
+      "12 dessins distincts ; les 360 rendus ne représentent pas 360 nouvelles images ni une campagne navigateur.",
+      ""
+    ],
+    [
+      "REC27-stage-canvas",
+      "Canvas natif du 27 novembre",
+      "Quatre scènes, douze cadrages et quatre duels initialisés",
+      "Réussi",
+      "P1",
+      "Chargeur et renderer de production : aucun bord transparent, peinture exacte, deux combattants à échelle uniforme.",
+      "docs/art-generation/recovery-20261127/stages/canvas/stage-canvas-review.json",
+      "Captures initialisées ; aucun match joué ni triple plan revendiqué.",
+      ""
+    ],
+    [
+      "REC27-builds",
+      "Distributions du 27 novembre",
+      "Deux builds et leurs 6 218 illustrations identiques",
+      "Réussi",
+      "P1",
+      "SHA-256 et octets de chaque image et fichier combat comparés : autonome 6 286 fichiers, CainOS 6 290 fichiers.",
+      "docs/art-generation/recovery-20261127/verification.json",
+      "Builds exécutés séparément ; les preuves restent disponibles après suppression des copies de build temporaires.",
+      ""
+    ],
+    [
+      "REC27-browser",
+      "Navigateur du 27 novembre",
+      "Suites corrigées, exécution locale bloquée",
+      "À tester",
+      "P1",
+      "Syntaxe vérifiée ; Chromium absent et téléchargement HTTP 403 avant toute assertion.",
+      "docs/art-generation/recovery-20261127/verification.json",
+      "Zéro contrôle navigateur local exécuté. CI de cette publication à consulter sur la PR ; les 464 contrôles historiques ne sont pas présentés comme actuels.",
+      ""
+    ]
+  ],
+  "qaSummaryLabel": "473 tests Node · 2 builds · Canvas ciblé réussi",
+  "browserSummaryLabel": "Navigateur local bloqué · CI à suivre sur la PR",
+  "currentQa": {
+    "campaign": "continuation-2026-11-27",
+    "complete": false,
+    "testedBaseline": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+    "testedScope": "Working tree with 27 November additions; exact source hashes in evidence.",
+    "evidence": "docs/art-generation/recovery-20261127/verification.json",
+    "gameTestsExecuted": true,
+    "nodeTests": 473,
+    "nodePassed": 473,
+    "buildsPassed": 2,
+    "baseCanvasChecks": 120,
+    "baseCanvasDraws": 360,
+    "stageCameraChecks": 12,
+    "stageInitializedDuels": 4,
+    "browserChecksExecutedLocally": 0,
+    "browserStatus": "blocked-before-first-assertion",
+    "fullCiPassed": false,
+    "releaseReviewed": false
+  },
+  "sourceDigests": {
+    "docs/art-generation/recovery-20261127/verification.json": "4df0c0e5abea4bd589aa61d7de003103e72877112eba419441982a12514191f3",
+    "docs/art-generation/recovery-20261127/qa/node-tests.log": "016ca50a6551234900c50350286024935027482425d7eac8c8d68244730c9774",
+    "docs/art-generation/recovery-20261127/qa/contracts.json": "730eb509671cdae75631f9cd0be091b23cc348eb1c25a5e714d0ec434fbb84ff",
+    "docs/art-generation/recovery-20261127/qa/asset-audit.json": "ddfc01ee6ff6f33ac7b149be1cee4f42a7e2629cf66a818b33cdd2e215293298",
+    "docs/art-generation/recovery-20261127/qa/build-standalone.json": "d630e63061d037d14abf4660ff116514ea36f5ef6bd9d55055b9cc775efd75eb",
+    "docs/art-generation/recovery-20261127/qa/build-cainos.json": "cccf66244ae23e3b8e79c4464d5d557568769f8abea00744096bca8906c61f38",
+    "docs/art-generation/recovery-20261127/stages/canvas/stage-canvas-review.json": "b10c8b235a92f4f3c89ee47cfdb24d1ca262b99c54094944ac79ab9b68051a7a",
+    "docs/art-generation/recovery-20261127/kaufmo/canvas/base-canvas-review.json": "e2f0c43d18089f9d5c35ab6623a9a889f562f79806946a97785b324c4a5d3c16",
+    "docs/art-generation/recovery-20261127/catalog-preservation.json": "93e4063e15689f5d0b03139ec108173be805fe222999f322cf853fb92504fde6",
+    "docs/art-generation/recovery-20261127/baseline-assets-preserved.json": "dd75c8a36b41674e4d366e30d00c6f0ac328ce882425309cbf90238ef80d77d1",
+    "docs/art-generation/recovery-20261127/stage-files.json": "d00ba08dd09889e20856cc90736a93ca1b1b03e2aa05f33006fd52ffa095ad4f",
+    "docs/art-generation/recovery-20261127/kaufmo/manifest.json": "e60cbdccecd88f0ea9bca004e64ae316828294e09bff68a308e4f00b964cf73e",
+    "docs/bible/extensions-generator-verification.json": "9da9121d9d705743c01f3b9af7b4c9a60eed7e166f21892ce8a94b90ae46ede8"
+  }
+}

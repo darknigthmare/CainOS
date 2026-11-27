@@ -1,22 +1,23 @@
 # Digital Circus — Encore · Le Grand Duel
 
 Version jouable : **0.7.0**, règles de simulation **0.5.0** — sortie initiale le
-24 octobre 2026 ; catalogue et dessins individuels complétés les 19, 20, 24 et
-**25 novembre 2026**. Le guide général de combat est associé à la bible le
-**25 novembre 2026**.
+24 octobre 2026 ; catalogue et dessins individuels complétés les 19, 20, 24, 25 et
+**27 novembre 2026**. Le guide général de combat est associé à la bible le
+**25 novembre**, ses deux extensions le **27 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**64 combattants, 640 techniques, 27 arènes au total, 9 modes, 540 costumes et
+**64 combattants, 640 techniques, 27 arènes au total, 9 modes, 546 costumes et
 184 archives**. Les 27 arènes comprennent **18 décors hors crossovers et neuf
 escales GLITCH**. Les **64 arrangements dédiés** réutilisent ces décors ; ils sont
 comptés séparément et ne constituent pas 64 nouveaux lieux peints.
 
 Le catalogue des apparences comprend **52 costumes d’archive**, **56 variantes
-Circus / 517 PNG** et **432 crossovers / 3 970 fichiers**. Les quatorze propriétaires
+Circus / 517 PNG** et **438 crossovers / 3 982 fichiers**. Les quatorze propriétaires
 historiques conservent chacun leurs 27 crossovers. Ribbit et Queenie possèdent
 également leurs **27/27 bases** dans les neuf collections. Les neuf familles
 antérieures de Ribbit gardent leurs onze dessins ; ses dix-huit familles nouvelles
-et les 27 de Queenie ont un portrait et une garde statique. Les **38 autres PNJ
+et les 27 de Queenie ont un portrait et une garde statique. Kaufmo possède six
+familles statiques dans Murder Drones et Meta Runner. Les **37 autres PNJ
 de l’extension sans crossover** restent ouverts.
 
 Les sources actuelles relient **64 routes, 256 rencontres, 384 tableaux,
@@ -44,6 +45,64 @@ et identité. Elle est consignée dans
 d’épisode contradictoires avec la route générée. Les dessins individuels du
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
+
+## Reprise, deux extensions et nouveaux visuels — 27 novembre 2026
+
+Le guide général fourni était déjà présent intégralement. Les [deux extensions
+originales](bible/EXTENSIONS_COMBAT_INTEGRATION.md) sont maintenant ajoutées et
+adaptées au jeu : **38 rubriques et 114 exigences supplémentaires**, soit
+**68 rubriques et 214 exigences** pour les trois documents. Les empreintes
+SHA-256 des trois sources sont vérifiées ; chaque exigence conserve son statut
+de conception, d’asset, d’intégration et de validation.
+
+- **Personnalité et équipes :** 64 taunts, 64 sélections, 64 désélections, 12 duos
+  avec contributions, supers et Derniers Actes proposés ; commandes, assistances,
+  tag, clashes/QTE et attribution des projectiles définis séparément.
+- **Bonus et exploration :** huit épreuves avec règles et récompenses, cinq salles
+  reliées pour les Archives des répétitions, neuf règles de déblocage et huit
+  récompenses proposées.
+- **Droits et sauvegarde :** découverte, propriété, disponibilité technique et
+  compatibilité de mode distinctes ; sources permanentes et temporaires,
+  réclamations idempotentes, mode hors ligne et protection des sauvegardes.
+  Les modèles de soutien externe sont spécifiés et désactivés.
+
+Ces fonctionnalités supplémentaires sont **conçues dans la bible** ; les fiches
+ne sont pas présentées comme des modes, un tag ou un service d’abonnement déjà
+jouables. Les 40 scénarios d’acceptation des extensions restent des scénarios
+pour leur future implémentation. L’accès gratuit aux contenus existants demeure.
+
+En parallèle, la production ajoute **douze PNG natifs de Kaufmo** : portrait et
+garde séparés pour les styles Hommage, Résident et Fusion dans Murder Drones et
+Meta Runner. Ces six crossovers originaux préservent les repères d’identité du
+clown ; les deux fusions transforment réellement son corps. Aucun cycle animé
+ni dessin d’action supplémentaire n’est produit.
+
+**Quatre décors complets** remplacent la présentation des bureaux EXIT, de
+l’espace sous la carte, de la cour du royaume des bonbons et de Spudsy’s. Les
+références officielles guident les lieux ; leur cadrage élargi pour le combat
+reste une adaptation Encore. Le rendu conserve une échelle uniforme, couvre
+les bords aux trois positions de caméra et place le sol sous les combattants.
+Chaque nouveau décor utilise un seul PNG avec un léger déplacement de caméra.
+Ses anciens effets visuels procéduraux sont désactivés ; les 27 ambiances audio
+restent actives. Les autres 23 arènes conservent leurs plans et effets existants.
+
+Le catalogue hors ligne contient **6 218 illustrations**. Les 540 anciennes
+définitions de costumes et leur ordre sont comparés à la base publiée, comme les
+64 combattants et les 27 arènes. Un correctif empêche un aperçu d’arène chargé en
+retard de remplacer le dernier choix du joueur. Le [dossier daté](art-generation/recovery-20261127/README.md)
+regroupe les images, les sources, les contrôles et leurs limites.
+
+Les 79 PNG annoncés dans un travail antérieur non publié n’ont pas été retrouvés
+dans les sources accessibles. Ils ne sont pas additionnés à cette livraison :
+les seize fichiers actifs de cette reprise sont des nouvelles productions
+traçables. Le registre de reprise maintient explicitement le travail restant.
+
+Le [classeur](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) contient désormais **14 feuilles**,
+dont **Extensions combat** et **Fiches extensions** : 38 rubriques et 254 fiches.
+Ses 42 formules sont conservées et recalculées. La [preuve datée du classeur](combat-extensions-workbook-verification.json)
+contrôle 93 392 cellules historiques, 108 changements déclarés, les notes et
+styles existants, puis les 22 aperçus définitifs. Sa QA courante référence la
+campagne de cette reprise ; les anciennes campagnes restent historiques.
 
 ## Guide général associé à la bible — 25 novembre 2026
 

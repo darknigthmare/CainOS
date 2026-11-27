@@ -16,7 +16,38 @@ The playable game version is **0.7.0**. The original GLITCH wardrobe dates from 
 - General fighting-game guide, contextual decisions and character associations: **[Encore bible index](docs/bible/README.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **64 fighters, 640 techniques, 27 arenas (18 non-crossover and nine crossover), 540 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. Those nine crossover arenas are already included in the total of 27. The wardrobe contains **52 archive costumes, 56 additional illustrated Circus appearances / 517 PNGs, and 432 crossovers / 3,970 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit and Queenie now each have all 27 crossover bases across the nine collections. Ribbit's nine earlier families retain eleven drawings each; its eighteen newer families and Queenie's 27 families have their portrait and static stance. The other 38 NPCs still have no crossover wardrobe. Combat techniques, crossover designs and projectile motifs are original fan-game adaptations.
+The game combines **64 fighters, 640 techniques, 27 arenas (18 non-crossover and nine crossover), 546 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. Those nine crossover arenas are already included in the total of 27. The wardrobe contains **52 archive costumes, 56 additional illustrated Circus appearances / 517 PNGs, and 438 crossovers / 3,982 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit and Queenie each have all 27 crossover bases across the nine collections. Ribbit's nine earlier families retain eleven drawings each; its eighteen newer families and Queenie's 27 families have their portrait and static stance. Kaufmo has six static crossover families in Murder Drones and Meta Runner; 37 other NPCs still have no crossover wardrobe. Combat techniques, crossover designs and projectile motifs are original fan-game adaptations.
+
+### Two guide extensions and continued production — 27 November 2026
+
+The original general guide was already integrated. Both complete user-provided
+extensions are now preserved and applied to Encore: **68 sections and 214
+requirements across the three documents**, including 38 sections and 114 new
+requirements. The [bible index](docs/bible/README.md) links 192 character briefs,
+12 proposed duos, eight bonus stages, a five-room exploration hub, and explicit
+discovery, ownership, installation and mode contracts. These are documented
+designs; new tag mechanics, bonus modes and subscription services are not
+implemented. Existing free access is preserved.
+
+Production adds **12 native Kaufmo PNGs** (six separate portrait/stance pairs)
+and **four complete scenic paintings**: EXIT offices, the under-map grid, Candy
+Canyon's royal court and Spudsy's counter. The game loads these paintings as
+single backgrounds, keeps their proportions, and suppresses procedural props
+whose coordinates belonged to the previous scenes. A request guard prevents a
+late old arena preview from replacing the most recent selection. The offline
+catalog contains **6,218 illustrations**. The original 540 costume definitions
+and order, 64 fighter definitions, 27 stage identities and simulation rules are
+preserved.
+
+See the [dated delivery, visual comparisons and verification scope](docs/art-generation/recovery-20261127/README.md).
+The tracker now has **14 sheets**, including **Extensions combat** and **Fiches
+extensions**: 38 section rows and 254 detailed briefs. Its 42 formulas are
+preserved and recalculated; 93,392 historical cells and 22 final previews were
+checked, with only 108 explicitly declared cell changes.
+The 79 PNGs mentioned in earlier unpublished work could not be recovered; they
+are not counted in this new batch. Official reference traits and original
+Encore crossovers remain distinct; technical checks do not certify overall
+canonical 1:1 fidelity.
 
 ### Fighting-game guide associated with the bible — 25 November 2026
 

@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { emptyProfile, SAVE_KEY } from '../combat/session.mjs';
-import { FIGHTERS } from '../combat/data.mjs';
+import { COSTUMES, FIGHTERS } from '../combat/data.mjs';
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -45,10 +45,23 @@ try {
   assert.equal(FIGHTERS.length, 64);
   const page = await pageFor();
   await select(page, 'local', 'queenie');
-  assert.deepEqual(await page.locator('#variant-0 option').evaluateAll(items => items.map(item => item.value)), ['', 'abstractingqueenie']);
+  const queenieWardrobe = COSTUMES.filter(costume => costume.fighterId === 'queenie');
+  const queenieChoices = await page.locator('#variant-0 option').evaluateAll(items => items.map(item => item.value));
+  assert.deepEqual(queenieChoices, ['', ...queenieWardrobe.map(costume => costume.id)],
+    'Queenie must show exactly her own published wardrobe, in catalogue order');
+  assert.deepEqual(queenieChoices.slice(0, 2), ['', 'abstractingqueenie'],
+    'The original Queenie appearance prefix must survive wardrobe expansion');
+  const queenieCrossovers = queenieWardrobe.filter(costume => costume.crossover);
+  assert.equal(queenieCrossovers.length, 27, 'Queenie retains all 27 published crossover choices');
+  assert.equal(new Set(queenieChoices).size, queenieChoices.length, 'No duplicate wardrobe choices');
+  const crossoverSeries = ['murderdrones', 'metarunner', 'sunsetparadise', 'gaslightdistrict',
+    'knightsofguinevere', 'gameoverse', 'lackadaisy', 'smg4', 'ultrajumpmania'];
+  assert.deepEqual(queenieCrossovers.map(costume => [costume.crossover.series, costume.crossover.style]),
+    crossoverSeries.flatMap(series => ['hommage', 'resident', 'fusion'].map(style => [series, style])),
+    'Every published series keeps Queenie’s three distinct styles');
   await page.locator('[data-stage="home-queenie"]').click();
   assert.equal(await page.locator('[data-stage="home-queenie"]').getAttribute('aria-pressed'), 'true');
-  pass('64 fighters are selectable; Queenie offers her illustrated appearance without nonexistent crossover choices');
+  pass('64 fighters are selectable; Queenie keeps her original appearance and exactly her 27 published crossovers');
   await page.locator('[data-fighter="pomni"]').click();
   const picker = page.locator('[data-costume-picker="variant-0"]');
   await picker.locator('summary').click();

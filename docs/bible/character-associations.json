@@ -14,7 +14,7 @@
     "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
     "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
     "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
-    "combat/offline-manifest.mjs": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c",
+    "combat/offline-manifest.mjs": "7275eaf815b54def24b6542c6a2894cf8cb8eb9c2356abeee5800cb8665d4647",
     "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
     "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630"
   },
@@ -678,6 +678,48 @@
       "url": "https://www.youtube.com/watch?v=HZoOzz1CrAk",
       "kind": "Création originale pour Encore, repères d’univers documentés",
       "scope": "Références d’univers documentées ; cette apparition de Queenie est une création originale pour Encore."
+    },
+    {
+      "id": "encore-kaufmo-murderdrones-hommage-20261127",
+      "title": "Encore — Kaufmo × Murder Drones : Hommage · Uzi",
+      "url": "https://www.glitchprod.com/murder-drones",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-murderdrones-resident-20261127",
+      "title": "Encore — Kaufmo × Murder Drones : Résident · Technicien des abris",
+      "url": "https://www.glitchprod.com/murder-drones",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-murderdrones-fusion-20261127",
+      "title": "Encore — Kaufmo × Murder Drones : Fusion · Drone de parade",
+      "url": "https://www.glitchprod.com/murder-drones",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-metarunner-hommage-20261127",
+      "title": "Encore — Kaufmo × Meta Runner : Hommage · Tari",
+      "url": "https://www.glitchprod.com/meta-runner",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-metarunner-resident-20261127",
+      "title": "Encore — Kaufmo × Meta Runner : Résident · Technicien des replays",
+      "url": "https://www.glitchprod.com/meta-runner",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-metarunner-fusion-20261127",
+      "title": "Encore — Kaufmo × Meta Runner : Fusion · Avatar de synchronisation",
+      "url": "https://www.glitchprod.com/meta-runner",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
     },
     {
       "id": "stage-coppernine",
@@ -16411,7 +16453,14 @@
         "reviewStatus": "manifest-reference-only",
         "newImagesProduced": 0
       },
-      "costumeIds": [],
+      "costumeIds": [
+        "glitch-murderdrones-kaufmo-hommage",
+        "glitch-murderdrones-kaufmo-resident",
+        "glitch-murderdrones-kaufmo-fusion",
+        "glitch-metarunner-kaufmo-hommage",
+        "glitch-metarunner-kaufmo-resident",
+        "glitch-metarunner-kaufmo-fusion"
+      ],
       "moves": [
         {
           "id": "kaufmo.light",
