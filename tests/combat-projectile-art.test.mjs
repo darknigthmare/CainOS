@@ -4,7 +4,7 @@ import { FIGHTERS } from '../combat/data.mjs';
 import { EXPANSION_IDS } from '../combat/roster-expansion.mjs';
 import { ABSTRACTION_IDS } from '../combat/abstractions-content.mjs';
 import { CombatRenderer } from '../combat/render.mjs';
-import { PROJECTILE_ART, NPC_PROJECTILE_ART, PROJECTILE_ART_LIMITS,
+import { PROJECTILE_ART, NPC_PROJECTILE_ART, ABSTRACTION_PROJECTILE_ART, PROJECTILE_ART_LIMITS,
   ProjectileArtLoader, projectileArtSpec } from '../combat/projectile-art.mjs';
 const fighter = id => FIGHTERS.find(item => item.id === id);
 const shot = (id, slot = 'special') => ({
@@ -65,13 +65,38 @@ test('reflection keeps the original accessory for core and promoted NPC attacks'
   assert.equal(JSON.stringify([key, npcShot]), before);
   assert.equal(projectileArtSpec({ def: { name: 'Unknown future attack', slot: 'special' } }, { f: fighter('jax') }), null);
 });
-test('all abstraction projectile slots keep corruption art after reflection', () => {
+test('thirteen abstraction projectile slots retain ten distinct original motifs after reflection', () => {
+  const before = JSON.stringify(FIGHTERS);
+  assert.deepEqual(new Set(Object.keys(ABSTRACTION_PROJECTILE_ART)), new Set(ABSTRACTION_IDS));
+  assert.equal(new Set(Object.values(ABSTRACTION_PROJECTILE_ART).map(item => item.motif)).size, 10);
+  let count = 0;
   for (const id of ABSTRACTION_IDS) {
     const owner = fighter(id); assert.ok(owner, id);
+    const choice = ABSTRACTION_PROJECTILE_ART[id];
+    assert.equal(choice.sourceKind, 'original-encore-projectile');
+    assert.ok(choice.reason.length > 40); assert.ok(Object.isFrozen(choice));
     const projectiles = Object.values(owner.moves).filter(move => move.kind === 'projectile');
     assert.ok(projectiles.length > 0);
-    for (const move of projectiles) assert.equal(projectileArtSpec({ owner: 1, reflections: 1, def: { ...move } }, { f: fighter('jax') }).id, 'corruption', id + '/' + move.slot);
+    for (const move of projectiles) {
+      count++;
+      const source = projectileArtSpec({ owner: 0, def: move }, { f: owner });
+      assert.equal(source.id, choice.motif, id + '/' + move.slot);
+      assert.equal(source.motion, 'fixed');
+      assert.equal(projectileArtSpec({ owner: 1, vx: -15, reflections: 1, def: { ...move } }, { f: fighter('jax') }), source);
+      assert.equal(projectileArtSpec({ slot: move.slot }, { f: owner }), source);
+    }
   }
+  assert.equal(count, 13);
+  assert.equal(projectileArtSpec(shot('abstractedkaufmo'), { f: fighter('jax') }).id, 'corruption');
+  assert.equal(projectileArtSpec({ def: { name: 'Unknown abstraction attack', slot: 'special' } }, { f: fighter('originalabstractedpomni') }), null);
+  assert.equal(JSON.stringify(FIGHTERS), before);
+});
+test('an abstraction preloads its one published motif for both existing projectile slots', async () => {
+  const spec = PROJECTILE_ART['abstraction-aquatic-foam'];
+  const { loader, requests } = cacheFixture({ publishedFiles: [spec.src] });
+  await loader.preload([fighter('aquaticabstraction'), fighter('abstractedjax')]);
+  assert.equal(requests.length, 1); assert.ok(requests[0].endsWith('/abstraction-aquatic-foam.png'));
+  assert.ok(loader.peek(spec));
 });
 test('preloading requests only published accessories used by the current pair', async () => {
   const { loader, requests } = cacheFixture({ publishedFiles: [PROJECTILE_ART.juggle.src] });

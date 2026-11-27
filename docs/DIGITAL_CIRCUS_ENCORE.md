@@ -6,22 +6,46 @@ Version jouable : **0.7.0**, règles de simulation **0.5.0** — sortie initiale
 **25 novembre**, ses deux extensions le **27 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**64 combattants, 640 techniques, 27 arènes au total, 9 modes, 546 costumes et
+**64 combattants, 640 techniques, 27 arènes au total, 9 modes, 575 costumes et
 184 archives**. Les 27 arènes comprennent **18 décors hors crossovers et neuf
 escales GLITCH**. Les **64 arrangements dédiés** réutilisent ces décors ; ils sont
 comptés séparément et ne constituent pas 64 nouveaux lieux peints.
 
-Le catalogue des apparences comprend **52 costumes d’archive**, **56 variantes
-Circus / 517 PNG** et **438 crossovers / 3 982 fichiers**. Les quatorze propriétaires
+Le catalogue des apparences comprend **52 costumes d’archive**, **58 variantes
+Circus / 521 PNG** et **465 crossovers / 4 036 fichiers**. Les quatorze propriétaires
 historiques conservent chacun leurs 27 crossovers. Ribbit et Queenie possèdent
 également leurs **27/27 bases** dans les neuf collections. Les neuf familles
 antérieures de Ribbit gardent leurs onze dessins ; ses dix-huit familles nouvelles
-et les 27 de Queenie ont un portrait et une garde statique. Kaufmo possède six
-familles statiques dans Murder Drones et Meta Runner. Les **37 autres PNJ
-de l’extension sans crossover** restent ouverts.
+et les 27 de Queenie ont un portrait et une garde statique. Kaufmo possède également ses **27 familles statiques**. Max reçoit six familles
+dans Murder Drones et Meta Runner. Les **36 autres PNJ de l’extension sans
+crossover** restent ouverts.
+
+Le [focus Pomni, Caine et abstractions](art-generation/focus-20261127/README.md)
+ajoute **34 PNG natifs** : portrait et garde pour **God Caine — Animatez** et
+**Evil Pomni — Pendantz**, dix motifs distincts pour treize tirs existants, et
+vingt tableaux peints sur les dix routes d’abstraction. Le catalogue courant
+contient **6 315 illustrations et 91 familles de bases statiques**. Les deux
+anciennes archives Evil Pomni partagent désormais la même identité documentée
+et le même nouveau portrait ; leurs dessins historiques sont conservés.
+
+Chaque route d’abstraction reçoit sa première scène de prologue et sa dernière
+scène d’épilogue. Les quarante tableaux intermédiaires conservent leurs
+compositions dynamiques. Les nouveaux récits peints et accessoires de combat
+sont des créations Encore : ils n’établissent ni transformation canonique,
+ni guérison, ni pouvoir supplémentaire. Les kits et règles existants restent
+identiques, sans nouvelle animation.
+
+Le jalon précédent de [complétion du lot manquant](art-generation/completion-20261127/README.md)
+ajoute **63 PNG natifs** et porte le catalogue hors ligne à **6 281 illustrations**.
+Avec les 16 créations de la tranche précédente, le périmètre des 79 anciennes
+images indisponibles dispose de nouveaux fichiers : aucun ancien octet perdu
+n’est déclaré récupéré. Treize arènes utilisent une peinture complète ; quatorze
+conservent leurs trois plans. Le menu statique dispose d’un retour au choix
+précédent par joueur, de jetons de portrait et d’annonces accessibles ; les gestes
+individuels de la bible restent à produire.
 
 Les sources actuelles relient **64 routes, 256 rencontres, 384 tableaux,
-192 finales de spectacle, 64 numéros d’amitié et 23 motifs de projectile**.
+192 finales de spectacle, 64 numéros d’amitié et 33 motifs de projectile**.
 Les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants
 d’origine et ne remplacent pas ce comptage courant.
 La sortie initiale 0.7.0 ajoutait **42 finales de spectacle**, trois pour chacun des quatorze
@@ -46,7 +70,10 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Reprise, deux extensions et nouveaux visuels — 27 novembre 2026
+## Première reprise, deux extensions et nouveaux visuels — 27 novembre 2026
+
+Ce bilan décrit le premier lot publié au commit `cc972c8`. La complétion suivante
+est comptée en tête de document et dans son dossier dédié.
 
 Le guide général fourni était déjà présent intégralement. Les [deux extensions
 originales](bible/EXTENSIONS_COMBAT_INTEGRATION.md) sont maintenant ajoutées et
@@ -86,7 +113,7 @@ Chaque nouveau décor utilise un seul PNG avec un léger déplacement de caméra
 Ses anciens effets visuels procéduraux sont désactivés ; les 27 ambiances audio
 restent actives. Les autres 23 arènes conservent leurs plans et effets existants.
 
-Le catalogue hors ligne contient **6 218 illustrations**. Les 540 anciennes
+Le catalogue hors ligne de cette étape contient **6 218 illustrations**. Les 540 anciennes
 définitions de costumes et leur ordre sont comparés à la base publiée, comme les
 64 combattants et les 27 arènes. Un correctif empêche un aperçu d’arène chargé en
 retard de remplacer le dernier choix du joueur. Le [dossier daté](art-generation/recovery-20261127/README.md)

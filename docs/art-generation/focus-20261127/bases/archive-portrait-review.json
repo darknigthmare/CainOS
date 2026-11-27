@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-27",
+  "offlineVersion": "0.7.0-bb75d9dcb5c0",
+  "method": "Production loadFighterIllustration and drawPortrait executed with native Skia.",
+  "browserTestStatus": "not_executed",
+  "sameDecodedFrame": true,
+  "cards": [
+    {
+      "id": "evilpomni",
+      "source": "assets/encore/base-costumes/evilpomni-pendantz/selection.png",
+      "exactNativeSource": true,
+      "sameDecodedFrame": true,
+      "preservedHistoricalFile": "assets/encore/selection/evilpomni.png",
+      "preservedHistoricalSHA256": "9b0112e2f7941400e69d495499d92a4abfc03b223c80b355a47db49b0e4dce47",
+      "sharedIdentity": "evilpomni-big-top"
+    },
+    {
+      "id": "rivalbaseballpomni",
+      "source": "assets/encore/base-costumes/evilpomni-pendantz/selection.png",
+      "exactNativeSource": true,
+      "sameDecodedFrame": true,
+      "preservedHistoricalFile": "assets/encore/selection/rivalbaseballpomni.png",
+      "preservedHistoricalSHA256": "9f5013aa0be2d13476000b55e2397aa6760ba9ac6c84e87853c6b32365f15828",
+      "sharedIdentity": "evilpomni-big-top"
+    },
+    {
+      "id": "evilpomni-pendantz",
+      "source": "assets/encore/base-costumes/evilpomni-pendantz/selection.png",
+      "exactNativeSource": true,
+      "sameDecodedFrame": true
+    }
+  ],
+  "sources": {
+    "combat/base-sprite-focus-20261127.mjs": "76590fe0282f0635ccc5734e1bf9b7efa6a70bfaa7b6b0ec2732a93d42c08bda",
+    "combat/illustrations.mjs": "65b591b99530fd61c00fbae227d93b2005252c0d6b929dcef0dbc3f2056c8e35",
+    "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+    "combat/sprite-catalog.mjs": "f156b90e5d7aef72d290dfce23e523e20710d65da64f45fdcdf1c27ae9909a5f",
+    "combat/offline-manifest.mjs": "45b3255138fc717cdf78b7452eae2938daf1f8f7af3b269e1ff144ec09f56fc3",
+    "scripts/render-combat-focus-archive-review.mjs": "f0b4c5dd92b1e00f33153c37f00271bd800f275135e0f025ef85bc18a7594082"
+  },
+  "limitations": [
+    "Native Canvas does not exercise browser navigation.",
+    "Shared art does not turn the NPC into a canonical transformation of Pomni."
+  ],
+  "outputImage": "evil-archive-aliases.jpg",
+  "summary": {
+    "cards": 3,
+    "historicalAliases": 2,
+    "nativeDecodes": 1,
+    "historicalBytesRetained": true,
+    "pass": true
+  }
+}

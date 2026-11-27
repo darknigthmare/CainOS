@@ -3,6 +3,7 @@
  * paintings, not three independently generated parallax layers. The historical
  * planes remain available as fallback when a new file is not in the art pack.
  */
+import { COMPLETED_STAGE_SCENES } from './stage-scenes-completion-20261127.mjs';
 export const REBUILT_STAGE_SCENES = Object.freeze({
   falseexit: Object.freeze({
     path: '../assets/encore/stages/falseexit/scene-20261127.png',
@@ -27,4 +28,5 @@ export const REBUILT_STAGE_SCENES = Object.freeze({
     sourceId: 'glitch-spudsy-episode4',
     sourceUrl: 'https://www.youtube.com/watch?v=Q9KWcWKo2T8',
   }),
+  ...COMPLETED_STAGE_SCENES,
 });

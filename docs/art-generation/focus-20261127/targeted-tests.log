@@ -1,0 +1,38 @@
+✔ the 64 fighters and complete 484-costume prefix retain their published order and fields (21.511535ms)
+✔ the 522-costume continuation keeps its complete saved wardrobe prefix and fighter kits (20.695368ms)
+✔ the six remaining Queenie collections append all 18 reviewed static families after the 522-costume prefix (2.197474ms)
+✔ a static family activates only after both native files have a recorded review and are published (1.057269ms)
+✔ the two historical Evil Pomni aliases share a corrected portrait only after the complete pair is ready (0.731154ms)
+✔ every activated base keeps two distinct native files and only changes its owner’s presentation (1008.179995ms)
+✔ the renderer holds the exact own stance for every static state on both sides without requesting action drawings (64.588827ms)
+✔ failed static bases never reveal a previous costume or the owner’s old atlas (3.214553ms)
+✔ classification preserves all 179 identities and provenance while applying only declared sprite replacements (8.494859ms)
+✔ every current archive entry has exactly one reviewed classification with no stale declarations (1.661685ms)
+✔ every playable identity retains its own kit including the distinct Kaufmo abstraction (0.41872ms)
+✔ names shared with relatives, rivals, props and effects never grant a costume kit (0.617957ms)
+✔ reviewed outfits and visual states reuse the same existing fighter without adding a kit (0.615561ms)
+✔ future and prototype-like IDs fail closed even when they contain a fighter name (0.285892ms)
+✔ every classified appearance still points at a bounded source atlas cell (3.055149ms)
+✔ the 51 stable costume IDs and fighter bindings remain exact for existing profiles and replays (1.132485ms)
+✔ all thirty-three costume rectangles fit their actual PNG and preserve undeclared source metadata (235.191539ms)
+✔ each existing projectile move has a named visual and NPC choices retain their documented scope (46.101772ms)
+✔ reflection keeps the original accessory for core and promoted NPC attacks (0.515539ms)
+✔ thirteen abstraction projectile slots retain ten distinct original motifs after reflection (25.265048ms)
+✔ an abstraction preloads its one published motif for both existing projectile slots (3.67633ms)
+✔ preloading requests only published accessories used by the current pair (1.466352ms)
+✔ concurrent requests are deduplicated and image decoding stays within two slots (17.180308ms)
+✔ decoded canvases stay small and least-recently-used textures are evicted (17.811719ms)
+✔ a failed optional image keeps fallback active and retries after a bounded cooldown (2.653118ms)
+✔ an empty transparent image is rejected instead of replacing a visible fallback (0.702442ms)
+✔ an image decode that never settles cannot block match preparation indefinitely (11.26547ms)
+✔ the real renderer draws native art with uniform scale and respects reduced motion (3.273319ms)
+✔ native accessories follow left and reflected velocity while velocity art rotates only once (7.993194ms)
+✔ the real renderer keeps visible Canvas fallback and ignores delayed or dead projectiles (1.140079ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1516.376875

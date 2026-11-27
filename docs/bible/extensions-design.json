@@ -2642,6 +2642,32 @@
       "replay": "Nouvelle version requise pour les nouvelles actions et membres. Les anciens replays gardent les règles 0.5.0 et leur catalogue historique ; aucun champ ne leur est injecté."
     }
   },
+  "staticSelectionContinuation": {
+    "id": "EN-E1-STATIC-SELECTION-20261127",
+    "contractId": "EN-E1-SELECTION-CONTRACT",
+    "requirementSection": "EN-G32",
+    "status": "implemented-static-subset",
+    "source": "combat/selection-presentation.mjs",
+    "evidence": "docs/art-generation/completion-20261127/selection/README.md",
+    "behaviors": [
+      "Choix immédiat et annulation du dernier changement indépendants pour J1 et J2.",
+      "Jetons de portrait rejetant les réponses tardives ; choix conservé après une image indisponible.",
+      "Annonce accessible unique, badges de miroir et retour du focus sur la carte rétablie.",
+      "État temporaire effacé en quittant le menu ; aucun changement de profil, replay ou simulation."
+    ],
+    "excluded": [
+      "Gestes individuels d’entrée et de sortie",
+      "Animation des huit états",
+      "Taunts",
+      "Sélection d’équipe",
+      "Droits commerciaux"
+    ],
+    "verification": {
+      "nodeSuite": "tests/combat-selection-presentation.test.mjs",
+      "browserSuite": "tests/combat-selection-browser.mjs",
+      "resultPolicy": "Consulter les preuves datées de la livraison ; une suite inscrite ne constitue pas une exécution réussie."
+    }
+  },
   "runtimeObservations": [
     {
       "id": "EN-OBS-SELECT",
@@ -2652,6 +2678,17 @@
         "refreshSelectionArtist"
       ],
       "observed": "Cartes, portraits, aperçu de costume et décor présents ; aucun cycle complet de désélection dédié observé au baseline."
+    },
+    {
+      "id": "EN-OBS-STATIC-SELECT-20261127",
+      "path": "combat/selection-presentation.mjs",
+      "symbols": [
+        "SelectionPresentation",
+        "beginPortrait",
+        "finishPortrait",
+        "undo"
+      ],
+      "observed": "Continuation du 27 novembre : sous-ensemble statique de sélection intégré. Les cycles corporels complets et leur statut de production restent distincts."
     },
     {
       "id": "EN-OBS-PRESENT",

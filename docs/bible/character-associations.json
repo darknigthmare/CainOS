@@ -5,18 +5,18 @@
   "baselineCommit": "abb53b227c76c47832f44810aab1aa102286388c",
   "source": "scripts/build-combat-guide-associations.mjs",
   "sourceHashes": {
-    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/data.mjs": "0cb9d900db398f2ad27d8e5e62016ec7283b16972bbf5a0ad4feef24e47e1f46",
     "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
     "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
     "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
     "combat/abstractions-narrative.mjs": "ca3a9f21b14a226f20946dddbf2d1dae9c04bebc3f3beb3f60503d6a63683abe",
     "combat/finisher-catalog.mjs": "f741daefc7acb7e63a8aae481f9a1ceb378a2cc31be08f2328db4470352d9b18",
     "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
-    "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+    "combat/projectile-art.mjs": "0ea35a7e6effef83f330fa542af2659209291ac45e8f3b8b9bd2b5271652091d",
     "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
-    "combat/offline-manifest.mjs": "7275eaf815b54def24b6542c6a2894cf8cb8eb9c2356abeee5800cb8665d4647",
-    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
-    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630"
+    "combat/offline-manifest.mjs": "45b3255138fc717cdf78b7452eae2938daf1f8f7af3b269e1ff144ec09f56fc3",
+    "combat/illustrations.mjs": "65b591b99530fd61c00fbae227d93b2005252c0d6b929dcef0dbc3f2056c8e35",
+    "combat/fidelity.mjs": "a94b236d2270d3e4fcec38c876dac7958d89fe03ce1cc9af8100ae439694c2a8"
   },
   "notice": "Associations calculées à partir du jeu existant. Le guide propose des compléments ; ce registre ne modifie ni les combats, ni les scènes, ni les assets. Les textes de fidélité conservés peuvent décrire une revue historique : ils ne constituent pas une nouvelle validation.",
   "counts": {
@@ -25,13 +25,13 @@
     "routes": 64,
     "chapters": 256,
     "panels": 384,
-    "dedicatedPanelImages": 84,
-    "composedPanels": 300,
+    "dedicatedPanelImages": 104,
+    "composedPanels": 280,
     "finishers": 192,
     "friendships": 64,
     "dedicatedStageArrangements": 64,
     "projectileMoves": 73,
-    "usedProjectileMotifs": 23,
+    "usedProjectileMotifs": 33,
     "runtimeCastIssues": 40,
     "newImagesProduced": 0,
     "plannedGlobalChapters": 12,
@@ -722,6 +722,209 @@
       "scope": "Les sources documentent Kaufmo et l’univers visuel. Ce crossover est une création de fan-game, pas une apparition officielle."
     },
     {
+      "id": "encore-kaufmo-sunsetparadise-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × Sunset Paradise : Hommage · Meggy",
+      "url": "https://www.glitchprod.com/sunset-paradise",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-sunsetparadise-resident-20261127-completion",
+      "title": "Encore — Kaufmo × Sunset Paradise : Résident · Bonimenteur du port",
+      "url": "https://www.glitchprod.com/sunset-paradise",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-sunsetparadise-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × Sunset Paradise : Fusion · Clown du récif",
+      "url": "https://www.glitchprod.com/sunset-paradise",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-gaslightdistrict-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × The Gaslight District : Hommage · Melancholy Hill",
+      "url": "https://www.glitchprod.com/gaslight-district",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-gaslightdistrict-resident-20261127-completion",
+      "title": "Encore — Kaufmo × The Gaslight District : Résident · Afficheur des quais",
+      "url": "https://www.glitchprod.com/gaslight-district",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-gaslightdistrict-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × The Gaslight District : Fusion · Pantin des brumes",
+      "url": "https://www.glitchprod.com/gaslight-district",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-knightsofguinevere-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × Knights of Guinevere : Hommage · Guinevere",
+      "url": "https://www.glitchprod.com/knights-of-guinevere",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-knightsofguinevere-resident-20261127-completion",
+      "title": "Encore — Kaufmo × Knights of Guinevere : Résident · Réparateur du parc",
+      "url": "https://www.glitchprod.com/knights-of-guinevere",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-knightsofguinevere-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × Knights of Guinevere : Fusion · Automate de parade",
+      "url": "https://www.glitchprod.com/knights-of-guinevere",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de l’univers ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-max-murderdrones-hommage-20261127-completion",
+      "title": "Encore — Max × Murder Drones : Hommage · Uzi",
+      "url": "https://www.glitchprod.com/murder-drones",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les échantillons officiels de l’épisode 2 documentent la famille du caïman violet. Les portraits illustrés et crossovers sont des adaptations originales ; aucun costume officiel n’est affirmé."
+    },
+    {
+      "id": "encore-max-murderdrones-resident-20261127-completion",
+      "title": "Encore — Max × Murder Drones : Résident · Convoyeur des abris",
+      "url": "https://www.glitchprod.com/murder-drones",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les échantillons officiels de l’épisode 2 documentent la famille du caïman violet. Les portraits illustrés et crossovers sont des adaptations originales ; aucun costume officiel n’est affirmé."
+    },
+    {
+      "id": "encore-max-murderdrones-fusion-20261127-completion",
+      "title": "Encore — Max × Murder Drones : Fusion · Drone du convoi",
+      "url": "https://www.glitchprod.com/murder-drones",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les échantillons officiels de l’épisode 2 documentent la famille du caïman violet. Les portraits illustrés et crossovers sont des adaptations originales ; aucun costume officiel n’est affirmé."
+    },
+    {
+      "id": "encore-max-metarunner-hommage-20261127-completion",
+      "title": "Encore — Max × Meta Runner : Hommage · Tari",
+      "url": "https://www.glitchprod.com/meta-runner",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les échantillons officiels de l’épisode 2 documentent la famille du caïman violet. Les portraits illustrés et crossovers sont des adaptations originales ; aucun costume officiel n’est affirmé."
+    },
+    {
+      "id": "encore-max-metarunner-resident-20261127-completion",
+      "title": "Encore — Max × Meta Runner : Résident · Courrier de Silica City",
+      "url": "https://www.glitchprod.com/meta-runner",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les échantillons officiels de l’épisode 2 documentent la famille du caïman violet. Les portraits illustrés et crossovers sont des adaptations originales ; aucun costume officiel n’est affirmé."
+    },
+    {
+      "id": "encore-max-metarunner-fusion-20261127-completion",
+      "title": "Encore — Max × Meta Runner : Fusion · Avatar du circuit",
+      "url": "https://www.glitchprod.com/meta-runner",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les échantillons officiels de l’épisode 2 documentent la famille du caïman violet. Les portraits illustrés et crossovers sont des adaptations originales ; aucun costume officiel n’est affirmé."
+    },
+    {
+      "id": "encore-kaufmo-ultrajumpmania-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × Ultra Jump Mania : Hommage · Theo",
+      "url": "https://www.youtube.com/watch?v=HZoOzz1CrAk",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La vignette officielle documente Theo, sa chemise jaune fleurie et l’île ; le corps végétal de fusion et la tenue de cartographe sont des créations Encore."
+    },
+    {
+      "id": "encore-kaufmo-ultrajumpmania-resident-20261127-completion",
+      "title": "Encore — Kaufmo × Ultra Jump Mania : Résident · Cartographe de l’île",
+      "url": "https://www.youtube.com/watch?v=HZoOzz1CrAk",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La vignette officielle documente Theo, sa chemise jaune fleurie et l’île ; le corps végétal de fusion et la tenue de cartographe sont des créations Encore."
+    },
+    {
+      "id": "encore-kaufmo-ultrajumpmania-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × Ultra Jump Mania : Fusion · Pantin des cocotiers",
+      "url": "https://www.youtube.com/watch?v=HZoOzz1CrAk",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La vignette officielle documente Theo, sa chemise jaune fleurie et l’île ; le corps végétal de fusion et la tenue de cartographe sont des créations Encore."
+    },
+    {
+      "id": "encore-kaufmo-gameoverse-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × Gameoverse : Hommage · Kit",
+      "url": "https://www.glitchprod.com/gameoverse",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de Gameoverse ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-gameoverse-resident-20261127-completion",
+      "title": "Encore — Kaufmo × Gameoverse : Résident · Archiviste des mondes",
+      "url": "https://www.glitchprod.com/gameoverse",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de Gameoverse ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-gameoverse-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × Gameoverse : Fusion · Clown de cristal",
+      "url": "https://www.glitchprod.com/gameoverse",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "Les références établissent Kaufmo et les codes visuels de Gameoverse ; le crossover n’est pas une apparition officielle."
+    },
+    {
+      "id": "encore-kaufmo-lackadaisy-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × Lackadaisy : Hommage · Rocky Rickaby",
+      "url": "https://www.glitchprod.com/lackadaisy",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La peluche officielle Kaufmo et les produits dérivés officiels Rocky/SMG4 fournissent des repères de visage, couleurs et vêtements. Les poses, résidents et fusions sont des créations Encore, non des apparitions officielles."
+    },
+    {
+      "id": "encore-kaufmo-lackadaisy-resident-20261127-completion",
+      "title": "Encore — Kaufmo × Lackadaisy : Résident · Comédien du Little Daisy",
+      "url": "https://www.glitchprod.com/lackadaisy",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La peluche officielle Kaufmo et les produits dérivés officiels Rocky/SMG4 fournissent des repères de visage, couleurs et vêtements. Les poses, résidents et fusions sont des créations Encore, non des apparitions officielles."
+    },
+    {
+      "id": "encore-kaufmo-lackadaisy-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × Lackadaisy : Fusion · Chat de revue",
+      "url": "https://www.glitchprod.com/lackadaisy",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La peluche officielle Kaufmo et les produits dérivés officiels Rocky/SMG4 fournissent des repères de visage, couleurs et vêtements. Les poses, résidents et fusions sont des créations Encore, non des apparitions officielles."
+    },
+    {
+      "id": "encore-kaufmo-smg4-hommage-20261127-completion",
+      "title": "Encore — Kaufmo × SMG4 : Hommage · SMG4",
+      "url": "https://smg4.store/products/smg4-plush",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La peluche officielle Kaufmo et les produits dérivés officiels Rocky/SMG4 fournissent des repères de visage, couleurs et vêtements. Les poses, résidents et fusions sont des créations Encore, non des apparitions officielles."
+    },
+    {
+      "id": "encore-kaufmo-smg4-resident-20261127-completion",
+      "title": "Encore — Kaufmo × SMG4 : Résident · Accessoiriste du studio",
+      "url": "https://smg4.store/products/smg4-plush",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La peluche officielle Kaufmo et les produits dérivés officiels Rocky/SMG4 fournissent des repères de visage, couleurs et vêtements. Les poses, résidents et fusions sont des créations Encore, non des apparitions officielles."
+    },
+    {
+      "id": "encore-kaufmo-smg4-fusion-20261127-completion",
+      "title": "Encore — Kaufmo × SMG4 : Fusion · Avatar de machinima",
+      "url": "https://smg4.store/products/smg4-plush",
+      "kind": "Création originale pour Encore avec références officielles",
+      "scope": "La peluche officielle Kaufmo et les produits dérivés officiels Rocky/SMG4 fournissent des repères de visage, couleurs et vêtements. Les poses, résidents et fusions sont des créations Encore, non des apparitions officielles."
+    },
+    {
+      "id": "store-godcaine-animatez-20261127",
+      "title": "GLITCH — God Caine Animatez",
+      "url": "https://glitchproductions.store/products/god-caine-animatez",
+      "kind": "Produit dérivé officiel ; composition illustrée pour Encore",
+      "scope": "La figurine officielle documente cette composition à six bras, globes décalés et accessoires. La fiche ne certifie ni la continuité d’un épisode ni de nouveaux pouvoirs de combat."
+    },
+    {
+      "id": "store-evilpomni-pendantz-20261127",
+      "title": "GLITCH — Pomni Animiniz Pendantz, variante Evil Pomni",
+      "url": "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+      "kind": "PNJ officiel, produit dérivé et aperçu de l’épisode 5 ; adaptation illustrée pour Encore",
+      "scope": "Le produit officiel nomme Evil Pomni et documente sa palette rouge, jaune et bleue. L’aperçu officiel de l’épisode 5 vers 20 min 50 s montre la même incarnation adverse sur le terrain de softball. Les anciennes archives evilpomni et rivalbaseballpomni renvoient à ce même PNJ ; leurs dessins historiques ne sont pas des références officielles."
+    },
+    {
       "id": "stage-coppernine",
       "title": "Copper 9 · Colonie gelée",
       "url": "https://www.glitchprod.com/murder-drones",
@@ -790,6 +993,41 @@
       "kind": "Carte officielle",
       "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2992370946",
       "scope": "La capture de la carte publiée par SMG4 Official montre la façade et la place au coucher du soleil."
+    },
+    {
+      "id": "glitch-pilot-locations-20261127",
+      "title": "GLITCH — lieux du pilote, vignettes officielles",
+      "url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "kind": "Vignettes de l’épisode officiel",
+      "scope": "Storyboards publics YouTube inspectés, cellules 320 × 180 : terrains et lac vers 230/260 s, couloir vers 650/740 s, nid vers 990/1010 s. Horodatages approximatifs issus de la grille. Aucun visionnage du flux complet, mesure de décor ni détail occulté certifié."
+    },
+    {
+      "id": "glitch-canyon-storyboards-20261127",
+      "title": "GLITCH — route du convoi de Candy Canyon",
+      "url": "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=420",
+      "kind": "Vignettes de l’épisode officiel",
+      "scope": "Cellules officielles YouTube 320 × 180 vers 420 et 520 s : route rose, strates des mesas roses, ciel vert menthe et nuages roses. Les véhicules masquent une partie du sol. La cour du palais ne sert pas de référence à cette route."
+    },
+    {
+      "id": "glitch-manor-storyboards-20261127",
+      "title": "GLITCH — hall de Mildenhall Manor",
+      "url": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=180",
+      "kind": "Vignettes de l’épisode officiel",
+      "scope": "Cellules officielles YouTube 320 × 180 vers 180/220 s : boiseries sombres, plafond à caissons, tableaux, rideaux lourds et lustre. Lumière et grandes masses observées ; détails, objets occultés et géométrie complète restent partiels."
+    },
+    {
+      "id": "glitch-max-episode2-storyboards-20261127",
+      "title": "GLITCH — Max dans Candy Carrier Chaos!, vignettes officielles",
+      "url": "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=1220",
+      "kind": "Vignettes de l’épisode officiel",
+      "scope": "Storyboards publics YouTube récupérés depuis la réponse du lecteur de la chaîne GLITCH. Cellules 320 × 180 inspectées, notamment vers 340, 420, 1220 et 1240 s. Petit caïman violet, dessous du museau blanc en zigzag, bas du corps rouge et chapeau brun arrondi observables. Ces échantillons ne constituent ni un visionnage continu ni une mesure du modèle 3D. URL, dimensions et SHA-256 des planches conservés dans docs/art-generation/completion-20261127/max/references/episode2-storyboards.json."
+    },
+    {
+      "id": "max-tvmaze-reproduction-20261127",
+      "title": "TVmaze — reproduction du personnage Max",
+      "url": "https://www.tvmaze.com/characters/1304195/the-amazing-digital-circus-max",
+      "kind": "Reproduction sur un hébergement tiers",
+      "scope": "Petit portrait de personnage inspecté pour préciser les bras très courts, le ventre blanc, la transition violet/rouge et le chapeau melon brun à bande rouge. Cette reproduction secondaire complète les cellules officielles ; elle ne devient pas une source primaire et ne mesure pas les proportions du modèle."
     },
     {
       "id": "glitch",
@@ -1892,7 +2130,8 @@
         "jaxsuitpomni",
         "showtimepomni",
         "aquablasterpomni",
-        "cafepomni"
+        "cafepomni",
+        "evilpomni-pendantz"
       ],
       "moves": [
         {
@@ -2749,7 +2988,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -3795,7 +4034,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -4805,7 +5044,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -5808,7 +6047,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -6814,7 +7053,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -7806,7 +8045,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -7967,7 +8206,8 @@
         "intermissioncaine",
         "ringmastercaine",
         "ptocaine",
-        "cafecaine"
+        "cafecaine",
+        "godcaine"
       ],
       "moves": [
         {
@@ -8821,7 +9061,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -9781,7 +10021,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -10758,7 +10998,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -11731,7 +11971,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -12655,7 +12895,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -13584,7 +13824,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -14484,7 +14724,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -15389,7 +15629,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -16314,7 +16554,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -16459,7 +16699,28 @@
         "glitch-murderdrones-kaufmo-fusion",
         "glitch-metarunner-kaufmo-hommage",
         "glitch-metarunner-kaufmo-resident",
-        "glitch-metarunner-kaufmo-fusion"
+        "glitch-metarunner-kaufmo-fusion",
+        "glitch-sunsetparadise-kaufmo-hommage",
+        "glitch-sunsetparadise-kaufmo-resident",
+        "glitch-sunsetparadise-kaufmo-fusion",
+        "glitch-gaslightdistrict-kaufmo-hommage",
+        "glitch-gaslightdistrict-kaufmo-resident",
+        "glitch-gaslightdistrict-kaufmo-fusion",
+        "glitch-knightsofguinevere-kaufmo-hommage",
+        "glitch-knightsofguinevere-kaufmo-resident",
+        "glitch-knightsofguinevere-kaufmo-fusion",
+        "glitch-ultrajumpmania-kaufmo-hommage",
+        "glitch-ultrajumpmania-kaufmo-resident",
+        "glitch-ultrajumpmania-kaufmo-fusion",
+        "glitch-gameoverse-kaufmo-hommage",
+        "glitch-gameoverse-kaufmo-resident",
+        "glitch-gameoverse-kaufmo-fusion",
+        "glitch-lackadaisy-kaufmo-hommage",
+        "glitch-lackadaisy-kaufmo-resident",
+        "glitch-lackadaisy-kaufmo-fusion",
+        "glitch-smg4-kaufmo-hommage",
+        "glitch-smg4-kaufmo-resident",
+        "glitch-smg4-kaufmo-fusion"
       ],
       "moves": [
         {
@@ -17219,7 +17480,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -18149,7 +18410,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -19048,7 +19309,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -19947,7 +20208,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -20845,7 +21106,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -21741,7 +22002,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -22639,7 +22900,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -23537,7 +23798,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -24433,7 +24694,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -25329,7 +25590,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -26227,7 +26488,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -27139,7 +27400,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -27276,7 +27537,14 @@
         "reviewStatus": "manifest-reference-only",
         "newImagesProduced": 0
       },
-      "costumeIds": [],
+      "costumeIds": [
+        "glitch-murderdrones-max-hommage",
+        "glitch-murderdrones-max-resident",
+        "glitch-murderdrones-max-fusion",
+        "glitch-metarunner-max-hommage",
+        "glitch-metarunner-max-resident",
+        "glitch-metarunner-max-fusion"
+      ],
       "moves": [
         {
           "id": "max.light",
@@ -28035,7 +28303,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -28933,7 +29201,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -29831,7 +30099,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -30731,7 +30999,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -31629,7 +31897,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -32529,7 +32797,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -33427,7 +33695,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -34349,7 +34617,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -35258,7 +35526,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -36165,7 +36433,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -37064,7 +37332,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -37973,7 +38241,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -38869,7 +39137,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -39767,7 +40035,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -40663,7 +40931,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -41561,7 +41829,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -42460,7 +42728,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -43358,7 +43626,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -44256,7 +44524,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -45154,7 +45422,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -46053,7 +46321,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -46951,7 +47219,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -47849,7 +48117,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -48756,7 +49024,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -49665,7 +49933,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -50574,7 +50842,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -51483,7 +51751,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -51952,11 +52220,11 @@
           "moveId": "cellarabstraction.special",
           "slot": "special",
           "name": "Abstraction du cellier · Œil détaché",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-cellar-eye",
+          "imagePath": "assets/encore/projectiles/abstraction-cellar-eye.png",
+          "drawingWidth": 42,
+          "drawingHeight": 38,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -52085,8 +52353,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.cellarabstraction.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/cellarabstraction/cellarabstraction-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -52218,8 +52486,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.cellarabstraction.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/cellarabstraction/cellarabstraction-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -52380,7 +52648,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -52854,11 +53122,11 @@
           "moveId": "aquaticabstraction.special",
           "slot": "special",
           "name": "Abstraction aquatique · Écume d’erreur",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-aquatic-foam",
+          "imagePath": "assets/encore/projectiles/abstraction-aquatic-foam.png",
+          "drawingWidth": 50,
+          "drawingHeight": 28,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -52867,11 +53135,11 @@
           "moveId": "aquaticabstraction.super",
           "slot": "super",
           "name": "Abstraction aquatique · Déferlante numérique",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-aquatic-foam",
+          "imagePath": "assets/encore/projectiles/abstraction-aquatic-foam.png",
+          "drawingWidth": 50,
+          "drawingHeight": 28,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -53000,8 +53268,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.aquaticabstraction.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/aquaticabstraction/aquaticabstraction-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -53133,8 +53401,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.aquaticabstraction.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/aquaticabstraction/aquaticabstraction-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -53291,7 +53559,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -53759,11 +54027,11 @@
           "moveId": "abstractedjax.special",
           "slot": "special",
           "name": "Jax — abstraction · Fragment du contour",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-jax-shard",
+          "imagePath": "assets/encore/projectiles/abstraction-jax-shard.png",
+          "drawingWidth": 46,
+          "drawingHeight": 30,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -53892,8 +54160,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.abstractedjax.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/abstractedjax/abstractedjax-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -54025,8 +54293,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.abstractedjax.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/abstractedjax/abstractedjax-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -54187,7 +54455,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -54645,11 +54913,11 @@
           "moveId": "abstractedqueenie.special",
           "slot": "special",
           "name": "Queenie — abstraction · Éclat de veille",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-queenie-watch",
+          "imagePath": "assets/encore/projectiles/abstraction-queenie-watch.png",
+          "drawingWidth": 38,
+          "drawingHeight": 44,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -54778,8 +55046,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.abstractedqueenie.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/abstractedqueenie/abstractedqueenie-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -54911,8 +55179,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.abstractedqueenie.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/abstractedqueenie/abstractedqueenie-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -55069,7 +55337,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -55525,11 +55793,11 @@
           "moveId": "abstractedribbit.special",
           "slot": "special",
           "name": "Ribbit — abstraction · Éclat du rebond",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-ribbit-skip",
+          "imagePath": "assets/encore/projectiles/abstraction-ribbit-skip.png",
+          "drawingWidth": 46,
+          "drawingHeight": 31,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -55658,8 +55926,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.abstractedribbit.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/abstractedribbit/abstractedribbit-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -55791,8 +56059,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.abstractedribbit.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/abstractedribbit/abstractedribbit-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -55949,7 +56217,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -56389,11 +56657,11 @@
           "moveId": "originalabstractedpomni.special",
           "slot": "special",
           "name": "Pomni — abstraction originale · Éclat de la fausse porte",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
+          "motifId": "abstraction-pomni-door",
+          "imagePath": "assets/encore/projectiles/abstraction-pomni-door.png",
+          "drawingWidth": 44,
           "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -56520,8 +56788,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.originalabstractedpomni.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -56653,8 +56921,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.originalabstractedpomni.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -56803,7 +57071,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -57241,11 +57509,11 @@
           "moveId": "originalabstractedragatha.special",
           "slot": "special",
           "name": "Ragatha — abstraction originale · Aiguille de signal",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-ragatha-needle",
+          "imagePath": "assets/encore/projectiles/abstraction-ragatha-needle.png",
+          "drawingWidth": 52,
+          "drawingHeight": 24,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -57372,8 +57640,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.originalabstractedragatha.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -57505,8 +57773,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.originalabstractedragatha.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -57655,7 +57923,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -58104,11 +58372,11 @@
           "moveId": "originalabstractedgangle.special",
           "slot": "special",
           "name": "Gangle — abstraction originale · Ruban détaché",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-gangle-ribbon",
+          "imagePath": "assets/encore/projectiles/abstraction-gangle-ribbon.png",
+          "drawingWidth": 48,
+          "drawingHeight": 32,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -58117,11 +58385,11 @@
           "moveId": "originalabstractedgangle.super",
           "slot": "super",
           "name": "Gangle — abstraction originale · Rideau dissonant",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-gangle-ribbon",
+          "imagePath": "assets/encore/projectiles/abstraction-gangle-ribbon.png",
+          "drawingWidth": 48,
+          "drawingHeight": 32,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -58248,8 +58516,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.originalabstractedgangle.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -58381,8 +58649,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.originalabstractedgangle.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -58531,7 +58799,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -58967,11 +59235,11 @@
           "moveId": "originalabstractedkinger.special",
           "slot": "special",
           "name": "Kinger — abstraction originale · Éclat du bastion",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
-          "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "motifId": "abstraction-kinger-bastion",
+          "imagePath": "assets/encore/projectiles/abstraction-kinger-bastion.png",
+          "drawingWidth": 40,
+          "drawingHeight": 42,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -59098,8 +59366,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.originalabstractedkinger.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -59231,8 +59499,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.originalabstractedkinger.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -59381,7 +59649,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     },
     {
@@ -59830,11 +60098,11 @@
           "moveId": "originalabstractedzooble.special",
           "slot": "special",
           "name": "Zooble — abstraction originale · Fragment dissident",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
+          "motifId": "abstraction-zooble-fragment",
+          "imagePath": "assets/encore/projectiles/abstraction-zooble-fragment.png",
           "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "drawingHeight": 36,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -59843,11 +60111,11 @@
           "moveId": "originalabstractedzooble.super",
           "slot": "super",
           "name": "Zooble — abstraction originale · Assemblage impossible",
-          "motifId": "corruption",
-          "imagePath": "assets/encore/projectiles/corruption.png",
+          "motifId": "abstraction-zooble-fragment",
+          "imagePath": "assets/encore/projectiles/abstraction-zooble-fragment.png",
           "drawingWidth": 43,
-          "drawingHeight": 39,
-          "presentationMotion": "spin",
+          "drawingHeight": 36,
+          "presentationMotion": "fixed",
           "reflection": "Le propriétaire change ; le motif de la technique d’origine reste celui résolu par projectileArtSpec.",
           "source": "combat/projectile-art.mjs",
           "narrativeStatus": "original-encore-gameplay-accessory"
@@ -59974,8 +60242,8 @@
             "order": 1,
             "runtimeLocator": "STORY_ROUTES.originalabstractedzooble.prologue[0]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-prologue-1.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -60107,8 +60375,8 @@
             "order": 3,
             "runtimeLocator": "STORY_ROUTES.originalabstractedzooble.epilogue[2]",
             "artwork": {
-              "status": "stage-and-cast-composition",
-              "path": null,
+              "status": "dedicated-image-listed-in-manifest",
+              "path": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-epilogue-3.png",
               "newImageProduced": false,
               "review": "Raccord de données ; aucune nouvelle revue visuelle effectuée par ce générateur."
             }
@@ -60257,7 +60525,7 @@
         "assets": "manifest-paths-resolved-not-visually-recertified",
         "integration": "existing-runtime",
         "validation": "catalog-reference-validation-only",
-        "publication": "baseline-runtime-already-on-pr-14"
+        "publication": "current-worktree-snapshot-see-pr-14-delivery-evidence"
       }
     }
   ]

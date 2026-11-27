@@ -1,0 +1,41 @@
+{
+  "schema": "encore-static-selection-browser/v1",
+  "generatedAt": "2026-11-27T08:11:46.160Z",
+  "sourceHashes": {
+    "combat/app.mjs": "6e8ac84528938702dd9480cddf66c9772236a8a216d755b9c566ee15831ba28b",
+    "combat/selection-presentation.mjs": "d6930e9a950d61a40330358ee33c612b5aa3ca4ebf125ab575e441b1498f6ef1",
+    "combat/index.html": "9c13e4bcbb0c71ce96547e5e337e39a2198c2bb06cf35f3ae2e60faeec801b3b",
+    "combat/style.css": "96d25fec893466bda6dab66675c0e5241babea0b46427d69bc9b6bc141788b33",
+    "tests/combat-selection-browser.mjs": "cf2a065f9a56818df054ba8c46bf43561e71b8e3df6ae37ffddd749604a0f436"
+  },
+  "scope": "Focused desktop public menu and 390px standalone entry; real keyboard activation, native select changes and one delayed HTTP image response.",
+  "limits": [
+    "Does not replace the full64-artist accessibility suite.",
+    "No physical device or screen reader session.",
+    "No canonical1:1 or authored entrance/exit animation claim."
+  ],
+  "checks": [
+    {
+      "name": "the mirror displays both badges and unchanged confirmation is not announced again",
+      "pass": true
+    },
+    {
+      "name": "each side undoes only its own latest choice and returns focus to the restored card",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": false,
+  "browser": "158.0.8127.0",
+  "browserArgs": [
+    "--no-sandbox",
+    "--disable-dev-shm-usage",
+    "--single-process",
+    "--no-zygote"
+  ],
+  "failure": {
+    "message": "page.unroute: Target page, context or browser has been closed",
+    "stack": "page.unroute: Target page, context or browser has been closed\n    at /workspace/scratch/8db10b0df53d/CainOS/tests/combat-selection-browser.mjs:80:37"
+  },
+  "completedAt": "2026-11-27T08:12:01.319Z"
+}

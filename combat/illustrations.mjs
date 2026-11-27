@@ -1,5 +1,6 @@
 import { ART_FILES } from './offline-manifest.mjs';
 import { getCostumeNativeFacing } from './costume-resumption-20261120.mjs';
+import { focusArchivePortraitOverride } from './base-sprite-focus-20261127.mjs';
 
 const published = new Set(ART_FILES);
 const frames = { selection: new Map(), stance: new Map(), poses: new Map() };
@@ -86,7 +87,9 @@ export function loadFighterIllustration(kind, fighter, pose) {
   if (kind === 'poses' && fighter?.sprite?.baseOnly === true) return null;
   // Archive entries use the appearance ID directly. Match actors keep the
   // fighter's simulation ID and carry their chosen appearance in costume.
-  const appearanceId = fighter?.costume || fighter?.id;
+  const archiveOverride = kind === 'selection' && !fighter?.costume
+    ? focusArchivePortraitOverride(fighter?.id, published) : null;
+  const appearanceId = archiveOverride?.appearanceId || fighter?.costume || fighter?.id;
   if (!appearanceId || typeof Image === 'undefined') return null;
   const cache = frames[kind], key = kind === 'poses' ? appearanceId + '/' + pose : appearanceId;
   if (cache.has(key)) {
@@ -96,7 +99,7 @@ export function loadFighterIllustration(kind, fighter, pose) {
     return frame;
   }
   const directory = fighter.sprite?.crossoverDirectory;
-  const path = illustrationPath(directory
+  const path = archiveOverride?.path || illustrationPath(directory
     ? `${directory}/${kind === 'poses' ? pose : kind}`
     : `../assets/encore/${kind}/${key}`);
   if (!path) return null;
@@ -105,9 +108,9 @@ export function loadFighterIllustration(kind, fighter, pose) {
     retryAt.delete(path);
   }
   if (!pending.has(path)) {
-    const nativeFacing = fighter.sprite?.baseOnly === true
+    const nativeFacing = archiveOverride?.nativeFacing || (fighter.sprite?.baseOnly === true
       ? (fighter.sprite.nativeFacing === -1 ? -1 : 1)
-      : getCostumeNativeFacing(appearanceId, kind === 'poses' ? pose : kind);
+      : getCostumeNativeFacing(appearanceId, kind === 'poses' ? pose : kind));
     const task = decoders[nextDecoder].then(() => readFrame(path, kind, nativeFacing)).then(frame => {
       if (frame) {
         if (cache.size >= limits[kind].count) cache.delete(cache.keys().next().value);

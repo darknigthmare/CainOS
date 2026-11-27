@@ -31,7 +31,23 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com', 'prtimes.jp'].includes(url.hostname), `Unreviewed source host: ${url.hostname}`);
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'smg4.store', 'www.tvmaze.com', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com', 'prtimes.jp'].includes(url.hostname), `Unreviewed source host: ${url.hostname}`);
+    if (url.hostname === 'smg4.store') {
+      // The official store's terms identify Glitch Productions as operator.
+      // This product reference supports only these three original crossovers.
+      assert.equal(url.pathname, '/products/smg4-plush');
+      assert.ok(['hommage', 'resident', 'fusion'].some(style =>
+        source.id === `encore-kaufmo-smg4-${style}-20261127-completion`));
+      assert.equal(source.kind, 'Création originale pour Encore avec références officielles');
+      assert.match(source.scope, /créations Encore, non des apparitions officielles/);
+    }
+    if (url.hostname === 'www.tvmaze.com') {
+      assert.equal(source.id, 'max-tvmaze-reproduction-20261127');
+      assert.equal(url.pathname, '/characters/1304195/the-amazing-digital-circus-max');
+      assert.equal(source.kind, 'Reproduction sur un hébergement tiers');
+      assert.match(source.scope, /reproduction secondaire complète les cellules officielles/);
+      assert.match(source.scope, /ne devient pas une source primaire et ne mesure pas les proportions du modèle/);
+    }
     if (url.hostname === 'prtimes.jp') {
       // Animate Holdings' own release for its official Digital Circus café collaboration.
       assert.equal(url.pathname, '/main/html/rd/p/000008857.000016756.html');
@@ -50,14 +66,22 @@ test('review records keep source scope, observations and invented combat separat
       for (const scope of reviewedCafeScopes[source.id]) assert.match(source.scope, scope, source.id);
     }
     if (source.kind === 'Vignettes de l’épisode officiel') {
-      const reviewedTimes = { 'glitch-barnoir-storyboards': '690', 'glitch-softballfield-storyboards': '1120' };
-      assert.ok(Object.hasOwn(reviewedTimes, source.id), 'Unreviewed episode storyboard source');
+      const reviewedStoryboards = {
+        'glitch-barnoir-storyboards': { video: 'L4p2gN2CzsA', time: '690', limits: [/Aucun visionnage du flux complet revendiqué/] },
+        'glitch-softballfield-storyboards': { video: 'L4p2gN2CzsA', time: '1120', limits: [/Aucun visionnage du flux complet revendiqué/] },
+        'glitch-pilot-locations-20261127': { video: 'HwAPLk_sQ3w', time: null, limits: [/230\/260 s/, /650\/740 s/, /990\/1010 s/, /Horodatages approximatifs/, /Aucun visionnage du flux complet, mesure de décor ni détail occulté certifié/] },
+        'glitch-canyon-storyboards-20261127': { video: '4ofJpOEXrZs', time: '420', limits: [/420 et 520 s/, /Les véhicules masquent une partie du sol/, /La cour du palais ne sert pas de référence à cette route/] },
+        'glitch-manor-storyboards-20261127': { video: 'bKjfw77cxeQ', time: '180', limits: [/180\/220 s/, /détails, objets occultés et géométrie complète restent partiels/] },
+        'glitch-max-episode2-storyboards-20261127': { video: '4ofJpOEXrZs', time: '1220', limits: [/340, 420, 1220 et 1240 s/, /ni un visionnage continu ni une mesure du modèle 3D/, /episode2-storyboards\.json/] },
+      };
+      assert.ok(Object.hasOwn(reviewedStoryboards, source.id), `Unreviewed episode storyboard source: ${source.id}`);
+      const reviewed = reviewedStoryboards[source.id];
       assert.equal(url.hostname, 'www.youtube.com');
       assert.equal(url.pathname, '/watch');
-      assert.equal(url.searchParams.get('v'), 'L4p2gN2CzsA');
-      assert.equal(url.searchParams.get('t'), reviewedTimes[source.id]);
+      assert.equal(url.searchParams.get('v'), reviewed.video);
+      assert.equal(url.searchParams.get('t'), reviewed.time);
       assert.match(source.scope, /320 × 180/);
-      assert.match(source.scope, /Aucun visionnage du flux complet revendiqué/);
+      for (const limit of reviewed.limits) assert.match(source.scope, limit, source.id);
     }
     if (['static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname)) {
       assert.equal(source.kind, 'Copie sur un hébergement tiers');
@@ -86,7 +110,10 @@ test('review records keep source scope, observations and invented combat separat
   }
   assert.deepEqual(STAGE_FIDELITY.training.sourceIds, []);
   assert.equal(STAGE_FIDELITY.training.reviewStatus, 'Création originale');
-  assert.equal(STAGE_FIDELITY.lake.reviewStatus, 'Source primaire à identifier');
+  assert.equal(STAGE_FIDELITY.lake.reviewStatus, 'Référence visuelle consultée — comparaison partielle');
+  assert.deepEqual(STAGE_FIDELITY.lake.sourceIds, ['ep1', 'glitch-pilot-locations-20261127']);
+  assert.match(STAGE_FIDELITY.lake.reviewScope, /forme précise de la rive et les détails de la tour restent des adaptations/);
+  assert.match(STAGE_FIDELITY.lake.reviewScope, /Aucune certification canonique 1:1 ni géographie mesurée/);
 });
 
 test('the forty promoted NPCs keep an open episode review with an individual atlas sprite record', () => {
@@ -152,10 +179,21 @@ test('the Void, cellar and resident corridor cannot borrow an unrelated visual a
   assert.ok(!STAGE_FIDELITY.void.sourceIds.includes('glitch-false-exit'));
   assert.ok(STAGE_FIDELITY.cellar.sourceIds.includes('glitch-cellar'));
   assert.ok(!STAGE_FIDELITY.backstage.sourceIds.includes('glitch-false-exit'));
-  assert.equal(STAGE_FIDELITY.backstage.observedTraits.length, 3);
-  assert.match(STAGE_FIDELITY.backstage.reviewStatus, /copies du pilote à confirmer/);
-  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Aucune frame directe ni aucun horodatage canonique/);
-  assert.equal(getFidelitySources(STAGE_FIDELITY.backstage.sourceIds).filter(source => source.kind === 'Copie sur un hébergement tiers').length, 2);
+  assert.deepEqual(STAGE_FIDELITY.backstage.sourceIds, ['ep1', 'glitch-pilot-locations-20261127']);
+  assert.deepEqual(STAGE_FIDELITY.backstage.observedTraits, [
+    'Couloir à bandes verticales roses, saumon et violettes, fines moulures claires et tapis rouge.',
+    'Petites portes brunes à médaillons, images abstraites encadrées, plafonniers clairs et arche au fond.',
+  ]);
+  assert.match(STAGE_FIDELITY.backstage.reviewStatus, /comparaison partielle/);
+  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Deux cellules officielles du pilote/);
+  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Ordre et nombre des chambres.*ne sont pas certifiés/);
+  const corridorSources = getFidelitySources(STAGE_FIDELITY.backstage.sourceIds);
+  assert.equal(corridorSources.filter(source => source.kind === 'Copie sur un hébergement tiers').length, 0);
+  const pilot = corridorSources.find(source => source.id === 'glitch-pilot-locations-20261127');
+  assert.equal(pilot.url, 'https://www.youtube.com/watch?v=HwAPLk_sQ3w');
+  assert.equal(pilot.kind, 'Vignettes de l’épisode officiel');
+  assert.match(pilot.scope, /650\/740 s/);
+  assert.match(pilot.scope, /Horodatages approximatifs/);
   assert.match(STAGES.find(s => s.id === 'cellar').description, /yeux multicolores/);
   assert.match(STAGES.find(s => s.id === 'void').description, /blanc et irisé/);
 });

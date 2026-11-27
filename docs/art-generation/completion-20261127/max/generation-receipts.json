@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-27",
+  "newImages": 12,
+  "generationCalls": 13,
+  "receipts": [
+    {
+      "key": "max_md_hommage_stance",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-ca2c4ff7-cef1-454e-af2c-fcb258ee1700.png",
+      "accepted": true
+    },
+    {
+      "key": "max_md_hommage_selection",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-26f2a9cc-92b0-4223-92b1-8b6a5161ea68.png",
+      "accepted": false
+    },
+    {
+      "key": "max_md_hommage_selection_fixed",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-9ea68ffc-94f5-488c-a167-cbcceedaa2f5.png",
+      "accepted": true
+    },
+    {
+      "key": "max_md_resident_stance",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-36a20890-14ad-4554-a7fc-c1409ce56263.png",
+      "accepted": true
+    },
+    {
+      "key": "max_md_resident_selection",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-ca699915-329a-43ea-a200-6f2901d678bc.png",
+      "accepted": true
+    },
+    {
+      "key": "max_md_fusion_stance",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-791625e4-713e-44cf-8281-e7782fc61012.png",
+      "accepted": true
+    },
+    {
+      "key": "max_md_fusion_selection",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-f2ab6446-e15f-4944-9678-aff38ef372ba.png",
+      "accepted": true
+    },
+    {
+      "key": "max_meta_hommage_stance",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-240b55a8-63f3-48ba-a254-66254e4b686f.png",
+      "accepted": true
+    },
+    {
+      "key": "max_meta_hommage_selection",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-f035fb9e-1d95-40ef-8129-05da19b111f3.png",
+      "accepted": true
+    },
+    {
+      "key": "max_meta_resident_stance",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-b1688cb2-03a9-430b-88fb-46b4b7f8b314.png",
+      "accepted": true
+    },
+    {
+      "key": "max_meta_resident_selection",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-41d90d29-8061-4914-bdcf-f190b96413c8.png",
+      "accepted": true
+    },
+    {
+      "key": "max_meta_fusion_stance",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "Native data:image/png;base64 returned by imagegen; directly decoded without pixel modification",
+      "accepted": true
+    },
+    {
+      "key": "max_meta_fusion_selection",
+      "productionTool": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/8db10b0df53d/generated_images/exec-7d2fbf07-a4dd-4a45-9c66-7422b8c19ff2.png",
+      "accepted": true
+    }
+  ]
+}

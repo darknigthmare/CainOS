@@ -8573,6 +8573,412 @@
       "accessRuleId": "EN-E2-RULE-LEGACY"
     },
     {
+      "id": "costume:glitch-sunsetparadise-kaufmo-hommage",
+      "runtimeId": "glitch-sunsetparadise-kaufmo-hommage",
+      "category": "costume",
+      "title": "Sunset Paradise · Hommage · Meggy",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-sunsetparadise-kaufmo-resident",
+      "runtimeId": "glitch-sunsetparadise-kaufmo-resident",
+      "category": "costume",
+      "title": "Sunset Paradise · Résident · Bonimenteur du port",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-sunsetparadise-kaufmo-fusion",
+      "runtimeId": "glitch-sunsetparadise-kaufmo-fusion",
+      "category": "costume",
+      "title": "Sunset Paradise · Fusion · Clown du récif",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-gaslightdistrict-kaufmo-hommage",
+      "runtimeId": "glitch-gaslightdistrict-kaufmo-hommage",
+      "category": "costume",
+      "title": "The Gaslight District · Hommage · Melancholy Hill",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-gaslightdistrict-kaufmo-resident",
+      "runtimeId": "glitch-gaslightdistrict-kaufmo-resident",
+      "category": "costume",
+      "title": "The Gaslight District · Résident · Afficheur des quais",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-gaslightdistrict-kaufmo-fusion",
+      "runtimeId": "glitch-gaslightdistrict-kaufmo-fusion",
+      "category": "costume",
+      "title": "The Gaslight District · Fusion · Pantin des brumes",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-knightsofguinevere-kaufmo-hommage",
+      "runtimeId": "glitch-knightsofguinevere-kaufmo-hommage",
+      "category": "costume",
+      "title": "Knights of Guinevere · Hommage · Guinevere",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-knightsofguinevere-kaufmo-resident",
+      "runtimeId": "glitch-knightsofguinevere-kaufmo-resident",
+      "category": "costume",
+      "title": "Knights of Guinevere · Résident · Réparateur du parc",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-knightsofguinevere-kaufmo-fusion",
+      "runtimeId": "glitch-knightsofguinevere-kaufmo-fusion",
+      "category": "costume",
+      "title": "Knights of Guinevere · Fusion · Automate de parade",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-murderdrones-max-hommage",
+      "runtimeId": "glitch-murderdrones-max-hommage",
+      "category": "costume",
+      "title": "Murder Drones · Hommage · Uzi",
+      "dependencies": [
+        "fighter:max"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-murderdrones-max-resident",
+      "runtimeId": "glitch-murderdrones-max-resident",
+      "category": "costume",
+      "title": "Murder Drones · Résident · Convoyeur des abris",
+      "dependencies": [
+        "fighter:max"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-murderdrones-max-fusion",
+      "runtimeId": "glitch-murderdrones-max-fusion",
+      "category": "costume",
+      "title": "Murder Drones · Fusion · Drone du convoi",
+      "dependencies": [
+        "fighter:max"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-metarunner-max-hommage",
+      "runtimeId": "glitch-metarunner-max-hommage",
+      "category": "costume",
+      "title": "Meta Runner · Hommage · Tari",
+      "dependencies": [
+        "fighter:max"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-metarunner-max-resident",
+      "runtimeId": "glitch-metarunner-max-resident",
+      "category": "costume",
+      "title": "Meta Runner · Résident · Courrier de Silica City",
+      "dependencies": [
+        "fighter:max"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-metarunner-max-fusion",
+      "runtimeId": "glitch-metarunner-max-fusion",
+      "category": "costume",
+      "title": "Meta Runner · Fusion · Avatar du circuit",
+      "dependencies": [
+        "fighter:max"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-ultrajumpmania-kaufmo-hommage",
+      "runtimeId": "glitch-ultrajumpmania-kaufmo-hommage",
+      "category": "costume",
+      "title": "Ultra Jump Mania · Hommage · Theo",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-ultrajumpmania-kaufmo-resident",
+      "runtimeId": "glitch-ultrajumpmania-kaufmo-resident",
+      "category": "costume",
+      "title": "Ultra Jump Mania · Résident · Cartographe de l’île",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-ultrajumpmania-kaufmo-fusion",
+      "runtimeId": "glitch-ultrajumpmania-kaufmo-fusion",
+      "category": "costume",
+      "title": "Ultra Jump Mania · Fusion · Pantin des cocotiers",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-gameoverse-kaufmo-hommage",
+      "runtimeId": "glitch-gameoverse-kaufmo-hommage",
+      "category": "costume",
+      "title": "Gameoverse · Hommage · Kit",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-gameoverse-kaufmo-resident",
+      "runtimeId": "glitch-gameoverse-kaufmo-resident",
+      "category": "costume",
+      "title": "Gameoverse · Résident · Archiviste des mondes",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-gameoverse-kaufmo-fusion",
+      "runtimeId": "glitch-gameoverse-kaufmo-fusion",
+      "category": "costume",
+      "title": "Gameoverse · Fusion · Clown de cristal",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-lackadaisy-kaufmo-hommage",
+      "runtimeId": "glitch-lackadaisy-kaufmo-hommage",
+      "category": "costume",
+      "title": "Lackadaisy · Hommage · Rocky Rickaby",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-lackadaisy-kaufmo-resident",
+      "runtimeId": "glitch-lackadaisy-kaufmo-resident",
+      "category": "costume",
+      "title": "Lackadaisy · Résident · Comédien du Little Daisy",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-lackadaisy-kaufmo-fusion",
+      "runtimeId": "glitch-lackadaisy-kaufmo-fusion",
+      "category": "costume",
+      "title": "Lackadaisy · Fusion · Chat de revue",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-smg4-kaufmo-hommage",
+      "runtimeId": "glitch-smg4-kaufmo-hommage",
+      "category": "costume",
+      "title": "SMG4 · Hommage · SMG4",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-smg4-kaufmo-resident",
+      "runtimeId": "glitch-smg4-kaufmo-resident",
+      "category": "costume",
+      "title": "SMG4 · Résident · Accessoiriste du studio",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:glitch-smg4-kaufmo-fusion",
+      "runtimeId": "glitch-smg4-kaufmo-fusion",
+      "category": "costume",
+      "title": "SMG4 · Fusion · Avatar de machinima",
+      "dependencies": [
+        "fighter:kaufmo"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:godcaine",
+      "runtimeId": "godcaine",
+      "category": "costume",
+      "title": "God Caine — Animatez",
+      "dependencies": [
+        "fighter:caine"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "costume:evilpomni-pendantz",
+      "runtimeId": "evilpomni-pendantz",
+      "category": "costume",
+      "title": "Evil Pomni — Pendantz",
+      "dependencies": [
+        "fighter:pomni"
+      ],
+      "legacyOpen": true,
+      "discovery": "identified",
+      "entitlement": "legacy-free",
+      "availability": "registered-in-current-runtime-not-reverified-here",
+      "accessRuleId": "EN-E2-RULE-LEGACY"
+    },
+    {
       "id": "stage:bigtop",
       "runtimeId": "bigtop",
       "category": "stage",

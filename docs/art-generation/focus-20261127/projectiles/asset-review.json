@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-27",
+  "nativeReceipts": "native-receipts.json",
+  "productionReport": "canvas/projectile-canvas-review.json",
+  "inspectedImage": "canvas/projectiles-native-and-reflected.png",
+  "sourceKind": "original-encore-projectile",
+  "summary": {
+    "images": 10,
+    "simulatedShots": 20,
+    "actualReflections": 20,
+    "nativeDrawChecks": 40,
+    "scenes": 0,
+    "aquaticOriginChecks": 0
+  },
+  "visualReview": "Les dix dessins isolés et leur planche de rendu ont été inspectés. Un motif unique par propriétaire, contours entiers et alpha natif ; les détails se distinguent à la taille de jeu. Les quatre colonnes de tir/renvoi conservent le même motif et un miroir cohérent. Aucun texte ni planche de poses dans les PNG sources.",
+  "mappedProjectileSlots": 13,
+  "canonicalPowerClaim": false,
+  "browserTestStatus": "not_executed",
+  "nativeBytesUnchanged": true,
+  "pass": true
+}

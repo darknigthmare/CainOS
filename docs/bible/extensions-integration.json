@@ -46,14 +46,18 @@
     }
   ],
   "sourceHashes": {
-    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/data.mjs": "0cb9d900db398f2ad27d8e5e62016ec7283b16972bbf5a0ad4feef24e47e1f46",
     "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
     "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
     "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
     "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
     "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
-    "docs/bible/character-associations.json": "d1d9e84d94fb5446e4d4dc6b19ccfbef8e19eeb9d4c385e4fa98375b0b9cab09"
+    "combat/app.mjs": "cff18fcfaebe9c500aea87f8d7bf127b40b25f5c98fee8a20c8ee00c7471a1b1",
+    "combat/selection-presentation.mjs": "d6930e9a950d61a40330358ee33c612b5aa3ca4ebf125ab575e441b1498f6ef1",
+    "combat/index.html": "9c13e4bcbb0c71ce96547e5e337e39a2198c2bb06cf35f3ae2e60faeec801b3b",
+    "combat/style.css": "96d25fec893466bda6dab66675c0e5241babea0b46427d69bc9b6bc141788b33",
+    "docs/bible/character-associations.json": "401ec2a0f5fa3870ca0ebea00662740ee26dfd9f72c9b80f4574db4adf721c26"
   },
   "counts": {
     "sections": 38,
@@ -80,13 +84,39 @@
     "animationsProducedByThisDocumentationPass": 0,
     "newRuntimeModesImplementedByThisDocumentationPass": 0
   },
+  "staticSelectionContinuation": {
+    "id": "EN-E1-STATIC-SELECTION-20261127",
+    "contractId": "EN-E1-SELECTION-CONTRACT",
+    "requirementSection": "EN-G32",
+    "status": "implemented-static-subset",
+    "source": "combat/selection-presentation.mjs",
+    "evidence": "docs/art-generation/completion-20261127/selection/README.md",
+    "behaviors": [
+      "Choix immédiat et annulation du dernier changement indépendants pour J1 et J2.",
+      "Jetons de portrait rejetant les réponses tardives ; choix conservé après une image indisponible.",
+      "Annonce accessible unique, badges de miroir et retour du focus sur la carte rétablie.",
+      "État temporaire effacé en quittant le menu ; aucun changement de profil, replay ou simulation."
+    ],
+    "excluded": [
+      "Gestes individuels d’entrée et de sortie",
+      "Animation des huit états",
+      "Taunts",
+      "Sélection d’équipe",
+      "Droits commerciaux"
+    ],
+    "verification": {
+      "nodeSuite": "tests/combat-selection-presentation.test.mjs",
+      "browserSuite": "tests/combat-selection-browser.mjs",
+      "resultPolicy": "Consulter les preuves datées de la livraison ; une suite inscrite ne constitue pas une exécution réussie."
+    }
+  },
   "runtimeInventoryAtGeneration": {
     "scope": "Catalogue courant référencé uniquement ; aucune réécriture des chiffres historiques de livraison.",
     "gameVersion": "0.7.0",
     "rulesVersion": "0.5.0",
     "simulationHz": 60,
     "fighters": 64,
-    "costumes": 546,
+    "costumes": 575,
     "stages": 27,
     "dedicatedArrangements": 64,
     "modes": 9,
@@ -129,9 +159,9 @@
   },
   "limitations": [
     "Les timings et coûts proposés sont des hypothèses à équilibrer.",
-    "Les fichiers de référence donnent un contrat ; les nouvelles fonctions restent non intégrées.",
+    "Le sous-ensemble statique de sélection est raccordé séparément ; les cycles complets, équipes, bonus, hub et droits restent à intégrer.",
     "Les 18+22 scénarios source restent à exécuter sur une future implémentation.",
-    "Les observations de base sont attachées au commit 6e44ab7 ; les comptes courants de catalogue sont indiqués séparément.",
+    "Les observations de base sont attachées au commit 6e44ab7 ; les comptes courants et la continuation statique du 27 novembre sont indiqués séparément.",
     "Les formes, gestes, duos et lieux nouveaux restent des créations Encore ou des adaptations, sans attestation canonique supplémentaire."
   ]
 }

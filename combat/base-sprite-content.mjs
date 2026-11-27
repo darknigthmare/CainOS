@@ -7,6 +7,12 @@ import { ART_FILES } from './offline-manifest.mjs';
 import { CONTINUATION_BASE_DEFINITIONS, CONTINUATION_BASE_REVIEWS } from './base-sprite-continuation-20261125.mjs';
 import { CONTINUATION_B_BASE_DEFINITIONS, CONTINUATION_B_BASE_REVIEWS } from './base-sprite-continuation-20261125-b.mjs';
 import { CONTINUATION_20261127_BASE_DEFINITIONS, CONTINUATION_20261127_BASE_REVIEWS } from './base-sprite-continuation-20261127.mjs';
+import { COMPLETION_20261127_KAUFMO_BASE_DEFINITIONS, COMPLETION_20261127_KAUFMO_BASE_REVIEWS } from './base-sprite-completion-20261127-kaufmo.mjs';
+import { COMPLETION_MAX_BASE_DEFINITIONS, COMPLETION_MAX_BASE_REVIEWS } from './base-sprite-completion-20261127-max.mjs';
+import { COMPLETION_ULTRAJUMP_BASE_DEFINITIONS, COMPLETION_ULTRAJUMP_BASE_REVIEWS } from './base-sprite-completion-20261127-ultrajumpmania.mjs';
+import { COMPLETION_20261127_GAMEOVERSE_BASE_DEFINITIONS, COMPLETION_20261127_GAMEOVERSE_BASE_REVIEWS } from './base-sprite-completion-20261127-gameoverse.mjs';
+import { COMPLETION_KAUFMO_LS_BASE_DEFINITIONS, COMPLETION_KAUFMO_LS_BASE_REVIEWS } from './base-sprite-completion-20261127-kaufmo-lackadaisy-smg4.mjs';
+import { FOCUS_20261127_BASE_DEFINITIONS, FOCUS_20261127_BASE_REVIEWS } from './base-sprite-focus-20261127.mjs';
 const publishedArt = new Set(ART_FILES);
 
 export const BASE_SPRITE_ART_SLOTS = Object.freeze(['selection', 'stance']);
@@ -17,6 +23,12 @@ export const BASE_SPRITE_REVIEWS = Object.freeze({
   ...CONTINUATION_BASE_REVIEWS,
   ...CONTINUATION_B_BASE_REVIEWS,
   ...CONTINUATION_20261127_BASE_REVIEWS,
+  ...COMPLETION_20261127_KAUFMO_BASE_REVIEWS,
+  ...COMPLETION_MAX_BASE_REVIEWS,
+  ...COMPLETION_20261127_GAMEOVERSE_BASE_REVIEWS,
+  ...COMPLETION_ULTRAJUMP_BASE_REVIEWS,
+  ...COMPLETION_KAUFMO_LS_BASE_REVIEWS,
+  ...FOCUS_20261127_BASE_REVIEWS,
   "contortionistzooble": {
     "status": "verified-base-files",
     "sha256": {
@@ -700,7 +712,7 @@ function staticFidelity(definition) {
 }
 
 /** Fixed append order after the complete 484-costume published prefix. */
-export const BASE_SPRITE_DEFINITIONS = Object.freeze([...crossoverDefinitions, ...circusDefinitions, ...CONTINUATION_BASE_DEFINITIONS, ...CONTINUATION_B_BASE_DEFINITIONS, ...CONTINUATION_20261127_BASE_DEFINITIONS].map(definition => Object.freeze({
+export const BASE_SPRITE_DEFINITIONS = Object.freeze([...crossoverDefinitions, ...circusDefinitions, ...CONTINUATION_BASE_DEFINITIONS, ...CONTINUATION_B_BASE_DEFINITIONS, ...CONTINUATION_20261127_BASE_DEFINITIONS, ...COMPLETION_20261127_KAUFMO_BASE_DEFINITIONS, ...COMPLETION_MAX_BASE_DEFINITIONS, ...COMPLETION_ULTRAJUMP_BASE_DEFINITIONS, ...COMPLETION_20261127_GAMEOVERSE_BASE_DEFINITIONS, ...COMPLETION_KAUFMO_LS_BASE_DEFINITIONS, ...FOCUS_20261127_BASE_DEFINITIONS].map(definition => Object.freeze({
   ...definition, introducedOn: definition.introducedOn || '2026-11-24', nativeFacing: definition.nativeFacing === -1 ? -1 : 1,
   baseOnly: true, presentation: 'static', authoredSlots: BASE_SPRITE_ART_SLOTS,
   assetReview: BASE_SPRITE_REVIEWS[definition.id] || null,

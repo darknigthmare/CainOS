@@ -34,6 +34,16 @@ export const PROJECTILE_ART = Object.freeze({
   'orbsman-orb': art('orbsman-orb', 36, 36, 'fixed'),
   'oyster-pearl': art('oyster-pearl', 36, 36, 'fixed'),
   'abel-program': art('abel-program', 38, 30, 'fixed'),
+  'abstraction-cellar-eye': art('abstraction-cellar-eye', 42, 38, 'fixed'),
+  'abstraction-aquatic-foam': art('abstraction-aquatic-foam', 50, 28, 'fixed'),
+  'abstraction-jax-shard': art('abstraction-jax-shard', 46, 30, 'fixed'),
+  'abstraction-queenie-watch': art('abstraction-queenie-watch', 38, 44, 'fixed'),
+  'abstraction-ribbit-skip': art('abstraction-ribbit-skip', 46, 31, 'fixed'),
+  'abstraction-pomni-door': art('abstraction-pomni-door', 44, 39, 'fixed'),
+  'abstraction-ragatha-needle': art('abstraction-ragatha-needle', 52, 24, 'fixed'),
+  'abstraction-gangle-ribbon': art('abstraction-gangle-ribbon', 48, 32, 'fixed'),
+  'abstraction-kinger-bastion': art('abstraction-kinger-bastion', 40, 42, 'fixed'),
+  'abstraction-zooble-fragment': art('abstraction-zooble-fragment', 43, 36, 'fixed'),
 });
 
 // These are documented Encore design choices, not official episode powers.
@@ -80,12 +90,30 @@ export const NPC_PROJECTILE_ART = Object.freeze({
   yellowmannequin: npc('module', 'Module détaché pour le mannequin numérique.'),
   magentamannequin: npc('module', 'Module détaché pour le mannequin numérique.'),
 });
+// Original accessories derive from each existing stance, never from a claimed
+// episode power. Keep this map separate from the forty promoted NPC choices.
+const abstraction = (motif, reason) => Object.freeze({
+  motif, reason, sourceKind: 'original-encore-projectile',
+});
+export const ABSTRACTION_PROJECTILE_ART = Object.freeze({
+  cellarabstraction: abstraction('abstraction-cellar-eye', 'Écaille bordeaux et noire à grand œil jaune ; motif original d’Encore tiré des facettes de sa garde.'),
+  aquaticabstraction: abstraction('abstraction-aquatic-foam', 'Vague noire à filaments courts et œil cyan, bleu et jaune ; accessoire original commun à ses deux tirs existants.'),
+  abstractedjax: abstraction('abstraction-jax-shard', 'Éclat noir et violet en flèche à œil magenta ; prolongement graphique original du contour de sa garde.'),
+  abstractedqueenie: abstraction('abstraction-queenie-watch', 'Fragment de bouclier à trois pointes, yeux violet et cyan ; motif de veille original, sans pouvoir officiel affirmé.'),
+  abstractedribbit: abstraction('abstraction-ribbit-skip', 'Éclat coudé à iris circulaires jaune et cyan ; motif de rebond original issu des angles de sa silhouette.'),
+  originalabstractedpomni: abstraction('abstraction-pomni-door', 'Arche brisée à quartiers rouges et bleus, moulinet et clochette ; accessoire de la projection originale de Pomni.'),
+  originalabstractedragatha: abstraction('abstraction-ragatha-needle', 'Aiguille facettée, bouton bleu, fil rouge et points beige ; accessoire original de sa projection de chiffon.'),
+  originalabstractedgangle: abstraction('abstraction-gangle-ribbon', 'Ruban noir et rouge en S, yeux colorés et éclat de masque blanc ; dessin original partagé par ses deux tirs.'),
+  originalabstractedkinger: abstraction('abstraction-kinger-bastion', 'Créneau noir et violet à œil cyan et courte garniture de cape ; fragment original de son bastion inventé.'),
+  originalabstractedzooble: abstraction('abstraction-zooble-fragment', 'Triangle asymétrique noir à pièces cyan, roses et jaunes ; accessoire original partagé par ses deux tirs.'),
+});
 const namedMoves = new Map(), fighterMoves = new Map();
 for (const fighter of FIGHTERS) {
   const slots = new Map();
   for (const [slot, move] of Object.entries(fighter.moves || {})) {
     if (move.kind !== 'projectile') continue;
-    const motif = NPC_PROJECTILE_ART[fighter.id]?.motif
+    const motif = ABSTRACTION_PROJECTILE_ART[fighter.id]?.motif
+      || NPC_PROJECTILE_ART[fighter.id]?.motif
       || projectilePresentation({ def: move }, { f: fighter });
     const spec = PROJECTILE_ART[motif];
     if (!spec) continue;

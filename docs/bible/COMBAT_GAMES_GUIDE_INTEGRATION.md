@@ -20,13 +20,13 @@ Base : [abb53b2](https://github.com/darknigthmare/CainOS/commit/abb53b227c76c478
 | --- | --- | --- |
 | Combattants / techniques | 64 / 640 | Définitions jouables |
 | Modes standards | 9 | Les Escales GLITCH sont des visites supplémentaires |
-| Costumes / archives | 546 / 184 | Identités, apparences et entrées d’archive distinctes |
+| Costumes / archives | 575 / 184 | Identités, apparences et entrées d’archive distinctes |
 | Arènes du catalogue | 27 = 18 + 9 | Les neuf crossovers sont déjà inclus dans 27 |
 | Arrangements dédiés | 64 | Décors réutilisés ; 91 définitions de stage au total |
 | Routes / rencontres / tableaux | 64 / 256 / 384 | Histoires individuelles déjà présentes |
-| Peintures intro/outro / compositions | 84 / 300 | Comptage via le sélecteur réel et le manifeste ; une composition ne signifie pas une image cassée |
-| Finales / amitiés / motifs de projectile | 192 / 64 / 23 | Adaptations de spectacle existantes |
-| Illustrations déclarées | 6218 | Inventaire du paquet existant, pas une nouvelle production |
+| Peintures intro/outro / compositions | 104 / 280 | Comptage via le sélecteur réel et le manifeste ; une composition ne signifie pas une image cassée |
+| Finales / amitiés / motifs de projectile | 192 / 64 / 33 | Adaptations de spectacle existantes |
+| Illustrations déclarées | 6315 | Inventaire du paquet existant, pas une nouvelle production |
 
 Le total de 36 arènes figurant dans certaines synthèses antérieures comptait deux fois les neuf crossovers. Le compte courant est corrigé à 27. Les rapports de validation datés restent des preuves historiques de leur propre lot ; leurs nombres de tests ne sont pas revendiqués comme exécutés dans cette passe.
 

@@ -1,12 +1,23 @@
 # Les collections GLITCH d’Encore
 
+## Catalogue courant — complétion du 27 novembre 2026
+
+Le catalogue courant comporte **465 crossovers**, dont **155 fusions originales**.
+Les quatorze propriétaires historiques, Ribbit, Queenie et Kaufmo ont chacun leurs
+neuf collections de trois styles. Max dispose des trois styles de Murder Drones
+et Meta Runner. Le [dossier de complétion](art-generation/completion-20261127/README.md)
+relie les nouvelles paires, les sources et les galeries. Les tableaux historiques
+ci-dessous conservent les chiffres et poses de leurs livraisons datées ; les
+nouvelles familles décrites comme statiques possèdent deux dessins distincts.
+
+
 Les collections permettent de rendre hommage à un personnage de l’œuvre, d’incarner un habitant de son univers ou d’adopter une fusion originale. Pour cette troisième apparence, la silhouette et les traits du combattant sont redessinés dans le langage visuel de la série. Le joueur garde les attaques, les statistiques et le scénario de son combattant. Les créations d’Encore sont des adaptations de fan. [Catalogue du studio](https://www.glitchprod.com/our-shows)
 
-Le catalogue courant compte **405 costumes crossover / 3 916 fichiers** dans neuf collections. Les **quatorze propriétaires historiques** conservent leurs 27 tenues chacun, soit les **378 costumes** du premier catalogue. **Ribbit** possède maintenant les **27/27 bases** des neuf collections : ses neuf tenues Murder Drones, Meta Runner et Sunset Paradise gardent leurs onze dessins ; dix-huit nouvelles tenues ont uniquement leur portrait et leur garde statique. Les **39 autres PNJ sans crossover** restent à produire ; le menu n’invente pas de costume pour un corps sans dessin complet.
+Le jalon du 24 novembre comptait **405 costumes crossover / 3 916 fichiers** dans neuf collections. Les **quatorze propriétaires historiques** conservent leurs 27 tenues chacun, soit les **378 costumes** du premier catalogue. **Ribbit** atteignait alors les **27/27 bases** des neuf collections : ses neuf tenues Murder Drones, Meta Runner et Sunset Paradise gardent leurs onze dessins ; dix-huit nouvelles tenues ont uniquement leur portrait et leur garde statique. Les **39 autres PNJ sans crossover** restaient à produire à cette étape ; le menu n’invente pas de costume pour un corps sans dessin complet.
 
 Le bloc historique du 18 novembre réunissait **252 tenues « Hommage » ou « Résident » et 126 fusions originales**. Ces tenues conservent leurs dix dessins de sélection, garde, attaque, victoire, entrée, marche, saut, accroupissement, impact et défaite. Leurs coups légers et lourds peuvent réemployer le dessin d’attaque pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent également chacun d’un dessin propre à leur coup lourd. Les **neuf familles Ribbit antérieures** possèdent chacune **onze PNG natifs**, avec un dessin distinct pour leur coup lourd. Les **dix-huit nouvelles familles** répondent à la demande de bases statiques : **deux PNG par tenue**, sans nouveaux dessins d’action ni animations.
 
-Le [point du 20 novembre](COMBAT_CONTINUATION_C_2026-11-20.md) ajoutait Ragatha, Gangle et Zooble Café : **33 PNG natifs**. À cette date, les crossovers comptaient **384 tenues / 3 847 fichiers**, distincts des **45 variantes Circus / 495 PNG** et des 51 costumes d’archive du vestiaire de **480 costumes**. Le [registre historique](art-generation/continuation-20261120-c/remaining-work.md) et le [dossier du classeur de cette étape](art-generation/continuation-20261120-c/workbook/README.md) conservent leurs résultats datés. Le [bilan courant des sprites de base](COMBAT_BASE_SPRITES_2026-11-24.md) et son [registre des manquants](art-generation/base-sprites-20261124/remaining-work.md) décrivent la dernière passe.
+Le [point du 20 novembre](COMBAT_CONTINUATION_C_2026-11-20.md) ajoutait Ragatha, Gangle et Zooble Café : **33 PNG natifs**. À cette date, les crossovers comptaient **384 tenues / 3 847 fichiers**, distincts des **45 variantes Circus / 495 PNG** et des 51 costumes d’archive du vestiaire de **480 costumes**. Le [registre historique](art-generation/continuation-20261120-c/remaining-work.md) et le [dossier du classeur de cette étape](art-generation/continuation-20261120-c/workbook/README.md) conservent leurs résultats datés. Le [bilan des sprites de base du 24 novembre](COMBAT_BASE_SPRITES_2026-11-24.md) et son [registre des manquants](art-generation/base-sprites-20261124/remaining-work.md) décrivent cette passe historique.
 
 La [continuation Kinger / Pomni / Meta Runner / softball](COMBAT_CONTINUATION_B_2026-11-20.md) avait ajouté **58 PNG natifs**, dont les 33 dessins des trois styles Meta Runner de Ribbit. Ses [galeries et preuves](art-generation/continuation-20261120-b/README.md) restent consultables.
 

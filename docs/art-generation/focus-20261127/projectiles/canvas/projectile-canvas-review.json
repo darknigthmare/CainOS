@@ -1,0 +1,3680 @@
+{
+  "schema": "encore-projectile-canvas-review/v1",
+  "createdAt": "2026-11-27T09:17:07.786Z",
+  "method": "Production Canvas2D renderer and unchanged CombatEngine, executed by Node and native Skia.",
+  "limitations": [
+    "No browser, DOM, input, audio or service-worker verification.",
+    "No canonical 1:1 certification; accessories and combat are original fan-game adaptations.",
+    "Gallery shots are repositioned; the trace keeps original simulated coordinates.",
+    "The fused trick box is not reflectable in the actual rules."
+  ],
+  "sourceHashes": {
+    "combat/data.mjs": "0cb9d900db398f2ad27d8e5e62016ec7283b16972bbf5a0ad4feef24e47e1f46",
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/projectile-art.mjs": "0ea35a7e6effef83f330fa542af2659209291ac45e8f3b8b9bd2b5271652091d",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/offline-manifest.mjs": "45b3255138fc717cdf78b7452eae2938daf1f8f7af3b269e1ff144ec09f56fc3",
+    "scripts/render-combat-projectile-review.mjs": "9e426ae05cee81eb46049a86c54f18553912bb16f9b8b7f96936042b504bad7b"
+  },
+  "images": [
+    {
+      "id": "abstraction-cellar-eye",
+      "file": "assets/encore/projectiles/abstraction-cellar-eye.png",
+      "sha256": "617728ee2bbddeed03333960b9a6d7a394a462d4dd85a04d80c3ffaea8247e23",
+      "bytes": 919089,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 27,
+        "y": 18,
+        "width": 75,
+        "height": 47
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-aquatic-foam",
+      "file": "assets/encore/projectiles/abstraction-aquatic-foam.png",
+      "sha256": "ee58e218d3fe201cc31d4e8f8539be61a13d3b6a87d85c6564653337a2fc6b51",
+      "bytes": 440213,
+      "cacheWidth": 128,
+      "cacheHeight": 64,
+      "visibleBounds": {
+        "x": 23,
+        "y": 18,
+        "width": 82,
+        "height": 28
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-jax-shard",
+      "file": "assets/encore/projectiles/abstraction-jax-shard.png",
+      "sha256": "23b8f45d5f652d5c2c49ebb8b3b1a5e08530470fa7c46c07fac88d53052bfa98",
+      "bytes": 1046257,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 19,
+        "y": 26,
+        "width": 91,
+        "height": 36
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-queenie-watch",
+      "file": "assets/encore/projectiles/abstraction-queenie-watch.png",
+      "sha256": "a19600a5663d200bb8a7316e64623bff867b9bebf4ddc16fdae660398b93fb23",
+      "bytes": 471886,
+      "cacheWidth": 128,
+      "cacheHeight": 117,
+      "visibleBounds": {
+        "x": 40,
+        "y": 9,
+        "width": 52,
+        "height": 88
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-ribbit-skip",
+      "file": "assets/encore/projectiles/abstraction-ribbit-skip.png",
+      "sha256": "83e328668ac16d3a06e568fc9ee117295accd7bd1c860bae7a7ae65905489f64",
+      "bytes": 1141377,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 18,
+        "y": 21,
+        "width": 97,
+        "height": 45
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-pomni-door",
+      "file": "assets/encore/projectiles/abstraction-pomni-door.png",
+      "sha256": "033cdab267ddc0dff8896b6154ac752bf1dff45239e5614a3d92362d29704a38",
+      "bytes": 1143827,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 28,
+        "y": 24,
+        "width": 70,
+        "height": 41
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-ragatha-needle",
+      "file": "assets/encore/projectiles/abstraction-ragatha-needle.png",
+      "sha256": "fbe78a018bad5288e56a50615326f4002133e5bff45a7d6b4b1000ebdd9ebbff",
+      "bytes": 737632,
+      "cacheWidth": 128,
+      "cacheHeight": 43,
+      "visibleBounds": {
+        "x": 16,
+        "y": 10,
+        "width": 95,
+        "height": 25
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-gangle-ribbon",
+      "file": "assets/encore/projectiles/abstraction-gangle-ribbon.png",
+      "sha256": "3e6806cb23b71f004b77e6605d1108caa9a17339211367bc2e54fdebac9d891e",
+      "bytes": 993432,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 32,
+        "y": 24,
+        "width": 66,
+        "height": 38
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-kinger-bastion",
+      "file": "assets/encore/projectiles/abstraction-kinger-bastion.png",
+      "sha256": "356024b00fb956edd454e43a443ee0813c2f9d4ad9b115af552f7d38b6b0e65b",
+      "bytes": 1216372,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 26,
+        "y": 22,
+        "width": 73,
+        "height": 41
+      },
+      "nativeFileUnmodified": true
+    },
+    {
+      "id": "abstraction-zooble-fragment",
+      "file": "assets/encore/projectiles/abstraction-zooble-fragment.png",
+      "sha256": "f81a92cbeaadcbd74dd515e274f1a6cf8c110c80f51654c597e504b328b773ea",
+      "bytes": 1078682,
+      "cacheWidth": 128,
+      "cacheHeight": 85,
+      "visibleBounds": {
+        "x": 29,
+        "y": 15,
+        "width": 70,
+        "height": 55
+      },
+      "nativeFileUnmodified": true
+    }
+  ],
+  "shots": [
+    {
+      "id": "abstraction-cellar-eye",
+      "fighter": "cellarabstraction",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Abstraction du cellier · Œil détaché",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 426,
+        "y": 417,
+        "vx": 13,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction du cellier · Œil détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 113,
+              "height": 151
+            },
+            "-1": {
+              "forward": 113,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep1",
+              "glitch-cellar"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction du cellier. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "cellarabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 13,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 854,
+        "y": 417,
+        "vx": -13,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction du cellier · Œil détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 113,
+              "height": 151
+            },
+            "-1": {
+              "forward": 113,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep1",
+              "glitch-cellar"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction du cellier. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "cellarabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 13,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 417,
+        "vx": -13,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction du cellier · Œil détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 113,
+              "height": 151
+            },
+            "-1": {
+              "forward": 113,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep1",
+              "glitch-cellar"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction du cellier. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "cellarabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 49,
+        "delay": 0,
+        "age": 23,
+        "kind": "glitch",
+        "distance": 299,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 417,
+        "vx": 13,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction du cellier · Œil détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 113,
+              "height": 151
+            },
+            "-1": {
+              "forward": 113,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep1",
+              "glitch-cellar"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction du cellier. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "cellarabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 49,
+        "delay": 0,
+        "age": 23,
+        "kind": "glitch",
+        "distance": 299,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 42.00000000000001,
+          "logicalHeight": 26.320000000000004,
+          "nativeVelocity": 13,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 42.00000000000001,
+          "logicalHeight": 26.320000000000004,
+          "nativeVelocity": -13,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 42.00000000000001,
+          "logicalHeight": 26.320000000000004,
+          "nativeVelocity": -13,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 42.00000000000001,
+          "logicalHeight": 26.320000000000004,
+          "nativeVelocity": 13,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-aquatic-foam",
+      "fighter": "aquaticabstraction",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Abstraction aquatique · Écume d’erreur",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 415,
+        "y": 468,
+        "vx": 9,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction aquatique · Écume d’erreur",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 9,
+          "life": 98,
+          "height": 100,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 100,
+          "projectileOrigin": {
+            "1": {
+              "forward": 106,
+              "height": 100
+            },
+            "-1": {
+              "forward": 106,
+              "height": 100
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction aquatique. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "aquaticabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 97,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 9,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 865,
+        "y": 468,
+        "vx": -9,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction aquatique · Écume d’erreur",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 9,
+          "life": 98,
+          "height": 100,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 100,
+          "projectileOrigin": {
+            "1": {
+              "forward": 106,
+              "height": 100
+            },
+            "-1": {
+              "forward": 106,
+              "height": 100
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction aquatique. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "aquaticabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 97,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 9,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 468,
+        "vx": -9,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction aquatique · Écume d’erreur",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 9,
+          "life": 98,
+          "height": 100,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 100,
+          "projectileOrigin": {
+            "1": {
+              "forward": 106,
+              "height": 100
+            },
+            "-1": {
+              "forward": 106,
+              "height": 100
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction aquatique. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "aquaticabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 65,
+        "delay": 0,
+        "age": 33,
+        "kind": "glitch",
+        "distance": 297,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 468,
+        "vx": 9,
+        "vy": 0,
+        "def": {
+          "name": "Abstraction aquatique · Écume d’erreur",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 9,
+          "life": 98,
+          "height": 100,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 100,
+          "projectileOrigin": {
+            "1": {
+              "forward": 106,
+              "height": 100
+            },
+            "-1": {
+              "forward": 106,
+              "height": 100
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Abstraction aquatique. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "aquaticabstraction::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 65,
+        "delay": 0,
+        "age": 33,
+        "kind": "glitch",
+        "distance": 297,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 50,
+          "logicalHeight": 17.073170731707318,
+          "nativeVelocity": 9,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 50,
+          "logicalHeight": 17.073170731707318,
+          "nativeVelocity": -9,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 50,
+          "logicalHeight": 17.073170731707318,
+          "nativeVelocity": -9,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 50,
+          "logicalHeight": 17.073170731707318,
+          "nativeVelocity": 9,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-jax-shard",
+      "fighter": "abstractedjax",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Jax — abstraction · Fragment du contour",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 413,
+        "y": 401,
+        "vx": 17,
+        "vy": 0,
+        "def": {
+          "name": "Jax — abstraction · Fragment du contour",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 72,
+          "height": 167,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "marked",
+          "duration": 120,
+          "projectileOrigin": {
+            "1": {
+              "forward": 96,
+              "height": 167
+            },
+            "-1": {
+              "forward": 96,
+              "height": 167
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9",
+              "store-jax-abstraction-identity"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Jax — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedjax::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 17,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 867,
+        "y": 401,
+        "vx": -17,
+        "vy": 0,
+        "def": {
+          "name": "Jax — abstraction · Fragment du contour",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 72,
+          "height": 167,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "marked",
+          "duration": 120,
+          "projectileOrigin": {
+            "1": {
+              "forward": 96,
+              "height": 167
+            },
+            "-1": {
+              "forward": 96,
+              "height": 167
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9",
+              "store-jax-abstraction-identity"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Jax — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedjax::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 17,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 401,
+        "vx": -17,
+        "vy": 0,
+        "def": {
+          "name": "Jax — abstraction · Fragment du contour",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 72,
+          "height": 167,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "marked",
+          "duration": 120,
+          "projectileOrigin": {
+            "1": {
+              "forward": 96,
+              "height": 167
+            },
+            "-1": {
+              "forward": 96,
+              "height": 167
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9",
+              "store-jax-abstraction-identity"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Jax — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedjax::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 53,
+        "delay": 0,
+        "age": 19,
+        "kind": "glitch",
+        "distance": 323,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 401,
+        "vx": 17,
+        "vy": 0,
+        "def": {
+          "name": "Jax — abstraction · Fragment du contour",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 72,
+          "height": 167,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "marked",
+          "duration": 120,
+          "projectileOrigin": {
+            "1": {
+              "forward": 96,
+              "height": 167
+            },
+            "-1": {
+              "forward": 96,
+              "height": 167
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9",
+              "store-jax-abstraction-identity"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Jax — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedjax::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 53,
+        "delay": 0,
+        "age": 19,
+        "kind": "glitch",
+        "distance": 323,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 18.197802197802197,
+          "nativeVelocity": 17,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 18.197802197802197,
+          "nativeVelocity": -17,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 18.197802197802197,
+          "nativeVelocity": -17,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 18.197802197802197,
+          "nativeVelocity": 17,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-queenie-watch",
+      "fighter": "abstractedqueenie",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Queenie — abstraction · Éclat de veille",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 411,
+        "y": 414,
+        "vx": 13,
+        "vy": 0,
+        "def": {
+          "name": "Queenie — abstraction · Éclat de veille",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 154,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 154
+            },
+            "-1": {
+              "forward": 98,
+              "height": 154
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep3"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Queenie — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedqueenie::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 13,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 869,
+        "y": 414,
+        "vx": -13,
+        "vy": 0,
+        "def": {
+          "name": "Queenie — abstraction · Éclat de veille",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 154,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 154
+            },
+            "-1": {
+              "forward": 98,
+              "height": 154
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep3"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Queenie — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedqueenie::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 13,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 414,
+        "vx": -13,
+        "vy": 0,
+        "def": {
+          "name": "Queenie — abstraction · Éclat de veille",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 154,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 154
+            },
+            "-1": {
+              "forward": 98,
+              "height": 154
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep3"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Queenie — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedqueenie::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 48,
+        "delay": 0,
+        "age": 24,
+        "kind": "glitch",
+        "distance": 312,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 414,
+        "vx": 13,
+        "vy": 0,
+        "def": {
+          "name": "Queenie — abstraction · Éclat de veille",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 154,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 154
+            },
+            "-1": {
+              "forward": 98,
+              "height": 154
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep3"
+            ],
+            "observedTraits": [],
+            "sourceKind": "official-identity",
+            "combatAdaptation": "Technique special propre à Queenie — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedqueenie::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 48,
+        "delay": 0,
+        "age": 24,
+        "kind": "glitch",
+        "distance": 312,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 26,
+          "logicalHeight": 44,
+          "nativeVelocity": 13,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 26,
+          "logicalHeight": 44,
+          "nativeVelocity": -13,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 26,
+          "logicalHeight": 44,
+          "nativeVelocity": -13,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 26,
+          "logicalHeight": 44,
+          "nativeVelocity": 13,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-ribbit-skip",
+      "fighter": "abstractedribbit",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Ribbit — abstraction · Éclat du rebond",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 415,
+        "y": 422,
+        "vx": 17,
+        "vy": 0,
+        "def": {
+          "name": "Ribbit — abstraction · Éclat du rebond",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 146,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 146
+            },
+            "-1": {
+              "forward": 98,
+              "height": 146
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Ribbit — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedribbit::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 54,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 17,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 865,
+        "y": 422,
+        "vx": -17,
+        "vy": 0,
+        "def": {
+          "name": "Ribbit — abstraction · Éclat du rebond",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 146,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 146
+            },
+            "-1": {
+              "forward": 98,
+              "height": 146
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Ribbit — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedribbit::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 54,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 17,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 422,
+        "vx": -17,
+        "vy": 0,
+        "def": {
+          "name": "Ribbit — abstraction · Éclat du rebond",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 146,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 146
+            },
+            "-1": {
+              "forward": 98,
+              "height": 146
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Ribbit — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedribbit::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 37,
+        "delay": 0,
+        "age": 18,
+        "kind": "glitch",
+        "distance": 306,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 422,
+        "vx": 17,
+        "vy": 0,
+        "def": {
+          "name": "Ribbit — abstraction · Éclat du rebond",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 146,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 98,
+              "height": 146
+            },
+            "-1": {
+              "forward": 98,
+              "height": 146
+            }
+          },
+          "fidelity": {
+            "sourceIds": [
+              "ep9"
+            ],
+            "observedTraits": [],
+            "sourceKind": "archive-attribution",
+            "combatAdaptation": "Technique special propre à Ribbit — abstraction. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "abstractedribbit::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 37,
+        "delay": 0,
+        "age": 18,
+        "kind": "glitch",
+        "distance": 306,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 21.34020618556701,
+          "nativeVelocity": 17,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 21.34020618556701,
+          "nativeVelocity": -17,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 21.34020618556701,
+          "nativeVelocity": -17,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 46,
+          "logicalHeight": 21.34020618556701,
+          "nativeVelocity": 17,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-pomni-door",
+      "fighter": "originalabstractedpomni",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Pomni — abstraction originale · Éclat de la fausse porte",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 408,
+        "y": 428,
+        "vx": 17,
+        "vy": 0,
+        "def": {
+          "name": "Pomni — abstraction originale · Éclat de la fausse porte",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 140,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 91,
+              "height": 140
+            },
+            "-1": {
+              "forward": 91,
+              "height": 140
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Pomni — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedpomni::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 54,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 17,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 872,
+        "y": 428,
+        "vx": -17,
+        "vy": 0,
+        "def": {
+          "name": "Pomni — abstraction originale · Éclat de la fausse porte",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 140,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 91,
+              "height": 140
+            },
+            "-1": {
+              "forward": 91,
+              "height": 140
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Pomni — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedpomni::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 54,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 17,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 428,
+        "vx": -17,
+        "vy": 0,
+        "def": {
+          "name": "Pomni — abstraction originale · Éclat de la fausse porte",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 140,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 91,
+              "height": 140
+            },
+            "-1": {
+              "forward": 91,
+              "height": 140
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Pomni — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedpomni::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 36,
+        "delay": 0,
+        "age": 19,
+        "kind": "glitch",
+        "distance": 323,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 428,
+        "vx": 17,
+        "vy": 0,
+        "def": {
+          "name": "Pomni — abstraction originale · Éclat de la fausse porte",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 430,
+          "reach": 600,
+          "level": "mid",
+          "cost": 20,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 17,
+          "life": 55,
+          "height": 140,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 91,
+              "height": 140
+            },
+            "-1": {
+              "forward": 91,
+              "height": 140
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Pomni — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedpomni::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 36,
+        "delay": 0,
+        "age": 19,
+        "kind": "glitch",
+        "distance": 323,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 44,
+          "logicalHeight": 25.771428571428572,
+          "nativeVelocity": 17,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 44,
+          "logicalHeight": 25.771428571428572,
+          "nativeVelocity": -17,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 44,
+          "logicalHeight": 25.771428571428572,
+          "nativeVelocity": -17,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 44,
+          "logicalHeight": 25.771428571428572,
+          "nativeVelocity": 17,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-ragatha-needle",
+      "fighter": "originalabstractedragatha",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Ragatha — abstraction originale · Aiguille de signal",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 421,
+        "y": 419,
+        "vx": 18,
+        "vy": 0,
+        "def": {
+          "name": "Ragatha — abstraction originale · Aiguille de signal",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 450,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 18,
+          "life": 62,
+          "height": 149,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 75,
+          "projectileOrigin": {
+            "1": {
+              "forward": 103,
+              "height": 149
+            },
+            "-1": {
+              "forward": 103,
+              "height": 149
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Ragatha — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedragatha::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 61,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 18,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 859,
+        "y": 419,
+        "vx": -18,
+        "vy": 0,
+        "def": {
+          "name": "Ragatha — abstraction originale · Aiguille de signal",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 450,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 18,
+          "life": 62,
+          "height": 149,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 75,
+          "projectileOrigin": {
+            "1": {
+              "forward": 103,
+              "height": 149
+            },
+            "-1": {
+              "forward": 103,
+              "height": 149
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Ragatha — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedragatha::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 61,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 18,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 419,
+        "vx": -18,
+        "vy": 0,
+        "def": {
+          "name": "Ragatha — abstraction originale · Aiguille de signal",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 450,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 18,
+          "life": 62,
+          "height": 149,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 75,
+          "projectileOrigin": {
+            "1": {
+              "forward": 103,
+              "height": 149
+            },
+            "-1": {
+              "forward": 103,
+              "height": 149
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Ragatha — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedragatha::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 45,
+        "delay": 0,
+        "age": 17,
+        "kind": "glitch",
+        "distance": 306,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 419,
+        "vx": 18,
+        "vy": 0,
+        "def": {
+          "name": "Ragatha — abstraction originale · Aiguille de signal",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 450,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 18,
+          "life": 62,
+          "height": 149,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "status": "slow",
+          "duration": 75,
+          "projectileOrigin": {
+            "1": {
+              "forward": 103,
+              "height": 149
+            },
+            "-1": {
+              "forward": 103,
+              "height": 149
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Ragatha — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedragatha::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 45,
+        "delay": 0,
+        "age": 17,
+        "kind": "glitch",
+        "distance": 306,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 52,
+          "logicalHeight": 13.684210526315791,
+          "nativeVelocity": 18,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 52,
+          "logicalHeight": 13.684210526315791,
+          "nativeVelocity": -18,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 52,
+          "logicalHeight": 13.684210526315791,
+          "nativeVelocity": -18,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 52,
+          "logicalHeight": 13.684210526315791,
+          "nativeVelocity": 18,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-gangle-ribbon",
+      "fighter": "originalabstractedgangle",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Gangle — abstraction originale · Ruban détaché",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 407,
+        "y": 409,
+        "vx": 14,
+        "vy": 0,
+        "def": {
+          "name": "Gangle — abstraction originale · Ruban détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 24,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 14,
+          "life": 65,
+          "height": 159,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 27,
+          "projectileOrigin": {
+            "1": {
+              "forward": 93,
+              "height": 159
+            },
+            "-1": {
+              "forward": 93,
+              "height": 159
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Gangle — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedgangle::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 64,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 14,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 873,
+        "y": 409,
+        "vx": -14,
+        "vy": 0,
+        "def": {
+          "name": "Gangle — abstraction originale · Ruban détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 24,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 14,
+          "life": 65,
+          "height": 159,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 27,
+          "projectileOrigin": {
+            "1": {
+              "forward": 93,
+              "height": 159
+            },
+            "-1": {
+              "forward": 93,
+              "height": 159
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Gangle — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedgangle::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 64,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 14,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 409,
+        "vx": -14,
+        "vy": 0,
+        "def": {
+          "name": "Gangle — abstraction originale · Ruban détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 24,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 14,
+          "life": 65,
+          "height": 159,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 27,
+          "projectileOrigin": {
+            "1": {
+              "forward": 93,
+              "height": 159
+            },
+            "-1": {
+              "forward": 93,
+              "height": 159
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Gangle — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedgangle::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 42,
+        "delay": 0,
+        "age": 23,
+        "kind": "glitch",
+        "distance": 322,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 409,
+        "vx": 14,
+        "vy": 0,
+        "def": {
+          "name": "Gangle — abstraction originale · Ruban détaché",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 410,
+          "reach": 600,
+          "level": "mid",
+          "cost": 24,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 14,
+          "life": 65,
+          "height": 159,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 27,
+          "projectileOrigin": {
+            "1": {
+              "forward": 93,
+              "height": 159
+            },
+            "-1": {
+              "forward": 93,
+              "height": 159
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Gangle — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedgangle::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 42,
+        "delay": 0,
+        "age": 23,
+        "kind": "glitch",
+        "distance": 322,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 48,
+          "logicalHeight": 27.636363636363637,
+          "nativeVelocity": 14,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 48,
+          "logicalHeight": 27.636363636363637,
+          "nativeVelocity": -14,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 48,
+          "logicalHeight": 27.636363636363637,
+          "nativeVelocity": -14,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 48,
+          "logicalHeight": 27.636363636363637,
+          "nativeVelocity": 14,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-kinger-bastion",
+      "fighter": "originalabstractedkinger",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Kinger — abstraction originale · Éclat du bastion",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 431,
+        "y": 398,
+        "vx": 13,
+        "vy": 0,
+        "def": {
+          "name": "Kinger — abstraction originale · Éclat du bastion",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 170,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 118,
+              "height": 170
+            },
+            "-1": {
+              "forward": 118,
+              "height": 170
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Kinger — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedkinger::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 13,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 849,
+        "y": 398,
+        "vx": -13,
+        "vy": 0,
+        "def": {
+          "name": "Kinger — abstraction originale · Éclat du bastion",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 170,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 118,
+              "height": 170
+            },
+            "-1": {
+              "forward": 118,
+              "height": 170
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Kinger — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedkinger::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 71,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 13,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 398,
+        "vx": -13,
+        "vy": 0,
+        "def": {
+          "name": "Kinger — abstraction originale · Éclat du bastion",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 170,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 118,
+              "height": 170
+            },
+            "-1": {
+              "forward": 118,
+              "height": 170
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Kinger — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedkinger::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 50,
+        "delay": 0,
+        "age": 22,
+        "kind": "glitch",
+        "distance": 286,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 398,
+        "vx": 13,
+        "vy": 0,
+        "def": {
+          "name": "Kinger — abstraction originale · Éclat du bastion",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 23,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 13,
+          "life": 72,
+          "height": 170,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "projectileOrigin": {
+            "1": {
+              "forward": 118,
+              "height": 170
+            },
+            "-1": {
+              "forward": 118,
+              "height": 170
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Kinger — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedkinger::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 50,
+        "delay": 0,
+        "age": 22,
+        "kind": "glitch",
+        "distance": 286,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 1
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 40,
+          "logicalHeight": 22.46575342465753,
+          "nativeVelocity": 13,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 40,
+          "logicalHeight": 22.46575342465753,
+          "nativeVelocity": -13,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 40,
+          "logicalHeight": 22.46575342465753,
+          "nativeVelocity": -13,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 40,
+          "logicalHeight": 22.46575342465753,
+          "nativeVelocity": 13,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    },
+    {
+      "id": "abstraction-zooble-fragment",
+      "fighter": "originalabstractedzooble",
+      "slot": "special",
+      "reflectable": true,
+      "moveName": "Zooble — abstraction originale · Fragment dissident",
+      "rightSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 424,
+        "y": 417,
+        "vx": 16,
+        "vy": 0,
+        "def": {
+          "name": "Zooble — abstraction originale · Fragment dissident",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 16,
+          "life": 60,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 24,
+          "projectileOrigin": {
+            "1": {
+              "forward": 108,
+              "height": 151
+            },
+            "-1": {
+              "forward": 108,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Zooble — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedzooble::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 59,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 16,
+        "range": 600,
+        "face": 1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "leftSpawn": {
+        "id": 1,
+        "owner": 0,
+        "x": 856,
+        "y": 417,
+        "vx": -16,
+        "vy": 0,
+        "def": {
+          "name": "Zooble — abstraction originale · Fragment dissident",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 16,
+          "life": 60,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 24,
+          "projectileOrigin": {
+            "1": {
+              "forward": 108,
+              "height": 151
+            },
+            "-1": {
+              "forward": 108,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Zooble — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedzooble::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 1,
+        "life": 59,
+        "delay": 0,
+        "age": 1,
+        "kind": "glitch",
+        "distance": 16,
+        "range": 600,
+        "face": -1,
+        "reflections": 0,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "rightReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 698,
+        "y": 417,
+        "vx": -16,
+        "vy": 0,
+        "def": {
+          "name": "Zooble — abstraction originale · Fragment dissident",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 16,
+          "life": 60,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 24,
+          "projectileOrigin": {
+            "1": {
+              "forward": 108,
+              "height": 151
+            },
+            "-1": {
+              "forward": 108,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Zooble — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedzooble::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 41,
+        "delay": 0,
+        "age": 19,
+        "kind": "glitch",
+        "distance": 304,
+        "range": 600,
+        "face": -1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "leftReflection": {
+        "id": 1,
+        "owner": 1,
+        "x": 582,
+        "y": 417,
+        "vx": 16,
+        "vy": 0,
+        "def": {
+          "name": "Zooble — abstraction originale · Fragment dissident",
+          "kind": "projectile",
+          "startup": 21,
+          "active": 1,
+          "recovery": 29,
+          "damage": 470,
+          "reach": 600,
+          "level": "mid",
+          "cost": 25,
+          "meter": 0,
+          "cooldown": 0,
+          "tag": "glitch",
+          "speed": 16,
+          "life": 60,
+          "height": 151,
+          "description": "Un fragment numérique traverse la piste selon les règles du jeu.",
+          "slot": "special",
+          "provenance": "Adaptation gameplay",
+          "returnAt": 24,
+          "projectileOrigin": {
+            "1": {
+              "forward": 108,
+              "height": 151
+            },
+            "-1": {
+              "forward": 108,
+              "height": 151
+            }
+          },
+          "fidelity": {
+            "sourceIds": [],
+            "observedTraits": [],
+            "sourceKind": "original-encore",
+            "combatAdaptation": "Technique special propre à Zooble — abstraction originale. Nom, effets numériques, portée, dégâts, ressources et fenêtres sont créés pour Encore.",
+            "reviewStatus": "Adaptation de combat",
+            "reviewScope": "Les sources et le classement décrivent l’identité de la silhouette, pas l’exécution du coup. Les gestes de combat et les formes originales restent des créations du fan-game."
+          },
+          "id": "originalabstractedzooble::special",
+          "count": 1,
+          "interval": 0
+        },
+        "damageScale": 0.85,
+        "life": 41,
+        "delay": 0,
+        "age": 19,
+        "kind": "glitch",
+        "distance": 304,
+        "range": 600,
+        "face": 1,
+        "reflections": 1,
+        "bounces": 0,
+        "returned": false,
+        "dead": false,
+        "hitTargets": {},
+        "steady": false,
+        "burstId": 1,
+        "hitMax": 2
+      },
+      "drawChecks": [
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 43,
+          "logicalHeight": 33.785714285714285,
+          "nativeVelocity": 16,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 43,
+          "logicalHeight": 33.785714285714285,
+          "nativeVelocity": -16,
+          "owner": 0,
+          "reflections": 0,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 43,
+          "logicalHeight": 33.785714285714285,
+          "nativeVelocity": -16,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": -1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": -1,
+          "zoom": 1
+        },
+        {
+          "exactSource": true,
+          "uniformScale": true,
+          "facingVerified": true,
+          "logicalWidth": 43,
+          "logicalHeight": 33.785714285714285,
+          "nativeVelocity": 16,
+          "owner": 1,
+          "reflections": 1,
+          "matrix": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "direction": 1,
+          "zoom": 1
+        }
+      ]
+    }
+  ],
+  "aquaticOrigins": [],
+  "outputImages": [
+    "projectiles-native-and-reflected.png"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "images": 10,
+    "simulatedShots": 20,
+    "actualReflections": 20,
+    "nativeDrawChecks": 40,
+    "scenes": 0,
+    "aquaticOriginChecks": 0
+  }
+}

@@ -43,6 +43,10 @@ const { standingIllustration } = await import('../combat/illustrations.mjs');
 const { PROJECTILE_ART, projectileArtSpec } = await import('../combat/projectile-art.mjs');
 const args = process.argv.slice(2), at = args.indexOf('--output');
 const output = path.resolve(at < 0 ? 'audit-combat/projectiles-2026-11-24' : args[at + 1]);
+const prefixAt = args.indexOf('--motif-prefix'), motifPrefix = prefixAt < 0 ? '' : args[prefixAt + 1];
+assert.equal(typeof motifPrefix, 'string', '--motif-prefix requires a prefix');
+const selectedSpecs = Object.values(PROJECTILE_ART).filter(spec => spec.id.startsWith(motifPrefix));
+assert.ok(selectedSpecs.length, 'No projectile motif matches the selected prefix');
 assert.ok(!args.includes('--abstraction-scenes'), 'The optional six-scene appendix was not restored; use the separate stage review.');
 await fs.mkdir(output, { recursive: true });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -102,11 +106,11 @@ function backdrop(ctx, width, height) {
     ctx.fillStyle='#253247'; ctx.fillRect(x,y,20,20);
   }
 }
-const galleryHeight=Object.keys(PROJECTILE_ART).length*100+150;
+const galleryHeight=selectedSpecs.length*100+150;
 const gallery=createCanvas(1280,galleryHeight), renderer=new CombatRenderer(gallery);
 gallery.width=1280; gallery.height=galleryHeight;
 const ctx=renderer.ctx; backdrop(ctx,1280,galleryHeight);
-ctx.fillStyle='#fff2d0'; ctx.font='bold 24px sans-serif'; ctx.fillText(`ENCORE / ${Object.keys(PROJECTILE_ART).length} PROJECTILES / RENDU NATIF`,20,36);
+ctx.fillStyle='#fff2d0'; ctx.font='bold 24px sans-serif'; ctx.fillText(`ENCORE / ${selectedSpecs.length} PROJECTILES / RENDU NATIF`,20,36);
 ctx.font='15px sans-serif';
 for(const [label,x] of [['Motif',20],['Tir → · 1×',260],['Tir ← · 1×',430],['Renvoi ← · 1×',590],['Renvoi → · 1×',760],['Détail · 3×',1010]]) ctx.fillText(label,x,68);
 let sampled=[];
@@ -133,7 +137,7 @@ function drawShot(spec, frame, snapshot, x, y, zoom=1) {
     nativeVelocity:snapshot.q.vx,owner:snapshot.q.owner,reflections:snapshot.q.reflections,
     matrix:{a,b,c,d},direction:Math.sign(snapshot.q.vx),zoom};
 }
-for(const [index,spec] of Object.values(PROJECTILE_ART).entries()) {
+for(const [index,spec] of selectedSpecs.entries()) {
   assert.ok(ART_FILES.includes(spec.src),spec.id+': published');
   const file=path.resolve(repo,'combat',spec.src),bytes=await fs.readFile(file);
   const frame=await renderer.projectileArt.load(spec);assert.ok(frame?.canvas);

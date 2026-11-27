@@ -4,6 +4,8 @@
 
 Les deux textes originaux prolongent le guide déjà intégré : **38 rubriques, 114 exigences**, chacune avec résultat attendu et statuts séparés. Le [registre d’intégration](extensions-integration.json) et le [contrat structuré](extensions-design.json) sont reproductibles. Ce chantier documentaire ne livre aucune nouvelle animation, aucun tag ni accès commercial opérationnel.
 
+La [continuation du menu statique du 27 novembre](../art-generation/completion-20261127/selection/README.md) implémente le choix immédiat, un retour indépendant par joueur, les réponses de portrait tardives et les annonces accessibles. Ce sous-ensemble est décrit dans `staticSelectionContinuation`. Les 128 briefs d’entrée et de sortie gardent leur statut de production pour les gestes individuels et le cycle complet ; leurs identifiants servent déjà de provenance au menu.
+
 ## Sources originales conservées
 
 | Document | Sections | Octets | Empreinte SHA-256 |
@@ -33,6 +35,7 @@ Les [fiches de personnalité](PERSONNALITE_SELECTION_ET_EQUIPES.md), les [bonus 
 | Source | Observation |
 | --- | --- |
 | [combat/app.mjs](../../combat/app.mjs) | Cartes, portraits, aperçu de costume et décor présents ; aucun cycle complet de désélection dédié observé au baseline. |
+| [combat/selection-presentation.mjs](../../combat/selection-presentation.mjs) | Continuation du 27 novembre : sous-ensemble statique de sélection intégré. Les cycles corporels complets et leur statut de production restent distincts. |
 | [combat/render-sequences.mjs](../../combat/render-sequences.mjs) | Cinq événements de présentation par combattant, pour intro et résultats ; distincts des nouveaux taunts et états de menu. |
 | [combat/session.mjs](../../combat/session.mjs) | Dix slots de techniques et replays 0.7.0 utilisant les règles 0.5.0 ; nouvelles actions tag à versionner. |
 | [combat/session.mjs](../../combat/session.mjs) | Progression de routes/défis/médailles présente ; pas de ledger de sources permanentes/temporaires dans le profil v1 du baseline. |

@@ -156,7 +156,7 @@ export function buildCharacterAssociations({ repoRoot = ROOT, design } = {}) {
       statusAxes: {
         lore: 'existing-evidence-and-uncertainties-preserved', design: 'current-runtime-linked',
         assets: 'manifest-paths-resolved-not-visually-recertified', integration: 'existing-runtime',
-        validation: 'catalog-reference-validation-only', publication: 'baseline-runtime-already-on-pr-14',
+        validation: 'catalog-reference-validation-only', publication: 'current-worktree-snapshot-see-pr-14-delivery-evidence',
       },
     };
   });

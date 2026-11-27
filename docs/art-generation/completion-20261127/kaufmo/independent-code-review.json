@@ -1,0 +1,93 @@
+{
+  "schema": "encore-independent-code-review/v1",
+  "generatedAt": "2026-11-27T08:33:46.324435+00:00",
+  "reviewerScope": "Read-only independent review of selection lifecycle and scene tests, plus authorized registration of the focused selection browser suite.",
+  "sourceHashes": {
+    "combat/selection-presentation.mjs": "d6930e9a950d61a40330358ee33c612b5aa3ca4ebf125ab575e441b1498f6ef1",
+    "combat/app.mjs": "cff18fcfaebe9c500aea87f8d7bf127b40b25f5c98fee8a20c8ee00c7471a1b1",
+    "combat/index.html": "9c13e4bcbb0c71ce96547e5e337e39a2198c2bb06cf35f3ae2e60faeec801b3b",
+    "combat/style.css": "96d25fec893466bda6dab66675c0e5241babea0b46427d69bc9b6bc141788b33",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+    "combat/sw.js": "b10302d7cacdbb4301cb0dbba59d146484cca5516633a1be2adf14497ded6a49",
+    "combat/stage-scenes-20261127.mjs": "56c10ee2b379b69b2aa9aacf2763544e352a23e6a65d27c91df3f15bba0736be",
+    "combat/stage-scenes-completion-20261127.mjs": "937193aadd5252082ea0f0839d88434200bb7f4149294e1287c942dd30b7568b",
+    "combat/stage-parallax.mjs": "22dfae75cf842c484d1de9189ce56f23b0018e9d7620450304ae6bc5fb882b0f",
+    "tests/combat-selection-presentation.test.mjs": "ffa6d527594d0c9eb613a013ca2f97faa014c5257af3d28ebdd6d645eaeb4393",
+    "tests/combat-selection-browser.mjs": "91a7223d9c9f84059049a76ea53f6f2b45584f8d3f7ac261f58efd25fbabf910",
+    "tests/combat-accessibility-browser.mjs": "ac7445ddc2d51d520421ce3f37dee6dd896f95522d27b22f2715130374f77d45",
+    "tests/combat-stage-art-browser.mjs": "d6891d0455bd273ef887defd7b6b71d00938b5eccbd1bc3c15404fd76bddaa3c",
+    "tests/combat-stage-recovery.test.mjs": "23483f493eda979a6d1ad8b44697a9fba8bea47d17378b8ae6a2c4251bd9f434",
+    "scripts/run-combat-ci.mjs": "8b2e957ad17ebb576f815443fec0a67023fb4305cc81998247083ae8789bd93d",
+    "scripts/combat-ci-suites.mjs": "6f736ce5590c923dfdf36d53a7cef33999c044b9529febd186a5eae891b527b8",
+    "scripts/combat-workbook-current-data.mjs": "d862b3750ef2f7ede45541eee41141377a279f9ba39cdece927fa7ed701c09a0",
+    "combat/fidelity.mjs": "a94b236d2270d3e4fcec38c876dac7958d89fe03ce1cc9af8100ae439694c2a8",
+    "combat/fidelity-max-illustrated-20261127.mjs": "753c1ccf48c5961bbed5fd011a22dfbc311011490c8799e74058d8918eff32ec",
+    "scripts/build-combat-extensions.mjs": "a88451830506993db74fd9db13734d010bdeb6b9b420c09ef268f191226e6750"
+  },
+  "runtimeFindings": [],
+  "resolvedFindings": [
+    {
+      "id": "stage-cache-intermediary",
+      "file": "tests/combat-stage-art-browser.mjs",
+      "impact": "grounds is now a rebuilt full scene. Using it as the interstitial scene preloads its complete two-scene cache entry, so the later forced-failure test for grounds never observes a failed image request.",
+      "resolution": "Both retry/cache loops now visit training, which is outside rebuiltIds.",
+      "verification": "Corrected code inspected; current browser test not executed by this reviewer."
+    },
+    {
+      "id": "selection-service-worker-routing",
+      "files": [
+        "tests/combat-selection-browser.mjs",
+        "tests/combat-accessibility-browser.mjs"
+      ],
+      "impact": "The installed service worker claims the page and intercepts ART_FILES requests. page.route cannot hold requests intercepted by the worker, invalidating the delayed-image scenario.",
+      "resolution": "The desktop contexts exercising page.route explicitly use serviceWorkers:block. The separate offline suite remains in CI.",
+      "source": "https://playwright.dev/docs/api/class-page#page-route",
+      "verification": "Both corrected contexts inspected; syntax checks recorded by owning agent. No current Chromium launch by this reviewer."
+    },
+    {
+      "id": "selection-suite-not-in-ci",
+      "file": "scripts/combat-ci-suites.mjs",
+      "impact": "The focused selection browser script was absent from the canonical CI/workbook suite list.",
+      "resolution": "Registered tests/combat-selection-browser.mjs with audit-combat/static-selection/browser-report.json immediately after the unchanged accessibility suite.",
+      "verification": "Executed Node assertions:22 configurations,21 existing configurations preserved byte-for-value,unique labels,all configured script paths exist."
+    },
+    {
+      "id": "max-codex-portrait-provenance",
+      "file": "combat/app.mjs",
+      "impact": "The illustrated Max provenance was displayed in the codex while paintPortrait still chose the historical green pixel atlas there.",
+      "resolution": "The portrait loader now requests the selection PNG specifically for Max on the codex screen. Its updated provenance discloses the differences remaining in the older base PNG.",
+      "verification": "Targeted condition inspected in paintPortrait; browser execution pending."
+    }
+  ],
+  "reviewedBehaviors": [
+    "Per-side one-step undo preserves exact fighter/costume and the other side.",
+    "Repeated equal choice keeps current undo and portrait token.",
+    "Portrait completion is guarded by per-side monotonic token, connected Canvas and current select screen.",
+    "Old asynchronous draws target the old detached Canvas.",
+    "Leaving selection, choosing a mode, starting a match or importing a replay invalidates transient state.",
+    "Profile import returns through renderSettings; selection state is never serialized.",
+    "Mirrored fighter choice renders both J1 and J2 badges.",
+    "Undo restores keyboard focus to the corresponding fighter card.",
+    "The thirteen rebuilt scenes retain published full-plane loading, cache/failure tests and reduced-motion assertions.",
+    "The Max illustrated provenance getter leaves the historical atlas registry and FIGHTERS fidelity references unchanged.",
+    "The codex requests the illustrated Max portrait when it displays the illustrated provenance.",
+    "staticSelectionContinuation documents a completed static subset without declaring the128 entrance/exit gesture briefs produced."
+  ],
+  "execution": {
+    "browserExecutedByReviewer": false,
+    "localBrowserRestriction": "Existing Chromium attempts were interrupted by SIGKILL; no retry in this review.",
+    "nodeCatalogCheck": {
+      "pass": true,
+      "configuredBrowserSuites": 22,
+      "existingSuitesRetained": 21
+    },
+    "selectionUnitTests": "11 passing tests reported separately by owning agent; not rerun during this code review."
+  },
+  "limits": [
+    "Reading and source hashing are not a completed browser run.",
+    "No screen reader, physical phone or physical controller testing.",
+    "The previous successful published CI run covers its own prior commit only.",
+    "No canonical 1:1 art or authored selection animation certification."
+  ]
+}

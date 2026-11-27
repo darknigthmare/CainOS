@@ -1,0 +1,759 @@
+{
+  "schema": "encore-kaufmo-static-completion/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "productionTool": "Built-in image_gen.imagegen, one call per native asset",
+  "phase": "static-bases-only",
+  "newNativeImages": 18,
+  "newAppearanceFamilies": 9,
+  "previousUnpublishedImagesRecovered": 0,
+  "references": [
+    {
+      "path": "assets/encore/stance/kaufmo.png",
+      "sha256": "6e58a6cba0f4e0f87fa53d1e6e43d824c31d082882d27528df6112dea2eb3e07",
+      "bytes": 799856
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/kaufmo-plush-1.png",
+      "sha256": "ce4eb564c2d6ab4551783b61c6938c38b636cf852ad165861a74a7504e78ab2f",
+      "bytes": 3088448
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/references/sunset-meggy-official.png",
+      "sha256": "8a99fbfdfe7c24693d9eb498c47a1ace34f1fd24ce27ff5ca361feba6b6cd6e9",
+      "bytes": 847830
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/references/gaslight-mel-official.png",
+      "sha256": "0be012598b4234e4743c7f0188efe6dc556b5298b290157bbf182aefc99ed79e",
+      "bytes": 142117
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/references/gaslight-cast-official.png",
+      "sha256": "e01baba3cdf3a715fca8c7f538aadb217afd7fe9653ba999927a60d65162c1c0",
+      "bytes": 3048405
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/references/guinevere-official-plush.webp",
+      "sha256": "a2cdfc93daeb29513d5f4fc664772883cadc9af64c10a34c4a3c8db91311abb0",
+      "bytes": 275054
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/references/guinevere-world-official.png",
+      "sha256": "3a8417d19ff5d60d1a90739372b18cd7db0df49e7a1046fd1b122be7869b7846",
+      "bytes": 288751
+    }
+  ],
+  "referenceUrls": {
+    "sunset-meggy-official.png": "https://static.wixstatic.com/media/84ed6a_109178180d764e20997af8ae3139c94f~mv2.png",
+    "gaslight-official-banner.png": "https://static.wixstatic.com/media/84ed6a_0c73f396bbad4f968b8d2f71de4c4a3e~mv2.png",
+    "guinevere-official-plush.webp": "https://static.wixstatic.com/media/1d8dbc_f28a2040f2e8485baa8070f21de86b58~mv2.webp",
+    "gaslight-mel-official.png": "https://glitchproductions.store/cdn/shop/files/mel-animatez-1.png?v=1762499001&width=1600",
+    "gaslight-cast-official.png": "https://static.wixstatic.com/media/84ed6a_902a9c84f20c4a3787deb6bade19922e~mv2.png",
+    "guinevere-world-official.png": "https://static.wixstatic.com/media/84ed6a_29eefccd132c41f3bb38385b7cf61146~mv2.png"
+  },
+  "families": [
+    {
+      "id": "glitch-sunsetparadise-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "series": "sunsetparadise",
+      "seriesTitle": "Sunset Paradise",
+      "style": "hommage",
+      "label": "Hommage · Meggy",
+      "traits": [
+        "Visage, cône jaune à pompon rouge et collerette bleue de Kaufmo conservés.",
+        "T-shirt sportif blanc à bordure marine, trois boutons rouges, short marine, lunettes posées sur le bord bleu.",
+        "Jambes jaunes et grandes chaussures rouges ; hommage vestimentaire à Meggy, sans anatomie humaine empruntée."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/sunsetparadise/kaufmo/hommage/selection.png",
+          "bytes": 1000950,
+          "sha256": "f784b7f7ee4509d4924cd5d950b9b52b8a5cb8d0eb66c4d61758a63fce882333",
+          "width": 1182,
+          "height": 1330,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            141,
+            21,
+            1073,
+            1311
+          ],
+          "fullyTransparentPixels": 952932,
+          "lowAlphaEdgePixels": 13090,
+          "visiblePixelsOver12": 606038,
+          "pixelsAtLeast240Alpha": 598476,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/sunsetparadise/kaufmo/hommage/stance.png",
+          "bytes": 868189,
+          "sha256": "bf72fb3450ca32ef1a691fea4900dadbab4c0777c77964375088773394c57492",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            132,
+            8,
+            940,
+            1360
+          ],
+          "fullyTransparentPixels": 1072564,
+          "lowAlphaEdgePixels": 11663,
+          "visiblePixelsOver12": 489681,
+          "pixelsAtLeast240Alpha": 481856,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "sunset-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/sunset-paradise"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-sunsetparadise-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "series": "sunsetparadise",
+      "seriesTitle": "Sunset Paradise",
+      "style": "resident",
+      "label": "Résident · Bonimenteur du port",
+      "traits": [
+        "Kaufmo normal conservé, cône jaune, gants blancs et sourire rouge.",
+        "Veste turquoise à revers corail, chemise crème, pantalon ocre et chaussures rouges.",
+        "Petite corde attachée et broche de phare ; habitant original de Port Aurora."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/sunsetparadise/kaufmo/resident/selection.png",
+          "bytes": 987604,
+          "sha256": "84947d620812a2f699dc0a0fca7ab74eed9019be94f03c0dcede88847ea369a8",
+          "width": 1218,
+          "height": 1291,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            158,
+            22,
+            1103,
+            1272
+          ],
+          "fullyTransparentPixels": 972573,
+          "lowAlphaEdgePixels": 9758,
+          "visiblePixelsOver12": 590107,
+          "pixelsAtLeast240Alpha": 582830,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/sunsetparadise/kaufmo/resident/stance.png",
+          "bytes": 941505,
+          "sha256": "ab5f22a9211aeec09fc1c90f9888f267f5a59057ec86a1c1bb3e59dcb357bc82",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            137,
+            15,
+            941,
+            1365
+          ],
+          "fullyTransparentPixels": 1059942,
+          "lowAlphaEdgePixels": 9925,
+          "visiblePixelsOver12": 504041,
+          "pixelsAtLeast240Alpha": 496345,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "sunset-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/sunset-paradise"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-sunsetparadise-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "series": "sunsetparadise",
+      "seriesTitle": "Sunset Paradise",
+      "style": "fusion",
+      "label": "Fusion · Clown du récif",
+      "traits": [
+        "Tête en coquillage blanc conservant les yeux, triangles et sourire de Kaufmo ; cône corail jaune.",
+        "Torse corallien ocre, ventre coquillage crème, trois nodules rouges et collerette coquillage bleue.",
+        "Membres articulés en coquillage et corail, mains blanches et pieds rouges : transformation corporelle originale."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/sunsetparadise/kaufmo/fusion/selection.png",
+          "bytes": 1222271,
+          "sha256": "9d0acea9b3815904666d665ed34031c06fcf876d7f1116a882538ae4731f0e21",
+          "width": 1199,
+          "height": 1312,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            123,
+            19,
+            1103,
+            1285
+          ],
+          "fullyTransparentPixels": 921522,
+          "lowAlphaEdgePixels": 10878,
+          "visiblePixelsOver12": 640688,
+          "pixelsAtLeast240Alpha": 633335,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/sunsetparadise/kaufmo/fusion/stance.png",
+          "bytes": 1041363,
+          "sha256": "740317e5bfd1b9dc4fef34a057906f0dedb109636c8e4a0cbacc0d140f3ac3c0",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            126,
+            12,
+            943,
+            1357
+          ],
+          "fullyTransparentPixels": 1096677,
+          "lowAlphaEdgePixels": 10532,
+          "visiblePixelsOver12": 466699,
+          "pixelsAtLeast240Alpha": 458608,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "sunset-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/sunset-paradise"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-gaslightdistrict-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "series": "gaslightdistrict",
+      "seriesTitle": "The Gaslight District",
+      "style": "hommage",
+      "label": "Hommage · Melancholy Hill",
+      "traits": [
+        "Visage blanc et chapeau conique jaune de Kaufmo conservés, sans cheveux ni arme.",
+        "Combinaison brune segmentée évoquant la figurine officielle Mel, col crème et manches évasées.",
+        "Gants blancs, trois pompons rouges, collerette bleue et grandes chaussures rouges visibles."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/gaslightdistrict/kaufmo/hommage/selection.png",
+          "bytes": 1021362,
+          "sha256": "2da322024a768f88c99884428e176a337e7f224b5c1db2b936112e19bfead88d",
+          "width": 1199,
+          "height": 1312,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            106,
+            15,
+            1121,
+            1295
+          ],
+          "fullyTransparentPixels": 920372,
+          "lowAlphaEdgePixels": 8971,
+          "visiblePixelsOver12": 643745,
+          "pixelsAtLeast240Alpha": 636495,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/gaslightdistrict/kaufmo/hommage/stance.png",
+          "bytes": 830350,
+          "sha256": "440c0357b14974e84de5f3ece6950f6ce1500e90700c8b69904779c253776850",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            129,
+            8,
+            942,
+            1359
+          ],
+          "fullyTransparentPixels": 1098055,
+          "lowAlphaEdgePixels": 9428,
+          "visiblePixelsOver12": 466425,
+          "pixelsAtLeast240Alpha": 458789,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "gaslight-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/gaslight-district",
+        "https://glitchproductions.store/products/mel-animatez"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-gaslightdistrict-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "series": "gaslightdistrict",
+      "seriesTitle": "The Gaslight District",
+      "style": "resident",
+      "label": "Résident · Afficheur des quais",
+      "traits": [
+        "Kaufmo normal, chapeau jaune et collerette bleue maintenus.",
+        "Manteau de travail pétrole, gilet rouille à trois boutons rouges, pantalon ardoise et chaussures rouges.",
+        "Tube de papier roulé fixé à la ceinture ; métier et tenue originaux du fan-game."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/gaslightdistrict/kaufmo/resident/selection.png",
+          "bytes": 1097630,
+          "sha256": "baac0ffee77cdf6d25260919dad352ee1ff779b1ecca93c1dc5493c235b3a6aa",
+          "width": 1199,
+          "height": 1312,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            127,
+            12,
+            1098,
+            1296
+          ],
+          "fullyTransparentPixels": 926882,
+          "lowAlphaEdgePixels": 9782,
+          "visiblePixelsOver12": 636424,
+          "pixelsAtLeast240Alpha": 629064,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/gaslightdistrict/kaufmo/resident/stance.png",
+          "bytes": 959567,
+          "sha256": "13cb4144263f1c123cb18e8e8e19c4b5323ed75002548fa302251fb9512b8eb4",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            128,
+            9,
+            943,
+            1360
+          ],
+          "fullyTransparentPixels": 1053204,
+          "lowAlphaEdgePixels": 9545,
+          "visiblePixelsOver12": 511159,
+          "pixelsAtLeast240Alpha": 503546,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "gaslight-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/gaslight-district",
+        "https://glitchproductions.store/products/mel-animatez"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-gaslightdistrict-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "series": "gaslightdistrict",
+      "seriesTitle": "The Gaslight District",
+      "style": "fusion",
+      "label": "Fusion · Pantin des brumes",
+      "traits": [
+        "Masque ovale ivoire à discrètes réparations, yeux noirs, triangles et sourire rouge de Kaufmo.",
+        "Corps de pantin en bois pétrole et cire, articulations de laiton, mains sculptées blanches.",
+        "Cône en bois ocre, collerette métallique bleue et trois sceaux rouges ; fusion originale, sans abstraction ni gore."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/gaslightdistrict/kaufmo/fusion/selection.png",
+          "bytes": 1446202,
+          "sha256": "0cad86bc95453e5bf2f27a90b078336397ba77ee8420b098d79786d936a11f80",
+          "width": 1149,
+          "height": 1369,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            116,
+            23,
+            1085,
+            1332
+          ],
+          "fullyTransparentPixels": 950861,
+          "lowAlphaEdgePixels": 13680,
+          "visiblePixelsOver12": 608440,
+          "pixelsAtLeast240Alpha": 599437,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/gaslightdistrict/kaufmo/fusion/stance.png",
+          "bytes": 1117340,
+          "sha256": "6cbb4343d90b39cbb9244fd6d301f157c10e9786784484e3593194cc97b27698",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            129,
+            12,
+            940,
+            1359
+          ],
+          "fullyTransparentPixels": 1126487,
+          "lowAlphaEdgePixels": 13217,
+          "visiblePixelsOver12": 434204,
+          "pixelsAtLeast240Alpha": 425524,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "gaslight-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/gaslight-district",
+        "https://glitchproductions.store/products/mel-animatez"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-knightsofguinevere-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "series": "knightsofguinevere",
+      "seriesTitle": "Knights of Guinevere",
+      "style": "hommage",
+      "label": "Hommage · Guinevere",
+      "traits": [
+        "Kaufmo conserve son visage, son cône jaune et sa collerette bleue.",
+        "Tunique lavande à manches bouffantes, panneau blanc bordé d’or, étoiles claires et petit ornement de couronne.",
+        "Trois pompons rouges, pantalon jaune et chaussures rouges ; hommage vestimentaire Guinevere, sans changement de corps."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/knightsofguinevere/kaufmo/hommage/selection.png",
+          "bytes": 1151878,
+          "sha256": "97f7911ad288e261bcee2a717b06518581e0fb8240df8b235a0feebaebaab465",
+          "width": 1170,
+          "height": 1345,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            119,
+            16,
+            1106,
+            1337
+          ],
+          "fullyTransparentPixels": 898367,
+          "lowAlphaEdgePixels": 10850,
+          "visiblePixelsOver12": 664433,
+          "pixelsAtLeast240Alpha": 656278,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/knightsofguinevere/kaufmo/hommage/stance.png",
+          "bytes": 931194,
+          "sha256": "230ecb6665d103224731dbcb91e5d48223d7a0013c800428e6808040bfd772d0",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            130,
+            10,
+            944,
+            1357
+          ],
+          "fullyTransparentPixels": 1063284,
+          "lowAlphaEdgePixels": 9506,
+          "visiblePixelsOver12": 501118,
+          "pixelsAtLeast240Alpha": 493642,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "knights-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-knightsofguinevere-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "series": "knightsofguinevere",
+      "seriesTitle": "Knights of Guinevere",
+      "style": "resident",
+      "label": "Résident · Réparateur du parc",
+      "traits": [
+        "Kaufmo normal préservé, visage blanc, chapeau jaune, gants blancs.",
+        "Veste cobalt et cyan à coutures dorées, trois boutons rouges, pantalon bleu ardoise.",
+        "Pochette d’outils et clé fixées à la ceinture ; technicien du parc original pour Encore."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/knightsofguinevere/kaufmo/resident/selection.png",
+          "bytes": 973768,
+          "sha256": "6c23be250aa0eb09c551245ac4d0f531353b8d645b661bc41836e5eebe0ba3ca",
+          "width": 1214,
+          "height": 1295,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            188,
+            22,
+            1081,
+            1277
+          ],
+          "fullyTransparentPixels": 985558,
+          "lowAlphaEdgePixels": 8274,
+          "visiblePixelsOver12": 578298,
+          "pixelsAtLeast240Alpha": 571882,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/knightsofguinevere/kaufmo/resident/stance.png",
+          "bytes": 878172,
+          "sha256": "1082ef8a00102973dd9d6b47d895213ed5b6a9750e0df34ac1a0b464e9ea180f",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            133,
+            12,
+            942,
+            1357
+          ],
+          "fullyTransparentPixels": 1076589,
+          "lowAlphaEdgePixels": 10285,
+          "visiblePixelsOver12": 487034,
+          "pixelsAtLeast240Alpha": 478905,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "knights-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-knightsofguinevere-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "series": "knightsofguinevere",
+      "seriesTitle": "Knights of Guinevere",
+      "style": "fusion",
+      "label": "Fusion · Automate de parade",
+      "traits": [
+        "Masque blanc de Kaufmo et cône doré à sphère rouge ; identité lisible dans une tête d’automate.",
+        "Torse porcelaine lavande et blanc, trois gemmes rouges, collerette céramique bleue et motifs d’étoiles.",
+        "Membres mécaniques fins, jointures sphériques dorées et pieds rouges ; vraie refonte corporelle originale."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/knightsofguinevere/kaufmo/fusion/selection.png",
+          "bytes": 1058206,
+          "sha256": "828c353add73da84c8e7d786a5f49d58fb0c59c475ab2242a5cdf235b330ef7e",
+          "width": 1199,
+          "height": 1312,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            138,
+            16,
+            1092,
+            1281
+          ],
+          "fullyTransparentPixels": 969410,
+          "lowAlphaEdgePixels": 10201,
+          "visiblePixelsOver12": 593477,
+          "pixelsAtLeast240Alpha": 585851,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/knightsofguinevere/kaufmo/fusion/stance.png",
+          "bytes": 1667069,
+          "sha256": "7840c7cea2f7bd5c2f9179eed8da17c686530a9e34ef5a6d7186eff8f26eb7f4",
+          "width": 1024,
+          "height": 1536,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            83,
+            15,
+            893,
+            1516
+          ],
+          "fullyTransparentPixels": 1029446,
+          "lowAlphaEdgePixels": 14720,
+          "visiblePixelsOver12": 528698,
+          "pixelsAtLeast240Alpha": 520461,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": "knights-prompts.json",
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    }
+  ],
+  "nativeOutputs": {
+    "assets/encore/crossovers/sunsetparadise/kaufmo/hommage/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-546b6191-8a05-41ed-9ea8-07e7aced42b9.png",
+    "assets/encore/crossovers/sunsetparadise/kaufmo/hommage/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-6d5741a3-8330-4894-92b0-0791b0717d14.png",
+    "assets/encore/crossovers/sunsetparadise/kaufmo/resident/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-16719428-8b6b-458b-9e07-fe97ee95d6c4.png",
+    "assets/encore/crossovers/sunsetparadise/kaufmo/resident/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-950ed71c-e5be-485e-9a3f-bb7ee21d723b.png",
+    "assets/encore/crossovers/sunsetparadise/kaufmo/fusion/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-3ea21769-dfba-4c60-bfb4-05e1f747e1d5.png",
+    "assets/encore/crossovers/sunsetparadise/kaufmo/fusion/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-fd8163ca-051c-4b45-b8cc-2e90abd0cd63.png",
+    "assets/encore/crossovers/gaslightdistrict/kaufmo/hommage/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-f85eaf56-ae54-48bf-888b-959855c860ce.png",
+    "assets/encore/crossovers/gaslightdistrict/kaufmo/hommage/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-47be5f82-3220-4b01-ac8a-6046c24a1e16.png",
+    "assets/encore/crossovers/gaslightdistrict/kaufmo/resident/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-62091ce2-6443-4aa9-8925-038807d01415.png",
+    "assets/encore/crossovers/gaslightdistrict/kaufmo/resident/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-9369135e-3051-4d4f-b9db-405f5fd822e9.png",
+    "assets/encore/crossovers/gaslightdistrict/kaufmo/fusion/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-496e71c0-8c1a-4cfe-80e6-29d847bababc.png",
+    "assets/encore/crossovers/gaslightdistrict/kaufmo/fusion/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-c1a1d98b-a007-452a-84f9-b48de8f318c3.png",
+    "assets/encore/crossovers/knightsofguinevere/kaufmo/hommage/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-43c79332-3812-4270-8caa-7a0bb0577421.png",
+    "assets/encore/crossovers/knightsofguinevere/kaufmo/hommage/stance.png": "Native image_gen result data URI; automatic disk path not returned",
+    "assets/encore/crossovers/knightsofguinevere/kaufmo/resident/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-ec399413-cf37-44c5-b312-af8fa4ee526b.png",
+    "assets/encore/crossovers/knightsofguinevere/kaufmo/resident/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-31ca2145-1ce8-4347-847c-2961c5939075.png",
+    "assets/encore/crossovers/knightsofguinevere/kaufmo/fusion/selection.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-bc160ced-651d-4c8f-b6f7-264254fd6963.png",
+    "assets/encore/crossovers/knightsofguinevere/kaufmo/fusion/stance.png": "/workspace/scratch/8db10b0df53d/generated_images/exec-91ce6e75-9d09-46db-9591-fdf5b9f2a81a.png"
+  },
+  "scope": "Création originale de crossover pour Encore : un portrait de sélection et une garde statique séparés, un personnage par image. La garde est réutilisée pour les états non dessinés. Aucun cycle d’animation ou dessin d’action ajouté ; aucune apparition canonique affirmée.",
+  "canonicalOneToOneCertified": false,
+  "reviewStatus": "Native files and pair consistency reviewed; production Canvas is a separate gate.",
+  "alternativeCandidates": [
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/candidates/gaslight-resident-four-buttons.png",
+      "status": "Superseded: fourth torso button corrected by native imagegen edit."
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/kaufmo/candidates/knights-fusion-glow.png",
+      "status": "Superseded by native transparency-focused edit. RGB beneath alpha0 can appear as colored haze in raw previews; proper alpha composition is clean. No pixel processing was applied."
+    }
+  ]
+}

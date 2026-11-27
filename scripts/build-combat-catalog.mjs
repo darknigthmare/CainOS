@@ -35,6 +35,29 @@ const abelMannequin = archive.find(item => item.id === 'abelfullbody');
 if (!abel || !abelMannequin) throw new Error('Missing Abel mannequin reference');
 abel.sprite = { ...abelMannequin.sprite };
 abel.provenance = 'Mannequin articulé souriant : identité corrigée depuis la cellule abelfullbody de CainOS. Adaptation illustrée du projet ; proportions non certifiées sur une image d’épisode.';
+// The historical black/red Evil Pomni drawing is not the official red/yellow
+// Pendantz design. Keep its ID and pixels for archive compatibility while
+// exposing the attribution correction in the archive card itself.
+for (const id of ['evilpomni', 'rivalbaseballpomni']) {
+  const entry = archive.find(item => item.id === id);
+  if (!entry) throw new Error('Missing historical Evil Pomni archive: ' + id);
+  entry.identityId = 'evilpomni-big-top';
+  entry.archiveAliases = ['evilpomni', 'rivalbaseballpomni'];
+  entry.referenceUrls = [
+    'https://glitchproductions.store/products/pomni-animiniz-pendantz',
+    'https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s',
+  ];
+  entry.supersededArtwork = {
+    selection: `../assets/encore/selection/${id}.png`,
+    replacementAppearanceId: 'evilpomni-pendantz',
+    preserved: true,
+    reason: id === 'evilpomni'
+      ? 'L’ancienne création noire/rouge à boutons en croix ne reproduit pas le costume officiel rouge/jaune à accents bleus.'
+      : 'L’ancienne création à étoiles, lunettes et yeux jaunes ne reproduit pas la Pomni adverse de l’épisode 5.',
+  };
+  entry.provenance = 'Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.';
+  entry.status = 'Alias du même PNJ ; ancienne illustration remplacée après validation de la paire';
+}
 if (new Set(archive.map(item => item.id)).size !== archive.length) throw new Error('Duplicate atlas ID');
 for (const item of archive) await fs.access(path.resolve(root, 'combat', item.sprite.src));
 await fs.mkdir(path.join(root, 'combat'), { recursive: true });

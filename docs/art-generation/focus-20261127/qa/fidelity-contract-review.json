@@ -1,0 +1,259 @@
+{
+  "schema": "encore-fidelity-contract-review/v1",
+  "recordedAt": "2026-11-27T09:37:57.484456+00:00",
+  "reviewer": "target_audit",
+  "result": "no-blocking-findings",
+  "reviewedFile": {
+    "path": "tests/combat-fidelity.test.mjs",
+    "sha256": "bf54fe12192b4128a8a1065bedbbb8cc5f04d778bd9d9be56b524c38479929cc"
+  },
+  "method": "Lecture seule du diff et des contrats complets, comparée aux métadonnées et aux documents de référence archivés. Aucun nouveau test exécuté pendant cette revue.",
+  "testSuitesRerun": [],
+  "runtimeFilesModified": [],
+  "historicalEvidenceModified": [],
+  "preservedSourceContracts": {
+    "httpsRequired": true,
+    "sourceIdsRemainUniqueAndResolved": true,
+    "nonemptyTitleKindScopeAndMembershipAssertionsRetained": true,
+    "animateCafe": {
+      "hostname": "prtimes.jp",
+      "pathname": "/main/html/rd/p/000008857.000016756.html",
+      "kind": "Illustration officielle de collaboration commerciale",
+      "ids": [
+        "animate-cafe-ribbit",
+        "animate-cafe-kinger",
+        "animate-cafe-pomni",
+        "animate-cafe-ragatha",
+        "animate-cafe-gangle",
+        "animate-cafe-zooble",
+        "animate-cafe-jax",
+        "animate-cafe-caine"
+      ],
+      "allExistingIndividualScopeAssertionsUnchanged": true
+    },
+    "thirdPartyCopies": {
+      "hostnames": [
+        "static.wikia.nocookie.net",
+        "pbs.twimg.com"
+      ],
+      "kind": "Copie sur un hébergement tiers",
+      "existingSecondaryOriginAndDirectComparisonLimitsUnchanged": true
+    },
+    "existingStoryboards": [
+      {
+        "id": "glitch-barnoir-storyboards",
+        "video": "L4p2gN2CzsA",
+        "time": "690"
+      },
+      {
+        "id": "glitch-softballfield-storyboards",
+        "video": "L4p2gN2CzsA",
+        "time": "1120"
+      }
+    ],
+    "existingStoryboardRequirementsUnchanged": {
+      "hostname": "www.youtube.com",
+      "pathname": "/watch",
+      "tileSize": "320 × 180",
+      "scopeLimit": "Aucun visionnage du flux complet revendiqué"
+    },
+    "allOtherPreviouslyAllowedHostnamesRetained": true
+  },
+  "newHostBoundaries": [
+    {
+      "hostname": "smg4.store",
+      "pathname": "/products/smg4-plush",
+      "allowedSourceIds": [
+        "encore-kaufmo-smg4-hommage-20261127-completion",
+        "encore-kaufmo-smg4-resident-20261127-completion",
+        "encore-kaufmo-smg4-fusion-20261127-completion"
+      ],
+      "kind": "Création originale pour Encore avec références officielles",
+      "requiredScope": [
+        "créations Encore, non des apparitions officielles"
+      ],
+      "globallyOpenedWithoutIdPathAndScopeGuards": false
+    },
+    {
+      "hostname": "www.tvmaze.com",
+      "pathname": "/characters/1304195/the-amazing-digital-circus-max",
+      "allowedSourceIds": [
+        "max-tvmaze-reproduction-20261127"
+      ],
+      "kind": "Reproduction sur un hébergement tiers",
+      "requiredScope": [
+        "reproduction secondaire complète les cellules officielles",
+        "ne devient pas une source primaire et ne mesure pas les proportions du modèle"
+      ],
+      "globallyOpenedWithoutIdPathAndScopeGuards": false
+    }
+  ],
+  "newStoryboardBoundaries": {
+    "sharedRequirements": {
+      "kind": "Vignettes de l’épisode officiel",
+      "hostname": "www.youtube.com",
+      "pathname": "/watch",
+      "tileSize": "320 × 180",
+      "sourceIdMustBeExplicitlyListed": true
+    },
+    "entries": [
+      {
+        "id": "glitch-pilot-locations-20261127",
+        "video": "HwAPLk_sQ3w",
+        "time": null,
+        "requiredScope": [
+          "230/260 s",
+          "650/740 s",
+          "990/1010 s",
+          "Horodatages approximatifs",
+          "Aucun visionnage du flux complet, mesure de décor ni détail occulté certifié"
+        ]
+      },
+      {
+        "id": "glitch-canyon-storyboards-20261127",
+        "video": "4ofJpOEXrZs",
+        "time": "420",
+        "requiredScope": [
+          "420 et 520 s",
+          "Les véhicules masquent une partie du sol",
+          "La cour du palais ne sert pas de référence à cette route"
+        ]
+      },
+      {
+        "id": "glitch-manor-storyboards-20261127",
+        "video": "bKjfw77cxeQ",
+        "time": "180",
+        "requiredScope": [
+          "180/220 s",
+          "détails, objets occultés et géométrie complète restent partiels"
+        ]
+      },
+      {
+        "id": "glitch-max-episode2-storyboards-20261127",
+        "video": "4ofJpOEXrZs",
+        "time": "1220",
+        "requiredScope": [
+          "340, 420, 1220 et 1240 s",
+          "ni un visionnage continu ni une mesure du modèle 3D",
+          "episode2-storyboards.json"
+        ]
+      }
+    ]
+  },
+  "explicitStageContractUpdates": {
+    "lake": {
+      "sourceIds": [
+        "ep1",
+        "glitch-pilot-locations-20261127"
+      ],
+      "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+      "limits": [
+        "forme précise de la rive et les détails de la tour restent des adaptations",
+        "Aucune certification canonique 1:1 ni géographie mesurée"
+      ]
+    },
+    "backstage": {
+      "sourceIds": [
+        "ep1",
+        "glitch-pilot-locations-20261127"
+      ],
+      "observedTraitsComparedExactly": 2,
+      "thirdPartyCopyCountExpected": 0,
+      "limits": [
+        "comparaison partielle",
+        "Deux cellules officielles du pilote",
+        "Ordre et nombre des chambres et détails des médaillons non certifiés",
+        "650/740 s",
+        "Horodatages approximatifs"
+      ]
+    },
+    "scope": "Actualisation explicite de ces attentes documentaires, sans suppression générale des exigences de provenance ou des limites de fidélité."
+  },
+  "evidenceReviewed": [
+    "docs/art-generation/completion-20261127/stages/README.md",
+    "docs/art-generation/completion-20261127/stages/references/selected-frames.json",
+    "docs/art-generation/completion-20261127/stages/references/storyboard-downloads.json",
+    "docs/art-generation/completion-20261127/max/README.md",
+    "docs/art-generation/completion-20261127/max/references/episode2-storyboards.json",
+    "docs/art-generation/completion-20261127/kaufmo-lackadaisy-smg4/references/sources.json",
+    "combat/fidelity-completion-stages-20261127.mjs",
+    "combat/fidelity-max-illustrated-20261127.mjs",
+    "combat/base-sprite-completion-20261127-kaufmo-lackadaisy-smg4.mjs"
+  ],
+  "referenceConcordance": {
+    "pilotSeconds": {
+      "grounds": [
+        230,
+        260
+      ],
+      "backstage": [
+        650,
+        740
+      ],
+      "gloink": [
+        990,
+        1010
+      ]
+    },
+    "canyonSeconds": [
+      420,
+      520
+    ],
+    "manorSeconds": [
+      180,
+      220
+    ],
+    "maxSecondsAndArchivedCells": [
+      {
+        "seconds": 340,
+        "page": 3,
+        "cellIndexZero": 7
+      },
+      {
+        "seconds": 420,
+        "page": 4,
+        "cellIndexZero": 6
+      },
+      {
+        "seconds": 1220,
+        "page": 13,
+        "cellIndexZero": 5
+      },
+      {
+        "seconds": 1240,
+        "page": 13,
+        "cellIndexZero": 7
+      }
+    ],
+    "filenameCaveatPreserved": "candy-route-500.png conserve son nom historique ; les métadonnées identifient la cellule vers 520 secondes.",
+    "timestampsAreApproximateSamples": true
+  },
+  "remainingWorkDocumentReview": {
+    "path": "docs/art-generation/focus-20261127/remaining-work.md",
+    "blockingFunctionalGapReportedFor34ConnectedAssets": false,
+    "connectedAssetsDescribed": {
+      "basePortraitsAndStances": 4,
+      "projectileMotifs": 10,
+      "campaignPaintings": 20,
+      "total": 34
+    },
+    "describedConnections": [
+      "Deux archives Evil partagent l’identité et le nouveau portrait",
+      "Dix motifs couvrent treize tirs et sont conservés lors du renvoi",
+      "Dix routes possèdent chacune deux peintures raccordées au lecteur existant"
+    ],
+    "openItemsAreOutsideThisDeliveredStaticSlice": [
+      "Quarante peintures intermédiaires dédiées, dont la présentation dynamique existe déjà",
+      "Comparaisons primaires et fidélité des dessins historiques",
+      "Nouvelles arènes éventuelles et géométrie hors champ",
+      "Animations et autres fonctionnalités différées dans la bible",
+      "Validation navigateur du commit publié et essais sur appareils physiques"
+    ],
+    "assessmentScope": "Lecture du document uniquement : absence de blocage fonctionnel déclaré pour les 34 fichiers, sans nouveau test ni certification technique indépendante."
+  },
+  "limitations": [
+    "La revue porte sur les contrats documentaires de sources et leurs limites, pas sur une certification canonique globale 1:1.",
+    "Les résultats de tests exécutés ailleurs ne sont pas présentés comme réexécutés par cette revue.",
+    "Aucun runtime ni aucune preuve historique n’a été modifié."
+  ]
+}

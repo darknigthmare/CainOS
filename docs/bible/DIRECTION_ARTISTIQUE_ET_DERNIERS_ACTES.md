@@ -53,7 +53,7 @@ Les 192 finales sont reliées dans [l’index des personnages](ASSOCIATIONS_PERS
 
 Un sprite demandé détouré exige un alpha réel, son orientation native, ses ancrages et ses marges. Un fichier de portrait et un fichier de garde constituent le lot d’une base statique ; les dessins d’action et cycles complets ne sont pas annoncés comme produits lorsqu’ils sont absents. Les scènes narratives peuvent réunir plusieurs acteurs mais gardent une action claire, un cadrage et les sous-titres hors image.
 
-Chaque source conserve son ID, ses dimensions natives, sa provenance, son SHA-256 et son usage. La revue vérifie silhouette, membres, asymétries, tenue, accessoires, lisibilité et taille dans le jeu. Les nouvelles scènes de campagne sont des briefs ; leurs illustrations restent à créer. Les 84 peintures intro/outro existantes et 300 compositions sont à relire avant de décider d’un remplacement.
+Chaque source conserve son ID, ses dimensions natives, sa provenance, son SHA-256 et son usage. La revue vérifie silhouette, membres, asymétries, tenue, accessoires, lisibilité et taille dans le jeu. Les nouvelles scènes de campagne sont des briefs ; leurs illustrations restent à créer. Les 104 peintures intro/outro existantes et 280 compositions sont à relire avant de décider d’un remplacement.
 
 Les nouveaux cycles d’animation, voix et cinématiques animées attendent une phase dédiée. Les éléments déjà présents sont conservés, sans nouvelle certification artistique globale dans cette livraison.
 

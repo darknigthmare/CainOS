@@ -1,0 +1,27 @@
+✔ all playable fighters, techniques and stages expose the shared review records (7.367616ms)
+✔ review records keep source scope, observations and invented combat separate (4.925322ms)
+✔ the forty promoted NPCs keep an open episode review with an individual atlas sprite record (1.016345ms)
+✔ sprite reviews record identity contradictions and framing defects instead of smoothing them over (0.743095ms)
+✔ the nine episode references retain later costumes without claiming to have reviewed them (0.480149ms)
+✔ the Void, cellar and resident corridor cannot borrow an unrelated visual as proof (0.355915ms)
+✔ unknown IDs fail closed and shared review data cannot be mutated by a consumer (0.331125ms)
+✔ all 52 costumes have an individual technical review independent of canonical evidence (1.571289ms)
+✔ twenty presentation replacements keep their archive identity and do not invent canonical approval (0.894821ms)
+✔ transparent repairs retain technical limits separately from observed canonical details (0.775068ms)
+✔ consulted references identify their exact scope rather than certifying poses or merchandise proportions (0.25331ms)
+✔ every old combat rule and body remains exact for 0.1.0 and 0.2.0 replays (8.202377ms)
+✔ all fourteen kits and 140 techniques stay mechanically identical between published 0.3.0 and 0.4.0 (1.20723ms)
+✔ pomni: the new retreat moves continuously during fifteen active frames (5.603894ms)
+✔ pomni: both old replay versions retain the original instantaneous displacement (7.110094ms)
+✔ pomni: a physical retreat respects ring bounds and the facing direction (4.078836ms)
+✔ abstractedkaufmo: the new retreat moves continuously during fifteen active frames (2.357745ms)
+✔ abstractedkaufmo: both old replay versions retain the original instantaneous displacement (14.559322ms)
+✔ abstractedkaufmo: a physical retreat respects ring bounds and the facing direction (1.808884ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 308.595072

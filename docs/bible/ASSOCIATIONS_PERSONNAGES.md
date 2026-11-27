@@ -10,7 +10,7 @@ Ce document est un raccord avec le catalogue publié. Il n’ajoute aucun dessin
 
 - **Jeu existant** : données exactes de [data.mjs](../../combat/data.mjs), [stories.mjs](../../combat/stories.mjs), [finisher-catalog.mjs](../../combat/finisher-catalog.mjs), [friendship-catalog.mjs](../../combat/friendship-catalog.mjs) et [projectile-art.mjs](../../combat/projectile-art.mjs).
 - **Guide** : chaque personnage est associé aux sections fidélité, roster, combat, movesets, conclusions, relations, routes, scènes, projectiles, art, présentation, entraînement, accessibilité, statistiques et fiches types. Voir la [matrice](COMBAT_GAMES_GUIDE_INTEGRATION.md).
-- **Scènes** : 84 tableaux de prologue/épilogue ont une image dédiée inscrite au manifeste ; les 300 autres utilisent une composition de décor et de personnages. Cette différence n’établit pas une panne. Les images de briefing de chapitre constituent un autre inventaire.
+- **Scènes** : 104 tableaux de prologue/épilogue ont une image dédiée inscrite au manifeste ; les 280 autres utilisent une composition de décor et de personnages. Cette différence n’établit pas une panne. Les images de briefing de chapitre constituent un autre inventaire.
 - **Projet de campagne globale** : les rôles ci-dessous viennent de [La Répétition impossible](CAMPAGNE_GLOBALE.md), conçue dans la bible et non intégrée au jeu. Ses 36 scènes sont des briefs, sans nouvelles images produites.
 - **Chiffres des techniques** : les valeurs et propriétés présentes sont copiées telles quelles ; un champ absent n’est pas remplacé par un zéro. Aucune frame advantage n’est déduite de la seule récupération.
 

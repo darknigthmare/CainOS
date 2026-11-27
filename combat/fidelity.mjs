@@ -3,6 +3,8 @@ import { EXPANSION_DEFS } from './roster-expansion.mjs';
 import { ABSTRACTION_DEFS, ABSTRACTION_SOURCES, abstractionFidelity } from './abstractions-content.mjs';
 import { COSTUME_ADDITION_SOURCES } from './costume-additions.mjs';
 import { BASE_SPRITE_SOURCES } from './base-sprite-content.mjs';
+import { COMPLETED_STAGE_SOURCES, COMPLETED_STAGE_FIDELITY } from './fidelity-completion-stages-20261127.mjs';
+import { MAX_ILLUSTRATED_SOURCES, MAX_ILLUSTRATED_FIDELITY } from './fidelity-max-illustrated-20261127.mjs';
 
 /**
  * Shared provenance for the codex and the planning workbook.
@@ -26,6 +28,8 @@ export const FIDELITY_SOURCES = freeze([
   ...COSTUME_ADDITION_SOURCES,
   ...BASE_SPRITE_SOURCES,
   ...CROSSOVER_STAGE_SOURCES,
+  ...COMPLETED_STAGE_SOURCES,
+  ...MAX_ILLUSTRATED_SOURCES,
   { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle et galerie de la série. La page ne documente ni les règles de combat ni les dimensions du jeu.' },
   episode('ep1', 'Pilot', 'HwAPLk_sQ3w', 'Référence du cirque, de ses résidents, de Caine, Bubble, Kaufmo et des Gloinks. Les plans non décrits dans les visuels consultés restent à revoir.'),
   episode('ep2', 'Candy Carrier Chaos!', '4ofJpOEXrZs', 'Référence de Candy Canyon et de ses personnages. Les attaques du fan-game ne sont pas attestées par ce lien.'),
@@ -662,11 +666,15 @@ export const STAGE_FIDELITY = freeze({
   kingdom: {"sourceIds": ["ep2", "glitch-candy-court"], "observedTraits": ["Architecture de confiserie rouge/rose dans la cour, ouvertures cintrées en retrait et large passage ornementé.", "Volutes de glaçage clair autour du passage, décors arrondis et larges piliers au premier plan.", "Petites ouvertures en arcade dans les façades plus éloignées et sol rose visible."], "combatAdaptation": "La façade générique à deux tours pointues devient une cour recomposée : piliers de premier plan, arcades latérales, ouvertures en retrait, portail large et volutes de glaçage. Les marches de fond restent au-dessus de y568 et ne modifient pas la piste. La symétrie, les proportions, les ornements secondaires et les joints du sol sont des choix lisibles pour le duel.", "reviewStatus": "Référence visuelle consultée — comparaison partielle", "reviewScope": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène."},
   grounds: pending(['ep1'], 'Extérieur du cirque utilisé comme piste de duel avec une pelouse simplifiée.', 'Pilote identifié ; chapiteau, végétation, horizon et éclairage de l’extérieur à comparer sur un plan dédié.'),
   backstage: {"sourceIds": ["ep1", "pilot-residents-copy-near", "pilot-residents-copy-wide"], "observedTraits": ["Dans les copies attribuées au pilote : long couloir à murs rose, rouge et orange, grands panneaux verticaux, tapis rouge et plinthes claires.", "Portes en bois plus basses que les murs, boutons dorés et médaillons de visages ; Kaufmo apparaît sur le plan proche.", "Cadres de bois clair contenant des images abstraites, arche rouge au fond, pots de plantes et cubes colorés sur le plan large."], "combatAdaptation": "La loge générique avec miroir à ampoules et caisses est remplacée par une recomposition du couloir. Six portes et médaillons dessinés en Canvas, tableaux abstraits, trois plafonniers, profondeur centrale et tapis rouge conservent une ligne de combat horizontale à y568. Ordre des chambres, portraits simplifiés, nombre de cadres, perspective et dimensions sont des choix du jeu.", "reviewStatus": "Comparaison partielle — copies du pilote à confirmer", "reviewScope": "Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir."},
+  ...COMPLETED_STAGE_FIDELITY,
 });
 
 const own = (registry, id) => typeof id === 'string' && Object.hasOwn(registry, id) ? registry[id] : null;
 const sourcesById = Object.fromEntries(FIDELITY_SOURCES.map(source => [source.id, source]));
 export const getFighterFidelity = id => own(FIGHTER_FIDELITY, id);
+// Keep the historical atlas records stable. The illustrated codex can disclose
+// newer source observations without silently rewriting archived sprite reviews.
+export const getIllustratedFighterFidelity = id => id === 'max' ? MAX_ILLUSTRATED_FIDELITY : getFighterFidelity(id);
 export const getMoveFidelity = (fighterId, slot) => own(MOVE_FIDELITY, `${fighterId}.${slot}`);
 export const getStageFidelity = id => own(STAGE_FIDELITY, id);
 export const getFidelitySources = sourceIds => Array.isArray(sourceIds) ? [...new Set(sourceIds)].map(id => own(sourcesById, id)).filter(Boolean) : [];

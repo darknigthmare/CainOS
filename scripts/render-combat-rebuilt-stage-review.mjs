@@ -1,4 +1,4 @@
-/** Four complete scenic paintings through the production renderer.
+/** All complete scenic paintings through the production renderer.
  * Native Skia evidence, never a browser run or a canonical 1:1 certificate.
  */
 import assert from 'node:assert/strict';
@@ -60,7 +60,7 @@ const report = {
 };
 const runtimeFiles = (await fs.readdir(path.join(repo, 'combat'))).filter(name => name.endsWith('.mjs')).sort().map(name => 'combat/' + name);
 for (const name of [...runtimeFiles, 'scripts/render-combat-rebuilt-stage-review.mjs']) report.sourceHashes[name] = hash(await fs.readFile(path.join(repo, name)));
-const overview = createCanvas(1280, 792), overviewContext = overview.getContext('2d');
+const overview = createCanvas(1280, Math.ceil(Object.keys(REBUILT_STAGE_SCENES).length / 2) * 396), overviewContext = overview.getContext('2d');
 overviewContext.fillStyle = '#101725'; overviewContext.fillRect(0, 0, overview.width, overview.height);
 async function save(name, canvas) {
   await fs.writeFile(path.join(output, name), canvas.toBuffer('image/jpeg', 91)); report.outputImages.push(name);
@@ -121,6 +121,7 @@ for (const [index, [id, scene]] of Object.entries(REBUILT_STAGE_SCENES).entries(
   overviewContext.fillStyle = '#f4e9d5'; overviewContext.font = 'bold 18px sans-serif'; overviewContext.fillText(id + ' / décor complet / duel initialisé', x + 12, y + 25);
   overviewContext.drawImage(canvas, x, y + 34, 640, 360);
   report.stages.push(row);
+  globalThis.gc?.();
 }
 await save('stages-overview.jpg', overview);
 for (const [name, sha256] of Object.entries(report.sourceHashes)) assert.equal(hash(await fs.readFile(path.join(repo, name))), sha256, 'Source changed during review: ' + name);

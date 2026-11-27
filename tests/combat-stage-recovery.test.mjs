@@ -90,11 +90,11 @@ test('starting a combat preload cancels a pending menu preview', { timeout: 5000
 
 test('an untouched arena still loads its original independent three planes', async t => {
   const mock = mockedCanvas(t, 'never-delayed');
-  const result = await loadStagePlanes({ id: 'bigtop' });
+  const result = await loadStagePlanes({ id: 'training' });
   assert.ok(result?.complete);
   assert.equal(result.fullScene, false);
   assert.equal(result.layers.length, 3);
   assert.deepEqual(mock.requests.map(url => url.split('/stages/')[1]), [
-    'bigtop/far.webp', 'bigtop/mid.webp', 'bigtop/near.webp',
+    'training/far.webp', 'training/mid.webp', 'training/near.webp',
   ]);
 });

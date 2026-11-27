@@ -1,0 +1,31 @@
+{
+  "route": "Existing official Playwright 1.62.1 Chromium headless-shell installer",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/cli.js",
+    "install",
+    "chromium",
+    "--only-shell",
+    "--no-progress"
+  ],
+  "browserPath": "/tmp/cainos-playwright-20261127",
+  "exitCode": 1,
+  "elapsedSeconds": 26.1,
+  "log": "/workspace/scratch/442af69066d4/outputs/focus-campaign-receipts/chromium-official-install.log",
+  "status": "environment_blocked_before_browser_launch",
+  "systemWrapper": "/usr/bin/chromium",
+  "systemWrapperExists": true,
+  "systemBinary": "/usr/lib/chromium/chromium",
+  "systemBinaryExists": false,
+  "priorTemporaryBinary": "/tmp/chromium/chrome-linux/chrome",
+  "priorTemporaryBinaryExists": false,
+  "cacheFoundBeforeAttempt": false,
+  "officialDownloadUrl": "https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-headless-shell-linux64.zip",
+  "downloadHttpStatus": 403,
+  "downloadError": "Site Unavailable — Unable to access this site.",
+  "browserLaunched": false,
+  "applicationNavigated": false,
+  "runtimeCodeChanged": false,
+  "nextValidation": "CI browser environment; no additional local download route attempted.",
+  "downloadedExecutables": []
+}

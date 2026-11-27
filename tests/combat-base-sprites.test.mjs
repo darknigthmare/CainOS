@@ -6,6 +6,7 @@ import { FIGHTERS, COSTUMES, BASE_SPRITE_COSTUMES, CROSSOVER_COSTUMES, STAGES, e
 import { BASE_SPRITE_ART_SLOTS, BASE_SPRITE_DEFINITIONS, baseSpriteFiles,
   publishedBaseSpriteDefinitions, createBaseSpriteCostumes } from '../combat/base-sprite-content.mjs';
 import { CONTINUATION_B_BASE_DEFINITIONS, CONTINUATION_B_BASE_REVIEWS } from '../combat/base-sprite-continuation-20261125-b.mjs';
+import { FOCUS_20261127_BASE_DEFINITIONS, focusArchivePortraitOverride } from '../combat/base-sprite-focus-20261127.mjs';
 import { ACTION_ART, loadFighterIllustration, actionIllustration, standingIllustration, warmCombatPoses } from '../combat/illustrations.mjs';
 import { CombatRenderer, drawPortrait, getFrame } from '../combat/render.mjs';
 import { createProgram, validateProgram } from '../combat/progression.mjs';
@@ -87,6 +88,24 @@ test('a static family activates only after both native files have a recorded rev
   assert.equal(costume.sprite.src, files[1]); assert.equal(costume.sprite.crossoverDirectory, definition.directory);
   assert.throws(() => publishedBaseSpriteDefinitions([definition, definition], files), /duplicate ID/);
   assert.throws(() => baseSpriteFiles({ directory: '../assets/encore/../../images/old' }), /own declared Encore directory/);
+});
+
+test('the two historical Evil Pomni aliases share a corrected portrait only after the complete pair is ready', () => {
+  const definition = FOCUS_20261127_BASE_DEFINITIONS.find(item => item.id === 'evilpomni-pendantz');
+  const files = baseSpriteFiles(definition);
+  const review = { status: 'verified-base-files', sha256: { selection: '1'.repeat(64), stance: '2'.repeat(64) } };
+  const reviews = { [definition.id]: review };
+  assert.deepEqual(definition.archiveAliases, ['evilpomni', 'rivalbaseballpomni']);
+  for (const id of definition.archiveAliases) {
+    for (const published of [[], files.slice(0, 1), files.slice(1)]) assert.equal(focusArchivePortraitOverride(id, published, reviews), null);
+    for (const pending of [undefined, { ...review, status: 'pending' }, { ...review, sha256: { selection: review.sha256.selection } }])
+      assert.equal(focusArchivePortraitOverride(id, files, { [definition.id]: pending }), null);
+    assert.deepEqual(focusArchivePortraitOverride(id, new Set(files), reviews), {
+      appearanceId: definition.id, path: files[0], nativeFacing: 1,
+    });
+  }
+  assert.equal(focusArchivePortraitOverride('pomni', files, reviews), null);
+  assert.equal(focusArchivePortraitOverride('godcaine', files, reviews), null);
 });
 
 test('every activated base keeps two distinct native files and only changes its owner’s presentation', () => {

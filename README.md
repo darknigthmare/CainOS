@@ -16,9 +16,55 @@ The playable game version is **0.7.0**. The original GLITCH wardrobe dates from 
 - General fighting-game guide, contextual decisions and character associations: **[Encore bible index](docs/bible/README.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **64 fighters, 640 techniques, 27 arenas (18 non-crossover and nine crossover), 546 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. Those nine crossover arenas are already included in the total of 27. The wardrobe contains **52 archive costumes, 56 additional illustrated Circus appearances / 517 PNGs, and 438 crossovers / 3,982 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit and Queenie each have all 27 crossover bases across the nine collections. Ribbit's nine earlier families retain eleven drawings each; its eighteen newer families and Queenie's 27 families have their portrait and static stance. Kaufmo has six static crossover families in Murder Drones and Meta Runner; 37 other NPCs still have no crossover wardrobe. Combat techniques, crossover designs and projectile motifs are original fan-game adaptations.
+The game combines **64 fighters, 640 techniques, 27 arenas (18 non-crossover and nine crossover), 575 selectable costumes and 184 searchable archive entries**. Fourteen original fighters retain their kits, 40 promoted archive NPCs use the extension kits described below, and ten abstractions have separate simulation bodies and adapted kits. The 64 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. Those nine crossover arenas are already included in the total of 27. The wardrobe contains **52 archive costumes, 58 additional illustrated Circus appearances / 521 PNGs, and 465 crossovers / 4,036 files**. The original fourteen crossover owners retain all 27 appearances each. Within the earlier 40-NPC extension, Ribbit and Queenie each have all 27 crossover bases across the nine collections. Ribbit's nine earlier families retain eleven drawings each; its eighteen newer families and Queenie's 27 families have their portrait and static stance. Kaufmo now also has all 27 static crossover families. Max has six static families in Murder Drones and Meta Runner; 36 other NPCs still have no crossover wardrobe. Combat techniques, crossover designs and projectile motifs are original fan-game adaptations.
 
-### Two guide extensions and continued production — 27 November 2026
+### Pomni, Caine and abstraction focus — 27 November 2026
+
+The focused continuation adds **34 native PNGs**: separate portraits and static
+stances for **God Caine — Animatez** and **Evil Pomni — Pendantz**, ten distinct
+abstraction projectile motifs serving thirteen existing techniques, and twenty
+painted narrative panels across the ten abstraction routes. The current catalogue
+contains **6,315 illustrations, 575 costumes, 465 crossovers and 91 static-base
+families**. The projectile catalogue contains **33 motifs**. No new animation
+cycle, fighter kit, arena identity or combat rule is added.
+
+Evil Pomni's two historical archive IDs now resolve to the same reviewed portrait
+and documented identity. The old source images remain preserved. God Caine's
+product reference stays distinct from the existing monstrous and Bad End
+appearances. The new narrative paintings cover each abstraction route's first
+prologue and final epilogue; the other forty panels retain their existing dynamic
+compositions. These scenes and combat accessories are original Encore designs.
+
+[Focused delivery, references and galleries](docs/art-generation/focus-20261127/README.md)
+link the native-file inventory, runtime checks and workbook evidence. Reference
+fidelity is reviewed per design; technical tests do not certify pixel-exact
+canonical fidelity.
+
+### Completion of the missing static batch — 27 November 2026
+
+This continuation adds **63 native PNGs**: 21 Kaufmo portrait/stance pairs across
+its seven remaining collections, six Max pairs in Murder Drones and Meta Runner,
+and nine complete scenic paintings. Together with the previous 16 new PNGs,
+these newly generated files cover the earlier **79-file missing scope**. None
+of those unavailable old bytes is presented as recovered.
+
+At this intermediate checkpoint, the catalogue contains **6,281 illustrations, 573 costumes and 465
+crossovers**, including **89 static-base families**. Thirteen of the 27 shared
+arenas now use full paintings; fourteen retain their existing three planes.
+The 546-costume prefix, 64 fighter kits, 640 moves and simulation rules remain
+preserved. The selection menu also adds independent undo, portrait request
+tracking, mirrored-player badges and accessible announcements. Character-specific
+entrance/exit gestures remain distinct future artwork in the bible.
+
+See the [completion dossier, galleries and verification scope](docs/art-generation/completion-20261127/README.md).
+The tracker and bible record the current additions separately from the historical
+results below. Crossovers are original Encore designs, and camera widening or
+hidden scenery continuity are documented adaptations. No global canonical 1:1
+certification is asserted.
+
+### Two guide extensions and initial production — earlier on 27 November 2026
+
+This historical checkpoint describes the first batch published in `cc972c8`.
 
 The original general guide was already integrated. Both complete user-provided
 extensions are now preserved and applied to Encore: **68 sections and 214

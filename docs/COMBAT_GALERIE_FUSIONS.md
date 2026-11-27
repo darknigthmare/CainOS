@@ -1,5 +1,16 @@
 # Fusions originales des combattants
 
+## Catalogue courant — complétion du 27 novembre 2026
+
+Le catalogue courant comporte **465 crossovers**, dont **155 fusions originales**.
+Les quatorze propriétaires historiques, Ribbit, Queenie et Kaufmo ont chacun leurs
+neuf collections de trois styles. Max dispose des trois styles de Murder Drones
+et Meta Runner. Le [dossier de complétion](art-generation/completion-20261127/README.md)
+relie les nouvelles paires, les sources et les galeries. Les tableaux historiques
+ci-dessous conservent les chiffres et poses de leurs livraisons datées ; les
+nouvelles familles décrites comme statiques possèdent deux dessins distincts.
+
+
 Les neuf planches historiques réunissent les quatorze propriétaires d’origine
 dans chaque univers, soit **126 fusions originales**. Chaque paire présente à
 gauche le portrait de sélection et à droite la garde latérale utilisée en duel.

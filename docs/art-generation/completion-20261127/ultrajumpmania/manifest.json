@@ -1,0 +1,250 @@
+{
+  "schema": "encore-static-base-completion/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "productionTool": "Built-in image_gen.imagegen, one image per asset",
+  "phase": "static-bases-only",
+  "newNativeImages": 6,
+  "newAppearanceFamilies": 3,
+  "previousUnpublishedImagesRecovered": 0,
+  "canonicalOneToOneCertified": false,
+  "references": [
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/kaufmo-plush-1.png",
+      "sha256": "ce4eb564c2d6ab4551783b61c6938c38b636cf852ad165861a74a7504e78ab2f",
+      "bytes": 3088448
+    },
+    {
+      "path": "assets/encore/stance/kaufmo.png",
+      "sha256": "6e58a6cba0f4e0f87fa53d1e6e43d824c31d082882d27528df6112dea2eb3e07",
+      "bytes": 799856
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/ultrajumpmania/references/official-pilot-thumbnail.jpg",
+      "sha256": "f6f48dbb0c682e8dff49108295982c8c67e763b75d1982d9147cc35c34115754",
+      "bytes": 203681
+    }
+  ],
+  "families": [
+    {
+      "id": "glitch-ultrajumpmania-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "series": "ultrajumpmania",
+      "style": "hommage",
+      "label": "Hommage · Theo",
+      "traits": [
+        "Visage blanc ovale, yeux noirs allongés, triangles noirs, sourire rouge, cône jaune à bande bleue et boule rouge, collerette bleue.",
+        "Chemise jaune à fleurs blanches inspirée de Theo, trois boutons rouges, short rouge brun, ceinture brune, gants blancs et grandes chaussures rouges."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-0a40c695-6cee-4bc0-a2b1-e3f2908fd809.png",
+        "selection": "exec-48670017-42b3-4506-9e22-0ff825b689eb.png"
+      },
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/ultrajumpmania/kaufmo/hommage/selection.png",
+          "bytes": 945046,
+          "sha256": "eac09a762d268a46185cd774f62972589c69b59efbfa15951026110e100548eb",
+          "width": 1145,
+          "height": 1374,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            200,
+            7,
+            930,
+            1364
+          ],
+          "fullyTransparentPixels": 981312,
+          "lowAlphaEdgePixels": 7579,
+          "visiblePixelsOver12": 584339,
+          "pixelsAtLeast240Alpha": 578536,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/ultrajumpmania/kaufmo/hommage/stance.png",
+          "bytes": 1539812,
+          "sha256": "8eac7107ee82f916e45699990a2d3074c0bd98337fbcdf965f294237d5a2d60b",
+          "width": 1024,
+          "height": 1536,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            99,
+            20,
+            913,
+            1519
+          ],
+          "fullyTransparentPixels": 988778,
+          "lowAlphaEdgePixels": 12249,
+          "visiblePixelsOver12": 571837,
+          "pixelsAtLeast240Alpha": 563939,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk",
+        "https://i.ytimg.com/vi/HZoOzz1CrAk/maxresdefault.jpg"
+      ],
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": []
+      }
+    },
+    {
+      "id": "glitch-ultrajumpmania-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "series": "ultrajumpmania",
+      "style": "resident",
+      "label": "Résident · Cartographe de l’île",
+      "traits": [
+        "Identité ordinaire de Kaufmo conservée : tête blanche, maquillage noir et rouge, cône jaune, collerette bleue, gants et pieds de clown.",
+        "Tunique ocre à col et rabats vert foncé, trois boutons rouges, short vert, ceinture et étui avec carte roulée. Le portrait finit au torse ; la carte reste visible sur la garde."
+      ],
+      "nativeOutputs": {
+        "stance": "completion-ultrajumpmania-kaufmo-resident-stance.png — native tool bytes saved directly after automatic write unavailable",
+        "selection": "exec-1738316a-7be2-4a15-894d-e994f40d3f62.png"
+      },
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/ultrajumpmania/kaufmo/resident/selection.png",
+          "bytes": 901385,
+          "sha256": "f9f5916309cd757f2ee8e69eb84f4eebc3fe9d91702457ac182faafb823d5d52",
+          "width": 1312,
+          "height": 1199,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            66,
+            13,
+            1250,
+            1191
+          ],
+          "fullyTransparentPixels": 992781,
+          "lowAlphaEdgePixels": 10916,
+          "visiblePixelsOver12": 569391,
+          "pixelsAtLeast240Alpha": 561884,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/ultrajumpmania/kaufmo/resident/stance.png",
+          "bytes": 820461,
+          "sha256": "6d071957be67d1fa6645a7516cb1d523f81d48e594237d52248b48bd2de6f42b",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            193,
+            11,
+            940,
+            1363
+          ],
+          "fullyTransparentPixels": 1083761,
+          "lowAlphaEdgePixels": 11508,
+          "visiblePixelsOver12": 478639,
+          "pixelsAtLeast240Alpha": 470045,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk",
+        "https://i.ytimg.com/vi/HZoOzz1CrAk/maxresdefault.jpg"
+      ],
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": []
+      }
+    },
+    {
+      "id": "glitch-ultrajumpmania-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "series": "ultrajumpmania",
+      "style": "fusion",
+      "label": "Fusion · Pantin des cocotiers",
+      "traits": [
+        "Corps réellement transformé : coque de noix de coco, membres en bois articulés, paumes crème végétales, poignets et chevilles feuillus, pieds rouges sculptés.",
+        "Visage en chair de coco blanche avec yeux noirs, triangles et sourire rouge ; cône fibreux doré, boule-fruit rouge, feuilles vertes, collerette et bande de feuilles bleues, trois fruits rouges sur le torse."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-4812ba2c-0b0f-4902-a4c8-362a80b1830e.png",
+        "selection": "exec-6fb145d4-b3e5-4d84-83e6-ca54d6b82202.png"
+      },
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/ultrajumpmania/kaufmo/fusion/selection.png",
+          "bytes": 1353721,
+          "sha256": "41f02a728718735140d635aa05a1389d16f7270dae402ef6e1caaaaaaa70654e",
+          "width": 1214,
+          "height": 1295,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            122,
+            10,
+            1155,
+            1268
+          ],
+          "fullyTransparentPixels": 870193,
+          "lowAlphaEdgePixels": 11254,
+          "visiblePixelsOver12": 690683,
+          "pixelsAtLeast240Alpha": 681982,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/ultrajumpmania/kaufmo/fusion/stance.png",
+          "bytes": 1250054,
+          "sha256": "a994b8c5b298a0cabc021df2eead36478f99a0c4677266d920db348367680940",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            126,
+            17,
+            960,
+            1359
+          ],
+          "fullyTransparentPixels": 1002671,
+          "lowAlphaEdgePixels": 16226,
+          "visiblePixelsOver12": 555011,
+          "pixelsAtLeast240Alpha": 543697,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.youtube.com/watch?v=HZoOzz1CrAk",
+        "https://i.ytimg.com/vi/HZoOzz1CrAk/maxresdefault.jpg"
+      ],
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": []
+      }
+    }
+  ],
+  "scope": "Création originale Encore guidée par Kaufmo officiel et la vignette du pilote Ultra Jump Mania. Un portrait de sélection et une garde statique distincts, un personnage par image. Aucune pose d’action, animation ou apparition canonique ajoutée. Aucune certification 1:1."
+}

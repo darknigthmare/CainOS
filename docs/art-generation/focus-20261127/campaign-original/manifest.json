@@ -1,0 +1,461 @@
+{
+  "schema": "encore-focus-campaign-native/v1",
+  "date": "2026-11-27",
+  "scope": "Deux tableaux peints pour chacune des cinq abstractions originales Encore : prologue 1 et épilogue 3. Les quatre autres tableaux de chaque route conservent leur composition dynamique actuelle.",
+  "assets": [
+    {
+      "id": "originalabstractedpomni-prologue-1",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedpomni",
+      "panelId": "originalabstractedpomni-prologue-1",
+      "stageId": "memoryfracture",
+      "path": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-prologue-1.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-d1fc4e3f-3453-45c2-9c9d-d6d3c4a0ab2f.png",
+      "sha256": "5131afd79c42091ed67dda6ce2c14bab6da0ae915be9275a19bf872877a46c3d",
+      "bytes": 2359385,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+          "sha256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e"
+        },
+        {
+          "path": "assets/encore/stages/memoryfracture/far.png",
+          "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Low quadruped obsidian faceted jester creature, two long red and blue tattered hat horns ending in gold bells, two prominent red and blue pinwheel eyes and many smaller slit eyes colored cyan, magenta, yellow, and violet, ragged red-blue collar, broad clawed feet. Preserve every recognizable color and silhouette from image 1. LOCATION: a violet and magenta fractured circus-memory hall, hanging torn drapes with gold crescent trims, a large cracked oval gold-framed mirror overhead, sparse floating cyan and pink crystals, polished purple stone floor with cool cyan haze at the horizon. This is the existing original Encore memoryfracture setting shown in reference image 2. COMPOSITION AND STORY: The full creature stands alert at the lower right, beside one slim empty crooked doorway-shaped prop in the far background. Its gaze follows the empty way forward, and its bells and split jester hat are clearly visible. No duplicate or reflected character. A fine luminous cyan line on the floor suggests a simulation boundary.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/memoryfracture/far.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedpomni-epilogue-3",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedpomni",
+      "panelId": "originalabstractedpomni-epilogue-3",
+      "stageId": "training",
+      "path": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-epilogue-3.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-2e28280b-149a-41dc-97eb-76d8863174d8.png",
+      "sha256": "0e3efd87b1daf994ad1b08e9c962467246bef2b7e9b9616c946437e1b03b6fee",
+      "bytes": 1936516,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+          "sha256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e"
+        },
+        {
+          "path": "assets/encore/stages/training/far.webp",
+          "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Low quadruped obsidian faceted jester creature, two long red and blue tattered hat horns ending in gold bells, two prominent red and blue pinwheel eyes and many smaller slit eyes colored cyan, magenta, yellow, and violet, ragged red-blue collar, broad clawed feet. Preserve every recognizable color and silhouette from image 1. LOCATION: the existing cyan/teal calibration room in reference image 2, dark teal structural walls and roof beams, turquoise floor tiles, a cyan grid and circular target across the back wall, hanging toy geometries on purple cables and small magenta drapes near the ceiling. Do not replace it with a generic theater. COMPOSITION AND STORY: The creature has stopped inside a faint calibration boundary on the gridded floor. Three-quarter view towards the left, still fully abstracted, with the bells, hat and pinwheel eyes unchanged. Colored lights gently dim around the wall target, signaling the end of a rehearsal with no cure, human form, or exit.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/training/far.webp"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedragatha-prologue-1",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedragatha",
+      "panelId": "originalabstractedragatha-prologue-1",
+      "stageId": "memoryfracture",
+      "path": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-prologue-1.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-742f0267-853a-414a-b92e-b359ec64f205.png",
+      "sha256": "2109271938078d2f3b7a20d419c229df6d60662c5a8935242954f38e15943171",
+      "bytes": 2385988,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedragatha/stance.png",
+          "sha256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694"
+        },
+        {
+          "path": "assets/encore/stages/memoryfracture/far.png",
+          "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Heavy low quadruped black-violet faceted rag-doll creature, thick vivid red braided yarn tentacles as hair, one large blue button at the front of the head with beige cross-stitch, large blue ribbon bow at the neck, beige stitches and torn lilac cloth patches across the body, many cyan/yellow/magenta slit eyes, squared hooves. Preserve exact identity from image 1. LOCATION: a violet and magenta fractured circus-memory hall, hanging torn drapes with gold crescent trims, a large cracked oval gold-framed mirror overhead, sparse floating cyan and pink crystals, polished purple stone floor with cool cyan haze at the horizon. This is the existing original Encore memoryfracture setting shown in reference image 2. COMPOSITION AND STORY: Full creature stands at lower left, looking into the central broken oval mirror without showing a second image of itself. Four tiny beige stitch-like luminous marks on the foreground floor echo its sewn construction. Emphasize the red yarn crown, blue button and bow; no needle weapon.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/memoryfracture/far.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedragatha-epilogue-3",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedragatha",
+      "panelId": "originalabstractedragatha-epilogue-3",
+      "stageId": "training",
+      "path": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-epilogue-3.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-f4eef9e0-fc7b-4925-adbe-529ab6e7dd26.png",
+      "sha256": "fce2bb3ec6fe058252b018d10053783511576002d9ddae3773aa4d9e515c9036",
+      "bytes": 2029155,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedragatha/stance.png",
+          "sha256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694"
+        },
+        {
+          "path": "assets/encore/stages/training/far.webp",
+          "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Heavy low quadruped black-violet faceted rag-doll creature, thick vivid red braided yarn tentacles as hair, one large blue button at the front of the head with beige cross-stitch, large blue ribbon bow at the neck, beige stitches and torn lilac cloth patches across the body, many cyan/yellow/magenta slit eyes, squared hooves. Preserve exact identity from image 1. LOCATION: the existing cyan/teal calibration room in reference image 2, dark teal structural walls and roof beams, turquoise floor tiles, a cyan grid and circular target across the back wall, hanging toy geometries on purple cables and small magenta drapes near the ceiling. Do not replace it with a generic theater. COMPOSITION AND STORY: The full creature is quiet in three-quarter profile, broad feet firmly on the training floor. Four short luminous stitch marks end at the boundary; yarn remains attached to the body. The calibration light decreases gently. It remains abstracted, no conversion back into a doll, no speech, no rescue.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/training/far.webp"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedgangle-prologue-1",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedgangle",
+      "panelId": "originalabstractedgangle-prologue-1",
+      "stageId": "memoryfracture",
+      "path": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-prologue-1.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-1bc6cd2e-2b15-4965-b6a0-a691e7d79de1.png",
+      "sha256": "5ebd0f216ab42842d19158279017cb0731dd82bf900a5b0f8274a1509282bd4c",
+      "bytes": 2133257,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedgangle/stance.png",
+          "sha256": "44f67bba0d055c94fdac488291a8068b1cc563c07a9c3fb908bb9e66f9e94f50"
+        },
+        {
+          "path": "assets/encore/stages/memoryfracture/far.png",
+          "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Tall limber creature made of curled black and vivid red ribbon strips, several standing ribbon coils as feet, fragmented white comedy and tragedy mask halves around a faceted black head with cyan, magenta, violet and yellow slit eyes. Preserve open spaces between ribbons, the four coiled ribbon supports and torn mask halves. LOCATION: a violet and magenta fractured circus-memory hall, hanging torn drapes with gold crescent trims, a large cracked oval gold-framed mirror overhead, sparse floating cyan and pink crystals, polished purple stone floor with cool cyan haze at the horizon. This is the existing original Encore memoryfracture setting shown in reference image 2. COMPOSITION AND STORY: A single full ribbon creature stands near center left, its red and black ribbon limbs arching delicately around empty air. The torn red-violet ceiling drapes open in the distance but the central mirror remains fractured. Four faint floor guide lines lead toward it. No additional masks floating independently.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/memoryfracture/far.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedgangle-epilogue-3",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedgangle",
+      "panelId": "originalabstractedgangle-epilogue-3",
+      "stageId": "training",
+      "path": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-epilogue-3.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-39fd142f-3d1e-4756-b00f-0685f5589a47.png",
+      "sha256": "efdc015094a089a2c81de5719d4b90e3246999d998682bb7fcef34db29127239",
+      "bytes": 1830791,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedgangle/stance.png",
+          "sha256": "44f67bba0d055c94fdac488291a8068b1cc563c07a9c3fb908bb9e66f9e94f50"
+        },
+        {
+          "path": "assets/encore/stages/training/far.webp",
+          "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Tall limber creature made of curled black and vivid red ribbon strips, several standing ribbon coils as feet, fragmented white comedy and tragedy mask halves around a faceted black head with cyan, magenta, violet and yellow slit eyes. Preserve open spaces between ribbons, the four coiled ribbon supports and torn mask halves. LOCATION: the existing cyan/teal calibration room in reference image 2, dark teal structural walls and roof beams, turquoise floor tiles, a cyan grid and circular target across the back wall, hanging toy geometries on purple cables and small magenta drapes near the ceiling. Do not replace it with a generic theater. COMPOSITION AND STORY: The single ribbon creature settles into a relaxed but still monstrous standing pose, every curled support fully visible. The two broken mask halves remain attached around the head. The background curtains stay slightly open as the training light fades; no new mask, human face, cure, or exit.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/training/far.webp"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedkinger-prologue-1",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedkinger",
+      "panelId": "originalabstractedkinger-prologue-1",
+      "stageId": "memoryfracture",
+      "path": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-prologue-1.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-5a42ff10-dd66-4073-b0a6-9e1320764708.png",
+      "sha256": "60d776ac49f8af033c7ee0129af88630d9abe3086c7e276b305cba2cb7210c69",
+      "bytes": 2168126,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedkinger/stance.png",
+          "sha256": "b5f633dce6d22fe16b8ff1d051de4dab2fcf7c186686bc740cce68cd0f56589c"
+        },
+        {
+          "path": "assets/encore/stages/memoryfracture/far.png",
+          "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Broad black faceted chess-king abstraction with a crenellated crown and cross-shaped top, several turquoise, yellow, pink and violet slit eyes, four chunky angular feet, two small raised claw hands, torn purple royal cloak with off-white spotted fur edging. Exact identity and proportions from image 1. LOCATION: a violet and magenta fractured circus-memory hall, hanging torn drapes with gold crescent trims, a large cracked oval gold-framed mirror overhead, sparse floating cyan and pink crystals, polished purple stone floor with cool cyan haze at the horizon. This is the existing original Encore memoryfracture setting shown in reference image 2. COMPOSITION AND STORY: The full creature stands like a squat bastion slightly left of center, looking towards one small steady cyan floor marker. Its cross-shaped crown, both hands and full torn cloak are visible. Four irregular stone-like blocks in the far background suggest positional choices without forming a literal chessboard army.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/memoryfracture/far.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedkinger-epilogue-3",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedkinger",
+      "panelId": "originalabstractedkinger-epilogue-3",
+      "stageId": "training",
+      "path": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-epilogue-3.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-0c933148-96ce-45cf-a481-e5ebab77ac0a.png",
+      "sha256": "d7cde0d6470c0a2b7c5c4fc9a7bf68b63d7ccb3e10a5ac3f80148fb122395135",
+      "bytes": 1893038,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedkinger/stance.png",
+          "sha256": "b5f633dce6d22fe16b8ff1d051de4dab2fcf7c186686bc740cce68cd0f56589c"
+        },
+        {
+          "path": "assets/encore/stages/training/far.webp",
+          "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Broad black faceted chess-king abstraction with a crenellated crown and cross-shaped top, several turquoise, yellow, pink and violet slit eyes, four chunky angular feet, two small raised claw hands, torn purple royal cloak with off-white spotted fur edging. Exact identity and proportions from image 1. LOCATION: the existing cyan/teal calibration room in reference image 2, dark teal structural walls and roof beams, turquoise floor tiles, a cyan grid and circular target across the back wall, hanging toy geometries on purple cables and small magenta drapes near the ceiling. Do not replace it with a generic theater. COMPOSITION AND STORY: The entire chess-king creature holds still over one central cyan calibration point, both small hands lowered slightly, cloak settling on four feet. The wall grid and target remain visible behind it. No second Kinger, no transformation, throne, coronation, cure, or real-world escape.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/training/far.webp"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedzooble-prologue-1",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedzooble",
+      "panelId": "originalabstractedzooble-prologue-1",
+      "stageId": "memoryfracture",
+      "path": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-prologue-1.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-df46ba38-ff7a-437d-ab6c-105afbe0b55f.png",
+      "sha256": "b593552b5a37d415148dcddbad0e66a4a0ee5e6c52468f664970de013a5be586",
+      "bytes": 2271578,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedzooble/stance.png",
+          "sha256": "4b34fa8cf0a0006058f64ccda5de10e951595554f67a73cf9c68546979722c84"
+        },
+        {
+          "path": "assets/encore/stages/memoryfracture/far.png",
+          "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Asymmetric angular black toy-fragment abstraction with a triangular wedge head, large yellow slit eye in a pink triangular socket, smaller cyan eye, curved pink horn and angular yellow horn, cyan-pink-yellow geometric body panels, one thick angular arm and one exposed dark spring arm with three colored claw tips, mismatched polygonal legs. Preserve asymmetry and the exact colored parts. LOCATION: a violet and magenta fractured circus-memory hall, hanging torn drapes with gold crescent trims, a large cracked oval gold-framed mirror overhead, sparse floating cyan and pink crystals, polished purple stone floor with cool cyan haze at the horizon. This is the existing original Encore memoryfracture setting shown in reference image 2. COMPOSITION AND STORY: Single creature stands three-quarter view at lower right, inspecting four small scattered geometric floor tiles, with no detached body part or duplicate creature. Its spring arm curls slightly while the large heavy arm remains intact. The triangular face and horns remain fully legible.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/memoryfracture/far.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "originalabstractedzooble-epilogue-3",
+      "kind": "campaign-illustration",
+      "fighterId": "originalabstractedzooble",
+      "panelId": "originalabstractedzooble-epilogue-3",
+      "stageId": "training",
+      "path": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-epilogue-3.png",
+      "nativeSource": "/workspace/scratch/442af69066d4/generated_images/exec-af6100a1-d468-41e5-9076-c2b5cfbd5f00.png",
+      "sha256": "fa813c3dab16b440f0e947609564b52915f2f74f4ae95a981307fe9aed632654",
+      "bytes": 1813555,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "nativePixelsUnmodified": true,
+      "animation": false,
+      "provenance": "original-encore",
+      "review": {
+        "status": "inspected",
+        "reviewer": "root",
+        "oneCharacter": true,
+        "fullSilhouette": true,
+        "referenceDesignPreserved": true,
+        "locationPreserved": true,
+        "noText": true,
+        "scope": "Revue visuelle des dix sorties natives et comparaison aux stances et fonds existants du projet ; aucune revendication de forme canonique."
+      },
+      "references": [
+        {
+          "path": "assets/encore/abstractions/originalabstractedzooble/stance.png",
+          "sha256": "4b34fa8cf0a0006058f64ccda5de10e951595554f67a73cf9c68546979722c84"
+        },
+        {
+          "path": "assets/encore/stages/training/far.webp",
+          "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3"
+        }
+      ],
+      "generation": {
+        "prompt": "Create exactly ONE complete wide 16:9 narrative game illustration, not a sprite sheet or collage. Polished hand-painted 2D/cel-shaded videogame artwork with clean controlled contours and detailed material shading. Opaque full-bleed background. Exactly ONE character, the original Encore abstraction from reference image 1, fully visible, taking about 45-55% of picture width and 60-70% of height, unobstructed with 8% minimum safe framing. This is a fan-game simulation scene, never an official episode still. Do not invent a canonical transformation or new lore. Preserve the precise design, colors, anatomy and recognizable silhouette in image 1. Use reference image 2 as the actual location design, including its architecture, floor, colors and key objects. Preserve consistent scenic identity but compose a distinct new painting. No text, lettering, numbers, logos, watermark, border, interface, montage, additional character, human, rival, talking, gore, or duplicated reflection. Keep foreground character readable and leave some quiet space at upper left. CHARACTER: Asymmetric angular black toy-fragment abstraction with a triangular wedge head, large yellow slit eye in a pink triangular socket, smaller cyan eye, curved pink horn and angular yellow horn, cyan-pink-yellow geometric body panels, one thick angular arm and one exposed dark spring arm with three colored claw tips, mismatched polygonal legs. Preserve asymmetry and the exact colored parts. LOCATION: the existing cyan/teal calibration room in reference image 2, dark teal structural walls and roof beams, turquoise floor tiles, a cyan grid and circular target across the back wall, hanging toy geometries on purple cables and small magenta drapes near the ceiling. Do not replace it with a generic theater. COMPOSITION AND STORY: The entire asymmetrical creature pauses upright, spring arm relaxed, all colored fragments still assembled exactly as image 1. Four small calibration marks align on the training floor. The target illumination dims, ending the simulation without changing its form or proving any canon transformation.",
+        "referenced_image_paths": [
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+          "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/stages/training/far.webp"
+        ],
+        "transparent_background": false
+      }
+    }
+  ],
+  "newNativeImages": 10,
+  "nativeBytes": 20821389,
+  "canonicalTransformationClaim": false,
+  "newAnimationFrames": 0
+}

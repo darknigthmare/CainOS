@@ -1,0 +1,85 @@
+{
+  "schema": "encore-accessibility-browser/v1",
+  "version": "0.7.0",
+  "base": "http://127.0.0.1:45105",
+  "generatedAt": "2026-11-27T08:05:23.823Z",
+  "runtimeSourceHashes": {
+    "combat/app.mjs": "6e8ac84528938702dd9480cddf66c9772236a8a216d755b9c566ee15831ba28b",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+    "combat/selection-presentation.mjs": "d6930e9a950d61a40330358ee33c612b5aa3ca4ebf125ab575e441b1498f6ef1",
+    "combat/index.html": "9c13e4bcbb0c71ce96547e5e337e39a2198c2bb06cf35f3ae2e60faeec801b3b",
+    "combat/style.css": "96d25fec893466bda6dab66675c0e5241babea0b46427d69bc9b6bc141788b33",
+    "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+    "tests/combat-accessibility-browser.mjs": "bdfa4dc7be47719f4bfabe2011962ef81e1108351f1c210bb12c037af3a0df65"
+  },
+  "checks": [
+    {
+      "name": "skip link receives visible keyboard focus and moves Enter focus to main",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "name": "Main navigation: all controls reachable by Tab, with Home/End and four arrows",
+      "detail": {
+        "count": 4
+      },
+      "pass": true
+    },
+    {
+      "name": "navigation End and Enter open Settings with an announced current page",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "name": "Nine modes and three replay controls: all controls reachable by Tab, with Home/End and four arrows",
+      "detail": {
+        "count": 12
+      },
+      "pass": true
+    },
+    {
+      "name": "Space opens a mode and keeps the Play navigation state",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "name": "Player side controls: all controls reachable by Tab, with Home/End and four arrows",
+      "detail": {
+        "count": 2
+      },
+      "pass": true
+    },
+    {
+      "name": "changing the player side keeps focus on its regenerated pressed button",
+      "detail": null,
+      "pass": true
+    },
+    {
+      "name": "Fighter cards: all controls reachable by Tab, with Home/End and four arrows",
+      "detail": {
+        "count": 64
+      },
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "keyboard": {
+    "Tab": 341,
+    "ShiftTab": 21,
+    "activations": 53
+  },
+  "scope": "Desktop and 390 px Chromium. Real Tab, Enter, Space, arrow and Home/End events; one virtual standard gamepad through navigator.getGamepads only.",
+  "limits": [
+    "No physical gamepad or phone.",
+    "No screen-reader, switch-control or voice-control session.",
+    "This covers the named menu and dialog journeys, not every OS/browser accessibility combination."
+  ],
+  "pass": false,
+  "browser": "158.0.8127.0",
+  "failure": {
+    "message": "keyboard.press: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /workspace/scratch/8db10b0df53d/chromium-single-process.sh --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-YAm8U1 --remote-debugging-pipe --no-startup-window\n<launched> pid=26\n[pid=26][err] [1127/090524.043972:ERROR:../net/base/address_tracker_linux.cc:224] Could not create NETLINK socket: Operation not permitted (1)",
+    "stack": "keyboard.press: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /workspace/scratch/8db10b0df53d/chromium-single-process.sh --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-YAm8U1 --remote-debugging-pipe --no-startup-window\n<launched> pid=26\n[pid=26][err] [1127/090524.043972:ERROR:../net/base/address_tracker_linux.cc:224] Could not create NETLINK socket: Operation not permitted (1)\n    at tabTo (/workspace/scratch/8db10b0df53d/CainOS/tests/combat-accessibility-browser.mjs:44:22)\n    at async activate (/workspace/scratch/8db10b0df53d/CainOS/tests/combat-accessibility-browser.mjs:51:3)\n    at async file:///workspace/scratch/8db10b0df53d/CainOS/tests/combat-accessibility-browser.mjs:182:5"
+  },
+  "completedAt": "2026-11-27T08:06:36.910Z"
+}

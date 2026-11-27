@@ -19,7 +19,9 @@ Le [guide général de combat v1.0](references/Combat_Games_Guide_General_v1.0.t
 
 ## Périmètre de cette intégration
 
-Les 64 combattants, 640 techniques, 546 costumes et 27 arènes sont ceux du runtime existant ; les 9 crossovers sont inclus dans les arènes. La campagne globale, les six connexions et les nouvelles phases de boss sont des propositions de conception. Cette passe produit de la documentation et du suivi, **zéro image, zéro nouvelle animation et zéro mode jouable supplémentaire**.
+Les 64 combattants, 640 techniques, 575 costumes et 27 arènes sont ceux du runtime existant ; les 9 crossovers sont inclus dans les arènes. La campagne globale, les six connexions et les nouvelles phases de boss sont des propositions de conception. Cette passe produit de la documentation et du suivi, **zéro image, zéro nouvelle animation et zéro mode jouable supplémentaire**.
+
+Le [focus Pomni, Caine et abstractions du 27 novembre](../art-generation/focus-20261127/README.md) est une production distincte : deux nouvelles familles statiques, dix motifs de projectile et vingt tableaux peints. Le dossier expose les références, les adaptations et les vérifications de cette tranche ; les 36 scènes proposées pour la campagne globale gardent leur propre statut de conception.
 
 Le récit s’inspire du ton du Circus, tout en identifiant ses créations Encore. La fidélité canonique 1:1 n’est pas certifiée globalement. Les anciennes preuves de tests restent datées ; seuls les contrôles réellement exécutés dans cette passe sont rapportés comme courants.
 

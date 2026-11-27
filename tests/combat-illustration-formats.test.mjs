@@ -41,7 +41,7 @@ async function isolatedIllustrations(t, files) {
     await rm(folder, { recursive: true, force: true });
   });
   await writeFile(path.join(folder, 'offline-manifest.mjs'), 'export const ART_FILES = ' + JSON.stringify(files) + ';');
-  for (const file of ['illustrations.mjs', 'costume-resumption-20261120.mjs']) {
+  for (const file of ['illustrations.mjs', 'costume-resumption-20261120.mjs', 'base-sprite-focus-20261127.mjs']) {
     await writeFile(path.join(folder, file), await readFile(new URL('../combat/' + file, import.meta.url)));
   }
   globalThis.Image = class {

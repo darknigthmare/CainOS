@@ -13,6 +13,7 @@ import { validateProgram, recordProgramResult, retryProgram, createProgram } fro
 import { CombatEngine, FIXED_DT } from '../combat/engine.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/abstractions-recovery-20261124.json', import.meta.url), 'utf8'));
+const stageFidelityDelta = JSON.parse(readFileSync(new URL('./fixtures/stage-fidelity-delta-20261127.json', import.meta.url), 'utf8'));
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const clone = value => JSON.parse(JSON.stringify(value));
 const frames = (engine, count, inputs = [{}, {}]) => { for (let i = 0; i < count; i++) engine.step(FIXED_DT, inputs); };
@@ -32,7 +33,24 @@ test('the restored 54-fighter, 480-costume baseline and its authored routes rema
   assert.deepEqual(FIGHTERS.slice(0, 54).map(item => item.id), PRE_ABSTRACTION_FIGHTER_IDS);
   assert.equal(hash(FIGHTERS.slice(0, 54)), fixture.baseline.fighters);
   assert.equal(hash(COSTUMES.slice(0, 480)), fixture.baseline.costumes);
-  assert.equal(hash(DEDICATED_STAGES.slice(0, 54)), fixture.baseline.dedicated);
+  // The later stage-reference pass updated three exact fidelity records, shared
+  // by the listed arrangements. Check those records before restoring only that
+  // documentary field for the original whole-record hash; no field is omitted.
+  assert.equal(stageFidelityDelta.format, 'encore-approved-stage-fidelity-delta-20261127');
+  assert.equal(stageFidelityDelta.baselineDedicatedSHA256, fixture.baseline.dedicated);
+  assert.deepEqual(stageFidelityDelta.groups.map(group => group.ids.length), [33, 7, 13]);
+  const updates = new Map(stageFidelityDelta.groups.flatMap(group => group.ids.map(id => [id, group])));
+  assert.equal(updates.size, 53);
+  let checked = 0;
+  const originalDedicated = DEDICATED_STAGES.slice(0, 54).map(stage => {
+    const update = updates.get(stage.id);
+    if (!update) return stage;
+    assert.deepEqual(stage.fidelity, update.after, stage.id + ': exact approved documentary update');
+    checked++;
+    return { ...stage, fidelity: update.before };
+  });
+  assert.equal(checked, updates.size);
+  assert.equal(hash(originalDedicated), fixture.baseline.dedicated);
   assert.equal(hash(Object.fromEntries(PRE_ABSTRACTION_FIGHTER_IDS.map(id => [id, STORY_ROUTES[id]]))), fixture.baseline.stories);
 });
 

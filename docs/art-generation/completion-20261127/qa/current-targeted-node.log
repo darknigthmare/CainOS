@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: the 64 fighters and complete 484-costume prefix retain their published order and fields
+ok 1 - the 64 fighters and complete 484-costume prefix retain their published order and fields
+  ---
+  duration_ms: 34.807277
+  type: 'test'
+  ...
+# Subtest: the 522-costume continuation keeps its complete saved wardrobe prefix and fighter kits
+ok 2 - the 522-costume continuation keeps its complete saved wardrobe prefix and fighter kits
+  ---
+  duration_ms: 41.804996
+  type: 'test'
+  ...
+# Subtest: the six remaining Queenie collections append all 18 reviewed static families after the 522-costume prefix
+ok 3 - the six remaining Queenie collections append all 18 reviewed static families after the 522-costume prefix
+  ---
+  duration_ms: 4.741702
+  type: 'test'
+  ...
+# Subtest: a static family activates only after both native files have a recorded review and are published
+ok 4 - a static family activates only after both native files have a recorded review and are published
+  ---
+  duration_ms: 1.319907
+  type: 'test'
+  ...
+# Subtest: every activated base keeps two distinct native files and only changes its owner’s presentation
+ok 5 - every activated base keeps two distinct native files and only changes its owner’s presentation
+  ---
+  duration_ms: 837.394589
+  type: 'test'
+  ...
+# Subtest: the renderer holds the exact own stance for every static state on both sides without requesting action drawings
+ok 6 - the renderer holds the exact own stance for every static state on both sides without requesting action drawings
+  ---
+  duration_ms: 46.429757
+  type: 'test'
+  ...
+# Subtest: failed static bases never reveal a previous costume or the owner’s old atlas
+ok 7 - failed static bases never reveal a previous costume or the owner’s old atlas
+  ---
+  duration_ms: 2.74003
+  type: 'test'
+  ...
+# Subtest: a menu choice is immediate, undoable once and isolated from the other side
+ok 8 - a menu choice is immediate, undoable once and isolated from the other side
+  ---
+  duration_ms: 3.863305
+  type: 'test'
+  ...
+# Subtest: reselecting an unchanged choice neither overwrites undo nor invalidates its portrait
+ok 9 - reselecting an unchanged choice neither overwrites undo nor invalidates its portrait
+  ---
+  duration_ms: 0.550508
+  type: 'test'
+  ...
+# Subtest: a mirror supports independent costumes and independent undo histories
+ok 10 - a mirror supports independent costumes and independent undo histories
+  ---
+  duration_ms: 0.908256
+  type: 'test'
+  ...
+# Subtest: late and duplicate portrait completions cannot replace the latest choice status
+ok 11 - late and duplicate portrait completions cannot replace the latest choice status
+  ---
+  duration_ms: 0.328989
+  type: 'test'
+  ...
+# Subtest: a later draw of the same choice supersedes an older canvas while the other side stays active
+ok 12 - a later draw of the same choice supersedes an older canvas while the other side stays active
+  ---
+  duration_ms: 0.247468
+  type: 'test'
+  ...
+# Subtest: portrait failure preserves the choice and a fresh request can recover it
+ok 13 - portrait failure preserves the choice and a fresh request can recover it
+  ---
+  duration_ms: 1.155783
+  type: 'test'
+  ...
+# Subtest: undo during a load invalidates the abandoned appearance and accepts its restored portrait
+ok 14 - undo during a load invalidates the abandoned appearance and accepts its restored portrait
+  ---
+  duration_ms: 0.576705
+  type: 'test'
+  ...
+# Subtest: navigation and match reset remove undo and invalidate all pending requests
+ok 15 - navigation and match reset remove undo and invalidate all pending requests
+  ---
+  duration_ms: 0.676974
+  type: 'test'
+  ...
+# Subtest: external choices clear only affected history while stage-only refreshes preserve it
+ok 16 - external choices clear only affected history while stage-only refreshes preserve it
+  ---
+  duration_ms: 0.662164
+  type: 'test'
+  ...
+# Subtest: snapshots and caller-owned choices cannot mutate menu history
+ok 17 - snapshots and caller-owned choices cannot mutate menu history
+  ---
+  duration_ms: 1.141499
+  type: 'test'
+  ...
+# Subtest: all 64 current artists retain their authored selection and deselection brief IDs
+ok 18 - all 64 current artists retain their authored selection and deselection brief IDs
+  ---
+  duration_ms: 9.954749
+  type: 'test'
+  ...
+# Subtest: complete scenes cover the canvas uniformly and ground the undermap behind the fighters
+ok 19 - complete scenes cover the canvas uniformly and ground the undermap behind the fighters
+  ---
+  duration_ms: 9.126028
+  type: 'test'
+  ...
+# Subtest: a slow old arena cannot replace the most recently selected arena
+ok 20 - a slow old arena cannot replace the most recently selected arena
+  ---
+  duration_ms: 16.515949
+  type: 'test'
+  ...
+# Subtest: starting a combat preload cancels a pending menu preview
+ok 21 - starting a combat preload cancels a pending menu preview
+  ---
+  duration_ms: 7.747798
+  type: 'test'
+  ...
+# Subtest: an untouched arena still loads its original independent three planes
+ok 22 - an untouched arena still loads its original independent three planes
+  ---
+  duration_ms: 1.233391
+  type: 'test'
+  ...
+# Subtest: unknown scenery identifiers safely defer to the existing renderer without touching Canvas
+ok 23 - unknown scenery identifiers safely defer to the existing renderer without touching Canvas
+  ---
+  duration_ms: 1.302605
+  type: 'test'
+  ...
+# Subtest: the three scene drawings are deterministic, finite and preserve frozen input objects
+ok 24 - the three scene drawings are deterministic, finite and preserve frozen input objects
+  ---
+  duration_ms: 69.501314
+  type: 'test'
+  ...
+# Subtest: explicit stage themes select the same scenery as their named arena
+ok 25 - explicit stage themes select the same scenery as their named arena
+  ---
+  duration_ms: 47.966827
+  type: 'test'
+  ...
+# Subtest: ambient sources stay attached to the corridor lights, cooking surface and existing manor candles
+ok 26 - ambient sources stay attached to the corridor lights, cooking surface and existing manor candles
+  ---
+  duration_ms: 2.531289
+  type: 'test'
+  ...
+# Subtest: the camera follows the fighters together, preserves its limits and rests at centre in reduced motion
+ok 27 - the camera follows the fighters together, preserves its limits and rests at centre in reduced motion
+  ---
+  duration_ms: 0.506142
+  type: 'test'
+  ...
+# Subtest: all three planes retain overscan and move by different distances behind the fighters
+ok 28 - all three planes retain overscan and move by different distances behind the fighters
+  ---
+  duration_ms: 0.625573
+  type: 'test'
+  ...
+# Subtest: each crossover world has a credited playable arena and retains the common fight geometry
+ok 29 - each crossover world has a credited playable arena and retains the common fight geometry
+  ---
+  duration_ms: 1.359114
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1416.683954

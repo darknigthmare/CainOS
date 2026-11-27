@@ -1,0 +1,1695 @@
+{
+  "schema": "encore-focus-workbook-review/v1",
+  "asOf": "2026-11-27",
+  "sourceCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "sourceCommitScope": "Historical baseline; modified working-tree evidence is identified by the exact source SHA-256 values.",
+  "inputWorkbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+  "inputTrackerSHA256": "8a15cadf682ca510cccfb1f087bc510cc526466bafdae964a8bf1fec75b64b28",
+  "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+  "trackerDataSHA256": "06c1a1f15e671d32a687802744d93e457695196d0ae6a3638098c9b19232c9e3",
+  "sourceDataSHA256": "1326667db2f287e6235f892a521a3f3af0afe3d6c3148d8be147026be1dc6557",
+  "completionSourceSHA256": "8a5586fa57b37f3f15e4d6efc3642f49729d9aa786bb0e5d0a2f1dc15069ce64",
+  "existingSheets": [
+    "Synthèse",
+    "Fonctionnalités",
+    "Combattants",
+    "Techniques",
+    "Arènes",
+    "Atlas",
+    "Production",
+    "Scénarios",
+    "Extension PNJ",
+    "QA",
+    "Références",
+    "Guide combat",
+    "Extensions combat",
+    "Fiches extensions"
+  ],
+  "addedSheets": [],
+  "allowedExistingChanges": [
+    {
+      "sheet": "Production",
+      "row": 3504,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/cellarabstraction/cellarabstraction-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3504,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3509,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/cellarabstraction/cellarabstraction-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3509,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3524,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/aquaticabstraction/aquaticabstraction-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3524,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3529,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/aquaticabstraction/aquaticabstraction-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3529,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3544,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/abstractedjax/abstractedjax-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3544,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3549,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/abstractedjax/abstractedjax-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3549,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3564,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/abstractedqueenie/abstractedqueenie-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3564,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3569,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/abstractedqueenie/abstractedqueenie-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3569,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3584,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/abstractedribbit/abstractedribbit-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3584,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3589,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/abstractedribbit/abstractedribbit-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3589,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3604,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3604,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3609,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3609,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3624,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3624,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3629,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3629,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3644,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3644,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3649,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3649,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3664,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3664,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3669,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3669,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3684,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-prologue-1.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3684,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3689,
+      "column": 7,
+      "before": "combat/abstractions-narrative.mjs / combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-epilogue-3.png · combat/story-presentation.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3689,
+      "column": 9,
+      "before": "Narration originale sans voix prêtée à l’abstraction. Portraits et décors partagés ; aucun dessin narratif dédié ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "Narration originale sans voix prêtée à l’abstraction. Peinture native dédiée ; portraits et décors partagés restent disponibles en repli. Aucune guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Atlas",
+      "row": 38,
+      "column": 14,
+      "before": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+      "beforeFormula": null,
+      "after": "Evil Pomni, PNJ adverse des Big Top. Les archives evilpomni et rivalbaseballpomni sont deux alias de la même incarnation. Portrait corrigé rouge/jaune à accents bleus ; anciennes interprétations conservées.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Atlas",
+      "row": 38,
+      "column": 15,
+      "before": "https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
+      "beforeFormula": null,
+      "after": "https://glitchproductions.store/products/pomni-animiniz-pendantz\nhttps://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s\nArchive historique : https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Atlas",
+      "row": 38,
+      "column": 18,
+      "before": "Double ou rival décrit comme PNJ distinct dans le projet. Le nom partagé ne suffit pas à en faire un costume. Valider le rôle narratif ou décoratif avant toute nouvelle intégration.",
+      "beforeFormula": null,
+      "after": "Galerie : portrait partagé de la paire evilpomni-pendantz. Identifiants et planches historiques conservés ; aucun combattant supplémentaire ni transformation canonique de Pomni.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2783,
+      "column": 7,
+      "before": "docs/combat-character-coverage-2026-11-19.json",
+      "beforeFormula": null,
+      "after": "docs/combat-character-coverage-2026-11-19.json · docs/art-generation/focus-20261127/manifest.json",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2783,
+      "column": 8,
+      "before": "1/1 repères. Repères statiques présents.",
+      "beforeFormula": null,
+      "after": "Portrait corrigé partagé via la paire validée evilpomni-pendantz. Les anciens dessins demeurent dans les fichiers et les archives.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2783,
+      "column": 9,
+      "before": "Comparer les silhouettes aux plans primaires avant toute validation 1:1. Un dessin statique ne constitue pas un cycle animé.",
+      "beforeFormula": null,
+      "after": "Même PNJ des Big Top : alias Evil Pomni / Rival Baseball Pomni. Références épisode 5 et Pendantz ; pas de kit supplémentaire ni de certification pixel à pixel.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Atlas",
+      "row": 68,
+      "column": 14,
+      "before": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+      "beforeFormula": null,
+      "after": "Evil Pomni, PNJ adverse des Big Top. Les archives evilpomni et rivalbaseballpomni sont deux alias de la même incarnation. Portrait corrigé rouge/jaune à accents bleus ; anciennes interprétations conservées.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Atlas",
+      "row": 68,
+      "column": 15,
+      "before": "https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
+      "beforeFormula": null,
+      "after": "https://glitchproductions.store/products/pomni-animiniz-pendantz\nhttps://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s\nArchive historique : https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Atlas",
+      "row": 68,
+      "column": 18,
+      "before": "Double ou rival décrit comme PNJ distinct dans le projet. Le nom partagé ne suffit pas à en faire un costume. Valider le rôle narratif ou décoratif avant toute nouvelle intégration.",
+      "beforeFormula": null,
+      "after": "Galerie : portrait partagé de la paire evilpomni-pendantz. Identifiants et planches historiques conservés ; aucun combattant supplémentaire ni transformation canonique de Pomni.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2813,
+      "column": 7,
+      "before": "docs/combat-character-coverage-2026-11-19.json",
+      "beforeFormula": null,
+      "after": "docs/combat-character-coverage-2026-11-19.json · docs/art-generation/focus-20261127/manifest.json",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2813,
+      "column": 8,
+      "before": "1/1 repères. Repères statiques présents.",
+      "beforeFormula": null,
+      "after": "Portrait corrigé partagé via la paire validée evilpomni-pendantz. Les anciens dessins demeurent dans les fichiers et les archives.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2813,
+      "column": 9,
+      "before": "Comparer les silhouettes aux plans primaires avant toute validation 1:1. Un dessin statique ne constitue pas un cycle animé.",
+      "beforeFormula": null,
+      "after": "Même PNJ des Big Top : alias Evil Pomni / Rival Baseball Pomni. Références épisode 5 et Pendantz ; pas de kit supplémentaire ni de certification pixel à pixel.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 112,
+      "column": 6,
+      "before": "combat/base-sprite-content.mjs · combat/base-sprite-completion-20261127-*.mjs · combat/illustrations.mjs · combat/render.mjs",
+      "beforeFormula": null,
+      "after": "combat/base-sprite-content.mjs · combat/base-sprite-focus-20261127.mjs · combat/illustrations.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 112,
+      "column": 7,
+      "before": "89 familles statiques disponibles après vérification des deux PNG : portrait et garde. Cette reprise ajoute 27 familles, 21 de Kaufmo et 6 de Max.",
+      "beforeFormula": null,
+      "after": "91 familles statiques exposées. Le focus ajoute God Caine Animatez et Evil Pomni Pendantz, chacune avec un portrait et une garde distincts.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 112,
+      "column": 8,
+      "before": "Les états sans dessin propre utilisent la garde de la même famille. Aucun chargement d’action ni repli vers le costume normal ; corps et kit de combat conservés.",
+      "beforeFormula": null,
+      "after": "Les autres états réutilisent la garde de la même famille. Produit officiel, incarnation de PNJ et adaptation au jeu gardent leurs portées documentaires propres ; aucun nouveau kit ni cycle animé.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 105,
+      "column": 6,
+      "before": "assets/encore/campaign/ · combat/story-presentation.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/campaign/ · combat/story-presentation.mjs · docs/art-generation/focus-20261127/manifest.json",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 105,
+      "column": 7,
+      "before": "384 tableaux de prologue et d’épilogue, puis 256 briefings avant les duels. Les dix nouvelles routes restent entièrement narrées, sans réversion ni guérison canonique.",
+      "beforeFormula": null,
+      "after": "384 tableaux de prologue et d’épilogue : 104 avec un dessin dédié et 280 composés de portraits et décors. Les 256 briefings avant duel restent disponibles ; les routes d’abstraction gardent leur narration sans réversion ni guérison canonique.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 105,
+      "column": 8,
+      "before": "140 dessins narratifs historiques conservés. Les nouvelles routes composent leurs tableaux avec les portraits et les décors communs ; elles n’ajoutent pas de dessin narratif dédié. Dialogues et mises en scène restent des adaptations françaises pour Encore.",
+      "beforeFormula": null,
+      "after": "140 fichiers narratifs historiques et 20 nouvelles peintures conservés, soit 160 fichiers. Le nombre de fichiers diffère des 104 tableaux actifs illustrés. Récits et mises en scène originaux Encore, sans événement canonique ajouté.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 66,
+      "column": 6,
+      "before": "combat/render.mjs / combat/render-presentation.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/render-presentation.mjs · combat/projectile-art.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 66,
+      "column": 8,
+      "before": "Les motifs identifient les accessoires du fan-game, y compris après réflexion. Ils ne certifient aucune capacité de combat canonique.",
+      "beforeFormula": null,
+      "after": "33 motifs de projectile illustrés, dont 10 nouveaux motifs propres aux abstractions. Accessoires du fan-game, conservés après réflexion, sans changement des mécaniques ni pouvoir canonique revendiqué.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 11,
+      "column": 2,
+      "before": 573,
+      "beforeFormula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4033,\"Costume crossover\")+COUNTIFS('Production'!B6:B4033,\"Tenue Circus\")",
+      "after": 575,
+      "afterFormula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4069,\"Costume crossover\")+COUNTIFS('Production'!B6:B4069,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 12,
+      "column": 2,
+      "before": 64,
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Arrangement d’arène\")",
+      "after": 64,
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 2,
+      "before": 2792,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$4033,B$14)",
+      "after": 2828,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4069,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 3,
+      "before": 1013,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$4033,C$14)",
+      "after": 1013,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4069,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 4,
+      "before": 54,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$4033,D$14)",
+      "after": 54,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4069,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 5,
+      "before": 169,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$4033,E$14)",
+      "after": 169,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4069,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 6,
+      "before": 4028,
+      "beforeFormula": "=COUNTA('Production'!A6:A4033)",
+      "after": 4064,
+      "afterFormula": "=COUNTA('Production'!A6:A4069)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 19,
+      "column": 8,
+      "before": "64 routes et 384 tableaux",
+      "beforeFormula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B4033,\"Tableau d’histoire\")&\" tableaux\"",
+      "after": "64 routes et 384 tableaux",
+      "afterFormula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B4069,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 20,
+      "column": 8,
+      "before": "256 briefings de rencontre",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "after": "256 briefings de rencontre",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 21,
+      "column": 8,
+      "before": "27 thèmes musicaux d’arènes",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Arène\",'Production'!D6:D4033,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "after": "27 thèmes musicaux d’arènes",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Arène\",'Production'!D6:D4069,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 8,
+      "before": "26 motifs sonores synthétiques",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "after": "26 motifs sonores synthétiques",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 23,
+      "column": 8,
+      "before": "320 séquences de présentation",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "after": "320 séquences de présentation",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 24,
+      "column": 8,
+      "before": "14 ambiances visuelles procédurales actives",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Animation d’arène\",'Production'!E6:E4033,\"Implémenté\")&\" ambiances visuelles procédurales actives\"",
+      "after": "14 ambiances visuelles procédurales actives",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Animation d’arène\",'Production'!E6:E4069,\"Implémenté\")&\" ambiances visuelles procédurales actives\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 25,
+      "column": 8,
+      "before": "20 costumes historiques redessinés",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Costume\")&\" costumes historiques redessinés\"",
+      "after": "20 costumes historiques redessinés",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 27,
+      "column": 8,
+      "before": "839 fiches, hors tenues crossover",
+      "beforeFormula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4033,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "after": "841 fiches, hors tenues crossover",
+      "afterFormula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4069,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 31,
+      "column": 8,
+      "before": "192 présentations de KO",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Finition visuelle\")&\" présentations de KO\"",
+      "after": "192 présentations de KO",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 32,
+      "column": 8,
+      "before": "27 ambiances sonores originales",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B4033,\"Arène\",'Production'!D6:D4033,\"Ambiance sonore\",'Production'!E6:E4033,\"Implémenté\")&\" ambiances sonores originales\"",
+      "after": "27 ambiances sonores originales",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4069,\"Arène\",'Production'!D6:D4069,\"Ambiance sonore\",'Production'!E6:E4069,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 2,
+      "before": 2506,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2538,B21)",
+      "after": 2514,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2549,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 3,
+      "before": 0,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2538,C21)",
+      "after": 0,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2549,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 4,
+      "before": 22,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2538,D21)",
+      "after": 24,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2549,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 5,
+      "before": 2,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2538,E21)",
+      "after": 2,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2549,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 6,
+      "before": 2533,
+      "beforeFormula": "=COUNTA('QA'!A6:A2538)",
+      "after": 2544,
+      "afterFormula": "=COUNTA('QA'!A6:A2549)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 23,
+      "column": 2,
+      "before": 3,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2538,\"Partiel\")",
+      "after": 4,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2549,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 2,
+      "column": 8,
+      "before": "Version 0.7.0 · reprise complétée · 27 novembre 2026",
+      "beforeFormula": null,
+      "after": "Version 0.7.0 · focus Pomni, Caine, abstractions · 27 novembre 2026",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 13,
+      "column": 8,
+      "before": "29 tests Node ciblés · 63 PNG et conservation vérifiés",
+      "beforeFormula": null,
+      "after": "486 tests Node réussis · builds locaux interrompus",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 14,
+      "column": 8,
+      "before": "Navigateur local incomplet · CI précédente séparée",
+      "beforeFormula": null,
+      "after": "Chromium local bloqué · CI du nouveau commit attendue",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 8,
+      "before": "27 familles · 54 bases · 9 décors complets",
+      "beforeFormula": null,
+      "after": "4 bases · 20 peintures narratives · 10 motifs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 15,
+      "column": 8,
+      "before": "Extensions : bible intégrée, systèmes encore partiels",
+      "beforeFormula": null,
+      "after": "104 tableaux illustrés · 280 composés",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 30,
+      "column": 8,
+      "before": "89 familles statiques · aucune nouvelle animation",
+      "beforeFormula": null,
+      "after": "91 familles statiques · aucune nouvelle animation",
+      "afterFormula": null
+    }
+  ],
+  "appended": {
+    "Production": {
+      "before": 4028,
+      "after": 4064,
+      "rows": 36
+    },
+    "QA": {
+      "before": 2533,
+      "after": 2544,
+      "rows": 11
+    }
+  },
+  "appendedControls": {
+    "Production": {
+      "validation": {
+        "range": "E4034:E4069",
+        "values": [
+          "Implémenté",
+          "Partiel",
+          "Prévu",
+          "À vérifier",
+          "Hors périmètre"
+        ]
+      },
+      "rules": [
+        {
+          "range": "E4034:E4069",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "E4034:E4069",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          }
+        },
+        {
+          "range": "E4034:E4069",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        },
+        {
+          "range": "E4034:E4069",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          }
+        },
+        {
+          "range": "E4034:E4069",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "E4034:E4069",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          }
+        },
+        {
+          "range": "E4034:E4069",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        }
+      ]
+    },
+    "QA": {
+      "validation": {
+        "range": "D2539:D2549",
+        "values": [
+          "Réussi",
+          "Échec",
+          "Non exécuté",
+          "À vérifier",
+          "Partiel"
+        ]
+      },
+      "rules": [
+        {
+          "range": "D2539:D2549",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "D2539:D2549",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          }
+        },
+        {
+          "range": "D2539:D2549",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        },
+        {
+          "range": "D2539:D2549",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          }
+        },
+        {
+          "range": "D2539:D2549",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "D2539:D2549",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          }
+        },
+        {
+          "range": "D2539:D2549",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        }
+      ]
+    }
+  },
+  "nativePreservation": {
+    "status": "passed",
+    "cellsChecked": 97677,
+    "sheetsChecked": 14,
+    "differences": [],
+    "checked": [
+      "Existing IDs, row order, values, formulas and notes",
+      "Effective cell styles, existing dimensions, panes, tables, filters, validations, conditional formats, margins and theme"
+    ],
+    "approvedCellChanges": 89
+  },
+  "formulas": {
+    "before": 42,
+    "after": 42,
+    "recalculated": true,
+    "errorMatches": 0,
+    "exportReimportChecked": true,
+    "separateReimportProcess": true,
+    "desktopExcelOpened": false
+  },
+  "renders": [
+    "docs/verification/focus-workbook-20261127/summary.png",
+    "docs/verification/focus-workbook-20261127/summary-detail.png",
+    "docs/verification/focus-workbook-20261127/story-cellarabstraction-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-cellarabstraction-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-aquaticabstraction-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-aquaticabstraction-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-abstractedjax-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-abstractedjax-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-abstractedqueenie-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-abstractedqueenie-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-abstractedribbit-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-abstractedribbit-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedpomni-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedpomni-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedragatha-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedragatha-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedgangle-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedgangle-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedkinger-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedkinger-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedzooble-prologue-1.png",
+    "docs/verification/focus-workbook-20261127/story-originalabstractedzooble-epilogue-3.png",
+    "docs/verification/focus-workbook-20261127/archive-evilpomni.png",
+    "docs/verification/focus-workbook-20261127/coverage-evilpomni.png",
+    "docs/verification/focus-workbook-20261127/archive-rivalbaseballpomni.png",
+    "docs/verification/focus-workbook-20261127/coverage-rivalbaseballpomni.png",
+    "docs/verification/focus-workbook-20261127/feature-pre-base-35.png",
+    "docs/verification/focus-workbook-20261127/feature-pre-20.png",
+    "docs/verification/focus-workbook-20261127/feature-pre-07.png",
+    "docs/verification/focus-workbook-20261127/focus-bases-overview.png",
+    "docs/verification/focus-workbook-20261127/focus-bases-detail.png",
+    "docs/verification/focus-workbook-20261127/focus-stories-overview.png",
+    "docs/verification/focus-workbook-20261127/focus-stories-detail.png",
+    "docs/verification/focus-workbook-20261127/focus-projectiles-overview.png",
+    "docs/verification/focus-workbook-20261127/focus-projectiles-detail.png",
+    "docs/verification/focus-workbook-20261127/qa-added-overview.png",
+    "docs/verification/focus-workbook-20261127/qa-added-detail.png"
+  ],
+  "renderRequests": [
+    {
+      "name": "summary.png",
+      "sheetName": "Synthèse",
+      "range": "A1:H18",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "summary-detail.png",
+      "sheetName": "Synthèse",
+      "range": "A19:H34",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-cellarabstraction-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3504:J3504",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-cellarabstraction-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3509:J3509",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-aquaticabstraction-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3524:J3524",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-aquaticabstraction-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3529:J3529",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-abstractedjax-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3544:J3544",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-abstractedjax-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3549:J3549",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-abstractedqueenie-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3564:J3564",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-abstractedqueenie-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3569:J3569",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-abstractedribbit-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3584:J3584",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-abstractedribbit-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3589:J3589",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedpomni-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3604:J3604",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedpomni-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3609:J3609",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedragatha-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3624:J3624",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedragatha-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3629:J3629",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedgangle-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3644:J3644",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedgangle-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3649:J3649",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedkinger-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3664:J3664",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedkinger-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3669:J3669",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedzooble-prologue-1.png",
+      "sheetName": "Production",
+      "range": "G3684:J3684",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "story-originalabstractedzooble-epilogue-3.png",
+      "sheetName": "Production",
+      "range": "G3689:J3689",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "archive-evilpomni.png",
+      "sheetName": "Atlas",
+      "range": "N38:R38",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "coverage-evilpomni.png",
+      "sheetName": "Production",
+      "range": "G2783:J2783",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "archive-rivalbaseballpomni.png",
+      "sheetName": "Atlas",
+      "range": "N68:R68",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "coverage-rivalbaseballpomni.png",
+      "sheetName": "Production",
+      "range": "G2813:J2813",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "feature-pre-base-35.png",
+      "sheetName": "Fonctionnalités",
+      "range": "F112:I112",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "feature-pre-20.png",
+      "sheetName": "Fonctionnalités",
+      "range": "F105:I105",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "feature-pre-07.png",
+      "sheetName": "Fonctionnalités",
+      "range": "F66:I66",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "focus-bases-overview.png",
+      "sheetName": "Production",
+      "range": "A4034:F4039",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "focus-bases-detail.png",
+      "sheetName": "Production",
+      "range": "G4034:J4039",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "focus-stories-overview.png",
+      "sheetName": "Production",
+      "range": "A4040:F4059",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "focus-stories-detail.png",
+      "sheetName": "Production",
+      "range": "G4040:J4059",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "focus-projectiles-overview.png",
+      "sheetName": "Production",
+      "range": "A4060:F4069",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "focus-projectiles-detail.png",
+      "sheetName": "Production",
+      "range": "G4060:J4069",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "qa-added-overview.png",
+      "sheetName": "QA",
+      "range": "A2539:F2549",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "qa-added-detail.png",
+      "sheetName": "QA",
+      "range": "G2539:I2549",
+      "scale": 1,
+      "format": "png"
+    }
+  ],
+  "renderRecords": {
+    "summary.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "be1b7222525ad8b52ae2bb8b1f516bf811d7155885aa3b1a4f3d4e1127382ed0",
+      "sheetName": "Synthèse",
+      "range": "A1:H18"
+    },
+    "summary-detail.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "064b9c834142e19c6990af28ad6f83d38875fd4fb9b97ce68ae03609b728c9c0",
+      "sheetName": "Synthèse",
+      "range": "A19:H34"
+    },
+    "focus-bases-overview.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "e5a4485a4dd9dbd2861003fc219b71c85a69b4539877f2c8ebc4bdc988bddf14",
+      "sheetName": "Production",
+      "range": "A4034:F4039"
+    },
+    "focus-bases-detail.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "5e8e41d51d24f511294c6e533e39a8699d7003548634d7341ced352281f6b032",
+      "sheetName": "Production",
+      "range": "G4034:J4039"
+    },
+    "story-cellarabstraction-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "fd27d8b6b69062383e0fab822b72fe7e2c9f316bae086e879db5ac9c9fd6bc47",
+      "sheetName": "Production",
+      "range": "G3504:J3504"
+    },
+    "story-cellarabstraction-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "1435bba5b0d6264b9ca413e6cdfb07797e6981e6a029322d7173dc351bee575f",
+      "sheetName": "Production",
+      "range": "G3509:J3509"
+    },
+    "story-aquaticabstraction-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "0c7e818debe076b3d5cf5875872266340907c4c60d2cb392aadfa9d38f104203",
+      "sheetName": "Production",
+      "range": "G3524:J3524"
+    },
+    "story-aquaticabstraction-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "d839559f10a24da099fd3312c0950de90a8ff4ea204a12f4c08aca2665fda165",
+      "sheetName": "Production",
+      "range": "G3529:J3529"
+    },
+    "story-abstractedjax-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "7f2bf54dc4b87cfca51e9f9a3277e0af29f675acbd06ef4514ba295502b5fef4",
+      "sheetName": "Production",
+      "range": "G3544:J3544"
+    },
+    "story-abstractedjax-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "ec903f0e1e9d124a2a5801df98e80dada8c3b99b7a4920ef269bde81c549dd13",
+      "sheetName": "Production",
+      "range": "G3549:J3549"
+    },
+    "story-abstractedqueenie-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "ea85c5e50279356e819c5e8568655f248048c3137a81f1c39fe2976dcd653cc9",
+      "sheetName": "Production",
+      "range": "G3564:J3564"
+    },
+    "story-abstractedqueenie-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "69fab58903ded4a3ac6d4121c696df0818d5ace19d771bfd363fcd62663d1557",
+      "sheetName": "Production",
+      "range": "G3569:J3569"
+    },
+    "story-abstractedribbit-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "e034e6d4d94468bc6e5f1ea83b648381a868b449ecdd5f68707f0f940640383b",
+      "sheetName": "Production",
+      "range": "G3584:J3584"
+    },
+    "story-abstractedribbit-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "85da3092ff554b2c10f475d3687cee5f336869fa3cfee39c030f18afd9df38dd",
+      "sheetName": "Production",
+      "range": "G3589:J3589"
+    },
+    "story-originalabstractedpomni-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "26ef54de4f80eaec99b2689129b242644b9eeb5401b0803d63514840f7ee0ae6",
+      "sheetName": "Production",
+      "range": "G3604:J3604"
+    },
+    "story-originalabstractedpomni-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "27dd899c7e0c5a14464d5e7609395f30786dfc17200a8a482ca72f2e06a4b6ab",
+      "sheetName": "Production",
+      "range": "G3609:J3609"
+    },
+    "story-originalabstractedragatha-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "f09f72858adc1cb4028bc9039b8255f545bc440320785798e545691735c46acf",
+      "sheetName": "Production",
+      "range": "G3624:J3624"
+    },
+    "story-originalabstractedragatha-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "d259ccaf98b419de64a4163764faac86b34c7ec0fc79bdd1edd760320a0e435a",
+      "sheetName": "Production",
+      "range": "G3629:J3629"
+    },
+    "story-originalabstractedgangle-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "82af3501fd7ab61c1482d7b5d1fef8420307bfdb6b2f280574c891f806a68cf4",
+      "sheetName": "Production",
+      "range": "G3644:J3644"
+    },
+    "story-originalabstractedgangle-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "cb2d26671c4f7f579b34a06a2a2de8b8638bf89fbb46b0a9f7369a6ec1a72f05",
+      "sheetName": "Production",
+      "range": "G3649:J3649"
+    },
+    "story-originalabstractedkinger-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "638ac67a2c6f7f195988968f90e5316fa2d67b2668a89d4f76842ba3b227dc50",
+      "sheetName": "Production",
+      "range": "G3664:J3664"
+    },
+    "story-originalabstractedkinger-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "41f7adcf5bcc85a969c0dda7c467ad6552486d2d515eb888ab253bc089afc99d",
+      "sheetName": "Production",
+      "range": "G3669:J3669"
+    },
+    "story-originalabstractedzooble-prologue-1.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "df1ef0ad82a62942d520454f88ca73045319025bf99a8e482546288185381f08",
+      "sheetName": "Production",
+      "range": "G3684:J3684"
+    },
+    "story-originalabstractedzooble-epilogue-3.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "a5a7cfd6b1a275e0686a9e01c4ba5e4393b330c83b32576783d100ab9fee4718",
+      "sheetName": "Production",
+      "range": "G3689:J3689"
+    },
+    "archive-evilpomni.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "cd62a832a02be8f0420c4565ecd9fe9ffd0d749e494cd81acecad24b27de2bce",
+      "sheetName": "Atlas",
+      "range": "N38:R38"
+    },
+    "coverage-evilpomni.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "527152156178f502a83408aba73df1f015bef8d2723a3c6c8a52591fc871b306",
+      "sheetName": "Production",
+      "range": "G2783:J2783"
+    },
+    "archive-rivalbaseballpomni.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "4843310321e9b5df9abdbec66a642f226fae071bf7d631988e5887b70241f96f",
+      "sheetName": "Atlas",
+      "range": "N68:R68"
+    },
+    "coverage-rivalbaseballpomni.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "39f158ed941427e226855918146c32519e2e0a80312b920b9b3d18abc2e51e35",
+      "sheetName": "Production",
+      "range": "G2813:J2813"
+    },
+    "feature-pre-base-35.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "dc4995c544252059c098f762e9f9e9f06a3c572abd28ca30f8899174084aad40",
+      "sheetName": "Fonctionnalités",
+      "range": "F112:I112"
+    },
+    "feature-pre-20.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "365e872df5e5d928b3a3de6572bf6c6724964e62d5b3f6ccb640ba621627f078",
+      "sheetName": "Fonctionnalités",
+      "range": "F105:I105"
+    },
+    "feature-pre-07.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "ae99625cffefd5703c04a47c264883f969e6777f211796c0eaba5d4dec7e16ff",
+      "sheetName": "Fonctionnalités",
+      "range": "F66:I66"
+    },
+    "focus-stories-overview.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "b3b9e42b086d45cdf8882ea34686aa41f6fdd9f6b89dc51a02199c4474974b3a",
+      "sheetName": "Production",
+      "range": "A4040:F4059"
+    },
+    "focus-stories-detail.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "c10e0de71ae713db494f4148b5b7c9026221b919a667eb87b934056c914cb15f",
+      "sheetName": "Production",
+      "range": "G4040:J4059"
+    },
+    "focus-projectiles-overview.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "4ddd503a58f6d26565a918e852b04c3ee19ee7cbbee5ab82ee5441fed5efcee0",
+      "sheetName": "Production",
+      "range": "A4060:F4069"
+    },
+    "focus-projectiles-detail.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "7c0f056d40417a83baa3dc917d2136541bc25af71a4e431d4e0c820d295c0b67",
+      "sheetName": "Production",
+      "range": "G4060:J4069"
+    },
+    "qa-added-overview.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "df2e98988d48caa13468fdea33b7e7d301269be14e058ef240e09cf9c4282abd",
+      "sheetName": "QA",
+      "range": "A2539:F2549"
+    },
+    "qa-added-detail.png": {
+      "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+      "sha256": "fe67c476f75e510d1897cbe02a0502e140b4cc36c1d8304a6fd34d35417a314d",
+      "sheetName": "QA",
+      "range": "G2539:I2549"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "reviewedAt": "2026-11-27T09:52:00.848533+00:00",
+    "workbookSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+    "reviewers": [
+      {
+        "agent": "/root",
+        "renderedViewsReviewed": [
+          "summary.png",
+          "summary-detail.png",
+          "focus-bases-overview.png",
+          "focus-bases-detail.png"
+        ],
+        "observations": "Synthèse et vues des deux familles lisibles ; 575 costumes, 91 bases, 104 tableaux illustrés et 280 composés, 486 tests ainsi que les limites build/navigateur visibles. Chemins, références, kits et notes God Caine/Evil Pomni distincts et lisibles."
+      },
+      {
+        "agent": "/root/previous_batch_qa",
+        "renderedViewsReviewed": [
+          "story-cellarabstraction-prologue-1.png",
+          "story-cellarabstraction-epilogue-3.png",
+          "story-aquaticabstraction-prologue-1.png",
+          "story-aquaticabstraction-epilogue-3.png",
+          "story-abstractedjax-prologue-1.png",
+          "story-abstractedjax-epilogue-3.png",
+          "story-abstractedqueenie-prologue-1.png",
+          "story-abstractedqueenie-epilogue-3.png",
+          "story-abstractedribbit-prologue-1.png",
+          "story-abstractedribbit-epilogue-3.png",
+          "story-originalabstractedpomni-prologue-1.png",
+          "story-originalabstractedpomni-epilogue-3.png",
+          "story-originalabstractedragatha-prologue-1.png",
+          "story-originalabstractedragatha-epilogue-3.png",
+          "story-originalabstractedgangle-prologue-1.png",
+          "story-originalabstractedgangle-epilogue-3.png",
+          "story-originalabstractedkinger-prologue-1.png",
+          "story-originalabstractedkinger-epilogue-3.png",
+          "story-originalabstractedzooble-prologue-1.png",
+          "story-originalabstractedzooble-epilogue-3.png",
+          "archive-evilpomni.png",
+          "coverage-evilpomni.png",
+          "archive-rivalbaseballpomni.png",
+          "coverage-rivalbaseballpomni.png",
+          "feature-pre-base-35.png",
+          "feature-pre-20.png",
+          "feature-pre-07.png",
+          "focus-stories-overview.png",
+          "focus-stories-detail.png",
+          "focus-projectiles-overview.png",
+          "focus-projectiles-detail.png",
+          "qa-added-overview.png",
+          "qa-added-detail.png"
+        ],
+        "observations": "Les vingt récits historiques actualisés, les deux alias Evil et leurs couvertures, les trois fonctions, les vingt nouveaux récits, dix motifs et onze lignes QA sont lisibles, sans débordement, texte coupé ni erreur affichée."
+      }
+    ],
+    "renderedViewsReviewed": [
+      "summary.png",
+      "summary-detail.png",
+      "story-cellarabstraction-prologue-1.png",
+      "story-cellarabstraction-epilogue-3.png",
+      "story-aquaticabstraction-prologue-1.png",
+      "story-aquaticabstraction-epilogue-3.png",
+      "story-abstractedjax-prologue-1.png",
+      "story-abstractedjax-epilogue-3.png",
+      "story-abstractedqueenie-prologue-1.png",
+      "story-abstractedqueenie-epilogue-3.png",
+      "story-abstractedribbit-prologue-1.png",
+      "story-abstractedribbit-epilogue-3.png",
+      "story-originalabstractedpomni-prologue-1.png",
+      "story-originalabstractedpomni-epilogue-3.png",
+      "story-originalabstractedragatha-prologue-1.png",
+      "story-originalabstractedragatha-epilogue-3.png",
+      "story-originalabstractedgangle-prologue-1.png",
+      "story-originalabstractedgangle-epilogue-3.png",
+      "story-originalabstractedkinger-prologue-1.png",
+      "story-originalabstractedkinger-epilogue-3.png",
+      "story-originalabstractedzooble-prologue-1.png",
+      "story-originalabstractedzooble-epilogue-3.png",
+      "archive-evilpomni.png",
+      "coverage-evilpomni.png",
+      "archive-rivalbaseballpomni.png",
+      "coverage-rivalbaseballpomni.png",
+      "feature-pre-base-35.png",
+      "feature-pre-20.png",
+      "feature-pre-07.png",
+      "focus-bases-overview.png",
+      "focus-bases-detail.png",
+      "focus-stories-overview.png",
+      "focus-stories-detail.png",
+      "focus-projectiles-overview.png",
+      "focus-projectiles-detail.png",
+      "qa-added-overview.png",
+      "qa-added-detail.png"
+    ],
+    "finalViewsReviewed": 37,
+    "baselineViewsReviewed": [
+      "baseline-summary.png",
+      "baseline-production.png",
+      "baseline-selection-section.png"
+    ],
+    "checks": [
+      "Retours à la ligne et hauteurs adaptées aux chemins, empreintes SHA-256 et notes longues.",
+      "Les limites source, récit original Encore et absence de nouveaux pouvoirs canoniques restent lisibles.",
+      "Les onze lignes QA comprennent les résultats 486/486, le build local interrompu 137, CainOS non exécuté, Chromium local bloqué HTTP 403 et la CI du nouveau commit attendue.",
+      "Les zones de notes utilisateur, les statuts et les couleurs du modèle existant restent visibles."
+    ],
+    "scope": "Revue du classeur et de ses vues uniquement. Les preuves du jeu gardent leur portée distincte ; aucune certification de fidélité canonique 1:1 ni validation de livraison n’est déduite de cette revue."
+  },
+  "gameTestsExecutedByWorkbookUpdate": false,
+  "releaseReviewed": false,
+  "limitations": [
+    "Les preuves de jeu restent datées et séparées de cette revue du classeur.",
+    "Excel bureau et périphériques physiques non vérifiés. La fidélité canonique 1:1 n’est pas certifiée par la présence des fichiers."
+  ],
+  "renderRequestAdjustments": {
+    "reason": "Review all eleven new QA rows, including the local build/browser limitations, rather than only the first three. Workbook bytes are unchanged.",
+    "changes": [
+      {
+        "name": "qa-added-overview.png",
+        "before": "A2539:F2541",
+        "after": "A2539:F2549"
+      },
+      {
+        "name": "qa-added-detail.png",
+        "before": "G2539:I2541",
+        "after": "G2539:I2549"
+      }
+    ]
+  },
+  "metadataReconciliation": {
+    "path": "docs/art-generation/focus-20261127/qa/workbook-count-reconciliation.json",
+    "sha256": "7e35b514919bad29f352ffb4e0ff7af7efb8f5ee91f85d405544a0357a5c140e",
+    "field": "counts.costumeAdditions",
+    "before": 56,
+    "after": 58,
+    "workbookBytesUnchanged": true
+  }
+}

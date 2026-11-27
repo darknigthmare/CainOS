@@ -1,5 +1,5 @@
-// Compare the real selector to the published compositions: four full paintings
-// and twenty-three three-plane scenes. Exercise failure, retry and cached return.
+// Compare the real selector to the published compositions: thirteen full paintings
+// and fourteen three-plane scenes. Exercise failure, retry and cached return.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -29,22 +29,22 @@ try {
   page.on('pageerror', e => report.errors.push(e.message));
   await page.goto(base + '/combat/');
   await page.locator('.mode-card[data-mode="training"]').click();
-  const rebuiltIds = ['falseexit', 'undermap', 'kingdom', 'spudsy'];
+  const rebuiltIds = ['falseexit', 'undermap', 'kingdom', 'spudsy', 'bigtop', 'candy', 'manor', 'cellar', 'void', 'lake', 'gloink', 'grounds', 'backstage'];
   assert.deepEqual(Object.keys(REBUILT_STAGE_SCENES).sort(), [...rebuiltIds].sort(),
-    'The full-scene contract must cover exactly the four rebuilt arenas');
+    'The full-scene contract must cover exactly the thirteen rebuilt arenas');
   assert.equal(STAGES.length, 27, 'Scene replacements must not create new arena identities');
   for (const id of rebuiltIds) assert.ok(ART_FILES.includes(REBUILT_STAGE_SCENES[id].path), id + ': full painting absent from the published art pack');
 
-  const near = '**/assets/encore/stages/candy/near.webp';
+  const near = '**/assets/encore/stages/training/near.webp';
   await page.route(near, route => route.abort('failed'));
-  const failure = page.waitForEvent('requestfailed', { predicate: request => request.url().endsWith('/stages/candy/near.webp') });
-  await page.locator('[data-stage="candy"]').click();
+  const failure = page.waitForEvent('requestfailed', { predicate: request => request.url().endsWith('/stages/training/near.webp') });
+  await page.locator('[data-stage="training"]').click();
   await failure;
   assert.equal(await page.evaluate(async () => {
     const { CombatRenderer } = await import('/combat/render.mjs');
     const { getStage } = await import('/combat/data.mjs');
     const { loadStagePlanes } = await import('/combat/stage-parallax.mjs');
-    const stage = getStage('candy');
+    const stage = getStage('training');
     if (await loadStagePlanes(stage)) return false;
     const expected = document.createElement('canvas');
     new CombatRenderer(expected).render(null, { stage, reducedMotion: true });
@@ -53,20 +53,20 @@ try {
   check('A missing near layer keeps the complete procedural arena visible in the selector');
   await page.unroute(near);
 
-  const cart = '**/assets/encore/props/grounds/cotton-candy-cart.*';
-  const readCart = () => page.evaluate(async () => {
+  const cart = '**/assets/encore/props/coppernine/colony-heater.*';
+  const readHeater = () => page.evaluate(async () => {
     const { loadStagePlanes } = await import('/combat/stage-parallax.mjs');
-    const art = await loadStagePlanes({ id: 'grounds' });
+    const art = await loadStagePlanes({ id: 'coppernine' });
     return { complete: art.complete, image: art.still.toDataURL() };
   });
   await page.route(cart, route => route.abort('failed'));
-  const absent = await readCart();
+  const absent = await readHeater();
   assert.equal(absent.complete, false);
   await page.unroute(cart);
-  const present = await readCart();
+  const present = await readHeater();
   assert.equal(present.complete, true);
   assert.notEqual(present.image, absent.image);
-  check('A failed grounds prop leaves the stage playable and reappears on a later visit');
+  check('A failed Copper9 heater leaves the layered stage playable and reappears on a later visit');
 
   const recoveredProps = [
     ['gaslightwharf', 'wharf-lamp'],
@@ -111,11 +111,11 @@ try {
       differsFromFallback, sameCachedCanvas, samePixelsAsPresent,
     };
   }, { id, phase });
-  const visitGrounds = async () => {
-    await page.locator('[data-stage="grounds"]').click();
+  const visitTraining = async () => {
+    await page.locator('[data-stage="training"]').click();
     await page.evaluate(async () => {
       const { loadStagePlanes } = await import('/combat/stage-parallax.mjs');
-      await loadStagePlanes({ id: 'grounds' });
+      await loadStagePlanes({ id: 'training' });
     });
   };
   for (const [id, file] of recoveredProps) {
@@ -145,7 +145,7 @@ try {
       const failedRequests = blockedRequests;
       await page.unroute(routePattern, abortProp);
 
-      await visitGrounds();
+      await visitTraining();
       const response = page.waitForResponse(response => matchesProp(response.url()));
       await page.locator(`[data-stage="${id}"]`).click();
       const loaded = await response;
@@ -160,7 +160,7 @@ try {
       // Keep the recovered stage in the two-scene cache while visiting another
       // arena. A repeated network failure must not replace the complete canvas.
       await page.route(routePattern, abortProp);
-      await visitGrounds();
+      await visitTraining();
       await page.locator(`[data-stage="${id}"]`).click();
       const cachedProp = await readRecoveredProp(id, 'cached');
       assert.equal(cachedProp.complete, true, id + ': a cached return lost the prop');
@@ -259,7 +259,7 @@ try {
         id + ': failed painting must keep its complete procedural fallback visible');
       const failedRequests = blockedRequests;
       await page.unroute(routePattern, abortScene);
-      await visitGrounds();
+      await visitTraining();
       const response = page.waitForResponse(response => matchesScene(response.url()));
       await page.locator(`[data-stage="${id}"]`).click();
       const loaded = await response;
@@ -273,7 +273,7 @@ try {
       assert.ok(restored.previewMatches && restored.previewId === id, id + ': the real selector did not display the recovered painting');
       const requestsBeforeReturn = sceneRequests.length;
       await page.route(routePattern, abortScene);
-      await visitGrounds();
+      await visitTraining();
       await page.locator(`[data-stage="${id}"]`).click();
       const cached = await readFullScene(id, 'cached');
       assert.ok(cached.complete && cached.fullScene && cached.sameCachedCanvas && cached.samePixelsAsPresent,
@@ -293,7 +293,7 @@ try {
   }
 
   // A second visit to the failed arena must recover the real decor too.
-  const stages = [...STAGES.filter(s => s.id !== 'candy'), STAGES.find(s => s.id === 'candy')];
+  const stages = [...STAGES.filter(s => s.id !== 'training'), STAGES.find(s => s.id === 'training')];
   for (const stage of stages) {
     await page.locator(`[data-stage="${stage.id}"]`).click();
     const measured = await page.evaluate(async id => {
@@ -356,9 +356,9 @@ try {
     await fs.writeFile(path.join(output, stage.id + '.webp'), Buffer.from(exportURL.split(',')[1], 'base64'));
     report.stages.push(measured);
   }
-  assert.equal(report.stages.filter(stage => stage.fullScene).length, 4);
-  assert.equal(report.stages.filter(stage => !stage.fullScene).length, 23);
-  check('Four full paintings pan six pixels; twenty-three layered scenes pan six, seventeen and thirty-one pixels, with reduced motion fixed');
+  assert.equal(report.stages.filter(stage => stage.fullScene).length, 13);
+  assert.equal(report.stages.filter(stage => !stage.fullScene).length, 14);
+  check('Thirteen full paintings pan six pixels; fourteen layered scenes pan six, seventeen and thirty-one pixels, with reduced motion fixed');
   check('All 27 playable selector previews display their published composition, including recovered full paintings and layers');
   await page.locator('[data-stage="showgrounds"]').click();
   await page.locator('[data-action="start"]').click();

@@ -34,6 +34,18 @@ const stat=(assets='à produire',integration='non intégré',tests='à exécuter
 const designStatus=()=>({design:'specified',assets:'not-produced',integration:'not-implemented',tests:'not-executed'});
 const namespace='encore-combat-extensions';
 const base={version:'1.0',asOf:AS_OF,timezone:'Europe/Paris',observedBaselineCommit:BASELINE_COMMIT};
+const staticSelectionContinuation={
+  id:'EN-E1-STATIC-SELECTION-20261127',contractId:SELECTION_CONTRACT.id,requirementSection:'EN-G32',
+  status:'implemented-static-subset',source:'combat/selection-presentation.mjs',
+  evidence:'docs/art-generation/completion-20261127/selection/README.md',
+  behaviors:['Choix immédiat et annulation du dernier changement indépendants pour J1 et J2.',
+    'Jetons de portrait rejetant les réponses tardives ; choix conservé après une image indisponible.',
+    'Annonce accessible unique, badges de miroir et retour du focus sur la carte rétablie.',
+    'État temporaire effacé en quittant le menu ; aucun changement de profil, replay ou simulation.'],
+  excluded:['Gestes individuels d’entrée et de sortie','Animation des huit états','Taunts','Sélection d’équipe','Droits commerciaux'],
+  verification:{nodeSuite:'tests/combat-selection-presentation.test.mjs',browserSuite:'tests/combat-selection-browser.mjs',
+    resultPolicy:'Consulter les preuves datées de la livraison ; une suite inscrite ne constitue pas une exécution réussie.'},
+};
 
 assert.equal(FIGHTERS.length,64,'Update authoring before expanding this roster.');
 assert.deepEqual(SECTION_BLUEPRINTS.map(s=>s[0]),sectionIds);
@@ -171,8 +183,10 @@ assert.equal(RIGHTS_SCENARIOS.length,22);assert.equal(TEAM_SCENARIOS.length,18);
 const design={schema:`${namespace}-design/v1`,...base,sources:SOURCE_DOCUMENTS,phase:'static-base-assets-and-documentation',
   interpretation:'Fidélité 1:1 = identité, silhouettes, proportions, accessoires, lieux et personnalité vérifiés contre sources. Aucune certification globale donnée par ces documents.',
   sections,contracts:{selection:SELECTION_CONTRACT,taunt:TAUNT_CONTRACT,team:TEAM_CONTRACT},
+  staticSelectionContinuation,
   runtimeObservations:[
     {id:'EN-OBS-SELECT',path:'combat/app.mjs',symbols:['renderSelect','selectionArtist','refreshSelectionArtist'],observed:'Cartes, portraits, aperçu de costume et décor présents ; aucun cycle complet de désélection dédié observé au baseline.'},
+    {id:'EN-OBS-STATIC-SELECT-20261127',path:'combat/selection-presentation.mjs',symbols:['SelectionPresentation','beginPortrait','finishPortrait','undo'],observed:'Continuation du 27 novembre : sous-ensemble statique de sélection intégré. Les cycles corporels complets et leur statut de production restent distincts.'},
     {id:'EN-OBS-PRESENT',path:'combat/render-sequences.mjs',symbols:['FIGHTER_SEQUENCES','SEQUENCE_EVENTS'],observed:'Cinq événements de présentation par combattant, pour intro et résultats ; distincts des nouveaux taunts et états de menu.'},
     {id:'EN-OBS-INPUT',path:'combat/session.mjs',symbols:['SLOT_ORDER','REPLAY_RULES'],observed:'Dix slots de techniques et replays 0.7.0 utilisant les règles 0.5.0 ; nouvelles actions tag à versionner.'},
     {id:'EN-OBS-ACCESS',path:'combat/session.mjs',symbols:['emptyProfile','validateProfile'],observed:'Progression de routes/défis/médailles présente ; pas de ledger de sources permanentes/temporaires dans le profil v1 du baseline.'},
@@ -242,7 +256,7 @@ const workbook={schema:`${namespace}-workbook/v1`,...base,
 };
 assert.equal(profiles.length,254);assert.equal(new Set(profiles.map(p=>p.id)).size,profiles.length);
 
-const sourceFiles=['combat/data.mjs','combat/session.mjs','combat/engine.mjs','combat/progression.mjs','combat/render-sequences.mjs','combat/bindings.mjs','combat/stories.mjs','docs/bible/character-associations.json'];
+const sourceFiles=['combat/data.mjs','combat/session.mjs','combat/engine.mjs','combat/progression.mjs','combat/render-sequences.mjs','combat/bindings.mjs','combat/stories.mjs','combat/app.mjs','combat/selection-presentation.mjs','combat/index.html','combat/style.css','docs/bible/character-associations.json'];
 const sourceHashes={};for(const p of sourceFiles)sourceHashes[p]=hash(await fs.readFile(path.join(root,p)));
 const counts={sections:sections.length,requirements:114,characterProfiles:characters.length,tauntBriefs:64,selectionBriefs:64,deselectionBriefs:64,
   teams:teams.length,teamSupers:teams.length,teamFinales:teams.length,bonusStages:bonuses.length,hubZones:HUB.zones.length,hubReciprocalLinks:HUB.connections.length,
@@ -250,13 +264,14 @@ const counts={sections:sections.length,requirements:114,characterProfiles:charac
   documentedEntitySlots:entities.length,teamAcceptanceScenarios:18,rightsAcceptanceScenarios:22,workbookProfiles:profiles.length,
   imagesProducedByThisDocumentationPass:0,animationsProducedByThisDocumentationPass:0,newRuntimeModesImplementedByThisDocumentationPass:0};
 const integration={schema:`${namespace}-integration/v1`,...base,sourceDocuments:SOURCE_DOCUMENTS,sourceHashes,counts,
+  staticSelectionContinuation,
   runtimeInventoryAtGeneration:{scope:'Catalogue courant référencé uniquement ; aucune réécriture des chiffres historiques de livraison.',gameVersion:GAME_VERSION,rulesVersion:ENGINE_RULES_VERSION,
     simulationHz:1/FIXED_DT,fighters:FIGHTERS.length,costumes:COSTUMES.length,stages:STAGES.length,dedicatedArrangements:DEDICATED_STAGES.length,modes:MODES.length,
     sequenceEvents:SEQUENCE_EVENTS,existingPresentationSequences:Object.values(FIGHTER_SEQUENCES).reduce((n,events)=>n+Object.keys(events).length,0),techniqueSlots:SLOT_ORDER},
   validation:{sourceBytesAndHashes:true,sectionCoverage:true,uniqueRequirementIds:true,characterRosterCoverage:true,uniqueCharacterExits:true,teamMembersAndMovesResolved:true,
     bonusStageIdsResolved:true,hubConnectedAndThresholdsOnPerimeter:true,accessDependenciesResolved:true,conditionLeavesResolved:true,supportDisabled:true,
     runtimeScenariosExecuted:false,newArtVisuallyReviewed:false,canonicalFidelityCertified:false},
-  limitations:['Les timings et coûts proposés sont des hypothèses à équilibrer.','Les fichiers de référence donnent un contrat ; les nouvelles fonctions restent non intégrées.','Les 18+22 scénarios source restent à exécuter sur une future implémentation.','Les observations de base sont attachées au commit 6e44ab7 ; les comptes courants de catalogue sont indiqués séparément.','Les formes, gestes, duos et lieux nouveaux restent des créations Encore ou des adaptations, sans attestation canonique supplémentaire.'],
+  limitations:['Les timings et coûts proposés sont des hypothèses à équilibrer.','Le sous-ensemble statique de sélection est raccordé séparément ; les cycles complets, équipes, bonus, hub et droits restent à intégrer.','Les 18+22 scénarios source restent à exécuter sur une future implémentation.','Les observations de base sont attachées au commit 6e44ab7 ; les comptes courants et la continuation statique du 27 novembre sont indiqués séparément.','Les formes, gestes, duos et lieux nouveaux restent des créations Encore ou des adaptations, sans attestation canonique supplémentaire.'],
 };
 
 const generated=new Map();
@@ -271,6 +286,8 @@ add('EXTENSIONS_COMBAT_INTEGRATION.md',`# Extensions 01 et 02 — application à
 ${AS_OF} · base observée [${BASELINE_COMMIT.slice(0,7)}](https://github.com/darknigthmare/CainOS/commit/${BASELINE_COMMIT}) · phase **sprites de base et documentation**.
 
 Les deux textes originaux prolongent le guide déjà intégré : **38 rubriques, 114 exigences**, chacune avec résultat attendu et statuts séparés. Le [registre d’intégration](extensions-integration.json) et le [contrat structuré](extensions-design.json) sont reproductibles. Ce chantier documentaire ne livre aucune nouvelle animation, aucun tag ni accès commercial opérationnel.
+
+La [continuation du menu statique du 27 novembre](../art-generation/completion-20261127/selection/README.md) implémente le choix immédiat, un retour indépendant par joueur, les réponses de portrait tardives et les annonces accessibles. Ce sous-ensemble est décrit dans \`staticSelectionContinuation\`. Les 128 briefs d’entrée et de sortie gardent leur statut de production pour les gestes individuels et le cycle complet ; leurs identifiants servent déjà de provenance au menu.
 
 ## Sources originales conservées
 

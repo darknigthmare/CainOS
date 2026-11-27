@@ -1,0 +1,69 @@
+{
+  "schema": "encore-static-selection-verification/v1",
+  "asOf": "2026-11-27",
+  "baselineCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "scope": "Static selection presentation, per-side one-step undo and asynchronous portrait status; no simulation, profile format, replay rules or new animations.",
+  "sourceHashes": {
+    "combat/selection-presentation.mjs": "d6930e9a950d61a40330358ee33c612b5aa3ca4ebf125ab575e441b1498f6ef1",
+    "combat/app.mjs": "6e8ac84528938702dd9480cddf66c9772236a8a216d755b9c566ee15831ba28b",
+    "combat/index.html": "9c13e4bcbb0c71ce96547e5e337e39a2198c2bb06cf35f3ae2e60faeec801b3b",
+    "combat/style.css": "96d25fec893466bda6dab66675c0e5241babea0b46427d69bc9b6bc141788b33",
+    "tests/combat-selection-presentation.test.mjs": "ffa6d527594d0c9eb613a013ca2f97faa014c5257af3d28ebdd6d645eaeb4393",
+    "tests/combat-accessibility-browser.mjs": "ac7445ddc2d51d520421ce3f37dee6dd896f95522d27b22f2715130374f77d45",
+    "tests/combat-selection-browser.mjs": "91a7223d9c9f84059049a76ea53f6f2b45584f8d3f7ac261f58efd25fbabf910",
+    "scripts/combat-ci-suites.mjs": "6f736ce5590c923dfdf36d53a7cef33999c044b9529febd186a5eae891b527b8"
+  },
+  "node": {
+    "command": "node --test --test-reporter=tap tests/combat-selection-presentation.test.mjs",
+    "tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "log": "qa/node-tests.log",
+    "sha256": "ea4dd3a3e262aad6fae791a1e0d4a97b5f14836f45b9cde48f58cf9b2db57ec2"
+  },
+  "independentCodeReview": {
+    "reviewer": "kaufmo_finish",
+    "reviewed": [
+      "navigation/mode/match/replay resets",
+      "independent undo and restored focus",
+      "mirror badges",
+      "stale portrait callback uses token and connected Canvas"
+    ],
+    "blockingRuntimeDefectsFound": 0,
+    "testDefectCorrected": "Desktop route-interception contexts now block service workers; otherwise sw.js can serve the held image before page.route observes it. Cleanup also preserves the original error after browser closure.",
+    "primaryTestDocumentation": "https://playwright.dev/docs/api/class-page#page-route",
+    "browserRerunAfterCorrection": false
+  },
+  "browser": {
+    "status": "incomplete-local-browser-terminated",
+    "complete": false,
+    "browserVersion": "Chromium 158.0.8127.0",
+    "fullAccessibilityChecksCompleted": 8,
+    "targetedChecksCompleted": 2,
+    "businessAssertionFailureObservedBeforeTermination": false,
+    "termination": "SIGKILL confirmed in Playwright browser process log",
+    "targetedReport": "qa/selection-browser-local-incomplete.json",
+    "targetedLog": "qa/selection-browser-local-incomplete.log",
+    "fullAccessibilityReport": "qa/accessibility-local-incomplete.json",
+    "finalSourceRetestedLocally": false,
+    "scope": "The two completed targeted checks cover mirror badges/no duplicate announcement and independent undo/focus. Delayed network, match/reset and 390px journeys did not complete locally. These files retain the source hashes of that attempt, before the subsequent service-worker routing fix."
+  },
+  "ci": {
+    "registered": true,
+    "registry": "scripts/combat-ci-suites.mjs",
+    "suites": 22,
+    "newSuite": "combat-selection-browser",
+    "existingSuitesPreserved": 21,
+    "full64ArtistAccessibilityGatePreserved": true,
+    "newHeadResult": "pending",
+    "historicalBaselineEvidence": "../qa/baseline-ci.json"
+  },
+  "bible": {
+    "selectionBriefs": 64,
+    "deselectionBriefs": 64,
+    "idsValidated": true,
+    "authoredGestureAnimationsDelivered": 0
+  },
+  "releaseReviewed": false,
+  "canonicalOneToOneCertified": false
+}

@@ -1,0 +1,503 @@
+{
+  "schema": "encore-static-base-canvas-review/v1",
+  "createdAt": "2026-11-27T09:17:04.375Z",
+  "offlineVersion": "0.7.0-bb75d9dcb5c0",
+  "method": "Production Canvas2D renderer, native Skia; exact source path, uniform scale, facing, anchor and static reuse checked.",
+  "selectedId": "godcaine",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "authoredDrawings": 2,
+  "browserTestStatus": "not_executed",
+  "sources": {
+    "combat/base-sprite-completion-20261127-gameoverse.mjs": "f104772f79cadd47fb1536c0f14da18facfe683dba5eade8d866a70f30651c51",
+    "combat/base-sprite-completion-20261127-kaufmo-lackadaisy-smg4.mjs": "c9ec7b7fb8b5ec89d895467945a62b345e864dcb919381a47077060d5dd2b8a1",
+    "combat/base-sprite-completion-20261127-kaufmo.mjs": "626b11bd371ee3e37beb35550b71830b272705d681a194e181efe68dc128d703",
+    "combat/base-sprite-completion-20261127-max.mjs": "876eab4b1670bba9836ea9034e71c6d2bd778f3c09ff9b439d707c766534c87f",
+    "combat/base-sprite-completion-20261127-ultrajumpmania.mjs": "d39e7783c92808110f607f26227de548b9859cedfccd7151f8f2786e3b7b2277",
+    "combat/base-sprite-content.mjs": "b946641959d1693adbee1515061b0d839c1dde2282d838fc695b456a36b3be64",
+    "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+    "combat/base-sprite-continuation-20261125-b.mjs": "62f1da85c2f2b834b8d4e6a6417caaecbf7df80998affe63bf917a7b25dbd7e1",
+    "combat/base-sprite-continuation-20261127.mjs": "3c168e042de4a84cbc46a3951833f85cf22799120a42233c27188add22f14472",
+    "combat/base-sprite-focus-20261127.mjs": "76590fe0282f0635ccc5734e1bf9b7efa6a70bfaa7b6b0ec2732a93d42c08bda",
+    "combat/data.mjs": "0cb9d900db398f2ad27d8e5e62016ec7283b16972bbf5a0ad4feef24e47e1f46",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/fidelity.mjs": "a94b236d2270d3e4fcec38c876dac7958d89fe03ce1cc9af8100ae439694c2a8",
+    "combat/illustrations.mjs": "65b591b99530fd61c00fbae227d93b2005252c0d6b929dcef0dbc3f2056c8e35",
+    "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "45b3255138fc717cdf78b7452eae2938daf1f8f7af3b269e1ff144ec09f56fc3",
+    "scripts/render-combat-base-sprite-review.mjs": "f623c8d93a515c44f7f69dd588ee91aa07ec899238b68e84baf69875e4436630"
+  },
+  "appearances": [
+    {
+      "id": "godcaine",
+      "fighterId": "caine",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/godcaine/selection.png",
+          "bytes": 1622278,
+          "sha256": "786e73c137927c9bc181fdeb6102a8ac9844ef7206de6a7f598b3edf117ad98f",
+          "bounds": {
+            "x": 15,
+            "y": 10,
+            "width": 353,
+            "height": 364
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/godcaine/stance.png",
+          "bytes": 1404251,
+          "sha256": "c527d916b6958e15313015c81013c641b8be54d08b6f891163a6fdb4c5b68d14",
+          "bounds": {
+            "x": 45,
+            "y": 6,
+            "width": 568,
+            "height": 615
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": 0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 508.9349365234375,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/godcaine/stance.png",
+          "matrix": {
+            "a": -0.3983739912509918,
+            "b": 0,
+            "c": 0,
+            "d": 0.3983739912509918,
+            "e": 771.0650634765625,
+            "f": 320.6097412109375
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 226.27642703056335,
+      "visibleHeight": 245.00000461935997,
+      "maxIllustratedWidth": 280,
+      "uniqueRequestedFiles": 2
+    }
+  ],
+  "sheets": [
+    "base-godcaine.jpg"
+  ],
+  "limitations": [
+    "A repeated stance is one authored base, not nine action drawings or frame-by-frame animation.",
+    "Native Canvas does not exercise DOM, input, audio, service workers or a physical device.",
+    "Technical rendering checks do not certify canonical 1:1 identity or hidden anatomy."
+  ],
+  "summary": {
+    "appearances": 1,
+    "authoredDrawings": 2,
+    "sourceAndFacingChecks": 20,
+    "actualStateDraws": 60,
+    "portraits": 1,
+    "peakRSSBytes": 139546624,
+    "pass": true
+  }
+}

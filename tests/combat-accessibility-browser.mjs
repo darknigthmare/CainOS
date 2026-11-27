@@ -9,7 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS, STAGES, getDedicatedStage } from '../combat/data.mjs';
+import { FIGHTERS, STAGES, COSTUMES, getDedicatedStage } from '../combat/data.mjs';
 import { GAME_VERSION, SAVE_KEY, REPLAY_KEY } from '../combat/session.mjs';
 
 let playwright;
@@ -22,7 +22,7 @@ const base = (process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4178').replace(/\
 const output = path.resolve('audit-combat/accessibility-0.7.0');
 const reportFile = path.resolve('audit-combat/accessibility-browser-report.json');
 await fs.mkdir(output, { recursive: true });
-const sourceFiles = ['combat/app.mjs', 'combat/input.mjs', 'combat/menu-navigation.mjs', 'combat/index.html', 'combat/style.css', 'combat/finisher-gallery.mjs', 'tests/combat-accessibility-browser.mjs'];
+const sourceFiles = ['combat/app.mjs', 'combat/input.mjs', 'combat/menu-navigation.mjs', 'combat/selection-presentation.mjs', 'combat/index.html', 'combat/style.css', 'combat/finisher-gallery.mjs', 'tests/combat-accessibility-browser.mjs'];
 const hashes = async () => Object.fromEntries(await Promise.all(sourceFiles.map(async file => [file, createHash('sha256').update(await fs.readFile(file)).digest('hex')])));
 const report = {
   schema: 'encore-accessibility-browser/v1', version: GAME_VERSION, base,
@@ -49,6 +49,14 @@ async function tabTo(p, selector, backwards = false) {
 }
 async function activate(p, selector, key = 'Enter') {
   await tabTo(p, selector); await p.keyboard.press(key); report.keyboard.activations++;
+}
+async function selectWithKeys(p, selector, value) {
+  await tabTo(p, selector);
+  const choices = await p.locator(selector + ' option').evaluateAll(options => options.map(option => option.value));
+  const index = choices.indexOf(value); assert.ok(index >= 0, 'Missing selection option ' + value);
+  await p.keyboard.press('Home');
+  for (let step = 0; step < index; step++) await p.keyboard.press('ArrowDown');
+  assert.equal(await p.locator(selector).inputValue(), value); await expectFocus(p, selector);
 }
 async function nav(p, id) {
   await activate(p, `nav [data-nav="${id}"]`);
@@ -118,7 +126,9 @@ try {
   const launchOptions = { headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage'] };
   browser = await playwright.chromium.launch(launchOptions);
   report.browser = browser.version();
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'no-preference' });
+  // Keep the delayed portrait HTTP response observable by page.route. The
+  // separate offline suite owns service-worker registration/cache behaviour.
+  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'no-preference', serviceWorkers: 'block' });
   await context.addInitScript(() => {
     const device = { connected: false, pressed: [], reads: 0 };
     Object.defineProperty(window, '__accessibilityPad', { value: device });
@@ -180,6 +190,68 @@ try {
   }
   checked('all fighter choices keep focus and update the selected artist', { fighters: FIGHTERS.map(item => item.id) });
   await activate(page, '[data-fighter="pomni"]');
+
+  await page.evaluate(() => {
+    window.__selectionAnnouncements = [];
+    new MutationObserver(() => { window.__selectionAnnouncements.push(document.querySelector('#selection-status').textContent); })
+      .observe(document.querySelector('#selection-status'), { childList: true });
+  });
+  await activate(page, '[data-side="1"]'); await activate(page, '[data-fighter="pomni"]');
+  assert.deepEqual(await page.locator('[data-fighter="pomni"] .fighter-chip').allTextContents(), ['J1', 'J2']);
+  assert.match(await page.locator('#selection-status').textContent(), /Adversaire : Pomni/);
+  const announced = await page.evaluate(() => window.__selectionAnnouncements.length);
+  await page.keyboard.press('Enter');
+  assert.equal(await page.evaluate(() => window.__selectionAnnouncements.length), announced, 'An unchanged choice is not announced again');
+  await activate(page, '[data-side="0"]'); await activate(page, '[data-fighter="kaufmo"]');
+  await activate(page, '[data-side="1"]'); await activate(page, '[data-fighter="max"]');
+  await activate(page, '#undo-selection-0'); await expectFocus(page, '[data-fighter="pomni"]');
+  assert.equal(await page.locator('[data-selection-artist="0"] h3').textContent(), 'Pomni');
+  assert.equal(await page.locator('[data-selection-artist="1"] h3').textContent(), 'Max');
+  assert.equal(await page.locator('#undo-selection-0').isDisabled(), true);
+  assert.equal(await page.locator('#undo-selection-1').isDisabled(), false);
+  await activate(page, '#undo-selection-1'); await expectFocus(page, '[data-fighter="pomni"]');
+  assert.match(await page.locator('#selection-status').textContent(), /Choix précédent rétabli/);
+  checked('mirror choices show both sides; one-step undo and live announcements remain independent without moving the other choice');
+  await activate(page, '[data-fighter="jax"]'); await activate(page, '[data-side="0"]');
+
+  // Hold one real image response, choose another outfit through the native
+  // select, then release the old result. No menu or renderer state is assigned.
+  const delayed = COSTUMES.find(item => item.id === 'glitch-murderdrones-pomni-hommage');
+  const newest = COSTUMES.find(item => item.id === 'glitch-murderdrones-pomni-resident');
+  assert.ok(delayed && newest);
+  let releasePortrait, portraitStarted;
+  const holdPortrait = new Promise(resolve => { releasePortrait = resolve; });
+  const portraitRequest = new Promise(resolve => { portraitStarted = resolve; });
+  const portraitPattern = '**/crossovers/murderdrones/pomni/hommage/selection.webp';
+  const delayedRoute = async route => { portraitStarted(); await holdPortrait; await route.continue(); };
+  await page.route(portraitPattern, delayedRoute);
+  try {
+    await selectWithKeys(page, '#variant-0', delayed.id);
+    await Promise.race([portraitRequest, new Promise((_, reject) => setTimeout(() => reject(new Error('Delayed portrait was not requested')), 5000))]);
+    assert.equal(await page.locator('[data-selection-artist="0"]').getAttribute('data-portrait-state'), 'loading');
+    const retainedSide = await page.locator('[data-selection-artist="1"]').getAttribute('data-appearance-id');
+    await page.keyboard.press('ArrowDown');
+    assert.equal(await page.locator('#variant-0').inputValue(), newest.id);
+    await page.waitForFunction(() => document.querySelector('[data-selection-artist="0"]').dataset.portraitState === 'ready');
+    const pixels = await page.locator('[data-selection-artist="0"] canvas').evaluate(canvas => canvas.toDataURL());
+    const response = page.waitForResponse(response => response.url().endsWith('/crossovers/murderdrones/pomni/hommage/selection.webp'));
+    releasePortrait(); await response;
+    await page.waitForTimeout(200);
+    assert.equal(await page.locator('[data-selection-artist="0"]').getAttribute('data-appearance-id'), newest.id);
+    assert.equal(await page.locator('[data-selection-artist="0"]').getAttribute('data-portrait-state'), 'ready');
+    assert.equal(await page.locator('[data-selection-artist="0"] canvas').evaluate(canvas => canvas.toDataURL()), pixels);
+    assert.equal(await page.locator('[data-selection-artist="1"]').getAttribute('data-appearance-id'), retainedSide);
+    await activate(page, '#undo-selection-0'); await expectFocus(page, '[data-fighter="pomni"]');
+    assert.equal(await page.locator('#variant-0').inputValue(), delayed.id);
+    await page.waitForFunction(() => document.querySelector('[data-selection-artist="0"]').dataset.portraitState === 'ready');
+    await page.locator('.selection-summary').screenshot({ path: path.join(output, 'static-choice-and-undo.png') });
+  } finally {
+    releasePortrait();
+    await page.unroute(portraitPattern, delayedRoute).catch(error => { if (!page.isClosed()) throw error; });
+  }
+  await activate(page, '[data-fighter="pomni"]');
+  checked('a slow old portrait cannot replace the new outfit or its ready state; keyboard undo restores the exact prior outfit');
+
   const visibleStages = [...STAGES, ...['pomni', 'jax'].map(getDedicatedStage)];
   assert.deepEqual(await page.locator('.stage-card').evaluateAll(cards => cards.map(card => card.dataset.stage)), visibleStages.map(stage => stage.id));
   await group(page, '.stages', visibleStages.length, 'Arena cards');
@@ -307,6 +379,10 @@ try {
   // A summary is operated by the virtual pad through the actual modal menu.
   await nav(page, 'home'); await activate(page, '.mode-card[data-mode="versus"]');
   await page.waitForFunction(() => window.Encore.screen === 'select');
+  assert.equal(await page.locator('#undo-selection-0').isDisabled(), true);
+  assert.equal(await page.locator('#undo-selection-1').isDisabled(), true);
+  assert.equal(await page.locator('#selection-status').textContent(), '');
+  checked('leaving selection clears both undo histories and the live announcement before re-entry');
   await activate(page, wardrobeOpener); await page.locator('#modal[open]').waitFor();
   await tabTo(page, '#wardrobe-variant');
   await pad(15); await expectFocus(page, '#wardrobe-variant');
@@ -351,6 +427,12 @@ try {
   await phone.keyboard.press('End'); await phone.keyboard.press('Enter'); await expectFocus(phone, `[data-stage="${visibleStages.at(-1).id}"]`);
   assert.equal(await phone.locator('#stage-preview').getAttribute('data-stage-preview'), visibleStages.at(-1).id);
   await noOverflow(phone, '390px selection');
+  await activate(phone, '[data-fighter="jax"]');
+  await activate(phone, '#undo-selection-0'); await expectFocus(phone, '[data-fighter="pomni"]');
+  await noOverflow(phone, '390px restored selection');
+  assert.equal(await phone.locator('#undo-selection-0').isDisabled(), true);
+  await phone.locator('.selection-summary').screenshot({ path: path.join(output, 'mobile-static-choice.png') });
+  checked('390px reduced-motion selection preserves a static portrait, readable status and keyboard return after undo');
   await activate(phone, wardrobeOpener); await phone.locator('#modal[open]').waitFor();
   await tabTo(phone, '#wardrobe-variant'); await phone.keyboard.press('ArrowDown'); await expectFocus(phone, '#wardrobe-variant');
   await noOverflow(phone, '390px wardrobe');

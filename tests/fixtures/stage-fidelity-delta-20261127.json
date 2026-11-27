@@ -1,0 +1,144 @@
+{
+  "format": "encore-approved-stage-fidelity-delta-20261127",
+  "baselineCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "baselineDedicatedSHA256": "f7126656cba6c4836244fecec54e2bab2523a1def1a8a1699c8a4062cff94b1a",
+  "scope": "Exact documentary updates from the previously delivered stage-reference reviews. Only fidelity changes on the explicitly listed dedicated arrangements; every other field retains the recovered baseline hash.",
+  "groups": [
+    {
+      "ids": [
+        "home-pomni",
+        "home-jax",
+        "home-ragatha",
+        "home-gangle",
+        "home-zooble",
+        "home-caine",
+        "home-bubble",
+        "home-gloinkqueen",
+        "home-abstractedkaufmo",
+        "home-queenie",
+        "home-kaufmo",
+        "home-ribbit",
+        "home-scratch",
+        "home-wormo",
+        "home-bizco",
+        "home-rattie",
+        "home-spike",
+        "home-pinkcyclops",
+        "home-yellowclown",
+        "home-oyster",
+        "home-bulbcreature",
+        "home-abel",
+        "home-ming",
+        "home-disappearingguy",
+        "home-committeemember",
+        "home-chineseroomnpc",
+        "home-blueai",
+        "home-barrelmonkey",
+        "home-jeffery",
+        "home-redmannequin",
+        "home-orangemannequin",
+        "home-yellowmannequin",
+        "home-magentamannequin"
+      ],
+      "before": {
+        "sourceIds": [
+          "ep1",
+          "glitch-cast",
+          "glitch-circus-props"
+        ],
+        "observedTraits": [
+          "Rideaux rouges et accessoires de jeu de grande taille, dont dés et cubes.",
+          "Damier au sol, murs colorés et portes arrondies dans les vues consultées."
+        ],
+        "combatAdaptation": "Piste horizontale, limites du ring et perspective simplifiée créées pour le duel.",
+        "reviewStatus": "Référence visuelle consultée",
+        "reviewScope": "Palette et objets comparés à deux visuels officiels ; disposition complète du chapiteau non reconstruite. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences."
+      },
+      "after": {
+        "sourceIds": [
+          "ep1",
+          "glitch-cast"
+        ],
+        "observedTraits": [
+          "Salon aux murs turquoise, grand couronnement jaune et porte arrondie rouge et verte.",
+          "Fauteuil magenta, canapé bleu, canapé orange, borne jaune et damier orange clair visibles dans le visuel du groupe."
+        ],
+        "combatAdaptation": "Le salon devient une peinture frontale vide avec un damier continu sous les combattants.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Photographie promotionnelle officielle du groupe inspectée ; le retrait des personnages exige une reconstruction du mobilier masqué. Peinture complète unique. Caméra élargie, personnages retirés, continuité des parties cachées et sol de duel adaptés pour Encore. Aucune certification canonique 1:1 ni géographie mesurée. Les anciens plans et accessoires ne sont pas superposés à ce nouveau lieu."
+      }
+    },
+    {
+      "ids": [
+        "home-kinger",
+        "home-baronmildenhall",
+        "home-orbsman",
+        "home-marthamildenhall",
+        "home-ghostly",
+        "home-angel",
+        "home-mildenhallsouls"
+      ],
+      "before": {
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "combatAdaptation": "Salle du manoir reconstruite en décor de duel sans parcours d’exploration.",
+        "reviewStatus": "Épisode à revoir",
+        "reviewScope": "Épisode 3 identifié ; architecture, portraits et bougies à contrôler sur les plans de la salle choisie."
+      },
+      "after": {
+        "sourceIds": [
+          "ep3",
+          "glitch-manor-storyboards-20261127"
+        ],
+        "observedTraits": [
+          "Hall sombre à boiseries, plafond à caissons, lustre et éclairage de chandelles.",
+          "Panneaux vert-brun très sombres, tableaux encadrés et rideaux lourds au fond."
+        ],
+        "combatAdaptation": "Composition frontale du hall avec plancher continu ; meubles secondaires et surfaces occultées recomposés.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Le hall de l’entrée est distinct de la salle des trophées et du cellier du manoir. Deux cellules officielles de faible résolution inspectées. Peinture complète unique. Caméra élargie, personnages retirés, continuité des parties cachées et sol de duel adaptés pour Encore. Aucune certification canonique 1:1 ni géographie mesurée. Les anciens plans et accessoires ne sont pas superposés à ce nouveau lieu."
+      }
+    },
+    {
+      "ids": [
+        "home-gummigoo",
+        "home-loolilalu",
+        "home-fudge",
+        "home-max",
+        "home-chad",
+        "home-shrimpnpc",
+        "home-cookiebutterfly",
+        "home-gummyelephant",
+        "home-giantcentipede",
+        "home-candyguardcyan",
+        "home-candyguardblue",
+        "home-candyguardpurple",
+        "home-gummyworm"
+      ],
+      "before": {
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "combatAdaptation": "La route du convoi et le canyon deviennent une piste horizontale de combat.",
+        "reviewStatus": "Épisode à revoir",
+        "reviewScope": "Épisode 2 identifié ; relief, route, confiseries et lumière à comparer sur des plans du canyon. Le visuel de la cour ne valide pas ce paysage."
+      },
+      "after": {
+        "sourceIds": [
+          "ep2",
+          "glitch-canyon-storyboards-20261127"
+        ],
+        "observedTraits": [
+          "Route poussiéreuse rose, mesas à strates roses et horizon dégagé.",
+          "Ciel vert menthe, horizon jaune-vert et nuages roses arrondis."
+        ],
+        "combatAdaptation": "La route est élargie en terrain continu ; aucun vide ni rebord du canyon sous les combattants.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Deux cellules 320 × 180 du convoi inspectées ; disposition des reliefs et détail des matières restent interprétés. Peinture complète unique. Caméra élargie, personnages retirés, continuité des parties cachées et sol de duel adaptés pour Encore. Aucune certification canonique 1:1 ni géographie mesurée. Les anciens plans et accessoires ne sont pas superposés à ce nouveau lieu."
+      }
+    }
+  ]
+}

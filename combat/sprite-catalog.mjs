@@ -525,8 +525,23 @@ export const SPRITE_CATALOG = [
       "row": 1
     },
     "source": "https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
-    "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
-    "status": "Visuel CainOS existant"
+    "provenance": "Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.",
+    "status": "Alias du même PNJ ; ancienne illustration remplacée après validation de la paire",
+    "identityId": "evilpomni-big-top",
+    "archiveAliases": [
+      "evilpomni",
+      "rivalbaseballpomni"
+    ],
+    "referenceUrls": [
+      "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+      "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s"
+    ],
+    "supersededArtwork": {
+      "selection": "../assets/encore/selection/evilpomni.png",
+      "replacementAppearanceId": "evilpomni-pendantz",
+      "preserved": true,
+      "reason": "L’ancienne création noire/rouge à boutons en croix ne reproduit pas le costume officiel rouge/jaune à accents bleus."
+    }
   },
   {
     "id": "eviljax",
@@ -1005,8 +1020,23 @@ export const SPRITE_CATALOG = [
       "row": 0
     },
     "source": "https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
-    "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
-    "status": "Visuel CainOS existant"
+    "provenance": "Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.",
+    "status": "Alias du même PNJ ; ancienne illustration remplacée après validation de la paire",
+    "identityId": "evilpomni-big-top",
+    "archiveAliases": [
+      "evilpomni",
+      "rivalbaseballpomni"
+    ],
+    "referenceUrls": [
+      "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+      "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s"
+    ],
+    "supersededArtwork": {
+      "selection": "../assets/encore/selection/rivalbaseballpomni.png",
+      "replacementAppearanceId": "evilpomni-pendantz",
+      "preserved": true,
+      "reason": "L’ancienne création à étoiles, lunettes et yeux jaunes ne reproduit pas la Pomni adverse de l’épisode 5."
+    }
   },
   {
     "id": "rivalbaseballpinkgiant",
