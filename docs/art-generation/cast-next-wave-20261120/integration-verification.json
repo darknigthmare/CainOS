@@ -1,0 +1,86 @@
+{
+  "schema": "encore-cafe-integration-verification/v1",
+  "recordedAt": "2026-11-20T15:13:11.684873+00:00",
+  "status": "targeted_passed_preliminary_canvas",
+  "appearanceId": "caferibbit",
+  "commands": [
+    {
+      "command": "python scripts/integrate-combat-caferibbit-20261120.py --check-only",
+      "result": "passed",
+      "acceptedNativePngs": 11,
+      "nativeBytes": 14052030
+    },
+    {
+      "command": "python scripts/integrate-combat-caferibbit-20261120.py",
+      "result": "complete_active",
+      "historicalCostumesPreserved": 468,
+      "historicalAppearancesPreserved": 39,
+      "costumesAtActivation": 469
+    },
+    {
+      "command": "node --test tests/combat-costume-additions.test.mjs",
+      "result": "passed",
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "command": "node scripts/render-combat-character-review.mjs --costume-additions --appearance caferibbit --introduced-on 2026-11-20 --output docs/art-generation/next-wave-20261120/review/caferibbit --report docs/COMBAT_NEXT_WAVE_2026-11-20.md",
+      "result": "complete",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      }
+    }
+  ],
+  "previousAttempt": {
+    "result": "5 passed, 1 failed before preliminary offline manifest refresh",
+    "reason": "caferibbit/selection absent from the not-yet-refreshed offline manifest",
+    "resolvedBy": "Root regenerated the preliminary manifest; complete targeted rerun passed 6/6."
+  },
+  "files": [
+    {
+      "file": "scripts/integrate-combat-caferibbit-20261120.py",
+      "sha256": "78951d5438f932ab035904ec3ab9cd32c799b1665ac9f0bc24451c4dab4e539b"
+    },
+    {
+      "file": "combat/costume-additions.mjs",
+      "sha256": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4"
+    },
+    {
+      "file": "combat/costume-next-wave-20261120.mjs",
+      "sha256": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e"
+    },
+    {
+      "file": "tests/combat-costume-additions.test.mjs",
+      "sha256": "6b7908d231ac701477e1729e672fc0ff45c1ce0baad57ac085f365d612dd8b8b"
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generation-completion.json",
+      "sha256": "9ff4bb9f1f89f884e9b275863d7c1b88da49d865e87d2fff1031363076b41c08"
+    }
+  ],
+  "baseline": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/integration-baseline.json",
+    "sha256": "1bea46363a8b121b71db75eb2da67f21b7db55254bc85eda5d242bb15e23acbf"
+  },
+  "testedManifestSha256": "6ed955f5f7bb403bb68235860edf414e984db47c761396add7708f97e3825411",
+  "preliminaryCanvasReview": {
+    "file": "docs/art-generation/next-wave-20261120/review/caferibbit/preliminary/visual-review.json",
+    "sha256": "583b7a33863e1c0c4d3407194e3cc98c0c34d774d3c2f223842c5ffd12a374f3"
+  },
+  "limitations": [
+    "The activation count 469 is a dated snapshot; subsequent NPC crossovers belong to the global runtime count.",
+    "No global QA, build, offline regeneration, tracker modification or browser execution was performed by this agent.",
+    "Runtime Canvas evidence remains preliminary until the final shared manifest review."
+  ]
+}

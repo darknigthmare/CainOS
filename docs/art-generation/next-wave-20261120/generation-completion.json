@@ -1,0 +1,1794 @@
+{
+  "schema": "encore-next-wave-completion/v1",
+  "status": "complete_active",
+  "createdAt": "2026-11-20T15:30:11.217054+00:00",
+  "order": [
+    "caferibbit",
+    "glitch-murderdrones-ribbit-hommage",
+    "glitch-murderdrones-ribbit-resident",
+    "glitch-murderdrones-ribbit-fusion"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "appearances": [
+    {
+      "id": "caferibbit",
+      "name": "Ribbit — Café",
+      "fighterId": "ribbit",
+      "files": [
+        {
+          "appearanceId": "caferibbit",
+          "slot": "selection",
+          "file": "assets/encore/selection/caferibbit.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json",
+          "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+          "bytes": 1495892,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            96,
+            21,
+            770,
+            1523
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a533b04f-d92e-4a67-bf03-86730ee41e13",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/selection/ribbit.png",
+              "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+              "bytes": 1352678
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "stance",
+          "file": "assets/encore/stance/caferibbit.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json",
+          "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+          "bytes": 1534954,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            142,
+            82,
+            879,
+            1503
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-bad4c196-bdcd-497c-a8d0-b00cd65c79d9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "intro",
+          "file": "assets/encore/poses/caferibbit/intro.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json",
+          "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+          "bytes": 1458643,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            109,
+            59,
+            960,
+            1509
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-08d59638-2bf2-45bf-b9a1-4ec7bbd80698",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "attack",
+          "file": "assets/encore/poses/caferibbit/attack.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json",
+          "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+          "bytes": 791622,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            110,
+            45,
+            1124,
+            1293
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-e9b80a4d-6da5-4351-bfad-614099bb9ece",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "heavy",
+          "file": "assets/encore/poses/caferibbit/heavy.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json",
+          "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+          "bytes": 781909,
+          "dimensions": [
+            1205,
+            1305
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            48,
+            42,
+            1159,
+            1278
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-f383d6ac-c3a7-4608-aa5e-d81bd4931cd1",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+              "sha256": "67d14192251950326f96a821316beb6ed5c6a324ebb33bd5963d80c07802f4f5",
+              "bytes": 777235
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "hit",
+          "file": "assets/encore/poses/caferibbit/hit.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json",
+          "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+          "bytes": 1544665,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            110,
+            97,
+            931,
+            1502
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-5bf8253f-45bb-41c8-8582-7b26ceaf5ad8",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "walk",
+          "file": "assets/encore/poses/caferibbit/walk.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json",
+          "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+          "bytes": 1566034,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            95,
+            39,
+            924,
+            1504
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-e7eacb5f-b050-4018-bc69-340b3232921e",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "jump",
+          "file": "assets/encore/poses/caferibbit/jump.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json",
+          "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+          "bytes": 1555510,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            152,
+            64,
+            966,
+            1488
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-afe4834f-6e1e-48e2-ab8f-669c765f466f",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "crouch",
+          "file": "assets/encore/poses/caferibbit/crouch.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json",
+          "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+          "bytes": 938347,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            165,
+            35,
+            966,
+            1297
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-624f6848-796a-424d-8ac1-b10d6eaefa41",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "victory",
+          "file": "assets/encore/poses/caferibbit/victory.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json",
+          "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+          "bytes": 1498244,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            192,
+            34,
+            915,
+            1521
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-1f162c72-7a0f-4979-af0a-9d5d76dcd1ed",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "defeat",
+          "file": "assets/encore/poses/caferibbit/defeat.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json",
+          "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+          "bytes": 886210,
+          "dimensions": [
+            1207,
+            1303
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            135,
+            80,
+            974,
+            1255
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-3b8a1a49-72bf-4dc2-9545-bf8f214fd0f1",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+              "sha256": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+              "bytes": 880311
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-hommage",
+      "name": "Murder Drones · Hommage · Uzi Doorman",
+      "fighterId": "ribbit",
+      "series": "murderdrones",
+      "style": "hommage",
+      "files": [
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "selection",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+          "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+          "bytes": 1435680,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            76,
+            34,
+            965,
+            1517
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-ea54188d-2861-4d1b-92d6-f930fb981847",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png",
+              "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+              "bytes": 1402255
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "stance",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+          "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+          "bytes": 732645,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            160,
+            31,
+            1069,
+            1236
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b1e46270-365a-4917-a531-da37f13587d2",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.png",
+              "sha256": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+              "bytes": 708161
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "intro",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+          "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+          "bytes": 724483,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            211,
+            19,
+            1026,
+            1239
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-df935b0b-c17d-4fee-96ec-08f518090f52",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png",
+              "sha256": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+              "bytes": 717176
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "attack",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+          "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+          "bytes": 1228713,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            253,
+            17,
+            1170,
+            1017
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-2893bec6-6907-45b3-ba99-75cc40893e53",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/attack.png",
+              "sha256": "3fe9250207098ecc9ca08fb15ee9268926269e0648c898d7f714cc5f81be914f",
+              "bytes": 1215129
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "heavy",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+          "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+          "bytes": 1155353,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            347,
+            19,
+            1205,
+            1014
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-6c874817-0bee-42ca-8933-43e5d297b73a",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png",
+              "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+              "bytes": 1402255,
+              "originalReferencePath": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+              "relocationReason": "Historical seed archived unchanged before three-digit anatomy corrections; reference bytes and SHA are identical."
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+              "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+              "bytes": 1280711
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "hit",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+          "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+          "bytes": 748844,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            172,
+            45,
+            935,
+            1237
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-5517156a-da8e-4988-baca-a75da86bcd63",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/hit-correction-02/hit.png",
+              "sha256": "5cf4237971e44751e509c8ec2556e26c18f48b9b1341c935194a296428bff52e",
+              "bytes": 736597
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.png",
+              "sha256": "842c55a77b7c5b087f7ac46ec662f7853414c293233d0d2b808e602900d81d2a",
+              "bytes": 741345
+            },
+            {
+              "position": 3,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "walk",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+          "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+          "bytes": 682248,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            238,
+            17,
+            1011,
+            1236
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-ab7ca303-4b8d-4d6d-abb3-f81a450f6c1e",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png",
+              "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+              "bytes": 1402255,
+              "originalReferencePath": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+              "relocationReason": "Historical seed archived unchanged before three-digit anatomy corrections; reference bytes and SHA are identical."
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+              "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+              "bytes": 1280711
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "jump",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+          "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+          "bytes": 760662,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            149,
+            11,
+            1085,
+            1162
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-58c163ee-529e-4ee3-9020-b519df2cd8f6",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.png",
+              "sha256": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+              "bytes": 759433
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "crouch",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+          "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+          "bytes": 903887,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            124,
+            52,
+            1107,
+            1225
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-3c202139-17b4-41eb-9f30-e1165408e820",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.png",
+              "sha256": "b0b9bba19eb38ea27e356624ac5491df21295f152987cf3953c96cfac96919c0",
+              "bytes": 890957
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "victory",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+          "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+          "bytes": 1371435,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            119,
+            37,
+            858,
+            1510
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-51be5a9d-5106-4553-89fe-c68b19afe827",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png",
+              "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+              "bytes": 1402255,
+              "originalReferencePath": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+              "relocationReason": "Historical seed archived unchanged before three-digit anatomy corrections; reference bytes and SHA are identical."
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+              "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+              "bytes": 1280711
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "slot": "defeat",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+          "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+          "bytes": 775116,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            178,
+            51,
+            1016,
+            1223
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-e65e23ea-06fa-4a03-9908-a56e9c106166",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.png",
+              "sha256": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+              "bytes": 760321
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "name": "Murder Drones · Technicienne des conduites",
+      "fighterId": "ribbit",
+      "series": "murderdrones",
+      "style": "resident",
+      "files": [
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "selection",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json",
+          "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+          "bytes": 1524779,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            112,
+            43,
+            948,
+            1501
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-67bcb304-3e0c-42f6-bd32-b1cff46cf962",
+          "references": [
+            {
+              "position": 1,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "assets/encore/crossovers/murderdrones/pomni/resident/selection.webp",
+              "sha256": "356c3c5dd37ce1843cf260a0c8a99412b44176bf9ad35e1088fae4a928cab8dc",
+              "bytes": 311102
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "stance",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json",
+          "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+          "bytes": 948345,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            46,
+            39,
+            1154,
+            1289
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-6e87b708-cbfd-41ca-adf6-30015dfa4df0",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "intro",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json",
+          "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+          "bytes": 1487206,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            103,
+            38,
+            946,
+            1492
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-5018d130-b42a-4a31-b402-f8e1dec655dd",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png",
+              "sha256": "688b2c9c3aafd282ab799ee7ea80c879c3721ce23e5744186c478b75fa78370a",
+              "bytes": 1536975
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "attack",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json",
+          "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+          "bytes": 1385550,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            121,
+            16,
+            1330,
+            1015
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-df3f5d89-3f29-427f-92d1-58514a2601c5",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "heavy",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json",
+          "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+          "bytes": 1509732,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            49,
+            69,
+            975,
+            1497
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-065ca157-186b-4135-8348-4e0b123f19e8",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "hit",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json",
+          "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+          "bytes": 1603205,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            33,
+            79,
+            928,
+            1492
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-43a90618-ff51-465c-8792-78f2310ce3f6",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "walk",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json",
+          "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+          "bytes": 1576067,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            71,
+            47,
+            972,
+            1460
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a84a1fb6-336d-42c4-a2f7-3a52da360954",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "jump",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json",
+          "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+          "bytes": 1461010,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            249,
+            9,
+            1328,
+            1000
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-cf8863be-b021-4673-95f7-91f23ed04db2",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/jump-01.png",
+              "sha256": "08837f8c8d7a34d8f96ab251a9eb8086912fea3db14e8cd810b7d5d6d67601df",
+              "bytes": 1507364
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "crouch",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json",
+          "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+          "bytes": 1475759,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            201,
+            14,
+            1314,
+            1007
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-e31c1833-df4a-4758-862c-c04fd600e475",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png",
+              "sha256": "ef49791117078e6d65c93350686c1c9c67ed5d9752a2bf5214dbaef0b369fec6",
+              "bytes": 1461298
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "victory",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json",
+          "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+          "bytes": 1523489,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            131,
+            42,
+            929,
+            1514
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-692131e3-5640-4351-aa41-388724658e58",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "slot": "defeat",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json",
+          "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+          "bytes": 1519080,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            145,
+            17,
+            1370,
+            1021
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-cc037de9-027e-418a-9764-bada7af3ea4b",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+              "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+              "bytes": 1524779
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-fusion",
+      "name": "Murder Drones · Automate amphibien",
+      "fighterId": "ribbit",
+      "series": "murderdrones",
+      "style": "fusion",
+      "files": [
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "selection",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json",
+          "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+          "bytes": 1685503,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            50,
+            54,
+            993,
+            1505
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-ac135460-f09a-4c76-9b32-2b12d1ef0e4a",
+          "references": [
+            {
+              "position": 1,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+              "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+              "bytes": 1280711
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "stance",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json",
+          "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+          "bytes": 980827,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            47,
+            71,
+            1163,
+            1282
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-41eabb11-24b0-4d4d-915f-07515c74b0be",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "intro",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json",
+          "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+          "bytes": 1580313,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            87,
+            54,
+            983,
+            1511
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-dbcf2809-8739-4e1f-b216-0d1656661b9e",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "attack",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json",
+          "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+          "bytes": 1559299,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            76,
+            21,
+            1443,
+            1016
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-be6a29b3-99a8-4eda-8da1-e611d8e8f0d7",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "heavy",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json",
+          "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+          "bytes": 1548839,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            47,
+            66,
+            982,
+            1495
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-1726a362-401e-4609-979f-f63bc3edfb14",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "hit",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json",
+          "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+          "bytes": 1692613,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            41,
+            106,
+            947,
+            1498
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-75210b90-cdba-43f6-8ec4-170b673c3113",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png",
+              "sha256": "2fa981bd82b57e5da47ae2c0d0afba5cc31a6a2e68bfba7529e50c882c49be34",
+              "bytes": 1699712
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "walk",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json",
+          "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+          "bytes": 884865,
+          "dimensions": [
+            1195,
+            1316
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            103,
+            30,
+            1108,
+            1252
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a8bceeec-6a28-445d-9a36-437369c6b81e",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "jump",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json",
+          "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+          "bytes": 1573405,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            171,
+            18,
+            1362,
+            1004
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-de731b42-7a2a-48d2-a956-6582e4e9023a",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "crouch",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json",
+          "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+          "bytes": 1663822,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            184,
+            12,
+            1404,
+            1013
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b5c8b6fa-39d8-4224-969e-a50d02c3345a",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "victory",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json",
+          "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+          "bytes": 1619342,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            91,
+            39,
+            926,
+            1525
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b36d91e8-ad8d-4015-b274-0ef28c475cd4",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png",
+              "sha256": "22fb957a3821c5d64af51bd31f7a5def5aef1838cfc38a1bb2d18307bccde3b3",
+              "bytes": 1613847
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "slot": "defeat",
+          "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+          "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png",
+          "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json",
+          "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+          "bytes": 1609435,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            160,
+            11,
+            1395,
+            1020
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-60f61979-edef-42dd-a22c-c3282a0d6228",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+              "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+              "bytes": 1685503
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "families": 4,
+    "nativePNG": 44,
+    "bytes": 56983581
+  },
+  "sourceManifests": {
+    "docs/art-generation/cast-next-wave-20261120/generation-completion.json": "9ff4bb9f1f89f884e9b275863d7c1b88da49d865e87d2fff1031363076b41c08",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/generation-completion.json": "f42caee6d82b8e7b217369fe4e813c771581e9635576e6091a63beb8d71e5bb2"
+  },
+  "scope": "One officially illustrated café outfit adapted for the game; three original crossover designs. No canonical 1:1 or complete animation certification."
+}

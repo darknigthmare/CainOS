@@ -1,0 +1,91 @@
+{
+  "schema": "encore-workbook-execution/v1",
+  "createdAt": "2026-11-20T19:51:34.717059+00:00",
+  "status": "passed",
+  "runtime": "Primary @oai/artifact-tool public APIs via CODEX_PRIMARY_RUNTIME_NODE; XML inspector reads XLSX only.",
+  "commands": [
+    {
+      "phase": "baseline_render_and_review",
+      "flags": [
+        "--render-baseline"
+      ],
+      "exitCode": 0,
+      "log": "baseline-render.log"
+    },
+    {
+      "phase": "prepare_final_evidence",
+      "flags": [
+        "--prepare",
+        "--final-evidence-confirmed"
+      ],
+      "exitCode": 0,
+      "log": "prepare.log"
+    },
+    {
+      "phase": "author_recalculate_export",
+      "flags": [
+        "--build"
+      ],
+      "exitCode": 0,
+      "log": "build.log"
+    },
+    {
+      "phase": "native_extract_compare_recovered",
+      "script": "scripts/inspect-combat-workbook-native.py",
+      "exitCode": 0,
+      "logs": [
+        "native-reimport.log",
+        "native-comparison.log"
+      ]
+    },
+    {
+      "phase": "reimport_tables_formulas_render",
+      "flags": [
+        "--reimport",
+        "--render"
+      ],
+      "exitCode": 0,
+      "log": "reimport-render.log"
+    },
+    {
+      "phase": "publish_and_verify",
+      "flags": [
+        "--publish"
+      ],
+      "exitCode": 0,
+      "log": "publish.log"
+    }
+  ],
+  "logs": {
+    "prepare.log": "347b1446aaaeb7ad742e6a7c34eebd51f750243ff84d84aa6bbe141c80578d60",
+    "build.log": "97e21b50c980b00a2d06765c04fc375b3b4ad3f12c51508c52deb83374799d8c",
+    "native-extraction.log": "42d4a61137de9727d00601d4da29f4bacb9708a3a9f2bb212fbcf66261500aab",
+    "native-reimport.log": "4a21513578b9f708c53c82a232be49211ff3f89b71c06e130d2e0c682ebde6bd",
+    "native-comparison.log": "827a9fa93a9c9a045b59cff63cdc9383b0ab371288bcce05307cecf80a4cfa1a",
+    "reimport-render.log": "1633025f3da0541e0228b0368a2620f19d0047d77e0c17ca4914d848a891c9f6",
+    "baseline-render.log": "896b6c8b57bca1cc88df908f7a7dfb65eade97d0b8d0e04e12cdac68276d87b2",
+    "publish.log": "34ec0e79693c3f50931d07a2953044c9cb751cf11d5c8ca30f8735786bafd6b4"
+  },
+  "technicalResults": {
+    "authoring-result.json": "28433ec416220af0fa37fe5c6e90056720d73fcb9ae960b60ff7411003a0c60d",
+    "native-comparison.json": "3688c86f7015d0a196b2e331e8e3332d00bb74eaf671b91b488525ccb0cbeeda",
+    "reimport-result.json": "5b1489ec310e267d23928cf6a3c28482568037bf30242d1aaec15f5ca5dcd8bd",
+    "asset-slot-verification.json": "aebbc3b1bbc2b44585c37cc9c21facea33dacb90222e2fe27f2bb339ac106036",
+    "rendered-views.json": "3c4a309acc994829ec04e3d75a3d55036fc530ead913d26c35b87d5f047bbb0e"
+  },
+  "memoryObservations": {
+    "afterExportRSSBytes": 1116135424,
+    "afterReimportAndRenderingRSSBytes": 653504512,
+    "peakMemoryClaim": false
+  },
+  "renderedViews": 27,
+  "baselineViews": 4,
+  "formulaCount": 42,
+  "nativeCellsCompared": 83423,
+  "recoveredEnvironmentFailure": "attempts/native-extraction-enospc/native-extraction-enospc.json",
+  "desktopExcelExecuted": false,
+  "gameQaRerunByWorkbookBuilder": false,
+  "visualReviewFile": "visual-review.json",
+  "visualReviewSHA256": "dc257ece83b49b338ffb8e6dc8eccfdf41b4cf31fd1613cd91c8795251eac25c",
+  "installationEvidence": "publication.json"
+}

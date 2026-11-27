@@ -1,0 +1,17 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "selection",
+  "nativeFacing": "right",
+  "prompt": "Create ONE high-quality native transparent PNG sprite for the existing Encore 2D fighting game. A single COMPLETE full-body character, clean expressive hand-drawn cel shading, bold dark outlines, no background, no floor, no drop shadow, no text, no border, no sprite sheet. Face three-quarter to the RIGHT (nose and gaze toward image right). Keep entire head, both hands and both feet inside the image with generous 8% transparent margins. At least 1024px. Reference 1 is the game Ribbit adaptation for identity and long-limbed proportions; reference 2 is official merchandise for frog face, mint muzzle and pink bow ONLY: do not include the keychain or plush texture and do not infer digit anatomy from it. Reference 3 is existing game art for polished white/cyan cybernetic cel-shading ONLY; do not copy Pomni, jester clothes, hair or energy halo. Reference 4 is an official Meta Runner cybernetic-arm material reference, not a pose or anatomy template. A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: character-selection full-body portrait, relaxed upright three-quarter-right pose, friendly confident smile, feet separated, both arms slightly away from body so costume and hand materials are readable. Keep it one clear character in one pose.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "assets/encore/crossovers/metarunner/pomni/fusion/selection.webp",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3"
+}

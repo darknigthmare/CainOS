@@ -1,0 +1,33 @@
+{
+  "schema": "encore-browser-suite-followup-review/v1",
+  "asOf": "2026-11-27",
+  "file": "tests/combat-stage-art-browser.mjs",
+  "previousSHA256": "cd08ef4a7035b3e34a430d1aa6f609d7ba2e881c45d1a03fdf562355ad4dc431",
+  "finalSHA256": "35eb3b8cca4a8911b06336aa4a514b6b54a80ae9a43dd3cbb99e5571761d4edb",
+  "change": "The three expected full-scene pixel compositions now omit legacy drawStageMotion, matching the production renderer. Historical three-plane props, complete pixel comparisons, failure/retry/cache journeys and all CI gates remain.",
+  "scope": "Browser test expectations only; production runtime, static images, Node test files and both validated builds remain unchanged.",
+  "validation": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/combat-stage-art-browser.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "browserExecuted": false,
+  "previousEvidencePreserved": [
+    "docs/bible/extensions-generator-verification.json",
+    "docs/art-generation/recovery-20261127/verification.json"
+  ],
+  "previousEvidenceNote": "The original documentary snapshot includes the prior syntax-checked browser test hash. This follow-up records its final correction without rewriting that historical snapshot."
+}

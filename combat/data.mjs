@@ -1,11 +1,14 @@
 import { CROSSOVER_STAGES } from './crossover-stages.mjs';
-import { createCrossoverCostumes } from './crossovers.mjs';
+import { createLegacyCrossoverCostumes, createNpcCrossoverCostumes } from './crossovers.mjs';
 import { COSTUME_ADDITIONS } from './costume-additions.mjs';
+import { orderCostumeExtensions } from './costume-order.mjs';
+import { createBaseSpriteCostumes } from './base-sprite-content.mjs';
 export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
 import { EXPANSION_DEFS, buildExpansionKit, expansionFighterConfig } from './roster-expansion.mjs';
+import { ABSTRACTION_DEFS, ABSTRACTION_CALM_ID, ABSTRACTION_CALM_VISUAL, ABSTRACTION_ORIGINAL_ARCHIVE, abstractionSprite, buildAbstractionKit } from './abstractions-content.mjs';
 
 /**
  * Digital Circus — Encore content.
@@ -50,6 +53,26 @@ const expansionFighters = EXPANSION_DEFS.map(def => fighter(
   Object.fromEntries(Object.entries(buildExpansionKit(def)).map(([slot, entry]) => [slot, move(slot, entry.name, entry.description, entry.fields)])),
   expansionFighterConfig(def)
 ));
+
+const abstractionFighters = ABSTRACTION_DEFS.map(def => {
+  const result = fighter(
+    def.id, def.name, def.title, def.role, def.color, def.sourceId,
+    Object.fromEntries(Object.entries(buildAbstractionKit(def)).map(([slot, entry]) => [slot, move(slot, entry.name, entry.description, entry.fields)])),
+    {
+      width: def.width, height: def.height, power: def.power, speed: def.speed, reach: def.reach,
+      sprite: abstractionSprite(def.id), animation: null,
+      visual: { width: def.width, height: def.height, profile: 'abstraction', ...def.visual },
+      sourceKind: def.sourceKind, homeStage: def.homeStage,
+      provenance: def.sourceKind === 'original-encore'
+        ? 'Forme abstraite entièrement inventée pour Encore. Dix techniques et corps propres au fan-game.'
+        : def.sourceKind === 'archive-attribution'
+          ? 'Attribution issue des archives CainOS à confirmer. Corps et dix techniques adaptés pour Encore.'
+          : 'Identité abstraite officielle ; illustrations, corps et dix techniques adaptés pour Encore. Comparaison visuelle ouverte.',
+    },
+  );
+  result.combat = { ...result.combat, simulationBody: { ...result.combat.simulationBody, crouchHeight: def.crouchHeight } };
+  return result;
+});
 
 export const FIGHTERS = [
   fighter('pomni', 'Pomni', 'Un pas vers la sortie', 'Esquive', '#f46582', 'ep1', {
@@ -221,6 +244,7 @@ export const FIGHTERS = [
     utility: move('utility', 'Préparer la cartouche', 'Restaure la stabilité du tir virtuel.', { restore: 36, startup: 24, recovery: 36 }),
   }, { speed: 0.93, power: 1.03, height: 250 }),
   ...expansionFighters,
+  ...abstractionFighters,
 ];
 
 export const MOVES = FIGHTERS.flatMap(f => MOVE_SLOTS.map(slot => ({ id: `${f.id}.${slot}`, fighterId: f.id, fighterName: f.name, ...f.moves[slot] })));
@@ -232,9 +256,9 @@ export const STAGES = [
   stage('spudsy', 'Spudsy’s', 'Un duel devant le comptoir après le service.', { sky: '#251b27', back: '#6d3344', accent: '#ffd85d', floor: '#5a4554', grid: '#bd7584' }, 'ep4'),
   stage('cellar', 'Le cellier', 'Des yeux multicolores dans l’obscurité, autour d’une lumière centrale.', { sky: '#08090c', back: '#142d39', accent: '#a7ffff', floor: '#08090c', grid: '#acb3c1' }, 'ep1'),
   stage('void', 'Le Vide', 'Un espace blanc et irisé, adapté en piste de duel.', { sky: '#c6c9f6', back: '#e7eaff', accent: '#ffffff', floor: '#f7f6ff', grid: '#daddff' }, 'ep1'),
-  stage('lake', 'Le lac numérique', 'Une rive construite à partir des décors déjà présents dans CainOS.', { sky: '#152c46', back: '#245b74', accent: '#a5e9ff', floor: '#3e5d62', grid: '#699596' }, 'cainos', { sourceStatus: 'Décor CainOS à vérifier contre une source primaire' }),
+  stage('lake', 'Le lac numérique', 'Une rive d’herbe devant le lac et le toboggan du pilote, adaptée au duel.', { sky: '#152c46', back: '#245b74', accent: '#a5e9ff', floor: '#3e5d62', grid: '#699596' }, 'ep1', { sourceStatus: 'Panorama officiel du pilote consulté ; rive rapprochée adaptée pour Encore' }),
   stage('training', 'Salle de calibration', 'Une grille claire pour mesurer portée et timing.', { sky: '#101621', back: '#1a2938', accent: '#a7ffdf', floor: '#223443', grid: '#416176' }, 'adaptation'),
-  stage('gloink', 'Le nid des Gloinks', 'Des formes géométriques s’amassent autour du ring.', { sky: '#191229', back: '#3e2953', accent: '#ffc98b', floor: '#3d2a4f', grid: '#815585' }, 'ep1'),
+  stage('gloink', 'Le nid des Gloinks', 'La caverne sombre du pilote et ses motifs géométriques lumineux.', { sky: '#191229', back: '#3e2953', accent: '#ffc98b', floor: '#3d2a4f', grid: '#815585' }, 'ep1'),
   stage('kingdom', 'Le palais de sucre', 'Des arches de confiserie dans Candy Canyon.', { sky: '#29213d', back: '#74496a', accent: '#ffe7b3', floor: '#684760', grid: '#ab7e9b' }, 'ep2'),
   stage('grounds', 'Les terrains du cirque', 'La pelouse numérique au pied du chapiteau.', { sky: '#173149', back: '#386278', accent: '#ffe29c', floor: '#31584e', grid: '#6c9172' }, 'ep1'),
   stage('backstage', 'Le couloir des portes', 'Les portes des résidents servent de fond de scène.', { sky: '#171326', back: '#462b4e', accent: '#efc694', floor: '#4a3549', grid: '#876779' }, 'ep1'),
@@ -242,6 +266,10 @@ export const STAGES = [
     stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
   stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
   stage('undermap', 'Sous la carte', 'La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.', { sky: '#020321', back: '#050837', accent: '#315bff', floor: '#040525', grid: '#1d26cc' }, 'ep2'),
+  stage('barnoir', 'Le bar des néons', 'Le comptoir sombre et le damier du bar de l’épisode 5.', { sky: '#090e11', back: '#172524', accent: '#ed8fc4', floor: '#202726', grid: '#85938e' }, 'ep5'),
+  stage('softballfield', 'Le stade de softball', 'Le terrain des Big Tops sous les tribunes et les projecteurs de l’épisode 5.', { sky: '#123c6b', back: '#304a60', accent: '#e4efff', floor: '#b9804c', grid: '#56852d' }, 'ep5'),
+  stage('memoryfracture', 'Le chapiteau des souvenirs brisés', 'Une création Encore : arches de cirque disjointes et miroir fracturé au-dessus d’une piste dégagée.', { sky: '#12112c', back: '#49355c', accent: '#b6e6ee', floor: '#343147', grid: '#806283' }, 'adaptation', { provenance: 'Lieu original Encore', sourceStatus: 'Création originale, aucun lieu officiel revendiqué' }),
+  stage('abstractionthreshold', 'Le seuil de l’abstraction', 'Une création Encore : faille d’obsidienne, yeux lointains et passerelle minérale horizontale.', { sky: '#080c19', back: '#172637', accent: '#91e7ee', floor: '#263749', grid: '#526479' }, 'adaptation', { provenance: 'Lieu original Encore', sourceStatus: 'Création originale, aucun lieu officiel revendiqué' }),
 ];
 
 // One dedicated arrangement per playable artist, next to the shared
@@ -250,7 +278,7 @@ export const STAGES = [
 // inventing a measured set plan. These are fan-game adaptations.
 const HOME_BASE = Object.freeze({ ep1: 'bigtop', ep2: 'candy', ep3: 'manor', ep4: 'spudsy', cainos: 'lake', adaptation: 'training' });
 function dedicatedStage(fighter) {
-  const base = STAGES.find(item => item.id === (HOME_BASE[fighter.loreSource] || 'bigtop')) || STAGES[0];
+  const base = STAGES.find(item => item.id === (fighter.homeStage || HOME_BASE[fighter.loreSource] || 'bigtop')) || STAGES[0];
   const palette = Object.freeze({ ...base.palette, accent: fighter.color });
   return Object.freeze({
     ...base, id: `home-${fighter.id}`, name: `${base.name} · scène de ${fighter.name}`,
@@ -269,6 +297,7 @@ export function getDedicatedStage(fighterId) {
 // the same fighter may reuse a kit. This is a gameplay classification of the
 // project's existing art, not an endorsement of its historical canon labels.
 export const COSTUME_BASE_FIGHTERS = Object.freeze({
+  [ABSTRACTION_CALM_ID]: 'abstractedqueenie',
   ganglekawaii: 'gangle',
   ganglecomedy: 'gangle',
   gangletragedy: 'gangle',
@@ -375,7 +404,7 @@ const fighterIds = new Set(FIGHTERS.map(f => f.id));
 // Promoted PNJ now own a fighter kit, so they leave the archive-only register.
 export const ARCHIVE_ONLY_ENTRIES = Object.freeze(Object.fromEntries(archiveOnlyGroups
   .flatMap(({ ids, ...classification }) => ids.map(id => [id, Object.freeze({ ...classification })]))
-  .filter(([id]) => !fighterIds.has(id))));
+  .filter(([id]) => !fighterIds.has(id) && !Object.hasOwn(COSTUME_BASE_FIGHTERS, id))));
 
 export function classifyArchiveEntry(id) {
   if (fighterIds.has(id)) return { category: 'fighter', baseFighterId: id, playable: true, archiveKind: null, classificationReason: 'Combattant jouable avec son propre kit de dix techniques.' };
@@ -384,16 +413,23 @@ export function classifyArchiveEntry(id) {
   return { category: 'archive', baseFighterId: null, playable: false, archiveKind: entry?.kind || 'unreviewed', classificationReason: entry?.reason || 'Entrée non revue : aucun kit attribué avant validation explicite de son identité et de sa silhouette.' };
 }
 
-export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
+export const ROSTER_ARCHIVE = [...SPRITE_CATALOG, ...ABSTRACTION_ORIGINAL_ARCHIVE].map(entry => {
   const classification = classifyArchiveEntry(entry.id);
   const override = Object.hasOwn(COSTUME_SPRITE_OVERRIDES, entry.id) ? COSTUME_SPRITE_OVERRIDES[entry.id] : null;
   const sprite = { ...entry.sprite, ...override, ...(entry.id === 'gloinkqueenscale' ? { component: 'largest', nativeFacing: -1 } : {}) };
-  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId, ...(classification.category === 'variant' ? { fidelity: getCostumeFidelity(entry.id) } : {}) };
+  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId, ...(classification.category === 'variant' ? { fidelity: getCostumeFidelity(entry.id) } : {}), ...(entry.id === ABSTRACTION_CALM_ID ? { visual: ABSTRACTION_CALM_VISUAL } : {}) };
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
-export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
-export const CROSSOVER_COSTUMES = createCrossoverCostumes(FIGHTERS);
-export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS];
+const archiveVariants = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
+export const VARIANTS = [...archiveVariants.filter(entry => entry.id !== ABSTRACTION_CALM_ID), ...archiveVariants.filter(entry => entry.id === ABSTRACTION_CALM_ID)];
+const LEGACY_CROSSOVER_COSTUMES = createLegacyCrossoverCostumes(FIGHTERS);
+const NPC_CROSSOVER_COSTUMES = createNpcCrossoverCostumes(FIGHTERS);
+export const BASE_SPRITE_COSTUMES = createBaseSpriteCostumes(FIGHTERS);
+export const CROSSOVER_COSTUMES = [...LEGACY_CROSSOVER_COSTUMES, ...NPC_CROSSOVER_COSTUMES, ...BASE_SPRITE_COSTUMES.filter(costume => costume.crossover)];
+// Circus and NPC additions share an explicit append order across publications.
+export const COSTUMES = [...VARIANTS.filter(entry => entry.id !== ABSTRACTION_CALM_ID), ...LEGACY_CROSSOVER_COSTUMES,
+  ...orderCostumeExtensions([...COSTUME_ADDITIONS, ...NPC_CROSSOVER_COSTUMES]), ...VARIANTS.filter(entry => entry.id === ABSTRACTION_CALM_ID),
+  ...BASE_SPRITE_COSTUMES];
 
 export function equipCostume(fighter, id) {
   const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);
@@ -406,7 +442,7 @@ export const MODES = [
   { id: 'versus', name: 'Versus CPU', description: 'Un duel libre contre l’ordinateur.' },
   { id: 'local', name: 'Duel local', description: 'Deux joueurs sur le même appareil.' },
   { id: 'arcade', name: 'Arcade', description: 'Six matchs jusqu’au dernier numéro.' },
-  { id: 'story', name: 'Histoires', description: 'Quatorze routes originales, quatre rencontres et une fin par combattant.' },
+  { id: 'story', name: 'Histoires', description: 'Une route originale, quatre rencontres et une fin par combattant.' },
   { id: 'tournament', name: 'Tournoi à huit', description: 'Trois tours dans un tableau déterministe à huit participants.' },
   { id: 'boss', name: 'Boss rush', description: 'Affronter les colosses et l’abstraction.' },
   { id: 'survival', name: 'Survie', description: 'Dix adversaires avec la vie conservée.' },

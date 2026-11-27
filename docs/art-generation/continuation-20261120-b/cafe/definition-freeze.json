@@ -1,0 +1,31 @@
+{
+  "schema": "encore-cafe-pre-generation-freeze/v1",
+  "frozenBeforeFirstGeneration": true,
+  "date": "2026-11-20",
+  "files": [
+    {
+      "file": "definitions/cafekinger.json",
+      "sha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a"
+    },
+    {
+      "file": "definitions/cafepomni.json",
+      "sha256": "93b2acb2d0b4fb269727a18e0f16460ee610979089227acb8dbaa7d39720014c"
+    },
+    {
+      "file": "references/sources.json",
+      "sha256": "edaa88f37187820e9ec710358cc6cf22dbec30e21c6ad5bf8a617036e84b4513"
+    },
+    {
+      "file": "active-costumes-inventory.json",
+      "sha256": "d5604ea9868c57a437e35650b4d5b20daf14ff643a90a6689ff24dfe352271b4"
+    },
+    {
+      "file": "candidate-review.md",
+      "sha256": "074389df8618fef054c7c047641a569f9667194f044c0be874e504d1031a7c1d"
+    },
+    {
+      "file": "record-native-art.py",
+      "sha256": "e40cc534fcf6756b8fbc35d861abf130a169c62cd1ed7cf58cbe104e79505298"
+    }
+  ]
+}

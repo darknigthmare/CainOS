@@ -1,0 +1,179 @@
+{
+  "schema": "encore-softballfield-generation-receipts/v1",
+  "createdAt": "2026-11-20T16:53:21.958598+00:00",
+  "tool": "image_gen.imagegen",
+  "calls": 4,
+  "acceptedCalls": 3,
+  "nativePreserved": true,
+  "stageId": "softballfield",
+  "images": [
+    {
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "plane": "far",
+      "sourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-0fff614e-0149-45aa-beae-73d965bfd5a5.png",
+      "nativePath": "docs/art-generation/continuation-20261120-b/stage/native/far.png",
+      "bytes": 2071718,
+      "sha256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+      "generationId": "exec-0fff614e-0149-45aa-beae-73d965bfd5a5",
+      "nativeCopyVerified": true,
+      "status": "accepted_native",
+      "visualInspection": "Native plane inspected individually and in the final production-loader composite at three camera positions. Native bytes preserved; no browser or complete canonical scene claim.",
+      "transparentBackgroundRequested": false,
+      "inputReferences": [
+        {
+          "path": "docs/art-generation/continuation-20261120-b/stage/references/episode5-storyboard-L3-M12.jpg",
+          "sha256": "497b0548a2ecb43c771414c28171ce889560c8830d89932ec7671069816090b5",
+          "bytes": 60587,
+          "role": "official episode storyboard"
+        },
+        {
+          "path": "docs/art-generation/continuation-20261120-b/stage/references/episode5-storyboard-L3-M15.jpg",
+          "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a",
+          "bytes": 65175,
+          "role": "official episode storyboard"
+        }
+      ],
+      "activePath": "assets/encore/stages/softballfield/far.png",
+      "activeCopyVerified": true,
+      "nativeAlphaPreserved": "not applicable: opaque RGB native source",
+      "jobPath": "docs/art-generation/continuation-20261120-b/stage/jobs/far-01.json",
+      "jobSHA256": "1d2b48f3f4721694cdd4d22054b09864e29f9ad5ce73c776f79ee3ad31224673",
+      "compositeReview": {
+        "phase": "final",
+        "report": "review/canvas-review.json",
+        "reportSHA256": "c32477f05d91a31131d20c91f1662b145b58b6893bf5ceba6342d99c35322526",
+        "image": "review/three-cameras.png",
+        "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+        "inspectedAt": "2026-11-20T17:36:28.170858+00:00",
+        "status": "accepted_with_stated_scope",
+        "scope": "Image bytes are identical to the final views actually inspected; report refreshed after a test-only source correction."
+      },
+      "preliminaryCompositeReview": {
+        "phase": "preliminary",
+        "report": "preliminary/review/canvas-review.json",
+        "reportSHA256": "06208f489110e318385ef42815d7b9464593e421c89e90f36bed171dd6e1e8ab",
+        "image": "preliminary/review/three-cameras.png",
+        "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+        "inspectedAt": "2026-11-20T17:06:48.313029+00:00",
+        "status": "accepted_with_stated_scope"
+      }
+    },
+    {
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "plane": "mid",
+      "sourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-97322c27-0017-44d6-a898-075e5cef236b.png",
+      "nativePath": "docs/art-generation/continuation-20261120-b/stage/native/mid.png",
+      "bytes": 907121,
+      "sha256": "66dfb01a55abd8b28b8cf404074b20021cfb5fff040d8c9efbc27efa24bf0842",
+      "generationId": "exec-97322c27-0017-44d6-a898-075e5cef236b",
+      "nativeCopyVerified": true,
+      "status": "accepted_native",
+      "visualInspection": "Native plane inspected individually and in the final production-loader composite at three camera positions. Native bytes preserved; no browser or complete canonical scene claim.",
+      "transparentBackgroundRequested": true,
+      "inputReferences": [
+        {
+          "path": "docs/art-generation/continuation-20261120-b/stage/native/far.png",
+          "sha256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+          "bytes": 2071718,
+          "role": "native alignment or correction reference"
+        },
+        {
+          "path": "docs/art-generation/continuation-20261120-b/stage/references/episode5-storyboard-L3-M15.jpg",
+          "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a",
+          "bytes": 65175,
+          "role": "official episode storyboard"
+        }
+      ],
+      "activePath": "assets/encore/stages/softballfield/mid.png",
+      "activeCopyVerified": true,
+      "nativeAlphaPreserved": true,
+      "jobPath": "docs/art-generation/continuation-20261120-b/stage/jobs/mid-01.json",
+      "jobSHA256": "1d4643a407f8f00d640882e4200630503fb5830a0cda6d17e4bf4ebf759b1992",
+      "compositeReview": {
+        "phase": "final",
+        "report": "review/canvas-review.json",
+        "reportSHA256": "c32477f05d91a31131d20c91f1662b145b58b6893bf5ceba6342d99c35322526",
+        "image": "review/three-cameras.png",
+        "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+        "inspectedAt": "2026-11-20T17:36:28.170858+00:00",
+        "status": "accepted_with_stated_scope",
+        "scope": "Image bytes are identical to the final views actually inspected; report refreshed after a test-only source correction."
+      },
+      "preliminaryCompositeReview": {
+        "phase": "preliminary",
+        "report": "preliminary/review/canvas-review.json",
+        "reportSHA256": "06208f489110e318385ef42815d7b9464593e421c89e90f36bed171dd6e1e8ab",
+        "image": "preliminary/review/three-cameras.png",
+        "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+        "inspectedAt": "2026-11-20T17:06:48.313029+00:00",
+        "status": "accepted_with_stated_scope"
+      }
+    },
+    {
+      "size": [
+        1671,
+        941
+      ],
+      "mode": "RGBA",
+      "plane": "near",
+      "sourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-697f61a9-9b65-4ee1-8ff0-a6fedcf6d986.png",
+      "nativePath": "docs/art-generation/continuation-20261120-b/stage/native/near.png",
+      "bytes": 146991,
+      "sha256": "aef682f1c524798efe1e7e09080eae872d63584d3237185fe173c162969be767",
+      "generationId": "exec-697f61a9-9b65-4ee1-8ff0-a6fedcf6d986",
+      "nativeCopyVerified": true,
+      "status": "accepted_native",
+      "visualInspection": "Native plane inspected individually and in the final production-loader composite at three camera positions. Native bytes preserved; no browser or complete canonical scene claim.",
+      "transparentBackgroundRequested": true,
+      "inputReferences": [
+        {
+          "path": "docs/art-generation/continuation-20261120-b/stage/attempts/near-01/near.png",
+          "sha256": "b791925979ac352f396101a30a11700f3e5880ea0f43129e53985ede4a8f9d17",
+          "bytes": 357036,
+          "role": "native alignment or correction reference"
+        }
+      ],
+      "activePath": "assets/encore/stages/softballfield/near.png",
+      "activeCopyVerified": true,
+      "nativeAlphaPreserved": true,
+      "jobPath": "docs/art-generation/continuation-20261120-b/stage/jobs/near-02.json",
+      "jobSHA256": "ac80033f86526b90573828f81bdf0aba9ee62583050c60b4a94897fff0ab7cc9",
+      "compositeReview": {
+        "phase": "final",
+        "report": "review/canvas-review.json",
+        "reportSHA256": "c32477f05d91a31131d20c91f1662b145b58b6893bf5ceba6342d99c35322526",
+        "image": "review/three-cameras.png",
+        "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+        "inspectedAt": "2026-11-20T17:36:28.170858+00:00",
+        "status": "accepted_with_stated_scope",
+        "scope": "Image bytes are identical to the final views actually inspected; report refreshed after a test-only source correction."
+      },
+      "preliminaryCompositeReview": {
+        "phase": "preliminary",
+        "report": "preliminary/review/canvas-review.json",
+        "reportSHA256": "06208f489110e318385ef42815d7b9464593e421c89e90f36bed171dd6e1e8ab",
+        "image": "preliminary/review/three-cameras.png",
+        "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+        "inspectedAt": "2026-11-20T17:06:48.313029+00:00",
+        "status": "accepted_with_stated_scope"
+      }
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "receipt": "attempts/near-01/receipt.json",
+      "sha256": "6f9ab7337110757cf8d3ec05da9234d475f39452d5fe9c4404b37d20692893ac",
+      "reason": "White foreground haze; rejected before runtime installation."
+    }
+  ],
+  "preliminaryCompositeReviewedAt": "2026-11-20T17:06:48.313029+00:00",
+  "finalCompositeReviewedAt": "2026-11-20T17:36:28.170858+00:00"
+}

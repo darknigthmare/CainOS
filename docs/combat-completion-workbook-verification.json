@@ -1,0 +1,2521 @@
+{
+  "schema": "encore-completion-workbook-review/v1",
+  "asOf": "2026-11-27",
+  "sourceCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "sourceCommitScope": "Historical baseline; modified working-tree evidence is identified by the exact source SHA-256 values.",
+  "inputWorkbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+  "inputTrackerSHA256": "95f073493d12f46b07f6f5bd3ba81653abfc3bc3dfae7ad56fe92dbd021d92cd",
+  "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+  "trackerDataSHA256": "8a15cadf682ca510cccfb1f087bc510cc526466bafdae964a8bf1fec75b64b28",
+  "sourceDataSHA256": "1326667db2f287e6235f892a521a3f3af0afe3d6c3148d8be147026be1dc6557",
+  "completionSourceSHA256": "c2090a26534d1b75d5827e8873bbbab91961f60b9bd5473a5d69b4025229dfc5",
+  "existingSheets": [
+    "Synthèse",
+    "Fonctionnalités",
+    "Combattants",
+    "Techniques",
+    "Arènes",
+    "Atlas",
+    "Production",
+    "Scénarios",
+    "Extension PNJ",
+    "QA",
+    "Références",
+    "Guide combat",
+    "Extensions combat",
+    "Fiches extensions"
+  ],
+  "addedSheets": [],
+  "allowedExistingChanges": [
+    {
+      "sheet": "Arènes",
+      "row": 6,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/bigtop/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/bigtop/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 6,
+      "column": 17,
+      "before": "Piste horizontale, limites du ring et perspective simplifiée créées pour le duel.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 6,
+      "column": 18,
+      "before": "Référence visuelle consultée",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 6,
+      "column": 19,
+      "before": "Palette et objets comparés à deux visuels officiels ; disposition complète du chapiteau non reconstruite. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences.",
+      "beforeFormula": null,
+      "after": "Source : https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 286,
+      "column": 7,
+      "before": "assets/encore/stages/bigtop/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/bigtop/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 286,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/bigtop/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 286,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 287,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/bigtop/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 287,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 287,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 288,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 288,
+      "column": 7,
+      "before": "assets/encore/stages/bigtop/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/bigtop/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 288,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 288,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 605,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 605,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 605,
+      "column": 7,
+      "before": "assets/encore/stages/bigtop/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 605,
+      "column": 8,
+      "before": "Lueurs de piste",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 605,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 7,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/candy/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/candy/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 7,
+      "column": 17,
+      "before": "La route du convoi et le canyon deviennent une piste horizontale de combat.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 7,
+      "column": 18,
+      "before": "Épisode à revoir",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 7,
+      "column": 19,
+      "before": "Épisode 2 identifié ; relief, route, confiseries et lumière à comparer sur des plans du canyon. Le visuel de la cour ne valide pas ce paysage.",
+      "beforeFormula": null,
+      "after": "Source : https://www.youtube.com/watch?v=4ofJpOEXrZs&t=420. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 291,
+      "column": 7,
+      "before": "assets/encore/stages/candy/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/candy/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 291,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/candy/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 291,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 292,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/candy/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 292,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 292,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 293,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 293,
+      "column": 7,
+      "before": "assets/encore/stages/candy/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/candy/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 293,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 293,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 606,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 606,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 606,
+      "column": 7,
+      "before": "assets/encore/stages/candy/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 606,
+      "column": 8,
+      "before": "Poussière de sucre",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 606,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 8,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/manor/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/manor/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 8,
+      "column": 17,
+      "before": "Salle du manoir reconstruite en décor de duel sans parcours d’exploration.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 8,
+      "column": 18,
+      "before": "Épisode à revoir",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 8,
+      "column": 19,
+      "before": "Épisode 3 identifié ; architecture, portraits et bougies à contrôler sur les plans de la salle choisie.",
+      "beforeFormula": null,
+      "after": "Source : https://www.youtube.com/watch?v=bKjfw77cxeQ&t=180. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 296,
+      "column": 7,
+      "before": "assets/encore/stages/manor/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/manor/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 296,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/manor/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 296,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 297,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/manor/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 297,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 297,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 298,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 298,
+      "column": 7,
+      "before": "assets/encore/stages/manor/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/manor/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 298,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 298,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 607,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 607,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 607,
+      "column": 7,
+      "before": "assets/encore/stages/manor/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 607,
+      "column": 8,
+      "before": "Bougies du manoir En 0.6.0, lueurs rattachées aux six chandelles déjà dessinées.",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 607,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 10,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/cellar/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/cellar/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 10,
+      "column": 17,
+      "before": "Sol jouable et distance entre les combattants créés pour le duel ; les yeux servent de décor.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 10,
+      "column": 18,
+      "before": "Référence visuelle consultée",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 10,
+      "column": 19,
+      "before": "Ambiance et motifs observés dans l’image officielle du cellier ; aucune porte d’archives déduite de ce plan. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences.",
+      "beforeFormula": null,
+      "after": "Source : https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 306,
+      "column": 7,
+      "before": "assets/encore/stages/cellar/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/cellar/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 306,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/cellar/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 306,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 307,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/cellar/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 307,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 307,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 308,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 308,
+      "column": 7,
+      "before": "assets/encore/stages/cellar/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/cellar/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 308,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 308,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 609,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 609,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 609,
+      "column": 7,
+      "before": "assets/encore/stages/cellar/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 609,
+      "column": 8,
+      "before": "Présences du cellier",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 609,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 11,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/void/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/void/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 11,
+      "column": 17,
+      "before": "Une limite de sol est nécessaire au duel ; elle constitue une convention de jeu. Le plan de référence ne fournit pas de ring mesurable.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 11,
+      "column": 18,
+      "before": "Référence visuelle consultée",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 11,
+      "column": 19,
+      "before": "Le Vide est comparé à son propre visuel officiel ; le couloir EXIT et le quadrillage sous Candy Canyon correspondent à d’autres lieux. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences.",
+      "beforeFormula": null,
+      "after": "Source : https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 311,
+      "column": 7,
+      "before": "assets/encore/stages/void/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/void/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 311,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/void/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 311,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 312,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/void/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 312,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 312,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 313,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 313,
+      "column": 7,
+      "before": "assets/encore/stages/void/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/void/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 313,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 313,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 610,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 610,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 610,
+      "column": 7,
+      "before": "assets/encore/stages/void/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 610,
+      "column": 8,
+      "before": "Reflets irisés",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 610,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 12,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/lake/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/lake/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 12,
+      "column": 15,
+      "before": "Aucune source primaire rattachée",
+      "beforeFormula": null,
+      "after": "ep1 (lac) : https://www.youtube.com/watch?v=HwAPLk_sQ3w&t=230",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 12,
+      "column": 17,
+      "before": "Rive issue des décors de CainOS, conservée comme adaptation à vérifier.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 12,
+      "column": 18,
+      "before": "Source primaire à identifier",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 12,
+      "column": 19,
+      "before": "Aucun visuel primaire précis rattaché à ce décor dans cette revue. Son nom ne constitue pas une validation de lieu canonique.",
+      "beforeFormula": null,
+      "after": "Source : https://www.youtube.com/watch?v=HwAPLk_sQ3w&t=230. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 316,
+      "column": 7,
+      "before": "assets/encore/stages/lake/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/lake/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 316,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/lake/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 316,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 317,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/lake/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 317,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 317,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 318,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 318,
+      "column": 7,
+      "before": "assets/encore/stages/lake/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/lake/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 318,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 318,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 611,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 611,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 611,
+      "column": 7,
+      "before": "assets/encore/stages/lake/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 611,
+      "column": 8,
+      "before": "Ondes du lac",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 611,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 14,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/gloink/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/gloink/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 14,
+      "column": 17,
+      "before": "Le nid devient un ring parsemé de motifs géométriques ; aucune reproduction de sa géographie complète.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 14,
+      "column": 18,
+      "before": "Épisode à revoir",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 14,
+      "column": 19,
+      "before": "Pilote identifié ; matière, palette, volumes et disposition du nid à comparer à une séquence primaire.",
+      "beforeFormula": null,
+      "after": "Source : https://www.youtube.com/watch?v=HwAPLk_sQ3w&t=990. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 326,
+      "column": 7,
+      "before": "assets/encore/stages/gloink/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/gloink/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 326,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/gloink/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 326,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 327,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/gloink/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 327,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 327,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 328,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 328,
+      "column": 7,
+      "before": "assets/encore/stages/gloink/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/gloink/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 328,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 328,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 613,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 613,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 613,
+      "column": 7,
+      "before": "assets/encore/stages/gloink/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 613,
+      "column": 8,
+      "before": "Formes du nid",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 613,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 16,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/grounds/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/grounds/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 16,
+      "column": 17,
+      "before": "Extérieur du cirque utilisé comme piste de duel avec une pelouse simplifiée.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 16,
+      "column": 18,
+      "before": "Épisode à revoir",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 16,
+      "column": 19,
+      "before": "Pilote identifié ; chapiteau, végétation, horizon et éclairage de l’extérieur à comparer sur un plan dédié.",
+      "beforeFormula": null,
+      "after": "Source : https://www.youtube.com/watch?v=HwAPLk_sQ3w&t=230. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 336,
+      "column": 7,
+      "before": "assets/encore/stages/grounds/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/grounds/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 336,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/grounds/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 336,
+      "column": 9,
+      "before": "Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 337,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/grounds/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 337,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 337,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 338,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 338,
+      "column": 7,
+      "before": "assets/encore/stages/grounds/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/grounds/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 338,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 338,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 615,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 615,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 615,
+      "column": 7,
+      "before": "assets/encore/stages/grounds/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 615,
+      "column": 8,
+      "before": "Nuages des terrains",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 615,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 17,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/backstage/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/backstage/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 17,
+      "column": 17,
+      "before": "La loge générique avec miroir à ampoules et caisses est remplacée par une recomposition du couloir. Six portes et médaillons dessinés en Canvas, tableaux abstraits, trois plafonniers, profondeur centrale et tapis rouge conservent une ligne de combat horizontale à y568. Ordre des chambres, portraits simplifiés, nombre de cadres, perspective et dimensions sont des choix du jeu.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli. Ligne logique y568 conservée ; cadrage et aire de duel adaptés pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 17,
+      "column": 18,
+      "before": "Comparaison partielle — copies du pilote à confirmer",
+      "beforeFormula": null,
+      "after": "Références consultées — peinture complète du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 17,
+      "column": 19,
+      "before": "Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir.",
+      "beforeFormula": null,
+      "after": "Source : https://www.youtube.com/watch?v=HwAPLk_sQ3w&t=740. Composition et continuité hors champ adaptées pour Encore ; géographie intégrale et fidélité pixel à pixel non certifiées. Ambiance audio existante conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 341,
+      "column": 7,
+      "before": "assets/encore/stages/backstage/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/backstage/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 341,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/backstage/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, échelle uniforme ; léger déplacement de caméra de 6 px. Effets visuels procéduraux additionnels désactivés. Plans historiques conservés en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 341,
+      "column": 9,
+      "before": "Comparaison partielle — copies du pilote à confirmer. Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir.",
+      "beforeFormula": null,
+      "after": "Comparer les repères à la source et vérifier la lisibilité du duel. Un seul PNG complet ; les trois plans historiques ne sont plus la composition active.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 342,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/backstage/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 342,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol intégré à la peinture complète. Ligne de combat y568 conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 342,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Vérifier l’ancrage des pieds dans les deux sens de caméra ; échelle uniforme du PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 343,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 343,
+      "column": 7,
+      "before": "assets/encore/stages/backstage/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/backstage/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 343,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture. Ancien near.png disponible en repli ; aucun plan séparé utilisé dans la composition actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 343,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "La présence du dessin ne constitue pas trois couches indépendantes de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 616,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 616,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 616,
+      "column": 7,
+      "before": "assets/encore/stages/backstage/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-completion-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 616,
+      "column": 8,
+      "before": "Veilleuses du couloir En 0.6.0, lueurs rattachées aux plafonniers du nouveau couloir.",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la peinture est chargée ; déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 616,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune nouvelle boucle visuelle revendiquée. Les effets historiques restent liés au décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 60,
+      "column": 6,
+      "before": "assets/encore/selection/ · combat/app.mjs",
+      "beforeFormula": null,
+      "after": "combat/app.mjs · combat/selection-presentation.mjs · assets/encore/selection/",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 60,
+      "column": 7,
+      "before": "Chaque combattant a une silhouette et un kit distincts.",
+      "beforeFormula": null,
+      "after": "64 portraits, choix immédiat, annonce accessible, badges J1/J2 en miroir et annulation indépendante du dernier choix. Les anciens chargements ne changent pas le statut du nouveau portrait.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 60,
+      "column": 8,
+      "before": "Chaque identité jouable possède son portrait, son kit et son corps de collision. Costumes et archives gardent une classification distincte ; leur présence ne vaut pas validation visuelle 1:1.",
+      "beforeFormula": null,
+      "after": "Les silhouettes, kits, profils et replays restent distincts. Présentation statique ; gestes d’entrée/sortie et modèle complet des huit états de la bible non livrés dans cette passe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 112,
+      "column": 6,
+      "before": "combat/base-sprite-content.mjs / combat/base-sprite-continuation-20261125-b.mjs / combat/illustrations.mjs / combat/render.mjs",
+      "beforeFormula": null,
+      "after": "combat/base-sprite-content.mjs · combat/base-sprite-completion-20261127-*.mjs · combat/illustrations.mjs · combat/render.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 112,
+      "column": 7,
+      "before": "Activer les 56 familles statiques lorsque leurs deux PNG sont présents et vérifiés : sélection et garde. Les lots A et B ajoutent 32 familles. Le choix du costume conserve la silhouette, les accessoires et les occultations documentées.",
+      "beforeFormula": null,
+      "after": "89 familles statiques disponibles après vérification des deux PNG : portrait et garde. Cette reprise ajoute 27 familles, 21 de Kaufmo et 6 de Max.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 112,
+      "column": 8,
+      "before": "Aucune animation demandée : intro, attaque, défense, déplacement et finales utilisent la garde de cette même famille. Aucun chargement d’action ni repli vers le costume normal ; corps et kit restent ceux du combattant.",
+      "beforeFormula": null,
+      "after": "Les états sans dessin propre utilisent la garde de la même famille. Aucun chargement d’action ni repli vers le costume normal ; corps et kit de combat conservés.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 61,
+      "column": 6,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "combat/stage-scenes-20261127.mjs · combat/stage-scenes-completion-20261127.mjs · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 61,
+      "column": 7,
+      "before": "Chaque arène a une composition visuelle identifiable et un aperçu synchronisé avec la sélection.",
+      "beforeFormula": null,
+      "after": "27 arènes communes, dont 13 peintures complètes et 14 compositions en trois plans ; les 64 arrangements par combattant restent disponibles.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 61,
+      "column": 8,
+      "before": "Aux vues du chapiteau, du cellier et du Vide s’ajoutent les comparaisons partielles de Spudsy et de la cour Candy avec des visuels officiels. Le couloir repose sur deux copies attribuées au pilote, à confirmer dans le flux officiel.",
+      "beforeFormula": null,
+      "after": "Références et limites de chaque peinture documentées. Les cadrages et continuités hors champ sont des adaptations pour Encore ; la présence des scènes ne certifie pas une fidélité canonique 1:1.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Extensions combat",
+      "row": 8,
+      "column": 5,
+      "before": "non intégré ; socle selon observation",
+      "beforeFormula": null,
+      "after": "Partiel — menu statique",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Extensions combat",
+      "row": 8,
+      "column": 6,
+      "before": "à exécuter",
+      "beforeFormula": null,
+      "after": "11 tests Node réussis ; navigateur incomplet",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Extensions combat",
+      "row": 8,
+      "column": 7,
+      "before": "Conserver les portraits existants ; spécifier huit états de présentation et une sortie propre par artiste.",
+      "beforeFormula": null,
+      "after": "Choix immédiat, annonce accessible, deux badges en miroir, annulation par côté et chargement de portrait protégé. Les gestes des 64 fiches et le modèle complet des huit états restent à produire.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Extensions combat",
+      "row": 8,
+      "column": 8,
+      "before": "Le modèle d’états indique une transition et une action d’annulation pour chaque état. Le choix logique est immédiat ; la sortie nettoie particules, voix et compagnon de l’aperçu abandonné. Deux curseurs, deux costumes du même artiste et une annulation simultanée ne volent ni focus ni choix.",
+      "beforeFormula": null,
+      "after": "11 régressions Node, relecture du nettoyage à la navigation et au combat. Parcours réseau retardé, clavier, retour exact du costume et 390 px enregistrés en CI ; leur résultat final doit rester distinct de la tentative locale interrompue.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Extensions combat",
+      "row": 8,
+      "column": 9,
+      "before": "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt\ndocs/bible/extensions-teams-bonus.json\ndocs/bible/extensions-characters.json",
+      "beforeFormula": null,
+      "after": "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt\ndocs/bible/extensions-teams-bonus.json\ndocs/bible/extensions-characters.json\ndocs/art-generation/completion-20261127/selection/verification.json",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 11,
+      "column": 2,
+      "before": 546,
+      "beforeFormula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3942,\"Costume crossover\")+COUNTIFS('Production'!B6:B3942,\"Tenue Circus\")",
+      "after": 573,
+      "afterFormula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4033,\"Costume crossover\")+COUNTIFS('Production'!B6:B4033,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 12,
+      "column": 2,
+      "before": 64,
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Arrangement d’arène\")",
+      "after": 64,
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 2,
+      "before": 2719,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3942,B$14)",
+      "after": 2792,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4033,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 3,
+      "before": 995,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3942,C$14)",
+      "after": 1013,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4033,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 4,
+      "before": 54,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3942,D$14)",
+      "after": 54,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4033,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 5,
+      "before": 169,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3942,E$14)",
+      "after": 169,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$4033,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 6,
+      "before": 3937,
+      "beforeFormula": "=COUNTA('Production'!A6:A3942)",
+      "after": 4028,
+      "afterFormula": "=COUNTA('Production'!A6:A4033)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 19,
+      "column": 8,
+      "before": "64 routes et 384 tableaux",
+      "beforeFormula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3942,\"Tableau d’histoire\")&\" tableaux\"",
+      "after": "64 routes et 384 tableaux",
+      "afterFormula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B4033,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 20,
+      "column": 8,
+      "before": "256 briefings de rencontre",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "after": "256 briefings de rencontre",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 21,
+      "column": 8,
+      "before": "27 thèmes musicaux d’arènes",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Arène\",'Production'!D6:D3942,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "after": "27 thèmes musicaux d’arènes",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Arène\",'Production'!D6:D4033,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 8,
+      "before": "26 motifs sonores synthétiques",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "after": "26 motifs sonores synthétiques",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 23,
+      "column": 8,
+      "before": "320 séquences de présentation",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "after": "320 séquences de présentation",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 24,
+      "column": 8,
+      "before": "23 ambiances visuelles procédurales actives",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Animation d’arène\",'Production'!E6:E3942,\"Implémenté\")&\" ambiances visuelles procédurales actives\"",
+      "after": "14 ambiances visuelles procédurales actives",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Animation d’arène\",'Production'!E6:E4033,\"Implémenté\")&\" ambiances visuelles procédurales actives\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 25,
+      "column": 8,
+      "before": "20 costumes historiques redessinés",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Costume\")&\" costumes historiques redessinés\"",
+      "after": "20 costumes historiques redessinés",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 27,
+      "column": 8,
+      "before": "839 fiches, hors tenues crossover",
+      "beforeFormula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3942,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "after": "839 fiches, hors tenues crossover",
+      "afterFormula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4033,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 31,
+      "column": 8,
+      "before": "192 présentations de KO",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Finition visuelle\")&\" présentations de KO\"",
+      "after": "192 présentations de KO",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 32,
+      "column": 8,
+      "before": "27 ambiances sonores originales",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3942,\"Arène\",'Production'!D6:D3942,\"Ambiance sonore\",'Production'!E6:E3942,\"Implémenté\")&\" ambiances sonores originales\"",
+      "after": "27 ambiances sonores originales",
+      "afterFormula": "=COUNTIFS('Production'!B6:B4033,\"Arène\",'Production'!D6:D4033,\"Ambiance sonore\",'Production'!E6:E4033,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 2,
+      "before": 2501,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2532,B21)",
+      "after": 2506,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2538,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 3,
+      "before": 0,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2532,C21)",
+      "after": 0,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2538,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 4,
+      "before": 21,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2532,D21)",
+      "after": 22,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2538,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 5,
+      "before": 2,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2532,E21)",
+      "after": 2,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2538,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 6,
+      "before": 2527,
+      "beforeFormula": "=COUNTA('QA'!A6:A2532)",
+      "after": 2533,
+      "afterFormula": "=COUNTA('QA'!A6:A2538)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 23,
+      "column": 2,
+      "before": 3,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2532,\"Partiel\")",
+      "after": 3,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2538,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 2,
+      "column": 8,
+      "before": "Version 0.7.0 · extensions du guide · 27 novembre 2026",
+      "beforeFormula": null,
+      "after": "Version 0.7.0 · reprise complétée · 27 novembre 2026",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 7,
+      "column": 8,
+      "before": "Extensions du guide : rubriques 30–67",
+      "beforeFormula": null,
+      "after": "Sélection statique intégrée · gestes à produire",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 8,
+      "column": 8,
+      "before": "254 fiches de conception associées",
+      "beforeFormula": null,
+      "after": "254 fiches de conception associées",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 13,
+      "column": 8,
+      "before": "473 tests Node · 2 builds · Canvas ciblé réussi",
+      "beforeFormula": null,
+      "after": "29 tests Node ciblés · 63 PNG et conservation vérifiés",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 14,
+      "column": 8,
+      "before": "Navigateur local bloqué · CI à suivre sur la PR",
+      "beforeFormula": null,
+      "after": "Navigateur local incomplet · CI précédente séparée",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 15,
+      "column": 8,
+      "before": "Extensions : conception, assets, intégration et tests séparés",
+      "beforeFormula": null,
+      "after": "Extensions : bible intégrée, systèmes encore partiels",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 8,
+      "before": "6 familles de Kaufmo · 12 bases · 4 décors complets",
+      "beforeFormula": null,
+      "after": "27 familles · 54 bases · 9 décors complets",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 17,
+      "column": 8,
+      "before": "79 PNG annoncés le 26/11 : non récupérés, exclus des ajouts",
+      "beforeFormula": null,
+      "after": "Lot repris : 79 PNG neufs tracés (16 + 63)",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 30,
+      "column": 8,
+      "before": "62 familles statiques au total · aucune nouvelle animation",
+      "beforeFormula": null,
+      "after": "89 familles statiques · aucune nouvelle animation",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 34,
+      "column": 8,
+      "before": "27 arènes communes · 64 arrangements",
+      "beforeFormula": null,
+      "after": "27 arènes : 13 peintures complètes · 64 arrangements",
+      "afterFormula": null
+    }
+  ],
+  "appended": {
+    "Production": {
+      "before": 3937,
+      "after": 4028,
+      "rows": 91
+    },
+    "QA": {
+      "before": 2527,
+      "after": 2533,
+      "rows": 6
+    }
+  },
+  "appendedControls": {
+    "Production": {
+      "validation": {
+        "range": "E3943:E4033",
+        "values": [
+          "Implémenté",
+          "Partiel",
+          "Prévu",
+          "À vérifier",
+          "Hors périmètre"
+        ]
+      },
+      "rules": [
+        {
+          "range": "E3943:E4033",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "E3943:E4033",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          }
+        },
+        {
+          "range": "E3943:E4033",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        },
+        {
+          "range": "E3943:E4033",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          }
+        },
+        {
+          "range": "E3943:E4033",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "E3943:E4033",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          }
+        },
+        {
+          "range": "E3943:E4033",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        }
+      ]
+    },
+    "QA": {
+      "validation": {
+        "range": "D2533:D2538",
+        "values": [
+          "Réussi",
+          "Échec",
+          "Non exécuté",
+          "À vérifier",
+          "Partiel"
+        ]
+      },
+      "rules": [
+        {
+          "range": "D2533:D2538",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "D2533:D2538",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          }
+        },
+        {
+          "range": "D2533:D2538",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        },
+        {
+          "range": "D2533:D2538",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          }
+        },
+        {
+          "range": "D2533:D2538",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "D2533:D2538",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          }
+        },
+        {
+          "range": "D2533:D2538",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        }
+      ]
+    }
+  },
+  "nativePreservation": {
+    "status": "passed",
+    "cellsChecked": 96713,
+    "sheetsChecked": 14,
+    "differences": [],
+    "checked": [
+      "Existing IDs, row order, values, formulas and notes",
+      "Effective cell styles, existing dimensions, panes, tables, filters, validations, conditional formats, margins and theme"
+    ],
+    "approvedCellChanges": 219
+  },
+  "formulas": {
+    "before": 42,
+    "after": 42,
+    "recalculated": true,
+    "errorMatches": 0,
+    "exportReimportChecked": true,
+    "desktopExcelOpened": false
+  },
+  "renders": [
+    "docs/verification/completion-workbook-20261127/summary.png",
+    "docs/verification/completion-workbook-20261127/summary-detail.png",
+    "docs/verification/completion-workbook-20261127/selection-section-status.png",
+    "docs/verification/completion-workbook-20261127/selection-section-detail.png",
+    "docs/verification/completion-workbook-20261127/stage-bigtop.png",
+    "docs/verification/completion-workbook-20261127/stage-candy.png",
+    "docs/verification/completion-workbook-20261127/stage-manor.png",
+    "docs/verification/completion-workbook-20261127/stage-cellar.png",
+    "docs/verification/completion-workbook-20261127/stage-void.png",
+    "docs/verification/completion-workbook-20261127/stage-lake.png",
+    "docs/verification/completion-workbook-20261127/stage-gloink.png",
+    "docs/verification/completion-workbook-20261127/stage-grounds.png",
+    "docs/verification/completion-workbook-20261127/stage-backstage.png",
+    "docs/verification/completion-workbook-20261127/production-added-overview.png",
+    "docs/verification/completion-workbook-20261127/production-added-detail.png",
+    "docs/verification/completion-workbook-20261127/qa-added-overview.png",
+    "docs/verification/completion-workbook-20261127/qa-added-detail.png",
+    "docs/verification/completion-workbook-20261127/selection-production.png",
+    "docs/verification/completion-workbook-20261127/static-family-feature.png"
+  ],
+  "renderRequests": [
+    {
+      "name": "summary.png",
+      "sheetName": "Synthèse",
+      "range": "A1:H18",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "summary-detail.png",
+      "sheetName": "Synthèse",
+      "range": "A19:H34",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "selection-section-status.png",
+      "sheetName": "Extensions combat",
+      "range": "A8:F8",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "selection-section-detail.png",
+      "sheetName": "Extensions combat",
+      "range": "G8:J8",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-bigtop.png",
+      "sheetName": "Arènes",
+      "range": "N6:S6",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-candy.png",
+      "sheetName": "Arènes",
+      "range": "N7:S7",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-manor.png",
+      "sheetName": "Arènes",
+      "range": "N8:S8",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-cellar.png",
+      "sheetName": "Arènes",
+      "range": "N10:S10",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-void.png",
+      "sheetName": "Arènes",
+      "range": "N11:S11",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-lake.png",
+      "sheetName": "Arènes",
+      "range": "N12:S12",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-gloink.png",
+      "sheetName": "Arènes",
+      "range": "N14:S14",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-grounds.png",
+      "sheetName": "Arènes",
+      "range": "N16:S16",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-backstage.png",
+      "sheetName": "Arènes",
+      "range": "N17:S17",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "production-added-overview.png",
+      "sheetName": "Production",
+      "range": "A3943:F3945",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "production-added-detail.png",
+      "sheetName": "Production",
+      "range": "G3943:J3945",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "qa-added-overview.png",
+      "sheetName": "QA",
+      "range": "A2533:F2535",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "qa-added-detail.png",
+      "sheetName": "QA",
+      "range": "G2533:I2535",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "selection-production.png",
+      "sheetName": "Production",
+      "range": "G4033:J4033",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "static-family-feature.png",
+      "sheetName": "Fonctionnalités",
+      "range": "F112:I112",
+      "scale": 1,
+      "format": "png"
+    }
+  ],
+  "renderRecords": {
+    "summary.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "229faecaab9a98baa375a496c634967afc10182b00981dd4e2cdd3c62b7e3565",
+      "sheetName": "Synthèse",
+      "range": "A1:H18"
+    },
+    "summary-detail.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "fb62bb8597a8003dc844841ece1f58a6b59c57cd6f915cbe902ffbe25493a449",
+      "sheetName": "Synthèse",
+      "range": "A19:H34"
+    },
+    "selection-section-status.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "a98afed57a5d132af9434dfb851b53e016a18d44274df5fc7e8e281a665db582",
+      "sheetName": "Extensions combat",
+      "range": "A8:F8"
+    },
+    "selection-section-detail.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "8830d6ecb3accac483fc2066df04c20cbf09999b018fefc6fc1c73188a43023d",
+      "sheetName": "Extensions combat",
+      "range": "G8:J8"
+    },
+    "stage-bigtop.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "e88f77e4dbdcfbc13605a7f53513a002da16b173da9517ff23c32bee9b96cfe2",
+      "sheetName": "Arènes",
+      "range": "N6:S6"
+    },
+    "stage-candy.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "6a85a13d82527380291c7d0522352e10cbbd4a9455d00e83f19ecf45d3ff959c",
+      "sheetName": "Arènes",
+      "range": "N7:S7"
+    },
+    "stage-manor.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "f61a0eebc8489f9e63689971961cc0c20218d8730cc8f8b7e12b408b03e0eb07",
+      "sheetName": "Arènes",
+      "range": "N8:S8"
+    },
+    "stage-cellar.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "6bbb781718611654e8d7b0bb34f5383d272e9205a0570e232d119d89e1d85f6f",
+      "sheetName": "Arènes",
+      "range": "N10:S10"
+    },
+    "stage-void.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "46215c71797606881d34740e641835573e034f8b7620a5871a1319a6c03cf58f",
+      "sheetName": "Arènes",
+      "range": "N11:S11"
+    },
+    "stage-lake.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "fdf8febebc0427348194cad35d2afe602ca8011bb9e6e07b0fdca7b2efc5bc43",
+      "sheetName": "Arènes",
+      "range": "N12:S12"
+    },
+    "stage-gloink.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "8d24801d8dfd1ec7c0b8364f0e812706fb5420ef9f5c3cab101c74a142be9c51",
+      "sheetName": "Arènes",
+      "range": "N14:S14"
+    },
+    "stage-grounds.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "4a007f0fc963d36f7d399b263c4aff50fc956a5ace738054e0008c2196790f31",
+      "sheetName": "Arènes",
+      "range": "N16:S16"
+    },
+    "stage-backstage.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "45c3eea27fde0491dcb72b8a105a29fe15d146137b4e5d5ad612f0fdbf9fb7ce",
+      "sheetName": "Arènes",
+      "range": "N17:S17"
+    },
+    "production-added-overview.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "6054c75cdd445e35b2a2384aa5c4377cb53153c103f7626165a79f10918232a7",
+      "sheetName": "Production",
+      "range": "A3943:F3945"
+    },
+    "production-added-detail.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "520d555a7c7081309eefc59bc76d84c6f17cbac93df3ae7a7168eacfb42cba33",
+      "sheetName": "Production",
+      "range": "G3943:J3945"
+    },
+    "qa-added-overview.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "842a716057f2c02f92f3a9ef7adb71e7bbe93a56fd1726c8a96a294c528788fa",
+      "sheetName": "QA",
+      "range": "A2533:F2535"
+    },
+    "qa-added-detail.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "abbd0762de826071c02393c2e97d57af66871ad41a66aa75ce88675e89bedb00",
+      "sheetName": "QA",
+      "range": "G2533:I2535"
+    },
+    "selection-production.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "4c8360cff9618411123e0ec6c18732b25f1d3c38326b644953f154b5e64c0e0c",
+      "sheetName": "Production",
+      "range": "G4033:J4033"
+    },
+    "static-family-feature.png": {
+      "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+      "sha256": "9eaff16522fdac34919e77602ac334ef09a278e42da07150d5934db860a7ec7c",
+      "sheetName": "Fonctionnalités",
+      "range": "F112:I112"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "reviewedAt": "2026-11-27T09:10:10.969777+00:00",
+    "reviewer": "previous_batch_qa",
+    "workbookSHA256": "d0bbd4df2c9d7241890f5be2a14cc30e391cbd97193fc9b2c9894c681a744eec",
+    "renderedViewsReviewed": [
+      "summary.png",
+      "summary-detail.png",
+      "selection-section-status.png",
+      "selection-section-detail.png",
+      "stage-bigtop.png",
+      "stage-candy.png",
+      "stage-manor.png",
+      "stage-cellar.png",
+      "stage-void.png",
+      "stage-lake.png",
+      "stage-gloink.png",
+      "stage-grounds.png",
+      "stage-backstage.png",
+      "production-added-overview.png",
+      "production-added-detail.png",
+      "qa-added-overview.png",
+      "qa-added-detail.png",
+      "selection-production.png",
+      "static-family-feature.png"
+    ],
+    "baselineViewsReviewed": [
+      "baseline-summary.png",
+      "baseline-production.png",
+      "baseline-selection-section.png"
+    ],
+    "checks": [
+      "Synthèse : 573 costumes, 89 familles statiques, 4 028 lignes Production et 2 533 QA cohérents et lisibles.",
+      "Styles, couleurs, colonnes et zones de notes préservés ; lignes ajoutées avec retour à la ligne.",
+      "Neuf arènes : chemins, nouvelles références et limites affichés sans découpe de texte visible.",
+      "Sélection, nouveaux assets, nouvelles QA et fonctionnalité statique relus aux plages rendues.",
+      "Référence du lac reportée dans sa colonne Source ; preuves historiques et résultats ciblés explicitement séparés."
+    ],
+    "scope": "Contrôle visuel des plages du classeur ; aucun jugement canonique 1:1 des dessins ni résultat navigateur ajouté."
+  },
+  "gameTestsExecutedByWorkbookUpdate": false,
+  "releaseReviewed": false,
+  "limitations": [
+    "Les preuves de jeu restent datées et séparées de cette revue du classeur.",
+    "Excel bureau et périphériques physiques non vérifiés. La fidélité canonique 1:1 n’est pas certifiée par la présence des fichiers."
+  ]
+}

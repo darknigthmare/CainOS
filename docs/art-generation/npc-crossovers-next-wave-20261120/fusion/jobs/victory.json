@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "victory",
+  "prompt": "Edit ONLY the first image. Preserve the entire mechanical Ribbit victory pose, face, optics, all green/mint armor, pink bow plate, purple lights, proportions, feet, arm positioning, colors and shading. Correct only the raised fist in the upper RIGHT corner: it currently shows FOUR mint fingertip caps (three at the top/right, plus one thumb cap across the front). Redesign this closed fist as EXACTLY THREE mechanical digits TOTAL: TWO curled fingers behind, and ONE thumb crossing their front. There must be exactly THREE pale mint caps visible in the raised fist, not four; remove the extra middle upper curled finger and smoothly reconnect the green palm. Keep the fist about the same size and at the same location. The second image establishes the chosen three-digit anatomy for this original redesign. Keep the hand on hip unchanged. One complete head-to-toes figure including the whole raised fist, with native true transparent RGBA and clear margins. No background, ground, shadows, glow, labels, text or extra objects.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png"
+}

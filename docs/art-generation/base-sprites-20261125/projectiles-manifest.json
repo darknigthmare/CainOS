@@ -1,0 +1,104 @@
+{
+  "schema": "encore-native-base-review/v1",
+  "createdOn": "2026-11-25",
+  "complete": true,
+  "scope": "Native single static images. No animation. Original Encore designs.",
+  "assets": [
+    {
+      "id": "queenie-royal",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-62bc74ec-5a93-45cc-96cf-86d7167374c3.png",
+      "file": "assets/encore/projectiles/queenie-royal.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e",
+      "bytes": 477139,
+      "width": 1659,
+      "height": 948,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        167,
+        238,
+        1491,
+        722
+      ],
+      "transparentFraction": 0.8243241696614554,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "ribbit-lily",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-eca66725-ad5b-43c1-a534-1d63d084ff93.png",
+      "file": "assets/encore/projectiles/ribbit-lily.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746",
+      "bytes": 897786,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        184,
+        205,
+        1058,
+        1087
+      ],
+      "transparentFraction": 0.5959258920100018,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "kaufmo-ball",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-d765e317-3d89-4932-9b03-dd5765fc60b8.png",
+      "file": "assets/encore/projectiles/kaufmo-ball.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2",
+      "bytes": 836267,
+      "width": 1254,
+      "height": 1254,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        191,
+        214,
+        1042,
+        1084
+      ],
+      "transparentFraction": 0.633011047264384,
+      "nativeBytesVerified": true,
+      "accepted": true
+    },
+    {
+      "id": "ming-star",
+      "slot": "projectile",
+      "source": "/workspace/scratch/c7a56010b070/generated_images/exec-58aa2924-fc4d-4dda-b70a-63a8eaaf1461.png",
+      "file": "assets/encore/projectiles/ming-star.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125/projectiles-manifest.json",
+      "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2",
+      "bytes": 971882,
+      "width": 1429,
+      "height": 1100,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        132,
+        120,
+        1294,
+        997
+      ],
+      "transparentFraction": 0.6018926140339717,
+      "nativeBytesVerified": true,
+      "accepted": true
+    }
+  ]
+}

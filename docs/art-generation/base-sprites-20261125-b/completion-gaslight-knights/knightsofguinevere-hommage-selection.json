@@ -1,0 +1,14 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: identity-preserve. Asset: ONE selection bust portrait for Digital Circus Encore, transparent PNG. Make a bust portrait of the exact Queenie Guinevere-homage crossover in the supplied reference, preserving her wooden chess-queen head, full scalloped crown with orb, half-lidded white eyes with orange irises, short black lower lashes, royal blue headpiece BEHIND crown with two round side pieces and lavender four-point stars, lavender sleeveless dress, white front panel, gold edging, spotted ivory ermine collar and detached white gloves with lavender cuffs. Show complete crown and both side star pieces, full gloves floating beside bust; end below gold waist tabs. Slight three-quarter right. Fine dark outlines and high-detail 2D hand-painted cel shading matching reference; same design, no extra accessories. No arms or legs, no human anatomy, no hair, nose or mouth. True transparent alpha outside character with no glow, haze, vignette, gradient, scene, ground shadow, label, text or frame. One static portrait, not animation or sprite sheet.",
+  "sources": [
+    "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png"
+  ],
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-bb14bdd9-0fc0-4274-9e29-6a1e23656765.png",
+  "installed": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Bust preserves exact royal-blue starred headpiece, wooden crown and face, cream ermine collar, lavender outfit and two floating gloves.",
+  "sha256": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564",
+  "bytes": 1275253
+}

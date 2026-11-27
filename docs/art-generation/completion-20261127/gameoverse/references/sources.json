@@ -1,0 +1,46 @@
+{
+  "schema": "encore-gameoverse-primary-references/v1",
+  "checkedOn": "2026-11-27",
+  "officialPage": "https://www.glitchprod.com/gameoverse",
+  "references": [
+    {
+      "sourcePage": null,
+      "role": "Existing Encore Kaufmo visual continuity; not an official episode source.",
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/game-kaufmo-stance.png",
+      "bytes": 799856,
+      "sha256": "6e58a6cba0f4e0f87fa53d1e6e43d824c31d082882d27528df6112dea2eb3e07",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "sourcePage": "https://glitchproductions.store/products/kaufmo-plush",
+      "role": "Official normal Kaufmo identity reference, reused without duplication.",
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/kaufmo-plush-1.png",
+      "bytes": 3088448,
+      "sha256": "ce4eb564c2d6ab4551783b61c6938c38b636cf852ad165861a74a7504e78ab2f",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "sourcePage": "https://www.glitchprod.com/gameoverse",
+      "downloadUrl": "https://static.wixstatic.com/media/b48361_3ffd772159bd425dab8ab5affcc2b78d~mv2.png",
+      "role": "Official Kit artwork; yellow tunic, cream centre stripe, charcoal sleeves and gauntlet colour/shape references.",
+      "path": "docs/art-generation/completion-20261127/gameoverse/references/kit-official.png",
+      "bytes": 699956,
+      "sha256": "03fa216a1543719a618164546997893dcc40867654eeaafdcdcf3ad9f443b8e8",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "sourcePage": "https://www.glitchprod.com/gameoverse",
+      "downloadUrl": "https://static.wixstatic.com/media/1d8dbc_7acdeeb4f7184836a63d0ad39c0fd729~mv2.png",
+      "role": "Official videogame-world artwork; angular shapes and blue/violet palette. The archive and crystal-clown designs remain original.",
+      "path": "docs/art-generation/completion-20261127/gameoverse/references/world-official.png",
+      "bytes": 3451844,
+      "sha256": "950552e374bf0d05b04393900e3c007892a680bf0811aafd6ef99bce28b5111f",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    }
+  ],
+  "sourceScope": "Primary references establish identity and visible design language. They do not establish these original crossover costumes as canon."
+}

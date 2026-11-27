@@ -1,0 +1,111 @@
+{
+  "schema": "encore-native-family-review/v1",
+  "status": "accepted",
+  "reviewer": "root",
+  "createdAt": "2026-11-20T15:29:04.423635+00:00",
+  "images": [
+    {
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json",
+      "receiptSHA256": "0f4c979e22eeb99403d63fe1ccc3833208a492f5869a8de7959f9e7b80fbf96e",
+      "receiptSHA256BeforeRuntimeActivation": "057817678ede7f30941ad345338277243fec0045c95fda6a6ac38f9d98c2c267"
+    },
+    {
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json",
+      "receiptSHA256": "3c2062971edf97fd3722ab7f7b47375f424e60403b8ee2d32c128e98c242d54f",
+      "receiptSHA256BeforeRuntimeActivation": "30e62fe476271199e3dcbb42451350ef75b2c94fff4caf1137bb0d26ceea4876"
+    },
+    {
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json",
+      "receiptSHA256": "9876efc3aeef3dba3db52c5e561c07663c4284a952e20884c35bc90b91759b90",
+      "receiptSHA256BeforeRuntimeActivation": "ff321efaa7a7285bfcb9798eda0fce28f944c18b9b341955d67fafe9288a9012"
+    },
+    {
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json",
+      "receiptSHA256": "63608950da5917f937f3e54bd54cf10c8316e3c87e9297b90a37382b6819c691",
+      "receiptSHA256BeforeRuntimeActivation": "56d7cb36325ffe4d4e35c86bb77081ae94a815bf09711ef06ce7043bd45ca680"
+    },
+    {
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json",
+      "receiptSHA256": "9800833de366dcb68f5f5824060888b67602a38fe36916724b9ac19ff747f016",
+      "receiptSHA256BeforeRuntimeActivation": "663ea394bfc77a02b5ce8f6b2e2d0ebc45d68efb1dd660e31605ef3bbd93947c"
+    },
+    {
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json",
+      "receiptSHA256": "44f36cad1051331611f1724b19b184ceebe0503724a769718f3e19a42d79c512",
+      "receiptSHA256BeforeRuntimeActivation": "8d3751388dfa16771d760eb48b967d59cf2291a110865fdcb15f33ccb3bf4f0f"
+    },
+    {
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json",
+      "receiptSHA256": "ff2339dee6afbecb60d5eb9487a7e441807279ad35173a38b0d4920e321fc817",
+      "receiptSHA256BeforeRuntimeActivation": "73267a9164d56e1ba50abf5072f93abafed371a51d82f30738ef1fc2e214ed21"
+    },
+    {
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json",
+      "receiptSHA256": "58cf3ef4f7964b179681603d1763d19a9b4f93de08ce3d596c9bcab074cd1981",
+      "receiptSHA256BeforeRuntimeActivation": "9e0f02e2046f4123d345fc95429f43bc58903d28ece15753dc715ea45140e8f8"
+    },
+    {
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json",
+      "receiptSHA256": "eff4f8663e187d24d23ce6594d0a0752601be4ff519ff66ca39950a7d07e1094",
+      "receiptSHA256BeforeRuntimeActivation": "e8f26ee291fdd17ac2fc7c481ce83d0a548c1a5b26af6890a01cbd916c34ad65"
+    },
+    {
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json",
+      "receiptSHA256": "7d553b70dfcdb0c07da11a7aa82941da9d987762898e8a882ea14246cb69e6e6",
+      "receiptSHA256BeforeRuntimeActivation": "1675e366c8d0248cfb0682960885f09b5559f784ef5492267be5b051d3160e07"
+    },
+    {
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json",
+      "receiptSHA256": "cf047939b3c54c3dd0a636a99dd060bde7860dae8e03a8da4419c64446fad71a",
+      "receiptSHA256BeforeRuntimeActivation": "3979224da09d09f1107b5537b6b80494f20469edfc7e7908c1a97115e9d4b6b3"
+    }
+  ],
+  "sheet": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/review/family-alpha-overview.jpg",
+  "sheetSHA256": "66cbc545fd3d132f88517645f93e724be652ef91cc31aece1adc8991a4894f56",
+  "observations": [
+    "Les onze dessins sont vus individuellement et sur une planche composée avec leur alpha natif.",
+    "Silhouettes entières, contours propres sur damier, tenues et matériaux cohérents entre poses.",
+    "Attaque et attaque lourde sont distinctes, orientation native vers la droite.",
+    "Trois lobes aux mains constituent une direction artistique originale de ce lot, sans preuve anatomique canonique. Les fichiers historiques de Ribbit restent intacts.",
+    "Les marges natives sont mesurées dans les reçus ; certaines sont étroites. Aucune silhouette ne touche le bord alpha > 12."
+  ],
+  "limitations": [
+    "Revue de poses statiques ; aucun cycle complet animé.",
+    "La revue Canvas de production et les deux builds sont consignés séparément."
+  ],
+  "receiptMetadataUpdatedAt": "2026-11-20T15:39:26.786659+00:00",
+  "receiptMetadataUpdateReason": "includedInRuntime changed to true after native acceptance and completed installation. Source PNG bytes and original visual inspection date are unchanged."
+}

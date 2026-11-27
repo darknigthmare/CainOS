@@ -1,0 +1,44 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 qa:combat
+> node scripts/build-combat-offline.mjs && node --check combat/app.mjs && node --check combat/input.mjs && node --check combat/render.mjs && node --check combat/offline.mjs && npm run test:combat && npm run build:combat
+
+Offline manifest: 0.7.0-bb75d9dcb5c0 / 6315 illustrations / 3658844724 bytes / art ce434716e078b998.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 test:combat
+> node --test tests/combat-*.test.mjs
+
+✖ the restored 54-fighter, 480-costume baseline and its authored routes remain exact (29.647463ms)
+✔ 385 independently captured checkpoint states resume, continue and retry on their original catalog (226.955545ms)
+✔ ten new identities own 100 distinct techniques and standing/crouching simulation bodies (21.11216ms)
+✔ calm Queenie is one costume of abstracted Queenie with unchanged rules and resumable stories (1.154059ms)
+✔ new projectile slots originate beyond their body in both directions and damage opponents (127.897255ms)
+✔ slow and marked projectiles apply their actual status, and heavy startup remains interruptible (17.225389ms)
+✔ Queenie traps arm before applying shock and leap shapes move continuously (6.289373ms)
+✔ official identities, uncertain archives and invented forms stay distinct and narrated (1.77243ms)
+✔ published PNG art updates real tracker paths without closing animation or reference reviews (4.686546ms)
+✔ a mixed-format crossover counts its actual PNG heavy and preserves editorial notes (1.336612ms)
+✔ a declared static base needs only portrait and stance and preserves its review note (1.605462ms)
+✔ only declared abstraction portraits and stances extend the asset audit allowlist (740.164627ms)
+✔ native alpha is checked inside the chosen crop, and opaque legacy atlases remain allowed (621.544976ms)
+✔ fully opaque RGBA and fully transparent selected regions fail for different reasons (178.301583ms)
+✔ out-of-atlas crops are rejected before Pillow can pad them with transparent pixels (150.724707ms)
+✔ invalid frame references in state lists and presentation mappings fail even when all atlas cells exist (306.671798ms)
+✔ changed sheet dimensions cannot silently fall back to unregistered animation geometry (300.851029ms)
+✔ changed anchors are rejected if outside a crop or inconsistent with the runtime registration (523.134431ms)
+✔ missing images and damaged PNG data are reported as failures without claiming a valid asset (229.630193ms)
+✔ repeated inspection produces deterministic evidence and never changes source PNG bytes (698.822628ms)
+✔ immutable atmosphere scores cover the playable stages with distinct quiet textures (4.607533ms)
+✔ stage atmospheres wait for an explicit unlock and the menu has no atmosphere (20.799061ms)
+✔ all stages schedule audible resources and reuse one noise buffer (5.535417ms)
+✔ ambience, effects and music have independent mute and volume controls on a single clock (3.383683ms)
+✔ invalid atmosphere volume uses the safe default, while zero and false fully mute its bus (2.283647ms)
+✔ stage changes cancel old texture sources without cutting an independent interface effect (2.323743ms)
+✔ pause clears noise, filters and future cues immediately and resumes at the current clock (3.236993ms)
+✔ a throttled clock skips missed atmosphere cycles instead of creating a burst (2.279374ms)
+✔ long playback and effect bursts stay within both voice caps without buffer growth (116.343164ms)
+✔ finite noise sources release their filters and reuse deterministic bounded samples (20.448711ms)
+✔ missing noise support leaves tonal textures and effects operational (13.425932ms)
+✔ a failed filter allocation disconnects partial nodes and a later stage can recover (2.626496ms)
+✔ context interruption suspends the atmosphere until an explicit unlock

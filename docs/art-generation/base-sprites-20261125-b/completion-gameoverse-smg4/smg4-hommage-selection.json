@@ -1,0 +1,11 @@
+{
+  "asset": "smg4/hommage/selection",
+  "prompt": "Use case: identity-preserve. Make ONE character-selection bust portrait from the provided Queenie SMG4 homage sprite. Preserve EXACTLY the entire queen-chess crown shape, spherical wooden finial, blue cap and white camera-symbol badge, half-lidded eyes and red-orange irises, lower black lashes, wooden neck, plain royal-blue shirtfront, white overall bib with two gold hexagonal buttons, and her two separate white gloves with spotted cuffs. NO BOW TIE. Do not copy any pink details from other characters. Only composition/framing changes: crown finial through upper torso down to bib, complete cap and BOTH gloves fully inside square with generous margins. Three-quarter facing right and looking right. No lower skirt or base in this bust. Same crisp polished 2D cel shading. Transparent RGBA, no colored halo or glow, no scenery, floor shadow, text, frame, watermark, human arms/legs or extra objects. One image, one static portrait.",
+  "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4dea0c87-9d63-4c07-b27c-f34ebbc1d20d.png",
+  "output": "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "references": [
+    "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/smg4/queenie/hommage/stance.png"
+  ]
+}

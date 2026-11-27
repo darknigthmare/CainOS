@@ -1,0 +1,24 @@
+{
+  "baseline": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+  "method": "Compare current catalog against the unchanged data modules with base-sprite-content and offline-manifest restored verbatim through GitHub from the baseline SHA.",
+  "checks": [
+    {
+      "catalog": "FIGHTERS",
+      "preserved": 64,
+      "sha256": "c87ed066d9484e971b447728d171a76331a1a655e423c279632ba7dadd7b001d",
+      "identical": true
+    },
+    {
+      "catalog": "STAGES",
+      "preserved": 27,
+      "sha256": "a395e852d5c6c28bc2964450a4023cf6628376f3262b4f37fa537da039c084df",
+      "identical": true
+    },
+    {
+      "catalog": "COSTUMES",
+      "preserved": 540,
+      "sha256": "e52491269469479e75b1f10ac963f3132f7a2b18f0a84794ec600780a0ce073c",
+      "identical": true
+    }
+  ]
+}

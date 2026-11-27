@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { SPRITE_CATALOG } from '../combat/sprite-catalog.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from '../combat/costume-fidelity.mjs';
 import { REFINED_COSTUME_IDS } from '../combat/costume-refinements.mjs';
+import { ABSTRACTION_CALM_ID, ABSTRACTION_ORIGINAL_ARCHIVE } from '../combat/abstractions-content.mjs';
 import {
   FIGHTERS, ROSTER_ARCHIVE, VARIANTS, COSTUME_BASE_FIGHTERS,
   ARCHIVE_ONLY_ENTRIES, classifyArchiveEntry,
@@ -15,8 +16,9 @@ const fighters = new Set(FIGHTERS.map(fighter => fighter.id));
 
 test('classification preserves all 179 identities and provenance while applying only declared sprite replacements', () => {
   assert.equal(SPRITE_CATALOG.length, 179);
-  assert.equal(byId.size, SPRITE_CATALOG.length);
-  assert.deepEqual(ROSTER_ARCHIVE.map(entry => entry.id), SPRITE_CATALOG.map(entry => entry.id));
+  assert.equal(byId.size, SPRITE_CATALOG.length + ABSTRACTION_ORIGINAL_ARCHIVE.length);
+  assert.deepEqual(ROSTER_ARCHIVE.slice(0, 179).map(entry => entry.id), SPRITE_CATALOG.map(entry => entry.id));
+  assert.deepEqual(ROSTER_ARCHIVE.slice(179).map(entry => entry.id), ABSTRACTION_ORIGINAL_ARCHIVE.map(entry => entry.id));
   for (const source of SPRITE_CATALOG) {
     const classified = byId.get(source.id);
     for (const [key, value] of Object.entries(source)) {
@@ -31,8 +33,8 @@ test('every current archive entry has exactly one reviewed classification with n
   const variants = new Set(Object.keys(COSTUME_BASE_FIGHTERS));
   const archives = new Set(Object.keys(ARCHIVE_ONLY_ENTRIES));
   assert.equal(fighters.size, FIGHTERS.length);
-  assert.equal(variants.size, 51);
-  assert.equal(archives.size, SPRITE_CATALOG.length - fighters.size - variants.size);
+  assert.equal(variants.size, 52);
+  assert.equal(archives.size, ROSTER_ARCHIVE.length - fighters.size - variants.size);
   const declarations = [...fighters, ...variants, ...archives];
   assert.equal(new Set(declarations).size, declarations.length, 'classification declarations must be disjoint');
   assert.deepEqual(new Set(declarations), new Set(byId.keys()), 'new content needs an explicit review, without removing archives');
@@ -55,7 +57,8 @@ test('every playable identity retains its own kit including the distinct Kaufmo 
   }
   assert.equal(byId.get('kaufmo').baseFighterId, 'kaufmo', 'pre-abstraction Kaufmo owns a separate kit');
   assert.notEqual(byId.get('kaufmo').baseFighterId, byId.get('abstractedkaufmo').baseFighterId, 'pre-abstraction Kaufmo is not the boss kit');
-  assert.equal(byId.get('abstractedjax').baseFighterId, null, 'new morphology needs its own combat definition');
+  assert.equal(byId.get('abstractedjax').baseFighterId, 'abstractedjax', 'the new morphology owns its own combat definition');
+  assert.notEqual(byId.get('abstractedjax').baseFighterId, byId.get('jax').baseFighterId);
 });
 
 test('names shared with relatives, rivals, props and effects never grant a costume kit', () => {
@@ -90,7 +93,9 @@ test('reviewed outfits and visual states reuse the same existing fighter without
     assert.equal(byId.get(id).category, 'variant', id);
     assert.equal(byId.get(id).playable, false, id);
   }
-  assert.equal(VARIANTS.length, 51);
+  assert.equal(VARIANTS.length, 52);
+  assert.equal(VARIANTS.at(-1).id, ABSTRACTION_CALM_ID);
+  assert.equal(VARIANTS.at(-1).baseFighterId, 'abstractedqueenie');
   for (const variant of VARIANTS) {
     assert.ok(fighters.has(variant.baseFighterId), variant.id);
     assert.notEqual(variant.id, variant.baseFighterId);
@@ -125,7 +130,7 @@ test('every classified appearance still points at a bounded source atlas cell', 
 
 test('the 51 stable costume IDs and fighter bindings remain exact for existing profiles and replays', () => {
   // Independently derived from the published 171f422 data.mjs (Encore 0.3.0).
-  const digest = createHash('sha256').update(JSON.stringify(VARIANTS.map(v => [v.id, v.baseFighterId]))).digest('hex');
+  const digest = createHash('sha256').update(JSON.stringify(VARIANTS.slice(0, 51).map(v => [v.id, v.baseFighterId]))).digest('hex');
   assert.equal(digest, 'b738cfcfce663d6ce2d8c636b1c8fe1ab495e54d775ecc54ea14c2886c0f470d');
   for (const variant of VARIANTS) assert.equal(variant.fidelity, getCostumeFidelity(variant.id));
   for (const entry of ROSTER_ARCHIVE.filter(e => e.category !== 'variant')) assert.equal(entry.fidelity, undefined, 'costume reviews are not inherited by unrelated archive entries');
@@ -157,7 +162,7 @@ test('all thirty-three costume rectangles fit their actual PNG and preserve unde
     }
   }
   assert.deepEqual(VARIANTS.filter(v => v.sprite.paletteSwap).map(v => v.id), [], 'the red replacement no longer needs a palette filter');
-  assert.deepEqual(VARIANTS.filter(v => v.sprite.matteMode === 'native-alpha').map(v => v.id).sort(), [...REFINED_COSTUME_IDS].sort());
+  assert.deepEqual(VARIANTS.filter(v => v.sprite.matteMode === 'native-alpha').map(v => v.id).sort(), [...REFINED_COSTUME_IDS, ABSTRACTION_CALM_ID].sort());
   assert.equal(VARIANTS.filter(v => v.sprite.matteMode === 'preserve-source').length, 0, 'new Shadow alpha replaces the opaque preservation fallback');
   const historical = SPRITE_CATALOG.find(entry => entry.id === 'gangletragedy').sprite;
   assert.deepEqual([historical.cols, historical.rows, historical.col, historical.row], [4, 3, 1, 1], 'source archive grid remains available without rewriting the original atlas');

@@ -1,0 +1,2740 @@
+{
+  "schema": "encore-combat-extensions-design/v1",
+  "version": "1.0",
+  "asOf": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "observedBaselineCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+  "sources": [
+    {
+      "id": "general",
+      "filename": "Combat_Games_Guide_General_v1.0.txt",
+      "path": "docs/bible/references/Combat_Games_Guide_General_v1.0.txt",
+      "driveFileId": "14o_RrgXucs8Km-x1LQJtMK7rol6mENKy",
+      "url": "https://drive.google.com/file/d/14o_RrgXucs8Km-x1LQJtMK7rol6mENKy/view",
+      "bytes": 55172,
+      "sha256": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7",
+      "sections": "00–29",
+      "preservedVerbatim": true,
+      "retrievedAt": "2026-11-27",
+      "provenance": "Original fourni par le propriétaire du projet dans son Drive ; aucune reconstruction du texte."
+    },
+    {
+      "id": "extension01",
+      "filename": "Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "path": "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "driveFileId": "1rYxKLIbz67L1sstmJWsga76uK7cX2mXF",
+      "url": "https://drive.google.com/file/d/1rYxKLIbz67L1sstmJWsga76uK7cX2mXF/view",
+      "bytes": 60589,
+      "sha256": "330fb7485a7a52b2a20f855646c940aaac0fcd9510032bc84b2e17c518edd25f",
+      "sections": "30–49",
+      "preservedVerbatim": true,
+      "retrievedAt": "2026-11-27",
+      "provenance": "Original fourni par le propriétaire du projet dans son Drive ; aucune reconstruction du texte."
+    },
+    {
+      "id": "extension02",
+      "filename": "Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "path": "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "driveFileId": "1qr8hgvvjFqdWzcGaf1DPeKromk75bBn0",
+      "url": "https://drive.google.com/file/d/1qr8hgvvjFqdWzcGaf1DPeKromk75bBn0/view",
+      "bytes": 47334,
+      "sha256": "08b57ea542e83c487fef3276997a612d4657f2ee9ed4f8e46b0bf65a2778038b",
+      "sections": "50–67",
+      "preservedVerbatim": true,
+      "retrievedAt": "2026-11-27",
+      "provenance": "Original fourni par le propriétaire du projet dans son Drive ; aucune reconstruction du texte."
+    }
+  ],
+  "phase": "static-base-assets-and-documentation",
+  "interpretation": "Fidélité 1:1 = identité, silhouettes, proportions, accessoires, lieux et personnalité vérifiés contre sources. Aucune certification globale donnée par ces documents.",
+  "sections": [
+    {
+      "id": "EN-G30",
+      "section": "30",
+      "module": "Extension 01",
+      "title": "Portée et rattachement au guide général",
+      "priority": "P0",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "Prolonger les identifiants EN-G00…29 par EN-G30…67 ; conserver le duel existant et la phase de bases fixes.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "30",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G30-01",
+          "text": "Conserver les deux originaux et leur provenance avec le guide général déjà présent.",
+          "acceptance": "Les trois tailles et SHA-256 correspondent aux fichiers Drive ; le guide général n’est pas dupliqué.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G30-02",
+          "text": "Relier chaque rubrique aux contrats Encore, aux sources du runtime et aux tâches restantes.",
+          "acceptance": "Les 38 sections existent une fois et leurs exigences disposent d’identifiants uniques et de critères.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G30-03",
+          "text": "Séparer documenté, asset produit, moteur intégré et scénario exécuté.",
+          "acceptance": "Aucun statut de conception ne ferme un test de tag, de dessin, de déblocage ou de fidélité.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Les trois tailles et SHA-256 correspondent aux fichiers Drive ; le guide général n’est pas dupliqué. Les 38 sections existent une fois et leurs exigences disposent d’identifiants uniques et de critères. Aucun statut de conception ne ferme un test de tag, de dessin, de déblocage ou de fidélité.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G31",
+      "section": "31",
+      "module": "Extension 01",
+      "title": "Taunts : personnalité et réactions",
+      "priority": "P1",
+      "decision": "retenue",
+      "observedStatus": "absent-dedicated-action",
+      "adaptation": "Une provocation silencieuse de présentation par combattant ; la récupération utility actuelle garde ses règles et son nom.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "31",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G31-01",
+          "text": "Associer 64 gestes avec entrée, pose, sortie, vulnérabilité et limites de personnalité.",
+          "acceptance": "Chaque ID du roster possède un brief unique ; les abstractions ne parlent pas et aucun souvenir inédit n’est affirmé.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G31-02",
+          "text": "Créer ultérieurement une action TAUNT distincte de utility, sans gain de ressource par défaut.",
+          "acceptance": "Une commande refusée ne dépense rien ; un coup interrompt le geste ; aucun bonus de dégâts n’est accordé par la pose.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G31-03",
+          "text": "Prévoir une variante envers le rival et une option de fréquence des voix.",
+          "acceptance": "La variante utilise la relation de route étiquetée fan-game ; voix répétées et mouvements réduits n’altèrent pas le contrôle.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque ID du roster possède un brief unique ; les abstractions ne parlent pas et aucun souvenir inédit n’est affirmé. Une commande refusée ne dépense rien ; un coup interrompt le geste ; aucun bonus de dégâts n’est accordé par la pose. La variante utilise la relation de route étiquetée fan-game ; voix répétées et mouvements réduits n’altèrent pas le contrôle.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G32",
+      "section": "32",
+      "module": "Extension 01",
+      "title": "Sélection, confirmation et désélection",
+      "priority": "P1",
+      "decision": "retenue",
+      "observedStatus": "static-selection-present",
+      "adaptation": "Conserver les portraits existants ; spécifier huit états de présentation et une sortie propre par artiste.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "32",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G32-01",
+          "text": "Distinguer focus, aperçu, confirmation, attente, tenue, désélection, équipe et départ.",
+          "acceptance": "Le modèle d’états indique une transition et une action d’annulation pour chaque état.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G32-02",
+          "text": "Écrire 64 désélections spécifiques, abrégées sur navigation rapide sans inverser arbitrairement l’entrée.",
+          "acceptance": "Le choix logique est immédiat ; la sortie nettoie particules, voix et compagnon de l’aperçu abandonné.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G32-03",
+          "text": "Maintenir deux joueurs indépendants et des textes accessibles sans spoiler.",
+          "acceptance": "Deux curseurs, deux costumes du même artiste et une annulation simultanée ne volent ni focus ni choix.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Le modèle d’états indique une transition et une action d’annulation pour chaque état. Le choix logique est immédiat ; la sortie nettoie particules, voix et compagnon de l’aperçu abandonné. Deux curseurs, deux costumes du même artiste et une annulation simultanée ne volent ni focus ni choix.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G33",
+      "section": "33",
+      "module": "Extension 01",
+      "title": "Profils d’équipe et catégories de partenaires",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Définir une future Répétition en duo à deux membres, distincte des neuf modes du catalogue existant.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "33",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G33-01",
+          "text": "Retenir un actif et une réserve avec vie propre ; l’équipe perd après deux KO.",
+          "acceptance": "Un premier KO déclenche l’entrée du survivant sans jauge et sans réanimation du membre éliminé.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G33-02",
+          "text": "Séparer profil assistance, tag et hybride avec rôles affichés avant le match.",
+          "acceptance": "Une assistance ne devient pas contrôlable ; une entité de kit ne consomme pas automatiquement un slot.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G33-03",
+          "text": "Interdire les doublons d’identité ou de version dans un duo scénarisé.",
+          "acceptance": "Personnage et abstraction du même personnage sont refusés en histoire ; le mode simulation explicite peut les autoriser.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Un premier KO déclenche l’entrée du survivant sans jauge et sans réanimation du membre éliminé. Une assistance ne devient pas contrôlable ; une entité de kit ne consomme pas automatiquement un slot. Personnage et abstraction du même personnage sont refusés en histoire ; le mode simulation explicite peut les autoriser.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G34",
+      "section": "34",
+      "module": "Extension 01",
+      "title": "Commandes, jauges et disponibilité",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Réserver des actions remappables séparées pour taunt, aide, relais et super ; aucun détournement des dix slots historiques.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "34",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G34-01",
+          "text": "Proposer une jauge de duo distincte des ressources intrinsèques et du super individuel.",
+          "acceptance": "Le contrat fixe capacité, coût, recharge, horloge, réservations et remboursement ; les valeurs sont marquées à équilibrer.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G34-02",
+          "text": "Tester disponibilité du partenaire avant de réserver ou débiter la jauge.",
+          "acceptance": "Un partenaire engagé, KO ou en récupération refuse l’action avec un motif ; deux actions ne dépensent jamais le même crédit.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G34-03",
+          "text": "Versionner l’encodage d’entrées avant toute intégration de commandes supplémentaires.",
+          "acceptance": "Un replay 0.5/0.7 garde SLOT_ORDER et le résultat historique ; la nouvelle règle porte sa propre version.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Le contrat fixe capacité, coût, recharge, horloge, réservations et remboursement ; les valeurs sont marquées à équilibrer. Un partenaire engagé, KO ou en récupération refuse l’action avec un motif ; deux actions ne dépensent jamais le même crédit. Un replay 0.5/0.7 garde SLOT_ORDER et le résultat historique ; la nouvelle règle porte sa propre version.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G35",
+      "section": "35",
+      "module": "Extension 01",
+      "title": "Assistances ponctuelles",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Chaque intervention réutilise une technique du partenaire référencée par son slot ; aucune aptitude officielle nouvelle n’est déduite.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "35",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G35-01",
+          "text": "Décrire appel, arrivée, action, sortie, récupération et interruption pour les duos prioritaires.",
+          "acceptance": "L’entrée est annoncée, le soutien reste punissable et un second appel attend sa sortie complète.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G35-02",
+          "text": "Conserver les dégâts subis par la réserve et l’historique partagé du combo.",
+          "acceptance": "Toucher actif et soutien ne double pas la jauge gagnée ; les deux pertes de vie sont attribuées une fois.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G35-03",
+          "text": "Définir l’échec sur mur, transition, KO et géant incompatible.",
+          "acceptance": "Le soutien quitte proprement la scène ; la réserve n’est ni téléportée dans un mur ni réanimée par un rappel.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "L’entrée est annoncée, le soutien reste punissable et un second appel attend sa sortie complète. Toucher actif et soutien ne double pas la jauge gagnée ; les deux pertes de vie sont attribuées une fois. Le soutien quitte proprement la scène ; la réserve n’est ni téléportée dans un mur ni réanimée par un rappel.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G36",
+      "section": "36",
+      "module": "Extension 01",
+      "title": "Tag : transfert réel du contrôle",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Le relais est une future règle de simulation, distincte d’une permutation de portrait ou d’une composition de scène.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "36",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G36-01",
+          "text": "Spécifier relais neutre, après confirmation, secours, KO et relais de scénario séparément.",
+          "acceptance": "Chaque forme possède coût, fenêtre, invulnérabilité éventuelle, point de contrôle et résolution en échec.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G36-02",
+          "text": "Conserver vie, munitions, récupérations, états et limites du combo à travers le switch.",
+          "acceptance": "Aucun reset de rebond, piège, jauge ou cooldown n’est obtenu en alternant les deux membres.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G36-03",
+          "text": "Fixer la cible des projectiles et le sort des entités lors du départ.",
+          "acceptance": "Les IDs de propriétaire restent stables ; un projectile ne suit pas un nouveau membre sans propriété de ciblage annoncée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque forme possède coût, fenêtre, invulnérabilité éventuelle, point de contrôle et résolution en échec. Aucun reset de rebond, piège, jauge ou cooldown n’est obtenu en alternant les deux membres. Les IDs de propriétaire restent stables ; un projectile ne suit pas un nouveau membre sans propriété de ciblage annoncée.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G37",
+      "section": "37",
+      "module": "Extension 01",
+      "title": "Techniques combinées et supers d’équipe",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Douze compositions reçoivent un numéro original avec contribution visible de chacun et aucun nouveau pouvoir canonique.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "37",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G37-01",
+          "text": "Lier chaque super à deux membres, deux slots existants et une justification de rencontre.",
+          "acceptance": "Les 12 duos référencent des combattants distincts et des techniques présentes dans le catalogue.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G37-02",
+          "text": "Engager la chorégraphie longue uniquement sur une confirmation compatible.",
+          "acceptance": "Garde, raté, interruption et cible géante disposent d’une résolution courte sans victoire forcée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G37-03",
+          "text": "Bloquer appels concurrents et définir sortie, placement et continuation.",
+          "acceptance": "Les deux participants redeviennent disponibles selon le même état de simulation après séquence complète ou abrégée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Les 12 duos référencent des combattants distincts et des techniques présentes dans le catalogue. Garde, raté, interruption et cible géante disposent d’une résolution courte sans victoire forcée. Les deux participants redeviennent disponibles selon le même état de simulation après séquence complète ou abrégée.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G38",
+      "section": "38",
+      "module": "Extension 01",
+      "title": "Finishers d’équipe et fins dramatiques",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "solo-finales-present",
+      "adaptation": "Nom éditorial retenu : Derniers Actes en duo. Les finales individuelles existantes restent inchangées.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "38",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G38-01",
+          "text": "Séparer super de combat, conclusion collective et tableau conditionnel.",
+          "acceptance": "Une finale après verdict ne modifie ni le vainqueur, ni la progression, ni les dégâts déjà enregistrés.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G38-02",
+          "text": "Définir les conditions de chaque duo : adversaire, décor, versions, partenaire vivant et contexte.",
+          "acceptance": "Les scènes mémorielles ne passent jamais pour un retour canonique ; un partenaire KO entraîne la solution individuelle.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G38-03",
+          "text": "Fixer priorité et variantes pour morphologies incompatibles.",
+          "acceptance": "Fin dramatique spécifique, finale duo, finale solo puis victoire normale sont évaluées une seule fois dans cet ordre.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Une finale après verdict ne modifie ni le vainqueur, ni la progression, ni les dégâts déjà enregistrés. Les scènes mémorielles ne passent jamais pour un retour canonique ; un partenaire KO entraîne la solution individuelle. Fin dramatique spécifique, finale duo, finale solo puis victoire normale sont évaluées une seule fois dans cet ordre.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G39",
+      "section": "39",
+      "module": "Extension 01",
+      "title": "Clashes et confrontations avec QTE",
+      "priority": "P2",
+      "decision": "adaptée",
+      "observedStatus": "not-implemented",
+      "adaptation": "Limiter les clashes interactifs aux défis et chapitres solo ; les versus compétitifs conservent des règles déterministes sans QTE.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "39",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G39-01",
+          "text": "Créer deux familles de clash originales : accessoires opposés et poussée contre décor simulé.",
+          "acceptance": "Seules les paires de techniques inscrites dans la table peuvent déclencher le clash ; aucun choc automatique universel.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G39-02",
+          "text": "Prévoir commande maintenue ou pression unique, sans martelage obligatoire.",
+          "acceptance": "Réussite, échec, égalité, absence de réponse, pause et déconnexion sont définis ; option automatique disponible en solo.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G39-03",
+          "text": "Résoudre le résultat du clash avant la conclusion du duel.",
+          "acceptance": "La scène ne renverse pas une victoire déjà attribuée ; seuils et résultat sont enregistrés dans la future version de replay.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Seules les paires de techniques inscrites dans la table peuvent déclencher le clash ; aucun choc automatique universel. Réussite, échec, égalité, absence de réponse, pause et déconnexion sont définis ; option automatique disponible en solo. La scène ne renverse pas une victoire déjà attribuée ; seuils et résultat sont enregistrés dans la future version de replay.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G40",
+      "section": "40",
+      "module": "Extension 01",
+      "title": "Entités indépendantes et objets placés",
+      "priority": "P1",
+      "decision": "adaptée",
+      "observedStatus": "projectiles-and-traps-present",
+      "adaptation": "S’appuyer sur projectiles et pièges existants ; ne pas transformer un motif illustré en compagnon autonome.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "40",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G40-01",
+          "text": "Indexer les slots projectile et trap par propriétaire et règles réelles.",
+          "acceptance": "Chaque enregistrement garde ID, slot, coût, durée, cap et champs absents comme absents ; aucun pouvoir supposé.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G40-02",
+          "text": "Spécifier le budget actif et le cycle d’une entité native distincte de la réserve.",
+          "acceptance": "Invocation, ordres, neutralisation et fin de vie sont bornés ; une ressource de kit demeure liée à son propriétaire.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G40-03",
+          "text": "Définir comportement en KO, réserve, interruption et changement d’arène.",
+          "acceptance": "Les objets périmés ne survivent pas à une nouvelle manche ; leurs anciens propriétaires restent identifiables pour les replays.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque enregistrement garde ID, slot, coût, durée, cap et champs absents comme absents ; aucun pouvoir supposé. Invocation, ordres, neutralisation et fin de vie sont bornés ; une ressource de kit demeure liée à son propriétaire. Les objets périmés ne survivent pas à une nouvelle manche ; leurs anciens propriétaires restent identifiables pour les replays.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G41",
+      "section": "41",
+      "module": "Extension 01",
+      "title": "Projectiles persistants et attribution",
+      "priority": "P0",
+      "decision": "adaptée",
+      "observedStatus": "projectile-runtime-present",
+      "adaptation": "Prolonger le contrat actuel de réflexion sans changer le motif visuel de l’attaque d’origine.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "41",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G41-01",
+          "text": "Séparer propriétaire initial, propriétaire de dégâts, cible et identité graphique.",
+          "acceptance": "La clef de Jax réfléchie ne devient pas un projectile de Kinger ; le crédit de dégâts suit les règles de réflexion.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G41-02",
+          "text": "Borner nombre, durée, rebonds, fréquence de touche et nettoyage de chaque famille.",
+          "acceptance": "Un projectile ou piège ne permet pas une boucle infinie entre relais, contre et transition.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G41-03",
+          "text": "Conserver forme, collision et lisibilité avec les costumes crossover.",
+          "acceptance": "Un skin ne modifie pas portée ni délai ; tout écart visible est documenté avant publication.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "La clef de Jax réfléchie ne devient pas un projectile de Kinger ; le crédit de dégâts suit les règles de réflexion. Un projectile ou piège ne permet pas une boucle infinie entre relais, contre et transition. Un skin ne modifie pas portée ni délai ; tout écart visible est documenté avant publication.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G42",
+      "section": "42",
+      "module": "Extension 01",
+      "title": "Stages bonus et épreuves narratives",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "sequential-survival-present-no-bonus-stage",
+      "adaptation": "Huit épreuves situées dans les lieux du jeu : camion de répétition, convoi, nid, service Spudsy, manoir, softball, balises et silhouettes.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "42",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G42-01",
+          "text": "Donner objectif mesurable, échec non bloquant, score, reprise et récompense à chaque bonus.",
+          "acceptance": "Les huit fiches possèdent limites, contrôle d’entrée/sortie et condition de victoire ; une défaite ne ferme pas la campagne.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G42-02",
+          "text": "Distinguer horde simultanée et survie actuelle à dix duels successifs.",
+          "acceptance": "Le statut de horde reste non intégré tant que plusieurs ennemis réellement simultanés ne sont pas pris en charge.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G42-03",
+          "text": "Utiliser le décor réel associé, sa perspective latérale et des objets séparés.",
+          "acceptance": "Aucun fond générique de scène de théâtre ne remplace Candy Canyon, le restaurant, le manoir ou le terrain de softball.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Les huit fiches possèdent limites, contrôle d’entrée/sortie et condition de victoire ; une défaite ne ferme pas la campagne. Le statut de horde reste non intégré tant que plusieurs ennemis réellement simultanés ne sont pas pris en charge. Aucun fond générique de scène de théâtre ne remplace Candy Canyon, le restaurant, le manoir ou le terrain de softball.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G43",
+      "section": "43",
+      "module": "Extension 01",
+      "title": "Espace d’exploration et de déblocage",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "archive-menu-present-no-hub",
+      "adaptation": "Les Archives des répétitions sont un hub original de simulation Encore, séparé du menu Archives existant et de la géographie canonique.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "43",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G43-01",
+          "text": "Décrire cinq salles et quatre connexions réciproques avec seuils aux murs.",
+          "acceptance": "Le graphe est accessible depuis l’accueil ; chaque arrivée reste hors collision et ne place aucune porte au centre d’une salle.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G43-02",
+          "text": "Relier coffres ciblés aux récompenses, sans tirage payant ni perte de clé après interruption.",
+          "acceptance": "Chaque coffre possède un contenu stable et une transaction idempotente ; retour au hub conserve son état.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G43-03",
+          "text": "Prévoir carte, journal, raccourci et alternative par menu accessible.",
+          "acceptance": "Un joueur peut consulter les conditions et réclamer une récompense sans devoir réussir une manipulation de déplacement.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Le graphe est accessible depuis l’accueil ; chaque arrivée reste hors collision et ne place aucune porte au centre d’une salle. Chaque coffre possède un contenu stable et une transaction idempotente ; retour au hub conserve son état. Un joueur peut consulter les conditions et réclamer une récompense sans devoir réussir une manipulation de déplacement.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G44",
+      "section": "44",
+      "module": "Extension 01",
+      "title": "Relations, période et compatibilités",
+      "priority": "P0",
+      "decision": "retenue",
+      "observedStatus": "source-annotations-present",
+      "adaptation": "Les duos, dialogues et fins écrits ici sont des propositions Encore ; les fiches de référence gardent leur niveau d’incertitude.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "44",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G44-01",
+          "text": "Classer personnages, scènes et costumes selon les cinq statuts de fidélité.",
+          "acceptance": "Un libellé d’archive ou une illustration générée ne devient pas une preuve canonique.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G44-02",
+          "text": "Conserver les disparus dans une répétition mémorielle ou une simulation explicite.",
+          "acceptance": "Queenie, Kaufmo et Gummigoo n’obtiennent pas une résurrection ou une chronologie nouvelle présentée comme officielle.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G44-03",
+          "text": "Éviter toute parole ou guérison des abstractions.",
+          "acceptance": "Les 11 formes abstraites utilisent des réactions non verbales ; les cinq formes inventées restent étiquetées originales.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Un libellé d’archive ou une illustration générée ne devient pas une preuve canonique. Queenie, Kaufmo et Gummigoo n’obtiennent pas une résurrection ou une chronologie nouvelle présentée comme officielle. Les 11 formes abstraites utilisent des réactions non verbales ; les cinq formes inventées restent étiquetées originales.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G45",
+      "section": "45",
+      "module": "Extension 01",
+      "title": "Assets, animation, son et mise en scène",
+      "priority": "P1",
+      "decision": "retenue",
+      "observedStatus": "static-base-production-phase",
+      "adaptation": "Consigner les besoins d’animation et de son sans les produire pendant cette phase de sprites de base.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "45",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G45-01",
+          "text": "Identifier les poses fixes, futurs cycles, sons et effets par fiche et par propriétaire.",
+          "acceptance": "Un portrait existant, une pose réutilisée et un cycle inédit ne sont pas comptés comme trois animations livrées.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G45-02",
+          "text": "Préserver silhouettes, proportions, accessoires, alpha et ancrages du modèle de référence.",
+          "acceptance": "La revue compare chaque variante à ses références et au rendu natif ; un contrôle technique ne certifie pas le 1:1.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G45-03",
+          "text": "Prévoir sorties courtes, sons originaux et réduction des mouvements.",
+          "acceptance": "Aucun son ne reste actif après abandon de l’aperçu ; aucun flash ou doublage imité n’est obligatoire.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Un portrait existant, une pose réutilisée et un cycle inédit ne sont pas comptés comme trois animations livrées. La revue compare chaque variante à ses références et au rendu natif ; un contrôle technique ne certifie pas le 1:1. Aucun son ne reste actif après abandon de l’aperçu ; aucun flash ou doublage imité n’est obligatoire.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G46",
+      "section": "46",
+      "module": "Extension 01",
+      "title": "Interface, apprentissage et réseau",
+      "priority": "P0",
+      "decision": "adaptée",
+      "observedStatus": "local-training-and-replays-present",
+      "adaptation": "Étendre l’entraînement local avant tout jeu en ligne ; le protocole tag/entités doit précéder un futur réseau.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "46",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G46-01",
+          "text": "Afficher actif, réserve, vie, disponibilité et coût sans surcharger le HUD.",
+          "acceptance": "La raison d’un refus est visible par texte et icône ; information identique au clavier, tactile et manette.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G46-02",
+          "text": "Ajouter exercices d’appel, de relais, de punition et de conservation de combo.",
+          "acceptance": "Une séquence peut être enregistrée, rejouée et réinitialisée sans accorder de récompense de progression.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G46-03",
+          "text": "Définir déterminisme, version d’entrée et snapshot avant une implémentation réseau.",
+          "acceptance": "Le jeu en ligne et le rollback restent différés ; aucune connectivité n’est revendiquée par une fiche.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "La raison d’un refus est visible par texte et icône ; information identique au clavier, tactile et manette. Une séquence peut être enregistrée, rejouée et réinitialisée sans accorder de récompense de progression. Le jeu en ligne et le rollback restent différés ; aucune connectivité n’est revendiquée par une fiche.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G47",
+      "section": "47",
+      "module": "Extension 01",
+      "title": "Validation, statistiques et ordre d’intégration",
+      "priority": "P0",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "Mesurer séparément couverture documentaire, assets, intégration et scénarios réussis, sans pourcentage de livraison synthétique trompeur.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "47",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G47-01",
+          "text": "Associer les 18 cas de l’extension aux contrats de test du projet.",
+          "acceptance": "Chaque cas indique préconditions, action, résultat attendu et statut à exécuter.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G47-02",
+          "text": "Livrer par tranche : sélection/taunt, aide/relais, entités, duo, bonus/hub, extension du contenu.",
+          "acceptance": "Une tranche conserve une preuve des deux entrées CainOS et standalone avant changement de statut runtime.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G47-03",
+          "text": "Préserver identifiants, ordre et notes du classeur historique.",
+          "acceptance": "Les nouvelles feuilles utilisent les IDs EN-G30…67 ; aucune ancienne ligne n’est remplacée par un état déduit.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque cas indique préconditions, action, résultat attendu et statut à exécuter. Une tranche conserve une preuve des deux entrées CainOS et standalone avant changement de statut runtime. Les nouvelles feuilles utilisent les IDs EN-G30…67 ; aucune ancienne ligne n’est remplacée par un état déduit.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G48",
+      "section": "48",
+      "module": "Extension 01",
+      "title": "Dix fiches de production complémentaires",
+      "priority": "P1",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "Instancier les modèles A–J dans les JSON de personnages, duos, clashes, entités, bonus, hub et récompenses.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "48",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G48-01",
+          "text": "Fournir 64 fiches A et B avec transitions spécifiques et contrôles communs.",
+          "acceptance": "Les 64 IDs runtime sont couverts sans doublon ; chaque sortie est un texte propre au personnage.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G48-02",
+          "text": "Renseigner les fiches C–G pour les profils, interventions, supers, clashes et entités.",
+          "acceptance": "Chaque fiche réfère un contrat partagé et ses exceptions ; aucun champ requis n’est remplacé par une promesse vague.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G48-03",
+          "text": "Renseigner H–J pour les huit bonus, cinq zones et règles de récompense.",
+          "acceptance": "Les IDs des règles, contenus et zones existent ; les conditions sont interprétables sans relire une conversation.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Les 64 IDs runtime sont couverts sans doublon ; chaque sortie est un texte propre au personnage. Chaque fiche réfère un contrat partagé et ses exceptions ; aucun champ requis n’est remplacé par une promesse vague. Les IDs des règles, contenus et zones existent ; les conditions sont interprétables sans relire une conversation.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G49",
+      "section": "49",
+      "module": "Extension 01",
+      "title": "Instruction d’intégration et références",
+      "priority": "P0",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "Rendre l’intégration reproductible par un générateur dédié et conserver la référence complète à chaque section.",
+      "sourceDocumentId": "extension01",
+      "sourceSection": "49",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G49-01",
+          "text": "Conserver les références officielles du guide comme références de mécanique, sans importer leur fiction.",
+          "acceptance": "Mortal Kombat, Tekken ou FighterZ restent des inspirations de système ; leurs termes ne sont pas attribués au Circus.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G49-02",
+          "text": "Documenter comment reconstruire les JSON, Markdown et tables Excel.",
+          "acceptance": "Le mode --check détecte toute dérive des fichiers générés ou de la provenance.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G49-03",
+          "text": "Inscrire les limites d’implémentation et de fidélité à côté des comptes.",
+          "acceptance": "Les douze duos et huit bonus sont comptés comme spécifiés ; les anciens tests moteur restent historiques.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Mortal Kombat, Tekken ou FighterZ restent des inspirations de système ; leurs termes ne sont pas attribués au Circus. Le mode --check détecte toute dérive des fichiers générés ou de la provenance. Les douze duos et huit bonus sont comptés comme spécifiés ; les anciens tests moteur restent historiques.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G50",
+      "section": "50",
+      "module": "Extension 02",
+      "title": "Portée du système de déblocage",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "no-access-catalogue-at-baseline",
+      "adaptation": "Appliquer les mêmes dimensions aux artistes, aides, tenues, scènes et nouveaux modes, sans retirer les accès existants.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "50",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G50-01",
+          "text": "Créer un catalogue de contenu aux identifiants distincts de ses noms traduits.",
+          "acceptance": "Chaque ID actuel est relié à sa catégorie et à ses dépendances ; les contenus proposés portent un préfixe distinct.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G50-02",
+          "text": "Distinguer absence d’asset et véritable condition d’accès.",
+          "acceptance": "Un asset manquant affiche une indisponibilité technique et ne demande jamais de progression ni de paiement.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G50-03",
+          "text": "Définir les fonctions retenues, différées et non activées.",
+          "acceptance": "Le soutien externe est spécifié et désactivé ; le mode libre historique reste accessible.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque ID actuel est relié à sa catégorie et à ses dépendances ; les contenus proposés portent un préfixe distinct. Un asset manquant affiche une indisponibilité technique et ne demande jamais de progression ni de paiement. Le soutien externe est spécifié et désactivé ; le mode libre historique reste accessible.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G51",
+      "section": "51",
+      "module": "Extension 02",
+      "title": "Découverte, droits, installation et compatibilité",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Le moteur de droits cible combine quatre axes ; aucun booléen unique unlocked ne remplace ces dimensions.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "51",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G51-01",
+          "text": "Séparer secret/indice/identifié du droit permanent/temporaire/en attente.",
+          "acceptance": "Un costume peut être acquis sans propriétaire découvert ; un droit actif n’impose pas la révélation du nom.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G51-02",
+          "text": "Évaluer installation et restrictions du mode après la résolution des sources de droit.",
+          "acceptance": "Acquis mais non installé, incompatible ou incomplet reçoivent trois explications différentes.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G51-03",
+          "text": "Déterminer une action utile et tous les obstacles secondaires.",
+          "acceptance": "Le focus révèle le prochain objectif ou l’installation requise sans faux message d’abonnement.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Un costume peut être acquis sans propriétaire découvert ; un droit actif n’impose pas la révélation du nom. Acquis mais non installé, incompatible ou incomplet reçoivent trois explications différentes. Le focus révèle le prochain objectif ou l’installation requise sans faux message d’abonnement.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G52",
+      "section": "52",
+      "module": "Extension 02",
+      "title": "Langage visuel des verrous",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "not-implemented",
+      "adaptation": "Charte originale : fiche de distribution C&A, billet perforé et volet de rideau ; ces motifs sont une interface Encore, pas des artefacts canoniques.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "52",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G52-01",
+          "text": "Utiliser silhouette noire contrastée et sceau de billet pour les identités déjà révélables.",
+          "acceptance": "Le contour reste lisible sur fonds sombres et ne cache ni focus ni condition courte.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G52-02",
+          "text": "Employer un symbole neutre pour les secrets complets.",
+          "acceptance": "Nom, alt, titre, voix, catégorie de tenue et miniature ne révèlent pas le personnage.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G52-03",
+          "text": "Prévoir focus, refus bref, récompense prête et révélation à mouvement réduit.",
+          "acceptance": "Les états se distinguent par forme et texte ; aucune révélation ne bloque la navigation ou ne force des flashes.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Le contour reste lisible sur fonds sombres et ne cache ni focus ni condition courte. Nom, alt, titre, voix, catégorie de tenue et miniature ne révèlent pas le personnage. Les états se distinguent par forme et texte ; aucune révélation ne bloque la navigation ou ne force des flashes.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G53",
+      "section": "53",
+      "module": "Extension 02",
+      "title": "Slots d’artistes et de partenaires",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "all-roster-selectable-at-baseline",
+      "adaptation": "La distribution existante reste libre. Les futurs prêts scénarisés et récompenses sont portés par des droits supplémentaires.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "53",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G53-01",
+          "text": "Permettre le focus d’un slot verrouillé et ouvrir une fiche explicative à confirmation.",
+          "acceptance": "Un joueur ne peut confirmer un contenu indisponible ni être bloqué dans une boucle d’erreur.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G53-02",
+          "text": "Séparer droit de l’artiste, rôle d’assistance, compatibilité du duo et scène débloquée.",
+          "acceptance": "Posséder deux membres ne prouve pas la compatibilité narrative ou l’obtention d’une fin dramatique.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G53-03",
+          "text": "Inclure les entités indispensables au kit dans l’accès du combattant.",
+          "acceptance": "Aucun piège, projectile ou compagnon nécessaire n’est vendu ou verrouillé séparément.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Un joueur ne peut confirmer un contenu indisponible ni être bloqué dans une boucle d’erreur. Posséder deux membres ne prouve pas la compatibilité narrative ou l’obtention d’une fin dramatique. Aucun piège, projectile ou compagnon nécessaire n’est vendu ou verrouillé séparément.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G54",
+      "section": "54",
+      "module": "Extension 02",
+      "title": "Tenues, palettes et dépendances",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "wardrobe-present-no-entitlements",
+      "adaptation": "Les tenues actuelles conservent leur accès ; les futures récompenses exposent propriétaire, période, découverte et permanence.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "54",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G54-01",
+          "text": "Conserver une tenue acquise avant son propriétaire et expliquer sa dépendance.",
+          "acceptance": "Une récompense de costume survit au rechargement ; aucun faux verrou d’abonnement ne remplace le personnage manquant.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G54-02",
+          "text": "Préserver kit, collisions, portée et ressources pour une apparence cosmétique.",
+          "acceptance": "Les dix slots équipés sont identiques à ceux du combattant ; un changement de règle impose une variante explicite.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G54-03",
+          "text": "Documenter aperçu, équipement, doublons et restrictions de campagne.",
+          "acceptance": "Le menu peut montrer une tenue sans l’équiper ; une scène de période imposée utilise sa tenue annoncée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Une récompense de costume survit au rechargement ; aucun faux verrou d’abonnement ne remplace le personnage manquant. Les dix slots équipés sont identiques à ceux du combattant ; un changement de règle impose une variante explicite. Le menu peut montrer une tenue sans l’équiper ; une scène de période imposée utilise sa tenue annoncée.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G55",
+      "section": "55",
+      "module": "Extension 02",
+      "title": "Stages, variantes et destinations",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "stage-catalogue-present",
+      "adaptation": "Conserver le catalogue et ses arrangements ; séparer droit de sélection, participation, confort et destination reliée.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "55",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G55-01",
+          "text": "Inclure versions statique et vivante dans le même accès lorsque seule la présentation change.",
+          "acceptance": "Réduire les mouvements n’exige aucune acquisition supplémentaire et ne change pas les collisions.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G55-02",
+          "text": "Autoriser la participation à une arène cosmétique d’un partenaire sans accorder son choix permanent.",
+          "acceptance": "Les deux clients disposent des assets avant le match ; l’invité ne reçoit pas un achat fictif.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G55-03",
+          "text": "Préparer les destinations de transition avant le départ.",
+          "acceptance": "Un droit manquant n’entraîne jamais un chargement bloqué au milieu d’un combat ; remplacement annoncé avant match.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Réduire les mouvements n’exige aucune acquisition supplémentaire et ne change pas les collisions. Les deux clients disposent des assets avant le match ; l’invité ne reçoit pas un achat fictif. Un droit manquant n’entraîne jamais un chargement bloqué au milieu d’un combat ; remplacement annoncé avant match.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G56",
+      "section": "56",
+      "module": "Extension 02",
+      "title": "Modes et parcours verrouillés",
+      "priority": "P1",
+      "decision": "adaptée",
+      "observedStatus": "all-nine-modes-free-at-baseline",
+      "adaptation": "Ne pas verrouiller rétroactivement les neuf modes existants ; réserver les conditions à des nouveaux défis et parcours optionnels.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "56",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G56-01",
+          "text": "Laisser entraînement, réglages et apprentissage accessibles.",
+          "acceptance": "Aucun prérequis d’un mode ne dépend exclusivement de ce même mode.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G56-02",
+          "text": "Décrire les nouvelles tuiles avec objectif, condition, reprise et route alternative.",
+          "acceptance": "Une tuile non implémentée est annoncée en préparation, sans chaîne de déblocage fictive.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G56-03",
+          "text": "Conserver progression et récompenses après fin d’un éventuel accès temporaire.",
+          "acceptance": "Retour d’accès restaure les étapes connues ; la sauvegarde n’est pas effacée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Aucun prérequis d’un mode ne dépend exclusivement de ce même mode. Une tuile non implémentée est annoncée en préparation, sans chaîne de déblocage fictive. Retour d’accès restaure les étapes connues ; la sauvegarde n’est pas effacée.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G57",
+      "section": "57",
+      "module": "Extension 02",
+      "title": "Conditions, progression et attribution",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "stories-challenges-medals-present",
+      "adaptation": "Créer des expressions ET/OU sur les événements validés : routes terminées, défis, bonus, coffre ciblé et source externe vérifiée.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "57",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G57-01",
+          "text": "Écrire chaque condition en arbre typé avec compteur, cible et périmètre.",
+          "acceptance": "Les alternatives gratuites restent visibles ; ET et OU donnent des résultats distincts sur les jeux de données de référence.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G57-02",
+          "text": "Rendre la transaction d’attribution idempotente avec un identifiant d’événement.",
+          "acceptance": "Deux notifications ou deux clics n’accordent ni deux clés, ni deux lots, ni une nouvelle expiration.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G57-03",
+          "text": "Prévoir rétroactivité uniquement pour les événements réellement conservés.",
+          "acceptance": "Les stories, medals et challenges présents sont migrés ; une performance non enregistrée n’est pas supposée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Les alternatives gratuites restent visibles ; ET et OU donnent des résultats distincts sur les jeux de données de référence. Deux notifications ou deux clics n’accordent ni deux clés, ni deux lots, ni une nouvelle expiration. Les stories, medals et challenges présents sont migrés ; une performance non enregistrée n’est pas supposée.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G58",
+      "section": "58",
+      "module": "Extension 02",
+      "title": "Exploration, récompenses et révélation",
+      "priority": "P1",
+      "decision": "retenue-conception",
+      "observedStatus": "hub-not-implemented",
+      "adaptation": "Les coffres des Archives accordent des récompenses ciblées ; la révélation suit l’attribution sauvegardée et peut être abrégée.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "58",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G58-01",
+          "text": "Décrire découverte, condition, réclamation, sauvegarde et présentation comme étapes distinctes.",
+          "acceptance": "Une interruption après attribution retrouve le contenu acquis, même si la révélation n’a pas été vue.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G58-02",
+          "text": "Ne débiter la ressource qu’avec l’écriture du lot accordé.",
+          "acceptance": "Échec d’écriture n’efface aucune clé ; relance n’effectue pas un second débit.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G58-03",
+          "text": "Proposer une liste accessible des coffres prêts et des conditions.",
+          "acceptance": "La voie menu produit exactement le même événement que l’interaction dans le hub.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Une interruption après attribution retrouve le contenu acquis, même si la révélation n’a pas été vue. Échec d’écriture n’efface aucune clé ; relance n’effectue pas un second débit. La voie menu produit exactement le même événement que l’interaction dans le hub.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G59",
+      "section": "59",
+      "module": "Extension 02",
+      "title": "Soutiens et modèles d’acquisition",
+      "priority": "P2",
+      "decision": "retenue-specification-inactive",
+      "observedStatus": "no-provider-integration",
+      "adaptation": "Prévoir uniquement des apparences ou ambiances originales dédiées ; l’offre, les tarifs et les niveaux n’existent pas dans cette livraison.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "59",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G59-01",
+          "text": "Distinguer avantage permanent, catalogue temporaire et lot par période.",
+          "acceptance": "Chaque avantage nomme explicitement son modèle et ne transforme pas une annulation en retrait automatique d’un acquis permanent.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G59-02",
+          "text": "Prévoir une voie gratuite explicite pour les exemples de récompense retenus.",
+          "acceptance": "La condition défi OU soutien est exposée et le code de droit conserve deux sources indépendantes.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G59-03",
+          "text": "Éviter avantage compétitif, camouflage supérieur et changement de géométrie.",
+          "acceptance": "Tenue et scène de soutien conservent les règles communes ; le confort reste accessible sans soutien.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque avantage nomme explicitement son modèle et ne transforme pas une annulation en retrait automatique d’un acquis permanent. La condition défi OU soutien est exposée et le code de droit conserve deux sources indépendantes. Tenue et scène de soutien conservent les règles communes ; le confort reste accessible sans soutien.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G60",
+      "section": "60",
+      "module": "Extension 02",
+      "title": "Liaison à Patreon ou équivalent",
+      "priority": "P2",
+      "decision": "différée-intégration",
+      "observedStatus": "no-provider-integration",
+      "adaptation": "Contrat serveur futur seulement. Aucun bouton d’achat, secret, token ni rôle d’abonné fabriqué côté client.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "60",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G60-01",
+          "text": "Résoudre le compte et vérifier l’admissibilité côté service autorisé avant attribution.",
+          "acceptance": "Un profil local modifié ne crée aucun droit externe ; seuls des événements validés deviennent des sources.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G60-02",
+          "text": "Traiter liaison, déliaison, baisse de niveau, annulation, retard et webhooks désordonnés.",
+          "acceptance": "La source concernée est mise à jour selon sa version d’événement ; une source permanente indépendante reste valable.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G60-03",
+          "text": "Réviser les champs/API officiels lors de l’implémentation et afficher les conditions réelles.",
+          "acceptance": "Aucune URL d’offre ni durée commerciale n’est annoncée sans configuration effective et testée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Un profil local modifié ne crée aucun droit externe ; seuls des événements validés deviennent des sources. La source concernée est mise à jour selon sa version d’événement ; une source permanente indépendante reste valable. Aucune URL d’offre ni durée commerciale n’est annoncée sans configuration effective et testée.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G61",
+      "section": "61",
+      "module": "Extension 02",
+      "title": "Expiration, incidents et hors ligne",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "local-profile-present",
+      "adaptation": "Une erreur réseau donne un état inconnu ; les acquisitions permanentes locales restent utilisables et le match autorisé se termine.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "61",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G61-01",
+          "text": "Résoudre l’union des sources valides sans révoquer un acquis par simple expiration d’abonnement.",
+          "acceptance": "La matrice inclut permanent+temporaire expiré, remboursement d’une source et seconde source valide.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G61-02",
+          "text": "Appliquer une expiration confirmée au prochain écran de sélection.",
+          "acceptance": "Aucun costume, stage ou membre ne disparaît en plein combo ; le snapshot du match reste immuable.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G61-03",
+          "text": "Définir une tolérance hors ligne uniquement pour un justificatif serveur daté.",
+          "acceptance": "Une date absente n’est pas inventée ; le hors ligne conserve les acquisitions sans valider une nouvelle admissibilité.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "La matrice inclut permanent+temporaire expiré, remboursement d’une source et seconde source valide. Aucun costume, stage ou membre ne disparaît en plein combo ; le snapshot du match reste immuable. Une date absente n’est pas inventée ; le hors ligne conserve les acquisitions sans valider une nouvelle admissibilité.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G62",
+      "section": "62",
+      "module": "Extension 02",
+      "title": "Local, multijoueur, entraînement et replays",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "local-and-replay-present",
+      "adaptation": "Les politiques futures distinguent consultation, sélection, participation et essai ; les replays historiques ne sont pas réécrits.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "62",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G62-01",
+          "text": "Définir profil principal, invité local et compte connecté séparément.",
+          "acceptance": "Un invité peut participer sans copier les achats dans sa collection ; les droits sont attribués au bon profil.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G62-02",
+          "text": "Valider composition, version et installation avant match.",
+          "acceptance": "Lancement impossible produit une solution annoncée ; aucune paire ne commence avec un membre indisponible.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G62-03",
+          "text": "Garder les références visuelles nécessaires aux replays sans leur faire accorder de récompense.",
+          "acceptance": "Lecture seule, anciennes règles et accès à l’affichage sont distincts des droits de sélection actuels.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Un invité peut participer sans copier les achats dans sa collection ; les droits sont attribués au bon profil. Lancement impossible produit une solution annoncée ; aucune paire ne commence avec un membre indisponible. Lecture seule, anciennes règles et accès à l’affichage sont distincts des droits de sélection actuels.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G63",
+      "section": "63",
+      "module": "Extension 02",
+      "title": "Textes, accessibilité et surprises",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "accessible-menu-foundations-present",
+      "adaptation": "Utiliser des textes courts associés au billet C&A et un détail consultable ; les identités secrètes restent secrètes dans le DOM accessible.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "63",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G63-01",
+          "text": "Rendre tous les états compréhensibles par texte, forme, focus et progression.",
+          "acceptance": "La grille reste navigable à la manette ; aucun état ne dépend seulement de couleur, de son ou d’animation.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G63-02",
+          "text": "Masquer nom, alt, tooltip, voix, miniature et conditions trop révélatrices selon la découverte.",
+          "acceptance": "Le lecteur d’écran ne révèle pas un artiste secret ni un costume nommant son propriétaire.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G63-03",
+          "text": "Ne pas confondre service indisponible et abonnement terminé.",
+          "acceptance": "Les messages de référence ont une condition d’emploi vérifiable et une action utile.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "La grille reste navigable à la manette ; aucun état ne dépend seulement de couleur, de son ou d’animation. Le lecteur d’écran ne révèle pas un artiste secret ni un costume nommant son propriétaire. Les messages de référence ont une condition d’emploi vérifiable et une action utile.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G64",
+      "section": "64",
+      "module": "Extension 02",
+      "title": "Production, sauvegarde et validation des droits",
+      "priority": "P0",
+      "decision": "retenue-conception",
+      "observedStatus": "versioned-profile-present-no-entitlement-ledger",
+      "adaptation": "Ajouter ultérieurement un registre versionné des sources, sans supprimer l’ancien profil ni son mécanisme de secours.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "64",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-produced",
+        "integration": "not-implemented",
+        "tests": "not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G64-01",
+          "text": "Prévoir migration, copie de secours, validation bornée et restauration.",
+          "acceptance": "Les anciens réglages, résultats, routes, programme actif et replays restent inchangés après migration.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G64-02",
+          "text": "Associer les 22 cas d’acceptation source à des scénarios Encore.",
+          "acceptance": "Chaque cas décrit données, action, message, droit et persistance attendus ; son statut reste à exécuter.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        },
+        {
+          "id": "EN-G64-03",
+          "text": "Compter séparément contenu livré, règle conçue et scénario réellement réussi.",
+          "acceptance": "Une silhouette prête n’ajoute pas un combattant produit ; la collection du joueur n’est pas un indicateur de production.",
+          "status": {
+            "design": "specified",
+            "assets": "not-produced",
+            "integration": "not-implemented",
+            "tests": "not-executed"
+          }
+        }
+      ],
+      "verification": "Les anciens réglages, résultats, routes, programme actif et replays restent inchangés après migration. Chaque cas décrit données, action, message, droit et persistance attendus ; son statut reste à exécuter. Une silhouette prête n’ajoute pas un combattant produit ; la collection du joueur n’est pas un indicateur de production.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G65",
+      "section": "65",
+      "module": "Extension 02",
+      "title": "Six fiches d’accès et de droits",
+      "priority": "P1",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "Fournir modèles A–F instanciés par le catalogue, les règles, l’avantage inactif, la charte, la scène et les scénarios de validation.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "65",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G65-01",
+          "text": "Renseigner contenu/slot, condition de déblocage et dépendances.",
+          "acceptance": "Chaque ID est stable, chaque condition a un texte et un arbre, chaque dépendance existe.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G65-02",
+          "text": "Renseigner avantage de soutien, charte visuelle et scène spéciale.",
+          "acceptance": "Les trois modèles séparent politique proposée et offre réellement activée ; le stage possède sélection et participation distinctes.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G65-03",
+          "text": "Renseigner la matrice des droits avec toutes ses sources et états.",
+          "acceptance": "Les cas n’utilisent jamais un faux booléen unique pour perte de réseau, expiration et asset manquant.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Chaque ID est stable, chaque condition a un texte et un arbre, chaque dépendance existe. Les trois modèles séparent politique proposée et offre réellement activée ; le stage possède sélection et participation distinctes. Les cas n’utilisent jamais un faux booléen unique pour perte de réseau, expiration et asset manquant.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G66",
+      "section": "66",
+      "module": "Extension 02",
+      "title": "Instruction d’intégration au projet",
+      "priority": "P0",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "L’index de bible devient le point d’entrée des trois textes et de leurs adaptations ; aucune fonction n’est implicite.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "66",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G66-01",
+          "text": "Raccorder extensions au guide, aux personnages, campagnes et futurs lots de production.",
+          "acceptance": "Les liens relatifs et IDs sont résolus par le générateur ; les deux sources sont consultables intégralement.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G66-02",
+          "text": "Préparer des tables Excel avec ordre stable et colonnes de statut séparées.",
+          "acceptance": "Le jeu de données feuille conserve un identifiant par ligne, sans déplacer les historiques existants.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G66-03",
+          "text": "Afficher clairement les fonctions encore à intégrer.",
+          "acceptance": "Taunts dédiés, tag, hub, bonus et offre de soutien ne sont pas annoncés comme jouables par ces documents.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Les liens relatifs et IDs sont résolus par le générateur ; les deux sources sont consultables intégralement. Le jeu de données feuille conserve un identifiant par ligne, sans déplacer les historiques existants. Taunts dédiés, tag, hub, bonus et offre de soutien ne sont pas annoncés comme jouables par ces documents.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G67",
+      "section": "67",
+      "module": "Extension 02",
+      "title": "Références et vocabulaire des droits",
+      "priority": "P0",
+      "decision": "retenue",
+      "observedStatus": "documentation",
+      "adaptation": "Conserver le lexique du guide ; les liens Patreon sont des sources à revalider quand une intégration sera effectivement programmée.",
+      "sourceDocumentId": "extension02",
+      "sourceSection": "67",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "statusAxes": {
+        "design": "specified",
+        "assets": "not-applicable",
+        "integration": "documentation-only",
+        "tests": "document-checked-runtime-not-executed"
+      },
+      "requirements": [
+        {
+          "id": "EN-G67-01",
+          "text": "Distinguer acquis, accès temporaire, admissible, installé, compatible et découvert.",
+          "acceptance": "Les textes du menu et les schémas emploient les mêmes définitions sans confondre droit et visibilité.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G67-02",
+          "text": "Conserver les références D01–D04 dans l’original sans en certifier une relecture réseau.",
+          "acceptance": "La provenance porte sa date et le statut de vérification actuelle ; aucune règle financière n’est improvisée.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        },
+        {
+          "id": "EN-G67-03",
+          "text": "Vérifier les empreintes et les références de tous les fichiers générés.",
+          "acceptance": "Le générateur --check termine sans dérive, et les fichiers restent reconstructibles depuis leurs sources éditoriales.",
+          "status": {
+            "design": "specified",
+            "assets": "not-applicable",
+            "integration": "documentation-only",
+            "tests": "document-checked-runtime-not-executed"
+          }
+        }
+      ],
+      "verification": "Les textes du menu et les schémas emploient les mêmes définitions sans confondre droit et visibilité. La provenance porte sa date et le statut de vérification actuelle ; aucune règle financière n’est improvisée. Le générateur --check termine sans dérive, et les fichiers restent reconstructibles depuis leurs sources éditoriales.",
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    }
+  ],
+  "contracts": {
+    "selection": {
+      "id": "EN-E1-SELECTION-CONTRACT",
+      "status": "designed-not-implemented",
+      "states": [
+        {
+          "id": "focus",
+          "behavior": "Consulter le slot sans modifier le choix confirmé.",
+          "next": "preview",
+          "cancel": "back"
+        },
+        {
+          "id": "preview",
+          "behavior": "Afficher identité et costume autorisés, avec une pose fixe actuelle.",
+          "next": "confirm",
+          "cancel": "deselect"
+        },
+        {
+          "id": "confirm",
+          "behavior": "Enregistrer immédiatement le choix valide ; lancer la réaction après.",
+          "next": "confirmed-idle",
+          "cancel": "deselect"
+        },
+        {
+          "id": "confirmed-idle",
+          "behavior": "Tenir une pose lisible en attendant le second choix.",
+          "next": "team-ready",
+          "cancel": "deselect"
+        },
+        {
+          "id": "costume-change",
+          "behavior": "Charger le nouveau visuel puis remplacer atomiquement l’aperçu.",
+          "next": "preview",
+          "cancel": "deselect"
+        },
+        {
+          "id": "deselect",
+          "behavior": "Libérer le choix, nettoyer ses éléments, jouer une sortie courte.",
+          "next": "focus",
+          "cancel": "focus"
+        },
+        {
+          "id": "team-ready",
+          "behavior": "Afficher actif/réserve et compatibilités, sans promettre une scène non débloquée.",
+          "next": "depart",
+          "cancel": "deselect"
+        },
+        {
+          "id": "depart",
+          "behavior": "Valider droits, assets et règles avant le versus.",
+          "next": "match-intro",
+          "cancel": "team-ready"
+        }
+      ],
+      "timing": {
+        "status": "presentation-hypotheses-not-runtime",
+        "selectionTicks": 42,
+        "confirmTicks": 30,
+        "deselectionTicks": 36,
+        "rapidExitTicks": 6
+      },
+      "input": "Les deux joueurs possèdent leur curseur et leur jeton d’aperçu. Les réponses asynchrones n’écrasent pas un jeton plus récent.",
+      "interruption": "Nouvelle sélection ou retour : invalider l’ancien jeton, arrêter voix/particules/compagnon/ombre puis afficher le nouvel aperçu. Aucune attente de fin de séquence pour accepter l’entrée.",
+      "reducedMotion": "Pose finale fixe pour confirmation ; fondu facultatif très court pour sortie. Même contenu, mêmes droits et mêmes commandes.",
+      "audio": "Pas de voix copiée. Les répliques éventuelles sont des textes originaux identifiés ; lecteur d’écran annonce le choix logique une seule fois."
+    },
+    "taunt": {
+      "id": "EN-E1-TAUNT-CONTRACT",
+      "status": "designed-not-implemented",
+      "action": "taunt",
+      "type": "presentation-no-resource-bonus",
+      "timing": {
+        "status": "initial-balancing-hypotheses-not-runtime",
+        "entryTicks": 12,
+        "holdTicks": 24,
+        "exitTicks": 18,
+        "repeatCooldownTicks": 180,
+        "voiceCooldownTicks": 600
+      },
+      "entry": "Au sol et neutre uniquement ; refus en stun, garde, projection, assistance, relais, super ou phase de résultat.",
+      "vulnerability": "Hurtbox actuelle conservée ; aucune armure, invulnérabilité, esquive gratuite ni suppression de ciblage.",
+      "interruption": "Un impact applique immédiatement la réaction normale. Annulation volontaire vers garde/déplacement à partir de la sortie ; la sortie ne gomme pas les ticks d’exposition.",
+      "recovery": "Retour à la stance propre au costume ; pas de recharge de stabilité ni de jauge par le geste.",
+      "existingUtility": "Les actions utility actuelles de récupération/buff restent distinctes et conservent coût, effet, cooldown et encodage de replay.",
+      "abstraction": "Réactions non verbales de posture et de regards ; jamais de guérison, de pensée révélée ni de voix humaine."
+    },
+    "team": {
+      "id": "EN-E1-TEAM-CONTRACT",
+      "name": "Répétition en duo",
+      "status": "designed-not-implemented",
+      "loreStatus": "original-compatible",
+      "modes": [
+        "future-duo-versus",
+        "future-duo-local",
+        "future-duo-training",
+        "scripted-campaign-only"
+      ],
+      "members": 2,
+      "active": 1,
+      "reserve": 1,
+      "health": "Vie propre conservée pour chaque membre ; aucune régénération passive dans le premier prototype.",
+      "defeat": "Deux membres KO ; le relais après premier KO est automatique et gratuit.",
+      "identity": "ID de membre stable, indépendant du slot actif ; le corps de simulation suit le membre, jamais le portrait.",
+      "proposedTuning": {
+        "status": "initial-balancing-hypotheses-not-runtime",
+        "teamMeterMax": 100,
+        "initialTeamMeter": 50,
+        "passiveGainPerSimulationTick": 0.05,
+        "assistCost": 25,
+        "neutralTagCost": 15,
+        "comboTagCost": 35,
+        "rescueTagCost": 60,
+        "duoSuperCost": 75,
+        "assistCooldownTicks": 480,
+        "tagCooldownTicks": 240,
+        "assistEntryTicks": 24,
+        "assistExitTicks": 30,
+        "controlTransferTick": 18,
+        "rescueInvulnerabilityTicks": 0,
+        "finalScenePresentationTicks": 180
+      },
+      "clock": "60 ticks de simulation ; jauge et cooldowns arrêtés en pause, présentation et fin de manche. Les scènes abrégées ne font pas avancer ces ressources.",
+      "economics": "Valider les deux membres et leur état, réserver une transaction, puis prélever à l’engagement. Refus préalable sans coût ; interruption après engagement sans remboursement. Gain des impacts partagé et borné par événement.",
+      "availability": [
+        "reserve-ready",
+        "entering",
+        "assisting",
+        "exiting",
+        "cooldown",
+        "active",
+        "stunned",
+        "ko"
+      ],
+      "commandPriority": [
+        "forced-ko-tag",
+        "resolved-match-verdict",
+        "rescue-tag",
+        "duo-super",
+        "combo-tag",
+        "neutral-tag",
+        "assist",
+        "taunt"
+      ],
+      "neutralTag": "Autorisé au sol, hors touche/garde/projection/cinématique. Actif exposé pendant la sortie ; entrant contrôlable au tick 18 proposé, face vers l’adversaire, placement valide le plus proche.",
+      "comboTag": "Uniquement après confirmation d’une attaque inscrite dans la table de cancels ; garde et whiff refusent. Scaling, rebonds et capture déjà utilisés sont conservés.",
+      "rescueTag": "Option future de défi solo d’abord ; aucune invulnérabilité implicite. Réserve disponible, ressource et fenêtre explicite requises ; interdit pendant une projection ou un super confirmé.",
+      "assist": "Un partenaire de roster temporaire par équipe. Il reçoit les dégâts sur sa propre vie, ne garde pas et peut être puni. Son KO n’interrompt pas une attaque déjà résolue mais bloque tout rappel.",
+      "duoSuper": "Longue séquence après hit-confirm seulement ; les deux membres sont réservés jusqu’à la sortie. Garde/raté : récupération de l’amorce sans scène. Pas de nouveau pouvoir ajouté au kit canonique.",
+      "comboHistory": "Un registre de combo par défenseur et équipe attaquante ; changer d’actif ne remet à zéro ni réduction, ni OTG, ni rebond, ni compteur de secours.",
+      "objectPolicy": "À la réserve, projectiles déjà partis terminent leur vie bornée, pièges continuent leurs ticks sans nouveau spawn. Au KO du propriétaire, supprimer ses pièges au tick suivant ; projectile déjà parti termine sa vie. En nouvelle manche, tout nettoyer.",
+      "stageTransition": "Réserver destination et assets avant match ; pendant transition : gel de simulation, nouveaux appels refusés, partenaires temporaires retirés et cooldowns conservés. Les objets ne sont pas transférés sauf contrat explicite.",
+      "morphology": "Les prises humanoïdes ont une variante de repousse pour géants, sphères et abstractions ; aucune contorsion forcée d’un sprite pour rendre une prise possible.",
+      "narrative": "Duo libre = simulation affichée. Duo de campagne = versions et événement approuvés par chapitre. Les duos mémoriels ne restaurent pas les personnes disparues.",
+      "replay": "Nouvelle version requise pour les nouvelles actions et membres. Les anciens replays gardent les règles 0.5.0 et leur catalogue historique ; aucun champ ne leur est injecté."
+    }
+  },
+  "staticSelectionContinuation": {
+    "id": "EN-E1-STATIC-SELECTION-20261127",
+    "contractId": "EN-E1-SELECTION-CONTRACT",
+    "requirementSection": "EN-G32",
+    "status": "implemented-static-subset",
+    "source": "combat/selection-presentation.mjs",
+    "evidence": "docs/art-generation/completion-20261127/selection/README.md",
+    "behaviors": [
+      "Choix immédiat et annulation du dernier changement indépendants pour J1 et J2.",
+      "Jetons de portrait rejetant les réponses tardives ; choix conservé après une image indisponible.",
+      "Annonce accessible unique, badges de miroir et retour du focus sur la carte rétablie.",
+      "État temporaire effacé en quittant le menu ; aucun changement de profil, replay ou simulation."
+    ],
+    "excluded": [
+      "Gestes individuels d’entrée et de sortie",
+      "Animation des huit états",
+      "Taunts",
+      "Sélection d’équipe",
+      "Droits commerciaux"
+    ],
+    "verification": {
+      "nodeSuite": "tests/combat-selection-presentation.test.mjs",
+      "browserSuite": "tests/combat-selection-browser.mjs",
+      "resultPolicy": "Consulter les preuves datées de la livraison ; une suite inscrite ne constitue pas une exécution réussie."
+    }
+  },
+  "runtimeObservations": [
+    {
+      "id": "EN-OBS-SELECT",
+      "path": "combat/app.mjs",
+      "symbols": [
+        "renderSelect",
+        "selectionArtist",
+        "refreshSelectionArtist"
+      ],
+      "observed": "Cartes, portraits, aperçu de costume et décor présents ; aucun cycle complet de désélection dédié observé au baseline."
+    },
+    {
+      "id": "EN-OBS-STATIC-SELECT-20261127",
+      "path": "combat/selection-presentation.mjs",
+      "symbols": [
+        "SelectionPresentation",
+        "beginPortrait",
+        "finishPortrait",
+        "undo"
+      ],
+      "observed": "Continuation du 27 novembre : sous-ensemble statique de sélection intégré. Les cycles corporels complets et leur statut de production restent distincts."
+    },
+    {
+      "id": "EN-OBS-PRESENT",
+      "path": "combat/render-sequences.mjs",
+      "symbols": [
+        "FIGHTER_SEQUENCES",
+        "SEQUENCE_EVENTS"
+      ],
+      "observed": "Cinq événements de présentation par combattant, pour intro et résultats ; distincts des nouveaux taunts et états de menu."
+    },
+    {
+      "id": "EN-OBS-INPUT",
+      "path": "combat/session.mjs",
+      "symbols": [
+        "SLOT_ORDER",
+        "REPLAY_RULES"
+      ],
+      "observed": "Dix slots de techniques et replays 0.7.0 utilisant les règles 0.5.0 ; nouvelles actions tag à versionner."
+    },
+    {
+      "id": "EN-OBS-ACCESS",
+      "path": "combat/session.mjs",
+      "symbols": [
+        "emptyProfile",
+        "validateProfile"
+      ],
+      "observed": "Progression de routes/défis/médailles présente ; pas de ledger de sources permanentes/temporaires dans le profil v1 du baseline."
+    },
+    {
+      "id": "EN-OBS-SURVIVAL",
+      "path": "combat/progression.mjs",
+      "symbols": [
+        "createProgramForCatalog"
+      ],
+      "observed": "Survie existante = dix adversaires successifs ; elle ne prouve pas une horde simultanée."
+    },
+    {
+      "id": "EN-OBS-OBJECTS",
+      "path": "combat/engine.mjs",
+      "symbols": [
+        "spawn",
+        "projectiles",
+        "traps",
+        "damage"
+      ],
+      "observed": "Projectiles, pièges et réflexion existants ; cycle sous tag non implémenté au baseline."
+    }
+  ]
+}

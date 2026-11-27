@@ -1,0 +1,56 @@
+{
+  "series": "smg4",
+  "style": "hommage",
+  "label": "SMG4 · Hommage · SMG4",
+  "identity": "Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/ribbit/hommage/stance.png"
+  ],
+  "sourceUrls": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2949486881"
+  ],
+  "state": "selection",
+  "id": "glitch-smg4-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to the blue-and-white SMG4 outfit seen in the official model on the LEFT of the third reference. Royal-blue rounded cap with small white badge bearing one simple blue film-camera pictogram; cap behind and above both huge uncovered frog eyes. Royal-blue long-sleeved shirt with cuffs rolled to reveal green wrists, clean white bib overalls with two golden hexagonal fasteners and a simple front pocket. Long trousers end above ankles, brown low ankle gaiters leaving three green webbed toes visible. Ribbit's bright pink bow at collar. Green four-fingered hands remain bare. One small rectangular camera prop clipped to belt, no lettering or logo overlay. Preserve Ribbit's thin body and very long legs, no human hair, moustache, ears, facial proportions or short stocky human body. No purple clothes from the right-hand model.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:smg4:hommage:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-810e3bc7-bb72-4cfe-9036-39ebc0866794.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-810e3bc7-bb72-4cfe-9036-39ebc0866794.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    384,
+    30,
+    934,
+    1224
+  ],
+  "alpha12Margins": [
+    384,
+    30,
+    320,
+    30
+  ],
+  "alphaZeroFraction": 0.8106804636645987,
+  "alphaOpaqueFraction": 0.0008349676569268612,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/smg4/ribbit/hommage/selection.png",
+  "bytes": 572461,
+  "sha256": "001bd73c5685f9768981da76586f17f47465aa84888bcba07f3f421c6ab35faf",
+  "sha": "ea59bdfce6a0b56761357585aab7796fe27eaf0f",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/smg4/ribbit/hommage/stance.png": "2581b8ca8e4c3a07079d53615d13878ccd965aee2be32ff4e83817874d8c69fd"
+  },
+  "auditPass": true
+}

@@ -1,0 +1,200 @@
+{
+  "schema": "encore-workbook-root-visual-review/v1",
+  "reviewedAt": "2026-11-20T17:47:11.954801+00:00",
+  "reviewer": "root",
+  "status": "passed",
+  "acceptance": "accepted_with_stated_scope",
+  "workbookFile": "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+  "workbookSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+  "planFile": "update-plan.json",
+  "planSha256": "2a18d8c9d5b667409db2acaf4443eed854e095cc1196033b9c465db0c28d4299",
+  "renderedViewsManifestSHA256": "e7dfd440577992e1c96a637fa46019dd3a088d7660fd98b87d05ec64d4e916dd",
+  "views": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "file": "summary-top.png",
+      "sha256": "cd219272b2c118cdc3233e6fa17b7c31c833ca9c6f3cd812eb7dc3de50b0867b",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "summary-top.png",
+      "diagnosticSHA256": null
+    },
+    {
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "file": "summary-bottom.png",
+      "sha256": "d215bec817991ced66074f1a06700ec6087f61fe31bda6a6645243f9dd6cf495",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "summary-bottom.png",
+      "diagnosticSHA256": null
+    },
+    {
+      "sheet": "Arènes",
+      "range": "A30:L30",
+      "file": "stage-left.png",
+      "sha256": "fe82520bac5886073e359c242ce5db2d2212ee84e52db708ec31a79df609f0f4",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/stage-left.png",
+      "diagnosticSHA256": "979c5a8c5709f48dd07af39d51871f67d5a33f81255f5f496fcf893329fa7a20"
+    },
+    {
+      "sheet": "Arènes",
+      "range": "M30:T30",
+      "file": "stage-right.png",
+      "sha256": "438120114804715eefbc1edd1bca7cb05988e00a80dd9517e032d84343e49d05",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/stage-right.png",
+      "diagnosticSHA256": "333fef06e49b5a6ae337c1d5847aa30e673083bb9a2982d4d2c1345c87500fbe"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A61:I61",
+      "file": "feature-pre-02.png",
+      "sha256": "7651a913559ab55ca5f461bba9b40c22109d36e34240ac43a375d9aa772582c9",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/feature-pre-02.png",
+      "diagnosticSHA256": "095b0e97a53da5bda19abca9c7730bd65b090d458b91285f14d10e7fd622b36e"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "file": "feature-pre-03.png",
+      "sha256": "7e9d94cb8fe82c0c03c39331271b1481a874efe8b0cfe1321d64353060d0f75c",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/feature-pre-03.png",
+      "diagnosticSHA256": "7b71e41d1eccbe5ececf8e5175ddf72e3d3fa5e6acbccdfc4a08d0b27cc43844"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A95:I95",
+      "file": "feature-prd-11.png",
+      "sha256": "d42f51dcda7fe7ba0d4844877490722a0639df1f51f566c4137cb54a598abb83",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/feature-prd-11.png",
+      "diagnosticSHA256": "a922a7daf28fb0026f80d80f962dba2e220375dd6b46bad7c4398ac8c626cd8e"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A68:I68",
+      "file": "feature-pre-09.png",
+      "sha256": "0d3409ca327e3a644a25991c1fa2bcfba3d26f0d67139d80621f6ce924370c2f",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/feature-pre-09.png",
+      "diagnosticSHA256": "52b881db144808116802b51433a2924a85e1dff63bb891c5f4661b3da47e49dc"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A101:I101",
+      "file": "feature-pre-17.png",
+      "sha256": "ff4365ea75a70ec276ac2c062cfb2655146c679d951f6d43cd3786c22d197444",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/feature-pre-17.png",
+      "diagnosticSHA256": "2f30e5db468f992c6453ffbdd9ea235a50ae4b57d0ef4b4044d33d42be424c39"
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "range": "A107:I107",
+      "file": "feature-pre-21.png",
+      "sha256": "40ac48acae924e1d8dec48aeca0c6d762aadd94390f0a01fcd109ea9fd7c57f7",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/feature-pre-21.png",
+      "diagnosticSHA256": "e34141b600b28241413d475e891cf7a94c730fe800045ba2d3f4aaaa8548176a"
+    },
+    {
+      "sheet": "Références",
+      "range": "A163:E166",
+      "file": "references-new.png",
+      "sha256": "aadbb3f27e62cfc5bc0cbf74bb3c6eb961e4cfbf22195f93af08d6d512a79e93",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/references-new.png",
+      "diagnosticSHA256": "9b20dfced7aedbccfd22ee577b2ae309e53426851de5b9d4ad8660fb7cdf7493"
+    },
+    {
+      "sheet": "Références",
+      "range": "A64:E64",
+      "file": "references-offline.png",
+      "sha256": "75ad7131a391050781a12d65f64e18e18572ec5050a4a3de634054d045e9427b",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/references-offline.png",
+      "diagnosticSHA256": "8d7ad4872ba58cc2720abe2f8d8b0fdb078fc2eed7556c6f1f13fba6a15c0e90"
+    },
+    {
+      "sheet": "Références",
+      "range": "A167:E177",
+      "file": "references-footer.png",
+      "sha256": "ac616450bd1b6c9c08a35f1ecb5be0f576e2abc50bffb540c189205cd76e5676",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/references-footer.png",
+      "diagnosticSHA256": "6a3cd489314e8f7a6ffee073da39d71d3615c1afd315e842634f806d1029d350"
+    },
+    {
+      "sheet": "Références",
+      "range": "A63:E63",
+      "file": "source-music.png",
+      "sha256": "01ce964681bc4e6e0177dcee70d4be4a81b43b79eb325023d668fa2590067adc",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/source-music.png",
+      "diagnosticSHA256": "bcce3ab03e0a3383605c46378986a20cab0e307080d2152337b2ee0b975c8469"
+    },
+    {
+      "sheet": "Références",
+      "range": "A60:E60",
+      "file": "source-stage-ambiences.png",
+      "sha256": "60a60362d3d0a6f66b312a1aeaf1dba5580e882496c452238f9bfeb385d89b31",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/source-stage-ambiences.png",
+      "diagnosticSHA256": "85c1ef619fc6216140e2fe1aa85faf24d7b40bfed2425d353cd21709f85a3c54"
+    },
+    {
+      "sheet": "Références",
+      "range": "A67:E67",
+      "file": "source-audio-ambiences-07.png",
+      "sha256": "37693cb65095e960641ad10e2241c6057e28d7250ebb75d7a1b865b6d672bb9a",
+      "status": "accepted",
+      "actuallyInspected": true,
+      "inspectedVia": "root-diagnostics/source-audio-ambiences-07.png",
+      "diagnosticSHA256": "e2fe9dcb0c753bfcf88596d08317643c80898be3b0e9eb5ed5775a6bf5ae9b9f"
+    }
+  ],
+  "counts": {
+    "assigned": 16,
+    "actuallyInspected": 16,
+    "accepted": 16,
+    "summary": 2,
+    "stage": 2,
+    "features": 6,
+    "references": 6
+  },
+  "method": "Les deux vues Synthèse ont été ouvertes directement. Les quatorze vues larges ont été inspectées intégralement sous forme de bandes horizontales à taille native, empilées avec un recouvrement de 80 pixels ; aucun contenu horizontal omis, aucun redimensionnement, aucune modification du classeur ou des rendus sources.",
+  "diagnostics": {
+    "manifest": "root-diagnostics/manifest.json",
+    "sha256": "5c18ea05cbd54abe43f71d5d72675bd26c1795c7c136a6bdcce6f0514d98e559",
+    "count": 14,
+    "scope": "Aides de lecture des mêmes vues, sans augmenter les 50 vues originales du plan."
+  },
+  "observations": [
+    "Les titres, catégories, comptes et statuts de Synthèse sont lisibles. Les totaux visibles sont 54 combattants, 540 techniques, 25 arènes, 477 costumes, 3308 lignes Production et 2454 QA.",
+    "Le compte de QA distingue 2435 réussites datées, 16 non exécutées, 2 à vérifier et 1 constat historique partiel. Les limites navigateur et de finition restent visibles.",
+    "La nouvelle ligne softballfield conserve les valeurs 1280 / 568, les dimensions natives séparées 1672×941 / 1672×941 / 1671×941, les références exactes et les limites de storyboard. Le champ de notes reste disponible.",
+    "Les six lignes Fonctionnalités conservent leurs IDs, statuts et notes historiques. Les nombres 25, 477, 42 et 384 sont cohérents avec la nouvelle portée.",
+    "Les quatre nouvelles références sont lisibles avec leurs URL et leurs limites distinctes. Kinger conserve sa base conique et ses gants flottants documentés séparément ; Pomni conserve la limite du plastron et du dos ; le stade reste fondé sur des vignettes ; Meta Runner reste une création originale.",
+    "Les quatre sources mises à jour et le pied de Références sont lisibles. La publication GitHub, le mixage matériel, les comparaisons canoniques et les tests automatiques gardent des portées séparées.",
+    "Aucun chevauchement de texte, cellule tronquée empêchant la lecture, erreur de formule visible ou perte des notes utilisateur n’a été relevé dans les 16 vues inspectées."
+  ],
+  "scope": "Revue visuelle de 16 vues uniquement. Les 34 vues Production/QA relèvent de la revue indépendante de ribbit_references ; la comparaison des 82697 cellules, le recalcul et la réimportation relèvent des preuves techniques du builder."
+}

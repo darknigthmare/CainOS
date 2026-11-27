@@ -1,0 +1,372 @@
+{
+  "schema": "encore-gameoverse-static-completion/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "productionTool": "Built-in image_gen.imagegen",
+  "phase": "static-bases-only",
+  "newNativeImages": 6,
+  "newAppearanceFamilies": 3,
+  "imageGenerationCalls": 7,
+  "acceptedImages": 6,
+  "rejectedCandidates": 1,
+  "references": [
+    {
+      "sourcePage": null,
+      "role": "Existing Encore Kaufmo visual continuity; not an official episode source.",
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/game-kaufmo-stance.png",
+      "bytes": 799856,
+      "sha256": "6e58a6cba0f4e0f87fa53d1e6e43d824c31d082882d27528df6112dea2eb3e07",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "sourcePage": "https://glitchproductions.store/products/kaufmo-plush",
+      "role": "Official normal Kaufmo identity reference, reused without duplication.",
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/kaufmo-plush-1.png",
+      "bytes": 3088448,
+      "sha256": "ce4eb564c2d6ab4551783b61c6938c38b636cf852ad165861a74a7504e78ab2f",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "sourcePage": "https://www.glitchprod.com/gameoverse",
+      "downloadUrl": "https://static.wixstatic.com/media/b48361_3ffd772159bd425dab8ab5affcc2b78d~mv2.png",
+      "role": "Official Kit artwork; yellow tunic, cream centre stripe, charcoal sleeves and gauntlet colour/shape references.",
+      "path": "docs/art-generation/completion-20261127/gameoverse/references/kit-official.png",
+      "bytes": 699956,
+      "sha256": "03fa216a1543719a618164546997893dcc40867654eeaafdcdcf3ad9f443b8e8",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "sourcePage": "https://www.glitchprod.com/gameoverse",
+      "downloadUrl": "https://static.wixstatic.com/media/1d8dbc_7acdeeb4f7184836a63d0ad39c0fd729~mv2.png",
+      "role": "Official videogame-world artwork; angular shapes and blue/violet palette. The archive and crystal-clown designs remain original.",
+      "path": "docs/art-generation/completion-20261127/gameoverse/references/world-official.png",
+      "bytes": 3451844,
+      "sha256": "950552e374bf0d05b04393900e3c007892a680bf0811aafd6ef99bce28b5111f",
+      "inspectedBeforeGeneration": true,
+      "checkedOn": "2026-11-27"
+    }
+  ],
+  "families": [
+    {
+      "id": "glitch-gameoverse-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "series": "gameoverse",
+      "seriesTitle": "Gameoverse",
+      "style": "hommage",
+      "label": "Hommage · Kit",
+      "traits": [
+        "Visage blanc ovale de Kaufmo, yeux noirs et triangles, sourire rouge, cône jaune à bord bleu et pompon rouge.",
+        "Tunique jaune à bande crème angulaire, manches et short anthracite, trois boutons rouges et collerette bleue.",
+        "Manchettes jaunes à anneau corail et étoile magenta empruntées aux codes de Kit ; gants blancs et chaussures rouges de Kaufmo, sans anatomie féline."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/gameoverse/kaufmo/hommage/selection.png",
+          "bytes": 907381,
+          "sha256": "075c7938d079d97ea668856d0617fdb7652dfb2738e5a378421f4492394f7aab",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            175,
+            37,
+            955,
+            1346
+          ],
+          "fullyTransparentPixels": 1010470,
+          "lowAlphaEdgePixels": 8366,
+          "visiblePixelsOver12": 555072,
+          "pixelsAtLeast240Alpha": 549323,
+          "lastEightRowsMaximumAlpha": 0,
+          "nativePixelsUnmodified": true,
+          "nativeOutputFilename": "exec-7c170edf-37d9-4b18-a9e9-72c2e90dda84.png"
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/gameoverse/kaufmo/hommage/stance.png",
+          "bytes": 842023,
+          "sha256": "73f4f1aac02cf95f2f7bb3da93f2ba9130b870df639384162f5b1103fdaebc66",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            129,
+            11,
+            940,
+            1356
+          ],
+          "fullyTransparentPixels": 1076434,
+          "lowAlphaEdgePixels": 11029,
+          "visiblePixelsOver12": 486445,
+          "pixelsAtLeast240Alpha": 478649,
+          "lastEightRowsMaximumAlpha": 0,
+          "nativePixelsUnmodified": true,
+          "nativeOutputFilename": "exec-c2bc5dd3-a885-42d6-b970-67f0bd52527d.png"
+        }
+      },
+      "prompts": [
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/hommage-stance-prompt.txt",
+          "bytes": 1866,
+          "sha256": "69a99d5d8621cf68e8081146ef9515c47e7f792b709fa1b1ae56a0c7389ee1c8"
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/hommage-selection-prompt.txt",
+          "bytes": 1458,
+          "sha256": "708017a1b39c3d0225ccd352d48899023bee6ea321324d70a38ea282383b97a8"
+        }
+      ],
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-gameoverse-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "series": "gameoverse",
+      "seriesTitle": "Gameoverse",
+      "style": "resident",
+      "label": "Résident · Archiviste des mondes",
+      "traits": [
+        "Kaufmo normal conservé : visage, chapeau conique, collerette bleue, gants blancs et chaussures rouges.",
+        "Manteau cobalt à bordure jaune, gilet crème à trois boutons rouges et petite étoile magenta au col.",
+        "Pantalon jaune, ceinture brune, étui violet à cartouches et carte ivoire roulée : métier et tenue originaux pour Encore."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/gameoverse/kaufmo/resident/selection.png",
+          "bytes": 988086,
+          "sha256": "46feb542e13437935a4435d614ec5b023be20b351b4e6fe51109bb0e4386d541",
+          "width": 1106,
+          "height": 1422,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            189,
+            24,
+            892,
+            1409
+          ],
+          "fullyTransparentPixels": 970334,
+          "lowAlphaEdgePixels": 10026,
+          "visiblePixelsOver12": 592372,
+          "pixelsAtLeast240Alpha": 585723,
+          "lastEightRowsMaximumAlpha": 1,
+          "nativePixelsUnmodified": true,
+          "nativeOutputFilename": "exec-ee1d1bd5-d8d2-4285-9aa7-3f2ba1f87e4d.png"
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/gameoverse/kaufmo/resident/stance.png",
+          "bytes": 868705,
+          "sha256": "0f7bed27d333540e22c46b813cc7783a0b514c536ee35e28ee08cbf2133e3cfc",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            151,
+            18,
+            941,
+            1353
+          ],
+          "fullyTransparentPixels": 1080605,
+          "lowAlphaEdgePixels": 11957,
+          "visiblePixelsOver12": 481346,
+          "pixelsAtLeast240Alpha": 472657,
+          "lastEightRowsMaximumAlpha": 0,
+          "nativePixelsUnmodified": true,
+          "nativeOutputFilename": "exec-810956cc-8b4a-4f86-97cb-c72d3a5fa8bf.png"
+        }
+      },
+      "prompts": [
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/resident-stance-prompt.txt",
+          "bytes": 1846,
+          "sha256": "24349081a8638d4dfb5510491a6a42da16a54d8f29fce46aa82b6453ff082797"
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/resident-selection-prompt.txt",
+          "bytes": 1410,
+          "sha256": "0aca88329fb94608f0c77c5a1c14cec5a6228950bcefdf627fbbd09479a095d8"
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/resident-selection-fix-prompt.txt",
+          "bytes": 768,
+          "sha256": "8b2b68656ea1aaad43240782066e66d1c5178fb2cebad4678a3941f1014bdf32"
+        }
+      ],
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    },
+    {
+      "id": "glitch-gameoverse-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "series": "gameoverse",
+      "seriesTitle": "Gameoverse",
+      "style": "fusion",
+      "label": "Fusion · Clown de cristal",
+      "traits": [
+        "Transformation corporelle en cristaux facettés : tête et mains de quartz blanc, joints et collerette cobalt.",
+        "Cône doré à sphère rouge, visage de Kaufmo conservé, torse saphir à trois nodules rubis et étoile magenta au col.",
+        "Jambes d’or segmentées et grands pieds rubis ; palette de jeu et motifs cristallins originaux, sans costume canonique revendiqué."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/gameoverse/kaufmo/fusion/selection.png",
+          "bytes": 1081286,
+          "sha256": "f77fa28a4c706c37d19949dacb9fc22fcba25f1a564c84baf4af3eb5065d1250",
+          "width": 1092,
+          "height": 1440,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            111,
+            13,
+            1000,
+            1418
+          ],
+          "fullyTransparentPixels": 906648,
+          "lowAlphaEdgePixels": 9484,
+          "visiblePixelsOver12": 656348,
+          "pixelsAtLeast240Alpha": 649938,
+          "lastEightRowsMaximumAlpha": 0,
+          "nativePixelsUnmodified": true,
+          "nativeOutputFilename": "exec-5a6d42b3-4bae-4321-b4e5-178ee82b80a0.png"
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/gameoverse/kaufmo/fusion/stance.png",
+          "bytes": 932609,
+          "sha256": "e231afe72811a3f91ac552b226540901f68f3115b4e33e8160c66224ac9c01d9",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            137,
+            9,
+            947,
+            1360
+          ],
+          "fullyTransparentPixels": 1081239,
+          "lowAlphaEdgePixels": 12112,
+          "visiblePixelsOver12": 480557,
+          "pixelsAtLeast240Alpha": 472303,
+          "lastEightRowsMaximumAlpha": 1,
+          "nativePixelsUnmodified": true,
+          "nativeOutputFilename": "exec-4e412a47-1bce-4c58-b6c7-bc552408ea55.png"
+        }
+      },
+      "prompts": [
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/fusion-stance-prompt.txt",
+          "bytes": 1904,
+          "sha256": "9c388aeca4a98cf26c0ab8ed62b1fb1d22f17d880f1a5de52e74e8c6f01b8e5f"
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/gameoverse/fusion-selection-prompt.txt",
+          "bytes": 1477,
+          "sha256": "b86fef1cce4276d82fc99a6ee4bdb301e7eda627a18b3b29bccafe00b24c0d5a"
+        }
+      ],
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "canonicalCostumeClaim": false,
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native images and pair consistency inspected; production Canvas review is separate."
+      }
+    }
+  ],
+  "nativeOutputs": [
+    {
+      "nativeFilename": "exec-7c170edf-37d9-4b18-a9e9-72c2e90dda84.png",
+      "finalPath": "assets/encore/crossovers/gameoverse/kaufmo/hommage/selection.png",
+      "sha256": "075c7938d079d97ea668856d0617fdb7652dfb2738e5a378421f4492394f7aab",
+      "accepted": true
+    },
+    {
+      "nativeFilename": "exec-c2bc5dd3-a885-42d6-b970-67f0bd52527d.png",
+      "finalPath": "assets/encore/crossovers/gameoverse/kaufmo/hommage/stance.png",
+      "sha256": "73f4f1aac02cf95f2f7bb3da93f2ba9130b870df639384162f5b1103fdaebc66",
+      "accepted": true
+    },
+    {
+      "nativeFilename": "exec-ee1d1bd5-d8d2-4285-9aa7-3f2ba1f87e4d.png",
+      "finalPath": "assets/encore/crossovers/gameoverse/kaufmo/resident/selection.png",
+      "sha256": "46feb542e13437935a4435d614ec5b023be20b351b4e6fe51109bb0e4386d541",
+      "accepted": true
+    },
+    {
+      "nativeFilename": "exec-810956cc-8b4a-4f86-97cb-c72d3a5fa8bf.png",
+      "finalPath": "assets/encore/crossovers/gameoverse/kaufmo/resident/stance.png",
+      "sha256": "0f7bed27d333540e22c46b813cc7783a0b514c536ee35e28ee08cbf2133e3cfc",
+      "accepted": true
+    },
+    {
+      "nativeFilename": "exec-5a6d42b3-4bae-4321-b4e5-178ee82b80a0.png",
+      "finalPath": "assets/encore/crossovers/gameoverse/kaufmo/fusion/selection.png",
+      "sha256": "f77fa28a4c706c37d19949dacb9fc22fcba25f1a564c84baf4af3eb5065d1250",
+      "accepted": true
+    },
+    {
+      "nativeFilename": "exec-4e412a47-1bce-4c58-b6c7-bc552408ea55.png",
+      "finalPath": "assets/encore/crossovers/gameoverse/kaufmo/fusion/stance.png",
+      "sha256": "e231afe72811a3f91ac552b226540901f68f3115b4e33e8160c66224ac9c01d9",
+      "accepted": true
+    },
+    {
+      "nativeFilename": "exec-ccd169c2-2274-42f1-ab75-6f8de91de9a9.png",
+      "path": "docs/art-generation/completion-20261127/gameoverse/rejected/resident-selection-four-buttons.png",
+      "bytes": 975229,
+      "sha256": "bde2791917ecb3bdcc309d668509c4b1b68850ed85b62a8f7c1ebb8f50351e2b",
+      "accepted": false,
+      "reason": "Four red buttons instead of Kaufmo’s three; corrected with the native image editing tool."
+    }
+  ],
+  "scope": "Création originale de crossover pour Encore : un portrait de sélection et une garde statique séparés, un personnage par image. La garde sert aux états sans dessin dédié. Aucun cycle ou dessin d’action ajouté ; aucune apparition canonique affirmée.",
+  "canonicalOneToOneCertified": false,
+  "reviewStatus": "Native files and cross-pair consistency reviewed; runtime Canvas evidence recorded separately."
+}

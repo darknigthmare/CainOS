@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { FIGHTERS, ARCHIVE, VARIANTS, SOURCES, GAME } from '../combat/data.mjs';
+import { ABSTRACTION_APPEARANCE_IDS } from '../combat/abstractions-content.mjs';
 import { ANIMATION_REGISTRATION, POSE_PRESENTATION, POSE_REGISTRATION_VERSION, spriteSourceRegion } from '../combat/render-poses.mjs';
 
 const sourceRoot = fileURLToPath(new URL('../', import.meta.url));
@@ -15,6 +16,7 @@ const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const positiveInteger = value => Number.isInteger(value) && value > 0;
 const pngSignature = Buffer.from([137,80,78,71,13,10,26,10]);
 const sourceFiles = [
+  'combat/abstractions-content.mjs',
   'combat/data.mjs', 'combat/sprite-catalog.mjs', 'combat/render-poses.mjs',
   'combat/render-sequences.mjs', 'combat/fidelity.mjs', 'combat/costume-fidelity.mjs',
   'combat/costume-refinements.mjs', 'scripts/audit-combat-assets.mjs',
@@ -25,7 +27,9 @@ const sourceFiles = [
 export function assetPath(src) {
   if (typeof src !== 'string' || !src || src.includes('\\') || /^(?:[a-z][a-z0-9+.-]*:|\/)/i.test(src)) throw new Error('Expected a local sprite source.');
   const relative = path.posix.normalize(path.posix.join('combat', src.startsWith('assets/') ? '../' + src : src));
-  if (!relative.startsWith('assets/images/') || !relative.endsWith('.png')) throw new Error('Sprite source must resolve inside assets/images/*.png.');
+  const legacy = relative.startsWith('assets/images/') && relative.endsWith('.png');
+  const abstraction = ABSTRACTION_APPEARANCE_IDS.some(id => ['selection', 'stance'].some(slot => relative === 'assets/encore/abstractions/' + id + '/' + slot + '.png'));
+  if (!legacy && !abstraction) throw new Error('Sprite source must resolve inside assets/images/*.png or a declared abstraction selection/stance PNG.');
   return relative;
 }
 

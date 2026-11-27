@@ -1,0 +1,142 @@
+{
+  "assets": [
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "series": "gameoverse",
+      "style": "hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-e3ea7fe5-d0f6-404e-bf1f-a6adf2fcb60c.png",
+      "prompt": "Use case: identity-preserve. Asset type: one full-body static fighting-game sprite of Queenie for Digital Circus Encore, original Gameoverse homage to Kit. Edit target is Queenie in image 1; image 2 gives the project's clean 2D linework and chess body, image 3 is costume-color reference ONLY, do not copy Ribbit anatomy.\nPreserve Queenie's tall honey-brown turned-wood queen chess head, crown peaks and spherical finial, two protruding white eyes with red-orange irises and black lower lashes, half-lidded wooden eyelids, no mouth or nose. One continuous tapered chess-piece body with broad rounded lower base; exactly two independent floating gloves with NO attached arms, no legs, no tail.\nReplace clothing with bright golden-yellow cropped sleeveless puffer jacket, charcoal zipper panels, pale seam piping, yellow headband low behind crown; a long charcoal-and-yellow robe following the chess body. Two detached floating compact round yellow mechanical gauntlets with red wrist-ring trim; violet star crystal inset on back of forward glove. No cat ears, fur, human anatomy or hair.\nPose: full silhouette from crown finial to bottom of robe, relaxed combat guard, body three-quarter facing RIGHT, eyes looking RIGHT, two fists ready but motionless. All crown and glove tips fully inside canvas with generous clear margins. Remove commercial display plinth entirely; the rounded garment hem is part of her continuous body. No scenery, ground shadow, effect, text, watermark, multiple views or animation. Refined hand-painted 2D cel shading, crisp dark outlines, detailed but readable at game scale. True transparent RGBA background. Portrait 1024x1536 composition.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "series": "gameoverse",
+      "style": "hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4d089c12-29c2-43f4-a5b0-0c671bb4f308.png",
+      "prompt": "Use case: identity-preserve. Create ONE character-selection bust portrait from the referenced Queenie full-body sprite. EXACTLY preserve this original Gameoverse hommage character's crown contour and finial, face, eyelids, eye colors and direction, black lashes, materials, palette, chest costume and gloves with identical details. The only change is framing/composition into a generous clean portrait: complete crown and finial plus upper torso to below chest and the same two detached gloves inside frame. Three-quarter facing right, calm half-lidded expression. Lower robe/base are outside portrait framing. Do not add anatomy, arms, legs, hair, effects, glow or objects. Preserve crisp 2D cel-shaded rendering. True transparent RGBA background, no scenery/ground, no checkerboard painted in, no text, no labels, no watermark. Single portrait, no panels or duplication. Square composition 1024x1024, crown top safely 60px from edge and all gloves inside frame.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "series": "gameoverse",
+      "style": "resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-6b930664-6b61-4b5a-be9c-944e58c9ced1.png",
+      "prompt": "Use case: identity-preserve. Asset type: one static full-body sprite for Digital Circus Encore. Reference 1 is Queenie's identity and chess anatomy. Reference 2 gives game linework only; omit its glow. Preserve tall queen-chess head/crown and round top finial, exactly two white protruding half-lidded eyes with red-orange irises, black lower lashes, no nose or mouth. Single continuous tapered chess body with integrated wide bottom; exactly two detached floating gloves, no arms or legs. Original crossover appearance, not an official costume.\nPose: motionless relaxed combat guard in three-quarter view facing RIGHT, eyes looking right. Full silhouette inside frame with 50px clear top/bottom margin and 80px side margins, crown finial, gloves and base all visible. No separate commercial display plinth or scene. Crisp dark outlines, polished hand-painted 2D cel shading. Genuine transparent RGBA, no glow or backdrop, no floor shadow, text, label, watermark, extra views or animation. Portrait 1024x1536.\nDesign: Queenie as original Gameoverse portal-savepoint keeper. Keep natural warm honey-brown wooden head, scalloped crown and finial unchanged. Rich plum sleeveless travel mantle over charcoal tapered robe, jade-green seam piping, small copper geometric clasp beneath collar, narrow brown utility belt with two crystal capsules. Warm cream spotted ermine rounded hem. Detached white gloves with jade fingerless cuffs, gently closed in guard. Intricate diamond savepoint embroidery down front of mantle without any letters. No book, staff, hair or human torso.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "series": "gameoverse",
+      "style": "resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-10c49c25-81c4-4b2f-8584-70e4bcf42bce.png",
+      "prompt": "Use case: identity-preserve. Create ONE character-selection bust portrait from the referenced Queenie full-body sprite. EXACTLY preserve this original Gameoverse resident character's crown contour and finial, face, eyelids, eye colors and direction, black lashes, materials, palette, chest costume and gloves with identical details. The only change is framing/composition into a generous clean portrait: complete crown and finial plus upper torso to below chest and the same two detached gloves inside frame. Three-quarter facing right, calm half-lidded expression. Lower robe/base are outside portrait framing. Do not add anatomy, arms, legs, hair, effects, glow or objects. Preserve crisp 2D cel-shaded rendering. True transparent RGBA background, no scenery/ground, no checkerboard painted in, no text, no labels, no watermark. Single portrait, no panels or duplication. Square composition 1024x1024, crown top safely 60px from edge and all gloves inside frame.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "series": "gameoverse",
+      "style": "fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cfebfef4-355b-4159-a76b-fec142944ebc.png",
+      "prompt": "Use case: identity-preserve. Asset type: one static full-body sprite for Digital Circus Encore. Reference 1 is Queenie's identity and chess anatomy. Reference 2 gives game linework only; omit its glow. Preserve tall queen-chess head/crown and round top finial, exactly two white protruding half-lidded eyes with red-orange irises, black lower lashes, no nose or mouth. Single continuous tapered chess body with integrated wide bottom; exactly two detached floating gloves, no arms or legs. Original crossover appearance, not an official costume.\nPose: motionless relaxed combat guard in three-quarter view facing RIGHT, eyes looking right. Full silhouette inside frame with 50px clear top/bottom margin and 80px side margins, crown finial, gloves and base all visible. No separate commercial display plinth or scene. Crisp dark outlines, polished hand-painted 2D cel shading. Genuine transparent RGBA, no glow or backdrop, no floor shadow, text, label, watermark, extra views or animation. Portrait 1024x1536.\nDesign: Physically transform Queenie into an original Gameoverse crystalline queen-chess avatar. Translucent smoky-violet faceted crown and tapered continuous body, hard polished amber spherical top finial. Pearl-white eyes with orange irises, heavy violet half-lids and black lower-lash inserts preserve recognizable Queenie identity. Body interlocks violet crystal plates with charcoal sockets and thin gold geometric edges. A large solid jade diamond core is inset in chest. Two completely detached articulated gauntlet hands of pale lilac crystal with yellow wrist rings float in guard. Wide integrated hexagonal chess base, no clothing or cape, no floating shards, no external glow, no human limbs.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "series": "gameoverse",
+      "style": "fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-bfbd095b-2fdb-4ee0-b21a-4fdeef1f6388.png",
+      "prompt": "Use case: identity-preserve. Create ONE character-selection bust portrait from the referenced Queenie full-body sprite. EXACTLY preserve this original Gameoverse fusion character's crown contour and finial, face, eyelids, eye colors and direction, black lashes, materials, palette, chest costume and gloves with identical details. The only change is framing/composition into a generous clean portrait: complete crown and finial plus upper torso to below chest and the same two detached gloves inside frame. Three-quarter facing right, calm half-lidded expression. Lower robe/base are outside portrait framing. Do not add anatomy, arms, legs, hair, effects, glow or objects. Preserve crisp 2D cel-shaded rendering. True transparent RGBA background, no scenery/ground, no checkerboard painted in, no text, no labels, no watermark. Single portrait, no panels or duplication. Square composition 1024x1024, crown top safely 60px from edge and all gloves inside frame.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "series": "smg4",
+      "style": "hommage",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/queenie/hommage/stance.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-570add06-7199-4e44-a67a-57e6cdbf4a0c.png",
+      "prompt": "Use case: precise-object-edit. Make only one change to this Queenie SMG4 game sprite: REMOVE THE PINK BOW TIE at the neck, replacing that small occupied area with the same uninterrupted royal-blue shirtfront and natural wooden neck beneath it. Keep ALL other details exactly unchanged, including crown/finial, cap, face, eyes, detached gloves, white long overall dress, blue panels, two gold buttons, hanging camera and integrated hem. The pink bow belongs to Ribbit and must be absent on this Queenie design. Preserve entire full-body right-facing static guard, original proportions, canvas dimensions, complete margins and 2D rendering. Preserve actual alpha transparency; no background, no glow, no extra props, no text. No new pose or animation.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "series": "smg4",
+      "style": "hommage",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-4dea0c87-9d63-4c07-b27c-f34ebbc1d20d.png",
+      "prompt": "Use case: identity-preserve. Make ONE character-selection bust portrait from the provided Queenie SMG4 homage sprite. Preserve EXACTLY the entire queen-chess crown shape, spherical wooden finial, blue cap and white camera-symbol badge, half-lidded eyes and red-orange irises, lower black lashes, wooden neck, plain royal-blue shirtfront, white overall bib with two gold hexagonal buttons, and her two separate white gloves with spotted cuffs. NO BOW TIE. Do not copy any pink details from other characters. Only composition/framing changes: crown finial through upper torso down to bib, complete cap and BOTH gloves fully inside square with generous margins. Three-quarter facing right and looking right. No lower skirt or base in this bust. Same crisp polished 2D cel shading. Transparent RGBA, no colored halo or glow, no scenery, floor shadow, text, frame, watermark, human arms/legs or extra objects. One image, one static portrait.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "series": "smg4",
+      "style": "resident",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/queenie/resident/stance.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-15d9e7d9-c204-4cbe-b14b-d4f020a9d351.png",
+      "prompt": "Use case: identity-preserve. Asset type: one full-body static character sprite of Queenie for the 2D fighting game Digital Circus Encore. Original SMG4 crossover: SMG4 · Résidente · Réalisatrice des Showgrounds. Reference 1 is Queenie's anatomy, reference 2 is the game's 2D style, reference 3 is SMG4 clothing colors only — do NOT copy frog anatomy.\nOriginal Encore crossover design of Queenie from The Amazing Digital Circus, not a canonical outfit. Keep the recognizable queen-chess-piece silhouette: tall honey-brown turned-wood head with pointed scalloped crown and spherical finial, exactly two protruding white eyes with red-orange irises, heavy wooden eyelids, two black lashes below each eye; no mouth or nose. One continuous tapered chess-piece body with a broad circular base and two completely detached floating white gloves, no arms or legs. Crisp fine dark outlines, polished hand-painted 2D cel shading, detailed yet legible at game scale. Preserve Queenie chess anatomy. Original cartoon studio director: sleeveless vivid plum utility waistcoat over charcoal tunic smoothly continuing to bell-shaped burgundy chess base, cyan lapel seam, golden whistle necklace, small slate-grey tool pouches, headphones resting around narrow wooden neck, magenta star-shaped pin. No hat covering crown. Two floating white gloves, one lightly pinching a small yellow director pencil while both remain guard-ready. Keep face and body friendly and graphic, no lettering or logos.\nPose and framing: motionless relaxed combat guard three-quarter facing RIGHT. Eyes look right. The full character from spherical finial down to her integrated chess-body base fits inside the frame, with ample clear transparent margins; both detached gloves fully visible. Top-down or perspective tilt forbidden. No animation, action attack or extra views.\nRendering: crisp dark outlines, polished hand-painted 2D cel shading, rich fine detail readable at game scale. Transparent RGBA with no colored halo, glow or drop shadow. Remove any separate commercial black display pedestal. No scene, floor, text, lettering, watermarks, unrelated props or extra figures. ONE character per PNG, portrait 1024x1536 composition.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "series": "smg4",
+      "style": "resident",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-64c1c674-0cef-4526-9465-094dedead407.png",
+      "prompt": "Use case: identity-preserve. Create ONE static character-selection bust portrait from this Queenie SMG4 resident full-body sprite. Preserve EXACTLY her crown silhouette, complete spherical finial, eye placement, red-orange iris colors, wooden eyelids and black lower lashes, materials, palette, chest details, garment/armor and her TWO detached gloves. Only framing changes: square portrait from crown finial through lower chest, same right-facing three-quarter guard. Include the entirety of crown and both gloves with clear margins. Keep the character identity and original crossover costume intact; no human arms, hair, mouth, legs or new anatomy. Preserve 2D cel-shaded style. Transparent RGBA background with absolutely no glow, shadow, scenery, ground, text, frame, labels or extra characters. Square composition, lower body outside portrait frame, final bust ends smoothly below chest.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "series": "smg4",
+      "style": "fusion",
+      "slot": "stance",
+      "path": "assets/encore/crossovers/smg4/queenie/fusion/stance.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-cf0e2933-f1e2-425d-a9ec-08ea6d6b3594.png",
+      "prompt": "Use case: identity-preserve. Asset type: one full-body static character sprite of Queenie for the 2D fighting game Digital Circus Encore. Original SMG4 crossover: SMG4 · Fusion · Reine de machinima. Reference 1 is Queenie's anatomy, reference 2 is the game's 2D style, reference 3 is SMG4 clothing colors only — do NOT copy frog anatomy.\nOriginal Encore crossover design of Queenie from The Amazing Digital Circus, not a canonical outfit. Keep the recognizable queen-chess-piece silhouette: tall honey-brown turned-wood head with pointed scalloped crown and spherical finial, exactly two protruding white eyes with red-orange irises, heavy wooden eyelids, two black lashes below each eye; no mouth or nose. One continuous tapered chess-piece body with a broad circular base and two completely detached floating white gloves, no arms or legs. Crisp fine dark outlines, polished hand-painted 2D cel shading, detailed yet legible at game scale. Physically redesign Queenie as a chunky stylized machinima chess mascot: crown-shaped head built from glossy honey-orange low-poly toy facets with spherical finial, oversized white eyes with red-orange pupils and black lower lashes embedded in the faceted head. Her continuous chess torso becomes a white-and-cobalt-blue modular camera-machine: glowing soft cyan circular lens embedded in chest, rounded square segments narrowing to a broad circular blue chess plinth, yellow polygonal joints in the body. Two detached floating white block-shaped cartoon gloves with cobalt wrist modules. No arms, legs, hair or human face. A burgundy flexible cape panel wraps the back. This is a physical body redesign, not clothing only, no emitted beams.\nPose and framing: motionless relaxed combat guard three-quarter facing RIGHT. Eyes look right. The full character from spherical finial down to her integrated chess-body base fits inside the frame, with ample clear transparent margins; both detached gloves fully visible. Top-down or perspective tilt forbidden. No animation, action attack or extra views.\nRendering: crisp dark outlines, polished hand-painted 2D cel shading, rich fine detail readable at game scale. Transparent RGBA with no colored halo, glow or drop shadow. Remove any separate commercial black display pedestal. No scene, floor, text, lettering, watermarks, unrelated props or extra figures. ONE character per PNG, portrait 1024x1536 composition.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "series": "smg4",
+      "style": "fusion",
+      "slot": "selection",
+      "path": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+      "nativeSource": "/workspace/scratch/6f9ceeefa959/generated_images/exec-62e0ffb3-7076-429d-9b99-2f04e9e8ac90.png",
+      "prompt": "Use case: identity-preserve. Create ONE static character-selection bust portrait from this Queenie SMG4 fusion full-body sprite. Preserve EXACTLY her crown silhouette, complete spherical finial, eye placement, red-orange iris colors, wooden eyelids and black lower lashes, materials, palette, chest details, garment/armor and her TWO detached gloves. Only framing changes: square portrait from crown finial through lower chest, same right-facing three-quarter guard. Include the entirety of crown and both gloves with clear margins. Keep the character identity and original crossover costume intact; no human arms, hair, mouth, legs or new anatomy. Preserve 2D cel-shaded style. Transparent RGBA background with absolutely no glow, shadow, scenery, ground, text, frame, labels or extra characters. Square composition, lower body outside portrait frame, final bust ends smoothly below chest.",
+      "tool": "built-in image_gen",
+      "transparent_background": true
+    }
+  ],
+  "nonFinalCandidates": [
+    {
+      "path": "/workspace/scratch/6f9ceeefa959/generated_images/exec-04e482f5-d403-4809-ba46-09401f348117.png",
+      "reason": "Nœud rose emprunté à Ribbit, retiré par édition native avant le portrait. Aucun fichier de candidat installé."
+    }
+  ]
+}

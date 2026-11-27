@@ -1,0 +1,11 @@
+{
+  "id": "memoryfracture",
+  "plane": "near",
+  "slot": "near",
+  "prompt": "Use case: precise-object-edit. Asset type: NEAR PARALLAX LAYER for existing 2D fighting stage, wide LANDSCAPE 16:9 same pixel composition as reference. Reference is context ONLY for art style, perspective, lighting and ground-line placement. Deliver ONLY the separately painted objects described here on TRUE TRANSPARENT background: Only tiny low foreground debris accents along the BOTTOM EDGE: two small broken golden frame corners and a few mauve/cyan glass fragments, confined to the bottom 10% of the canvas, mostly at lower left and lower right. Nothing projects above y=86% of image height. Entire remaining upper 86% and central arena are fully TRANSPARENT. No floor plane, no cast shadow, no room, no pillars, no curtains, no glow haze. Match the reference's clean rich hand-painted game environment style and palette exactly. No text, no UI, no characters, no tile grid. This PNG will be composited on the reference; do not repaint any part of the reference background. Keep transparent negative space genuinely empty, no atmospheric opaque or translucent gradient.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stages/memoryfracture/far.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-a9314f57-1e34-41e8-aaa0-325d736729d4.png",
+  "destination": "assets/encore/stages/memoryfracture/near.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native generation after filesystem reset; based on the new matching far plane."
+}

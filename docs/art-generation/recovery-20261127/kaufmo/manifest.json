@@ -1,0 +1,578 @@
+{
+  "schema": "encore-kaufmo-native-base-recovery/v1",
+  "date": "2026-11-27",
+  "baseCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+  "productionTool": "Built-in image_gen.imagegen, one image per asset",
+  "phase": "static-bases-only",
+  "previousUnpublishedImagesRecovered": 0,
+  "newNativeImages": 12,
+  "newAppearanceFamilies": 6,
+  "references": [
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/kaufmo-plush-1.png",
+      "copiedUnchangedFrom": "docs/art-generation/base-sprites-20261124/archive-references/kaufmo-plush-1.png",
+      "sourceCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+      "sha256": "ce4eb564c2d6ab4551783b61c6938c38b636cf852ad165861a74a7504e78ab2f",
+      "bytes": 3088448
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/official-uzi-front.png",
+      "copiedUnchangedFrom": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+      "sourceCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "bytes": 1280711
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/game-kaufmo-stance.png",
+      "copiedUnchangedFrom": "assets/encore/stance/kaufmo.png",
+      "sourceCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+      "sha256": "6e58a6cba0f4e0f87fa53d1e6e43d824c31d082882d27528df6112dea2eb3e07",
+      "bytes": 799856
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/tari-hoodie-official.png",
+      "copiedUnchangedFrom": "docs/art-generation/continuation-20261120-b/metarunner/references/tari-hoodie-official.png",
+      "sourceCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+      "sha256": "335b4537caf58642ddc7501c70be6ea8f7cdc60f0881bc612fbabf2c6cbb8cdd",
+      "bytes": 1050978
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/metarunner-official-still-01.png",
+      "copiedUnchangedFrom": "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png",
+      "sourceCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+      "sha256": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+      "bytes": 4608274
+    }
+  ],
+  "families": [
+    {
+      "series": "murderdrones",
+      "seriesTitle": "Murder Drones",
+      "style": "hommage",
+      "label": "Hommage · Uzi",
+      "traits": [
+        "Visage blanc ovale de Kaufmo, yeux noirs allongés, triangles, sourire rouge, cône jaune à bord bleu et pompon rouge.",
+        "Sweat noir à capuche violette, motif blanc inspiré de la tenue Uzi, trois pompons rouges et collerette bleue.",
+        "Pantalon jaune, gants blancs et chaussures de clown rouges à lacets violets ; anatomie de l’avatar conservée."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-76751604-8c61-432e-ade0-821a1e27f5b8.png",
+        "selection": "Tool result data:image/png;base64 saved directly after automatic disk write failed"
+      },
+      "prompts": {
+        "stance": [
+          "hommage-stance-prompt.txt"
+        ],
+        "selection": [
+          "hommage-selection-prompt.txt"
+        ]
+      },
+      "id": "glitch-murderdrones-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/murderdrones/kaufmo/hommage/selection.png",
+          "bytes": 984457,
+          "sha256": "befb7002a93ecddd8940b8ecd4c058faa1e30e855babcb747046c922b84716fb",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            136,
+            9,
+            1084,
+            1357
+          ],
+          "fullyTransparentPixels": 935451,
+          "lowAlphaEdgePixels": 10912,
+          "visiblePixelsOver12": 627545,
+          "pixelsAtLeast240Alpha": 620192,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/murderdrones/kaufmo/hommage/stance.png",
+          "bytes": 861924,
+          "sha256": "6f3172545706c142d561b95da3be64ff28e3eab0f744e54ae968f93dc01711cd",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            134,
+            10,
+            943,
+            1360
+          ],
+          "fullyTransparentPixels": 1053987,
+          "lowAlphaEdgePixels": 11940,
+          "visiblePixelsOver12": 507981,
+          "pixelsAtLeast240Alpha": 499683,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://glitchproductions.store/products/uzi-v2-animatez",
+        "https://www.glitchprod.com/murder-drones"
+      ],
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native files inspected. In-engine presentation is verified separately by the main integration."
+      }
+    },
+    {
+      "series": "murderdrones",
+      "seriesTitle": "Murder Drones",
+      "style": "resident",
+      "label": "Résident · Technicien des abris",
+      "traits": [
+        "Identité de Kaufmo et cône jaune, bord bleu, pompon rouge conservés.",
+        "Veste isolante ocre à épaules bleues, trois boutons rouges, bandes de sécurité noires et jaunes.",
+        "Sacoche et câble bleu fixés à la ceinture, pantalon graphite, genouillères et bottes rouges ; avatar simulé non canonique."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-1d29694c-5c5d-4e37-875f-9b206be9a6e6.png",
+        "selection": "exec-de501dfc-0414-4429-8240-b85db4b7dfb0.png"
+      },
+      "prompts": {
+        "stance": [
+          "resident-stance-prompt.txt"
+        ],
+        "selection": [
+          "resident-selection-prompt.txt",
+          "resident-selection-cleanup-prompt.txt"
+        ]
+      },
+      "id": "glitch-murderdrones-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/murderdrones/kaufmo/resident/selection.png",
+          "bytes": 1563616,
+          "sha256": "1b7061fcc27a72947cdf73b16cf02221a5587d354a100f9177bf2cb4fb3a2607",
+          "width": 1024,
+          "height": 1536,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            86,
+            11,
+            950,
+            1519
+          ],
+          "fullyTransparentPixels": 800949,
+          "lowAlphaEdgePixels": 9003,
+          "visiblePixelsOver12": 762912,
+          "pixelsAtLeast240Alpha": 756794,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/murderdrones/kaufmo/resident/stance.png",
+          "bytes": 880822,
+          "sha256": "b47c7ae0080263e1b525a344888e606fa8ecbebcca1a5cb281ccca41c97cc76e",
+          "width": 1146,
+          "height": 1373,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            156,
+            8,
+            940,
+            1368
+          ],
+          "fullyTransparentPixels": 1066813,
+          "lowAlphaEdgePixels": 10289,
+          "visiblePixelsOver12": 496356,
+          "pixelsAtLeast240Alpha": 488760,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://glitchproductions.store/products/uzi-v2-animatez",
+        "https://www.glitchprod.com/murder-drones"
+      ],
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native files inspected. In-engine presentation is verified separately by the main integration."
+      }
+    },
+    {
+      "series": "murderdrones",
+      "seriesTitle": "Murder Drones",
+      "style": "fusion",
+      "label": "Fusion · Drone de parade",
+      "traits": [
+        "Véritable corps de drone original : coque jaune, bras et jambes métalliques, articulations noires et mains mécaniques.",
+        "Tête ovale céramique à visière noire, yeux ovales violets, triangles clairs et sourire rouge reprenant l’identité de Kaufmo.",
+        "Cône antenne jaune riveté, anneau et collerette métalliques bleus, trois voyants rouges et pieds mécaniques rouges."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-6fba6552-08d6-4ee1-8a12-4145b97b21ac.png",
+        "selection": "exec-c6eecef5-542f-4199-860e-5c10b18f255e.png"
+      },
+      "prompts": {
+        "stance": [
+          "fusion-stance-prompt.txt"
+        ],
+        "selection": [
+          "fusion-selection-prompt.txt"
+        ]
+      },
+      "id": "glitch-murderdrones-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/murderdrones/kaufmo/fusion/selection.png",
+          "bytes": 991357,
+          "sha256": "cfccb251bb9319c93a033bed1ab4e48cb66a70bd89f16ad074a082fe5284eff4",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            108,
+            10,
+            1108,
+            1350
+          ],
+          "fullyTransparentPixels": 1000128,
+          "lowAlphaEdgePixels": 10893,
+          "visiblePixelsOver12": 562887,
+          "pixelsAtLeast240Alpha": 554755,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/murderdrones/kaufmo/fusion/stance.png",
+          "bytes": 876953,
+          "sha256": "f07db129267ed8ea3c28633a3f31a07e822122854bacb2883c4cdbf6b3782843",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            150,
+            11,
+            919,
+            1357
+          ],
+          "fullyTransparentPixels": 1128368,
+          "lowAlphaEdgePixels": 18033,
+          "visiblePixelsOver12": 427507,
+          "pixelsAtLeast240Alpha": 417662,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://glitchproductions.store/products/uzi-v2-animatez",
+        "https://www.glitchprod.com/murder-drones"
+      ],
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native files inspected. In-engine presentation is verified separately by the main integration."
+      }
+    },
+    {
+      "series": "metarunner",
+      "seriesTitle": "Meta Runner",
+      "style": "hommage",
+      "label": "Hommage · Tari",
+      "traits": [
+        "Visage blanc de Kaufmo, yeux ovales noirs, triangles, sourire rouge, cône jaune à bord bleu et pompon rouge.",
+        "Hoodie cyan inspiré du vêtement officiel Tari : capuche et bordure blanche, zigzags bleu marine aux épaules, panneaux blancs sous les bras et fermeture blanche.",
+        "Trois pompons rouges, collerette bleue, gants de clown ordinaires ; pantalon graphite et chaussures rouges à panneaux bleus et blancs."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-35daa645-d69d-4042-9f1d-cdae185012f0.png",
+        "selection": "exec-7ef89ce2-e435-44d2-b9a5-36f9a23bf362.png"
+      },
+      "prompts": {
+        "stance": [
+          "meta-hommage-stance-prompt.txt"
+        ],
+        "selection": [
+          "meta-hommage-selection-prompt.txt"
+        ]
+      },
+      "id": "glitch-metarunner-kaufmo-hommage",
+      "fighterId": "kaufmo",
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/metarunner/kaufmo/hommage/selection.png",
+          "bytes": 1008008,
+          "sha256": "ea3fa989c127f0fda80bd2199aef68055281059d6b80ef374a88773c525f7009",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            83,
+            14,
+            1114,
+            1362
+          ],
+          "fullyTransparentPixels": 928052,
+          "lowAlphaEdgePixels": 11859,
+          "visiblePixelsOver12": 633997,
+          "pixelsAtLeast240Alpha": 626614,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/metarunner/kaufmo/hommage/stance.png",
+          "bytes": 847594,
+          "sha256": "d20cc952f6fc05b82ebe5b8bc4dfc1ed0b392ed580ce48b1527b321d9625458c",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            132,
+            10,
+            942,
+            1369
+          ],
+          "fullyTransparentPixels": 1065299,
+          "lowAlphaEdgePixels": 11583,
+          "visiblePixelsOver12": 497026,
+          "pixelsAtLeast240Alpha": 489107,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://glitchproductions.store/cdn/shop/files/Tari-Hoodie-Default.png?v=1701236208&width=1600",
+        "https://www.glitchprod.com/meta-runner",
+        "https://static.wixstatic.com/media/84ed6a_98410c9a4f234883a5602147648a42b4~mv2.png"
+      ],
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native files inspected. In-engine presentation is verified separately by the main integration."
+      }
+    },
+    {
+      "series": "metarunner",
+      "seriesTitle": "Meta Runner",
+      "style": "resident",
+      "label": "Résident · Technicien des replays",
+      "traits": [
+        "Visage et chapeau ordinaires de Kaufmo, avec collerette bleue ; avatar original de technicien dans une simulation de crossover.",
+        "Gilet technique bleu marine à liserés cyan, trois contrôles rouges, ceinture et lecteur de replays bleu.",
+        "Avant-bras et main sur la droite de l’image mécaniques blancs et cyan, main opposée en gant souple ; pantalon graphite et chaussures de clown rouges."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-00eea8cd-079e-4929-9ca0-809464a89db6.png",
+        "selection": "exec-577276fa-aac1-4bdd-9a3e-0884fb9881c9.png"
+      },
+      "prompts": {
+        "stance": [
+          "meta-resident-stance-prompt.txt"
+        ],
+        "selection": [
+          "meta-resident-selection-prompt.txt"
+        ]
+      },
+      "id": "glitch-metarunner-kaufmo-resident",
+      "fighterId": "kaufmo",
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/metarunner/kaufmo/resident/selection.png",
+          "bytes": 1005929,
+          "sha256": "34739e64aace8196ae4cf4cd619c7869825ad697bed94106bc2aa641d5cc73b4",
+          "width": 1167,
+          "height": 1348,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            73,
+            9,
+            1150,
+            1338
+          ],
+          "fullyTransparentPixels": 944294,
+          "lowAlphaEdgePixels": 13126,
+          "visiblePixelsOver12": 615696,
+          "pixelsAtLeast240Alpha": 607613,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/metarunner/kaufmo/resident/stance.png",
+          "bytes": 802017,
+          "sha256": "a5dc9ca9a5c2ef58e0269d3fe2184aee69c1eead0c139b7c068b95805bcb9433",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            146,
+            6,
+            915,
+            1366
+          ],
+          "fullyTransparentPixels": 1127832,
+          "lowAlphaEdgePixels": 12991,
+          "visiblePixelsOver12": 433085,
+          "pixelsAtLeast240Alpha": 424459,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://glitchproductions.store/cdn/shop/files/Tari-Hoodie-Default.png?v=1701236208&width=1600",
+        "https://www.glitchprod.com/meta-runner",
+        "https://static.wixstatic.com/media/84ed6a_98410c9a4f234883a5602147648a42b4~mv2.png"
+      ],
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native files inspected. In-engine presentation is verified separately by the main integration."
+      }
+    },
+    {
+      "series": "metarunner",
+      "seriesTitle": "Meta Runner",
+      "style": "fusion",
+      "label": "Fusion · Avatar de synchronisation",
+      "traits": [
+        "Corps entièrement numérique et géométrique, opaque : torse bleu cobalt, membres blancs anguleux et articulations sombres.",
+        "Panneau central cyan à trois nœuds rouges, pistes de circuits contenues dans le corps, interface cyan sur l’avant-bras à gauche de l’image.",
+        "Tête blanche facettée conservant les yeux noirs, triangles et sourire de Kaufmo ; cône doré, bord bleu, sphère rouge cristalline, collerette polygonale et pieds rouges."
+      ],
+      "nativeOutputs": {
+        "stance": "exec-780ff6ba-0cf5-4617-8c69-fda3469d51d0.png",
+        "selection": "exec-f8c0789c-c0a8-43d3-a9ec-b8faa31190a8.png"
+      },
+      "prompts": {
+        "stance": [
+          "meta-fusion-stance-prompt.txt"
+        ],
+        "selection": [
+          "meta-fusion-selection-prompt.txt"
+        ]
+      },
+      "id": "glitch-metarunner-kaufmo-fusion",
+      "fighterId": "kaufmo",
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/metarunner/kaufmo/fusion/selection.png",
+          "bytes": 1035865,
+          "sha256": "c28d6c4a019b11f5803e0c61f6d9ea15cd37e379e3aad9b638e5dcf234bf3e30",
+          "width": 1304,
+          "height": 1206,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            68,
+            6,
+            1295,
+            1189
+          ],
+          "fullyTransparentPixels": 951213,
+          "lowAlphaEdgePixels": 11452,
+          "visiblePixelsOver12": 609959,
+          "pixelsAtLeast240Alpha": 601707,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/metarunner/kaufmo/fusion/stance.png",
+          "bytes": 894920,
+          "sha256": "6ae8cedf36269f995fd30cf2a06ceec793cfb98d4a0a1315871f753cf1966752",
+          "width": 1148,
+          "height": 1371,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            147,
+            9,
+            942,
+            1366
+          ],
+          "fullyTransparentPixels": 1087471,
+          "lowAlphaEdgePixels": 17265,
+          "visiblePixelsOver12": 469172,
+          "pixelsAtLeast240Alpha": 459910,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "sourceUrls": [
+        "https://glitchproductions.store/products/kaufmo-plush",
+        "https://glitchproductions.store/cdn/shop/files/Tari-Hoodie-Default.png?v=1701236208&width=1600",
+        "https://www.glitchprod.com/meta-runner",
+        "https://static.wixstatic.com/media/84ed6a_98410c9a4f234883a5602147648a42b4~mv2.png"
+      ],
+      "sourceKind": "Original Encore crossover using official identity and universe references",
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Native files inspected. In-engine presentation is verified separately by the main integration."
+      }
+    }
+  ],
+  "scope": "Création originale de crossover pour Encore. Un portrait de sélection et une garde statique, un seul personnage par image. La même garde sert aux états de combat sans dessin dédié. Aucune pose d’action ni animation ajoutée ; aucune apparition canonique affirmée.",
+  "canonicalOneToOneCertified": false,
+  "reviewStatus": "Native PNG files and pair consistency inspected; runtime presentation must be checked separately",
+  "alternativeCandidates": [
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/candidates/resident-selection-glow.png",
+      "status": "Superseded by native transparency-focused image edit; not used by runtime"
+    }
+  ]
+}

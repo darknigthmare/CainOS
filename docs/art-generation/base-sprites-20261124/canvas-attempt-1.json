@@ -1,0 +1,22 @@
+{
+  "schema": "encore-static-base-canvas-attempt/v1",
+  "command": "node --expose-gc scripts/render-combat-base-sprite-review.mjs",
+  "sessionId": 7166,
+  "exitCode": 137,
+  "globalSuccess": false,
+  "reportedCompletedFamilies": [
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "authoredDrawings": 2,
+      "stateFacingChecks": 20,
+      "visibleWidth": 127.90850138664246,
+      "visibleHeight": 190.0000069141388
+    }
+  ],
+  "completeReportProduced": false,
+  "limitations": [
+    "Process terminated during global memory pressure; no complete 24-family Canvas success is claimed.",
+    "The sequential-process recovery had not been written or executed when the environment became unavailable."
+  ]
+}
+

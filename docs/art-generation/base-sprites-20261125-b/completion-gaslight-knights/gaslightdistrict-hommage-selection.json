@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: identity-preserve. Asset type: fighter-selection portrait PNG for Digital Circus Encore. Use the supplied full-body Queenie Gaslight District homage sprite as the exact design reference. Create ONE isolated bust portrait of the SAME original crossover design. Frame from complete crown orb down to mid-torso; both floating white gloves visible near the torso and fully inside frame; lower body intentionally ends below the mid torso. Preserve warm wooden queen-chess-piece head, scalloped crown with orb, sleepy white eyes with orange irises, black lower eyelashes, cream rolled scarf, copper-brown asymmetrical sleeveless leather wrap mantle with diagonal panels and broad copper glove cuffs. Facing slight three-quarter to screen right; calm confident expression. Polished detailed hand-painted 2D cel shading and fine dark outlines matching reference. Preserve the same anatomy without arms, legs, mouth or nose. Actual transparent RGBA background: empty alpha outside character, NO dark vignette, ambient haze, glow, ground, shadow, scene, text, labels or second figure. Crown and fingers must not touch the frame. One portrait only, not a sheet.",
+  "source": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png",
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-f388f817-3353-4761-a1fb-2a510dff3968.png",
+  "installed": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Complete crown and two detached gloves; wood, orange eyes, scarf and copper wrap match the reference. Bust framing.",
+  "sha256": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55",
+  "bytes": 1284867
+}

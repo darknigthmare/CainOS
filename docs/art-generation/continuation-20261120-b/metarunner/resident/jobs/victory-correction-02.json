@@ -1,0 +1,17 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "slot": "victory",
+  "nativeFacing": "right",
+  "prompt": "Edit this existing sprite locally. Keep the entire same character, head, body, clothing or armour, all colours, expression, victory pose, limb lengths, three-quarter right facing, native transparency and clean outline. The ONLY anatomical correction is the hands. The raised fist at upper image-left currently has FOUR digits: three curled fingers plus a thumb. Replace it with exactly THREE DIGITS TOTAL: TWO curled fingers plus ONE thumb. Draw ONLY TWO rounded knuckle/fingertip lobes along the top and ONE thumb lobe crossing the front. No fourth lobe, no extra small finger, no residual stub. Keep the other fist at the waist with exactly THREE digits total as well: two curled fingers and one thumb. This is an original three-digit design choice, not a canon claim. Keep both entire hands in frame with clear transparent margins, and all feet fully visible. No background, floor, shadow, glow outside the body, text or particles. Reference 1 is the exact sprite to correct. Reference 2 is the accepted identity and costume design; preserve its three-digit anatomy.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/attempts/victory-01/victory.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png"
+  ],
+  "reviewer": "audit_github",
+  "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+  "attempt": 2,
+  "supersedesRejectedAttempt": "docs/art-generation/continuation-20261120-b/metarunner/resident/attempts/victory-01/receipt.json"
+}

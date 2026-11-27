@@ -33,7 +33,9 @@ test('the shipped roster has three distinct immutable finisher definitions each'
       assert.ok(Object.isFrozen(entry) && Object.isFrozen(entry.beats));
       assert.equal(entry.beats.length,3);assert.equal(entry.beats[0].frame,0);
       assert.ok(entry.durationFrames>entry.beats.at(-1).frame);
-      assert.ok(entry.sourceIds.length && entry.adaptation.length && entry.remainingArtWork.length);
+      assert.ok(entry.adaptation.length && entry.remainingArtWork.length);
+      if (entry.sourceKind === 'original-encore') assert.deepEqual(entry.sourceIds, []);
+      else assert.ok(entry.sourceIds.length);
       for(const beat of entry.beats)assert.ok(Object.isFrozen(beat)&&beat.title&&beat.description);
     }
   }

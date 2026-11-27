@@ -1,0 +1,4261 @@
+{
+  "schema": "encore-combat-extensions-workbook/v1",
+  "version": "1.0",
+  "asOf": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "observedBaselineCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+  "sections": [
+    {
+      "id": "EN-G30",
+      "section": "30",
+      "module": "Extension 01",
+      "title": "Portée et rattachement au guide général",
+      "adaptation": "Prolonger les identifiants EN-G00…29 par EN-G30…67 ; conserver le duel existant et la phase de bases fixes.",
+      "verification": "Les trois tailles et SHA-256 correspondent aux fichiers Drive ; le guide général n’est pas dupliqué. Les 38 sections existent une fois et leurs exigences disposent d’identifiants uniques et de critères. Aucun statut de conception ne ferme un test de tag, de dessin, de déblocage ou de fidélité.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G31",
+      "section": "31",
+      "module": "Extension 01",
+      "title": "Taunts : personnalité et réactions",
+      "adaptation": "Une provocation silencieuse de présentation par combattant ; la récupération utility actuelle garde ses règles et son nom.",
+      "verification": "Chaque ID du roster possède un brief unique ; les abstractions ne parlent pas et aucun souvenir inédit n’est affirmé. Une commande refusée ne dépense rien ; un coup interrompt le geste ; aucun bonus de dégâts n’est accordé par la pose. La variante utilise la relation de route étiquetée fan-game ; voix répétées et mouvements réduits n’altèrent pas le contrôle.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G32",
+      "section": "32",
+      "module": "Extension 01",
+      "title": "Sélection, confirmation et désélection",
+      "adaptation": "Conserver les portraits existants ; spécifier huit états de présentation et une sortie propre par artiste.",
+      "verification": "Le modèle d’états indique une transition et une action d’annulation pour chaque état. Le choix logique est immédiat ; la sortie nettoie particules, voix et compagnon de l’aperçu abandonné. Deux curseurs, deux costumes du même artiste et une annulation simultanée ne volent ni focus ni choix.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G33",
+      "section": "33",
+      "module": "Extension 01",
+      "title": "Profils d’équipe et catégories de partenaires",
+      "adaptation": "Définir une future Répétition en duo à deux membres, distincte des neuf modes du catalogue existant.",
+      "verification": "Un premier KO déclenche l’entrée du survivant sans jauge et sans réanimation du membre éliminé. Une assistance ne devient pas contrôlable ; une entité de kit ne consomme pas automatiquement un slot. Personnage et abstraction du même personnage sont refusés en histoire ; le mode simulation explicite peut les autoriser.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G34",
+      "section": "34",
+      "module": "Extension 01",
+      "title": "Commandes, jauges et disponibilité",
+      "adaptation": "Réserver des actions remappables séparées pour taunt, aide, relais et super ; aucun détournement des dix slots historiques.",
+      "verification": "Le contrat fixe capacité, coût, recharge, horloge, réservations et remboursement ; les valeurs sont marquées à équilibrer. Un partenaire engagé, KO ou en récupération refuse l’action avec un motif ; deux actions ne dépensent jamais le même crédit. Un replay 0.5/0.7 garde SLOT_ORDER et le résultat historique ; la nouvelle règle porte sa propre version.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G35",
+      "section": "35",
+      "module": "Extension 01",
+      "title": "Assistances ponctuelles",
+      "adaptation": "Chaque intervention réutilise une technique du partenaire référencée par son slot ; aucune aptitude officielle nouvelle n’est déduite.",
+      "verification": "L’entrée est annoncée, le soutien reste punissable et un second appel attend sa sortie complète. Toucher actif et soutien ne double pas la jauge gagnée ; les deux pertes de vie sont attribuées une fois. Le soutien quitte proprement la scène ; la réserve n’est ni téléportée dans un mur ni réanimée par un rappel.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G36",
+      "section": "36",
+      "module": "Extension 01",
+      "title": "Tag : transfert réel du contrôle",
+      "adaptation": "Le relais est une future règle de simulation, distincte d’une permutation de portrait ou d’une composition de scène.",
+      "verification": "Chaque forme possède coût, fenêtre, invulnérabilité éventuelle, point de contrôle et résolution en échec. Aucun reset de rebond, piège, jauge ou cooldown n’est obtenu en alternant les deux membres. Les IDs de propriétaire restent stables ; un projectile ne suit pas un nouveau membre sans propriété de ciblage annoncée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G37",
+      "section": "37",
+      "module": "Extension 01",
+      "title": "Techniques combinées et supers d’équipe",
+      "adaptation": "Douze compositions reçoivent un numéro original avec contribution visible de chacun et aucun nouveau pouvoir canonique.",
+      "verification": "Les 12 duos référencent des combattants distincts et des techniques présentes dans le catalogue. Garde, raté, interruption et cible géante disposent d’une résolution courte sans victoire forcée. Les deux participants redeviennent disponibles selon le même état de simulation après séquence complète ou abrégée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G38",
+      "section": "38",
+      "module": "Extension 01",
+      "title": "Finishers d’équipe et fins dramatiques",
+      "adaptation": "Nom éditorial retenu : Derniers Actes en duo. Les finales individuelles existantes restent inchangées.",
+      "verification": "Une finale après verdict ne modifie ni le vainqueur, ni la progression, ni les dégâts déjà enregistrés. Les scènes mémorielles ne passent jamais pour un retour canonique ; un partenaire KO entraîne la solution individuelle. Fin dramatique spécifique, finale duo, finale solo puis victoire normale sont évaluées une seule fois dans cet ordre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G39",
+      "section": "39",
+      "module": "Extension 01",
+      "title": "Clashes et confrontations avec QTE",
+      "adaptation": "Limiter les clashes interactifs aux défis et chapitres solo ; les versus compétitifs conservent des règles déterministes sans QTE.",
+      "verification": "Seules les paires de techniques inscrites dans la table peuvent déclencher le clash ; aucun choc automatique universel. Réussite, échec, égalité, absence de réponse, pause et déconnexion sont définis ; option automatique disponible en solo. La scène ne renverse pas une victoire déjà attribuée ; seuils et résultat sont enregistrés dans la future version de replay.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G40",
+      "section": "40",
+      "module": "Extension 01",
+      "title": "Entités indépendantes et objets placés",
+      "adaptation": "S’appuyer sur projectiles et pièges existants ; ne pas transformer un motif illustré en compagnon autonome.",
+      "verification": "Chaque enregistrement garde ID, slot, coût, durée, cap et champs absents comme absents ; aucun pouvoir supposé. Invocation, ordres, neutralisation et fin de vie sont bornés ; une ressource de kit demeure liée à son propriétaire. Les objets périmés ne survivent pas à une nouvelle manche ; leurs anciens propriétaires restent identifiables pour les replays.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G41",
+      "section": "41",
+      "module": "Extension 01",
+      "title": "Projectiles persistants et attribution",
+      "adaptation": "Prolonger le contrat actuel de réflexion sans changer le motif visuel de l’attaque d’origine.",
+      "verification": "La clef de Jax réfléchie ne devient pas un projectile de Kinger ; le crédit de dégâts suit les règles de réflexion. Un projectile ou piège ne permet pas une boucle infinie entre relais, contre et transition. Un skin ne modifie pas portée ni délai ; tout écart visible est documenté avant publication.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G42",
+      "section": "42",
+      "module": "Extension 01",
+      "title": "Stages bonus et épreuves narratives",
+      "adaptation": "Huit épreuves situées dans les lieux du jeu : camion de répétition, convoi, nid, service Spudsy, manoir, softball, balises et silhouettes.",
+      "verification": "Les huit fiches possèdent limites, contrôle d’entrée/sortie et condition de victoire ; une défaite ne ferme pas la campagne. Le statut de horde reste non intégré tant que plusieurs ennemis réellement simultanés ne sont pas pris en charge. Aucun fond générique de scène de théâtre ne remplace Candy Canyon, le restaurant, le manoir ou le terrain de softball.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G43",
+      "section": "43",
+      "module": "Extension 01",
+      "title": "Espace d’exploration et de déblocage",
+      "adaptation": "Les Archives des répétitions sont un hub original de simulation Encore, séparé du menu Archives existant et de la géographie canonique.",
+      "verification": "Le graphe est accessible depuis l’accueil ; chaque arrivée reste hors collision et ne place aucune porte au centre d’une salle. Chaque coffre possède un contenu stable et une transaction idempotente ; retour au hub conserve son état. Un joueur peut consulter les conditions et réclamer une récompense sans devoir réussir une manipulation de déplacement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G44",
+      "section": "44",
+      "module": "Extension 01",
+      "title": "Relations, période et compatibilités",
+      "adaptation": "Les duos, dialogues et fins écrits ici sont des propositions Encore ; les fiches de référence gardent leur niveau d’incertitude.",
+      "verification": "Un libellé d’archive ou une illustration générée ne devient pas une preuve canonique. Queenie, Kaufmo et Gummigoo n’obtiennent pas une résurrection ou une chronologie nouvelle présentée comme officielle. Les 11 formes abstraites utilisent des réactions non verbales ; les cinq formes inventées restent étiquetées originales.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G45",
+      "section": "45",
+      "module": "Extension 01",
+      "title": "Assets, animation, son et mise en scène",
+      "adaptation": "Consigner les besoins d’animation et de son sans les produire pendant cette phase de sprites de base.",
+      "verification": "Un portrait existant, une pose réutilisée et un cycle inédit ne sont pas comptés comme trois animations livrées. La revue compare chaque variante à ses références et au rendu natif ; un contrôle technique ne certifie pas le 1:1. Aucun son ne reste actif après abandon de l’aperçu ; aucun flash ou doublage imité n’est obligatoire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G46",
+      "section": "46",
+      "module": "Extension 01",
+      "title": "Interface, apprentissage et réseau",
+      "adaptation": "Étendre l’entraînement local avant tout jeu en ligne ; le protocole tag/entités doit précéder un futur réseau.",
+      "verification": "La raison d’un refus est visible par texte et icône ; information identique au clavier, tactile et manette. Une séquence peut être enregistrée, rejouée et réinitialisée sans accorder de récompense de progression. Le jeu en ligne et le rollback restent différés ; aucune connectivité n’est revendiquée par une fiche.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G47",
+      "section": "47",
+      "module": "Extension 01",
+      "title": "Validation, statistiques et ordre d’intégration",
+      "adaptation": "Mesurer séparément couverture documentaire, assets, intégration et scénarios réussis, sans pourcentage de livraison synthétique trompeur.",
+      "verification": "Chaque cas indique préconditions, action, résultat attendu et statut à exécuter. Une tranche conserve une preuve des deux entrées CainOS et standalone avant changement de statut runtime. Les nouvelles feuilles utilisent les IDs EN-G30…67 ; aucune ancienne ligne n’est remplacée par un état déduit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G48",
+      "section": "48",
+      "module": "Extension 01",
+      "title": "Dix fiches de production complémentaires",
+      "adaptation": "Instancier les modèles A–J dans les JSON de personnages, duos, clashes, entités, bonus, hub et récompenses.",
+      "verification": "Les 64 IDs runtime sont couverts sans doublon ; chaque sortie est un texte propre au personnage. Chaque fiche réfère un contrat partagé et ses exceptions ; aucun champ requis n’est remplacé par une promesse vague. Les IDs des règles, contenus et zones existent ; les conditions sont interprétables sans relire une conversation.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json",
+        "docs/bible/extensions-characters.json"
+      ]
+    },
+    {
+      "id": "EN-G49",
+      "section": "49",
+      "module": "Extension 01",
+      "title": "Instruction d’intégration et références",
+      "adaptation": "Rendre l’intégration reproductible par un générateur dédié et conserver la référence complète à chaque section.",
+      "verification": "Mortal Kombat, Tekken ou FighterZ restent des inspirations de système ; leurs termes ne sont pas attribués au Circus. Le mode --check détecte toute dérive des fichiers générés ou de la provenance. Les douze duos et huit bonus sont comptés comme spécifiés ; les anciens tests moteur restent historiques.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+        "docs/bible/extensions-teams-bonus.json"
+      ]
+    },
+    {
+      "id": "EN-G50",
+      "section": "50",
+      "module": "Extension 02",
+      "title": "Portée du système de déblocage",
+      "adaptation": "Appliquer les mêmes dimensions aux artistes, aides, tenues, scènes et nouveaux modes, sans retirer les accès existants.",
+      "verification": "Chaque ID actuel est relié à sa catégorie et à ses dépendances ; les contenus proposés portent un préfixe distinct. Un asset manquant affiche une indisponibilité technique et ne demande jamais de progression ni de paiement. Le soutien externe est spécifié et désactivé ; le mode libre historique reste accessible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G51",
+      "section": "51",
+      "module": "Extension 02",
+      "title": "Découverte, droits, installation et compatibilité",
+      "adaptation": "Le moteur de droits cible combine quatre axes ; aucun booléen unique unlocked ne remplace ces dimensions.",
+      "verification": "Un costume peut être acquis sans propriétaire découvert ; un droit actif n’impose pas la révélation du nom. Acquis mais non installé, incompatible ou incomplet reçoivent trois explications différentes. Le focus révèle le prochain objectif ou l’installation requise sans faux message d’abonnement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G52",
+      "section": "52",
+      "module": "Extension 02",
+      "title": "Langage visuel des verrous",
+      "adaptation": "Charte originale : fiche de distribution C&A, billet perforé et volet de rideau ; ces motifs sont une interface Encore, pas des artefacts canoniques.",
+      "verification": "Le contour reste lisible sur fonds sombres et ne cache ni focus ni condition courte. Nom, alt, titre, voix, catégorie de tenue et miniature ne révèlent pas le personnage. Les états se distinguent par forme et texte ; aucune révélation ne bloque la navigation ou ne force des flashes.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G53",
+      "section": "53",
+      "module": "Extension 02",
+      "title": "Slots d’artistes et de partenaires",
+      "adaptation": "La distribution existante reste libre. Les futurs prêts scénarisés et récompenses sont portés par des droits supplémentaires.",
+      "verification": "Un joueur ne peut confirmer un contenu indisponible ni être bloqué dans une boucle d’erreur. Posséder deux membres ne prouve pas la compatibilité narrative ou l’obtention d’une fin dramatique. Aucun piège, projectile ou compagnon nécessaire n’est vendu ou verrouillé séparément.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G54",
+      "section": "54",
+      "module": "Extension 02",
+      "title": "Tenues, palettes et dépendances",
+      "adaptation": "Les tenues actuelles conservent leur accès ; les futures récompenses exposent propriétaire, période, découverte et permanence.",
+      "verification": "Une récompense de costume survit au rechargement ; aucun faux verrou d’abonnement ne remplace le personnage manquant. Les dix slots équipés sont identiques à ceux du combattant ; un changement de règle impose une variante explicite. Le menu peut montrer une tenue sans l’équiper ; une scène de période imposée utilise sa tenue annoncée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G55",
+      "section": "55",
+      "module": "Extension 02",
+      "title": "Stages, variantes et destinations",
+      "adaptation": "Conserver le catalogue et ses arrangements ; séparer droit de sélection, participation, confort et destination reliée.",
+      "verification": "Réduire les mouvements n’exige aucune acquisition supplémentaire et ne change pas les collisions. Les deux clients disposent des assets avant le match ; l’invité ne reçoit pas un achat fictif. Un droit manquant n’entraîne jamais un chargement bloqué au milieu d’un combat ; remplacement annoncé avant match.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G56",
+      "section": "56",
+      "module": "Extension 02",
+      "title": "Modes et parcours verrouillés",
+      "adaptation": "Ne pas verrouiller rétroactivement les neuf modes existants ; réserver les conditions à des nouveaux défis et parcours optionnels.",
+      "verification": "Aucun prérequis d’un mode ne dépend exclusivement de ce même mode. Une tuile non implémentée est annoncée en préparation, sans chaîne de déblocage fictive. Retour d’accès restaure les étapes connues ; la sauvegarde n’est pas effacée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G57",
+      "section": "57",
+      "module": "Extension 02",
+      "title": "Conditions, progression et attribution",
+      "adaptation": "Créer des expressions ET/OU sur les événements validés : routes terminées, défis, bonus, coffre ciblé et source externe vérifiée.",
+      "verification": "Les alternatives gratuites restent visibles ; ET et OU donnent des résultats distincts sur les jeux de données de référence. Deux notifications ou deux clics n’accordent ni deux clés, ni deux lots, ni une nouvelle expiration. Les stories, medals et challenges présents sont migrés ; une performance non enregistrée n’est pas supposée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G58",
+      "section": "58",
+      "module": "Extension 02",
+      "title": "Exploration, récompenses et révélation",
+      "adaptation": "Les coffres des Archives accordent des récompenses ciblées ; la révélation suit l’attribution sauvegardée et peut être abrégée.",
+      "verification": "Une interruption après attribution retrouve le contenu acquis, même si la révélation n’a pas été vue. Échec d’écriture n’efface aucune clé ; relance n’effectue pas un second débit. La voie menu produit exactement le même événement que l’interaction dans le hub.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G59",
+      "section": "59",
+      "module": "Extension 02",
+      "title": "Soutiens et modèles d’acquisition",
+      "adaptation": "Prévoir uniquement des apparences ou ambiances originales dédiées ; l’offre, les tarifs et les niveaux n’existent pas dans cette livraison.",
+      "verification": "Chaque avantage nomme explicitement son modèle et ne transforme pas une annulation en retrait automatique d’un acquis permanent. La condition défi OU soutien est exposée et le code de droit conserve deux sources indépendantes. Tenue et scène de soutien conservent les règles communes ; le confort reste accessible sans soutien.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G60",
+      "section": "60",
+      "module": "Extension 02",
+      "title": "Liaison à Patreon ou équivalent",
+      "adaptation": "Contrat serveur futur seulement. Aucun bouton d’achat, secret, token ni rôle d’abonné fabriqué côté client.",
+      "verification": "Un profil local modifié ne crée aucun droit externe ; seuls des événements validés deviennent des sources. La source concernée est mise à jour selon sa version d’événement ; une source permanente indépendante reste valable. Aucune URL d’offre ni durée commerciale n’est annoncée sans configuration effective et testée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G61",
+      "section": "61",
+      "module": "Extension 02",
+      "title": "Expiration, incidents et hors ligne",
+      "adaptation": "Une erreur réseau donne un état inconnu ; les acquisitions permanentes locales restent utilisables et le match autorisé se termine.",
+      "verification": "La matrice inclut permanent+temporaire expiré, remboursement d’une source et seconde source valide. Aucun costume, stage ou membre ne disparaît en plein combo ; le snapshot du match reste immuable. Une date absente n’est pas inventée ; le hors ligne conserve les acquisitions sans valider une nouvelle admissibilité.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G62",
+      "section": "62",
+      "module": "Extension 02",
+      "title": "Local, multijoueur, entraînement et replays",
+      "adaptation": "Les politiques futures distinguent consultation, sélection, participation et essai ; les replays historiques ne sont pas réécrits.",
+      "verification": "Un invité peut participer sans copier les achats dans sa collection ; les droits sont attribués au bon profil. Lancement impossible produit une solution annoncée ; aucune paire ne commence avec un membre indisponible. Lecture seule, anciennes règles et accès à l’affichage sont distincts des droits de sélection actuels.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G63",
+      "section": "63",
+      "module": "Extension 02",
+      "title": "Textes, accessibilité et surprises",
+      "adaptation": "Utiliser des textes courts associés au billet C&A et un détail consultable ; les identités secrètes restent secrètes dans le DOM accessible.",
+      "verification": "La grille reste navigable à la manette ; aucun état ne dépend seulement de couleur, de son ou d’animation. Le lecteur d’écran ne révèle pas un artiste secret ni un costume nommant son propriétaire. Les messages de référence ont une condition d’emploi vérifiable et une action utile.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G64",
+      "section": "64",
+      "module": "Extension 02",
+      "title": "Production, sauvegarde et validation des droits",
+      "adaptation": "Ajouter ultérieurement un registre versionné des sources, sans supprimer l’ancien profil ni son mécanisme de secours.",
+      "verification": "Les anciens réglages, résultats, routes, programme actif et replays restent inchangés après migration. Chaque cas décrit données, action, message, droit et persistance attendus ; son statut reste à exécuter. Une silhouette prête n’ajoute pas un combattant produit ; la collection du joueur n’est pas un indicateur de production.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire / selon fiche",
+        "integration": "non intégré ; socle selon observation",
+        "tests": "à exécuter"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G65",
+      "section": "65",
+      "module": "Extension 02",
+      "title": "Six fiches d’accès et de droits",
+      "adaptation": "Fournir modèles A–F instanciés par le catalogue, les règles, l’avantage inactif, la charte, la scène et les scénarios de validation.",
+      "verification": "Chaque ID est stable, chaque condition a un texte et un arbre, chaque dépendance existe. Les trois modèles séparent politique proposée et offre réellement activée ; le stage possède sélection et participation distinctes. Les cas n’utilisent jamais un faux booléen unique pour perte de réseau, expiration et asset manquant.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G66",
+      "section": "66",
+      "module": "Extension 02",
+      "title": "Instruction d’intégration au projet",
+      "adaptation": "L’index de bible devient le point d’entrée des trois textes et de leurs adaptations ; aucune fonction n’est implicite.",
+      "verification": "Les liens relatifs et IDs sont résolus par le générateur ; les deux sources sont consultables intégralement. Le jeu de données feuille conserve un identifiant par ligne, sans déplacer les historiques existants. Taunts dédiés, tag, hub, bonus et offre de soutien ne sont pas annoncés comme jouables par ces documents.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    },
+    {
+      "id": "EN-G67",
+      "section": "67",
+      "module": "Extension 02",
+      "title": "Références et vocabulaire des droits",
+      "adaptation": "Conserver le lexique du guide ; les liens Patreon sont des sources à revalider quand une intégration sera effectivement programmée.",
+      "verification": "Les textes du menu et les schémas emploient les mêmes définitions sans confondre droit et visibilité. La provenance porte sa date et le statut de vérification actuelle ; aucune règle financière n’est improvisée. Le générateur --check termine sans dérive, et les fichiers restent reconstructibles depuis leurs sources éditoriales.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "documentaire",
+        "tests": "validation documentaire"
+      },
+      "links": [
+        "docs/bible/references/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+        "docs/bible/extensions-access.json"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "EN-E1-TAUNT-pomni",
+      "type": "taunt",
+      "entity": "Pomni",
+      "title": "Vous avez vérifié la sortie ?",
+      "description": "Les mains remontent près du col, puis un regard glisse hors du cadre. Un index hésitant désigne la direction déjà indiquée dans le décor ; sourire tendu. L’index se replie, les deux mains retrouvent la garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-pomni"
+    },
+    {
+      "id": "EN-E1-SELECT-pomni",
+      "type": "selection",
+      "entity": "Pomni",
+      "title": "Entrée de sélection · Pomni",
+      "description": "Un demi-pas prudent entre dans le cadre, regard vers le joueur puis vers la piste.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-pomni"
+    },
+    {
+      "id": "EN-E1-DESELECT-pomni",
+      "type": "deselection",
+      "entity": "Pomni",
+      "title": "Sortie de sélection · Pomni",
+      "description": "Un dernier regard vers la piste, recul latéral et mains ramenées contre le corps.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-pomni"
+    },
+    {
+      "id": "EN-E1-TAUNT-jax",
+      "type": "taunt",
+      "entity": "Jax",
+      "title": "Après vous, vraiment",
+      "description": "Le menton s’incline et une main s’ouvre vers l’adversaire. Salut exagérément courtois, sourire de défi ; oreilles et gants restent ceux de la tenue. La main revient dans une poche ou près du torse selon la tenue compatible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-jax"
+    },
+    {
+      "id": "EN-E1-SELECT-jax",
+      "type": "selection",
+      "entity": "Jax",
+      "title": "Entrée de sélection · Jax",
+      "description": "Entrée désinvolte, léger appui sur une jambe, salut bref sans changer ses proportions.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-jax"
+    },
+    {
+      "id": "EN-E1-DESELECT-jax",
+      "type": "deselection",
+      "entity": "Jax",
+      "title": "Sortie de sélection · Jax",
+      "description": "Le salut se transforme en geste d’au revoir, pivot puis départ à pas lents.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-jax"
+    },
+    {
+      "id": "EN-E1-TAUNT-ragatha",
+      "type": "taunt",
+      "entity": "Ragatha",
+      "title": "On peut faire une pause",
+      "description": "Les paumes se lèvent lentement à hauteur de poitrine. Sourire rassurant mais un peu crispé, épaules tournées vers son partenaire. Les mains se referment doucement puis reprennent la garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-ragatha"
+    },
+    {
+      "id": "EN-E1-SELECT-ragatha",
+      "type": "selection",
+      "entity": "Ragatha",
+      "title": "Entrée de sélection · Ragatha",
+      "description": "Salut chaleureux, vérification du nœud et déplacement mesuré jusqu’à la marque.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-ragatha"
+    },
+    {
+      "id": "EN-E1-DESELECT-ragatha",
+      "type": "deselection",
+      "entity": "Ragatha",
+      "title": "Sortie de sélection · Ragatha",
+      "description": "Le salut baisse, elle accompagne du regard le nouveau choix puis sort sur le côté.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-ragatha"
+    },
+    {
+      "id": "EN-E1-TAUNT-gangle",
+      "type": "taunt",
+      "entity": "Gangle",
+      "title": "Le masque tient encore",
+      "description": "Un ruban vient soutenir le bas du masque sans le changer. Petite révérence ; la forme et l’expression du masque suivent le costume équipé. Le ruban relâche le masque et reprend sa longueur de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-gangle"
+    },
+    {
+      "id": "EN-E1-SELECT-gangle",
+      "type": "selection",
+      "entity": "Gangle",
+      "title": "Entrée de sélection · Gangle",
+      "description": "Le corps de rubans se rassemble, le masque se redresse et les mains saluent brièvement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-gangle"
+    },
+    {
+      "id": "EN-E1-DESELECT-gangle",
+      "type": "deselection",
+      "entity": "Gangle",
+      "title": "Sortie de sélection · Gangle",
+      "description": "Révérence de clôture puis retrait des rubans derrière le même bord de cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-gangle"
+    },
+    {
+      "id": "EN-E1-TAUNT-zooble",
+      "type": "taunt",
+      "entity": "Zooble",
+      "title": "C’est bon, on a compris",
+      "description": "La tête tourne vers le duel avant un soupir visuel. Un bras marque une impatience courte ; les pièces restent dans la configuration choisie. Le bras reprend son ancrage sans échange de pièce.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-zooble"
+    },
+    {
+      "id": "EN-E1-SELECT-zooble",
+      "type": "selection",
+      "entity": "Zooble",
+      "title": "Entrée de sélection · Zooble",
+      "description": "Contrôle visuel de l’assemblage affiché, pose stable et regard direct.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-zooble"
+    },
+    {
+      "id": "EN-E1-DESELECT-zooble",
+      "type": "deselection",
+      "entity": "Zooble",
+      "title": "Sortie de sélection · Zooble",
+      "description": "Haussement d’épaule puis départ, sans démontage imposé du corps.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-zooble"
+    },
+    {
+      "id": "EN-E1-TAUNT-kinger",
+      "type": "taunt",
+      "entity": "Kinger",
+      "title": "J’avais une idée…",
+      "description": "Les mains se rapprochent comme pour expliquer, puis s’arrêtent. Le regard se fixe sur un petit détail de la piste ; posture calme, jamais folie forcée. Les mains redescendent et le regard retrouve l’adversaire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-kinger"
+    },
+    {
+      "id": "EN-E1-SELECT-kinger",
+      "type": "selection",
+      "entity": "Kinger",
+      "title": "Entrée de sélection · Kinger",
+      "description": "La silhouette royale entre prudemment, s’arrête sur la marque et lève une main.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-kinger"
+    },
+    {
+      "id": "EN-E1-DESELECT-kinger",
+      "type": "deselection",
+      "entity": "Kinger",
+      "title": "Sortie de sélection · Kinger",
+      "description": "La main fait un petit signe, la pièce recule sans tourner sa base de manière impossible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-kinger"
+    },
+    {
+      "id": "EN-E1-TAUNT-caine",
+      "type": "taunt",
+      "entity": "Caine",
+      "title": "Une petite présentation !",
+      "description": "Les bras s’écartent pour annoncer le numéro. Grand geste de maître de piste, chapeau et mâchoire dans leurs positions de référence. Un salut réduit l’amplitude puis ramène les bras au repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-caine"
+    },
+    {
+      "id": "EN-E1-SELECT-caine",
+      "type": "selection",
+      "entity": "Caine",
+      "title": "Entrée de sélection · Caine",
+      "description": "Annonce muette au centre du cadre avec un geste vers la piste, sans modifier le choix du joueur.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-caine"
+    },
+    {
+      "id": "EN-E1-DESELECT-caine",
+      "type": "deselection",
+      "entity": "Caine",
+      "title": "Sortie de sélection · Caine",
+      "description": "Le geste se conclut, le chapeau accompagne un salut et Caine quitte le cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-caine"
+    },
+    {
+      "id": "EN-E1-TAUNT-bubble",
+      "type": "taunt",
+      "entity": "Bubble",
+      "title": "Je regarde aussi",
+      "description": "La sphère monte légèrement dans l’espace de présentation autorisé. Inclinaison du regard et sourire incongru, sans bras ou jambes ajoutés. Retour à la hauteur de garde ; diamètre inchangé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-bubble"
+    },
+    {
+      "id": "EN-E1-SELECT-bubble",
+      "type": "selection",
+      "entity": "Bubble",
+      "title": "Entrée de sélection · Bubble",
+      "description": "Arrivée en flottement, arrêt net et regard vers le second portrait.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-bubble"
+    },
+    {
+      "id": "EN-E1-DESELECT-bubble",
+      "type": "deselection",
+      "entity": "Bubble",
+      "title": "Sortie de sélection · Bubble",
+      "description": "Départ flotté vers le bord choisi ; aucune explosion obligatoire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-bubble"
+    },
+    {
+      "id": "EN-E1-TAUNT-gummigoo",
+      "type": "taunt",
+      "entity": "Gummigoo",
+      "title": "À toi de montrer",
+      "description": "Un bras ouvre une invitation brève tandis que le corps reste de trois quarts. Sourire réservé et appui de convoyeur, accessoires du costume conservés. Le bras retrouve la garde et le centre de gravité reste stable.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-gummigoo"
+    },
+    {
+      "id": "EN-E1-SELECT-gummigoo",
+      "type": "selection",
+      "entity": "Gummigoo",
+      "title": "Entrée de sélection · Gummigoo",
+      "description": "Entrée décidée, regard vers son compagnon puis salut à la piste.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-gummigoo"
+    },
+    {
+      "id": "EN-E1-DESELECT-gummigoo",
+      "type": "deselection",
+      "entity": "Gummigoo",
+      "title": "Sortie de sélection · Gummigoo",
+      "description": "Signe bref de la tête et retrait vers le convoi suggéré hors champ.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-gummigoo"
+    },
+    {
+      "id": "EN-E1-TAUNT-loolilalu",
+      "type": "taunt",
+      "entity": "Loolilalu",
+      "title": "La cour attend",
+      "description": "La posture se redresse et une main invite à avancer. Petit salut royal, expression ferme et couronne stable. La main revient près du corps avant la garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-loolilalu"
+    },
+    {
+      "id": "EN-E1-SELECT-loolilalu",
+      "type": "selection",
+      "entity": "Loolilalu",
+      "title": "Entrée de sélection · Loolilalu",
+      "description": "Révérence sobre, visage levé et pose de présentation sans trône ajouté.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-loolilalu"
+    },
+    {
+      "id": "EN-E1-DESELECT-loolilalu",
+      "type": "deselection",
+      "entity": "Loolilalu",
+      "title": "Sortie de sélection · Loolilalu",
+      "description": "Salut de clôture puis départ dans le prolongement du tapis de l’aperçu.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-loolilalu"
+    },
+    {
+      "id": "EN-E1-TAUNT-gloinkqueen",
+      "type": "taunt",
+      "entity": "Gloink Queen",
+      "title": "Le nid a son avis",
+      "description": "Le corps se redresse dans les limites de sa morphologie existante. Bouche et regard se portent vers la cible ; aucune minion supplémentaire n’apparaît. Retour au volume de repos sans réduire la taille pour le cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-gloinkqueen"
+    },
+    {
+      "id": "EN-E1-SELECT-gloinkqueen",
+      "type": "selection",
+      "entity": "Gloink Queen",
+      "title": "Entrée de sélection · Gloink Queen",
+      "description": "Le cadrage s’adapte au gabarit de la reine, dont la silhouette reste entière.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-gloinkqueen"
+    },
+    {
+      "id": "EN-E1-DESELECT-gloinkqueen",
+      "type": "deselection",
+      "entity": "Gloink Queen",
+      "title": "Sortie de sélection · Gloink Queen",
+      "description": "Retrait du corps vers le bord d’arrivée, jusqu’au dernier appendice visible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-gloinkqueen"
+    },
+    {
+      "id": "EN-E1-TAUNT-fudge",
+      "type": "taunt",
+      "entity": "The Fudge",
+      "title": "Une bouchée d’attention",
+      "description": "La masse de chocolat s’incline lentement vers l’avant. Un arrêt menaçant met en valeur la bouche et les volumes sans nouveau membre. La masse revient à sa silhouette de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-fudge"
+    },
+    {
+      "id": "EN-E1-SELECT-fudge",
+      "type": "selection",
+      "entity": "The Fudge",
+      "title": "Entrée de sélection · The Fudge",
+      "description": "Arrivée pesante et arrêt lisible ; ancrage au sol maintenu.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-fudge"
+    },
+    {
+      "id": "EN-E1-DESELECT-fudge",
+      "type": "deselection",
+      "entity": "The Fudge",
+      "title": "Sortie de sélection · The Fudge",
+      "description": "Recul compact, puis sortie de toute la masse sans traînée persistante de gameplay.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-fudge"
+    },
+    {
+      "id": "EN-E1-TAUNT-abstractedkaufmo",
+      "type": "taunt",
+      "entity": "Kaufmo — abstraction",
+      "title": "Regard sans réponse",
+      "description": "La silhouette abstraite se ramasse légèrement. Les regards se fixent sur la cible ; aucun masque de clown humain réapparaît. Les appuis reprennent la stance abstraite existante.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-abstractedkaufmo"
+    },
+    {
+      "id": "EN-E1-SELECT-abstractedkaufmo",
+      "type": "selection",
+      "entity": "Kaufmo — abstraction",
+      "title": "Entrée de sélection · Kaufmo — abstraction",
+      "description": "La forme entre silencieusement et suspend ses regards dans le cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-abstractedkaufmo"
+    },
+    {
+      "id": "EN-E1-DESELECT-abstractedkaufmo",
+      "type": "deselection",
+      "entity": "Kaufmo — abstraction",
+      "title": "Sortie de sélection · Kaufmo — abstraction",
+      "description": "Les regards se détournent avant le retrait intégral des appuis.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-abstractedkaufmo"
+    },
+    {
+      "id": "EN-E1-TAUNT-baronmildenhall",
+      "type": "taunt",
+      "entity": "Baron Mildenhall",
+      "title": "Le silence du chasseur",
+      "description": "La silhouette s’oriente avec précision vers la piste. Maintien d’une posture de visée abaissée ou de présence selon l’asset de référence. L’accessoire visible revient à sa position de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-baronmildenhall"
+    },
+    {
+      "id": "EN-E1-SELECT-baronmildenhall",
+      "type": "selection",
+      "entity": "Baron Mildenhall",
+      "title": "Entrée de sélection · Baron Mildenhall",
+      "description": "Apparition d’archive sobre, sans dialogue, conservant costume et équipement visibles.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-baronmildenhall"
+    },
+    {
+      "id": "EN-E1-DESELECT-baronmildenhall",
+      "type": "deselection",
+      "entity": "Baron Mildenhall",
+      "title": "Sortie de sélection · Baron Mildenhall",
+      "description": "L’orientation se ferme puis la silhouette se retire sans scène de résurrection.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-baronmildenhall"
+    },
+    {
+      "id": "EN-E1-TAUNT-queenie",
+      "type": "taunt",
+      "entity": "Queenie",
+      "title": "Un salut de répétition",
+      "description": "La silhouette royale de l’archive se tourne légèrement. Petit signe silencieux de la main, sans regard impliquant un passé inédit. Retour à la pose de la pièce avec base stable.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-queenie"
+    },
+    {
+      "id": "EN-E1-SELECT-queenie",
+      "type": "selection",
+      "entity": "Queenie",
+      "title": "Entrée de sélection · Queenie",
+      "description": "L’archive se présente entièrement, puis s’immobilise dans une révérence discrète.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-queenie"
+    },
+    {
+      "id": "EN-E1-DESELECT-queenie",
+      "type": "deselection",
+      "entity": "Queenie",
+      "title": "Sortie de sélection · Queenie",
+      "description": "La révérence se referme et la pièce recule dans son cadre d’archive.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-queenie"
+    },
+    {
+      "id": "EN-E1-TAUNT-kaufmo",
+      "type": "taunt",
+      "entity": "Kaufmo",
+      "title": "Le numéro attendra",
+      "description": "Une main prépare un salut de clown, puis marque un temps. Posture de présentation tenue, sourire selon le dessin de référence. Le salut se clôt sans changement de visage ou d’état.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-kaufmo"
+    },
+    {
+      "id": "EN-E1-SELECT-kaufmo",
+      "type": "selection",
+      "entity": "Kaufmo",
+      "title": "Entrée de sélection · Kaufmo",
+      "description": "Entrée d’archive, salut unique et arrêt en pose entière.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-kaufmo"
+    },
+    {
+      "id": "EN-E1-DESELECT-kaufmo",
+      "type": "deselection",
+      "entity": "Kaufmo",
+      "title": "Sortie de sélection · Kaufmo",
+      "description": "Salut interrompu par un signe de clôture, puis sortie avec le costume intact.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-kaufmo"
+    },
+    {
+      "id": "EN-E1-TAUNT-ribbit",
+      "type": "taunt",
+      "entity": "Ribbit",
+      "title": "Un bond d’avance",
+      "description": "Le poids se déplace vers un appui, avant un petit rebond de présentation. Mains ouvertes et pose amphibienne liée au dessin, sans langue offensive. Repose des deux appuis et retour à la garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-ribbit"
+    },
+    {
+      "id": "EN-E1-SELECT-ribbit",
+      "type": "selection",
+      "entity": "Ribbit",
+      "title": "Entrée de sélection · Ribbit",
+      "description": "Petit bond d’entrée suivi d’un arrêt souple au centre de la marque.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-ribbit"
+    },
+    {
+      "id": "EN-E1-DESELECT-ribbit",
+      "type": "deselection",
+      "entity": "Ribbit",
+      "title": "Sortie de sélection · Ribbit",
+      "description": "Repli court, regard latéral puis bond vers le bord de sortie.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-ribbit"
+    },
+    {
+      "id": "EN-E1-TAUNT-scratch",
+      "type": "taunt",
+      "entity": "Scratch",
+      "title": "Le défi du chien jaune",
+      "description": "La tête s’incline tandis que l’appui avant se présente. Regard de défi et corps retenu, sans aboiement prétendument officiel. L’appui se retire et le corps revient dans son axe.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-scratch"
+    },
+    {
+      "id": "EN-E1-SELECT-scratch",
+      "type": "selection",
+      "entity": "Scratch",
+      "title": "Entrée de sélection · Scratch",
+      "description": "Arrivée attentive, tête inclinée puis pose entière.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-scratch"
+    },
+    {
+      "id": "EN-E1-DESELECT-scratch",
+      "type": "deselection",
+      "entity": "Scratch",
+      "title": "Sortie de sélection · Scratch",
+      "description": "Dernier coup d’œil vers la piste et départ en suivant son axe naturel.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-scratch"
+    },
+    {
+      "id": "EN-E1-TAUNT-wormo",
+      "type": "taunt",
+      "entity": "Wormo",
+      "title": "Un petit détour",
+      "description": "Le corps souple forme une courbe plus lisible dans son plan. La tête reste élevée, le reste du volume demeure ancré. La courbe s’aplanit progressivement vers la stance.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-wormo"
+    },
+    {
+      "id": "EN-E1-SELECT-wormo",
+      "type": "selection",
+      "entity": "Wormo",
+      "title": "Entrée de sélection · Wormo",
+      "description": "Entrée courbe sans raccourcir le corps pour rentrer dans le portrait.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-wormo"
+    },
+    {
+      "id": "EN-E1-DESELECT-wormo",
+      "type": "deselection",
+      "entity": "Wormo",
+      "title": "Sortie de sélection · Wormo",
+      "description": "Retrait en courbe inverse de direction, sans retourner l’animation d’entrée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-wormo"
+    },
+    {
+      "id": "EN-E1-TAUNT-bizco",
+      "type": "taunt",
+      "entity": "Bizco",
+      "title": "Dur à émietter",
+      "description": "Le biscuit redresse sa silhouette et avance un appui. Geste de défi compact, texture et bords inchangés. Recul de l’appui et reprise de la pose.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-bizco"
+    },
+    {
+      "id": "EN-E1-SELECT-bizco",
+      "type": "selection",
+      "entity": "Bizco",
+      "title": "Entrée de sélection · Bizco",
+      "description": "Petit salut de biscuit, contour entier visible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-bizco"
+    },
+    {
+      "id": "EN-E1-DESELECT-bizco",
+      "type": "deselection",
+      "entity": "Bizco",
+      "title": "Sortie de sélection · Bizco",
+      "description": "Le salut baisse puis la silhouette sort avec ses bords intacts.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-bizco"
+    },
+    {
+      "id": "EN-E1-TAUNT-rattie",
+      "type": "taunt",
+      "entity": "Rattie",
+      "title": "Juste à côté",
+      "description": "Le regard glisse vers un côté, accompagné d’un léger pivot. Geste bref de main et posture vive, queue conservée si visible dans la référence. La main revient et le poids se recentre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-rattie"
+    },
+    {
+      "id": "EN-E1-SELECT-rattie",
+      "type": "selection",
+      "entity": "Rattie",
+      "title": "Entrée de sélection · Rattie",
+      "description": "Entrée rapide puis immobilité précise sur la marque.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-rattie"
+    },
+    {
+      "id": "EN-E1-DESELECT-rattie",
+      "type": "deselection",
+      "entity": "Rattie",
+      "title": "Sortie de sélection · Rattie",
+      "description": "Pivot propre et retrait jusqu’à disparition du dernier détail de silhouette.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-rattie"
+    },
+    {
+      "id": "EN-E1-TAUNT-spike",
+      "type": "taunt",
+      "entity": "Spike",
+      "title": "La pointe de l’attente",
+      "description": "La silhouette piquante incline son axe vers la cible. Pose ramassée, pointes lisibles dans le contour. L’axe revient à la verticale de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-spike"
+    },
+    {
+      "id": "EN-E1-SELECT-spike",
+      "type": "selection",
+      "entity": "Spike",
+      "title": "Entrée de sélection · Spike",
+      "description": "Entrée mesurée pour laisser toutes les pointes dans le cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-spike"
+    },
+    {
+      "id": "EN-E1-DESELECT-spike",
+      "type": "deselection",
+      "entity": "Spike",
+      "title": "Sortie de sélection · Spike",
+      "description": "Recul par le bord d’arrivée sans rotation qui couperait les extrémités.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-spike"
+    },
+    {
+      "id": "EN-E1-TAUNT-pinkcyclops",
+      "type": "taunt",
+      "entity": "Pink Furry Cyclops",
+      "title": "Un seul regard suffit",
+      "description": "Le grand corps s’approche de sa marque sans agrandir l’œil. L’œil unique se fixe ; geste de défi avec les membres réellement visibles. Le corps reprend ses appuis de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-pinkcyclops"
+    },
+    {
+      "id": "EN-E1-SELECT-pinkcyclops",
+      "type": "selection",
+      "entity": "Pink Furry Cyclops",
+      "title": "Entrée de sélection · Pink Furry Cyclops",
+      "description": "La caméra de présentation accueille le grand gabarit sans recadrer sa tête.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-pinkcyclops"
+    },
+    {
+      "id": "EN-E1-DESELECT-pinkcyclops",
+      "type": "deselection",
+      "entity": "Pink Furry Cyclops",
+      "title": "Sortie de sélection · Pink Furry Cyclops",
+      "description": "Le regard se détourne et le corps recule en entier.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-pinkcyclops"
+    },
+    {
+      "id": "EN-E1-TAUNT-yellowclown",
+      "type": "taunt",
+      "entity": "Frowning Yellow Clown",
+      "title": "Toujours pas amusé",
+      "description": "Le clown ouvre un bras vers la piste puis suspend le geste. Expression contrariée du dessin, posture retenue. Le bras redescend sans transformer le visage en sourire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-yellowclown"
+    },
+    {
+      "id": "EN-E1-SELECT-yellowclown",
+      "type": "selection",
+      "entity": "Frowning Yellow Clown",
+      "title": "Entrée de sélection · Frowning Yellow Clown",
+      "description": "Présentation droite et regard sceptique, sans réplique officielle.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-yellowclown"
+    },
+    {
+      "id": "EN-E1-DESELECT-yellowclown",
+      "type": "deselection",
+      "entity": "Frowning Yellow Clown",
+      "title": "Sortie de sélection · Frowning Yellow Clown",
+      "description": "Petit signe de refus puis départ sans gag imposé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-yellowclown"
+    },
+    {
+      "id": "EN-E1-TAUNT-oyster",
+      "type": "taunt",
+      "entity": "The Oyster",
+      "title": "La réponse reste fermée",
+      "description": "La coquille change légèrement son inclinaison sans révéler d’anatomie cachée. Ouverture seulement si le dessin retenu l’atteste ; sinon coque tenue. Retour à la position de garde de la coquille.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-oyster"
+    },
+    {
+      "id": "EN-E1-SELECT-oyster",
+      "type": "selection",
+      "entity": "The Oyster",
+      "title": "Entrée de sélection · The Oyster",
+      "description": "Présentation complète du volume avec bord et ouverture de référence lisibles.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-oyster"
+    },
+    {
+      "id": "EN-E1-DESELECT-oyster",
+      "type": "deselection",
+      "entity": "The Oyster",
+      "title": "Sortie de sélection · The Oyster",
+      "description": "La coquille se réoriente puis sort ; aucun claquement offensif ajouté.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-oyster"
+    },
+    {
+      "id": "EN-E1-TAUNT-bulbcreature",
+      "type": "taunt",
+      "entity": "Light Green Bulb Creature",
+      "title": "Une idée en suspens",
+      "description": "La tête en bulbe se penche légèrement vers le côté. Le contour du bulbe est mis en valeur, sans augmentation de luminosité agressive. Retour à l’axe de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-bulbcreature"
+    },
+    {
+      "id": "EN-E1-SELECT-bulbcreature",
+      "type": "selection",
+      "entity": "Light Green Bulb Creature",
+      "title": "Entrée de sélection · Light Green Bulb Creature",
+      "description": "Entrée douce et arrêt pour exposer le bulbe et sa couleur.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-bulbcreature"
+    },
+    {
+      "id": "EN-E1-DESELECT-bulbcreature",
+      "type": "deselection",
+      "entity": "Light Green Bulb Creature",
+      "title": "Sortie de sélection · Light Green Bulb Creature",
+      "description": "Inclinaison inverse puis retrait sans effet de flash.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-bulbcreature"
+    },
+    {
+      "id": "EN-E1-TAUNT-abel",
+      "type": "taunt",
+      "entity": "Abel",
+      "title": "Le programme patiente",
+      "description": "Un salut contenu accompagne une légère avancée. Pose d’attente, accessoires strictement liés à l’apparence sélectionnée. Le salut se range et le corps reprend sa garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-abel"
+    },
+    {
+      "id": "EN-E1-SELECT-abel",
+      "type": "selection",
+      "entity": "Abel",
+      "title": "Entrée de sélection · Abel",
+      "description": "Entrée d’archive lisible, présentation de la tenue courante.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-abel"
+    },
+    {
+      "id": "EN-E1-DESELECT-abel",
+      "type": "deselection",
+      "entity": "Abel",
+      "title": "Sortie de sélection · Abel",
+      "description": "Geste de clôture puis sortie ; le chariot éventuel suit sa propre fiche de costume.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-abel"
+    },
+    {
+      "id": "EN-E1-TAUNT-max",
+      "type": "taunt",
+      "entity": "Max",
+      "title": "Le convoi ne s’arrête pas",
+      "description": "Un bras désigne brièvement l’arrière du cadre. Appui sûr, tête relevée vers l’adversaire. Le bras se replie et retrouve la garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-max"
+    },
+    {
+      "id": "EN-E1-SELECT-max",
+      "type": "selection",
+      "entity": "Max",
+      "title": "Entrée de sélection · Max",
+      "description": "Entrée de convoyeur et signe bref à un partenaire hors champ.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-max"
+    },
+    {
+      "id": "EN-E1-DESELECT-max",
+      "type": "deselection",
+      "entity": "Max",
+      "title": "Sortie de sélection · Max",
+      "description": "Le signe devient un appel de départ puis sortie vers le même bord.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-max"
+    },
+    {
+      "id": "EN-E1-TAUNT-chad",
+      "type": "taunt",
+      "entity": "Chad",
+      "title": "Toute la largeur",
+      "description": "Le corps ouvre sa posture avec les pieds dans sa base réelle. Défi par la présence, sans gonfler artificiellement la musculature. Retour à la largeur de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-chad"
+    },
+    {
+      "id": "EN-E1-SELECT-chad",
+      "type": "selection",
+      "entity": "Chad",
+      "title": "Entrée de sélection · Chad",
+      "description": "Arrivée pesante puis pose de trois quarts conservant son volume.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-chad"
+    },
+    {
+      "id": "EN-E1-DESELECT-chad",
+      "type": "deselection",
+      "entity": "Chad",
+      "title": "Sortie de sélection · Chad",
+      "description": "Recentrage des appuis et départ sans écraser le décor.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-chad"
+    },
+    {
+      "id": "EN-E1-TAUNT-orbsman",
+      "type": "taunt",
+      "entity": "Orbsman",
+      "title": "Tout tient ensemble",
+      "description": "Les volumes du corps s’orientent ensemble, sans se séparer. Salut compact mettant en valeur les orbes visibles. Retour des volumes à leurs emplacements de référence.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-orbsman"
+    },
+    {
+      "id": "EN-E1-SELECT-orbsman",
+      "type": "selection",
+      "entity": "Orbsman",
+      "title": "Entrée de sélection · Orbsman",
+      "description": "Entrée de la silhouette entière et regard vers le second artiste.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-orbsman"
+    },
+    {
+      "id": "EN-E1-DESELECT-orbsman",
+      "type": "deselection",
+      "entity": "Orbsman",
+      "title": "Sortie de sélection · Orbsman",
+      "description": "Rotation douce du groupe de volumes puis sortie unifiée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-orbsman"
+    },
+    {
+      "id": "EN-E1-TAUNT-ming",
+      "type": "taunt",
+      "entity": "Ming",
+      "title": "Prête pour le repère",
+      "description": "Un petit signe de main accompagne une pose d’équilibre. Expression et tenue suivent le visuel équipé ; trophée uniquement s’il appartient au costume. La main reprend sa position de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-ming"
+    },
+    {
+      "id": "EN-E1-SELECT-ming",
+      "type": "selection",
+      "entity": "Ming",
+      "title": "Entrée de sélection · Ming",
+      "description": "Entrée vive, arrêt bref et présentation de la tenue.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-ming"
+    },
+    {
+      "id": "EN-E1-DESELECT-ming",
+      "type": "deselection",
+      "entity": "Ming",
+      "title": "Sortie de sélection · Ming",
+      "description": "Geste d’au revoir et départ sans laisser l’accessoire en place.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-ming"
+    },
+    {
+      "id": "EN-E1-TAUNT-marthamildenhall",
+      "type": "taunt",
+      "entity": "Martha Mildenhall",
+      "title": "La maison écoute",
+      "description": "La silhouette se tourne vers un bruit suggéré par le regard. Maintien silencieux de la présence dans le costume de référence. Le regard revient vers la piste.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-marthamildenhall"
+    },
+    {
+      "id": "EN-E1-SELECT-marthamildenhall",
+      "type": "selection",
+      "entity": "Martha Mildenhall",
+      "title": "Entrée de sélection · Martha Mildenhall",
+      "description": "Entrée calme et pose distincte de celle du Baron.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-marthamildenhall"
+    },
+    {
+      "id": "EN-E1-DESELECT-marthamildenhall",
+      "type": "deselection",
+      "entity": "Martha Mildenhall",
+      "title": "Sortie de sélection · Martha Mildenhall",
+      "description": "Légère inclinaison puis retrait de la silhouette entière.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-marthamildenhall"
+    },
+    {
+      "id": "EN-E1-TAUNT-ghostly",
+      "type": "taunt",
+      "entity": "Ghostly",
+      "title": "Encore ici",
+      "description": "Le volume spectral se penche hors de son axe. Une suspension attentive, sans disparition de la hurtbox. Retour à la hauteur de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-ghostly"
+    },
+    {
+      "id": "EN-E1-SELECT-ghostly",
+      "type": "selection",
+      "entity": "Ghostly",
+      "title": "Entrée de sélection · Ghostly",
+      "description": "Flottement d’entrée et arrêt ; aspirateur seulement avec la tenue correspondante.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-ghostly"
+    },
+    {
+      "id": "EN-E1-DESELECT-ghostly",
+      "type": "deselection",
+      "entity": "Ghostly",
+      "title": "Sortie de sélection · Ghostly",
+      "description": "Retrait flotté ; accessoire et éventuel effet décoratif quittent ensemble l’aperçu.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-ghostly"
+    },
+    {
+      "id": "EN-E1-TAUNT-angel",
+      "type": "taunt",
+      "entity": "Angel",
+      "title": "Un signe discret",
+      "description": "Les membres réellement présents s’ouvrent légèrement. Salut silencieux encadré par le contour du personnage. Les membres reviennent au repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-angel"
+    },
+    {
+      "id": "EN-E1-SELECT-angel",
+      "type": "selection",
+      "entity": "Angel",
+      "title": "Entrée de sélection · Angel",
+      "description": "Présentation entière avec les éléments du dessin conservés.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-angel"
+    },
+    {
+      "id": "EN-E1-DESELECT-angel",
+      "type": "deselection",
+      "entity": "Angel",
+      "title": "Sortie de sélection · Angel",
+      "description": "Les éléments ouverts se rassemblent puis le corps se retire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-angel"
+    },
+    {
+      "id": "EN-E1-TAUNT-disappearingguy",
+      "type": "taunt",
+      "entity": "Disappearing Guy",
+      "title": "Vous m’aviez vu ?",
+      "description": "La silhouette se décale juste assez pour jouer avec le bord du cadre. Pause à demi détournée ; aucune invisibilité de gameplay. Retour au centre de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-disappearingguy"
+    },
+    {
+      "id": "EN-E1-SELECT-disappearingguy",
+      "type": "selection",
+      "entity": "Disappearing Guy",
+      "title": "Entrée de sélection · Disappearing Guy",
+      "description": "Entrée claire puis petit regard de côté, micro seulement dans la tenue associée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-disappearingguy"
+    },
+    {
+      "id": "EN-E1-DESELECT-disappearingguy",
+      "type": "deselection",
+      "entity": "Disappearing Guy",
+      "title": "Sortie de sélection · Disappearing Guy",
+      "description": "Départ derrière le bord réel de l’aperçu, suivi du nettoyage complet des effets.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-disappearingguy"
+    },
+    {
+      "id": "EN-E1-TAUNT-committeemember",
+      "type": "taunt",
+      "entity": "Committee Member",
+      "title": "Point suivant",
+      "description": "Un geste mesuré invite à poursuivre. Posture d’attente officielle dans les seuls habits du dessin. Le geste s’achève et les mains retournent au repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-committeemember"
+    },
+    {
+      "id": "EN-E1-SELECT-committeemember",
+      "type": "selection",
+      "entity": "Committee Member",
+      "title": "Entrée de sélection · Committee Member",
+      "description": "Entrée posée, puis présentation de profil léger.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-committeemember"
+    },
+    {
+      "id": "EN-E1-DESELECT-committeemember",
+      "type": "deselection",
+      "entity": "Committee Member",
+      "title": "Sortie de sélection · Committee Member",
+      "description": "Signe de clôture et départ ; aucun document canonique inventé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-committeemember"
+    },
+    {
+      "id": "EN-E1-TAUNT-shrimpnpc",
+      "type": "taunt",
+      "entity": "Shrimp NPC",
+      "title": "Petite présence",
+      "description": "Le corps se relève selon sa courbe naturelle. Les appendices attestés dessinent une attente courte. Les appuis reviennent sur la marque.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-shrimpnpc"
+    },
+    {
+      "id": "EN-E1-SELECT-shrimpnpc",
+      "type": "selection",
+      "entity": "Shrimp NPC",
+      "title": "Entrée de sélection · Shrimp NPC",
+      "description": "Entrée latérale, contour de crevette lisible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-shrimpnpc"
+    },
+    {
+      "id": "EN-E1-DESELECT-shrimpnpc",
+      "type": "deselection",
+      "entity": "Shrimp NPC",
+      "title": "Sortie de sélection · Shrimp NPC",
+      "description": "Retrait latéral jusqu’au dernier appendice, sans ajout de jambe.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-shrimpnpc"
+    },
+    {
+      "id": "EN-E1-TAUNT-chineseroomnpc",
+      "type": "taunt",
+      "entity": "Chinese Room NPC",
+      "title": "La consigne est prête",
+      "description": "Le personnage pointe la zone de jeu avec un geste neutre. Attente silencieuse, aucun signe culturel inventé. Le geste se range proprement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-chineseroomnpc"
+    },
+    {
+      "id": "EN-E1-SELECT-chineseroomnpc",
+      "type": "selection",
+      "entity": "Chinese Room NPC",
+      "title": "Entrée de sélection · Chinese Room NPC",
+      "description": "Présentation sobre du modèle d’archive sans décor cliché.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-chineseroomnpc"
+    },
+    {
+      "id": "EN-E1-DESELECT-chineseroomnpc",
+      "type": "deselection",
+      "entity": "Chinese Room NPC",
+      "title": "Sortie de sélection · Chinese Room NPC",
+      "description": "Salut de clôture puis sortie sur le bord d’arrivée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-chineseroomnpc"
+    },
+    {
+      "id": "EN-E1-TAUNT-blueai",
+      "type": "taunt",
+      "entity": "Blue AI",
+      "title": "En attente de choix",
+      "description": "L’axe du corps se redresse et le regard se fixe. Pose d’attente bleue, sans scanner offensif ni écran ajouté. Retour au volume de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-blueai"
+    },
+    {
+      "id": "EN-E1-SELECT-blueai",
+      "type": "selection",
+      "entity": "Blue AI",
+      "title": "Entrée de sélection · Blue AI",
+      "description": "Entrée régulière et arrêt net, accent sur la silhouette.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-blueai"
+    },
+    {
+      "id": "EN-E1-DESELECT-blueai",
+      "type": "deselection",
+      "entity": "Blue AI",
+      "title": "Sortie de sélection · Blue AI",
+      "description": "Geste bref puis retrait ; aucun effacement de mémoire raconté.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-blueai"
+    },
+    {
+      "id": "EN-E1-TAUNT-cookiebutterfly",
+      "type": "taunt",
+      "entity": "Cookie Butterfly",
+      "title": "Un battement de patience",
+      "description": "Les ailes visibles s’ouvrent dans leur articulation prévue. Pause légère, motif biscuit conservé. Les ailes reviennent à la pose de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-cookiebutterfly"
+    },
+    {
+      "id": "EN-E1-SELECT-cookiebutterfly",
+      "type": "selection",
+      "entity": "Cookie Butterfly",
+      "title": "Entrée de sélection · Cookie Butterfly",
+      "description": "Arrivée volante courte et centrage du contour entier.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-cookiebutterfly"
+    },
+    {
+      "id": "EN-E1-DESELECT-cookiebutterfly",
+      "type": "deselection",
+      "entity": "Cookie Butterfly",
+      "title": "Sortie de sélection · Cookie Butterfly",
+      "description": "Départ en courbe avec les deux ailes visibles jusqu’au bord.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-cookiebutterfly"
+    },
+    {
+      "id": "EN-E1-TAUNT-gummyelephant",
+      "type": "taunt",
+      "entity": "Gummy Elephant",
+      "title": "Le passage est occupé",
+      "description": "Le grand corps se tourne légèrement vers la cible. Défi par les volumes du dessin ; trompe seulement dans sa mobilité attestée. Retour aux appuis de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-gummyelephant"
+    },
+    {
+      "id": "EN-E1-SELECT-gummyelephant",
+      "type": "selection",
+      "entity": "Gummy Elephant",
+      "title": "Entrée de sélection · Gummy Elephant",
+      "description": "Entrée large sans compresser le gabarit pour le portrait.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-gummyelephant"
+    },
+    {
+      "id": "EN-E1-DESELECT-gummyelephant",
+      "type": "deselection",
+      "entity": "Gummy Elephant",
+      "title": "Sortie de sélection · Gummy Elephant",
+      "description": "Retrait calme, contour entier conservé jusqu’à la sortie.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-gummyelephant"
+    },
+    {
+      "id": "EN-E1-TAUNT-giantcentipede",
+      "type": "taunt",
+      "entity": "Giant Centipede",
+      "title": "Un temps de plus",
+      "description": "La tête se relève, les segments suivent une courbe régulière. Maintien des segments existants, sans ajouter de pattes. Retour à la courbe de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-giantcentipede"
+    },
+    {
+      "id": "EN-E1-SELECT-giantcentipede",
+      "type": "selection",
+      "entity": "Giant Centipede",
+      "title": "Entrée de sélection · Giant Centipede",
+      "description": "Entrée segmentée limitée au cadre et à la longueur enregistrée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-giantcentipede"
+    },
+    {
+      "id": "EN-E1-DESELECT-giantcentipede",
+      "type": "deselection",
+      "entity": "Giant Centipede",
+      "title": "Sortie de sélection · Giant Centipede",
+      "description": "La tête quitte le cadre puis les derniers segments suivent sans coupe brutale.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-giantcentipede"
+    },
+    {
+      "id": "EN-E1-TAUNT-spudsycustomer",
+      "type": "taunt",
+      "entity": "Spudsy Customer",
+      "title": "Ma commande ?",
+      "description": "Une main se lève comme pour attirer l’attention. Posture d’attente impatiente sans nouvel objet consommable. La main redescend et le regard retourne au duel.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-spudsycustomer"
+    },
+    {
+      "id": "EN-E1-SELECT-spudsycustomer",
+      "type": "selection",
+      "entity": "Spudsy Customer",
+      "title": "Entrée de sélection · Spudsy Customer",
+      "description": "Entrée de client et regard vers le comptoir suggéré hors champ.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-spudsycustomer"
+    },
+    {
+      "id": "EN-E1-DESELECT-spudsycustomer",
+      "type": "deselection",
+      "entity": "Spudsy Customer",
+      "title": "Sortie de sélection · Spudsy Customer",
+      "description": "Un dernier geste d’attente puis retrait vers le bord de l’aperçu.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-spudsycustomer"
+    },
+    {
+      "id": "EN-E1-TAUNT-candyguardcyan",
+      "type": "taunt",
+      "entity": "Candy Guard Cyan",
+      "title": "Le seuil est gardé",
+      "description": "L’équipement visible est remis dans son axe de repos. Salut de garde compact, couleur cyan conservée. Retour à une garde lisible sans attaque.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-candyguardcyan"
+    },
+    {
+      "id": "EN-E1-SELECT-candyguardcyan",
+      "type": "selection",
+      "entity": "Candy Guard Cyan",
+      "title": "Entrée de sélection · Candy Guard Cyan",
+      "description": "Entrée mesurée et salut orienté vers la piste.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-candyguardcyan"
+    },
+    {
+      "id": "EN-E1-DESELECT-candyguardcyan",
+      "type": "deselection",
+      "entity": "Candy Guard Cyan",
+      "title": "Sortie de sélection · Candy Guard Cyan",
+      "description": "Salut achevé puis retrait en gardant l’équipement près du corps.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-candyguardcyan"
+    },
+    {
+      "id": "EN-E1-TAUNT-candyguardblue",
+      "type": "taunt",
+      "entity": "Candy Guard Blue",
+      "title": "La ligne reste droite",
+      "description": "Le corps marque un petit pivot de contrôle. Pose précise mettant en valeur la couleur bleue. Retour sur la ligne de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-candyguardblue"
+    },
+    {
+      "id": "EN-E1-SELECT-candyguardblue",
+      "type": "selection",
+      "entity": "Candy Guard Blue",
+      "title": "Entrée de sélection · Candy Guard Blue",
+      "description": "Arrivée sur une trajectoire droite et arrêt propre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-candyguardblue"
+    },
+    {
+      "id": "EN-E1-DESELECT-candyguardblue",
+      "type": "deselection",
+      "entity": "Candy Guard Blue",
+      "title": "Sortie de sélection · Candy Guard Blue",
+      "description": "Pivot de sortie puis marche jusqu’au bord, équipement conservé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-candyguardblue"
+    },
+    {
+      "id": "EN-E1-TAUNT-candyguardpurple",
+      "type": "taunt",
+      "entity": "Candy Guard Violet",
+      "title": "Veuillez patienter",
+      "description": "Une paume ou l’appendice disponible indique un arrêt. Geste de contrôle bref avec tenue violette inchangée. Le geste se range et l’axe se recentre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-candyguardpurple"
+    },
+    {
+      "id": "EN-E1-SELECT-candyguardpurple",
+      "type": "selection",
+      "entity": "Candy Guard Violet",
+      "title": "Entrée de sélection · Candy Guard Violet",
+      "description": "Entrée puis geste de contrôle de la piste.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-candyguardpurple"
+    },
+    {
+      "id": "EN-E1-DESELECT-candyguardpurple",
+      "type": "deselection",
+      "entity": "Candy Guard Violet",
+      "title": "Sortie de sélection · Candy Guard Violet",
+      "description": "Le geste devient une invitation au prochain choix puis retrait.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-candyguardpurple"
+    },
+    {
+      "id": "EN-E1-TAUNT-gummyworm",
+      "type": "taunt",
+      "entity": "Gummy Worm",
+      "title": "Encore un virage",
+      "description": "Le corps gommeux décrit une courbe basse. Tête tournée vers la cible, texture conservée. La courbe revient sans rebond élastique excessif.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-gummyworm"
+    },
+    {
+      "id": "EN-E1-SELECT-gummyworm",
+      "type": "selection",
+      "entity": "Gummy Worm",
+      "title": "Entrée de sélection · Gummy Worm",
+      "description": "Entrée au ras du sol, longueur du dessin maintenue.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-gummyworm"
+    },
+    {
+      "id": "EN-E1-DESELECT-gummyworm",
+      "type": "deselection",
+      "entity": "Gummy Worm",
+      "title": "Sortie de sélection · Gummy Worm",
+      "description": "Retrait par courbe latérale jusqu’au dernier segment.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-gummyworm"
+    },
+    {
+      "id": "EN-E1-TAUNT-barrelmonkey",
+      "type": "taunt",
+      "entity": "Barrel Monkey",
+      "title": "Le prochain numéro",
+      "description": "Le personnage ajuste son appui autour du tonneau visible. Petit salut ; tonneau fixe et intact. Retour au contact prévu avec le tonneau.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-barrelmonkey"
+    },
+    {
+      "id": "EN-E1-SELECT-barrelmonkey",
+      "type": "selection",
+      "entity": "Barrel Monkey",
+      "title": "Entrée de sélection · Barrel Monkey",
+      "description": "Entrée du personnage et de son accessoire comme une seule famille de présentation.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-barrelmonkey"
+    },
+    {
+      "id": "EN-E1-DESELECT-barrelmonkey",
+      "type": "deselection",
+      "entity": "Barrel Monkey",
+      "title": "Sortie de sélection · Barrel Monkey",
+      "description": "Salut refermé puis retrait commun du personnage et du tonneau.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-barrelmonkey"
+    },
+    {
+      "id": "EN-E1-TAUNT-jeffery",
+      "type": "taunt",
+      "entity": "Jeffery",
+      "title": "Je suis toujours là",
+      "description": "Un léger déplacement ouvre sa silhouette vers la piste. Salut réservé, visage fidèle au dessin d’archive. Retour à la posture de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-jeffery"
+    },
+    {
+      "id": "EN-E1-SELECT-jeffery",
+      "type": "selection",
+      "entity": "Jeffery",
+      "title": "Entrée de sélection · Jeffery",
+      "description": "Entrée sans effet spectaculaire, puis regard direct.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-jeffery"
+    },
+    {
+      "id": "EN-E1-DESELECT-jeffery",
+      "type": "deselection",
+      "entity": "Jeffery",
+      "title": "Sortie de sélection · Jeffery",
+      "description": "Petit signe silencieux et départ simple.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-jeffery"
+    },
+    {
+      "id": "EN-E1-TAUNT-mildenhallsouls",
+      "type": "taunt",
+      "entity": "Mildenhall Souls",
+      "title": "Un souffle à distance",
+      "description": "Le groupe de formes spectrales s’oriente dans un même sens. Suspension non verbale, pas de visage humain nouveau. Les formes reviennent à leur composition de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-mildenhallsouls"
+    },
+    {
+      "id": "EN-E1-SELECT-mildenhallsouls",
+      "type": "selection",
+      "entity": "Mildenhall Souls",
+      "title": "Entrée de sélection · Mildenhall Souls",
+      "description": "Apparition d’archive groupée avec limites et nombre de formes du dessin.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-mildenhallsouls"
+    },
+    {
+      "id": "EN-E1-DESELECT-mildenhallsouls",
+      "type": "deselection",
+      "entity": "Mildenhall Souls",
+      "title": "Sortie de sélection · Mildenhall Souls",
+      "description": "Retrait commun sans laisser un esprit autonome dans le menu.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-mildenhallsouls"
+    },
+    {
+      "id": "EN-E1-TAUNT-redmannequin",
+      "type": "taunt",
+      "entity": "Red Mannequin",
+      "title": "Repère rouge",
+      "description": "Le mannequin pivote légèrement sur sa marque. Geste de défi géométrique, sans visage animé ajouté. Retour aux articulations de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-redmannequin"
+    },
+    {
+      "id": "EN-E1-SELECT-redmannequin",
+      "type": "selection",
+      "entity": "Red Mannequin",
+      "title": "Entrée de sélection · Red Mannequin",
+      "description": "Présentation en deux appuis, accent rouge conservé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-redmannequin"
+    },
+    {
+      "id": "EN-E1-DESELECT-redmannequin",
+      "type": "deselection",
+      "entity": "Red Mannequin",
+      "title": "Sortie de sélection · Red Mannequin",
+      "description": "Rotation de sortie et départ, sans chute ou dommage.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-redmannequin"
+    },
+    {
+      "id": "EN-E1-TAUNT-orangemannequin",
+      "type": "taunt",
+      "entity": "Orange Mannequin",
+      "title": "Repère orange",
+      "description": "Le mannequin se redresse de façon mécanique. Pause symétrique montrant le contour orange. Recentrage des articulations.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-orangemannequin"
+    },
+    {
+      "id": "EN-E1-SELECT-orangemannequin",
+      "type": "selection",
+      "entity": "Orange Mannequin",
+      "title": "Entrée de sélection · Orange Mannequin",
+      "description": "Entrée lente suivie d’un arrêt stable.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-orangemannequin"
+    },
+    {
+      "id": "EN-E1-DESELECT-orangemannequin",
+      "type": "deselection",
+      "entity": "Orange Mannequin",
+      "title": "Sortie de sélection · Orange Mannequin",
+      "description": "Bras ramenés près du corps puis marche de sortie.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-orangemannequin"
+    },
+    {
+      "id": "EN-E1-TAUNT-yellowmannequin",
+      "type": "taunt",
+      "entity": "Yellow Mannequin",
+      "title": "Repère jaune",
+      "description": "Un bras désigne une ligne imaginaire du ring. Pose de contrôle, contour jaune entier visible. Le bras revient sans déformation des articulations.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-yellowmannequin"
+    },
+    {
+      "id": "EN-E1-SELECT-yellowmannequin",
+      "type": "selection",
+      "entity": "Yellow Mannequin",
+      "title": "Entrée de sélection · Yellow Mannequin",
+      "description": "Entrée latérale et pose ouverte vers le duel.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-yellowmannequin"
+    },
+    {
+      "id": "EN-E1-DESELECT-yellowmannequin",
+      "type": "deselection",
+      "entity": "Yellow Mannequin",
+      "title": "Sortie de sélection · Yellow Mannequin",
+      "description": "La pose se ferme puis le mannequin recule.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-yellowmannequin"
+    },
+    {
+      "id": "EN-E1-TAUNT-magentamannequin",
+      "type": "taunt",
+      "entity": "Magenta Mannequin",
+      "title": "Repère magenta",
+      "description": "Le mannequin tourne la tête ou son volume supérieur vers la cible. Une pose précise dans l’axe, sans mécanisme interne révélé. Retour au repère neutre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-magentamannequin"
+    },
+    {
+      "id": "EN-E1-SELECT-magentamannequin",
+      "type": "selection",
+      "entity": "Magenta Mannequin",
+      "title": "Entrée de sélection · Magenta Mannequin",
+      "description": "Présentation de trois quarts, contours magenta inchangés.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-magentamannequin"
+    },
+    {
+      "id": "EN-E1-DESELECT-magentamannequin",
+      "type": "deselection",
+      "entity": "Magenta Mannequin",
+      "title": "Sortie de sélection · Magenta Mannequin",
+      "description": "Un pas de côté précède le retrait derrière le cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-magentamannequin"
+    },
+    {
+      "id": "EN-E1-TAUNT-cellarabstraction",
+      "type": "taunt",
+      "entity": "Abstraction du cellier",
+      "title": "Les regards se rassemblent",
+      "description": "Les appuis se resserrent dans la masse du cellier. Regards orientés ensemble, sans visage humain ou intention verbalisée. Retour aux appuis répartis de la stance.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-cellarabstraction"
+    },
+    {
+      "id": "EN-E1-SELECT-cellarabstraction",
+      "type": "selection",
+      "entity": "Abstraction du cellier",
+      "title": "Entrée de sélection · Abstraction du cellier",
+      "description": "Entrée silencieuse de toute la masse, cadrage adapté au gabarit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-cellarabstraction"
+    },
+    {
+      "id": "EN-E1-DESELECT-cellarabstraction",
+      "type": "deselection",
+      "entity": "Abstraction du cellier",
+      "title": "Sortie de sélection · Abstraction du cellier",
+      "description": "Les regards quittent la cible avant le retrait de la masse entière.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-cellarabstraction"
+    },
+    {
+      "id": "EN-E1-TAUNT-aquaticabstraction",
+      "type": "taunt",
+      "entity": "Abstraction aquatique",
+      "title": "Le ressac attend",
+      "description": "Les appendices aquatiques se replient dans leur contour. Suspension de courant, reflets sans flash. Les appendices reviennent à leurs positions d’ancrage.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-aquaticabstraction"
+    },
+    {
+      "id": "EN-E1-SELECT-aquaticabstraction",
+      "type": "selection",
+      "entity": "Abstraction aquatique",
+      "title": "Entrée de sélection · Abstraction aquatique",
+      "description": "Entrée horizontale laissant visibles les longs appendices.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-aquaticabstraction"
+    },
+    {
+      "id": "EN-E1-DESELECT-aquaticabstraction",
+      "type": "deselection",
+      "entity": "Abstraction aquatique",
+      "title": "Sortie de sélection · Abstraction aquatique",
+      "description": "Retrait dans le même plan, sans coupe ni transformation en liquide.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-aquaticabstraction"
+    },
+    {
+      "id": "EN-E1-TAUNT-abstractedjax",
+      "type": "taunt",
+      "entity": "Jax — abstraction",
+      "title": "Le contour s’arrête",
+      "description": "La grande silhouette abstraite se fige après une inclinaison. Regards fixes et silence ; aucun sourire humain restauré. Les appuis reprennent la pose abstraite.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-abstractedjax"
+    },
+    {
+      "id": "EN-E1-SELECT-abstractedjax",
+      "type": "selection",
+      "entity": "Jax — abstraction",
+      "title": "Entrée de sélection · Jax — abstraction",
+      "description": "Entrée oblique contenue, jamais de réplique de Jax humain.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-abstractedjax"
+    },
+    {
+      "id": "EN-E1-DESELECT-abstractedjax",
+      "type": "deselection",
+      "entity": "Jax — abstraction",
+      "title": "Sortie de sélection · Jax — abstraction",
+      "description": "Le contour se détourne puis quitte entièrement le cadre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-abstractedjax"
+    },
+    {
+      "id": "EN-E1-TAUNT-abstractedqueenie",
+      "type": "taunt",
+      "entity": "Queenie — abstraction",
+      "title": "La veille silencieuse",
+      "description": "Le corps s’abaisse légèrement sans modifier sa morphologie. Regards retenus ; luminosité adaptée à la tenue calme ou de base. Retour à la stance de la forme abstraite choisie.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-abstractedqueenie"
+    },
+    {
+      "id": "EN-E1-SELECT-abstractedqueenie",
+      "type": "selection",
+      "entity": "Queenie — abstraction",
+      "title": "Entrée de sélection · Queenie — abstraction",
+      "description": "Entrée basse et lente, sans reconstitution de la pièce humaine.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-abstractedqueenie"
+    },
+    {
+      "id": "EN-E1-DESELECT-abstractedqueenie",
+      "type": "deselection",
+      "entity": "Queenie — abstraction",
+      "title": "Sortie de sélection · Queenie — abstraction",
+      "description": "Repli calme, regards détournés et retrait continu.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-abstractedqueenie"
+    },
+    {
+      "id": "EN-E1-TAUNT-abstractedribbit",
+      "type": "taunt",
+      "entity": "Ribbit — abstraction",
+      "title": "Le bond suspendu",
+      "description": "Les appuis de l’archive se ramassent. Une suspension basse prépare un mouvement qui ne frappe pas. Les appuis reprennent la distance de garde.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-abstractedribbit"
+    },
+    {
+      "id": "EN-E1-SELECT-abstractedribbit",
+      "type": "selection",
+      "entity": "Ribbit — abstraction",
+      "title": "Entrée de sélection · Ribbit — abstraction",
+      "description": "Entrée au gabarit abstrait puis arrêt complet.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-abstractedribbit"
+    },
+    {
+      "id": "EN-E1-DESELECT-abstractedribbit",
+      "type": "deselection",
+      "entity": "Ribbit — abstraction",
+      "title": "Sortie de sélection · Ribbit — abstraction",
+      "description": "Repli des appuis et départ latéral, sans retour à la grenouille de base.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-abstractedribbit"
+    },
+    {
+      "id": "EN-E1-TAUNT-originalabstractedpomni",
+      "type": "taunt",
+      "entity": "Pomni — abstraction originale",
+      "title": "Le détour immobile",
+      "description": "Les arches abstraites se tournent autour d’un vide de composition. Regards distribués autour du contour, pas de véritable portail. Les appuis se réalignent sur la stance.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-originalabstractedpomni"
+    },
+    {
+      "id": "EN-E1-SELECT-originalabstractedpomni",
+      "type": "selection",
+      "entity": "Pomni — abstraction originale",
+      "title": "Entrée de sélection · Pomni — abstraction originale",
+      "description": "La forme originale entre en laissant son contour entier visible.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-originalabstractedpomni"
+    },
+    {
+      "id": "EN-E1-DESELECT-originalabstractedpomni",
+      "type": "deselection",
+      "entity": "Pomni — abstraction originale",
+      "title": "Sortie de sélection · Pomni — abstraction originale",
+      "description": "Les arches se détournent et sortent sans faire disparaître un autre personnage.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-originalabstractedpomni"
+    },
+    {
+      "id": "EN-E1-TAUNT-originalabstractedragatha",
+      "type": "taunt",
+      "entity": "Ragatha — abstraction originale",
+      "title": "Les fils retiennent",
+      "description": "Les fils sombres se tendent dans le contour du dessin. Pause de tension sans attacher la cible. La tension se relâche vers la stance.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-originalabstractedragatha"
+    },
+    {
+      "id": "EN-E1-SELECT-originalabstractedragatha",
+      "type": "selection",
+      "entity": "Ragatha — abstraction originale",
+      "title": "Entrée de sélection · Ragatha — abstraction originale",
+      "description": "Entrée lente de la masse de fils et de volumes.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-originalabstractedragatha"
+    },
+    {
+      "id": "EN-E1-DESELECT-originalabstractedragatha",
+      "type": "deselection",
+      "entity": "Ragatha — abstraction originale",
+      "title": "Sortie de sélection · Ragatha — abstraction originale",
+      "description": "Les fils reviennent au corps puis toute la masse se retire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-originalabstractedragatha"
+    },
+    {
+      "id": "EN-E1-TAUNT-originalabstractedgangle",
+      "type": "taunt",
+      "entity": "Gangle — abstraction originale",
+      "title": "Le ruban refuse",
+      "description": "Les lanières se rassemblent dans un axe vertical. Boucle suspendue, aucun masque humain retrouvé. La boucle revient aux courbes de repos.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-originalabstractedgangle"
+    },
+    {
+      "id": "EN-E1-SELECT-originalabstractedgangle",
+      "type": "selection",
+      "entity": "Gangle — abstraction originale",
+      "title": "Entrée de sélection · Gangle — abstraction originale",
+      "description": "Entrée en courbes distinctes sans couper les rubans au bord.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-originalabstractedgangle"
+    },
+    {
+      "id": "EN-E1-DESELECT-originalabstractedgangle",
+      "type": "deselection",
+      "entity": "Gangle — abstraction originale",
+      "title": "Sortie de sélection · Gangle — abstraction originale",
+      "description": "Retombée maîtrisée puis retrait des lanières dans leur ensemble.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-originalabstractedgangle"
+    },
+    {
+      "id": "EN-E1-TAUNT-originalabstractedkinger",
+      "type": "taunt",
+      "entity": "Kinger — abstraction originale",
+      "title": "Le bastion observe",
+      "description": "La masse verticale se redresse sur sa base. Regards distribués, silence et volume fixe. Retour à l’ancrage du bastion.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-originalabstractedkinger"
+    },
+    {
+      "id": "EN-E1-SELECT-originalabstractedkinger",
+      "type": "selection",
+      "entity": "Kinger — abstraction originale",
+      "title": "Entrée de sélection · Kinger — abstraction originale",
+      "description": "Arrivée pesante avec toute la hauteur de la forme originale.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-originalabstractedkinger"
+    },
+    {
+      "id": "EN-E1-DESELECT-originalabstractedkinger",
+      "type": "deselection",
+      "entity": "Kinger — abstraction originale",
+      "title": "Sortie de sélection · Kinger — abstraction originale",
+      "description": "Le bastion pivote puis se retire sans réduire sa hauteur.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-originalabstractedkinger"
+    },
+    {
+      "id": "EN-E1-TAUNT-originalabstractedzooble",
+      "type": "taunt",
+      "entity": "Zooble — abstraction originale",
+      "title": "Les fragments patientent",
+      "description": "Les fragments visibles se replacent dans l’assemblage enregistré. Asymétrie tenue, sans ajout ni suppression de pièce. Retour aux ancrages de la stance originale.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-TAUNT-originalabstractedzooble"
+    },
+    {
+      "id": "EN-E1-SELECT-originalabstractedzooble",
+      "type": "selection",
+      "entity": "Zooble — abstraction originale",
+      "title": "Entrée de sélection · Zooble — abstraction originale",
+      "description": "Entrée oblique, contours et points d’attache conservés.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-SELECT-originalabstractedzooble"
+    },
+    {
+      "id": "EN-E1-DESELECT-originalabstractedzooble",
+      "type": "deselection",
+      "entity": "Zooble — abstraction originale",
+      "title": "Sortie de sélection · Zooble — abstraction originale",
+      "description": "L’assemblage se détourne et sort sans abandonner de fragment autonome.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-characters.json#EN-E1-DESELECT-originalabstractedzooble"
+    },
+    {
+      "id": "EN-E1-DUO-pomni-ragatha",
+      "type": "duo",
+      "entity": "Pomni + Ragatha",
+      "title": "Un pas ensemble",
+      "description": "Entente de répétition inspirée de leur présence dans le groupe ; scène originale. Pomni crée une ouverture par sa course de kit ; Ragatha enchaîne avec son bouton déjà défini.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-pomni-ragatha"
+    },
+    {
+      "id": "EN-E1-DUO-pomni-kinger",
+      "type": "duo",
+      "entity": "Pomni + Kinger",
+      "title": "Le repère dans le noir",
+      "description": "Duo de parcours inspiré du contexte du manoir ; coopération écrite pour Encore. La balle de Pomni marque le départ ; Kinger avance sur le repère ouvert avec son coup existant.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-pomni-kinger"
+    },
+    {
+      "id": "EN-E1-DUO-pomni-gummigoo",
+      "type": "duo",
+      "entity": "Pomni + Gummigoo",
+      "title": "La route gardée",
+      "description": "Rencontre simulée de Candy Canyon, explicitement extérieure à une suite canonique. Pomni traverse la marque ; Gummigoo ferme l’espace avec son coup fort de kit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-pomni-gummigoo"
+    },
+    {
+      "id": "EN-E1-DUO-zooble-gangle",
+      "type": "duo",
+      "entity": "Zooble + Gangle",
+      "title": "Le cadre choisi",
+      "description": "Coordination de deux artistes, sans imposer identité ou émotion. Zooble ouvre un angle avec son heavy ; Gangle ferme la ligne avec son projectile existant.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-zooble-gangle"
+    },
+    {
+      "id": "EN-E1-DUO-caine-bubble",
+      "type": "duo",
+      "entity": "Caine + Bubble",
+      "title": "Le numéro n’est pas fini",
+      "description": "Partenaires de présentation ; technique collective originale du fan-game. La salve de Caine ouvre une diagonale ; Bubble traverse avec son déplacement offensif déjà présent.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-caine-bubble"
+    },
+    {
+      "id": "EN-E1-DUO-gummigoo-max",
+      "type": "duo",
+      "entity": "Gummigoo + Max",
+      "title": "Le premier relais du convoi",
+      "description": "Duo de convoyeurs dans une répétition de l’aventure. Gummigoo avance, Max frappe au point d’arrêt avec son heavy de kit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-gummigoo-max"
+    },
+    {
+      "id": "EN-E1-DUO-gummigoo-chad",
+      "type": "duo",
+      "entity": "Gummigoo + Chad",
+      "title": "Le couloir du convoi",
+      "description": "Association des convoyeurs dans le cadre de simulation. Le projectile de Gummigoo fixe la distance ; l’avancée de Chad termine l’ouverture.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-gummigoo-chad"
+    },
+    {
+      "id": "EN-E1-DUO-max-chad",
+      "type": "duo",
+      "entity": "Max + Chad",
+      "title": "Les deux côtés du chargement",
+      "description": "Répartition de rôles du convoi, écriture originale. Max prend la ligne avant et Chad ferme la seconde avec son coup fort.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-max-chad"
+    },
+    {
+      "id": "EN-E1-DUO-loolilalu-candyguardcyan",
+      "type": "duo",
+      "entity": "Loolilalu + Candy Guard Cyan",
+      "title": "La réception de la cour",
+      "description": "Association de la souveraine et d’une garde du même catalogue, chorégraphie inventée. Loolilalu projette son motif de sucre ; la garde avance selon son kit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-loolilalu-candyguardcyan"
+    },
+    {
+      "id": "EN-E1-DUO-candyguardblue-candyguardpurple",
+      "type": "duo",
+      "entity": "Candy Guard Blue + Candy Guard Violet",
+      "title": "Deux marques au palais",
+      "description": "Coordination de gardes, sans hiérarchie déduite des couleurs. La garde bleue ouvre la ligne au contact ; la garde violette utilise son projectile de kit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-candyguardblue-candyguardpurple"
+    },
+    {
+      "id": "EN-E1-DUO-ragatha-kaufmo",
+      "type": "duo",
+      "entity": "Ragatha + Kaufmo",
+      "title": "Le salut de l’archive",
+      "description": "Répétition mémorielle alternative, jamais un retour dans la chronologie de la série. Ragatha avance sur une marque de répétition ; la reconstruction de Kaufmo complète le numéro.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-ragatha-kaufmo"
+    },
+    {
+      "id": "EN-E1-DUO-kinger-queenie",
+      "type": "duo",
+      "entity": "Kinger + Queenie",
+      "title": "Deux pièces de mémoire",
+      "description": "Tableau mémoriel de fan-game, présenté comme archive dès la sélection. Le projectile de Kinger précède l’avancée de la reconstruction de Queenie.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-DUO-kinger-queenie"
+    },
+    {
+      "id": "EN-E1-BONUS-cargo",
+      "type": "bonus",
+      "entity": "Candy Canyon",
+      "title": "Le chargement de répétition",
+      "description": "Trois zones de caisse, chacune avec un seuil de dégâts propre, doivent être retirées. Retour au choix réessayer/continuer ; la route continue même sans médaille.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-cargo"
+    },
+    {
+      "id": "EN-E1-BONUS-convoy",
+      "type": "bonus",
+      "entity": "Candy Canyon",
+      "title": "Les repères du convoi",
+      "description": "Conserver au moins un repère jusqu’au dernier groupe de cibles. Un repère détruit reste dans la tentative ; réessai réinitialise l’ensemble sans supprimer de récompense déjà acquise.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-convoy"
+    },
+    {
+      "id": "EN-E1-BONUS-gloinks",
+      "type": "bonus",
+      "entity": "Le nid des Gloinks",
+      "title": "Rangement du nid",
+      "description": "Neutraliser trois vagues avec un plafond strict de six petites cibles simultanées. Une élimination finit la tentative ; continuer mène au chapitre suivant et conserve les acquisitions antérieures.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-gloinks"
+    },
+    {
+      "id": "EN-E1-BONUS-spudsy",
+      "type": "bonus",
+      "entity": "Spudsy’s",
+      "title": "Le service tient encore",
+      "description": "Atteindre dix interactions de cible dans l’ordre annoncé sans attaquer les clients. Recommencer ou passer ; le service n’est pas un blocage de campagne.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-spudsy"
+    },
+    {
+      "id": "EN-E1-BONUS-manor",
+      "type": "bonus",
+      "entity": "Mildenhall Manor",
+      "title": "Le trajet des veilleuses",
+      "description": "Atteindre quatre balises dans l’ordre et revenir au seuil latéral. Erreur de trajet renvoie à la dernière balise ; abandon propose la poursuite sans médaille.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-manor"
+    },
+    {
+      "id": "EN-E1-BONUS-softball",
+      "type": "bonus",
+      "entity": "Le stade de softball",
+      "title": "Les cibles du terrain",
+      "description": "Réussir huit touches sur douze essais annoncés. La partie se termine après douze essais ou le temps ; relance sans modification des records déjà validés.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-softball"
+    },
+    {
+      "id": "EN-E1-BONUS-threshold",
+      "type": "bonus",
+      "entity": "Le seuil de l’abstraction",
+      "title": "Tenir les limites",
+      "description": "Conserver deux balises sur trois pendant trois phases ; aucune créature n’est guérie. Retour au banc de test, sans prétendre une catastrophe canonique ni effacer l’histoire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-threshold"
+    },
+    {
+      "id": "EN-E1-BONUS-memory",
+      "type": "bonus",
+      "entity": "Le chapiteau des souvenirs brisés",
+      "title": "Le cadre des silhouettes",
+      "description": "Valider six associations avec indices visuels et équivalent textuel. Erreur conserve les associations justes ; quitter reprend au dernier état sauvegardé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-BONUS-memory"
+    },
+    {
+      "id": "EN-HUB-ACCUEIL",
+      "type": "hub",
+      "entity": "Les Archives des répétitions",
+      "title": "Le pupitre des répétitions",
+      "description": "Choisir une salle, retrouver les objectifs et consulter les récompenses prêtes.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-HUB-ACCUEIL"
+    },
+    {
+      "id": "EN-HUB-COSTUMES",
+      "type": "hub",
+      "entity": "Les Archives des répétitions",
+      "title": "Les casiers des costumes",
+      "description": "Inspecter costumes, dépendances et voies d’obtention, puis réclamer un lot ciblé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-HUB-COSTUMES"
+    },
+    {
+      "id": "EN-HUB-SCENES",
+      "type": "hub",
+      "entity": "Les Archives des répétitions",
+      "title": "La galerie des scènes",
+      "description": "Consulter miniatures de lieux, ambiance statique/vivante et conditions anti-spoiler.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-HUB-SCENES"
+    },
+    {
+      "id": "EN-HUB-DEFIS",
+      "type": "hub",
+      "entity": "Les Archives des répétitions",
+      "title": "Le cabinet des épreuves",
+      "description": "Lancer les bonus disponibles, revoir leurs objectifs et leurs records.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-HUB-DEFIS"
+    },
+    {
+      "id": "EN-HUB-RAPPELS",
+      "type": "hub",
+      "entity": "Les Archives des répétitions",
+      "title": "La salle des Rappels",
+      "description": "Relire tableaux, taunts et fins originales déjà obtenus, sans rejouer un résultat de combat.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-HUB-RAPPELS"
+    },
+    {
+      "id": "EN-E2-RULE-LEGACY",
+      "type": "regle-acces",
+      "entity": "existing-runtime-catalogue",
+      "title": "Préserver tous les accès actuels",
+      "description": "Migration initiale idempotente.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-LEGACY"
+    },
+    {
+      "id": "EN-E2-RULE-TICKET",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-UI-TICKET",
+      "title": "Premier billet",
+      "description": "Une des deux voies suffit.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-TICKET"
+    },
+    {
+      "id": "EN-E2-RULE-POMNI",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-TAUNT-POMNI-EXIT",
+      "title": "Trouver le repère",
+      "description": "Route Pomni terminée OU huit cibles valides dans une même tentative de softball.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-POMNI"
+    },
+    {
+      "id": "EN-E2-RULE-KINGER",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-POSE-KINGER-QUIET",
+      "title": "Retrouver le calme du menu",
+      "description": "Salle des Rappels découverte ET route Kinger OU bonus manoir réussi.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-KINGER"
+    },
+    {
+      "id": "EN-E2-RULE-RAGATHA",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-COSTUME-ARCHIVE-RAGATHA",
+      "title": "La tenue d’archive",
+      "description": "Route Ragatha ET bonus camion OU avantage permanent vérifié ; les sources restent distinctes.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-RAGATHA"
+    },
+    {
+      "id": "EN-E2-RULE-NIGHT",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-STAGE-BIGTOP-NIGHT",
+      "title": "Après le rappel",
+      "description": "Bonus silhouettes donne un grant permanent ; avantage temporaire donne un grant borné seulement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-NIGHT"
+    },
+    {
+      "id": "EN-E2-RULE-DUO",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-MODE-DUO-TRIAL",
+      "title": "L’épreuve avancée",
+      "description": "Apprentissage du duo libre ET bonus des balises ; le tutoriel ne requiert pas le défi.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-DUO"
+    },
+    {
+      "id": "EN-E2-RULE-ROUTE",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-SCENE-ROUTE-GARDEE",
+      "title": "Le tableau du convoi",
+      "description": "Deux routes terminées OU convoi réussi ; indice générique tant que secret.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-ROUTE"
+    },
+    {
+      "id": "EN-E2-RULE-GLOINKS",
+      "type": "regle-acces",
+      "entity": "EN-REWARD-ARCHIVE-GLOINKS",
+      "title": "Le carnet du nid",
+      "description": "Une victoire de l’épreuve de horde simulée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-RULE-GLOINKS"
+    },
+    {
+      "id": "EN-SUPPORT-PERMANENT-ARCHIVE",
+      "type": "soutien-inactif",
+      "entity": "Aucun fournisseur raccordé",
+      "title": "Lot d’archive permanent — proposition",
+      "description": "permanent-grant. La fin normale de l’abonnement ne retire pas ce grant permanent.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire selon lot",
+        "integration": "spécification ; désactivé",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-SUPPORT-PERMANENT-ARCHIVE"
+    },
+    {
+      "id": "EN-SUPPORT-TEMPORARY-AMBIENCE",
+      "type": "soutien-inactif",
+      "entity": "Aucun fournisseur raccordé",
+      "title": "Catalogue d’ambiances temporaire — proposition",
+      "description": "temporary-catalogue. Retrait de la seule source temporaire à échéance confirmée, avant la partie suivante.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire selon lot",
+        "integration": "spécification ; désactivé",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-SUPPORT-TEMPORARY-AMBIENCE"
+    },
+    {
+      "id": "EN-SUPPORT-PERIODIC",
+      "type": "soutien-inactif",
+      "entity": "Aucun fournisseur raccordé",
+      "title": "Lot périodique — modèle de réserve",
+      "description": "periodic-delivery. La fin d’admissibilité arrête les futurs lots ; elle ne redéfinit pas la permanence des lots déjà accordés.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire selon lot",
+        "integration": "spécification ; désactivé",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-SUPPORT-PERIODIC"
+    },
+    {
+      "id": "EN-E2-VISUAL-TICKET",
+      "type": "charte-verrou",
+      "entity": "Interface Encore",
+      "title": "Fiches C&A et billets scellés",
+      "description": "Fiche de distribution C&A avec billet perforé et volet de rideau, métaphore d’interface originale.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-VISUAL-TICKET"
+    },
+    {
+      "id": "EN-E2-QA-01",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Secret complet",
+      "description": "Focaliser puis confirmer le slot. Nom et silhouette neutres, fiche générique ; aucune sélection ni fuite par alt ou voix.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-01"
+    },
+    {
+      "id": "EN-E2-QA-02",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Slot verrouillé",
+      "description": "Naviguer clavier/manette et confirmer. Focus conservé, condition courte puis détail ; pas de blocage de navigation.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-02"
+    },
+    {
+      "id": "EN-E2-QA-03",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Réclamation",
+      "description": "Réclamer puis recharger. Une acquisition persistante ; révélation une fois, choix possible si dépendances prêtes.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-03"
+    },
+    {
+      "id": "EN-E2-QA-04",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Conditions ET/OU",
+      "description": "Évaluer puis ajouter bonus ; réévaluer avec seulement soutien vérifié. Première situation verrouillée ; les deux autres autorisées par leur source propre.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-04"
+    },
+    {
+      "id": "EN-E2-QA-05",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Transaction répétée",
+      "description": "Attribuer, interrompre l’écriture simulée, reprendre. Une transaction confirmée, aucun double débit ni double lot.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-05"
+    },
+    {
+      "id": "EN-E2-QA-06",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Tenue avant personnage",
+      "description": "Sauvegarder puis ouvrir le dressing. Tenue conservée, dépendance expliquée ; pas de faux verrou de paiement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-06"
+    },
+    {
+      "id": "EN-E2-QA-07",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Permanent et temporaire",
+      "description": "Résoudre les sources. Contenu encore acquis et sélectionnable si installé ; seule la source temporaire est expirée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-07"
+    },
+    {
+      "id": "EN-E2-QA-08",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Catalogue expiré",
+      "description": "Revenir au menu après résultat. Accès terminé, préférence conservée, alternative disponible proposée avant prochaine partie.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-08"
+    },
+    {
+      "id": "EN-E2-QA-09",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Annulation anticipée",
+      "description": "Resynchroniser le compte. Accès conservé jusqu’à échéance validée ; aucune révocation avant cette date.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-09"
+    },
+    {
+      "id": "EN-E2-QA-10",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Service indisponible",
+      "description": "Ouvrir le menu hors ligne. Vérification indisponible ; application de politique connue, jamais affirmation d’expiration sans preuve.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-10"
+    },
+    {
+      "id": "EN-E2-QA-11",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Assets absents",
+      "description": "Confirmer le contenu. Installation nécessaire ; pas de demande d’achat ou de victoire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-11"
+    },
+    {
+      "id": "EN-E2-QA-12",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Remboursement isolé",
+      "description": "Révoquer le seul grant de soutien. Accès conservé par la source défi ; ledger garde les deux provenances.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-12"
+    },
+    {
+      "id": "EN-E2-QA-13",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Stage et invité",
+      "description": "Lancer l’ambiance spéciale en local. Participation de l’invité autorisée sans acquisition de son droit de sélection.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-13"
+    },
+    {
+      "id": "EN-E2-QA-14",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Destination reliée",
+      "description": "Préparer le match avec transition. Préchargement requis ou remplacement annoncé avant match ; aucun blocage à la transition.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-14"
+    },
+    {
+      "id": "EN-E2-QA-15",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Expiration pendant duel",
+      "description": "Résoudre résultat puis retourner au menu. Aucune mutation de tenue/stage/équipe pendant duel ; droits actualisés avant match suivant.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-15"
+    },
+    {
+      "id": "EN-E2-QA-16",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Équipement devenu inaccessible",
+      "description": "Charger composition enregistrée. Préférence conservée ; remplacement demandé pour l’élément concerné seulement.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-16"
+    },
+    {
+      "id": "EN-E2-QA-17",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Confort du décor",
+      "description": "Activer réduction des mouvements. Présentation statique accessible, même géométrie et mêmes règles ; aucun abonnement supplémentaire.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-17"
+    },
+    {
+      "id": "EN-E2-QA-18",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Mode et prérequis",
+      "description": "Parcourir le graphe puis reprendre après interruption. Aucune boucle ; entraînement toujours accessible ; étapes conservées.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-18"
+    },
+    {
+      "id": "EN-E2-QA-19",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Profil et invité",
+      "description": "Attribuer un événement au compte vérifié. Grant au bon profil une seule fois ; aucun transfert implicite à l’invité.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-19"
+    },
+    {
+      "id": "EN-E2-QA-20",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Événements désordonnés",
+      "description": "Appliquer selon version/source. Ancien état n’écrase pas le nouveau ; événement dupliqué sans nouvelle livraison.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-20"
+    },
+    {
+      "id": "EN-E2-QA-21",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Accessibilité",
+      "description": "Naviguer clavier/manette/lecteur d’écran avec mouvement réduit. Chaque état compris sans couleur ni son seul, focus stable, aucune identité secrète révélée.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-21"
+    },
+    {
+      "id": "EN-E2-QA-22",
+      "type": "test-droits",
+      "entity": "Extension 02",
+      "title": "Migration et restauration",
+      "description": "Initialiser extension, corrompre sa copie principale puis restaurer. Profil historique intact, acquisitions issues des faits connus, copie valide récupérable, replay inchangé.",
+      "status": {
+        "design": "spécifié",
+        "assets": "sans objet",
+        "integration": "scénario écrit",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-access.json#EN-E2-QA-22"
+    },
+    {
+      "id": "EN-E1-CLASH-ACCESSORIES",
+      "type": "clash",
+      "entity": "Pomni + Jax",
+      "title": "Les accessoires se croisent",
+      "description": "Deux projectiles compatibles entrent dans une zone de clash explicitement placée dans le défi ; désactivé en versus. Une pression unique dans une fenêtre annoncée ; alternative maintien et résolution automatique solo.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-CLASH-ACCESSORIES"
+    },
+    {
+      "id": "EN-E1-CLASH-PUSH",
+      "type": "clash",
+      "entity": "Gummigoo + Chad",
+      "title": "La marque de poussée",
+      "description": "Les deux actions autorisées atteignent une même caisse de répétition pendant le bonus camion. Maintien bref plafonné, aucun martelage ; pause et déconnexion annulent vers un état sûr.",
+      "status": {
+        "design": "spécifié",
+        "assets": "à produire",
+        "integration": "non intégré",
+        "tests": "à exécuter"
+      },
+      "source": "docs/bible/extensions-teams-bonus.json#EN-E1-CLASH-PUSH"
+    }
+  ],
+  "notes": [
+    "Ces tables ajoutent des vues de conception ; elles ne changent aucun état historique du classeur.",
+    "Les scénarios de droits sont écrits, pas exécutés sur un moteur de droits.",
+    "Toute animation, aide, tag, bonus ou hub nouveau reste à produire et intégrer."
+  ]
+}

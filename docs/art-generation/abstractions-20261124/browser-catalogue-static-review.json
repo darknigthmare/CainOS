@@ -1,0 +1,383 @@
+{
+  "schema": "encore-browser-catalogue-static-review/v1",
+  "createdAt": "2026-11-24T14:22:45.645460+00:00",
+  "scope": "Static scan of requested historical counts in all combat-*-browser.mjs suites, plus direct review of catalogue assertions and action-source expectations.",
+  "catalogue": {
+    "fighters": 64,
+    "moves": 640,
+    "archiveVariants": 52,
+    "sharedStages": 27,
+    "costumes": 484,
+    "archiveEntries": 184
+  },
+  "browserExecuted": false,
+  "priorBrowserStatus": "blocked_environment_before_page",
+  "syntaxChecks": [
+    {
+      "file": "tests/combat-accessibility-browser.mjs",
+      "sha256": "98c2ed08643e434cf17b260d3dcf6d0338a0951b3bb768f4e190f72cd8787ce5",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-action-art-browser.mjs",
+      "sha256": "d0a69ebcd8ffe885b2a08649aaba55d2a5ecca12c4d58db9209fcd29a6d267fd",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-audio-ambiences-browser.mjs",
+      "sha256": "8c85851d77b1cd178b0a3dd7c4c4a8d1b90c6ede3e079ee1e4280ea14e230bb3",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-costume-browser.mjs",
+      "sha256": "e2f198ed93f1805259a671dc08204d5b303990730c4f7c9016d87a3e33ab86ee",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-costume-refinements-browser.mjs",
+      "sha256": "a4c45bb21411e8a17c91fd8c756a94c6d98491bfd2b4b1c481130f417f9f4333",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-crossovers-browser.mjs",
+      "sha256": "6efe11c828afa6a2942e5ecbff4aa11d56c0fdd8db97670ddb846d6ef6b0e3c9",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-encore-browser.mjs",
+      "sha256": "46eab52322e5bcdde8e85a26686bc5e83e30df709a28caae49b7c51b003241c8",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-fidelity-browser.mjs",
+      "sha256": "4f7b18367b18c2825c1bc1c2855a2554724afb9e02726d8f319c847de745c82d",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-finishers-browser.mjs",
+      "sha256": "1a1876007fa5c71761ed40acb73d509eb382ff24d1d6cd7df89891cdaebc4bb8",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-input-browser.mjs",
+      "sha256": "eda1e597a3a7a9a0c9cdf1302489551d11bdb0542fb571dad5300ecf4c6431b1",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-merge-browser.mjs",
+      "sha256": "ff5b845f18201a787756db61d5703b363072c4055f45b3d04402c72aece85b6b",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-offline-browser.mjs",
+      "sha256": "2129be0ff5184d35586ddc8dccfc561a28433538b4179d206f02e467f360e294",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-profile-backup-browser.mjs",
+      "sha256": "6e93bc5a622b3b572759b89bed39f97727597bda50e6333b7733bc30d1f02b5f",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-profile-recovery-browser.mjs",
+      "sha256": "fbdd2eff9126b3dc30bba5a1ed339587ab3b74a7ef8cdd216a20aae90517b2f6",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-progression-browser.mjs",
+      "sha256": "a8470b99a0e5b8c1b631fca253340a46b87d37d4180bcb55c6b42ed86b1bd902",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-readability-browser.mjs",
+      "sha256": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-recovery-browser.mjs",
+      "sha256": "544d8fc82c38dd774573e1783dc24ad6c6d68e3cd7aaab0a932c390c2aebeb22",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-reduced-motion-browser.mjs",
+      "sha256": "c21e5509c519b3a604b60691901e41c0913a51bd0c98cb6ca7d7ea6332fef8e2",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-render-browser.mjs",
+      "sha256": "7fd9369b5bfc82b39e4ef7dfedc0b8d1dd9f45c13c2b259e9800f6c490d8177b",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-render-jax-browser.mjs",
+      "sha256": "2f82e8152c5857e4e079746d5e171cf9780e228c506cdd4f9546c0704a0351f8",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-render-poses-browser.mjs",
+      "sha256": "895d584819ed93a0f259e2f70744a2dc0a380f8f5c4e4d7a9c453d9eb285af0d",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-render-sequences-browser.mjs",
+      "sha256": "6614a955fddb96af3e18e2268f7f47f03f1375afffc688ec8cfffe85aedc73af",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-roster-browser.mjs",
+      "sha256": "2521b5dd658c8bc3915624e460bd5e6f4236884abe347b5127c792c1915aff09",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-stage-art-browser.mjs",
+      "sha256": "14a88ed23b7a3b91a855e7d2b6a49cd31e4c4b12b87ead7a607c9375764d00d1",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-stage-scenery-browser.mjs",
+      "sha256": "8128a719cace7d9464c07cbb7b8a8225f6e1e596c4c7777338fe48897de4c483",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-story-presentation-browser.mjs",
+      "sha256": "90a88f6a10492b20b15e4f04381da161897a7a1313dde584b7412b9a8147b3ad",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-training-browser.mjs",
+      "sha256": "95a819987fb8ef813d0631bdc9c8f809974bdcccc743116a394cbcc0b3f68754",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "file": "tests/combat-visits-browser.mjs",
+      "sha256": "f20a7058194c911597a9deac31142a65dc8f6d6a0270a31dcd8d8d4797f08c47",
+      "exitCode": 0,
+      "error": null
+    }
+  ],
+  "counts": {
+    "suites": 28,
+    "syntaxPassed": 28,
+    "remainingObsoleteCatalogueNumbers": 0
+  },
+  "retainedOccurrences": [
+    {
+      "file": "tests/combat-accessibility-browser.mjs",
+      "line": 294,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Volume fixture value 0.25."
+    },
+    {
+      "file": "tests/combat-audio-ambiences-browser.mjs",
+      "line": 172,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Volume fixture value 0.25."
+    },
+    {
+      "file": "tests/combat-costume-refinements-browser.mjs",
+      "line": 74,
+      "numbers": [
+        "540"
+      ],
+      "reason": "Historical native crop bound for gloinkqueenscale; 540 is a pixel-height limit, not catalogue size."
+    },
+    {
+      "file": "tests/combat-encore-browser.mjs",
+      "line": 148,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Existing attack resource threshold."
+    },
+    {
+      "file": "tests/combat-finishers-browser.mjs",
+      "line": 145,
+      "numbers": [
+        "51"
+      ],
+      "reason": "Canvas layout coordinate, font size or positioning fixture; not a catalogue count."
+    },
+    {
+      "file": "tests/combat-finishers-browser.mjs",
+      "line": 242,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Presentation frame wait threshold."
+    },
+    {
+      "file": "tests/combat-readability-browser.mjs",
+      "line": 172,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Meter fixture intentionally sets 25 / 75."
+    },
+    {
+      "file": "tests/combat-readability-browser.mjs",
+      "line": 174,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Meter fixture intentionally sets 25 / 75."
+    },
+    {
+      "file": "tests/combat-render-browser.mjs",
+      "line": 33,
+      "numbers": [
+        "51"
+      ],
+      "reason": "Digits embedded in reference asset URLs."
+    },
+    {
+      "file": "tests/combat-render-browser.mjs",
+      "line": 34,
+      "numbers": [
+        "54"
+      ],
+      "reason": "Digits embedded in reference asset URLs."
+    },
+    {
+      "file": "tests/combat-render-browser.mjs",
+      "line": 179,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Canvas layout coordinate, font size or positioning fixture; not a catalogue count."
+    },
+    {
+      "file": "tests/combat-render-browser.mjs",
+      "line": 202,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Visual luminance threshold for the cellar."
+    },
+    {
+      "file": "tests/combat-render-jax-browser.mjs",
+      "line": 47,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Pixel colour ratio 1.25."
+    },
+    {
+      "file": "tests/combat-render-poses-browser.mjs",
+      "line": 79,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Canvas layout coordinate, font size or positioning fixture; not a catalogue count."
+    },
+    {
+      "file": "tests/combat-render-poses-browser.mjs",
+      "line": 161,
+      "numbers": [
+        "480"
+      ],
+      "reason": "Canvas layout coordinate, font size or positioning fixture; not a catalogue count."
+    },
+    {
+      "file": "tests/combat-render-sequences-browser.mjs",
+      "line": 130,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Canvas layout coordinate, font size or positioning fixture; not a catalogue count."
+    },
+    {
+      "file": "tests/combat-roster-browser.mjs",
+      "line": 114,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Existing attack resource threshold."
+    },
+    {
+      "file": "tests/combat-story-presentation-browser.mjs",
+      "line": 203,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Existing attack resource threshold."
+    },
+    {
+      "file": "tests/combat-training-browser.mjs",
+      "line": 44,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Existing quarter-speed training fixture."
+    },
+    {
+      "file": "tests/combat-visits-browser.mjs",
+      "line": 84,
+      "numbers": [
+        "480"
+      ],
+      "reason": "480ms clock advancement outside the fight."
+    },
+    {
+      "file": "tests/combat-visits-browser.mjs",
+      "line": 90,
+      "numbers": [
+        "25"
+      ],
+      "reason": "Existing attack resource threshold."
+    }
+  ],
+  "historicalFixturesPreserved": [
+    "Legacy 14-fighter/12-stage program fixture in combat-merge-browser.mjs.",
+    "Legacy 7 animated atlases / 56 cells and 14 original bases in combat-render-poses-browser.mjs.",
+    "20 refined costumes and Gloink Queen pixel crop bounds in combat-costume-refinements-browser.mjs."
+  ],
+  "correctedCurrentExpectation": {
+    "file": "tests/combat-action-art-browser.mjs",
+    "changes": [
+      "Resolve all 161 current appearances through their declared art directories and published formats.",
+      "Track the exact 1449 current action paths, including the 99 drawings of the ten new bodies and calm Queenie.",
+      "Apply the optional height factors and width ceilings when checking actual uniform Canvas transforms."
+    ],
+    "unchangedChecks": [
+      "Full RGBA comparison of every loaded action texture.",
+      "Both facing directions for each action.",
+      "One-image failure/cooldown fixture.",
+      "Reviewed mixed native directions of abstracting Gangle."
+    ]
+  },
+  "limitations": [
+    "Syntax and source review do not establish browser execution.",
+    "No additional Chromium attempt was made."
+  ]
+}

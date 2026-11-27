@@ -1,0 +1,9 @@
+{
+  "id": "abstractedjax",
+  "pose": "stance",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-b8e55f8c-c8d0-4403-a718-eb8eda35029c.png",
+  "prompt": "Use case: identity-preserve. Asset type: one native-alpha 2D UHD fighting-game sprite, stance pose. Reference image is the existing Encore design of Abstracted Jax; preserve its exact character identity and design 1:1. One single full-body black faceted quadrupedal abstract creature with a very tall narrow backward-slanted spire-like upper body, exactly the same scattered multicolored eyes and glossy angular black geometry from the reference. Do not humanize it, do not add normal rabbit clothes or a humanoid face. Change only pose/camera to a readable fighting stance facing RIGHT, strict lateral fighting-game camera with mild three-quarter volume. Four splayed angular feet visible, heavy weight centered, body angled right, multicolored eyes looking right. Entire silhouette within frame with at least 8 percent clear padding all around, feet aligned near same ground baseline. Polished hand-painted crisp 2D anime fighting-game sprite rendering matching source, black facets readable via thin violet/blue edge highlights, no background/no floor/no cast shadow/no frame/no text/no UI/no second character. True transparent background. One sprite only. Preserve native high resolution.",
+  "destination": "assets/encore/abstractions/abstractedjax/stance.png",
+  "recovery": "Exact native PNG restored from retained tool result image_url after filesystem reset.",
+  "generatedWith": "image_gen builtin"
+}

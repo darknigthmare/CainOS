@@ -1,0 +1,179 @@
+{
+  "createdAt": "2026-11-20T17:14:07.796404+00:00",
+  "status": "accepted_with_stated_scope",
+  "scope": "Separate diagnostic alpha composites only; image pixels of all source PNGs are unchanged. Figures fitted by alpha bounds per tile; not runtime scale or animation.",
+  "appearances": [
+    {
+      "id": "cafekinger",
+      "overview": "docs/art-generation/continuation-20261120-b/cafe/review/cafekinger/family-alpha-overview.jpg",
+      "overviewSHA256": "d121f0ddcc986feb11c8033b5b0c8af9e17c08489f71819f4a4905093c975fe1",
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+          "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.json",
+          "receiptSHA256": "5d46406c7761e43847eb3a0ade0d3fc2d3e37872ba54186150204c694ce5474e"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.png",
+          "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.json",
+          "receiptSHA256": "314b48bb51b6fe78b9bfa1e0b5db1f417e3c4fa15de3445534d54da899561f85"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.png",
+          "sha256": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.json",
+          "receiptSHA256": "1b8130bdd032ef5b1b7d97039d92cd670fde8642379e8b247e7938445c2755da"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.png",
+          "sha256": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.json",
+          "receiptSHA256": "5a486c928535c7680b827dd9107ed341abe92efe99233197e1e039532bed0d01"
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.png",
+          "sha256": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.json",
+          "receiptSHA256": "8a61b5e3b8ffc02018fe6414462d6881d37dff8564a3b40a4cfe04125896596c"
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.png",
+          "sha256": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.json",
+          "receiptSHA256": "368ff9774868b5373d1cb5931bb99ecc0eb21b32303ff61da319d3bf850d6f53"
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.png",
+          "sha256": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.json",
+          "receiptSHA256": "dde9cccf0990da1c7901c81a04ecfb90c728adc0a7e199e54869585d5878fd27"
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.png",
+          "sha256": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.json",
+          "receiptSHA256": "f85bd95115640868295ad2830d6d62aec085e5cf612f83987c4f123c21deadb2"
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.png",
+          "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.json",
+          "receiptSHA256": "bca313de1b2a351a73f521c09a1f913885509519b06c1a86da92c711234174e4"
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.png",
+          "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.json",
+          "receiptSHA256": "bf8d99d1125ae7cac970418a84fda073e15b79beb19c0134d257dc254ab3632c"
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.png",
+          "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.json",
+          "receiptSHA256": "ac3940d259c67df03081437144f8f2019bd181588c6dfa3cb2d23c08151c1fdb"
+        }
+      ]
+    },
+    {
+      "id": "cafepomni",
+      "overview": "docs/art-generation/continuation-20261120-b/cafe/review/cafepomni/family-alpha-overview.jpg",
+      "overviewSHA256": "136df723748f02698ac63c460f4afc6b2daed64ea24c0fcba44cd42b331c43fa",
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+          "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.json",
+          "receiptSHA256": "5a9a9c732e647e80a988912d744500232c24423c00ece1a90b4584c82541bfde"
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.png",
+          "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.json",
+          "receiptSHA256": "01cf862e38d7f8594ac929f82d0267033dd5cd3b3fde4a333edc01dfa395932f"
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.png",
+          "sha256": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.json",
+          "receiptSHA256": "45949d7226c412a170ed948d92fba79cdb0360d49496393efa7e4faf1cfaf8a0"
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.png",
+          "sha256": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.json",
+          "receiptSHA256": "0383c7dce5b509b6a6d3e31186b18e71ea73de2b8befef78656b4b9075cba071"
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.png",
+          "sha256": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.json",
+          "receiptSHA256": "bc178da02311498467c1c856422b599b5e8c32d654204a8e86302e7bd660be35"
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.png",
+          "sha256": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.json",
+          "receiptSHA256": "0ec265c11edafaefd735e5098de4ee22d56c648fa98b31bc74a5fde8c8187ca1"
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.png",
+          "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.json",
+          "receiptSHA256": "5148749717c9ebd98ef266a2ff39c5749a6658c250f9184c150bc58ca949c06f"
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.png",
+          "sha256": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.json",
+          "receiptSHA256": "e01f58953bf590c3c141bae180495f0c60620526f2db6666969059980f45a44d"
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.png",
+          "sha256": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.json",
+          "receiptSHA256": "1fb19d7cf67879ebd81dc8423491d237b2a6374a61d7a03cdcafefca223f624d"
+        },
+        {
+          "slot": "victory",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.png",
+          "sha256": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.json",
+          "receiptSHA256": "4cab124b32ecf32152ebfd387420bf65e7fa96e1537666708400d9d3e14dcedb"
+        },
+        {
+          "slot": "defeat",
+          "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.png",
+          "sha256": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.json",
+          "receiptSHA256": "7c98a22bc317819b814f5ecf4fbaac3e52ad2b4b16b07e2bfb242481e3790c57"
+        }
+      ]
+    }
+  ],
+  "reviewedAt": "2026-11-20T17:19:52.481555+00:00",
+  "reviewer": "ribbit_references",
+  "receiptMetadataUpdatedAt": "2026-11-20T17:19:52.481555+00:00",
+  "receiptMetadataUpdateReason": "Runtime activation changes includedInRuntime metadata only; Pomni selection reference-role label clarified without prompt, source, or PNG changes."
+}

@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Draw ONE new complete full-body character sprite from the provided CLEAN identity reference, native PNG with a TRUE transparent background. Match identity, proportions, exact costume and materials. Crisp cel shading and solid outlines. No background lighting, no aura, no bloom, no haze, no cast shadow or floor: all outside-of-silhouette pixels are transparent except ordinary one-pixel edge antialiasing. Keep generous margins around whole body. One character, no text or extras. A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: Heavy action: a forceful LOW FORWARD LUNGE toward image right with both arms thrust forward, TWO SEPARATE COMPACT CLOSED FISTS. Each three-digit frog hand is curled into a rounded fist (two curled fingers, one folded thumb), not an open palm. Front knee deeply bent, rear leg long and braced. Determined face, complete feet, clear bent elbows. No visible open fingers.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-fusion:heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/fusion/heavy.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-9b914481-d4c1-40bf-8a27-a53da3d1048d.png",
+  "sourceGenerationId": "exec-9b914481-d4c1-40bf-8a27-a53da3d1048d",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "bytes": 941029
+    }
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    70,
+    25,
+    1470,
+    1012
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1121074,
+  "sha256": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+  "bytes": 1604119,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:13:40.734064+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Forte fente avec deux poings mécaniques, jambes distinctes et deux pieds à trois lobes ; plaques et nœud intégrés cohérents. Revue alpha claire/sombre confirmée par root et ribbit_references : aucun halo diffus composé malgré l’aperçu brut."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

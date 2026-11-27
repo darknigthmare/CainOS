@@ -1,0 +1,34 @@
+{
+  "style": "hommage",
+  "state": "stance",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/pomni/hommage/selection.webp"
+  ],
+  "identity": "Ribbit: lime-green cartoon frog with exactly TWO huge protruding white eyes, black wedge-cut round pupils, pink circular cheeks, smiling wide frog mouth, thin long green arms and legs, exactly four rounded fingers on each hand and three broad toes on each foot. Meggy-inspired vacation adventurer HOMMAGE: small golden-yellow cap fitted between the large eyes, brown aviator goggles perched above cap and not over the eyes; white short-sleeve T-shirt edged in golden yellow with one simple orange semicircle sun over two teal wave marks, no letters; charcoal shorts and brown belt, compact orange backpack, teal canteen at hip, dark fingerless gloves allowing the green fingers to show, low orange straps around bare webbed feet. Ribbit's small bright pink bow tie remains at the collar. Adapt only the established ensemble from the second reference; do not copy Pomni's jester cap, bells, human face or body. Preserve the frog's long leg proportions and readable webbed hands and feet.",
+  "prompt": "Use case: stylized-concept. ONE original full-body individual character sprite for a polished hand-painted 2D fighting game, genuine transparent alpha background. Match the crisp ink contour, warm cel shading, bright friendly cartoon finish of the provided published Ribbit reference. This is an original Encore crossover adaptation inspired by Sunset Paradise, NOT an official or canonical character appearance. Combat idle stance facing RIGHT in side view with subtle three-quarter depth, both feet readable on one level, both hands raised naturally in a relaxed fighting guard. One character only, no contact sheet, no other figure, no scene, ground, shadow, text, letters, frame, watermark, glow, haze, detached effects or checkerboard. Keep the ENTIRE character including all feet, fingers, accessories and tail within the CENTRAL 76 percent of a square canvas, at least twelve percent fully transparent margin on each edge. Opaque clean silhouette, transparent empty space. Ribbit: lime-green cartoon frog with exactly TWO huge protruding white eyes, black wedge-cut round pupils, pink circular cheeks, smiling wide frog mouth, thin long green arms and legs, exactly four rounded fingers on each hand and three broad toes on each foot. Meggy-inspired vacation adventurer HOMMAGE: small golden-yellow cap fitted between the large eyes, brown aviator goggles perched above cap and not over the eyes; white short-sleeve T-shirt edged in golden yellow with one simple orange semicircle sun over two teal wave marks, no letters; charcoal shorts and brown belt, compact orange backpack, teal canteen at hip, dark fingerless gloves allowing the green fingers to show, low orange straps around bare webbed feet. Ribbit's small bright pink bow tie remains at the collar. Adapt only the established ensemble from the second reference; do not copy Pomni's jester cap, bells, human face or body. Preserve the frog's long leg proportions and readable webbed hands and feet.",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "sunsetRibbitResult:hommage:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-85fb4c8d-ee1c-4cce-a08a-624cf7bdfebc.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-85fb4c8d-ee1c-4cce-a08a-624cf7bdfebc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "bytes": 774797,
+  "sha256": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d",
+  "sha": "18ca1d696fad9c8160ab3a5b8518cbfdf37aab6a",
+  "alphaZeroFraction": 0.7648265582035413,
+  "alpha12BBox": [
+    209,
+    18,
+    1024,
+    1215
+  ],
+  "nativeBytesVerified": true,
+  "auditPass": true
+}

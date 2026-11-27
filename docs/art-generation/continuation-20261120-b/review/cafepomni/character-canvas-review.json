@@ -1,0 +1,251 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T17:32:45.190Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "crossoversOnly": false,
+  "introducedOn": null,
+  "appearanceId": "cafepomni",
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "scripts/render-combat-character-review.mjs": "3b6519a33e5e923c10517c8a12135f112ae30822247c16bfdda55a4b9a134e09"
+  },
+  "actions": [
+    {
+      "id": "cafepomni",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/poses/cafepomni/intro.png",
+      "sha256": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+      "bytes": 750903,
+      "visibleBounds": {
+        "x": 150,
+        "y": 9,
+        "width": 361,
+        "height": 568
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/poses/cafepomni/attack.png",
+      "sha256": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+      "bytes": 832720,
+      "visibleBounds": {
+        "x": 97,
+        "y": 6,
+        "width": 429,
+        "height": 482
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/poses/cafepomni/hit.png",
+      "sha256": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+      "bytes": 886377,
+      "visibleBounds": {
+        "x": 47,
+        "y": 6,
+        "width": 504,
+        "height": 569
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/poses/cafepomni/walk.png",
+      "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+      "bytes": 815378,
+      "visibleBounds": {
+        "x": 130,
+        "y": 8,
+        "width": 357,
+        "height": 571
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/poses/cafepomni/jump.png",
+      "sha256": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+      "bytes": 861925,
+      "visibleBounds": {
+        "x": 106,
+        "y": 25,
+        "width": 419,
+        "height": 538
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/poses/cafepomni/crouch.png",
+      "sha256": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+      "bytes": 1081527,
+      "visibleBounds": {
+        "x": 111,
+        "y": 29,
+        "width": 450,
+        "height": 547
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/poses/cafepomni/victory.png",
+      "sha256": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+      "bytes": 975630,
+      "visibleBounds": {
+        "x": 34,
+        "y": 8,
+        "width": 367,
+        "height": 625
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/poses/cafepomni/defeat.png",
+      "sha256": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+      "bytes": 1291355,
+      "visibleBounds": {
+        "x": 54,
+        "y": 13,
+        "width": 532,
+        "height": 528
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafepomni",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/poses/cafepomni/heavy.png",
+      "sha256": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+      "bytes": 1567942,
+      "visibleBounds": {
+        "x": 83,
+        "y": 16,
+        "width": 475,
+        "height": 404
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "cafepomni",
+      "file": "assets/encore/stance/cafepomni.png",
+      "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+      "bytes": 795027,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "cafepomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/cafepomni.png",
+      "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+      "bytes": 1123066,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-cafepomni.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "complete": true
+}

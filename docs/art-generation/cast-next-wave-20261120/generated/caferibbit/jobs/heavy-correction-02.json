@@ -1,0 +1,24 @@
+{
+  "appearanceId": "caferibbit",
+  "slot": "heavy",
+  "useCase": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit. Production transparent 2D combat sprite correction.\nImage 1 is the edit target: Cafe Ribbit performing the forward kick. KEEP this pose, the entire face, headband bows, two green arms and fists, dress, apron, low standing leg, both navy shoes, all colors and cel-shaded drawing style unchanged.\nCorrect ONE costume mistake on the HORIZONTAL RAISED LEG pointing SCREEN-RIGHT. Its white scalloped sock cuff with the tiny pink heart is incorrectly located close to the ankle/shoe. Move that scalloped cuff and its pink heart toward the body, to the TOP edge of the white sock where the green leg changes to white. The white sock must extend continuously FROM that top cuff TO the navy shoe, with NO second frill or heart near the ankle. There must be only one top cuff on this raised sock. Image 2 and image 3 demonstrate the intended sock construction. Keep both legs long and the complete kicking shoe in the frame.\nPreserve exactly one intact frog head, two arms with two hands, two legs and two shoes. Do not change the outfit or add accessories. Do not add or expose underwear. Keep the character turned and looking SCREEN-RIGHT. Preserve actual native transparent RGBA background. The entire silhouette must have transparent margin on all sides, including the extended kicking toe. No solid background, checkerboard, shadow, motion trail, glow, halo, duplicate, watermark or text.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png"
+  ],
+  "referenceRoles": [
+    "Edit target: preserve the heavy kicking pose; correct raised sock cuff only",
+    "Accepted costume: top cuffs belong at the green-to-white boundary below each knee",
+    "Official cafe costume"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e",
+  "correctionOf": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png"
+}

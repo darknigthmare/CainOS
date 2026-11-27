@@ -1,0 +1,1081 @@
+{
+  "date": "2026-11-24",
+  "complete": true,
+  "counts": {
+    "totalFiles": 175,
+    "uniqueFiles": 175,
+    "newNativeAdditions": 169,
+    "reusedPublishedPortraits": 6,
+    "abstractionStates": 121,
+    "sunsetStates": 33,
+    "projectiles": 15,
+    "stagePlanes": 6
+  },
+  "totalBytes": 156157497,
+  "sourceInventories": [
+    {
+      "file": "docs/art-generation/abstractions-20261124/asset-inventory.json",
+      "sha256": "12b7d5a91003e681ec1a17c70ae7afcb55e6215975448a70185a45cd67ea3dbb"
+    },
+    {
+      "file": "docs/art-generation/sunsetparadise-ribbit-20261124/asset-audit.json",
+      "sha256": "e028c8bd56c545901a01ae2906a1cd9ac71d3dc30b8021961e0926142953ac89"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/selection.png",
+      "sha256": "2334ff67eb13f5a27a24dff061c1a81452282bfaf0e6f1ddc4a5fdf30284f92c",
+      "gitBlobSha1": "7464bc3e847743f8fc4ad286c2755718b7dc4167",
+      "bytes": 574302
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/stance.png",
+      "sha256": "ea415180bb031c040f0187b81cb9f1e5240d4b0362ef2f7b18c8d517a6010d0e",
+      "gitBlobSha1": "42e8fbddc306fa7086f8bfa9e510d7151ab5eefc",
+      "bytes": 576053
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/intro.png",
+      "sha256": "0d590193a9d6cf9ae587f793e0605f1e58e7124ffd17bf22c896de10c06e9752",
+      "gitBlobSha1": "8022f81c9d8cb667f65394a2651855c8fbdee3a5",
+      "bytes": 827398
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/attack.png",
+      "sha256": "ae0568b7a08c2724802872a5227bc498bb4e5ca7da11e83ac8eae21d2f255238",
+      "gitBlobSha1": "46cc2f47065e50e91094ffa845096838cfe0c03d",
+      "bytes": 815140
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/heavy.png",
+      "sha256": "6adae4f4c9a295cfb07e9628fd4fa1ce8697d6363f82032f828ff4caa954c781",
+      "gitBlobSha1": "7af1057b5e5fc51b2095a9109b46a9247223f4df",
+      "bytes": 912388
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/hit.png",
+      "sha256": "a5dfe72b921fe499031aa3c9a84e0cfb124c08d6f05a572da201a12943f6152f",
+      "gitBlobSha1": "f93246e686df3f56d09355f4931b1b37ff2ed1c0",
+      "bytes": 771414
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/walk.png",
+      "sha256": "b263cd7831c5a8a8162bd3cf0bb36e2976674cd929d054717be30275dae6da4f",
+      "gitBlobSha1": "5f7fc67e18aaf5dab879abb45151c28f016a8e19",
+      "bytes": 674357
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/jump.png",
+      "sha256": "56796d1ca660781774b00f53fb792b02f610bc1d17e247d5fbb3bcfcf2029818",
+      "gitBlobSha1": "d57ce38593d1e2ccf4c500e0cdc6ea136d2459d6",
+      "bytes": 681647
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/crouch.png",
+      "sha256": "0cdb87682731584ce36f4e71fadf26c3919c7956860c88d71747a2da546da57e",
+      "gitBlobSha1": "1c9e94859ac6e96fa99492913af89e41f60d5c79",
+      "bytes": 541594
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/victory.png",
+      "sha256": "71d6014e89c5d1e7961b4c6b2f3802161ae6fc5f72327dca90b848fa40ba6340",
+      "gitBlobSha1": "8fb91163f9bc0fc19a47ec57cfc3cafaeeefff77",
+      "bytes": 659748
+    },
+    {
+      "file": "assets/encore/abstractions/cellarabstraction/defeat.png",
+      "sha256": "1d9b48faf97f0f41d4d862e71e7ac46cb90531b6875454868a92b6b11503cab4",
+      "gitBlobSha1": "71e1a7dc314ca000000a1c3ac4f22c816732d261",
+      "bytes": 815840
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/selection.png",
+      "sha256": "dc243a961082627872107b0a23909084b47e15232f9d36430073ff9a91ec1ccd",
+      "gitBlobSha1": "f88fbf823071ce3d028f3103673dc658e4854e72",
+      "bytes": 1350218
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/stance.png",
+      "sha256": "0d21d6dc9344823049cfc68d36d79bb6d28b39c95e46e79b539b0edfa162b310",
+      "gitBlobSha1": "1081f8a22b819ab878d53922abffd8bb4ced125e",
+      "bytes": 876087
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/intro.png",
+      "sha256": "6c671227a0f684748cffb17c97ab95f912cc14b3f3d3a1876f183a140e295587",
+      "gitBlobSha1": "8effb41efb6f58d46eaa6e2651b60f1bb3c44453",
+      "bytes": 1100017
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/attack.png",
+      "sha256": "e06966eac1d269132b413da578b71365692a6d9b30dc0671c981a55e5c6bcd24",
+      "gitBlobSha1": "6260f9a8e41aa8dc1b754da72f50eaf05207628a",
+      "bytes": 884353
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/heavy.png",
+      "sha256": "a90f9f75daa6e9f3b03d0791b034a8d2e80a2817942728c14b9887b82e97618d",
+      "gitBlobSha1": "963082ae5368f5688ea3fb6a10282180a0a7f280",
+      "bytes": 1179896
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/hit.png",
+      "sha256": "580df2b2e26e1f88b7f91277bf2909801ac8d609a32ce076955f7a4c9fbfe509",
+      "gitBlobSha1": "b293a707097d85efd95c3e7668a09f1fd3f2c15c",
+      "bytes": 1050724
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/walk.png",
+      "sha256": "d50c357c7c46c45bb5270bdf8cff0d0d08a910d0ca16ca916929a98c9b7ff387",
+      "gitBlobSha1": "34b87876b7adebc871cd8c0c82c9cfb68312b320",
+      "bytes": 1112019
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/jump.png",
+      "sha256": "93d94b7e2036c005c924cbbb6bc4ae1f1bf1d15e53b60f2dc9ebee74204de59b",
+      "gitBlobSha1": "3d6d1d3396cef48af061f688ddc071239eec8e1f",
+      "bytes": 910085
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/crouch.png",
+      "sha256": "4295166e48a034248b32b477a68a5445ea2b1b8f6e890718528f31c4980644a8",
+      "gitBlobSha1": "2092e72275f4da1c8e5ae0148a1d7b1cf25a18a0",
+      "bytes": 1011306
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/victory.png",
+      "sha256": "b5479883b76599c4cd71e5dbe2ed6ab4e144ffa0e847fa42d58cf50bea4ba143",
+      "gitBlobSha1": "5fd9ee50d5fae75b0e01aab0417bd61ee2aaea13",
+      "bytes": 1032066
+    },
+    {
+      "file": "assets/encore/abstractions/aquaticabstraction/defeat.png",
+      "sha256": "68735c636d42dc1d2e35ea882330ed6c52739c531188113f748da7243765c8cd",
+      "gitBlobSha1": "694288cd36736d6aa4d8b61086bd746cc97aba79",
+      "bytes": 823064
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/selection.png",
+      "sha256": "733ca28d62a17c78a9d6f239993886eea3ccce27d4ff8b8ba2b902b391eeb2ff",
+      "gitBlobSha1": "64b302c84f415bcc7796a63105d32851ed88de74",
+      "bytes": 1016165
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/stance.png",
+      "sha256": "fef47e9ecbe06b3776d2d0f1f5beb3cbb16fd23ffb745e38cccd67272d6d2d08",
+      "gitBlobSha1": "07ea05eac0ed7789120aeac063b1539cb8cbc199",
+      "bytes": 822976
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/intro.png",
+      "sha256": "cee362be32357e455615bf045c8b0d5759220738d50ef716214825c2df3f253f",
+      "gitBlobSha1": "5025cc012712a8aa480550a82f190c63c69d385b",
+      "bytes": 1026552
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/attack.png",
+      "sha256": "7036cb8b299d2074003ec33e900d97cb717b07426ce572d1e199f65923f5ba59",
+      "gitBlobSha1": "829e35223cbc7b25610e8537c661329a1f7d4f61",
+      "bytes": 755678
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/heavy.png",
+      "sha256": "ebe46eec39f66032d6c043d39f7eca07f2a36e867b588a185f0c128d8833f44c",
+      "gitBlobSha1": "03b56a8f5f9a3e88f45edd9465be8c60ba3635e8",
+      "bytes": 830227
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/hit.png",
+      "sha256": "6dfc64ea755a9f67d9f94100977217e4ad0ab503e39db3717a419a0e75aea527",
+      "gitBlobSha1": "c90770a3ab499440ce8f3da158d37f9eb116d503",
+      "bytes": 946808
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/walk.png",
+      "sha256": "796e954e7834d1036ced80159a734eb85a4c0ca5b61ba8cf21f687a17022d090",
+      "gitBlobSha1": "b561e4ff401c672bb1742080ae31794692a4eccf",
+      "bytes": 888275
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/jump.png",
+      "sha256": "1b2433c0044364d0ab793e566f515eb90a8195b22aa8cee02a16ccfc51423a9f",
+      "gitBlobSha1": "052babfad54d10da5496b18c74dddbf25839500c",
+      "bytes": 855028
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/crouch.png",
+      "sha256": "bcc889f1f4c0246e151e99af3e5938811e84db9fc1f95dce19764ac405d4a66e",
+      "gitBlobSha1": "8539e3d21842e76e5f0451dceeff6d0444e1ea61",
+      "bytes": 800767
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/victory.png",
+      "sha256": "57853976565da4315f51928dea596e6b048d371472725fcb6e528c32b80623de",
+      "gitBlobSha1": "6b6adda09569d939b6428319047030fd15906f70",
+      "bytes": 822640
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedjax/defeat.png",
+      "sha256": "94c4b29de2d3e2058d4e8fc79cd2d0b1588faeb4456df4c8536e0d7334835e1c",
+      "gitBlobSha1": "346e87cd295bbc51f79268fb31fa115a950c0386",
+      "bytes": 760143
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/selection.png",
+      "sha256": "64e2f2ad6db5fed59dce79a7e963625975ce61ba5620dd9ac66c718e9abf9d87",
+      "gitBlobSha1": "5ac3806f97ef8fe11c8027e7af71b241c43b4250",
+      "bytes": 785817
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/stance.png",
+      "sha256": "669355161a9d95b31add94ba6235bcc640710fe888d8c254a3142a9397a1ecb0",
+      "gitBlobSha1": "e8c4d1144bcf5f40a0de43e1e6f98f70c00b0bcc",
+      "bytes": 813538
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/intro.png",
+      "sha256": "c55eb6abfebaab79835a5f3f3f3309c7e870b1e747dcc7c74abdcff979fbad23",
+      "gitBlobSha1": "91508af36fbd285e7eaa40a4fdb881b189e89886",
+      "bytes": 1012749
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/attack.png",
+      "sha256": "ef240a113bba3605d2bb80f150fa583493b8c92c04fd6f9f0d5c580faf8841a5",
+      "gitBlobSha1": "b9a70e771508638135edf973e73474f3407b4e2c",
+      "bytes": 828911
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/heavy.png",
+      "sha256": "87633e4bb3a7d2e84e80f796b7327312eb671da27c1c5678401852ffe08215e7",
+      "gitBlobSha1": "54e8d4c6d9e179c9da7d2144ac14b4e1e360ef8b",
+      "bytes": 919619
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/hit.png",
+      "sha256": "efc557a3399c9f13ff6f12d708086b8545cd3f4ca0c102d379775a55024b3fe7",
+      "gitBlobSha1": "28570a38cf1cccdbf20af28ae0b8cb6c3677bf87",
+      "bytes": 1028155
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/walk.png",
+      "sha256": "ea8ced6ed00639f8fd120bc1563ff12da1ceef7fcaa318cd191f2292a902f084",
+      "gitBlobSha1": "5a6d9fe19a9c05e1a25c01182491658643420fcc",
+      "bytes": 833121
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/jump.png",
+      "sha256": "d1103fd5f33e3f118bb2f24b346a9c9fac153e4015e0980d941892cd061db55f",
+      "gitBlobSha1": "d0eece0a5f49e01f54201171f643879382d19c7e",
+      "bytes": 853666
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/crouch.png",
+      "sha256": "98d4c5efbb3567786c31ab70ccc6b71e81c372fb895917b8d234213c37712c4d",
+      "gitBlobSha1": "8b57e99bba9c967a2273452ad9c4da2fdb6ba647",
+      "bytes": 813932
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/victory.png",
+      "sha256": "caa9c18672ad49687480fe6c5377ba7cad5583293cd64c7a6cfb92ecc23ccf21",
+      "gitBlobSha1": "f8812e7589914f1dc18ae36f715d63382115749f",
+      "bytes": 920422
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueenie/defeat.png",
+      "sha256": "da3393a899d7e5e189596e40485ab04d90fb9b1f2b803793878f930f3e4d05d2",
+      "gitBlobSha1": "7e68e503acc8ab6254d08989cc1e96a9f484fcb9",
+      "bytes": 739926
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/selection.png",
+      "sha256": "bdedffebf1cc1642013e4b5b014669231fd326c54c6b5459b59a36a4a56aad28",
+      "gitBlobSha1": "718b00e8c3907f7c4a71129779e5bc53e91aaab5",
+      "bytes": 1021557
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/stance.png",
+      "sha256": "8a921d8a7bf447e6ae3ea2f09ff0b540427ad682f47eaec5ba5224083eab20e4",
+      "gitBlobSha1": "dd4d4cf8741ad3281fa84118b6a0c778b03430bd",
+      "bytes": 1314915
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/intro.png",
+      "sha256": "a0d93dc5f34e845846c7b6abc8389b33859b1256b61e55ee268606d2b51ad9f7",
+      "gitBlobSha1": "7bbc9ca56dd67f193301fd1fbda383b528fb4ac8",
+      "bytes": 1615282
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/attack.png",
+      "sha256": "7a626857fe88862ccdf6972211fdc4d767bb72ca34c778b2361f2341bbe3e825",
+      "gitBlobSha1": "2da1f6880b69c3f4636bc96c6ca0c16d6ceda9a2",
+      "bytes": 1503959
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/heavy.png",
+      "sha256": "2c90dd1ef9276460d618735c52e6b89eff18c484dcb2cbbf5276ec8ded5e33a5",
+      "gitBlobSha1": "c6be5ff77d24db8a04fea9836f28fa5ff6e6dadb",
+      "bytes": 1627714
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/hit.png",
+      "sha256": "9f48f545ac59dad2979cd0b69e2982b1c01f96dca4cf3209ebc87505b345fb72",
+      "gitBlobSha1": "38824b03dc6dbb07007914159f0177013179e8e2",
+      "bytes": 1500044
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/walk.png",
+      "sha256": "ea9f2eb4a903e9ce50261c45c5ab0dd18c8d30167a7f666fc293e7410aaa2dc0",
+      "gitBlobSha1": "00b168c8db44367e37cc61493f3ca3c0905928b1",
+      "bytes": 1470241
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/jump.png",
+      "sha256": "1cd541e3d1bb3fb3aa340c8e974d2dd122ac5d56b84a1b1b170c99cd3583b019",
+      "gitBlobSha1": "bbcdc66a8a9ffa04da0762ef86564307d221a850",
+      "bytes": 1357293
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/crouch.png",
+      "sha256": "8fe760489faba7854b79bcb5cf5e2d38f125db5748df22f1162f5493e8523c9b",
+      "gitBlobSha1": "b9e9e4e45ace1bcc1fd2dcd15d8899d1ac5342c0",
+      "bytes": 1508578
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/victory.png",
+      "sha256": "3fa12741fa2312f5ecab10ebf81a1d7d99a7e4a89ad68cf2f3be7a5a474bcca7",
+      "gitBlobSha1": "18ee5cbc14f5472df48dfa40838806510fb3fa62",
+      "bytes": 1469032
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedqueeniedark/defeat.png",
+      "sha256": "eff58e192a2e24e483e69858694b18104cda426da40ba0607e19afc14083e7d2",
+      "gitBlobSha1": "ffb8c8534b23e1383da305f1c08a0e716f8a0d52",
+      "bytes": 953860
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/selection.png",
+      "sha256": "7be10c707069445ca64c844a95b8aab3e716bb364f13a5ae66b5955266e5095a",
+      "gitBlobSha1": "a9d3b2da4f575a7d6b6724c6ff058ef95790351e",
+      "bytes": 1012370
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/stance.png",
+      "sha256": "429f3f01129a96c8fc9237df18016bf49bc1be636ea2a6bbe7279e45c94d8661",
+      "gitBlobSha1": "f56c516e9484d3831d5b100e4815340ec6da5030",
+      "bytes": 870533
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/intro.png",
+      "sha256": "fb5f06397a4b890045a3c79fd611367d26ffda6e2ac913c665757419c6dc5705",
+      "gitBlobSha1": "deabdd56bdfa3f137cc6a712874391d2aa0da2f9",
+      "bytes": 1079351
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/attack.png",
+      "sha256": "1890343866dc75084ee7568e77744cb1ea632322a8c9c946ebda820d7f50ef5c",
+      "gitBlobSha1": "49031d0bd3b1b0d894717da57f3041c8181c2223",
+      "bytes": 829769
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/heavy.png",
+      "sha256": "fbd980d59e62c7466a01948e0bdacc13891f842d21e8856f655095135f6f6120",
+      "gitBlobSha1": "b5dca90ee9cf9700e6a67ac0cbad7f3167712acd",
+      "bytes": 888426
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/hit.png",
+      "sha256": "fa4dc7ff182f67d94f5cd20917dfa35f7a7054100c9abb51c70290a1fe9f285a",
+      "gitBlobSha1": "0a833ac65ed584552a39d0284182c5d8dfbc22d8",
+      "bytes": 927780
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/walk.png",
+      "sha256": "69e100d406d98d609d7e1b8b3c30241f7988c0a76e479d461cad42b79c3362d0",
+      "gitBlobSha1": "5030b9b4a5e54eb89bc2695cf1e974051c8a4d94",
+      "bytes": 864837
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/jump.png",
+      "sha256": "25c317980bd7a785e6f0e73809f39b69726165a3ff1c1a470be5364112c2b972",
+      "gitBlobSha1": "3872d6a38975d61177c6f3145708b0017789550c",
+      "bytes": 849513
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/crouch.png",
+      "sha256": "c88496fe1bdb3d25e9e951ab65ebde1c1cc39b0963b3350a39b655fc4e883b14",
+      "gitBlobSha1": "d2c886120e997a2473a4688ebf0ab6b7529d5d6a",
+      "bytes": 901646
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/victory.png",
+      "sha256": "3565f1edecf117a1d33119ce13e5298dd11f04f0a923bf1b358191bbabe4e9e6",
+      "gitBlobSha1": "810b67f123e0d1ad673cbe0a9b2204c82ee2866f",
+      "bytes": 880757
+    },
+    {
+      "file": "assets/encore/abstractions/abstractedribbit/defeat.png",
+      "sha256": "4446194b610e33381b38b4e85d5366060977629d7936c47e936d8d0025c1c898",
+      "gitBlobSha1": "e0c8f08cbfe5985c5fa9b4d88913e99858b60a3e",
+      "bytes": 804646
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/selection.png",
+      "sha256": "9534fcc1cfa3736ab4fdc782fcc6693aee47bcb7db0c9244f731be72f8870635",
+      "gitBlobSha1": "a2ca8eba68a121f405768595b8dde20049c1042b",
+      "bytes": 977578
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+      "sha256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e",
+      "gitBlobSha1": "4e45933101f0eca26da190de2acd77130c3fe434",
+      "bytes": 884987
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/intro.png",
+      "sha256": "cfb3cb4d3e8a26ac762d1199c16a9e26e07fa8e3916c03d9d7373d21bac7d865",
+      "gitBlobSha1": "f6796b0762bbdbd82f36d88f81a5671a59ef5ad8",
+      "bytes": 1045458
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/attack.png",
+      "sha256": "78c873562d72845e316f14a1413fc38a41f97961b7b74031beea915885f13a7e",
+      "gitBlobSha1": "a239a3b951be5b495dd099adfe59093acec9fbe5",
+      "bytes": 973609
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/heavy.png",
+      "sha256": "58d8d72f65931c0c6f8368e019183ef6cf10975b809ca70d910752f325656248",
+      "gitBlobSha1": "56d3716be6fff94c98eab365d46fb51f7e111816",
+      "bytes": 1132744
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/hit.png",
+      "sha256": "6fd54d706ed1d41ca568bdb8bdd6a4defc99cb54d2d6475fefdb42aa8dd6165e",
+      "gitBlobSha1": "7df6f394594bd2fe203282d4fbbfbc86c7241b70",
+      "bytes": 989763
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/walk.png",
+      "sha256": "168cf5decbf16588e3707418bdd4f0ba10a0ff3c6101df300a3499fc87049c91",
+      "gitBlobSha1": "6fb28559f211d0b5b0115aeba58e0ca422b548c2",
+      "bytes": 954898
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/jump.png",
+      "sha256": "a0116bd88b1e5ed83202c13f0d006837eafb7a976042c9b68d09da42113ca879",
+      "gitBlobSha1": "4035c5949c489ce91c45a37b1a0102c4eba13807",
+      "bytes": 1059118
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/crouch.png",
+      "sha256": "f30b81b116e877ec36fd617bbeaf679eb17bb378b5a1659e0c9bb02c4c783f37",
+      "gitBlobSha1": "2f3a18353eb71c19633b9b0209cf89166340fba3",
+      "bytes": 993183
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/victory.png",
+      "sha256": "a21327fe653daebe7a3f5139d615e4bb7a69b6ae7c2e95ff9631380df8d7ff99",
+      "gitBlobSha1": "f5bc4207d82db70d289124a37a23f79c786bbac0",
+      "bytes": 973134
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedpomni/defeat.png",
+      "sha256": "0ad139e3c9b1d3e716d279d7cb39686cfb6dbbae9a7d3843481c463e7ae427bf",
+      "gitBlobSha1": "f5ef814e3641a2b4a1350e2307bf2c96a897a0bf",
+      "bytes": 742419
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/selection.png",
+      "sha256": "38a3bdf3bd1b224cda0876217b95c3f849908072d312adb29940e5dbbdafa4d0",
+      "gitBlobSha1": "e32bbf5c6d5232b469fcc4b49c4be2ff1fdce6e8",
+      "bytes": 1171391
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/stance.png",
+      "sha256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694",
+      "gitBlobSha1": "515326af6453afc520a361201ddec51783059993",
+      "bytes": 1279866
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/intro.png",
+      "sha256": "81e2d004ec9a011b6ac33e3446638cc3497fb6cb41f781c66eb5de09c2909381",
+      "gitBlobSha1": "f892797d1fd5e4dfaaf1520cebeb11a3974dc6ac",
+      "bytes": 1046519
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/attack.png",
+      "sha256": "93bf2039077190523b88daf593a6940abb594023a7a965a2ba1d77104d13d9d9",
+      "gitBlobSha1": "d263797f3554d99712caf3dfbfaf593a66f8cd5e",
+      "bytes": 991847
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/heavy.png",
+      "sha256": "786abc0f0a627fafea5861df7f7db8dcbccd9358292a2eefa3dc47c29a4804da",
+      "gitBlobSha1": "bd4a69de26952cb4be1bd92d16462f45e674fb9a",
+      "bytes": 1108582
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/hit.png",
+      "sha256": "0866ed9aa0b620ab9c39a0f238fc8af3a45071f812ea9dfa14e5726f20b727e3",
+      "gitBlobSha1": "6e8628bd473dc5d1a13f6433530cd0e2be967c9f",
+      "bytes": 1075357
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/walk.png",
+      "sha256": "e49d7db30024baa7c45742696140f1ffdcfe7610b4cabc8328c0df2fb86ee7ee",
+      "gitBlobSha1": "7ea9653d8a265fc2c5df4bb50270cd0928a59344",
+      "bytes": 1075267
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/jump.png",
+      "sha256": "af4572974f81ca28489a53b1711e9069004f6b0d062c450a445afcacc3d3fe63",
+      "gitBlobSha1": "e7707973de8941918e3c446773a372456207101d",
+      "bytes": 1130414
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/crouch.png",
+      "sha256": "03ad3eba658828c8acc29061ca83bb2b227828820d1fcd67617d00dfb5b9a3be",
+      "gitBlobSha1": "fc38733321a350855d20a7166bdbd15a821d20b2",
+      "bytes": 1019129
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/victory.png",
+      "sha256": "fa005c31fe0db80418407918c92b4efddd216bbf197f07ea93fa76d7a22da2cf",
+      "gitBlobSha1": "3d7cf678ef7b4cdb4fd49a6a5ae627afa530f1e1",
+      "bytes": 1111378
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedragatha/defeat.png",
+      "sha256": "ebc099af0ac00b3aa51f66e7d36e812f27f178be3073d191fcaddb4b55555f25",
+      "gitBlobSha1": "38a37889d6279a400a7b16f2c35ea005cc3d6eb9",
+      "bytes": 955163
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/selection.png",
+      "sha256": "ffd5440d1c103fd9c5d7f9781d55098dbe210e06ce452f10ca90cbdad3ca0baa",
+      "gitBlobSha1": "8408063b55226733588cb26579fffbd99f851a24",
+      "bytes": 787380
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/stance.png",
+      "sha256": "44f67bba0d055c94fdac488291a8068b1cc563c07a9c3fb908bb9e66f9e94f50",
+      "gitBlobSha1": "6159c8ac81181dca15eee4f68b01dcae47bb40cd",
+      "bytes": 888069
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/intro.png",
+      "sha256": "3f1900e8f1b52d131b6ef838dd130047484a547218c62e24f228a22ab86afd51",
+      "gitBlobSha1": "544d0a508c6004a38519c59e16ff49864d8394a3",
+      "bytes": 785015
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/attack.png",
+      "sha256": "40e5f8c654e7d530a1f7903800c25fa4edab8231c6bb69f361a46cf1d8261159",
+      "gitBlobSha1": "b26a04690ec06b3744538688379dbcaf4ae31455",
+      "bytes": 757550
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/heavy.png",
+      "sha256": "35d19b2b6768d193f3e70c860e22ca73364844635f0e9fa65a5f2bdd3c4e84ca",
+      "gitBlobSha1": "2ddef3b42f1603b2cbc9a3f083673ddcc8103139",
+      "bytes": 898835
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/hit.png",
+      "sha256": "dab1e3dfa1dbb3ed3354503175b1116dc38eb25368fbd575beaa0aa98085528f",
+      "gitBlobSha1": "cd6cfebb8e85ffb80a5f2da34917394189c467ae",
+      "bytes": 830188
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/walk.png",
+      "sha256": "d3740f14bd9ac7d1793c482c1ca2e32b713f1171f89f227ff1c2af7ea969f402",
+      "gitBlobSha1": "507761034301e05e2f2924b6a30d407d50f581e0",
+      "bytes": 741403
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/jump.png",
+      "sha256": "6d974b1d28728b502a598107e88c4b0f1eac3a1cf2da838e14ca8c85b49ea18d",
+      "gitBlobSha1": "f72d2fd9f57fb283d9c14c8139fc910026b45b01",
+      "bytes": 871504
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/crouch.png",
+      "sha256": "8353fb8ca081b556a66f9caf9fcc3a1cfa064b029df19cede839f503d7310f4c",
+      "gitBlobSha1": "5762519cb87904a8dd73b6e188e4d3c37bb67719",
+      "bytes": 700492
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/victory.png",
+      "sha256": "2169b80de36c50fae7335274239bc799bebf316549fd20a86ebf57e23c56c272",
+      "gitBlobSha1": "38d6ae6059b6a4d784bb1c6b6d2b340bfb90183f",
+      "bytes": 813848
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedgangle/defeat.png",
+      "sha256": "1c2fddff3aaa0d64c5bd1ca00d45433c868f6455018fd93f905c23d4516486eb",
+      "gitBlobSha1": "b50cf985597b0e8cf34ee89af400ddca1adf9528",
+      "bytes": 593435
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/selection.png",
+      "sha256": "a5d8ec2b089491166b1eb397d3b91a4229e77484cd3f7ede1fb39487d3e3fc2e",
+      "gitBlobSha1": "2f8c9172c25f2a1a5b2f3808e12f04886e7f7f2e",
+      "bytes": 873178
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/stance.png",
+      "sha256": "b5f633dce6d22fe16b8ff1d051de4dab2fcf7c186686bc740cce68cd0f56589c",
+      "gitBlobSha1": "8fab05a335cbb051e50ecfef98da59d852dc7060",
+      "bytes": 1006809
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/intro.png",
+      "sha256": "e243f4a0ef548aaef677c11a3a4029a1a4c4c24f559fa567c8d953c15bd30a86",
+      "gitBlobSha1": "866ac1ab6020f7752b5baf32a8e8ea3f980894fb",
+      "bytes": 886195
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/attack.png",
+      "sha256": "7f0a8d7b841d89e232f8ad444e9357185b2d9fa362514281e26f754987c4c62c",
+      "gitBlobSha1": "da7c01f97af03bfcccdfe95e47949b01647ba797",
+      "bytes": 753617
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/heavy.png",
+      "sha256": "32cfab4a03e26969c19d050e03fd093a2a5406ff2ff0936c0af10a8ddf80e16f",
+      "gitBlobSha1": "e0d46c8e2939ff9023fbfdc7a84f5dfb938677be",
+      "bytes": 1020903
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/hit.png",
+      "sha256": "4d83237efbc2b18f361bbcb89db911c195c733c77fe54a6afd507854a25275b1",
+      "gitBlobSha1": "fae9b7ae170790471435ec99d415246d1282fdc9",
+      "bytes": 932367
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/walk.png",
+      "sha256": "2dc7e46d5b00e66c6335f15baaf14a482dfadde2b7e92ea082866308d28cc22c",
+      "gitBlobSha1": "0f9525fa537a7ef48750c3260a61ead11758cf05",
+      "bytes": 877276
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/jump.png",
+      "sha256": "e3d8ee1241649f360d17a95b808851e99d808e777023b31681efd488f49add71",
+      "gitBlobSha1": "5bce12b27e89e03c05642a7e903edbfb6bb9fe6a",
+      "bytes": 844829
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/crouch.png",
+      "sha256": "ab8f937a065140e9c7f217529f0f7b2ae936cdd17f34962d920aa957a7d80dd1",
+      "gitBlobSha1": "58224e356c753e483c94aee0b41878fd18271486",
+      "bytes": 840978
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/victory.png",
+      "sha256": "cc6b6756f65b0bb95ee5bcde77e825bd786826e764764d005ae6ca01630f04d9",
+      "gitBlobSha1": "4ee7f5422470fd401f6ff38516c25ad72a80e99b",
+      "bytes": 868008
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedkinger/defeat.png",
+      "sha256": "988abf5ee1f7259308019a19e8a2a83e37751bd371176f2dbec422c90c0a484c",
+      "gitBlobSha1": "d1106f972cfa88868ca2ab8cfe26525125cc25e0",
+      "bytes": 632490
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/selection.png",
+      "sha256": "fec4f1fb5b3a1e67aa23c7d1e51f71cb2c8e0c9543fa16eb3d8f2727658fd615",
+      "gitBlobSha1": "8a3c63ed26c8f8b4463267a228edb7739f2030ff",
+      "bytes": 846692
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/stance.png",
+      "sha256": "4b34fa8cf0a0006058f64ccda5de10e951595554f67a73cf9c68546979722c84",
+      "gitBlobSha1": "5cd0dd795c1cbc749f439ca0819c7fb147af883a",
+      "bytes": 865804
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/intro.png",
+      "sha256": "477b0d51b5ba4e30b1b322420a80de6e33a6b344a221f47728d13d1a193c61fb",
+      "gitBlobSha1": "0fe42af76fc0fd38ed7ce119522a16a1f90d3da3",
+      "bytes": 768823
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/attack.png",
+      "sha256": "45671eb86d62062c45549b7f70d152d6d3cde191772732ce43e26f5df91adab5",
+      "gitBlobSha1": "e7d6839c746df845d5fa0cb0ab3fcaa5d907a860",
+      "bytes": 680874
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/heavy.png",
+      "sha256": "4a635a1393f15e3d0fb1dd3860bc7a6105a3b2bea0341afec7f1e8275f7c5186",
+      "gitBlobSha1": "b3d5cc0519f0d9f46994ca0bb35d24714d669966",
+      "bytes": 750096
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/hit.png",
+      "sha256": "dc042d6e0d7cdc9618bad00789b3aadd08cb577c21d8191fb1401dfdeae29097",
+      "gitBlobSha1": "958ff35b769a916dcecd37892ae9ef735599e29a",
+      "bytes": 739594
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/walk.png",
+      "sha256": "571e7d2cf2a8b4b9ba7fa6a9e668ec339fa7bdc8fa8aa80f45cdca37e8d9f3d2",
+      "gitBlobSha1": "b787b846496ef70437cd6c7dbc7d78497f1b21b8",
+      "bytes": 849696
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/jump.png",
+      "sha256": "fc2b9d125f1bc68fce244d7e9887f913687db4d26d83ba31b12a27cf072820bf",
+      "gitBlobSha1": "2c64828c6c00b5219dcbda72e115a58ce085bff3",
+      "bytes": 808285
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/crouch.png",
+      "sha256": "a3599fc59ccfad8aa9b9ac175ba4e45d991982fd12ef93224c78df59bcf93150",
+      "gitBlobSha1": "ca1ad34d3e85225e290757d31f2b61d93f2668d6",
+      "bytes": 793306
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/victory.png",
+      "sha256": "12e850d42823c96ed38d7da895853b9e9e6890022d885ecd44b175839811b2de",
+      "gitBlobSha1": "f869cf29c12592fbb023bb706a8b7a7507d8ab82",
+      "bytes": 730113
+    },
+    {
+      "file": "assets/encore/abstractions/originalabstractedzooble/defeat.png",
+      "sha256": "534fead5187737d462e35ae6bf769b540541b3b76506be8a2618ed9340b860d8",
+      "gitBlobSha1": "3a3779c103c0db29dcc5338d26ecaed964ee5497",
+      "bytes": 675508
+    },
+    {
+      "file": "assets/encore/projectiles/juggle.png",
+      "sha256": "15cd61429c67cdeed36792df9f53af708ffa5a72cca47fde0ce1953b2a31e3ca",
+      "gitBlobSha1": "5b513e9b4d4cf23422471295f17ce329e743f33a",
+      "bytes": 936859
+    },
+    {
+      "file": "assets/encore/projectiles/key.png",
+      "sha256": "fcf0d139cc3e144cd5f55598d2605fc480f4f83b9ca4c8f1f8f91cfc363bb8bb",
+      "gitBlobSha1": "a194df1f6c9b795f8359ad599ae7bfc318ca610f",
+      "bytes": 664395
+    },
+    {
+      "file": "assets/encore/projectiles/button.png",
+      "sha256": "263a67aa5a58c50f251ac19df9fab00a120ca07dd5b8ad1f33a7153ace6db749",
+      "gitBlobSha1": "df9a27143d31e0556ceae3dad8114099ca007115",
+      "bytes": 1132725
+    },
+    {
+      "file": "assets/encore/projectiles/comedy-mask.png",
+      "sha256": "cd3b666ee0f213f0dc863937ec2ca83dc8c2a6f802869e6a1e3bf64625655579",
+      "gitBlobSha1": "9a7cc98e612c663bd94f7f2462801155de205aaf",
+      "bytes": 806419
+    },
+    {
+      "file": "assets/encore/projectiles/module.png",
+      "sha256": "342fb24d122dedfb8672ed427ea6e5eeac239dafca5e2f5be53ae2004d58408e",
+      "gitBlobSha1": "ab47690f16a76ca4eefafeefec67c4ab3c5e03cd",
+      "bytes": 1196827
+    },
+    {
+      "file": "assets/encore/projectiles/pellet.png",
+      "sha256": "72490295bfff9cd71f630395bec9f1397a0e2a0b967f4eb9c53b172d7dbc2428",
+      "gitBlobSha1": "71185dba9901b1e7434c200cb2b8122ea93d7b0f",
+      "bytes": 724802
+    },
+    {
+      "file": "assets/encore/projectiles/confetti.png",
+      "sha256": "02a7a7443b1bec53d46942e0a0186b1cfcc86fbe8b75c221d7cdc1f3a26e49f7",
+      "gitBlobSha1": "8d0270142e5de84c8ab7656e810473e55fe2d2b9",
+      "bytes": 768164
+    },
+    {
+      "file": "assets/encore/projectiles/bubble.png",
+      "sha256": "3ed90d71c9b06225cc248105ccf02e8276b7df255929e66fed3ba3a9e745a36d",
+      "gitBlobSha1": "5f68eb6c9b92786c03588f146b2f7b67d7133647",
+      "bytes": 281076
+    },
+    {
+      "file": "assets/encore/projectiles/candy.png",
+      "sha256": "9306842e2e251f9091c51c110e2e2abc24ce56126d2c42c0b51ccd31049a6305",
+      "gitBlobSha1": "7bab26ee21a2b4e78b32897c1f330bb6e4561312",
+      "bytes": 944913
+    },
+    {
+      "file": "assets/encore/projectiles/sugar.png",
+      "sha256": "98ce93981f5a28e5166b16b5e7616c581cdf4931f77ad6128a4f996371e4f1c3",
+      "gitBlobSha1": "040a02e5e71106fc89b4cee57d88cf3c135e586e",
+      "bytes": 644393
+    },
+    {
+      "file": "assets/encore/projectiles/gloink.png",
+      "sha256": "ef86cfcb1deb2d32395938fecfac6bf8b7766aafb7632cc063b0c060dd93dd13",
+      "gitBlobSha1": "e2319bfb594de3421cfa69dfb3295b7505460dd0",
+      "bytes": 1092596
+    },
+    {
+      "file": "assets/encore/projectiles/fudge.png",
+      "sha256": "468d99ed362df36d6166860ed36a51fad1727b01f6387a2bbe90455d292e1c32",
+      "gitBlobSha1": "c1db287af0c2180051a452292e30f775625ed996",
+      "bytes": 1182029
+    },
+    {
+      "file": "assets/encore/projectiles/corruption.png",
+      "sha256": "1af3b8388e103e5eb181cedecbfe1a4bbe7de5a3d6b887def2373ba20038c0c0",
+      "gitBlobSha1": "ebf31928ea33dc5c2c0f4b6f1559ca0d00643e20",
+      "bytes": 628053
+    },
+    {
+      "file": "assets/encore/projectiles/spectral-shot.png",
+      "sha256": "c85fb471b3f40bb7fd487c301f3a70da6279c7ae014c696f8b76cdd8a054a6d1",
+      "gitBlobSha1": "28f88fb5e1067c241e704d36f600bb4967c9fa40",
+      "bytes": 888358
+    },
+    {
+      "file": "assets/encore/projectiles/trick-box.png",
+      "sha256": "79a6490f4ad351db76c7145da03e2553719f15cad1fabc2843f4c100b468f58b",
+      "gitBlobSha1": "03a595aa9819a1194a07bed151a5c554e7c6e7aa",
+      "bytes": 956600
+    },
+    {
+      "file": "assets/encore/stages/memoryfracture/far.png",
+      "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a",
+      "gitBlobSha1": "a1e23f782e1b0c458c2462fae12d45b4b99078bf",
+      "bytes": 2075201
+    },
+    {
+      "file": "assets/encore/stages/memoryfracture/mid.png",
+      "sha256": "6a8a08ca4247a090f79fd69e349635fe7e60e4c8afb5970702d81c5680204a45",
+      "gitBlobSha1": "cdac84689a8ee89f2f5217e8499004c004469f3a",
+      "bytes": 462271
+    },
+    {
+      "file": "assets/encore/stages/memoryfracture/near.png",
+      "sha256": "152f7abe3ab4a431d608c0840a16823b4d6243dab9c7417312528d5d34833dfe",
+      "gitBlobSha1": "e12f4ae0cb1f60ec8fb727a8e2049b0ebcf24ac3",
+      "bytes": 126867
+    },
+    {
+      "file": "assets/encore/stages/abstractionthreshold/far.png",
+      "sha256": "d5e080cd28e168caf6fd347f4cf216720ba45b6311d43e5230ad1e086eeb2482",
+      "gitBlobSha1": "bf5de423e43851c0f3fef9bf12349b918052cafd",
+      "bytes": 1945317
+    },
+    {
+      "file": "assets/encore/stages/abstractionthreshold/mid.png",
+      "sha256": "e6ddbf3ad9f5e51f3927074454e6c3171ddd8bdb10f9af9f6be016b4f3c9f03e",
+      "gitBlobSha1": "b7d1a14fa5b95df79f59fb3b7f44c66a35ae46b7",
+      "bytes": 255176
+    },
+    {
+      "file": "assets/encore/stages/abstractionthreshold/near.png",
+      "sha256": "7d3752af03f2f76757de07bae1b54f81aa3095140ece96ff1a2ea4ca290f7ea8",
+      "gitBlobSha1": "28c06c76199fa3326fdc795e1fdc14de3e413a17",
+      "bytes": 141528
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/selection.png",
+      "sha256": "9d794490aa35bfb45eef7cfff6c1f957245443ca373b344022380e963423c7fe",
+      "gitBlobSha1": "7bcef72f50eadbf5da5b8356309d4eaa5c4bb32c",
+      "bytes": 651593
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png",
+      "sha256": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d",
+      "gitBlobSha1": "18ca1d696fad9c8160ab3a5b8518cbfdf37aab6a",
+      "bytes": 774797
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/intro.png",
+      "sha256": "4a9f2ddac8771443b7078a05a42826e18d71d95982088fbbf0e848ff7b2d1f5b",
+      "gitBlobSha1": "08ffe4dec6e53a980fb6fb5557ba8cb906b08cc2",
+      "bytes": 810291
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/attack.png",
+      "sha256": "e96a5970579172f1c15511fc33c72421534ef5d5100df005cf91b3b2c57273f3",
+      "gitBlobSha1": "73d11f41c546178fdc8addb184f84f374a957855",
+      "bytes": 764690
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/heavy.png",
+      "sha256": "28d666126bf3b43d4d294abb7d2e1dc3d6ac707033c6796eae357bb3235ed8e6",
+      "gitBlobSha1": "677ad62cfe1d7feaf9f408b4d80cb9c2c67af554",
+      "bytes": 721796
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/hit.png",
+      "sha256": "38ce9b80734d0253f08c2cbddfd51f36cd90e4374c8c269a4d994878cc9eab85",
+      "gitBlobSha1": "21b8976da466e1b7295cd9a31642a095de96b584",
+      "bytes": 755398
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/walk.png",
+      "sha256": "9b0a67c6ea975f962f6d81457accda9478e3a3e8034bab9488a17c7bcc560eef",
+      "gitBlobSha1": "b11eb4354239cb9dd66122b3d58da0472e9ab58d",
+      "bytes": 705491
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/jump.png",
+      "sha256": "1c88ddf1ba6ad7712b3934255a9d85ad11279dddfa928c130370ef6b78a07ced",
+      "gitBlobSha1": "d1b07bc063407c7ced72e557f17c62b8c8d0dddd",
+      "bytes": 791796
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/crouch.png",
+      "sha256": "2c8c87cc6b432da323c004dc198c9d7b2e4bb0bbf4c0895fa9023ee9d716c1a1",
+      "gitBlobSha1": "a5d68a062c99459bfbbba51529771369be7ab8a6",
+      "bytes": 867596
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/victory.png",
+      "sha256": "2bee53200bd9898af006bd5bc6cb83f84de86860db4da0e9134ccc7bd9f5838b",
+      "gitBlobSha1": "28b08fcc3db591113f2d99961dafcde7da73bf5e",
+      "bytes": 721052
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/defeat.png",
+      "sha256": "c29922160ccc5d3f7317773ba0ca5ae834c59b9af7482b2c1c7b7ab0f0964ee8",
+      "gitBlobSha1": "2dffc12afe7a8ee1f94d1fc2eae2752a8e2a54f6",
+      "bytes": 831676
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/selection.png",
+      "sha256": "696d417d1cdc05c4288b3970632604c4ea978ccce2cadc782e6aba86a8334a91",
+      "gitBlobSha1": "3a02d6d3faf810c26d861ce45719513d92daf75b",
+      "bytes": 589593
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png",
+      "sha256": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d",
+      "gitBlobSha1": "16075652f3126a6325a19bc45f43e0bfede3e85e",
+      "bytes": 686638
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/intro.png",
+      "sha256": "8adfdd0d413827239ea5acc6082ec6e08cf1153cda32d9dfff1d4e50b8e5bbbd",
+      "gitBlobSha1": "9108b57538037f792d0b715cc44263c4c92008f3",
+      "bytes": 696053
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/attack.png",
+      "sha256": "3242d28e28f013ef5f2be82f1c3ba862d787dbce74d6d58b5016471499ea8b98",
+      "gitBlobSha1": "6e7caa2c6e8cfd12b80fc20b40bd44130eb790f0",
+      "bytes": 647650
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/heavy.png",
+      "sha256": "7e2176cc28e0954e7504aaeb76e77b67c3b6c1c530df4f9c4c491649e656a561",
+      "gitBlobSha1": "48260d394483c8845800ce3084d79cdb2775ad1b",
+      "bytes": 635090
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/hit.png",
+      "sha256": "c5194acd483de0d4eef69e7c94d1a3113adec5786f2475e53a450e9d2172c444",
+      "gitBlobSha1": "45874f981d34d9b1df70a2b49fe6aee4b9d59ef3",
+      "bytes": 650246
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/walk.png",
+      "sha256": "9c6bbe310d8755e0912644ca7b4542225c17ed1f84e725e4c5afef0bfe76e6db",
+      "gitBlobSha1": "18b68fadb461e69a11b7951ef54f9dd11aa2da4b",
+      "bytes": 648969
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/jump.png",
+      "sha256": "11fd216c236aa30d562d3d4d0bc07183fe125dfe08a6c86d9391c0ddf63b6055",
+      "gitBlobSha1": "89756d6a520b3076b94000f1a01eabdaf171b745",
+      "bytes": 696526
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/crouch.png",
+      "sha256": "e4635b5e428a10d75f20617ca4679a36a79bbc1ac44f5208a0b9a69d9f324b0e",
+      "gitBlobSha1": "c78f1550243153568753c3297183db26f77351f2",
+      "bytes": 695616
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/victory.png",
+      "sha256": "4360042db9e1d7ac99a6e3618ce7130feb2af552f2e83b4f42ccfa796c4536b0",
+      "gitBlobSha1": "bd2d86aa1082e5c043981e5966bbea68f92268ac",
+      "bytes": 723803
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/defeat.png",
+      "sha256": "d889c549be4a07371d5f19760da50cf4fbfc6a140a4efb624e48f7a8347d043f",
+      "gitBlobSha1": "8f08cec333b20bb3072532fcb2e65cbf5a64c5e9",
+      "bytes": 687971
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/selection.png",
+      "sha256": "9ccde87698bf2bda2f16cc223eda26426a6b5774d61b84d77d723acbc7ebeb2d",
+      "gitBlobSha1": "74d54394c80503edf25ad03b6a8e19570023fce5",
+      "bytes": 817543
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png",
+      "sha256": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87",
+      "gitBlobSha1": "873df904c9600fc3f5b8d0d3612b8b77b9bd4f16",
+      "bytes": 1009355
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/intro.png",
+      "sha256": "77d05f5482f962cbf207df1568f3747d7454aa55b6f510c610f368d93a73620e",
+      "gitBlobSha1": "b7e0911b79506066d13c470b0755693e3902a730",
+      "bytes": 922848
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/attack.png",
+      "sha256": "e18055dd4552ae5468a496ab84662fc50c9edcd34b03bccd838677ac6dc8b3a0",
+      "gitBlobSha1": "68921c7af35037a6201f9d24e894f979949a832d",
+      "bytes": 871167
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/heavy.png",
+      "sha256": "b20f069f957080541c70f519c54c6c7e4936ea97a96252aee2522de57b69491c",
+      "gitBlobSha1": "31ec886614d243cb2dc92331f03aaf323bd138cf",
+      "bytes": 804193
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/hit.png",
+      "sha256": "e5af0ea8a9b35f932a98353130b545a7339b95142880fd5e2d435b91b49686bb",
+      "gitBlobSha1": "f93ee87c5f13c87017404bb1901f6f4892a35bb2",
+      "bytes": 837186
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/walk.png",
+      "sha256": "fe97ccb8604ac79555e7e2ec7170a6becada023f795c7bcbf025b93143067ea7",
+      "gitBlobSha1": "ac4141138d1aadc3d431339611a37c7ced6e9927",
+      "bytes": 809742
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/jump.png",
+      "sha256": "0b7f922207a262a2efb0bd17167aac2fbc6d2b9c9a9fc31007a86d5956ac6ef3",
+      "gitBlobSha1": "fbc25e4199e70ad22af58d14e149da048049dc36",
+      "bytes": 941907
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/crouch.png",
+      "sha256": "7d9ae97ee8212a9647fccfefa738d601b70551bef5d2c4148198e169a650f5b0",
+      "gitBlobSha1": "5bca10beaa17f11942d6aa7e4d77f69ed7424baa",
+      "bytes": 844625
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/victory.png",
+      "sha256": "2f4d7be795b9baa2c2f525311eba7cac81981843d0f1c59ee9ee2cd15ada1a8d",
+      "gitBlobSha1": "06b2c17d6f95f98afc4b47f84e6d71f8a4069f40",
+      "bytes": 884110
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/defeat.png",
+      "sha256": "0c5ec3adb5386606993797ecbb9af7dc73f36a4017b82e2791925692a2bd399b",
+      "gitBlobSha1": "24f26104eede1dc629be698e3165690b53fe281a",
+      "bytes": 894023
+    }
+  ],
+  "limitations": [
+    "Native PNG validation does not certify canonical 1:1 fidelity.",
+    "State illustrations do not constitute complete frame-by-frame animation cycles."
+  ]
+}

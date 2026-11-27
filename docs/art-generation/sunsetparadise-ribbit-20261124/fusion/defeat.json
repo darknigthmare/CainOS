@@ -1,0 +1,32 @@
+{
+  "style": "fusion",
+  "state": "defeat",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE freshly drawn individual full-body 2D fighting-game state illustration, using the provided stance image as the exact character model. Preserve the same face, limb count, body proportions, palette, costume, backpack or fins, contours and cel-shaded finish. This is an ORIGINAL Encore Ribbit / Sunset Paradise crossover design, not an official canonical appearance. Articulate the joints and expression into the requested new pose; do not repeat, flip, crop, warp or merely reposition the stance drawing. Genuine transparent alpha background, solid opaque character, clean sharp outline. Square composition with entire silhouette inside CENTRAL 76 percent and at least twelve percent empty margin on ALL edges, including hands, feet, caps, fins and tail. Character faces RIGHT in side view with slight three-quarter depth. One character only, no multiple views, sprite sheet, text, letters, watermark, border, floor, shadow, painted background, halo, haze, glow or checkerboard. DEFEAT pose: harmless exhausted seated slump, seated low with both legs bent and feet relaxed out in front toward the RIGHT, shoulders dropped, head bowed, both hands resting limply by knees, eyes half-lidded but both recognizable eyeballs retained. No wound, blood, tears, detached parts, stars, scene or shadow. Keep the complete body, accessories and tail within frame. Identity lock: Design a true original amphibian-body FUSION of Ribbit with a vivid tropical sea creature inspired by the color mood of Sunset Paradise. It must visibly redesign anatomy, NOT put a costume on the ordinary frog. Ribbit remains recognizable through exactly TWO enormous white bulging eyes with black wedge-cut pupils, pink round cheeks and wide smiling frog mouth. Body now a larger pear-shaped turquoise-teal amphibian torso, short powerful bent frog thighs, long tapered forearms, exactly four rounded webbed fingers each hand and three broad webbed toes each foot, lime-green face and hands/feet, smooth cream belly with an orange sun-shaped patch. One broad curved tapering teal tadpole tail with a coral-orange fin runs behind to the left and remains entirely in frame. Coral-orange fin crest sweeps backward from head, small coral fins along elbows. Ribbit's pink bow tie is reinterpreted as TWO attached pink fan-shaped gill lobes at the throat. Four limbs plus exactly one tail. No clothes, hat, goggles, backpack, armour, trousers, shoes, weapons, horns or wings. Keep a compact strong frog silhouette with readable tail, friendly expressive face and clean rounded amphibian anatomy.",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "sunsetRibbitResult:fusion:defeat:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-21ae02b6-a861-4b7e-bc01-362cc0febe1c.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-21ae02b6-a861-4b7e-bc01-362cc0febe1c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/defeat.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "bytes": 894023,
+  "sha256": "0c5ec3adb5386606993797ecbb9af7dc73f36a4017b82e2791925692a2bd399b",
+  "sha": "24f26104eede1dc629be698e3165690b53fe281a",
+  "alphaZeroFraction": 0.6679626789170985,
+  "alpha12BBox": [
+    100,
+    160,
+    1117,
+    1106
+  ],
+  "nativeBytesVerified": true,
+  "auditPass": true
+}

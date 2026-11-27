@@ -1,0 +1,25 @@
+{
+  "appearanceId": "caferagatha",
+  "fighterId": "ragatha",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: precise-object-edit.\nEdit image 1 into the final Cafe Ragatha character-selection sprite, using image 2 (the official poster, Ragatha is second from the left) only to verify the cafe coif.\nChange ONLY these defects: REMOVE the tall lavender bow behind the top of her white maid coif completely; the coif must have just the existing dark navy bows at its sides. Remove ALL colored haze, glow, backlight, shadow and semitransparent aura outside the clean character outline. All pixels beyond the character edges must be genuinely transparent. Make the character itself fully opaque with crisp antialiased edges. Place the entire character slightly smaller in the transparent canvas, with at least 10 percent empty clear margin above the coif and below both soles.\nKeep her current blue stitched X-button eye, white other eye, beige doll face and hands, red yarn hair, navy dress and puff sleeves, white pleated bib, pale-blue neck bow, large pale-blue apron bows, scalloped white apron and its pale stitched patch motifs, two white stockings, two navy platform shoes with white toe accents. Keep the welcoming pose and face looking SCREEN-RIGHT. No other costume changes. No tray, food, scenery, text, watermark or duplicate character. Exactly one fully opaque character on true transparent RGBA background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attempts/selection-initial/native.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg"
+  ],
+  "referenceRoles": [
+    "Edit target: initial cafe Ragatha native image; remove inherited bow and haze",
+    "Official cafe coif/costume authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "generate_cafe_ragatha",
+  "definitionSha256": "7e7e4089742816d9ae310404d10ecc7ed0fd526e8be1452e604dfbbf979de654",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attempts/selection-initial/native.png": "9623578081cd56ef87e5cf4c7e33855d665bf3f60b27e89ad434d7505d6dfca3",
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b"
+  }
+}

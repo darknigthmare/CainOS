@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-24",
+  "owner": "/root",
+  "series": "ultrajumpmania",
+  "scope": [
+    "hommage",
+    "resident",
+    "fusion"
+  ],
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "alreadyLaunched": false,
+  "sourcePlan": "jobs-initial-gameoverse-smg4-ultrajumpmania.json",
+  "reason": "Parallelized at root request; original_abstraction_art owns the other five universes."
+}

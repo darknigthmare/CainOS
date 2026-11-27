@@ -1,0 +1,25 @@
+{
+  "appearanceId": "cafekinger",
+  "slot": "heavy",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE original full-body heavy action sprite for the existing Digital Circus Encore game.\n\nReference image 1 is the accepted cafekinger selection: lock its identity, proportions, line weight, cel shading, costume construction and colors. Reference image 2 is the official Animate Cafe illustration detail: preserve its distinctive outfit. Make a genuinely new heavy pose, not a flipped or mechanically moved copy. Only one character.\n\nKinger remains a beige cross-topped chess king with two blue eyes, clear silver monocle and chain, purple tailcoat with pale lavender piping and tails, gray-lilac diamond waistcoat with dark buttons, white collar, black tie and blue-centered flower ornament. One purple tapering chess-piece body ends in a complete navy circular plinth with a thin pale rim. EXACTLY TWO disconnected white gloves float beside him. No human arms, sleeves connecting gloves, legs, shoes, feet, knees, royal fur or new accessories. Keep the hands separate from the body through real transparency.\n\nPOSE: Heavy strike preparation: the whole chess piece leans forcefully toward screen-right while one floating clenched glove is lifted high beside, not covering, the cross for an overhand strike; the other glove remains low in guard. Glove count exactly two, no impact effects or weapon.\n\nNative orientation is SCREEN-RIGHT. Keep all visible costume asymmetry consistent with the selection. Crisp dark contours and restrained flat two-tone cel shading, same polished 2D game family. Center the complete silhouette with generous transparent space around every extremity; use a wider composition if needed so nothing touches the edges. Native transparent RGBA. No scenery, floor, cast shadow, halo, bloom, sticker outline, motion streaks, text, logo, watermark, duplicate figure or additional limbs. Preserve all original image pixels in the delivered native result; no painted checkerboard or solid background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "a88213cffa6774258b1dc53c8e2c0e2aed5eaa2764993b79693deb9fd1a8308a",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafekinger-detail.png": "fc6cd1797742cd8b7306b9c217ae1ce354ac4005ec9b06257bf67a1405fa0b60"
+  }
+}

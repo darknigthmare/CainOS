@@ -1,0 +1,60 @@
+{
+  "series": "gameoverse",
+  "style": "fusion",
+  "label": "Gameoverse · Fusion · Grenouille de cartouche",
+  "identity": "True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gameoverse"
+  ],
+  "state": "selection",
+  "id": "glitch-gameoverse-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gameoverse:fusion:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e687b174-885f-48fa-a07c-a32209fa97b4.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-e687b174-885f-48fa-a07c-a32209fa97b4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    341,
+    49,
+    1037,
+    1218
+  ],
+  "alpha12Margins": [
+    341,
+    49,
+    217,
+    36
+  ],
+  "alphaZeroFraction": 0.7772029028639454,
+  "alphaOpaqueFraction": 0.0008635842179030293,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gameoverse/ribbit/fusion/selection.png",
+  "bytes": 690800,
+  "sha256": "3b09dd7977cdabaebf9c72740f3857b09d4edb3d1c6ff1446ae54958c1428bb8",
+  "sha": "6e68fb7122b9a82c933eef57fba92609401cdc45",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png": "2025c0a1cbe76d1bb0fc22c3dbcc0599371408797665949a907429e6ca870db7"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "New upright portrait keeps the cartridge geometry, block limbs, blue rails, star inset and identity of the stance. Complete single figure; all extremities remain inside the canvas.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

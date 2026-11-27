@@ -1,0 +1,21 @@
+{
+  "appearanceId": "caferibbit",
+  "slot": "victory",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D full-body combat sprite for Digital Circus Encore.\nInput image 1 is the APPROVED Cafe Ribbit selection sprite: preserve its exact design, proportions, colors, line weight and clean cel shading. Input image 2 is the official Animate Cafe reference, confirming the clothes and complete shoes. Generate a new pose of exactly this one frog character, not a collage or animation sheet.\nLOCK ALL DESIGN: green frog skin and mint muzzle; huge white eyes with black pie-cut pupils and navy upper lids; pink cheeks, small smile; white frilled headband with navy side bows and small pink ribbon ends; slim pink neck ribbon; dark navy short dress, white bib with navy heart, white ruffled apron with exactly two dark navy decorative bows, white scalloped cuffs, green frog hands, two long white socks with frilled top cuffs and pink accents, rounded dark navy shoes with berry-pink sole edges. Preserve the accepted head and costume, do not convert to a human, rabbit or plush. One intact head, two arms, two hands, two legs and two shoes.\nPOSE: Cheerful victory pose facing SCREEN-RIGHT. One green frog hand lifted high in a celebratory wave, the other rests by the waist; confident upright legs and both shoes separately readable, happy small smile looking toward the right. No trophy, confetti, text or effects.\nTECHNICAL: full body entirely visible and facing SCREEN-RIGHT; gaze right even if the body bends. No tray or dessert; all hands empty. Center the character with at least 10 percent genuinely transparent margin around the extreme headband, hands and feet, in a canvas appropriate to the pose. Crisp dark outlines, restrained flat cel shading. Genuine native RGBA transparency, no scenery, ground, cast shadow, reflection, text, logo, frame, sticker edge, glow, halo, bloom, colored haze, motion trail, duplicate body or cropped extremities. Do not copy hidden background RGB from a reference into visible pixels. One clean native PNG.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: fixed family design and drawing style",
+    "Official cafe costume and complete visible lower body"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e"
+}

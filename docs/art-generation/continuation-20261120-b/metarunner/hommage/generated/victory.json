@@ -1,0 +1,67 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "hommage",
+  "slot": "victory",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and a hot-pink fabric bow tie. Long slender limbs and torso in the existing game adaptation, not plush proportions. Wear Tari-inspired bright cyan zip-up hoodie: white hood folded DOWN, white side panels running along the sleeves, charcoal hem and cuffs, plain central white zipper, no written logos. Bow tie visible at neck above zipper. Slim navy trousers and white sneakers with cyan soles. LEFT forearm is a smooth white cybernetic prosthesis with navy joints and slim cyan indicators, ending in a rounded THREE-digit robotic frog hand; RIGHT hand biological green with exactly THREE rounded digits. Both eyes natural white/black; no electronic face visor. No hair, hat, tail, wings or weapons. POSE: Cheerful victory celebration facing right: RIGHT arm raised high in a clear celebratory three-digit fist, LEFT arm bent at waist, upright with weight on one foot and the other foot slightly to the side. Broad happy smile, complete body, no confetti, text, prop or background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png"
+  ],
+  "reviewer": "audit_github",
+  "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-hommage:victory",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/hommage/victory.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-b1300ba5-21ae-4db8-89d5-4f3508e7e69b.png",
+  "sourceGenerationId": "exec-b1300ba5-21ae-4db8-89d5-4f3508e7e69b",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+      "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+      "bytes": 717557
+    }
+  ],
+  "dimensions": [
+    1081,
+    1455
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    239,
+    50,
+    899,
+    1414
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1207184,
+  "sha256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+  "bytes": 661706,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:13:53.402375+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "audit_github",
+    "observations": [
+      "Native alpha composed on light and dark backgrounds: no external halo, floor or cast shadow; full figure has transparent margin.",
+      "Cheerful victory facing right, raised biological right fist shows two curled fingers plus one thumb; white prosthetic left hand has three rounded digits. Cyan hoodie, white hood, navy trousers, white/cyan sneakers and pink bow match selection.",
+      "Three-digit anatomy is an original design choice; no canonical costume or full animation claim. Diagnostics: review/audit-victory-defeat/victory-alpha.jpg and victory-hands.jpg."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

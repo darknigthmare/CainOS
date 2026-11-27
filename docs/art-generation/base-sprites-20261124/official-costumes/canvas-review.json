@@ -1,0 +1,55 @@
+{
+  "schema": "encore-official-static-base-canvas-review/v1",
+  "reviewedAt": "2026-11-24T16:04:35.312669+00:00",
+  "reviewer": "canon_abstractions",
+  "status": "accepted-static-canvas",
+  "reviewMethod": "Four native Canvas contact sheets visually inspected: own selection portrait, right-facing stance and mirrored left-facing stance.",
+  "files": [
+    {
+      "id": "contortionistzooble",
+      "file": "docs/art-generation/base-sprites-20261124/canvas/base-contortionistzooble.jpg",
+      "sha256": "3d72b6a5cdc2b2a965075fae7774e81c0cb25d6e6f378edc723028d4815fdf3e",
+      "accepted": true,
+      "notes": "Assemblage replié entier, anneaux, aile, étoile et pièces chevauchées lisibles. Aucun dépliage ni membre caché ajouté. Portrait et garde entiers, miroir intact."
+    },
+    {
+      "id": "hotdogabel",
+      "file": "docs/art-generation/base-sprites-20261124/canvas/base-hotdogabel.jpg",
+      "sha256": "132377289380490546d4c3b964e62ffc19c409c69b3303267f8e13ae171e9677",
+      "accepted": true,
+      "notes": "Abel, hot-dog, chariot, grande roue et roulette présents dans les trois vues. Jambes masquées conservées. Les inscriptions sont naturellement inversées dans le miroir de jeu."
+    },
+    {
+      "id": "cafejax",
+      "file": "docs/art-generation/base-sprites-20261124/canvas/base-cafejax.jpg",
+      "sha256": "403e6a16d0c15a2c8667bb37866d45df5ce4fabe7a0dab0a8964a9f82a5db26e",
+      "accepted": true,
+      "notes": "Garde entière avec oreilles, coiffe, deux nœuds latéraux, plateau, tasse et souliers visibles. Le portrait garde son cadrage intentionnel au-dessus du bas des jambes. Proportions élancées et accessoires préservés dans les deux sens."
+    },
+    {
+      "id": "cafecaine",
+      "file": "docs/art-generation/base-sprites-20261124/canvas/base-cafecaine.jpg",
+      "sha256": "2b9131f47251e5a84cfe8bf3c4397d30e29623a8510996f8e9640b3d17ace196",
+      "accepted": true,
+      "notes": "Dentier complet, grand nœud, théière, filet de thé, tasse et jambes repliées conservés. Aucun bord de découpe visible et aucun accessoire manquant dans les deux sens."
+    }
+  ],
+  "contactSheetsInspected": 4,
+  "viewsInspected": 12,
+  "nativeAssetAudit": {
+    "file": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+    "sha256": "eef9732c258b8cea84cd4d9625c143b4803568339216018a3e46f3216a3e0b23"
+  },
+  "automatedCanvasEvidence": {
+    "file": "docs/art-generation/base-sprites-20261124/canvas/base-canvas-review.json",
+    "sha256": "0b5fbc939aa28ef26692a6907bb904daf828121c1cef3977f663f083db957c5e"
+  },
+  "nativeAssetsChanged": false,
+  "newActionImagesRequested": false,
+  "canonicalPixelCertification": false,
+  "limitations": [
+    "The mirrored direction is a game convention, not an additional official camera view.",
+    "This inspection covers the four named official families. The whole-batch scripted controls are recorded by the linked Canvas report.",
+    "No browser DOM, audio or physical-device session was executed by this visual review."
+  ]
+}

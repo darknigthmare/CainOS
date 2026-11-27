@@ -1,0 +1,46 @@
+{
+  "schema": "encore-tracker-baseline-visual-review/v1",
+  "status": "accepted_as_baseline",
+  "reviewedAt": "2026-11-20T19:31:34.810Z",
+  "reviewer": "resume_publication",
+  "workbookSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+  "views": [
+    {
+      "file": "baseline-summary.png",
+      "sha256": "cd219272b2c118cdc3233e6fa17b7c31c833ca9c6f3cd812eb7dc3de50b0867b",
+      "bytes": 124801,
+      "observations": [
+        "Totals 54 fighters, 540 techniques, 25 arenas, 477 costumes, 3,308 Production. Violet headings, spacing and existing incomplete-art statuses read clearly."
+      ],
+      "status": "accepted"
+    },
+    {
+      "file": "baseline-production.png",
+      "sha256": "c6364f147bf4b238e065069fe0c19d3738be10ef98731318fcb818d71a5a13d7",
+      "bytes": 267292,
+      "observations": [
+        "Existing Cafe Kinger, Cafe Pomni and Ribbit Tari family rows retain stable IDs, green implemented statuses, source scopes and blank yellow note cells. Full row text fits."
+      ],
+      "status": "accepted"
+    },
+    {
+      "file": "baseline-qa.png",
+      "sha256": "f28564af0790de68768189198a4001a1c1ca8c6ea24208305e43f5b72f09efe0",
+      "bytes": 99430,
+      "observations": [
+        "Browser non-executed row and previous tracker execution row are visible; proof paths and limitations fit without vertical clipping."
+      ],
+      "status": "accepted"
+    },
+    {
+      "file": "baseline-references.png",
+      "sha256": "ac616450bd1b6c9c08a35f1ecb5be0f576e2abc50bffb540c189205cd76e5676",
+      "bytes": 95064,
+      "observations": [
+        "Preserved footer defines statuses, user notes and QA limits. Distinct title row and readable cells through the footer."
+      ],
+      "status": "accepted"
+    }
+  ],
+  "scope": "Four newly rendered, directly inspected views of the installed baseline. No new Café C execution status is asserted."
+}

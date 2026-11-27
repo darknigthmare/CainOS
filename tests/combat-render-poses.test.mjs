@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { FIGHTERS } from '../combat/data.mjs';
-import { ANIMATION_REGISTRATION, POSE_PRESENTATION, frameRegistration, spriteSourceRegion, bendLeg, crouchParts, actorPose, frameGeometry, illustratedAction } from '../combat/render-poses.mjs';
+import { FIGHTERS, equipCostume } from '../combat/data.mjs';
+import { ABSTRACTION_IDS } from '../combat/abstractions-content.mjs';
+import { ANIMATION_REGISTRATION, POSE_PRESENTATION, frameRegistration, spriteSourceRegion, bendLeg, crouchParts, actorPose, frameGeometry, illustratedAction, illustratedHeightRatio } from '../combat/render-poses.mjs';
 
 const fighter = id => FIGHTERS.find(f => f.id === id);
 const actor = (id = 'pomni', extra = {}) => ({ f: fighter(id), slot: 0, x: 400, y: 568, face: 1, onGround: true, state: 'idle', ...extra });
@@ -222,4 +223,91 @@ test('Jax keeps intact artwork for low stance and does not inherit the historica
   assert.equal(ANIMATION_REGISTRATION.jax.crouchRig, undefined);
   assert.equal(crouchParts(fighter('jax'), sourceFrame('jax')), null);
   assert.equal(actorPose(actor('jax', { crouch: true })).low, true);
+});
+
+test('an asymmetric abstraction anchors its head uniformly on either side without shifting legacy art', () => {
+  const f = fighter('aquaticabstraction');
+  const frame = { bounds: { x: 55, y: 46, width: 532, height: 234 }, nativeFacing: 1 };
+  const before = JSON.stringify([f, frame]), front = frame.bounds.x + frame.bounds.width;
+  for (const face of [1, -1]) {
+    const geometry = frameGeometry(f, frame, frame, {}, face);
+    almost(geometry.scale, 200 / 234);
+    almost(geometry.anchor.x, 55 + 532 * 0.78);
+    almost((front - geometry.anchor.x) * geometry.scale, 100.03418803418803);
+    assert.equal(geometry.flip, face);
+    assert.ok(f.moves.special.projectileOrigin[face].forward > (front - geometry.anchor.x) * geometry.scale);
+  }
+  const neutral = frameGeometry(fighter('pomni'), frame, frame, {});
+  almost(neutral.anchor.x, 55 + 532 / 2);
+  const registered = sourceFrame('caine', 6);
+  assert.deepEqual(frameGeometry({ ...fighter('caine'), visual: { ...fighter('caine').visual, anchorX: 0.78 } },
+    registered, registered, {}).anchor, registered.registration.anchor);
+  assert.equal(JSON.stringify([f, frame]), before);
+});
+
+test('lowered abstraction drawings stay within their authored width without resizing legacy fighters', () => {
+  const f = fighter('cellarabstraction');
+  // Visible dimensions decoded from the current native horizontal attack.
+  const frame = { bounds: { x: 28, y: 33, width: 592, height: 254 }, nativeFacing: 1 };
+  const before = JSON.stringify([f, frame]);
+  for (const face of [1, -1]) {
+    const geometry = frameGeometry(f, frame, frame, { lean: .05 }, face);
+    almost(geometry.scale * frame.bounds.width, 290);
+    assert.ok(geometry.scale * frame.bounds.height < 125, 'A low pose stays lower than its 280px stance');
+    almost(geometry.anchor.x, frame.bounds.x + frame.bounds.width / 2);
+    assert.equal(geometry.flip, face);
+  }
+  assert.equal(JSON.stringify([f, frame]), before);
+  const old = FIGHTERS.filter(f => !ABSTRACTION_IDS.includes(f.id));
+  assert.ok(old.length >= 54);
+  for (const legacy of old) {
+    assert.equal(legacy.visual?.maxIllustratedWidth, undefined, legacy.id);
+    almost(frameGeometry(legacy, frame, frame, {}).scale, legacy.visual.height / frame.bounds.height);
+  }
+});
+
+test('calm Queenie owns a width limit while retaining its low central anchor on both sides', () => {
+  const queenie = fighter('abstractedqueenie'), calm = equipCostume(queenie, 'abstractedqueeniedark');
+  const frame = { bounds: { x: 19, y: 35, width: 600, height: 379 }, nativeFacing: 1 };
+  for (const face of [1, -1]) {
+    const geometry = frameGeometry(calm, frame, frame, { lean: .05 }, face);
+    almost(geometry.scale * frame.bounds.width, 315);
+    assert.deepEqual(geometry.anchor, { x: 319, y: 414 });
+    assert.equal(geometry.flip, face);
+    almost(frameGeometry(queenie, frame, frame, { lean: .05 }, face).scale * frame.bounds.width, 355);
+  }
+});
+
+test('raised-pose calibration preserves the body scale only for its resolved authored action', () => {
+  const f = fighter('originalabstractedpomni'), move = f.moves.heavy;
+  const a = actor(f.id, { attack: { name: 'heavy', def: move, t: 0 } });
+  const source = () => illustratedAction(actorPose(a), a.attack);
+  assert.equal(source(), null, 'Windup still shows the standing drawing');
+  assert.equal(illustratedHeightRatio(f, source()), 1);
+  a.attack.t = move.startup;
+  assert.equal(source(), 'heavy');
+  const frame = { bounds: { x: 48, y: 81, width: 493, height: 486 }, nativeFacing: 1 };
+  const before = JSON.stringify([f, a, frame]);
+  for (const face of [1, -1]) {
+    const geometry = frameGeometry(f, frame, frame, {}, face, illustratedHeightRatio(f, source()));
+    almost(geometry.scale * frame.bounds.height, 364);
+    assert.ok(geometry.scale * frame.bounds.width < 530);
+    assert.deepEqual(geometry.anchor, { x: 294.5, y: 567 });
+    assert.equal(geometry.flip, face);
+    const wide = { ...frame, bounds: { ...frame.bounds, width: 1200 } };
+    almost(frameGeometry(f, wide, wide, {}, face, illustratedHeightRatio(f, source())).scale * 1200, 530,
+      'Height calibration cannot bypass the width ceiling');
+  }
+  assert.equal(JSON.stringify([f, a, frame]), before);
+  const calibrated = FIGHTERS.filter(f => f.visual?.poseHeightFactors).map(f => [f.id, Object.keys(f.visual.poseHeightFactors).sort()]);
+  assert.deepEqual(calibrated, [
+    ['originalabstractedpomni', ['heavy', 'hit', 'intro', 'victory']],
+    ['originalabstractedragatha', ['heavy']],
+  ]);
+  for (const legacy of FIGHTERS.filter(f => !ABSTRACTION_IDS.includes(f.id))) {
+    assert.equal(legacy.visual?.poseHeightFactors, undefined, legacy.id);
+    for (const action of [null, 'intro', 'heavy', 'hit', 'victory']) assert.equal(illustratedHeightRatio(legacy, action), 1, legacy.id);
+    assert.equal(illustratedHeightRatio(legacy, 'crouch'), .74, legacy.id);
+    assert.equal(illustratedHeightRatio(legacy, 'defeat'), .74, legacy.id);
+  }
 });

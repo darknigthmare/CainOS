@@ -1,0 +1,11 @@
+{
+  "id": "abstractedribbit",
+  "pose": "attack",
+  "slot": "attack",
+  "prompt": "Use case: identity-preserve. Asset type: SINGLE 2D UHD fighting-game state sprite, attack. Reference is this character's approved native stance, preserve character design, topology, colored eye identities, materials and crisp rendering 1:1. Tall narrow multiple-spire black crystalline quadruped with rounded colorful irises (pink/cyan/gold/red), FOUR low splayed clawed legs. Preserve reference identity; no green frog features. Distinct LIGHT ATTACK pose at full extension toward RIGHT: quick forward body/leading limb strike, weight forward. For limbless forms a quick forward pointed-body/tendril thrust. Strict side-on fighting-game view, facing RIGHT with modest three-quarter volume. One independent newly drawn complete pose, NOT a duplicate of stance. Retain same scale and proportion relationships; fit entire subject with 8% transparent padding around extreme limbs/tendrils/spires. High detail black faceted mass legible via controlled violet/cyan rim highlights. TRUE transparent alpha outside silhouette, no black/grey background, NO environmental glow or haze, no floor, no shadow, no text/labels, no grid, no other character, no effect cloud. No extra arms, no humanoid face, no costumes beyond reference. This is an original combat adaptation of the provided project design, not an official new scene.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/abstractedribbit/stance.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-ab2b657e-afd5-45f3-9998-f7cee23c61ff.png",
+  "destination": "assets/encore/abstractions/abstractedribbit/attack.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native drawing using retained original prompt and regenerated matching stance."
+}

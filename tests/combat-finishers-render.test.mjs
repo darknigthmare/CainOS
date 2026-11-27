@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { FIGHTERS, VARIANTS } from '../combat/data.mjs';
+import { FIGHTERS, VARIANTS, equipCostume } from '../combat/data.mjs';
+import { ABSTRACTION_CALM_ID } from '../combat/abstractions-content.mjs';
 import { FINISHER_CATALOG } from '../combat/finisher-catalog.mjs';
 import { drawFinisherScene } from '../combat/render-finishers.mjs';
 
@@ -34,7 +35,7 @@ function record(state,entry,frame,options={}){
   return {ctx,actors,view};
 }
 
-test('all 42 endings draw finite compositions on both winner sides without mutating the match',()=>{
+test('all fighter endings draw finite compositions on both winner sides without mutating the match',()=>{
   assert.equal(FINISHER_CATALOG.length, FIGHTERS.length * 3);
   for(const definition of FINISHER_CATALOG)for(const side of [0,1]){
     const {state,entry}=fixture(definition,side),before=JSON.stringify(state);
@@ -77,14 +78,25 @@ test('the three endings of every fighter differ in geometry, independently of th
   }
 });
 
-test('every costume keeps its actual artwork definition through an ending',()=>{
-  assert.equal(VARIANTS.length,51);
+test('every archive costume keeps its actual artwork definition through an ending',()=>{
+  assert.equal(VARIANTS.length,52);
+  let calmChecked=false;
   for(const variant of VARIANTS){
-    const base=FIGHTERS.find(item=>item.id===variant.fighterId),fighter={...base,sprite:variant.sprite,animation:variant.animation||null,visual:{...base.visual,...variant.visual},costume:variant.id};
+    const base=FIGHTERS.find(item=>item.id===variant.fighterId),fighter=equipCostume(base,variant.id);
+    assert.equal(fighter.costume,variant.id,'The production costume selection must preserve the requested appearance');
     const definition=FINISHER_CATALOG.find(item=>item.fighterId===base.id);
     const {state,entry}=fixture(definition,0,fighter),before=JSON.stringify(fighter);
     const {actors}=record(state,entry,definition.durationFrames);
     assert.equal(actors[1].actor.f,fighter);
     assert.equal(JSON.stringify(fighter),before);
+    if(variant.id===ABSTRACTION_CALM_ID){
+      calmChecked=true;
+      assert.equal(fighter.id,'abstractedqueenie');
+      assert.ok(fighter.sprite.crossoverDirectory.endsWith('/'+ABSTRACTION_CALM_ID));
+      assert.equal(fighter.visual.maxIllustratedWidth,315);
+      assert.equal(fighter.moves,base.moves,'Calm Queenie keeps the same combat kit');
+      assert.equal(actors[1].actor.f.costume,ABSTRACTION_CALM_ID);
+    }
   }
+  assert.equal(calmChecked,true,'The calm Queenie appearance must be exercised');
 });

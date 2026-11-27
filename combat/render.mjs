@@ -1,6 +1,7 @@
+import { projectileArtSpec, ProjectileArtLoader } from './projectile-art.mjs';
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
-import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, illustratedHeightRatio, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
 import { actionIllustration, loadFighterIllustration, standingIllustration } from './illustrations.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
 import { drawStageScenery } from './render-stage-scenery.mjs';
@@ -312,6 +313,11 @@ function commonFloor(ctx, stage, theme) {
     for (const y of [568, 584, 613, 657, 719]) line(ctx, [[0, y], [1280, y]], '#1726b0', 1.5);
     for (let x = -640; x <= 1920; x += 256) line(ctx, [[640 + (x - 640) * .12, FLOOR], [x, 720]], '#1d29be', 1.5);
   } else if (theme === 'candy') floorTiles(ctx, '#9c5666', '#bc6e78', '#ffdeab');
+  else if (theme === 'barnoir') floorTiles(ctx, '#181e20', '#717c77', '#43564f');
+  else if (theme === 'softballfield') {
+    rect(ctx, 0, FLOOR, 1280, 152, '#b9804c');
+    line(ctx, [[0, FLOOR + 2], [1280, FLOOR + 2]], '#d5a570', 2);
+  }
   else if (theme === 'spudsy') floorTiles(ctx, '#b8a18b', '#cfbca0', '#f0debd');
   else floorTiles(ctx, stage.palette?.floor || '#21192f', theme === 'manor' ? '#362638' : '#302244', stage.palette?.accent || '#8b66ac');
   ctx.restore();
@@ -512,7 +518,46 @@ function undermap(ctx) {
   for (let y = 8; y < FLOOR; y += 80) line(ctx, [[0, y], [1280, y]], '#1722a5', 1.5);
 }
 
-const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds, undermap };
+function barnoir(ctx) {
+  // A small recognizable fallback, not a reconstruction of unobserved geometry.
+  gradient(ctx, '#090e11', '#172524', FLOOR);
+  for (let y = 200; y <= 350; y += 75) {
+    rect(ctx, 425, y, 430, 5, '#8cae9f');
+    for (let x = 448; x < 850; x += 43) {
+      rect(ctx, x, y - 38, 15, 37, '#47615a'); rect(ctx, x + 5, y - 49, 5, 12, '#648277');
+    }
+  }
+  for (const x of [210, 640, 1070]) {
+    line(ctx, [[x, 0], [x, 120]], '#121a1c', 4);
+    ellipse(ctx, x, 145, 65, 30, '#a1b5af'); line(ctx, [[x - 60, 151], [x + 60, 151]], '#d2ded9', 3);
+  }
+  line(ctx, [[65, 275], [100, 310], [65, 345], [30, 310], [65, 275]], '#60b999', 4);
+  line(ctx, [[959, 251], [1039, 251], [999, 301], [999, 342], [977, 342], [1021, 342]], '#d980b1', 4);
+  ellipse(ctx, 1186, 291, 39, 28, '#d2aa5c'); ellipse(ctx, 1186, 291, 34, 23, '#172524');
+  rect(ctx, 0, 416, 1280, 24, '#253d36'); line(ctx, [[0, 437], [1280, 437]], '#a1d0ba', 3);
+  rect(ctx, 0, 440, 1280, 128, '#101b1d');
+  for (let x = 15; x < 1280; x += 210) line(ctx, [[x, 453], [x + 185, 453], [x + 185, 551], [x, 551], [x, 453]], '#304139', 3);
+}
+
+function softballfield(ctx) {
+  // A small recognizable stadium fallback; no invented game score or crowd.
+  gradient(ctx, '#123c6b', '#304a60', FLOOR);
+  rect(ctx, 0, 332, 1280, 174, '#43383d');
+  for (let y = 350; y < 500; y += 24) {
+    line(ctx, [[0, y + 17], [1280, y + 17]], '#243747', 7);
+    for (let x = 12; x < 1280; x += 24) rect(ctx, x, y, 17, 11, '#785253');
+  }
+  rect(ctx, 410, 279, 460, 55, '#657777'); rect(ctx, 398, 268, 484, 12, '#213f53');
+  for (const [x, y] of [[385, 157], [585, 166], [787, 174], [990, 169]]) {
+    line(ctx, [[x, y + 25], [x, 330]], '#8093a1', 5);
+    rect(ctx, x - 40, y - 20, 80, 40, '#c8dbe7', '#41627c', 3);
+    for (let dx = -26; dx <= 26; dx += 26) for (const dy of [-8, 8]) ellipse(ctx, x + dx, y + dy, 7, 6, '#eef6ff');
+  }
+  rect(ctx, 1060, 224, 168, 62, '#174d50', '#55778b', 4);
+  rect(ctx, 0, 506, 1280, 62, '#56852d');
+}
+
+const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds, undermap, barnoir, softballfield };
 
 // A light native painting remains available while the illustrated planes load.
 function crossoverScenery(ctx, stage) {
@@ -708,6 +753,7 @@ function pillow(ctx, x, y, w, h, angle, fill) {
 
 export class CombatRenderer {
   constructor(target) {
+    this.projectileArt = new ProjectileArtLoader();
     this.canvas = target;
     target.width = LOGICAL_WIDTH; target.height = LOGICAL_HEIGHT;
     this.ctx = target.getContext('2d');
@@ -715,12 +761,18 @@ export class CombatRenderer {
     this.ctx.imageSmoothingEnabled = false;
     this.backgrounds = new Map();
     this.stageArt = new Map();
+    this.previewRequest = 0;
     this.lastState = null;
   }
 
   async preload(fighters, stages = []) {
+    // A combat preload supersedes any pending menu scenery preview.
+    this.previewRequest += 1;
     const missing = [];
+    const requestedSources = new Set();
+    const projectileLoad = this.projectileArt.preload(fighters);
     const fighterLoads = (fighters || []).map(async fighter => {
+      for (const src of [fighter.sprite?.src, fighter.animation?.src].filter(Boolean)) requestedSources.add(sourceURL(src));
       if (fighter.sprite?.crossoverDirectory) {
         if (!await prepareFighter(fighter)) missing.push({ src: fighter.sprite.src, error: 'Illustration de garde indisponible' });
       } else {
@@ -733,8 +785,17 @@ export class CombatRenderer {
       else this.background(stage);
     });
     const results = await Promise.allSettled([...fighterLoads, ...stageLoads]);
-    const errors = [...failures.entries()].map(([src, error]) => ({ src, error })).concat(missing);
-    return { ok: errors.length === 0 && results.every(r => r.status === 'fulfilled'), errors };
+    await projectileLoad;
+    const errors = [...failures.entries()].filter(([src]) => requestedSources.has(src))
+      .map(([src, error]) => ({ src, error })).concat(missing);
+    results.forEach((result, index) => {
+      if (result.status !== 'rejected') return;
+      const fighter = (fighters || [])[index];
+      const stage = stages[index - fighterLoads.length];
+      errors.push({ src: fighter?.sprite?.src || stage?.theme || stage?.id || '',
+        error: result.reason?.message || String(result.reason) });
+    });
+    return { ok: errors.length === 0, errors };
   }
 
   background(stage) {
@@ -747,10 +808,12 @@ export class CombatRenderer {
   }
 
   async previewStage(stage) {
+    const request = ++this.previewRequest;
+    const needed = () => this.canvas.isConnected && this.previewRequest === request;
     const options = { stage, reducedMotion: true };
     this.render(null, options);
-    const paintings = await loadStagePlanes(stage, () => this.canvas.isConnected);
-    if (paintings && this.canvas.isConnected) {
+    const paintings = await loadStagePlanes(stage, needed);
+    if (paintings && needed()) {
       this.stageArt.set(stage.theme || stage.id, paintings);
       this.render(null, options);
     }
@@ -772,7 +835,9 @@ export class CombatRenderer {
       const camera = paintings && stageCamera(actors, options.reducedMotion);
       if (camera) drawStagePlanes(ctx, paintings.layers, camera);
       else ctx.drawImage(this.background(stage), 0, 0);
-      drawStageMotion(ctx, stage, options.ambientFrame ?? tick, options.reducedMotion, !!paintings);
+      // Historical procedural decoration has coordinates belonging to the old
+      // scenery. It must not float over a newly reconstructed complete room.
+      if (!paintings?.fullScene) drawStageMotion(ctx, stage, options.ambientFrame ?? tick, options.reducedMotion, !!paintings);
     }
     if (!state) { ctx.restore(); return; }
     if (finisher) {
@@ -801,13 +866,19 @@ export class CombatRenderer {
     const ctx = this.ctx, f = actor.f || actor.def;
     if (!f) return;
     const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
-    const stance = (pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
+    const baseOnly = f.sprite?.baseOnly === true;
+    if (baseOnly) {
+      // Two authored bases are a deliberate static presentation. Keep the
+      // actual actor position and facing, without inventing a pose animation.
+      pose.lean = 0; pose.lift = 0; pose.xOffset = 0; pose.alpha = 1;
+    }
+    const stance = (baseOnly || pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
     const action = illustratedAction(pose, actor.attack);
     const actionArt = actionIllustration(f, action);
     const artwork = stance || actionArt || (f.sprite?.crossoverDirectory && standingIllustration(f));
     // Shift weight around the foot support of the single standing drawing.
     // Use simulation frames so pausing a match also holds its pose.
-    if (stance && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
+    if (stance && !baseOnly && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
     if (actionArt && action === 'walk' && !reducedMotion) {
       const step = Math.sin(tick * TAU / 24);
       pose.lean += 0.018 * step;
@@ -828,9 +899,12 @@ export class CombatRenderer {
     const articulated = !artwork && pose.low ? crouchParts(f, frame) : null;
     // Each authored file is tightly framed. Give compressed poses their reduced
     // stage height instead of growing a kneeling performer back to standing size.
-    const heightRatio = actionArt && (action === 'crouch' || action === 'defeat') ? 0.74 : 1;
+    // Calibrate only the resolved drawing; a missing pose keeps the stance size.
+    const heightRatio = actionArt ? illustratedHeightRatio(f, action) : 1;
     const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face, heightRatio);
-    const shownHeight = height * heightRatio - (articulated?.drop || 0) * geometry.scale;
+    const limitedIllustration = Number.isFinite(f.visual?.maxIllustratedWidth) && f.visual.maxIllustratedWidth > 0;
+    const shownHeight = (limitedIllustration ? frame.bounds.height * geometry.scale : height * heightRatio)
+      - (articulated?.drop || 0) * geometry.scale;
     const attack = actor.attack, active = pose.state === 'attack-active';
     const windup = pose.state === 'attack-windup';
     if (actor.buffs?.power || actor.buffs?.armor) glow(ctx, x, y - height * 0.52, height * 0.72, f.color || '#bd9cd6', 0.18);
@@ -887,18 +961,34 @@ export class CombatRenderer {
     if (projectile.dead || projectile.delay > 0) return;
     const ctx = this.ctx, owner = actors[projectile.owner], tag = projectile.def?.tag || projectile.kind;
     const color = effectColor(tag, owner), x = projectile.x, y = projectile.y;
-    const motif = projectilePresentation(projectile, owner);
+    const spec = projectileArtSpec(projectile, owner);
+    const motif = spec?.motif || projectilePresentation(projectile, owner);
+    const artwork = this.projectileArt.peek(spec);
+    if (!artwork) this.projectileArt.load(spec);
     const radius = /explosive|rocket|psychic/.test(tag || '') ? 12 : 7;
     ctx.save();
     ctx.strokeStyle = color; ctx.lineWidth = radius * 0.85; ctx.globalAlpha = 0.24;
     const trail = reducedMotion ? 12 : clamp(Math.abs(projectile.vx || 8) * 3, 18, 70);
     line(ctx, [[x - Math.sign(projectile.vx || 1) * trail, y - (projectile.vy || 0) * 2], [x, y]], color, radius * 0.85);
     ctx.globalAlpha = 1; ctx.translate(x, y);
-    const spins = ['key', 'button', 'module', 'gloink', 'candy', 'sugar', 'juggle', 'corruption'].includes(motif);
+    const spins = spec ? spec.motion === 'spin' : ['key', 'button', 'module', 'gloink', 'candy', 'sugar', 'juggle', 'corruption'].includes(motif);
     const phase = reducedMotion ? 0 : tick * 0.075;
+    // Native accessories face right. Reflections retain the original accessory.
+    if (spec && spec.motion !== 'velocity' && projectile.vx < 0) ctx.scale(-1, 1);
     if (spins) ctx.rotate(phase);
-    else if (['pellet', 'spectral-shot'].includes(motif)) ctx.rotate(Math.atan2(projectile.vy || 0, projectile.vx || 1));
-    objectMotif(ctx, motif, { color, heavy: !!projectile.def?.fuse || projectile.def?.slot === 'super', phase });
+    else if (spec?.motion === 'velocity' || ['pellet', 'spectral-shot'].includes(motif)) ctx.rotate(Math.atan2(projectile.vy || 0, projectile.vx || 1));
+    const heavy = !!projectile.def?.fuse || projectile.def?.slot === 'super';
+    if (artwork) {
+      const { bounds } = artwork;
+      const scale = Math.min(spec.width / bounds.width, spec.height / bounds.height) * (heavy ? 1.25 : 1);
+      const width = bounds.width * scale, height = bounds.height * scale;
+      ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(artwork.canvas, bounds.x, bounds.y, bounds.width, bounds.height,
+        -width / 2, -height / 2, width, height);
+    } else {
+      // Explicit fallback while absent, decoding or unavailable offline.
+      objectMotif(ctx, motif, { color, heavy, phase });
+    }
     ctx.restore();
   }
 

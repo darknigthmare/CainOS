@@ -1,0 +1,451 @@
+{
+  "schema": "encore-current-projectile-visual-review/v1",
+  "reviewedAt": "2026-11-25T08:18:12.765Z",
+  "status": "reviewed",
+  "result": "pass-with-observations",
+  "method": "Current production Canvas gallery opened in full with view_image: 23 motifs, normal shots in both directions, actual reflected shots in both directions where allowed, and 3x detail. Bubble source and drawProjectile were additionally inspected to identify the visible central trail.",
+  "technicalReport": {
+    "file": "docs/art-generation/base-sprites-20261125-b/canvas-projectiles-current/projectile-canvas-review.json",
+    "bytes": 218983,
+    "sha256": "e36bb787393539e591286df0bd702938ac97f75b0a3dbb5286f5221fc01a9c8e"
+  },
+  "gallery": {
+    "file": "docs/art-generation/base-sprites-20261125-b/canvas-projectiles-current/projectiles-native-and-reflected.png",
+    "bytes": 545764,
+    "sha256": "b48c714ec081de02d8153e52e913fb2858982ea17c26b6753794ae70d6fcc827"
+  },
+  "summary": {
+    "images": 23,
+    "simulatedShots": 46,
+    "actualReflections": 44,
+    "nativeDrawChecks": 90,
+    "scenes": 0,
+    "aquaticOriginChecks": 0,
+    "inspectedMotifs": 23,
+    "blockingVisualIssues": 0
+  },
+  "integrity": {
+    "sourceSha256VerifiedAtReview": {
+      "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+      "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+      "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+      "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+      "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+      "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+      "combat/offline-manifest.mjs": "7703077f411114aed18c238713f9de3faaff21e7b9f2aebb948bc3455226652c",
+      "scripts/render-combat-projectile-review.mjs": "5f0c11acc9f08568aefca54b991a831fd535a647b19f0cfb9f18a5823d91478f"
+    },
+    "nativeFilesVerifiedAtReview": 23
+  },
+  "observations": [
+    "Les 23 motifs sont présents et conservent leur identité après changement de propriétaire lors des 44 renvois réels.",
+    "La boîte à ressort est correctement marquée non réfléchissable ; deux vues normales existent et aucun faux renvoi n’est présenté.",
+    "La transparence se compose sur le quadrillage ; aucun fond rectangulaire opaque constaté.",
+    "Bubble a un contour fin et Queenie royal un dessin très étroit à taille de jeu ; les détails 3× rendent leurs formes plus faciles à apprécier.",
+    "La barre translucide visible au centre de Bubble vient de la traînée dessinée par le moteur avant le PNG, confirmée dans combat/render.mjs drawProjectile."
+  ],
+  "motifs": [
+    {
+      "id": "juggle",
+      "fighter": "pomni",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/juggle.png",
+        "bytes": 936859,
+        "sha256": "15cd61429c67cdeed36792df9f53af708ffa5a72cca47fde0ce1953b2a31e3ca"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Balle à secteurs jaune, rouge et bleu identifiable à 1× ; silhouette ronde conservée après renvoi."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "key",
+      "fighter": "jax",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/key.png",
+        "bytes": 664395,
+        "sha256": "fcf0d139cc3e144cd5f55598d2605fc480f4f83b9ca4c8f1f8f91cfc363bb8bb"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Clé dorée avec anneau et dents distincts ; côté des dents et orientation correctement inversés."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "button",
+      "fighter": "ragatha",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/button.png",
+        "bytes": 1132725,
+        "sha256": "263a67aa5a58c50f251ac19df9fab00a120ca07dd5b8ad1f33a7153ace6db749"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Bouton bleu à couture croisée claire reconnaissable dans les quatre colonnes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "comedy-mask",
+      "fighter": "gangle",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/comedy-mask.png",
+        "bytes": 806419,
+        "sha256": "cd3b666ee0f213f0dc863937ec2ca83dc8c2a6f802869e6a1e3bf64625655579"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Masque blanc souriant et nœud rouge entiers ; même motif après renvoi."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "module",
+      "fighter": "zooble",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/module.png",
+        "bytes": 1196827,
+        "sha256": "342fb24d122dedfb8672ed427ea6e5eeac239dafca5e2f5be53ae2004d58408e"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Assemblage géométrique rose, cyan et jaune lisible ; sa pointe change de côté."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "pellet",
+      "fighter": "kinger",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/pellet.png",
+        "bytes": 724802,
+        "sha256": "72490295bfff9cd71f630395bec9f1397a0e2a0b967f4eb9c53b172d7dbc2428"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Petite pièce d’échecs dorée orientée dans le sens de la vitesse ; renvois inversés."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "confetti",
+      "fighter": "caine",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/confetti.png",
+        "bytes": 768164,
+        "sha256": "02a7a7443b1bec53d46942e0a0186b1cfcc86fbe8b75c221d7cdc1f3a26e49f7"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Étoile jaune avec rubans cyan et rose ; étoile en tête et rubans à l’arrière dans les deux sens."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "bubble",
+      "fighter": "bubble",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/bubble.png",
+        "bytes": 281076,
+        "sha256": "3ed90d71c9b06225cc248105ccf02e8276b7df255929e66fed3ba3a9e745a36d"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Contour circulaire fin cyan et rose, centre transparent ; petite traînée horizontale visible dans ce centre. Le code drawProjectile trace cette traînée avant l’image : ce n’est pas un rectangle du PNG. Lisibilité plus faible que les motifs pleins à 1×."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "candy",
+      "fighter": "gummigoo",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/candy.png",
+        "bytes": 944913,
+        "sha256": "9306842e2e251f9091c51c110e2e2abc24ce56126d2c42c0b51ccd31049a6305"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Petit crocodile gommeux vert et jaune entier ; tête vers le sens du déplacement."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "sugar",
+      "fighter": "loolilalu",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/sugar.png",
+        "bytes": 644393,
+        "sha256": "98ce93981f5a28e5166b16b5e7616c581cdf4931f77ad6128a4f996371e4f1c3"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Éclat rose facetté lisible ; pointe inversée avec la direction et les renvois."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "gloink",
+      "fighter": "gloinkqueen",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/gloink.png",
+        "bytes": 1092596,
+        "sha256": "ef86cfcb1deb2d32395938fecfac6bf8b7766aafb7632cc063b0c060dd93dd13"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Forme triangulaire jaune à yeux noirs et côtés cyan/rose distincts à 1×."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "fudge",
+      "fighter": "fudge",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/fudge.png",
+        "bytes": 1182029,
+        "sha256": "468d99ed362df36d6166860ed36a51fad1727b01f6387a2bbe90455d292e1c32"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Masse brune brillante à reliefs lisible ; silhouette conservée au miroir."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "corruption",
+      "fighter": "abstractedkaufmo",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/corruption.png",
+        "bytes": 628053,
+        "sha256": "1af3b8388e103e5eb181cedecbfe1a4bbe7de5a3d6b887def2373ba20038c0c0"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Fragment noir/violet à yeux colorés, étroit à 1× mais identifiable ; détail 3× confirme le dessin."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "spectral-shot",
+      "fighter": "baronmildenhall",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/spectral-shot.png",
+        "bytes": 888358,
+        "sha256": "c85fb471b3f40bb7fd487c301f3a70da6279c7ae014c696f8b76cdd8a054a6d1"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Trait vert pointu lisible avec sa pointe dans le sens de la vitesse."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "trick-box",
+      "fighter": "jax",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/trick-box.png",
+        "bytes": 956600,
+        "sha256": "79a6490f4ad351db76c7145da03e2553719f15cad1fabc2843f4c100b468f58b"
+      },
+      "reflectable": false,
+      "checkedRenderedViews": 2,
+      "detail3xInspected": true,
+      "observations": [
+        "Boîte violette à couvercle rouge, ressort doré et étoile rouge visibles dans les deux sens ; les colonnes de renvoi indiquent correctement non réfléchissable."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "queenie-royal",
+      "fighter": "queenie",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/queenie-royal.png",
+        "bytes": 477139,
+        "sha256": "cffa82da75ab5e9f60bddfb2152d76a67d42bb0db0cd4a8784c7b7ba2aaf693e"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Petit projectile royal doré à pierre rouge, très fin à 1× ; l’agrandissement 3× permet de distinguer la couronne et la pointe. Renvoi cohérent."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "ribbit-lily",
+      "fighter": "ribbit",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/ribbit-lily.png",
+        "bytes": 897786,
+        "sha256": "0c721ecc7b5b701a7580e62d13be19129fae8bd91c12b68abd8ef4d1fd59f746"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Bulle turquoise contenant un nénuphar vert et un point rose ; centre et contour restent lisibles."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "kaufmo-ball",
+      "fighter": "kaufmo",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/kaufmo-ball.png",
+        "bytes": 836267,
+        "sha256": "738c32ba9eed2e44bf242e735766832ee6994494a1d74f8f1d74c866e14814f2"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Balle rouge et jaune à grande étoile rouge identifiable dans les quatre colonnes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "ming-star",
+      "fighter": "ming",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/ming-star.png",
+        "bytes": 971882,
+        "sha256": "f0620e57b0cd940f4655cd17adcf0f9656800f663b730d7314e855cac07f75d2"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Étoile pêche et menthe avec centre clair visible ; mêmes cinq branches après renvoi."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "ghostly-wisp",
+      "fighter": "ghostly",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/ghostly-wisp.png",
+        "bytes": 375002,
+        "sha256": "a1c33623c887a1974ae458acd6e58b33c7841599557b8c4fee2e37ade352a072"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Flamme spectrale menthe à deux taches crème ; queue à l’arrière et tête arrondie vers le déplacement, inversées après renvoi."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "orbsman-orb",
+      "fighter": "orbsman",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/orbsman-orb.png",
+        "bytes": 775388,
+        "sha256": "69e3ada5e8794f6aa9bdccb4dd1604d492cc651dbcd893ee74cd2726946607ab"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Orbe cobalt à anneau cyan clair et cœur bleu sombre ; motif identique et non aplati dans les quatre colonnes."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "oyster-pearl",
+      "fighter": "oyster",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/oyster-pearl.png",
+        "bytes": 773164,
+        "sha256": "e8ca85a34d1fcf774259aa002e7bbaf325b465b96dcc2ceda26e3eeae6fdf337"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Perle ivoire et rose à reflets nacrés ; silhouette ronde entière à 1× et au détail 3×."
+      ],
+      "blockingIssues": []
+    },
+    {
+      "id": "abel-program",
+      "fighter": "abel",
+      "status": "reviewed",
+      "nativeFile": {
+        "file": "assets/encore/projectiles/abel-program.png",
+        "bytes": 734452,
+        "sha256": "de5831b5684dfe7964ac43785a84b201b61dd8fa188a747d677add71985ee8f1"
+      },
+      "reflectable": true,
+      "checkedRenderedViews": 4,
+      "detail3xInspected": true,
+      "observations": [
+        "Module carré rouge et ivoire à losange rouge et contacts latéraux dorés ; les contacts changent de côté au miroir."
+      ],
+      "blockingIssues": []
+    }
+  ],
+  "limitations": [
+    "No browser, DOM, input, audio or service-worker verification.",
+    "No canonical 1:1 certification; accessories and combat are original fan-game adaptations.",
+    "Gallery shots are repositioned; the trace keeps original simulated coordinates.",
+    "The fused trick box is not reflectable in the actual rules.",
+    "Gallery review at reduced motion and selected simulated instants; it does not verify continuous motion or every stage background.",
+    "No optional full combat scenes or aquatic-origin scenarios were requested in this command; their counters are zero."
+  ],
+  "changes": "Review output only; native PNG and production code unchanged."
+}

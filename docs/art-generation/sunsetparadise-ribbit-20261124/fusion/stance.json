@@ -1,0 +1,34 @@
+{
+  "style": "fusion",
+  "state": "stance",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/selection/ribbit.png"
+  ],
+  "identity": "Design a true original amphibian-body FUSION of Ribbit with a vivid tropical sea creature inspired by the color mood of Sunset Paradise. It must visibly redesign anatomy, NOT put a costume on the ordinary frog. Ribbit remains recognizable through exactly TWO enormous white bulging eyes with black wedge-cut pupils, pink round cheeks and wide smiling frog mouth. Body now a larger pear-shaped turquoise-teal amphibian torso, short powerful bent frog thighs, long tapered forearms, exactly four rounded webbed fingers each hand and three broad webbed toes each foot, lime-green face and hands/feet, smooth cream belly with an orange sun-shaped patch. One broad curved tapering teal tadpole tail with a coral-orange fin runs behind to the left and remains entirely in frame. Coral-orange fin crest sweeps backward from head, small coral fins along elbows. Ribbit's pink bow tie is reinterpreted as TWO attached pink fan-shaped gill lobes at the throat. Four limbs plus exactly one tail. No clothes, hat, goggles, backpack, armour, trousers, shoes, weapons, horns or wings. Keep a compact strong frog silhouette with readable tail, friendly expressive face and clean rounded amphibian anatomy.",
+  "prompt": "Use case: stylized-concept. ONE original full-body individual character sprite for a polished hand-painted 2D fighting game, genuine transparent alpha background. Match the crisp ink contour, warm cel shading, bright friendly cartoon finish of the provided published Ribbit reference. This is an original Encore crossover adaptation inspired by Sunset Paradise, NOT an official or canonical character appearance. Combat idle stance facing RIGHT in side view with subtle three-quarter depth, both feet readable on one level, both hands raised naturally in a relaxed fighting guard. One character only, no contact sheet, no other figure, no scene, ground, shadow, text, letters, frame, watermark, glow, haze, detached effects or checkerboard. Keep the ENTIRE character including all feet, fingers, accessories and tail within the CENTRAL 76 percent of a square canvas, at least twelve percent fully transparent margin on each edge. Opaque clean silhouette, transparent empty space. Design a true original amphibian-body FUSION of Ribbit with a vivid tropical sea creature inspired by the color mood of Sunset Paradise. It must visibly redesign anatomy, NOT put a costume on the ordinary frog. Ribbit remains recognizable through exactly TWO enormous white bulging eyes with black wedge-cut pupils, pink round cheeks and wide smiling frog mouth. Body now a larger pear-shaped turquoise-teal amphibian torso, short powerful bent frog thighs, long tapered forearms, exactly four rounded webbed fingers each hand and three broad webbed toes each foot, lime-green face and hands/feet, smooth cream belly with an orange sun-shaped patch. One broad curved tapering teal tadpole tail with a coral-orange fin runs behind to the left and remains entirely in frame. Coral-orange fin crest sweeps backward from head, small coral fins along elbows. Ribbit's pink bow tie is reinterpreted as TWO attached pink fan-shaped gill lobes at the throat. Four limbs plus exactly one tail. No clothes, hat, goggles, backpack, armour, trousers, shoes, weapons, horns or wings. Keep a compact strong frog silhouette with readable tail, friendly expressive face and clean rounded amphibian anatomy.",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "sunsetRibbitResult:fusion:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-681bac40-f7c1-485e-8ca5-f9237f514ab9.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-681bac40-f7c1-485e-8ca5-f9237f514ab9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "bytes": 1009355,
+  "sha256": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87",
+  "sha": "873df904c9600fc3f5b8d0d3612b8b77b9bd4f16",
+  "alphaZeroFraction": 0.6368901810855978,
+  "alpha12BBox": [
+    76,
+    65,
+    1128,
+    1197
+  ],
+  "nativeBytesVerified": true,
+  "auditPass": true
+}

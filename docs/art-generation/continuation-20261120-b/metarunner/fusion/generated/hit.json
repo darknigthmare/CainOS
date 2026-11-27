@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "hit",
+  "nativeFacing": "right",
+  "prompt": "Draw ONE new complete full-body character sprite from the provided CLEAN identity reference, native PNG with a TRUE transparent background. Match identity, proportions, exact costume and materials. Crisp cel shading and solid outlines. No background lighting, no aura, no bloom, no haze, no cast shadow or floor: all outside-of-silhouette pixels are transparent except ordinary one-pixel edge antialiasing. Keep generous margins around whole body. One character, no text or extras. A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: Recoil reaction: lean torso and head back toward image left, surprised open mouth, knees bent. Both arms raised apart with TWO SEPARATE CLOSED three-digit mechanical fists (two curled fingers, one folded thumb), not open hands. Full body and both feet clearly inside image.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-fusion:hit",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/fusion/hit.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-10ca447c-55af-448c-a840-e47395020b1e.png",
+  "sourceGenerationId": "exec-10ca447c-55af-448c-a840-e47395020b1e",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "bytes": 941029
+    }
+  ],
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    112,
+    53,
+    935,
+    1401
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1089099,
+  "sha256": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+  "bytes": 976968,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:13:41.280981+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Recul surpris, deux poings fermés séparés et deux pieds mécaniques entiers ; le problème des quatre doigts ouverts a disparu. Tête, nœud magenta, plaque menthe et corps complet cohérents ; alpha composée propre."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

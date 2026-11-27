@@ -1,0 +1,509 @@
+{
+  "complete": true,
+  "series": "gameoverse",
+  "baseOnly": true,
+  "presentation": "static",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "appearances": [
+    {
+      "id": "glitch-gameoverse-ribbit-hommage",
+      "series": "gameoverse",
+      "style": "hommage",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/gameoverse/ribbit/hommage/selection.png",
+        "stance": "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Gameoverse · Hommage · Kit",
+      "identity": "Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-resident",
+      "series": "gameoverse",
+      "style": "resident",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/gameoverse/ribbit/resident/selection.png",
+        "stance": "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Gameoverse · Résident · Cartographe des portails",
+      "identity": "Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-fusion",
+      "series": "gameoverse",
+      "style": "fusion",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/gameoverse/ribbit/fusion/selection.png",
+        "stance": "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Gameoverse · Fusion · Grenouille de cartouche",
+      "identity": "True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    }
+  ],
+  "records": [
+    {
+      "id": "glitch-gameoverse-ribbit-hommage",
+      "series": "gameoverse",
+      "style": "hommage",
+      "state": "selection",
+      "label": "Gameoverse · Hommage · Kit",
+      "identity": "Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png": "dbb21ae1869e362c68db9bdf9636737557da4c6eefb97e905f461698c27e748d"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-466431e4-0d03-4856-a11a-8427e3ff83f2.png",
+      "result_store_key": "ribbitBaseResult:gameoverse:hommage:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright portrait; the verified stance costume, shape language, colors and accessories are preserved. Whole body visible, no image composition or crop.",
+      "file": "assets/encore/crossovers/gameoverse/ribbit/hommage/selection.png",
+      "sha256": "c4efcadd5ace1d0f2ab7573f3a018a2d13e3d00fb06f89431223f842eb2e1052",
+      "sha": "d9676cd0519afc7c1bb5d76a453c9b0f21784196",
+      "bytes": 652543,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        363,
+        31,
+        959,
+        1222
+      ],
+      "alpha12Margins": [
+        363,
+        31,
+        295,
+        32
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7846870874445793,
+      "alpha240Fraction": 0.204298080273905,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-hommage",
+      "series": "gameoverse",
+      "style": "hommage",
+      "state": "stance",
+      "label": "Gameoverse · Hommage · Kit",
+      "identity": "Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/pomni/hommage/selection.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/gameoverse-kit-official.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/gameoverse/pomni/hommage/selection.webp": "d9a79b68012c3a6eb10cf3c5c032d06fedcf962111ed1e6bba24865d1995bf52",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/gameoverse-kit-official.png": "03fa216a1543719a618164546997893dcc40867654eeaafdcdcf3ad9f443b8e8"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-76587951-57ce-4892-89da-4a3945d43618.png",
+      "result_store_key": "ribbitBaseResult:gameoverse:hommage:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "All three complete stances inspected. Yellow Kit-inspired clothing, teal/gold cartographer outfit and hard geometric cartridge anatomy are distinct. Complete eyes, hands, toes and accessories. Facing right.",
+      "file": "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png",
+      "sha256": "dbb21ae1869e362c68db9bdf9636737557da4c6eefb97e905f461698c27e748d",
+      "sha": "1f43e0a5c399c5ecad45017d31257d0687a12d03",
+      "bytes": 739327,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        175,
+        33,
+        1015,
+        1225
+      ],
+      "alpha12Margins": [
+        175,
+        33,
+        239,
+        29
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.756046997296053,
+      "alpha240Fraction": 0.22431886225640948,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-resident",
+      "series": "gameoverse",
+      "style": "resident",
+      "state": "selection",
+      "label": "Gameoverse · Résident · Cartographe des portails",
+      "identity": "Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/ribbit/resident/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png": "818ca927d546defab35ecf16300c5047c00630567fc3210fef6301711e4df700"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5f912133-c953-48b0-918b-1c05df9159e2.png",
+      "result_store_key": "ribbitBaseResult:gameoverse:resident:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Distinct upright portrait; the verified stance costume, shape language, colors and accessories are preserved. Whole body visible, no image composition or crop.",
+      "file": "assets/encore/crossovers/gameoverse/ribbit/resident/selection.png",
+      "sha256": "19db0b8a135b8511e6c5af3a410f911801f1bffcab74f7078d69bdabb45d25e1",
+      "sha": "8e7df0f0b6e0b0f6479d49f3237b27e6bfb75959",
+      "bytes": 722121,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        289,
+        40,
+        1002,
+        1223
+      ],
+      "alpha12Margins": [
+        289,
+        40,
+        252,
+        31
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7558962834082451,
+      "alpha240Fraction": 0.2283855935329116,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-resident",
+      "series": "gameoverse",
+      "style": "resident",
+      "state": "stance",
+      "label": "Gameoverse · Résident · Cartographe des portails",
+      "identity": "Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/pomni/resident/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/gameoverse/pomni/resident/stance.webp": "87a649c808f140d16413c557a7ee4f4c1cb13a8782fdd24d2b9c1ed086e0885e"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-c57c8e5b-c147-4329-8b44-b2c0a2dd107d.png",
+      "result_store_key": "ribbitBaseResult:gameoverse:resident:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "All three complete stances inspected. Yellow Kit-inspired clothing, teal/gold cartographer outfit and hard geometric cartridge anatomy are distinct. Complete eyes, hands, toes and accessories. Facing right.",
+      "file": "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png",
+      "sha256": "818ca927d546defab35ecf16300c5047c00630567fc3210fef6301711e4df700",
+      "sha": "68961d48ded852f850b98daf433186eda874de03",
+      "bytes": 794946,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        181,
+        52,
+        1037,
+        1216
+      ],
+      "alpha12Margins": [
+        181,
+        52,
+        217,
+        38
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7413329975656845,
+      "alpha240Fraction": 0.23749647062414628,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-fusion",
+      "series": "gameoverse",
+      "style": "fusion",
+      "state": "selection",
+      "label": "Gameoverse · Fusion · Grenouille de cartouche",
+      "identity": "True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png": "2025c0a1cbe76d1bb0fc22c3dbcc0599371408797665949a907429e6ca870db7"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-e687b174-885f-48fa-a07c-a32209fa97b4.png",
+      "result_store_key": "ribbitBaseResult:gameoverse:fusion:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "New upright portrait keeps the cartridge geometry, block limbs, blue rails, star inset and identity of the stance. Complete single figure; all extremities remain inside the canvas.",
+      "file": "assets/encore/crossovers/gameoverse/ribbit/fusion/selection.png",
+      "sha256": "3b09dd7977cdabaebf9c72740f3857b09d4edb3d1c6ff1446ae54958c1428bb8",
+      "sha": "6e68fb7122b9a82c933eef57fba92609401cdc45",
+      "bytes": 690800,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        341,
+        49,
+        1037,
+        1218
+      ],
+      "alpha12Margins": [
+        341,
+        49,
+        217,
+        36
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7772029028639454,
+      "alpha240Fraction": 0.20612445278776179,
+      "accepted": true
+    },
+    {
+      "id": "glitch-gameoverse-ribbit-fusion",
+      "series": "gameoverse",
+      "style": "fusion",
+      "state": "stance",
+      "label": "Gameoverse · Fusion · Grenouille de cartouche",
+      "identity": "True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/pomni/fusion/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/gameoverse/pomni/fusion/stance.webp": "3fc1c54d615e734a3e483878230256ebb0db8fc0d67a37867cffbe0b01df5954"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/gameoverse"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-6b1973de-c51e-4464-a3a3-8ebeed07c904.png",
+      "result_store_key": "ribbitBaseResult:gameoverse:fusion:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "All three complete stances inspected. Yellow Kit-inspired clothing, teal/gold cartographer outfit and hard geometric cartridge anatomy are distinct. Complete eyes, hands, toes and accessories. Facing right.",
+      "file": "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png",
+      "sha256": "2025c0a1cbe76d1bb0fc22c3dbcc0599371408797665949a907429e6ca870db7",
+      "sha": "ae37e0ee5fab7bfa26551ea86c20e95db9e4f102",
+      "bytes": 790077,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        178,
+        63,
+        1085,
+        1196
+      ],
+      "alpha12Margins": [
+        178,
+        63,
+        169,
+        58
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7488095510633914,
+      "alpha240Fraction": 0.21522197548387426,
+      "accepted": true
+    }
+  ]
+}

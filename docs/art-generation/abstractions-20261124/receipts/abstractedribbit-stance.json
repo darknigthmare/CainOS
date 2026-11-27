@@ -1,0 +1,11 @@
+{
+  "id": "abstractedribbit",
+  "pose": "stance",
+  "slot": "stance",
+  "prompt": "Use case: identity-preserve. Asset type: single native-alpha 2D UHD fighting game stance sprite for Digital Circus Encore. Reference is the existing project archive design; preserve its identity and detailing. A tall narrow black crystalline quadruped, long jagged spire upper body with prominent six-color round irises in asymmetric pattern, four low splayed clawed legs, silhouette exactly matching reference. Not a green frog; maintain this abstract form. Only change pose to a readable relaxed combat guard facing RIGHT in a side-view fighting game with mild three-quarter volume. No frontal presentation. Entire character including all feet/tendrils/spikes fully inside image with minimum 8% clear padding all sides. Polished crisp hand-painted 2D sprite, matching reference black facets and colored eyes; not a plastic miniature. One single character, one pose, no sheet/grid, no letters, no floor, no scenery, no shadow. True transparent background, no faint background halo.",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-ae94c404-796f-45d2-aa69-5cb5319950a6.png",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/selection/abstractedribbit.png",
+  "destination": "assets/encore/abstractions/abstractedribbit/stance.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New rendering using original recovered prompt and unchanged published selection reference."
+}

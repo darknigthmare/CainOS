@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-27",
+  "generator": "image_gen.imagegen built-in",
+  "scope": "Dessins natifs statiques ; mesures techniques et inspection visuelle, sans certification canonique 1:1.",
+  "items": [
+    {
+      "id": "godcaine",
+      "slot": "stance",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-4d62eac2-208d-4c78-b5e7-0d5f195fd5c9.png",
+      "targetPath": "assets/encore/base-costumes/godcaine/stance.png",
+      "sha256": "c527d916b6958e15313015c81013c641b8be54d08b6f891163a6fdb4c5b68d14",
+      "bytes": 1404251,
+      "imageSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.49640130847635255,
+      "alphaPartialFraction": 0.5031103022163208,
+      "boundsAtAlpha12": [
+        87,
+        12,
+        1200,
+        1216
+      ],
+      "marginsAtAlpha12": [
+        87,
+        12,
+        54,
+        38
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "id": "godcaine",
+      "slot": "selection",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-71114ce3-5073-44e3-9f02-71a6225bb343.png",
+      "targetPath": "assets/encore/base-costumes/godcaine/selection.png",
+      "sha256": "786e73c137927c9bc181fdeb6102a8ac9844ef7206de6a7f598b3edf117ad98f",
+      "bytes": 1622278,
+      "imageSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.40747184766323524,
+      "alphaPartialFraction": 0.5916772865904067,
+      "boundsAtAlpha12": [
+        49,
+        32,
+        1203,
+        1221
+      ],
+      "marginsAtAlpha12": [
+        49,
+        32,
+        51,
+        33
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "id": "evilpomni-pendantz",
+      "slot": "stance",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-f24cef56-4c21-4746-aa69-0b94f9f0a1e5.png",
+      "targetPath": "assets/encore/base-costumes/evilpomni-pendantz/stance.png",
+      "sha256": "132a18e59605d1eb53bd541f0cf168eb8fbeb8998a9b0e6f66ca61a9e0edf45b",
+      "bytes": 848629,
+      "imageSize": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.6615389603124555,
+      "alphaPartialFraction": 0.33792578673284646,
+      "boundsAtAlpha12": [
+        182,
+        75,
+        1101,
+        1155
+      ],
+      "marginsAtAlpha12": [
+        182,
+        75,
+        211,
+        44
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "id": "evilpomni-pendantz",
+      "slot": "selection",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-3c77b1ca-3d0d-4297-95ce-6c504a6a0f07.png",
+      "targetPath": "assets/encore/base-costumes/evilpomni-pendantz/selection.png",
+      "sha256": "297c4e8a268201df65a544f7f9bbd9e8a7213de00ac383d8c51c641dc1ab321f",
+      "bytes": 1079376,
+      "imageSize": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.5232803250676377,
+      "alphaPartialFraction": 0.4761532730527472,
+      "boundsAtAlpha12": [
+        94,
+        87,
+        1215,
+        1125
+      ],
+      "marginsAtAlpha12": [
+        94,
+        87,
+        97,
+        74
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true
+    }
+  ]
+}

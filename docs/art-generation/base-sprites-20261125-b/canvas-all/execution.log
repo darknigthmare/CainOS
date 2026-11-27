@@ -1,0 +1,46 @@
+{"id":"bunnyjax","pass":true,"drawChecks":20,"elapsedMs":1022}
+{"id":"maidribbit","pass":true,"drawChecks":20,"elapsedMs":1016}
+{"id":"ghostlyvacuum","pass":true,"drawChecks":20,"elapsedMs":981}
+{"id":"mingtrophy","pass":true,"drawChecks":20,"elapsedMs":984}
+{"id":"disappearingguymicrophone","pass":true,"drawChecks":20,"elapsedMs":942}
+{"id":"glitch-murderdrones-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":925}
+{"id":"glitch-murderdrones-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":954}
+{"id":"glitch-murderdrones-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":969}
+{"id":"glitch-metarunner-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":914}
+{"id":"glitch-metarunner-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":1193}
+{"id":"glitch-metarunner-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":986}
+{"id":"glitch-sunsetparadise-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":1506}
+{"id":"glitch-sunsetparadise-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":2039}
+{"id":"glitch-sunsetparadise-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":1693}
+{"id":"glitch-gaslightdistrict-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":1034}
+{"id":"glitch-gaslightdistrict-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":944}
+{"id":"glitch-gaslightdistrict-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":1052}
+{"id":"glitch-knightsofguinevere-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":1019}
+{"id":"glitch-knightsofguinevere-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":1002}
+{"id":"glitch-knightsofguinevere-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":896}
+{"id":"glitch-gameoverse-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":926}
+{"id":"glitch-gameoverse-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":901}
+{"id":"glitch-gameoverse-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":1021}
+{"id":"glitch-lackadaisy-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":929}
+{"id":"glitch-lackadaisy-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":1005}
+{"id":"glitch-lackadaisy-queenie-fusion","pass":true,"drawChecks":20,"elapsedMs":916}
+{"id":"glitch-smg4-queenie-hommage","pass":true,"drawChecks":20,"elapsedMs":925}
+{"id":"glitch-smg4-queenie-resident","pass":true,"drawChecks":20,"elapsedMs":913}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: glitch-smg4-queenie-fusion: worker failed; inspect its dated log
+
+1 !== 0
+
+    at file:///workspace/scratch/6f9ceeefa959/CainOS/docs/art-generation/base-sprites-20261125-b/canvas-all/run-review.mjs:44:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.3

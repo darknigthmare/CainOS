@@ -1,0 +1,154 @@
+{
+  "schema": "encore-hommage-corrections-cross-review-v1",
+  "recordedAt": "2026-11-20T15:35:37.437008+00:00",
+  "reviewer": "/root/audit_github",
+  "status": "accepted_with_stated_scope",
+  "inspectionTiming": "The four diagnostics were opened and inspected in the preceding correction handoff. This record preserves that observed result and verifies current unchanged PNGs and updated receipt hashes.",
+  "entries": [
+    {
+      "slot": "selection",
+      "png": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "pngSHA256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+      "bytes": 1435680,
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+      "receiptSHA256": "951ecd9ea639e632879c50bb5dc71f9aa5faa650d7948573f2fc07bbb8b82547",
+      "receiptIncludedInRuntime": true,
+      "diagnosticInspected": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/selection-alpha.jpg",
+      "diagnosticSHA256": "a5c50efcf9be3014b2026acf391e280dbd0e2face65cb55242e7a45c85f1e7ce",
+      "diagnosticScope": "Actual side-by-side dark and light composites opened and visually inspected; not a native-image edit.",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "nativeAlphaExtrema": [
+        0,
+        254
+      ],
+      "nativeAlpha12Bounds": [
+        76,
+        34,
+        965,
+        1517
+      ],
+      "nativeSourceBytesMatch": true,
+      "activeBytesMatch": true,
+      "observations": [
+        "Main ouverte à droite : trois lobes distincts. La main en poche est masquée et ne permet pas un comptage intégral. Tenue, posture et proportions cohérentes sur les deux fonds.",
+        "Contours nets sur les fonds clair et sombre ; pas de halo opaque notable, de trou inattendu ou de fond résiduel visible."
+      ]
+    },
+    {
+      "slot": "stance",
+      "png": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "pngSHA256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+      "bytes": 732645,
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+      "receiptSHA256": "8912d82f2d029822c7f20253b921103d165f890a48e29c796d5657b53cda6400",
+      "receiptIncludedInRuntime": true,
+      "diagnosticInspected": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/stance-alpha.jpg",
+      "diagnosticSHA256": "7f00e08b291845920bc3bf726d11561cda55ae7e00e80459be2023581adaf303",
+      "diagnosticScope": "Actual side-by-side dark and light composites opened and visually inspected; not a native-image edit.",
+      "mode": "RGBA",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "nativeAlphaExtrema": [
+        0,
+        255
+      ],
+      "nativeAlpha12Bounds": [
+        160,
+        31,
+        1069,
+        1236
+      ],
+      "nativeSourceBytesMatch": true,
+      "activeBytesMatch": true,
+      "observations": [
+        "Main avant ouverte à droite : trois lobes distincts. Main arrière repliée sans nouvelle protrusion. Garde et silhouette conservées ; pas de certification du compte de doigts occultés.",
+        "Contours nets sur les fonds clair et sombre ; pas de halo opaque notable, de trou inattendu ou de fond résiduel visible."
+      ]
+    },
+    {
+      "slot": "intro",
+      "png": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "pngSHA256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+      "bytes": 724483,
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+      "receiptSHA256": "469a57bc66af99f2d0e4048ed69096543ec090e79707509ac998dd77eb5634cb",
+      "receiptIncludedInRuntime": true,
+      "diagnosticInspected": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/intro-alpha.jpg",
+      "diagnosticSHA256": "fc4cdc136e1e6bcd92ab974b3f0fd7098423712735f1a39fa992ee24f7841c56",
+      "diagnosticScope": "Actual side-by-side dark and light composites opened and visually inspected; not a native-image edit.",
+      "mode": "RGBA",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "nativeAlphaExtrema": [
+        0,
+        255
+      ],
+      "nativeAlpha12Bounds": [
+        211,
+        19,
+        1026,
+        1239
+      ],
+      "nativeSourceBytesMatch": true,
+      "activeBytesMatch": true,
+      "observations": [
+        "Main pendante à gauche : trois lobes distincts. Main au bonnet : geste de salut et prise conservés, sans quatrième protrusion ajoutée. Tenue et articulation des poignets cohérentes.",
+        "Contours nets sur les fonds clair et sombre ; pas de halo opaque notable, de trou inattendu ou de fond résiduel visible."
+      ]
+    },
+    {
+      "slot": "attack",
+      "png": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "pngSHA256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+      "bytes": 1228713,
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+      "receiptSHA256": "15b31ddc3608f7e314299311661df5bc2195f988c80c4c9c3a6931b2f29f70cf",
+      "receiptIncludedInRuntime": true,
+      "diagnosticInspected": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/attack-alpha.jpg",
+      "diagnosticSHA256": "2ded9ec2aace169ba73f8b36abf8e6ce950ebc3977a970fee02021d64ac28ebf",
+      "diagnosticScope": "Actual side-by-side dark and light composites opened and visually inspected; not a native-image edit.",
+      "mode": "RGBA",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeAlphaExtrema": [
+        0,
+        254
+      ],
+      "nativeAlpha12Bounds": [
+        253,
+        17,
+        1170,
+        1017
+      ],
+      "nativeSourceBytesMatch": true,
+      "activeBytesMatch": true,
+      "observations": [
+        "Main projetée vers la droite : trois lobes distincts. Main arrière repliée, posture et alignement du bras conservés. Aucun bord coupé ni nouvel accessoire observé.",
+        "Contours nets sur les fonds clair et sombre ; pas de halo opaque notable, de trou inattendu ou de fond résiduel visible."
+      ]
+    }
+  ],
+  "counts": {
+    "pngsReviewedThroughComposites": 4,
+    "diagnosticsOpened": 4,
+    "nativeSourceByteMatches": 4,
+    "activeByteMatches": 4
+  },
+  "scope": [
+    "Independent cross-review of selection, stance, intro and attack corrections produced by ribbit_references.",
+    "Native transparent PNGs preserved without retouching or re-encoding. Diagnostic composites are review aids only.",
+    "Three visible finger lobes is an original harmonization choice for the new crossover collection; it is not official or canonical anatomy proven by the Iconic merchandise or by the historical Ribbit stance.",
+    "Only visible targeted hands are counted. Pocketed, folded or occluded digits are not presented as a complete anatomical verification.",
+    "No browser, animation-cycle or episode-by-episode fidelity certification."
+  ]
+}

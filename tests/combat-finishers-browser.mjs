@@ -160,7 +160,7 @@ async function makeContactSheet(index, records, total) {
 }
 let sheets = [];
 try {
-  assert.equal(FIGHTERS.length, 54); assert.equal(FINISHER_CATALOG.length, FIGHTERS.length * FINISHER_VARIANTS.length); assert.equal(VARIANTS.length, 51);
+  assert.equal(FIGHTERS.length, 64); assert.equal(FINISHER_CATALOG.length, FIGHTERS.length * FINISHER_VARIANTS.length); assert.equal(VARIANTS.length, 52);
   await page.goto(`${base}/combat/`, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => window.Encore?.screen === 'home');
   await page.getByRole('button', { name: 'Réglages', exact: true }).click();
@@ -274,9 +274,9 @@ try {
     }
     await closeGallery();
   }
-  assert.equal(costumeChecks.length, 51);
-  await assertPersistent(costumeBaseline, 'All fifty-one costumes');
-  checked('51 costumes : profil, sauvegarde brute et replay non vide inchangés');
+  assert.equal(costumeChecks.length, VARIANTS.length);
+  await assertPersistent(costumeBaseline, `All ${VARIANTS.length} archive costumes`);
+  checked(`${VARIANTS.length} costumes : profil, sauvegarde brute et replay non vide inchangés`);
   assert.ok(!/indisponible/i.test(await page.locator('#toast').textContent()), 'No missing-art toast');
   for (let offset = 0; offset < contacts.length; offset += 21) {
     sheets.push(await makeContactSheet(offset / 21, contacts.slice(offset, offset + 21), Math.ceil(contacts.length / 21)));

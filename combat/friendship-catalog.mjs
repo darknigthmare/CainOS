@@ -1,6 +1,7 @@
 import { FIGHTERS } from './data.mjs';
 import { FINISHER_CATALOG } from './finisher-catalog.mjs';
 import { EXPANSION_DEFS } from './roster-expansion.mjs';
+import { abstractionFriendship } from './abstractions-narrative.mjs';
 
 /**
  * One non-violent "numéro d’amitié" per playable artist, presented after a
@@ -178,7 +179,7 @@ function expansionFriendship(def) {
 
 const rows = [];
 for (const fighter of FIGHTERS) {
-  const record = core[fighter.id] || (EXPANSION_DEFS.some(def => def.id === fighter.id)
+  const record = core[fighter.id] || abstractionFriendship(fighter.id) || (EXPANSION_DEFS.some(def => def.id === fighter.id)
     ? expansionFriendship(EXPANSION_DEFS.find(def => def.id === fighter.id))
     : null);
   if (!record) continue;

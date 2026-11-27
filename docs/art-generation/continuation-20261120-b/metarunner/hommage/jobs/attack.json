@@ -1,0 +1,14 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "hommage",
+  "slot": "attack",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and a hot-pink fabric bow tie. Long slender limbs and torso in the existing game adaptation, not plush proportions. Wear Tari-inspired bright cyan zip-up hoodie: white hood folded DOWN, white side panels running along the sleeves, charcoal hem and cuffs, plain central white zipper, no written logos. Bow tie visible at neck above zipper. Slim navy trousers and white sneakers with cyan soles. LEFT forearm is a smooth white cybernetic prosthesis with navy joints and slim cyan indicators, ending in a rounded THREE-digit robotic frog hand; RIGHT hand biological green with exactly THREE rounded digits. Both eyes natural white/black; no electronic face visor. No hair, hat, tail, wings or weapons. POSE: Quick straight LEFT palm strike toward image right: left arm extended at chest height, palm oriented forward, right arm held close in guard, front knee bent and rear leg extended for balance. Lean into the strike, clear compact silhouette. No energy projectile, trail or impact graphic.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b"
+}

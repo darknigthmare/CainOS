@@ -1,0 +1,348 @@
+{
+  "appearances": [
+    {
+      "id": "glitch-lackadaisy-queenie-hommage",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "32645937f63eb76af693af825fd54e9d56d09f361b63ce31d185650e55d8173c",
+        "stance": "4c0b36ae31dc665e5686027a3fac43a36c1582e7608621a4a204c9d387b0586c"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/lackadaisy/queenie/hommage/selection.png",
+        "stance": "assets/encore/crossovers/lackadaisy/queenie/hommage/stance.png"
+      },
+      "observations": [
+        "Couronne de reine d’échecs en bois, yeux rouge-orange et deux gants flottants.",
+        "Long manteau bleu canard, gilet moutarde et chapeau assorti adaptés au corps conique.",
+        "Broche violon dorée et bordure d’hermine conservée ; aucune anatomie féline.",
+        "Garde entière et portrait haut du corps comparés visuellement : couronne, yeux, accessoires et matériaux cohérents dans les deux dessins.",
+        "Un personnage par PNG, deux gants détachés, aucun bras ou jambe humain ; silhouette et marges contrôlées.",
+        "Garde récupérée inchangée ; portrait natif généré en se référant à cette garde."
+      ],
+      "issues": [],
+      "nativeFacing": 1,
+      "technical": {
+        "selection": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 1020936,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            276,
+            18,
+            1084,
+            1241
+          ]
+        },
+        "stance": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 863504,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            304,
+            12,
+            935,
+            1248
+          ]
+        }
+      },
+      "canonicalFidelityCertified": false
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-resident",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "02b9d853f8c5fa5750d69a1f7fd6f9647a6bfb247edc6530b0b6991eabdeca93",
+        "stance": "9e308b2c7560cd5e0a5c04c4609abd2ac3843cd2fc5f6e8180338557666b1749"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/lackadaisy/queenie/resident/selection.png",
+        "stance": "assets/encore/crossovers/lackadaisy/queenie/resident/stance.png"
+      },
+      "observations": [
+        "Silhouette de Queenie en bois, couronne découverte et gants satin détachés.",
+        "Velours noir et bordeaux, liserés art déco or et trois rangs de perles ambre.",
+        "Petite plume vert paon et étole crème ; interprétation originale des années 1920.",
+        "Garde entière et portrait haut du corps comparés visuellement : couronne, yeux, accessoires et matériaux cohérents dans les deux dessins.",
+        "Un personnage par PNG, deux gants détachés, aucun bras ou jambe humain ; silhouette et marges contrôlées.",
+        "Garde récupérée inchangée ; portrait natif généré en se référant à cette garde."
+      ],
+      "issues": [],
+      "nativeFacing": 1,
+      "technical": {
+        "selection": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 1371150,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            167,
+            12,
+            1103,
+            1243
+          ]
+        },
+        "stance": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 983614,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            295,
+            6,
+            930,
+            1247
+          ]
+        }
+      },
+      "canonicalFidelityCertified": false
+    },
+    {
+      "id": "glitch-lackadaisy-queenie-fusion",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "215a970a38cdbb0af7eb18ed3ebbafed3083aed5d4416ef4695224d6059402b7",
+        "stance": "2bae7a524f6bf95ec43a457dddba8ea07d186b2fba597af880922368e44b3dd4"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/lackadaisy/queenie/fusion/selection.png",
+        "stance": "assets/encore/crossovers/lackadaisy/queenie/fusion/stance.png"
+      },
+      "observations": [
+        "Corps hybride reine d’échecs et félin, oreilles intégrées à la couronne et longue queue rayée attachée.",
+        "Yeux rouge-orange, bois noyer, collerette crème et pattes-gants détachées.",
+        "Habillage bordeaux art déco ; aucun bras ou jambe humain.",
+        "Garde entière et portrait haut du corps comparés visuellement : couronne, yeux, accessoires et matériaux cohérents dans les deux dessins.",
+        "Un personnage par PNG, deux gants détachés, aucun bras ou jambe humain ; silhouette et marges contrôlées.",
+        "Garde récupérée inchangée ; portrait natif généré en se référant à cette garde."
+      ],
+      "issues": [],
+      "nativeFacing": 1,
+      "technical": {
+        "selection": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 1381805,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            252,
+            14,
+            1132,
+            1244
+          ]
+        },
+        "stance": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 1226692,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            244,
+            9,
+            1005,
+            1251
+          ]
+        }
+      },
+      "canonicalFidelityCertified": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-hommage",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "53e25f49fec589df7de0713fea5790a0858fd2ebe7810218c2ff82d27217a011",
+        "stance": "e765c28222b21d4c6fcce318380e1ee05ba7f13f241d60bf67aa450dfedf011e"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/selection.png",
+        "stance": "assets/encore/crossovers/ultrajumpmania/queenie/hommage/stance.png"
+      },
+      "observations": [
+        "Chemisette jaune à hibiscus crème et jupe portefeuille corail sur corps de reine.",
+        "Corde miel à la taille et petit bouquet de feuilles de palmier derrière la couronne.",
+        "Bois et yeux de Queenie préservés, gants blancs flottants ; aucune jambe.",
+        "Garde entière et portrait haut du corps comparés visuellement : couronne, yeux, accessoires et matériaux cohérents dans les deux dessins.",
+        "Un personnage par PNG, deux gants détachés, aucun bras ou jambe humain ; silhouette et marges contrôlées.",
+        "Sortie de garde relue après édition native de fond ; les RGB colorés hors silhouette ont alpha nul et ne sont pas un fond dessiné en jeu.",
+        "Petit nœud rose repris comme accent de la tenue tropicale Encore de référence ; détail de création originale, aucune attribution canonique à Queenie."
+      ],
+      "issues": [],
+      "nativeFacing": 1,
+      "technical": {
+        "selection": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 1313360,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            78,
+            9,
+            1137,
+            1243
+          ]
+        },
+        "stance": {
+          "mode": "RGBA",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1711323,
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "boundsAlpha12": [
+            107,
+            13,
+            876,
+            1527
+          ]
+        }
+      },
+      "canonicalFidelityCertified": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-resident",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "a9ce7ac1b8eed55dfc65ef0ad262526bc4a7a6c6c66418b292ddc338ea707ce3",
+        "stance": "c4a49ef34f742cf146472fab68a4bb2c69365f4a63d3a269e7b8a4e69e73bd66"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/ultrajumpmania/queenie/resident/selection.png",
+        "stance": "assets/encore/crossovers/ultrajumpmania/queenie/resident/stance.png"
+      },
+      "observations": [
+        "Cape de feuilles émeraude et jade, robe de fibres crème et ceinture bordeaux.",
+        "Sacoche de graines en coco, fleur jaune derrière la couronne et fermoir doré.",
+        "Tête bois et gants flottants conservés dans une création originale de l’archipel.",
+        "Garde entière et portrait haut du corps comparés visuellement : couronne, yeux, accessoires et matériaux cohérents dans les deux dessins.",
+        "Un personnage par PNG, deux gants détachés, aucun bras ou jambe humain ; silhouette et marges contrôlées.",
+        "Sortie de garde relue après édition native de fond ; les RGB colorés hors silhouette ont alpha nul et ne sont pas un fond dessiné en jeu.",
+        "Cadrage du portrait corrigé nativement : marge transparente en dessous du torse, tête, fleur et deux gants inchangés."
+      ],
+      "issues": [],
+      "nativeFacing": 1,
+      "technical": {
+        "selection": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 821312,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            287,
+            105,
+            994,
+            1090
+          ]
+        },
+        "stance": {
+          "mode": "RGBA",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1886881,
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "boundsAlpha12": [
+            140,
+            12,
+            852,
+            1533
+          ]
+        }
+      },
+      "canonicalFidelityCertified": false
+    },
+    {
+      "id": "glitch-ultrajumpmania-queenie-fusion",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "3c9c8875800bc1d2a731335497d64c002c18e503b05cb7da549f01f68274c303",
+        "stance": "33f7c9594e33230e260645d6087abb0fb84704668bba2f18e070d43770d3bd3b"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/selection.png",
+        "stance": "assets/encore/crossovers/ultrajumpmania/queenie/fusion/stance.png"
+      },
+      "observations": [
+        "Fusion de bois de cocotier vivant et reine d’échecs, feuilles de palmier formant les pointes de couronne.",
+        "Corps annelé, manteau de feuilles corail, base circulaire en racines et coque.",
+        "Gants en coque ivoire détachés, yeux rouge-orange et noix dorée en finial.",
+        "Garde entière et portrait haut du corps comparés visuellement : couronne, yeux, accessoires et matériaux cohérents dans les deux dessins.",
+        "Un personnage par PNG, deux gants détachés, aucun bras ou jambe humain ; silhouette et marges contrôlées.",
+        "Sortie de garde relue après édition native de fond ; les RGB colorés hors silhouette ont alpha nul et ne sont pas un fond dessiné en jeu."
+      ],
+      "issues": [],
+      "nativeFacing": 1,
+      "technical": {
+        "selection": {
+          "mode": "RGBA",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 1701434,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "boundsAlpha12": [
+            105,
+            13,
+            1125,
+            1253
+          ]
+        },
+        "stance": {
+          "mode": "RGBA",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 2101965,
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "boundsAlpha12": [
+            161,
+            16,
+            869,
+            1514
+          ]
+        }
+      },
+      "canonicalFidelityCertified": false
+    }
+  ]
+}

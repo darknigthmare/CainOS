@@ -1,0 +1,11 @@
+{
+  "id": "abstractedqueenie",
+  "pose": "victory",
+  "slot": "victory",
+  "prompt": "Use case: identity-preserve. Asset type: SINGLE 2D UHD fighting-game state sprite, victory. Reference is this character's approved native stance, preserve character design, topology, colored eye identities, materials and crisp rendering 1:1. Tall branched jagged spire/crown upper body, dense black crystalline facets, multicolored slit-pupil eyes, FOUR long taloned clawed feet. Same eye arrangement and silhouette. Distinct VICTORY pose after the duel: body lifted confidently, front limb delicately raised if present, eyes wide and bright looking right. Calm Queenie gently straightened with softened eyes; no new props. Strict side-on fighting-game view, facing RIGHT with modest three-quarter volume. One independent newly drawn complete pose, NOT a duplicate of stance. Retain same scale and proportion relationships; fit entire subject with 8% transparent padding around extreme limbs/tendrils/spires. High detail black faceted mass legible via controlled violet/cyan rim highlights. TRUE transparent alpha outside silhouette, no black/grey background, NO environmental glow or haze, no floor, no shadow, no text/labels, no grid, no other character, no effect cloud. No extra arms, no humanoid face, no costumes beyond reference. This is an original combat adaptation of the provided project design, not an official new scene.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/abstractedqueenie/stance.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-ac6a2a1c-bb95-44d0-a330-edecac0827f3.png",
+  "destination": "assets/encore/abstractions/abstractedqueenie/victory.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native drawing using retained original prompt and regenerated matching stance."
+}

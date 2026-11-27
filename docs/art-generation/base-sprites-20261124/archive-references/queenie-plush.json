@@ -1,0 +1,23 @@
+{
+  "schema": "reference-product-provenance/v1",
+  "url": "https://glitchproductions.store/products/queenie-plush",
+  "metadataUrl": "https://glitchproductions.store/products/queenie-plush.js",
+  "retrievedOn": "2026-11-24",
+  "productId": 14935234150765,
+  "title": "Queenie Plush",
+  "handle": "queenie-plush",
+  "vendor": "Digital Circus",
+  "images": [
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_1_29c13958-7d62-4471-a396-1be87cc0f24d.png?v=1773700593",
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_1.png?v=1773700593",
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_2.png?v=1773700593",
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_3.png?v=1773700593",
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_2_1cc8d8e3-bade-425d-acc6-e523b6df8ec8.png?v=1773700325",
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_3_2c86547e-d120-4581-919c-24d778256bf3.png?v=1773700324",
+    "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_4.png?v=1773700326"
+  ],
+  "featuredImage": "//cdn.shopify.com/s/files/1/0786/4903/3026/files/QueeniePlush_1_29c13958-7d62-4471-a396-1be87cc0f24d.png?v=1773700593",
+  "rawResponseBytes": 7030,
+  "rawResponseSha256": "9f72832f8562c647be127e8b0290e1753adb63199058e38f5d95b326668727a9",
+  "note": "Source identity and image URLs retained for visual provenance; product descriptions, prices, variant listings and unrelated commercial metadata omitted."
+}

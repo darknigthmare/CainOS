@@ -1,0 +1,61 @@
+{
+  "series": "lackadaisy",
+  "style": "resident",
+  "label": "Lackadaisy · Résident · Coursier du Little Daisy",
+  "identity": "Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/lackadaisy",
+    "https://lackadaisy.com/characters.php"
+  ],
+  "state": "selection",
+  "id": "glitch-lackadaisy-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original 1920s neighborhood courier adaptation for Ribbit in the Little Daisy district: a soft brown herringbone flat cap behind the two frog eyes, pale cream shirt with rolled sleeves, olive waistcoat with brass buttons, cropped high-waisted navy trousers and brown suspenders, worn brown leather messenger satchel attached by a diagonal strap, one cream folded envelope tucked into its pocket, dark brown ankle straps above bare webbed toes. Pink bow at collar, lime smooth frog face and uncovered thin green forearms and lower legs, four green fingers on each hand and three toes on each foot. Warm brown/olive/navy palette and period materials from the resident reference. No fur, feline ears, tail, weapons, cigarette, alcohol, human face, words or labels. A single coherent still character.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:lackadaisy:resident:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-548115aa-7b03-49d4-add1-87a3b5a23605.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-548115aa-7b03-49d4-add1-87a3b5a23605.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    364,
+    23,
+    1026,
+    1222
+  ],
+  "alpha12Margins": [
+    364,
+    23,
+    228,
+    32
+  ],
+  "alphaZeroFraction": 0.7764245324053937,
+  "alphaOpaqueFraction": 0.0007510257447301013,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/lackadaisy/ribbit/resident/selection.png",
+  "bytes": 724367,
+  "sha256": "93a8a398e63e4b1893fe065fe04b1d4589e631439d2f8a671f2061285c828341",
+  "sha": "ffa4fc76768fa6ff9576053ecf435e93aaaded6a",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/crossovers/lackadaisy/ribbit/resident/stance.png": "ee784df7c15e7581620d5043ecd3a0726d6dff43c455fa18379c78688df81e67"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Distinct upright portrait faithful to the inspected stance: same period costume, colors, headgear, frog body, attached accessories and all visible extremities. Positive native margin; no clipping.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

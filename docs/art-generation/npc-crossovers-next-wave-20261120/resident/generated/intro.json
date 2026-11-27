@@ -1,0 +1,73 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "intro",
+  "prompt": "Edit the FIRST image only. Preserve its complete Ribbit character, exact pose, face, slender proportions, costume, all tools, colors, linework, shading, feet, placement and native transparency. Correct ONLY the extended open green hand on the RIGHT of the picture: it must have EXACTLY THREE digits in total, a single upper thumb-like rounded lobe and ONLY TWO rounded fingers pointing right. Remove the extra fourth finger naturally, preserving the hand outline and anatomy in the same 2D drawing style. The second image is the accepted identity reference showing the THREE-digit frog hands. Do not introduce any other change. Entire figure head to toes, generous clear transparent margin. True transparent RGBA with no background, shadow, text, labels or effects. Output one complete corrected original character image.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-resident:intro",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-5018d130-b42a-4a31-b402-f8e1dec655dd.png",
+  "sourceGenerationId": "exec-5018d130-b42a-4a31-b402-f8e1dec655dd",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-resident.json",
+  "definitionSHA256": "3a2fc2646759c1d3c2e895eb6c907c29ed171bf834554938338a985348fcc973",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png",
+      "sha256": "688b2c9c3aafd282ab799ee7ea80c879c3721ce23e5744186c478b75fa78370a",
+      "bytes": 1536975
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    103,
+    38,
+    946,
+    1492
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1118239,
+  "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+  "bytes": 1487206,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T14:54:34.535182+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Correction native inspectée : la main ouverte comporte désormais exactement trois lobes. Présentation debout, nœud rose, combinaison et outils conservés ; figure entière sans coupe."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

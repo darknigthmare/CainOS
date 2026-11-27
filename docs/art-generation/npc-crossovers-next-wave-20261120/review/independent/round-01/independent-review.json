@@ -1,0 +1,683 @@
+{
+  "schema": "encore-independent-npc-visual-review/v1",
+  "reviewer": "ribbit_references",
+  "reviewedAt": "2026-11-20T15:18:13.341635+00:00",
+  "status": "partial_review_revisions_required",
+  "snapshot": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/snapshot.json",
+  "snapshotSha256": "23a6dc2525e41b8f458486791d4bf5cafe5b288e7477941060f3af65de695452",
+  "inspectedAcceptedPngs": 26,
+  "counts": {
+    "hommage": 11,
+    "resident": 7,
+    "fusion": 8
+  },
+  "files": [
+    {
+      "variant": "hommage",
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+      "receiptSha256": "a79a7008ef19735b7e7d5c9074f868ec90e8e226f1dc6aa2693762351c8c6288",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-selection-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Main ouverte à droite : quatre lobes distincts."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "sha256": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+      "receiptSha256": "70246344228e1029cb0493504bc87de9793c2ae7ac6b3354554ca4ef819ec49e",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-stance-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Main avant ouverte à droite : quatre lobes distincts."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "sha256": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+      "receiptSha256": "4c2c8bccd05353055a014130d4e3edf9a8e8b366466c4f9934eb81084d5f6e0f",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-intro-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Main basse à gauche : trois doigts vers le bas et un pouce latéral, soit quatre lobes."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "sha256": "3fe9250207098ecc9ca08fb15ee9268926269e0648c898d7f714cc5f81be914f",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+      "receiptSha256": "5564b4e5043478d73b6e3bb6826f39106e700d93e8c4cb19ba75e0b6fd8f5360",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-attack-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Main avant ouverte à droite : quatre lobes distincts."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+      "receiptSha256": "066eccd769bf97c0eb54d391296ad769a9653a41941e81dbfe0864525b76ad40",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-heavy-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "sha256": "842c55a77b7c5b087f7ac46ec662f7853414c293233d0d2b808e602900d81d2a",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+      "receiptSha256": "a04a4fd5f7f8cbf36791c01735814825e06df70d6cbd59d192627c2a6104141a",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-hit-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Les deux mains ouvertes présentent quatre lobes distincts."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+      "receiptSha256": "247123f78afe68cd870750dd43230adfacf647d94b11e451aee15557ee7e05a2",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-walk-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "sha256": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+      "receiptSha256": "0bde398c5336e614be303b1602e6c66e121c6e2d52fbef4e74a1c1b40113428f",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-jump-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Les deux mains ouvertes présentent quatre lobes distincts."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "sha256": "b0b9bba19eb38ea27e356624ac5491df21295f152987cf3953c96cfac96919c0",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+      "receiptSha256": "b0783d40e6899d45781440147569966e7a84f48bf02c9684056e732c54e65181",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-crouch-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Main avant ouverte à droite : quatre lobes distincts."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+      "receiptSha256": "5ed67468a3fed25c3dafa26d7766b44bc70a6e382c1e93839dba8091273f8507",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-victory-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "hommage",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "sha256": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+      "receiptSha256": "6ca26ab466f6cd66527e7e999f0807cef036f1fce7174b116b381b8a075923c3",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-defeat-alpha.jpg",
+      "visualReviewStatus": "revision_required",
+      "observations": [
+        "Main posée sur le genou à droite : pouce latéral et trois doigts pendants, soit quatre lobes."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json",
+      "receiptSha256": "9e0f02e2046f4123d345fc95429f43bc58903d28ece15753dc715ea45140e8f8",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-selection-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json",
+      "receiptSha256": "e8f26ee291fdd17ac2fc7c481ce83d0a548c1a5b26af6890a01cbd916c34ad65",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-stance-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json",
+      "receiptSha256": "8d3751388dfa16771d760eb48b967d59cf2291a110865fdcb15f33ccb3bf4f0f",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-intro-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json",
+      "receiptSha256": "057817678ede7f30941ad345338277243fec0045c95fda6a6ac38f9d98c2c267",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-attack-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json",
+      "receiptSha256": "56d7cb36325ffe4d4e35c86bb77081ae94a815bf09711ef06ce7043bd45ca680",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-heavy-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json",
+      "receiptSha256": "3979224da09d09f1107b5537b6b80494f20469edfc7e7908c1a97115e9d4b6b3",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-walk-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json",
+      "receiptSha256": "73267a9164d56e1ba50abf5072f93abafed371a51d82f30738ef1fc2e214ed21",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-jump-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json",
+      "receiptSha256": "b88d4bbfa7f6b2c2f90f79528d2bda44f1e8fac5f16d6d8d6e4f2b25677b37a7",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-selection-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png",
+      "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json",
+      "receiptSha256": "680ad5b34407f01b01db8f534c11bdddb0b9d694ad6834a972d7d18498c30d9a",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-stance-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png",
+      "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json",
+      "receiptSha256": "cdb597349212e6b546ffe7da43f8fcc2f47e3df02906322eca475a4a7e489a66",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-intro-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png",
+      "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json",
+      "receiptSha256": "575da85036536320d5c639677f2dbb31b72c7f677516c34c7b9b5671a269d1b1",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-attack-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png",
+      "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json",
+      "receiptSha256": "3318865c0e4e509a4df2df3a316d0e31c392a3a50db70b9528f413610fa663b5",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-heavy-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet",
+        "individual alpha composition"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png",
+      "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json",
+      "receiptSha256": "e079c62d01ab907509013227c3807fef2ef94e981fbfc25e3db34583014dcbb4",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-walk-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png",
+      "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json",
+      "receiptSha256": "c2aac4300c81eaadb9b43d5414ad46618a49da80582045a332365e169e450ece",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-jump-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png",
+      "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json",
+      "receiptSha256": "387cde57be2da26d09484181569fae54b02020460c32705ad7a1f23c2f3cb441",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-crouch-alpha.jpg",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Pas de défaut concret observé dans la silhouette, les raccords ou les mains lisibles."
+      ],
+      "inspectionViews": [
+        "family alpha contact sheet"
+      ],
+      "stillCurrentAtReview": true
+    }
+  ],
+  "concreteDefects": [
+    {
+      "variant": "hommage",
+      "slot": "selection",
+      "description": "Main ouverte à droite : quatre lobes distincts."
+    },
+    {
+      "variant": "hommage",
+      "slot": "stance",
+      "description": "Main avant ouverte à droite : quatre lobes distincts."
+    },
+    {
+      "variant": "hommage",
+      "slot": "intro",
+      "description": "Main basse à gauche : trois doigts vers le bas et un pouce latéral, soit quatre lobes."
+    },
+    {
+      "variant": "hommage",
+      "slot": "attack",
+      "description": "Main avant ouverte à droite : quatre lobes distincts."
+    },
+    {
+      "variant": "hommage",
+      "slot": "hit",
+      "description": "Les deux mains ouvertes présentent quatre lobes distincts."
+    },
+    {
+      "variant": "hommage",
+      "slot": "jump",
+      "description": "Les deux mains ouvertes présentent quatre lobes distincts."
+    },
+    {
+      "variant": "hommage",
+      "slot": "crouch",
+      "description": "Main avant ouverte à droite : quatre lobes distincts."
+    },
+    {
+      "variant": "hommage",
+      "slot": "defeat",
+      "description": "Main posée sur le genou à droite : pouce latéral et trois doigts pendants, soit quatre lobes."
+    }
+  ],
+  "diagnostics": [
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-attack-alpha.jpg",
+      "sha256": "a02b4cc1dde11dbeeb01beb951da1bae1030b8783ca58d7e1e5e021211c1a0ab"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-crouch-alpha.jpg",
+      "sha256": "545cafc9209a672e2657518471375825ab4fda0eceb39d0324a911afdcf35d12"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-heavy-alpha.jpg",
+      "sha256": "1f0a9454a486d14dac1fd854c1d3245c7d965ceda7e8583bd2bf5ff331c16ab5"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-intro-alpha.jpg",
+      "sha256": "158c9908982c4bab4f727ab27b63f7719769b68562f63fd1054744afd446d4b4"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-jump-alpha.jpg",
+      "sha256": "9cff217eef5bd3a7d663a48ca69aa1fcc2e194b17676ac668a08f66c6cadf175"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-selection-alpha.jpg",
+      "sha256": "2bbdeb2ef18fd5d50db7e79d6c82cf286b1ae08350ba44b93b3f2a93d451214a"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-sheet-1.jpg",
+      "sha256": "8c007a22ebab26278d99d4bba5123357af786a0534d71f68f0fb0ffc3c640faf"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-sheet-2.jpg",
+      "sha256": "060275b66a919229c44cefc564cf3ded3c557ce51539f7b289e67d8a4705f7de"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-stance-alpha.jpg",
+      "sha256": "027ed71da6252cf8b4bb4276c5b9aabda70167e5a8034331c6d39ee83d836523"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-walk-alpha.jpg",
+      "sha256": "5516e354ee4e05fe218e5e7f1a79d5d5e58bf6a33ca1a24998b42f24351dfd14"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-attack-alpha.jpg",
+      "sha256": "1340405d417b5470309938e2fed698cc15667efbd3be8d38b9d747193ecfb12e"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-attack-hand-detail.jpg",
+      "sha256": "774125230721a5ae0782f21812b7bfefd96e80241eb5cc156b9e9daeb82eca76"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-crouch-alpha.jpg",
+      "sha256": "c8579dfc6c6a5f50203f615e2e28cff30f08aded06021313c1463f7fe5b904d1"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-crouch-hand-detail.jpg",
+      "sha256": "4deda6a03a77565b81cd806d69d85a0c01c7ee9969be2049b3547c581011e572"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-defeat-alpha.jpg",
+      "sha256": "794e97c33ad5f41342f5de03488853a59f2c0c4552448ceb1dae0a39f0f70c78"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-defeat-hand-detail.jpg",
+      "sha256": "31acf9dd65160291f42f0e1fe19978d391d0589fb17fddba5942694c41bb40fc"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-heavy-alpha.jpg",
+      "sha256": "70b6c04b509995dfa15fa38af071e41f936b9871f65a69d5741541e65b2c348b"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-hit-alpha.jpg",
+      "sha256": "0d72e809715dd642d7e87071d45a28c186d3fe26fc8a4dd46cc7de4e86b87d22"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-hit-hand-detail.jpg",
+      "sha256": "69359ac1631e318521a01de1809e9f02fee0e23b37a14b11a9348648d753f827"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-intro-alpha.jpg",
+      "sha256": "1c8a609eae95a2c5233fbaf852c3dec9f9f209421d3a9b8742f906a7fac89537"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-intro-hand-detail.jpg",
+      "sha256": "7e35980815ceba5d022b2bae8535bbbb48959807f18fd0eefcd9f43b2d41981a"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-jump-alpha.jpg",
+      "sha256": "f00ec41f3bf3eb87aefebcf171ddbce55b6423a086cffad347b2ac831bf518eb"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-jump-hand-detail.jpg",
+      "sha256": "69d813d9c3b0748a6ecd44b1ee64da45eee709889484cf3ab17c586bd2a4edd1"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-selection-alpha.jpg",
+      "sha256": "65e8f3377b846a3eb1a30b82b4caa115c243456ab8a0d2e58c897913cc58cba1"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-selection-hand-detail.jpg",
+      "sha256": "3edb21841c13a6a595944f79999500f2fdacb986a06d975d61346add3c5ba95f"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-sheet-1.jpg",
+      "sha256": "995bdee716f4fe3a33a8f9ad2ba4b8aad83cb8d463dfccee595a8d8d23e11f71"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-sheet-2.jpg",
+      "sha256": "fb2d669a3111d4cce65be6c81d9d6f12b499f81054b970046b8e3d2a50309711"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-stance-alpha.jpg",
+      "sha256": "67c44f629678390e6ba69380d6fa6a6e138145babe719aef8332410750f5b3d8"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-stance-hand-detail.jpg",
+      "sha256": "e8c7c50f245ba75dd683b0dfcf3ef166eb5c5ce2efbb6ebf828882c65c1dfcb0"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-victory-alpha.jpg",
+      "sha256": "6585429bea220491c5b20ef598180b07e759af420e92f05c31198a8fd9ccd22d"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-walk-alpha.jpg",
+      "sha256": "9d91e3099d4492466ead9b557dea40f6a5acc1743d3508dd5e169c8ca4f2819c"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-attack-alpha.jpg",
+      "sha256": "bd4c10f983e9b014b7ab1258926f5846945aecedb25db466b3f3473c1b860b5f"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-heavy-alpha.jpg",
+      "sha256": "335053ab76b8ca8c645a1dbb23c66b9e80ecf84c504902135ac2b97864f9bb81"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-intro-alpha.jpg",
+      "sha256": "27d5ae9696089ebd7685d8ebffa9c1e00ce3339e8f4b1dc3b4715ba11bfe8ca5"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-jump-alpha.jpg",
+      "sha256": "ac19ed3f61957728c8a789e280998b9352445de54011e18bb7312f58db319d9f"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-selection-alpha.jpg",
+      "sha256": "8397f84908707da33b0e906daaae844bd9fc6b443d0b60b0753fbb1e3a0d0d64"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-sheet-1.jpg",
+      "sha256": "20aa2b1e1a4c4859ea4e470fea466fcadedc5943151ddc785f9752208792bcf3"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-sheet-2.jpg",
+      "sha256": "82c8d2015b990d46769962e22f467e649c897baf262eefb35f6f609ba297df92"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-stance-alpha.jpg",
+      "sha256": "3aad367b874d8df09f3d4fd9c7a88cdc88be3389c8b18513bcf9a2b04d8e6e5e"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-walk-alpha.jpg",
+      "sha256": "39f6315e4c59683bfd89aabe5e33bbaae656685dfde1738f36c96ae302c75202"
+    }
+  ],
+  "limits": [
+    "Revue des seuls PNG accepted_native capturés dans ce tour ; dernières générations et corrections ne sont pas encore couvertes.",
+    "Les mains repliées, superposées ou en poing ne permettent pas toujours un décompte anatomique. Une face de paume n’a pas été assimilée automatiquement à un doigt.",
+    "Hommage heavy, walk et victory ne présentent pas de quatrième lobe distinct suffisamment établi pour demander une correction.",
+    "Les fichiers de production, reçus et jobs n’ont pas été modifiés pendant cette revue.",
+    "Les diagnostics sont des compositions alpha distinctes ; ils ne remplacent pas les sorties natives ni une revue dans le renderer."
+  ]
+}

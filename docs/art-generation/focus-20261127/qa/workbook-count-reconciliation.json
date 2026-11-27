@@ -1,0 +1,127 @@
+{
+  "schema": "encore-focus-workbook-metadata-reconciliation/v1",
+  "checkedAt": "2026-11-27T09:58:31.009Z",
+  "status": "passed",
+  "scope": "Correction de métadonnées uniquement. Aucun export, rendu ou changement des octets du XLSX ; aucune suite de jeu réexécutée.",
+  "correction": {
+    "field": "counts.costumeAdditions",
+    "before": 56,
+    "after": 58,
+    "reason": "Le préparateur focus avait omis le compteur des apparences Circus supplémentaires après l’ajout de God Caine et Evil Pomni.",
+    "runtime": {
+      "legacyCircusAdditions": 45,
+      "staticCircusAdditions": 13,
+      "circusAdditions": 58,
+      "archiveVariants": 52,
+      "crossovers": 465,
+      "totalCostumes": 575
+    },
+    "newFamilies": [
+      "godcaine",
+      "evilpomni-pendantz"
+    ],
+    "productionCircusRows": 58
+  },
+  "changedCompanionPaths": [
+    "counts.costumeAdditions",
+    "focusIntegration.sourceSHA256",
+    "focusIntegration.sourceDigests.scripts/build-combat-tracker-focus-20261127.mjs"
+  ],
+  "allOtherCompanionDataPreserved": true,
+  "allProductionRowsAndUserNotesPreserved": true,
+  "historicalCoverage": {
+    "asOf": "2026-11-25",
+    "appearances": 56,
+    "coveragePreserved": true,
+    "reviewPreserved": true,
+    "historyPreserved": true
+  },
+  "gameQaEvidencePreserved": true,
+  "workbook": {
+    "path": "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+    "beforeSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+    "afterSHA256": "8d19502298a30c489c8b4410bc032e1cb16c68b3a38190e283cab5f8de62af95",
+    "bytesUnchanged": true,
+    "nativeBefore": {
+      "sheetNames": [
+        "Synthèse",
+        "Fonctionnalités",
+        "Combattants",
+        "Techniques",
+        "Arènes",
+        "Atlas",
+        "Production",
+        "Scénarios",
+        "Extension PNJ",
+        "QA",
+        "Références",
+        "Guide combat",
+        "Extensions combat",
+        "Fiches extensions"
+      ],
+      "sheetCount": 14,
+      "formulaCount": 42,
+      "formulaSHA256": "8a800046a83bf535f42c5a2d5ea443f92f2626c052a971ac8d026e0c86feb452",
+      "worksheetXMLSHA256": "c426de657803e78eef69883d2f237cb46facb32b3b0aa87bc3e28cd7d60d6d86",
+      "tableXMLSHA256": "cd0d8779aff895f45696b2a6f70f20f0f7cac8ee2e518f5d0f97ddd165e200e5",
+      "annotationPartsSHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "stylesSHA256": "d79d1c8123a1171611d35edc9f58997c7d61bcff56278971db41154bdef94d53",
+      "summaryB11Value": "575",
+      "summaryB11Formula": "COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4069,\"Costume crossover\")+COUNTIFS('Production'!B6:B4069,\"Tenue Circus\")"
+    },
+    "nativeAfter": {
+      "sheetNames": [
+        "Synthèse",
+        "Fonctionnalités",
+        "Combattants",
+        "Techniques",
+        "Arènes",
+        "Atlas",
+        "Production",
+        "Scénarios",
+        "Extension PNJ",
+        "QA",
+        "Références",
+        "Guide combat",
+        "Extensions combat",
+        "Fiches extensions"
+      ],
+      "sheetCount": 14,
+      "formulaCount": 42,
+      "formulaSHA256": "8a800046a83bf535f42c5a2d5ea443f92f2626c052a971ac8d026e0c86feb452",
+      "worksheetXMLSHA256": "c426de657803e78eef69883d2f237cb46facb32b3b0aa87bc3e28cd7d60d6d86",
+      "tableXMLSHA256": "cd0d8779aff895f45696b2a6f70f20f0f7cac8ee2e518f5d0f97ddd165e200e5",
+      "annotationPartsSHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "stylesSHA256": "d79d1c8123a1171611d35edc9f58997c7d61bcff56278971db41154bdef94d53",
+      "summaryB11Value": "575",
+      "summaryB11Formula": "COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B4069,\"Costume crossover\")+COUNTIFS('Production'!B6:B4069,\"Tenue Circus\")"
+    }
+  },
+  "sourceHashes": {
+    "scripts/build-combat-tracker-focus-20261127.mjs": {
+      "before": "9e63abfc4a48601b1d2ee8701350ee9e4a164590dd654811e6146e7fef99ea3a",
+      "after": "f6443ef546b19ee9bc8530fedd1c8245595d0168a53d859aef79b0732652f7bc"
+    },
+    "docs/art-generation/focus-20261127/tracker-focus.json": {
+      "before": "e8f3dc8768d848f52f4115c9aea328d22510a369c587fd889618cc1d3cad08dd",
+      "after": "8a5586fa57b37f3f15e4d6efc3642f49729d9aa786bb0e5d0a2f1dc15069ce64"
+    },
+    "docs/combat-tracker-data.json": {
+      "before": "cb6de93b4e201887235d6fdaee5984c91906fe9c19d0917d9f12f9df1d264a4c",
+      "after": "06c1a1f15e671d32a687802744d93e457695196d0ae6a3638098c9b19232c9e3"
+    }
+  },
+  "earlierReportHashes": {
+    "docs/combat-focus-workbook-verification.json": "513c58a551bb556344f0569a9d7e09687b073da259acd8f4687987405f4cabb4",
+    "docs/combat-workbook-verification.json": "8701189ae4774d6378fb48c95dddc74efb71f3e4226c20320a796baeb9f49b85"
+  },
+  "verification": {
+    "metadataComparedByDeepEquality": true,
+    "worksheetXMLPreserved": true,
+    "tableXMLPreserved": true,
+    "formulasPreserved": 42,
+    "cachedCostumeTotal": 575,
+    "sheetCount": 14,
+    "currentGameQAComplete": false
+  }
+}

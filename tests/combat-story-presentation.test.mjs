@@ -9,7 +9,7 @@ const fighterIds = FIGHTERS.map(fighter => fighter.id);
 const stageIds = STAGES.map(stage => stage.id);
 const signature = panel => JSON.stringify([panel.stageId, panel.composition, panel.cast]);
 
-test('fourteen routes contain eighty-four authored prologue and epilogue tableaux with valid existing assets', () => {
+test('all sixty-four routes contain 384 distinct prologue and epilogue tableaux with valid roster and stage references', () => {
   const ids = [], titles = [], summaries = [];
   for (const id of fighterIds) for (const kind of ['prologue', 'epilogue']) {
     const panels = STORY_ROUTES[id][kind];
@@ -42,7 +42,8 @@ test('narrative references are official, scoped, immutable and do not give Baron
   assert.match(STORY_REFERENCE_NOTICE, /créations pour Encore/);
   for (const route of Object.values(STORY_ROUTES)) {
     assert.ok(route.writingApproach.length > 50);
-    assert.ok(route.referenceIds.length);
+    if (route.sourceKind === 'original-encore') assert.deepEqual(route.referenceIds, []);
+    else assert.ok(route.referenceIds.length);
     for (const id of route.referenceIds) {
       assert.ok(Object.hasOwn(STORY_REFERENCES, id));
       assert.ok(['www.glitchprod.com', 'www.youtube.com', 'glitchproductions.store'].includes(new URL(STORY_REFERENCES[id].url).hostname));

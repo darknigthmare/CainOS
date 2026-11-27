@@ -1,0 +1,31 @@
+{
+  "capturedAt": "2026-11-20T14:37:27.208Z",
+  "sourceCommit": "570fdb31512cdd2a2d5ba5e2c26d7c10b47ae063",
+  "sourceRemoteCommit": "5be043ba21f3fe7a6dedd3fa1b00dc36f296b540",
+  "sourceHashes": {
+    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
+    "combat/progression.mjs": "d1c06308fdf48e57b4ef4261d952237be3878cdfacd13ab234d1c6bde9dfae3e",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+  },
+  "captureScript": "capture-baseline.mjs",
+  "captureScriptSHA256": "1e4aa1486431a79367affaef8e0a319b4b88e1301b4b03d5104ec328c3852b7f",
+  "fixturePath": "tests/fixtures/combat-pre-barnoir.json",
+  "fixtureSHA256": "96a3e7c26f1da9a391b3baefed824f7855ebfb76ec62c44282b5b722c29785f7",
+  "storyRoutes": 54,
+  "programFixtures": 60,
+  "checkpoints": 360,
+  "initialStageCases": [
+    "bigtop",
+    "falseexit",
+    "home-{player}",
+    "undermap"
+  ],
+  "replayFixtures": 3,
+  "replayFrames": 789,
+  "earlierFixturePath": "tests/fixtures/combat-pre-undermap.json",
+  "earlierFixtureSHA256": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
+  "historicalCostumes": 468,
+  "historicalCostumesSHA256": "d8bfab7e1d56bfeae9d061418344800d2f379a72a1d203437ca5969360696d16"
+}

@@ -1,0 +1,46 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 qa:gamedev
+> npm run audit:gamedev-guides && npm run audit:combat-assets
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 audit:gamedev-guides
+> node scripts/audit-gamedev-guides.mjs
+
+{
+  "pass": true,
+  "upstreamCommit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+  "guides": 10,
+  "files": 35,
+  "verifiedBytes": 221774,
+  "localLinks": 47,
+  "errors": []
+}
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 audit:combat-assets
+> node scripts/audit-combat-assets.mjs
+
+{
+  "pass": true,
+  "fighters": 64,
+  "archiveEntries": 184,
+  "selectableVariants": 52,
+  "animationSheets": 7,
+  "animationFrames": 56,
+  "animationStateReferences": 105,
+  "images": 55,
+  "imageBytes": 62367376,
+  "references": 304,
+  "uniqueCrops": 244,
+  "nativeAlphaReferences": 93,
+  "runtimeMatteReferences": 211,
+  "violations": 0,
+  "report": "audit-combat/assets-report.json"
+}
+npm notice
+npm notice New major version of npm available! 11.19.1 -> 12.2.3
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3
+npm notice To update run: npm install -g npm@12.2.3
+npm notice

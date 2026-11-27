@@ -1,0 +1,1349 @@
+{
+  "schema": "encore-npc-crossover-completion/v1",
+  "status": "integrated_native",
+  "baselineSHA256": "a069c06ef34541b965169f12db4169e40fe16fbbf2381bbffa99b32ce29058cd",
+  "order": [
+    "glitch-metarunner-ribbit-hommage",
+    "glitch-metarunner-ribbit-resident",
+    "glitch-metarunner-ribbit-fusion"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "appearances": [
+    {
+      "id": "glitch-metarunner-ribbit-hommage",
+      "name": "Meta Runner · Hommage · Tari",
+      "fighterId": "ribbit",
+      "series": "metarunner",
+      "style": "hommage",
+      "files": [
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "selection",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/selection.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/selection.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+          "bytes": 717557,
+          "dimensions": [
+            1081,
+            1455
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            146,
+            48,
+            946,
+            1424
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-6bd63205-b7fd-48f5-a85d-a3c59e21ce1e",
+          "references": [
+            {
+              "position": 1,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/references/tari-hoodie-official.png",
+              "sha256": "335b4537caf58642ddc7501c70be6ea8f7cdc60f0881bc612fbabf2c6cbb8cdd",
+              "bytes": 1050978
+            },
+            {
+              "position": 4,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png",
+              "sha256": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+              "bytes": 4608274
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "stance",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/stance.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/stance.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "baa3212257643a6c1cb4afcac50f591b5cf1def68c8bd76470c4868f35cf514f",
+          "bytes": 782181,
+          "dimensions": [
+            1192,
+            1320
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            97,
+            33,
+            1109,
+            1291
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-0280d882-76a8-49f4-a5e8-fde30c2a3e9d",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "intro",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/intro.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/intro.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "5f744b70af9328152324f88e025778f016f697b5a99895c184cb9df4fdb40b49",
+          "bytes": 693357,
+          "dimensions": [
+            1081,
+            1455
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            180,
+            45,
+            848,
+            1420
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-552015a2-712e-4918-b741-c632fa172559",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "attack",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/attack.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/attack.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "3ff2fa3dd5b3fc64961f7417f724cfd8030f1748d3ecfdedd95c3e29824640a8",
+          "bytes": 697035,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            69,
+            66,
+            1147,
+            1270
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-f5d4e3c2-1355-4ad8-8c7a-6e03e6c1bf12",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "heavy",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/heavy.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/heavy.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+          "bytes": 664213,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            131,
+            36,
+            1314,
+            1063
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-21484300-e57b-4d8e-b296-7cc8e9e33706",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "hit",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/hit.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/hit.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "f1f19ecdec728fc1c9699962c9ea4893558b736f4b8bdc7cd20c96e4f075e0da",
+          "bytes": 831035,
+          "dimensions": [
+            1081,
+            1455
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            87,
+            79,
+            932,
+            1411
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-f5d5e6ac-29b2-4c4d-86d4-fc9930f0b6be",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "walk",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/walk.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/walk.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "9e13a21c083cb17feef275e4540a6e3ac39181d44c92601844c454d39d75ae54",
+          "bytes": 743313,
+          "dimensions": [
+            1081,
+            1455
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            147,
+            41,
+            934,
+            1393
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-49a453bf-e256-449e-848b-157a1f2c57e9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "jump",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/jump.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/jump.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "066842d08009481b27e597e8b7d72daee3b8d0c7f8d13c10f816be085eca22a6",
+          "bytes": 756176,
+          "dimensions": [
+            1102,
+            1428
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            35,
+            43,
+            1068,
+            1382
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-c498b4a3-1599-437b-ac66-2a84368da467",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "crouch",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/crouch.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/crouch.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "b0ea55e9529f71656bd1720c90d6204eae9b86e5488173423e0fa240b5f3f09d",
+          "bytes": 836192,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            115,
+            42,
+            1020,
+            1281
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-6c1cf119-09f5-425b-b75b-655bb3fc7221",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "victory",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/victory.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/victory.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/victory.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+          "bytes": 661706,
+          "dimensions": [
+            1081,
+            1455
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            239,
+            50,
+            899,
+            1414
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b1300ba5-21ae-4db8-89d5-4f3508e7e69b",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-hommage",
+          "slot": "defeat",
+          "file": "assets/encore/crossovers/metarunner/ribbit/hommage/defeat.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/defeat.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/hommage/jobs/defeat.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+          "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+          "sha256": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+          "bytes": 865871,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            153,
+            48,
+            945,
+            1272
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-7f80738e-a670-4342-9918-a34efd8aa0a0",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+              "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+              "bytes": 717557
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "name": "Meta Runner · Analyste de replays",
+      "fighterId": "ribbit",
+      "series": "metarunner",
+      "style": "resident",
+      "files": [
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "selection",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/selection.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/selection.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+          "bytes": 684381,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            178,
+            33,
+            1031,
+            1268
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b270285a-d3cd-4ef4-9806-4c3463b49ca0",
+          "references": [
+            {
+              "position": 1,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png",
+              "sha256": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+              "bytes": 4608274
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "stance",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/stance.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/stance.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+          "bytes": 760287,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            138,
+            70,
+            1082,
+            1255
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a2d9421d-acdf-4c9f-8150-449651420989",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "intro",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/intro.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/intro.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+          "bytes": 664573,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            276,
+            32,
+            910,
+            1262
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-0fed3a1f-e1a5-4517-b71f-76185c5098e8",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "attack",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/attack.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/attack.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+          "bytes": 746676,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            101,
+            28,
+            1238,
+            1180
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-02318ad0-52f5-4d47-be5a-db632807847b",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "heavy",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/heavy.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/heavy.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+          "bytes": 1445975,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            62,
+            16,
+            1363,
+            1012
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-11d51cfc-e3f5-4f62-92be-4f66156b08ef",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "hit",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/hit.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/hit.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+          "bytes": 794831,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            213,
+            46,
+            1024,
+            1267
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a8f65578-8fcd-4047-a28d-5d99875d3b80",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "walk",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/walk.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/walk.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+          "bytes": 715959,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            161,
+            31,
+            1013,
+            1248
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b635e05f-d22d-4b53-9820-258e4bee4cfb",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "jump",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/jump.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/jump.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+          "bytes": 762618,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            74,
+            40,
+            1123,
+            1270
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-97bbdbc6-2e97-40ff-abaa-ba53d47bedb2",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "crouch",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/crouch.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/crouch.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+          "bytes": 868900,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            83,
+            68,
+            1050,
+            1266
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-821c219d-6257-4306-bb7f-020fb96e90a9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "victory",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/victory.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/victory.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/victory-correction-02.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+          "bytes": 657866,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            230,
+            10,
+            883,
+            1262
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a18fcf39-dc2a-40aa-9299-0b03c9ab77d8",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/attempts/victory-01/victory.png",
+              "sha256": "44a543afc53069e44e52e75c289217015219df4c96f06967a7404af72873e9a5",
+              "bytes": 648772
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-resident",
+          "slot": "defeat",
+          "file": "assets/encore/crossovers/metarunner/ribbit/resident/defeat.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/defeat.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/defeat.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-resident.json",
+          "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+          "sha256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+          "bytes": 878926,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            203,
+            78,
+            982,
+            1255
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-155206ad-a612-4079-9d75-ac824c3e7f9c",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+              "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+              "bytes": 684381
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glitch-metarunner-ribbit-fusion",
+      "name": "Meta Runner · Avatar de synchronisation",
+      "fighterId": "ribbit",
+      "series": "metarunner",
+      "style": "fusion",
+      "files": [
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "selection",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/selection.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/selection.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+          "bytes": 941029,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            97,
+            42,
+            1011,
+            1392
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-ee981125-7a6f-4977-9006-2cc0cb2836bf",
+          "references": [
+            {
+              "position": 1,
+              "file": "assets/encore/stance/ribbit.png",
+              "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+              "bytes": 615267
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+              "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+              "bytes": 1085524
+            },
+            {
+              "position": 3,
+              "file": "assets/encore/crossovers/metarunner/pomni/fusion/selection.webp",
+              "sha256": "e510bcfe2bfc4ce25ac67f4e14d40d1b40ef29d553ae3c830a77f1dfcad799e0",
+              "bytes": 519204
+            },
+            {
+              "position": 4,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png",
+              "sha256": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+              "bytes": 4608274
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "stance",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/stance.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/stance.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "d7358a61b8b4b149a77a63be03bb58ec69d439b67c36bd792c00ead8e0e225b1",
+          "bytes": 897808,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            61,
+            62,
+            1137,
+            1261
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-32c24625-c9a3-4863-ba1b-68cad0bab619",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "intro",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/intro.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/intro.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "757ecf2fc43dbf0872b724b57433ec44058a9021f4dbf4a5c351dbe010156338",
+          "bytes": 863983,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            134,
+            40,
+            946,
+            1393
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-963e81d9-1079-4a81-9250-cc541f792fcc",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "attack",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/attack.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/attack.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "2a5584483f87200a118aa30485e668653925c7cb2f5c8ae0b87ab3a0667ee91c",
+          "bytes": 809312,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            58,
+            102,
+            1154,
+            1241
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-977c2a12-1b9e-4317-9e60-f0e8e4ffe3f5",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "heavy",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/heavy.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/heavy.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+          "bytes": 1604119,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            70,
+            25,
+            1470,
+            1012
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-9b914481-d4c1-40bf-8a27-a53da3d1048d",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "hit",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/hit.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/hit.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+          "bytes": 976968,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            112,
+            53,
+            935,
+            1401
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-10ca447c-55af-448c-a840-e47395020b1e",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "walk",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/walk.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/walk.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+          "bytes": 848857,
+          "dimensions": [
+            1150,
+            1368
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            104,
+            47,
+            1052,
+            1287
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b4e686ea-0ccd-41e4-86ef-94b92fcf299a",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "jump",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/jump.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/jump.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "5d852f1212a23b9177cbbc65d27ec3c1355b857f7cef6399c384c09bf272c277",
+          "bytes": 862989,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            34,
+            64,
+            1032,
+            1372
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-d0ad2e18-2a4e-4f8a-b05c-34e1d5f4401c",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "crouch",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/crouch.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/crouch.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "981dc120521bd3df683a17327ddd6d950b70e69026dee1062e6e449e9880187d",
+          "bytes": 1040557,
+          "dimensions": [
+            1196,
+            1315
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            80,
+            75,
+            1092,
+            1267
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-70364e2e-f8a5-47ed-8201-f98e75010d2d",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "victory",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/victory.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/victory-correction-03.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+          "bytes": 877568,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            158,
+            33,
+            966,
+            1422
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-147b5ed3-038a-4f39-9ed1-30a899910051",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/victory.png",
+              "sha256": "f547de46b103be089c28e70425710755eec11013e6839329667b222285920e2d",
+              "bytes": 859047
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        },
+        {
+          "appearanceId": "glitch-metarunner-ribbit-fusion",
+          "slot": "defeat",
+          "file": "assets/encore/crossovers/metarunner/ribbit/fusion/defeat.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/defeat.json",
+          "jobFile": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/defeat.json",
+          "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+          "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+          "sha256": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+          "bytes": 1065325,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            97,
+            42,
+            1090,
+            1278
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-9e667fcd-2d7b-4235-8496-6ac44a6fc9e7",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+              "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+              "bytes": 941029
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "families": 3,
+    "nativePNG": 33,
+    "bytes": 28018143
+  },
+  "historicalWardrobePrefixPreserved": 472,
+  "historicalCrossoversPreserved": 381,
+  "historicalNpcDefinitionsPreserved": 3,
+  "historicalNpcPrefixSHA256": "bbcc561265b490f915d157bdfb95e3d6e5b6cbee4a1555f6418564ca64731cc7",
+  "cafePrerequisiteIds": [
+    "cafekinger",
+    "cafepomni"
+  ],
+  "canonicalCostumeClaim": false,
+  "completeAnimationClaim": false,
+  "createdAt": "2026-11-20T17:29:49.054924+00:00"
+}

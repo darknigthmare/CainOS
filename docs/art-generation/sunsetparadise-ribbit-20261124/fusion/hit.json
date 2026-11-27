@@ -1,0 +1,32 @@
+{
+  "style": "fusion",
+  "state": "hit",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE freshly drawn individual full-body 2D fighting-game state illustration, using the provided stance image as the exact character model. Preserve the same face, limb count, body proportions, palette, costume, backpack or fins, contours and cel-shaded finish. This is an ORIGINAL Encore Ribbit / Sunset Paradise crossover design, not an official canonical appearance. Articulate the joints and expression into the requested new pose; do not repeat, flip, crop, warp or merely reposition the stance drawing. Genuine transparent alpha background, solid opaque character, clean sharp outline. Square composition with entire silhouette inside CENTRAL 76 percent and at least twelve percent empty margin on ALL edges, including hands, feet, caps, fins and tail. Character faces RIGHT in side view with slight three-quarter depth. One character only, no multiple views, sprite sheet, text, letters, watermark, border, floor, shadow, painted background, halo, haze, glow or checkerboard. HIT reaction pose: torso recoils backward toward the LEFT from a front impact, head tilts back a little, mouth opens in surprise, both arms lift reflexively with open hands, leading knee raised slightly and back foot supports body. No injury, stars, flashes or detached particles. Still faces right. Identity lock: Design a true original amphibian-body FUSION of Ribbit with a vivid tropical sea creature inspired by the color mood of Sunset Paradise. It must visibly redesign anatomy, NOT put a costume on the ordinary frog. Ribbit remains recognizable through exactly TWO enormous white bulging eyes with black wedge-cut pupils, pink round cheeks and wide smiling frog mouth. Body now a larger pear-shaped turquoise-teal amphibian torso, short powerful bent frog thighs, long tapered forearms, exactly four rounded webbed fingers each hand and three broad webbed toes each foot, lime-green face and hands/feet, smooth cream belly with an orange sun-shaped patch. One broad curved tapering teal tadpole tail with a coral-orange fin runs behind to the left and remains entirely in frame. Coral-orange fin crest sweeps backward from head, small coral fins along elbows. Ribbit's pink bow tie is reinterpreted as TWO attached pink fan-shaped gill lobes at the throat. Four limbs plus exactly one tail. No clothes, hat, goggles, backpack, armour, trousers, shoes, weapons, horns or wings. Keep a compact strong frog silhouette with readable tail, friendly expressive face and clean rounded amphibian anatomy.",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "sunsetRibbitResult:fusion:hit:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-2ccfbc0e-6788-4b1a-bab4-902c81770ce7.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-2ccfbc0e-6788-4b1a-bab4-902c81770ce7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/hit.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "bytes": 837186,
+  "sha256": "e5af0ea8a9b35f932a98353130b545a7339b95142880fd5e2d435b91b49686bb",
+  "sha": "f93ee87c5f13c87017404bb1901f6f4892a35bb2",
+  "alphaZeroFraction": 0.7000564700136597,
+  "alpha12BBox": [
+    144,
+    131,
+    1017,
+    1154
+  ],
+  "nativeBytesVerified": true,
+  "auditPass": true
+}

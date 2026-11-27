@@ -1,0 +1,61 @@
+{
+  "series": "smg4",
+  "style": "resident",
+  "label": "SMG4 · Résident · Accessoiriste des Showgrounds",
+  "identity": "Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/smg4/ribbit/resident/stance.png"
+  ],
+  "sourceUrls": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2756834379",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2992370946"
+  ],
+  "state": "selection",
+  "id": "glitch-smg4-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original Showgrounds stage prop technician. Retain natural thin long-limbed Ribbit anatomy and lime skin. Royal-blue and cream baseball work cap with a simple clapperboard pictogram, huge eyes exposed; navy sleeveless utility vest with one orange star patch, white short-sleeve shirt and pink bow tie, cream cargo trousers with royal-blue outer stripes, blue knee patches and one large blue side pocket, brown utility belt carrying a short roll of tape and small tool pouch. Green four-finger hands, blue ankle straps leaving green three-toed webbed feet bare. Clean lively sitcom-stage palette, no brand words, no moustache, no rabbit ears or purple skin. Separate clothing pieces, not robot body. Both hands free, no clapperboard held across the face.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:smg4:resident:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-3c930657-eea5-4f62-a774-e92fcfc5eac9.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-3c930657-eea5-4f62-a774-e92fcfc5eac9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    364,
+    37,
+    965,
+    1223
+  ],
+  "alpha12Margins": [
+    364,
+    37,
+    289,
+    31
+  ],
+  "alphaZeroFraction": 0.7804728218981556,
+  "alphaOpaqueFraction": 0.0011910848601858423,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/smg4/ribbit/resident/selection.png",
+  "bytes": 686417,
+  "sha256": "ea0a00587d30ba842f612e8be82a17e2a0ebfb818e6d02a51250079ba202c702",
+  "sha": "4fd67ef7cd6bb6ed16f8b9168a1bff57a5ae2799",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/crossovers/smg4/ribbit/resident/stance.png": "bee9f3f1f300332743e12002f5849de6ffabb1011845464cd2afccf650f42159"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Distinct upright welcoming portrait. Cap, clothing/accessories or elastic anatomical redesign match the validated stance. Complete single figure with visible toes and fingertips.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

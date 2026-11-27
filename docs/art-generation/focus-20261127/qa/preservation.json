@@ -1,0 +1,589 @@
+{
+  "schema": "encore-focus-preservation/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "baselineSnapshot": {
+    "directory": "/workspace/scratch/8db10b0df53d/completion-baseline",
+    "files": 68,
+    "everyFileMatchesBaseCommit": true,
+    "sha256": {
+      "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+      "combat/abstractions-narrative.mjs": "ca3a9f21b14a226f20946dddbf2d1dae9c04bebc3f3beb3f60503d6a63683abe",
+      "combat/app.mjs": "15877928f8efa1bc97f28779a21aaea29a7412e6f5266b588cf7999a2cd7a724",
+      "combat/audio-ambiences.mjs": "cb822a6e2fbe4f6c359c0f986647a924680e8b47ef661accc0ff44908157c30b",
+      "combat/audio.mjs": "35edb1c4486adf3324ee182e60325d5b838e3b673c722eb9fd519cb76c597c47",
+      "combat/base-sprite-content.mjs": "32d7ce1b726febeb916df12dd99dc806848a309067cb82dac2914234953910e6",
+      "combat/base-sprite-continuation-20261125-b.mjs": "62f1da85c2f2b834b8d4e6a6417caaecbf7df80998affe63bf917a7b25dbd7e1",
+      "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+      "combat/base-sprite-continuation-20261127.mjs": "3c168e042de4a84cbc46a3951833f85cf22799120a42233c27188add22f14472",
+      "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+      "combat/catalog-history.mjs": "dc1a40f1d3d3d3bb07485b2530db5d5949184f7fc6d482f46ac90cc14436fc54",
+      "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+      "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+      "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+      "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+      "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+      "combat/costume-fidelity.mjs": "4321b91147455c55e8e07ec86d8b5434144dd69de112b5e98354b27f5676c25a",
+      "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+      "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+      "combat/costume-order.mjs": "c141fa3cc90a18996582c593b1eb6f824412c4a583fdaa95839819b5f74dc1d1",
+      "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+      "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+      "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+      "combat/crossover-designs.mjs": "10823e3ae1857472b3ccecdfff9018026d1e73c356fc13496e9d3096fb194935",
+      "combat/crossover-fusions.mjs": "2af5a8490395331a92b95f567c155b7237e7355b5cac03a0c45a8d2e1b19241b",
+      "combat/crossover-npc-additions.mjs": "f56896170b3da27f4479797f1314e339d2918dbcd76cc3850c465369c356eba5",
+      "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
+      "combat/crossover-sunset-recovery-20261124.mjs": "fb2e7d6a5c2cb7cdf7f05416b5e2a6ed30276c996d2dee82c94151eef33d876c",
+      "combat/crossover-visits.mjs": "fc173219e61473341930bad12e52aefea45b69acfb7f029a03296b4ca8a0efbc",
+      "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+      "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+      "combat/finisher-catalog.mjs": "f741daefc7acb7e63a8aae481f9a1ceb378a2cc31be08f2328db4470352d9b18",
+      "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+      "combat/finishers.mjs": "cf41cd5f1137ea8b1b04629980c6985b5b74c9f43e75ebd064a1f1ef37857d38",
+      "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
+      "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+      "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+      "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+      "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+      "combat/index.html": "da82a06a72d3bbea1b0d743b939c747b1545d1a9d2234b06d2e8e2203ed12bd8",
+      "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+      "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+      "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+      "combat/offline-manifest.mjs": "7275eaf815b54def24b6542c6a2894cf8cb8eb9c2356abeee5800cb8665d4647",
+      "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+      "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+      "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+      "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+      "combat/render-finishers.mjs": "7834ffe5ec5c90d1665ac3e71a036cf24618c755d7bb956eeaeaabc74806b4a6",
+      "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+      "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+      "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+      "combat/render-stage-motion.mjs": "22a0ecdca8bd3f5eaf1e759ac30dabd41fa117c00e0844665c89ea5f7c057d3a",
+      "combat/render-stage-scenery.mjs": "0b4edde9d16659675651b6daa114ec03b8a8cf7434c47eb09dd2645eb53ca544",
+      "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+      "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
+      "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+      "combat/sprite-catalog.mjs": "f1d3aabb923df18d8616363840aca370dd3472a9ad92ac51c84d49430a3251fe",
+      "combat/stage-parallax.mjs": "22dfae75cf842c484d1de9189ce56f23b0018e9d7620450304ae6bc5fb882b0f",
+      "combat/stage-scenes-20261127.mjs": "13058461fdadf39fc238174539c46015e8577dbb7466a5fca746bd5e396f00ac",
+      "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+      "combat/story-presentation.mjs": "900ad5dfefc205f868561a7624352152f2d7f51300b5197c16c677bb7692fd54",
+      "combat/style.css": "adc88414a74d24bee7a1e8b08ca31fb9e8d5270d47199dc64eb4914815a36df7",
+      "combat/sw.js": "b10302d7cacdbb4301cb0dbba59d146484cca5516633a1be2adf14497ded6a49",
+      "combat/tournament-lore.mjs": "ff18e3fdcc6a5fe46f442452d74fd1744ae135c6c76a117696470bd17c6ad21a",
+      "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+    }
+  },
+  "derivedFrom": {
+    "file": "docs/art-generation/completion-20261127/verify-preservation.mjs",
+    "sha256": "1ab2e2a42768bca4798b8f155f37a4aee6156e1272b100c62b3aaccdb71f48e5",
+    "scope": "All historical comparisons and the exact two archive metadata exceptions retained. Original 27-family completion checked separately from the two appended focus families."
+  },
+  "counts": {
+    "fighters": 64,
+    "techniques": 640,
+    "costumes": 575,
+    "crossovers": 465,
+    "staticBaseFamilies": 91,
+    "declaredStaticBaseFamilies": 91,
+    "stages": 27,
+    "dedicatedArrangements": 64,
+    "illustrations": 6315,
+    "illustrationBytes": 3658844724,
+    "newRuntimeImages": 97,
+    "newAppearanceFamilies": 29,
+    "previousCompletionImages": 63,
+    "previousCompletionFamilies": 27,
+    "focusImages": 34,
+    "focusFamilies": 2
+  },
+  "preserved": {
+    "fighterFieldsSHA256": "c87ed066d9484e971b447728d171a76331a1a655e423c279632ba7dadd7b001d",
+    "archiveFieldsSHA256": "bb42365a602e3ae12ec3cc5b6a5aa0b3dad33309390bec99355bdeacebcb9e81",
+    "costumePrefixCount": 546,
+    "costumePrefixSHA256": "5f72c40db50ce198c4fa2b423902ce2875c7a246590db3558bd5d1ff12c86cb4",
+    "crossoverPrefixCount": 438,
+    "crossoverPrefixSHA256": "fb6e4a30d5fad931d8b2c264fa0305acf728fdbcd144163428bc1c790af317de",
+    "originalImages": 6218,
+    "originalImageBytes": 3528752273,
+    "allOriginalImageGitBlobsMatch": true,
+    "stageAndArrangementMechanicalFields": true,
+    "sourceHashes": {
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+      "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+      "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+      "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+      "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+      "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+      "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+      "combat/stage-parallax.mjs": "22dfae75cf842c484d1de9189ce56f23b0018e9d7620450304ae6bc5fb882b0f"
+    },
+    "historicalEvidenceFilesUnchanged": true,
+    "historicalEvidenceHashes": {
+      "verify-preservation.mjs": "1ab2e2a42768bca4798b8f155f37a4aee6156e1272b100c62b3aaccdb71f48e5",
+      "qa/baseline-ci.json": "7a4187deabd598db35dab69502c7a07c3c20851ee9c212cb12b66efed6edea62",
+      "qa/catalog-preservation.json": "e5e24740e357bbf81592e94c5e9a8b47bf7322a6cc37aaa63dd6baef135ef726",
+      "qa/current-preservation.log": "6e70bcbbdf4ccd5420fba442a3fb5b06ee5140102c505712c5769cb74011119d",
+      "qa/current-targeted-node.log": "7cf2ce5381de43f0b343bbde55fba41e2f077ebb6dbe74a2171d7defb96a1b77",
+      "qa/current-targeted-source-snapshot.json": "45da16d8ac4a680cf6bb7393bef90af4cf55c02ee1b63b3e44770be93359a9dc",
+      "qa/preservation-before-integration.log": "fa915c2e74785a5a8ad9ea08659e54c92466e906158e1c4eb593fb17dfb2329a",
+      "qa/runtime-pre-freeze.json": "bbfd3bb550f14116da07f6ab84765a3a189c646a013d1d229fb3f64690639c85",
+      "qa/targeted-before-integration.log": "f89624a3a736b06ad6ffb62a97acf0ab446208e92e1f07802957e29ea8ce4f81"
+    }
+  },
+  "permittedStageMetadataUpdates": [
+    {
+      "id": "bigtop",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "candy",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "manor",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "cellar",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "void",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "lake",
+      "changedMetadata": [
+        "fidelity",
+        "description",
+        "sourceId",
+        "sourceStatus"
+      ]
+    },
+    {
+      "id": "gloink",
+      "changedMetadata": [
+        "fidelity",
+        "description"
+      ]
+    },
+    {
+      "id": "grounds",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "backstage",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    }
+  ],
+  "permittedArchiveMetadataUpdates": [
+    {
+      "id": "evilpomni",
+      "fields": [
+        "provenance",
+        "status",
+        "identityId",
+        "archiveAliases",
+        "referenceUrls",
+        "supersededArtwork"
+      ],
+      "before": {
+        "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+        "status": "Visuel CainOS existant",
+        "identityId": null,
+        "archiveAliases": null,
+        "referenceUrls": null,
+        "supersededArtwork": null
+      },
+      "after": {
+        "provenance": "Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.",
+        "status": "Alias du même PNJ ; ancienne illustration remplacée après validation de la paire",
+        "identityId": "evilpomni-big-top",
+        "archiveAliases": [
+          "evilpomni",
+          "rivalbaseballpomni"
+        ],
+        "referenceUrls": [
+          "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s"
+        ],
+        "supersededArtwork": {
+          "selection": "../assets/encore/selection/evilpomni.png",
+          "replacementAppearanceId": "evilpomni-pendantz",
+          "preserved": true,
+          "reason": "L’ancienne création noire/rouge à boutons en croix ne reproduit pas le costume officiel rouge/jaune à accents bleus."
+        }
+      }
+    },
+    {
+      "id": "rivalbaseballpomni",
+      "fields": [
+        "provenance",
+        "status",
+        "identityId",
+        "archiveAliases",
+        "referenceUrls",
+        "supersededArtwork"
+      ],
+      "before": {
+        "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+        "status": "Visuel CainOS existant",
+        "identityId": null,
+        "archiveAliases": null,
+        "referenceUrls": null,
+        "supersededArtwork": null
+      },
+      "after": {
+        "provenance": "Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.",
+        "status": "Alias du même PNJ ; ancienne illustration remplacée après validation de la paire",
+        "identityId": "evilpomni-big-top",
+        "archiveAliases": [
+          "evilpomni",
+          "rivalbaseballpomni"
+        ],
+        "referenceUrls": [
+          "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s"
+        ],
+        "supersededArtwork": {
+          "selection": "../assets/encore/selection/rivalbaseballpomni.png",
+          "replacementAppearanceId": "evilpomni-pendantz",
+          "preserved": true,
+          "reason": "L’ancienne création à étoiles, lunettes et yeux jaunes ne reproduit pas la Pomni adverse de l’épisode 5."
+        }
+      }
+    }
+  ],
+  "previousCompletionFamilyIds": [
+    "glitch-sunsetparadise-kaufmo-hommage",
+    "glitch-sunsetparadise-kaufmo-resident",
+    "glitch-sunsetparadise-kaufmo-fusion",
+    "glitch-gaslightdistrict-kaufmo-hommage",
+    "glitch-gaslightdistrict-kaufmo-resident",
+    "glitch-gaslightdistrict-kaufmo-fusion",
+    "glitch-knightsofguinevere-kaufmo-hommage",
+    "glitch-knightsofguinevere-kaufmo-resident",
+    "glitch-knightsofguinevere-kaufmo-fusion",
+    "glitch-murderdrones-max-hommage",
+    "glitch-murderdrones-max-resident",
+    "glitch-murderdrones-max-fusion",
+    "glitch-metarunner-max-hommage",
+    "glitch-metarunner-max-resident",
+    "glitch-metarunner-max-fusion",
+    "glitch-ultrajumpmania-kaufmo-hommage",
+    "glitch-ultrajumpmania-kaufmo-resident",
+    "glitch-ultrajumpmania-kaufmo-fusion",
+    "glitch-gameoverse-kaufmo-hommage",
+    "glitch-gameoverse-kaufmo-resident",
+    "glitch-gameoverse-kaufmo-fusion",
+    "glitch-lackadaisy-kaufmo-hommage",
+    "glitch-lackadaisy-kaufmo-resident",
+    "glitch-lackadaisy-kaufmo-fusion",
+    "glitch-smg4-kaufmo-hommage",
+    "glitch-smg4-kaufmo-resident",
+    "glitch-smg4-kaufmo-fusion"
+  ],
+  "focus": {
+    "familyIds": [
+      "godcaine",
+      "evilpomni-pendantz"
+    ],
+    "manifestSHA256": "f7539f1e17f20011c017a893ada82f145d822f7e4fc4b7e219824624a4c6efa9",
+    "nativeBytes": 55345848,
+    "assets": [
+      {
+        "id": "godcaine-stance",
+        "kind": "static-base",
+        "path": "assets/encore/base-costumes/godcaine/stance.png",
+        "bytes": 1404251,
+        "sha256": "c527d916b6958e15313015c81013c641b8be54d08b6f891163a6fdb4c5b68d14"
+      },
+      {
+        "id": "godcaine-selection",
+        "kind": "static-base",
+        "path": "assets/encore/base-costumes/godcaine/selection.png",
+        "bytes": 1622278,
+        "sha256": "786e73c137927c9bc181fdeb6102a8ac9844ef7206de6a7f598b3edf117ad98f"
+      },
+      {
+        "id": "evilpomni-pendantz-stance",
+        "kind": "static-base",
+        "path": "assets/encore/base-costumes/evilpomni-pendantz/stance.png",
+        "bytes": 848629,
+        "sha256": "132a18e59605d1eb53bd541f0cf168eb8fbeb8998a9b0e6f66ca61a9e0edf45b"
+      },
+      {
+        "id": "evilpomni-pendantz-selection",
+        "kind": "static-base",
+        "path": "assets/encore/base-costumes/evilpomni-pendantz/selection.png",
+        "bytes": 1079376,
+        "sha256": "297c4e8a268201df65a544f7f9bbd9e8a7213de00ac383d8c51c641dc1ab321f"
+      },
+      {
+        "id": "abstraction-cellar-eye",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-cellar-eye.png",
+        "bytes": 919089,
+        "sha256": "617728ee2bbddeed03333960b9a6d7a394a462d4dd85a04d80c3ffaea8247e23"
+      },
+      {
+        "id": "abstraction-aquatic-foam",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-aquatic-foam.png",
+        "bytes": 440213,
+        "sha256": "ee58e218d3fe201cc31d4e8f8539be61a13d3b6a87d85c6564653337a2fc6b51"
+      },
+      {
+        "id": "abstraction-jax-shard",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-jax-shard.png",
+        "bytes": 1046257,
+        "sha256": "23b8f45d5f652d5c2c49ebb8b3b1a5e08530470fa7c46c07fac88d53052bfa98"
+      },
+      {
+        "id": "abstraction-queenie-watch",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-queenie-watch.png",
+        "bytes": 471886,
+        "sha256": "a19600a5663d200bb8a7316e64623bff867b9bebf4ddc16fdae660398b93fb23"
+      },
+      {
+        "id": "abstraction-ribbit-skip",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-ribbit-skip.png",
+        "bytes": 1141377,
+        "sha256": "83e328668ac16d3a06e568fc9ee117295accd7bd1c860bae7a7ae65905489f64"
+      },
+      {
+        "id": "abstraction-pomni-door",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-pomni-door.png",
+        "bytes": 1143827,
+        "sha256": "033cdab267ddc0dff8896b6154ac752bf1dff45239e5614a3d92362d29704a38"
+      },
+      {
+        "id": "abstraction-ragatha-needle",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-ragatha-needle.png",
+        "bytes": 737632,
+        "sha256": "fbe78a018bad5288e56a50615326f4002133e5bff45a7d6b4b1000ebdd9ebbff"
+      },
+      {
+        "id": "abstraction-gangle-ribbon",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-gangle-ribbon.png",
+        "bytes": 993432,
+        "sha256": "3e6806cb23b71f004b77e6605d1108caa9a17339211367bc2e54fdebac9d891e"
+      },
+      {
+        "id": "abstraction-kinger-bastion",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-kinger-bastion.png",
+        "bytes": 1216372,
+        "sha256": "356024b00fb956edd454e43a443ee0813c2f9d4ad9b115af552f7d38b6b0e65b"
+      },
+      {
+        "id": "abstraction-zooble-fragment",
+        "kind": "projectile",
+        "path": "assets/encore/projectiles/abstraction-zooble-fragment.png",
+        "bytes": 1078682,
+        "sha256": "f81a92cbeaadcbd74dd515e274f1a6cf8c110c80f51654c597e504b328b773ea"
+      },
+      {
+        "id": "cellarabstraction-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/cellarabstraction/cellarabstraction-prologue-1.png",
+        "bytes": 2038410,
+        "sha256": "68aabd7f1522e30be639151d2a6b900736404326ffa5b0ff28467b78ca80c352"
+      },
+      {
+        "id": "cellarabstraction-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/cellarabstraction/cellarabstraction-epilogue-3.png",
+        "bytes": 1788221,
+        "sha256": "f1956764cac1d4012ce32bec1756a63151c45c247ba329a03b12df8944300727"
+      },
+      {
+        "id": "aquaticabstraction-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/aquaticabstraction/aquaticabstraction-prologue-1.png",
+        "bytes": 2119378,
+        "sha256": "00e78021f0443fafe9884dfd081b8bcb7dd51b954a963439f926ea86ade04dce"
+      },
+      {
+        "id": "aquaticabstraction-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/aquaticabstraction/aquaticabstraction-epilogue-3.png",
+        "bytes": 1910136,
+        "sha256": "510baaf06eb69aab7ec2309208e319ebae99db97b743562a3711197b7c9de8b6"
+      },
+      {
+        "id": "abstractedjax-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/abstractedjax/abstractedjax-prologue-1.png",
+        "bytes": 2147067,
+        "sha256": "fa7d9de6ef6f3a8572fe01c5f60cfe074264e0b9dd5a2376227053d6b5adbe8b"
+      },
+      {
+        "id": "abstractedjax-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/abstractedjax/abstractedjax-epilogue-3.png",
+        "bytes": 1911132,
+        "sha256": "8230a8f89cd12f88bc69209ba843ef3f0b85cd32685fd111d49eb4e455a82b80"
+      },
+      {
+        "id": "abstractedqueenie-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/abstractedqueenie/abstractedqueenie-prologue-1.png",
+        "bytes": 2233739,
+        "sha256": "1f304106329eebcf93e01339635a9196a0355670e77c67b193a6950e8b301dab"
+      },
+      {
+        "id": "abstractedqueenie-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/abstractedqueenie/abstractedqueenie-epilogue-3.png",
+        "bytes": 2035883,
+        "sha256": "1657163aaa2cb588d9cf5fd19b89ac6fa62f97b8d5f63e129aab02862365c3dc"
+      },
+      {
+        "id": "abstractedribbit-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/abstractedribbit/abstractedribbit-prologue-1.png",
+        "bytes": 2182114,
+        "sha256": "0b33845a1328babfacad1fd6a89583108e6e2c13a0bde010e8e1cf386ab86856"
+      },
+      {
+        "id": "abstractedribbit-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/abstractedribbit/abstractedribbit-epilogue-3.png",
+        "bytes": 2015078,
+        "sha256": "7b0dc336a826c75f6088502c742714899c3b86f78bb126d5797df26a28ac5ba2"
+      },
+      {
+        "id": "originalabstractedpomni-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-prologue-1.png",
+        "bytes": 2359385,
+        "sha256": "5131afd79c42091ed67dda6ce2c14bab6da0ae915be9275a19bf872877a46c3d"
+      },
+      {
+        "id": "originalabstractedpomni-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedpomni/originalabstractedpomni-epilogue-3.png",
+        "bytes": 1936516,
+        "sha256": "0e3efd87b1daf994ad1b08e9c962467246bef2b7e9b9616c946437e1b03b6fee"
+      },
+      {
+        "id": "originalabstractedragatha-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-prologue-1.png",
+        "bytes": 2385988,
+        "sha256": "2109271938078d2f3b7a20d419c229df6d60662c5a8935242954f38e15943171"
+      },
+      {
+        "id": "originalabstractedragatha-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedragatha/originalabstractedragatha-epilogue-3.png",
+        "bytes": 2029155,
+        "sha256": "fce2bb3ec6fe058252b018d10053783511576002d9ddae3773aa4d9e515c9036"
+      },
+      {
+        "id": "originalabstractedgangle-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-prologue-1.png",
+        "bytes": 2133257,
+        "sha256": "5ebd0f216ab42842d19158279017cb0731dd82bf900a5b0f8274a1509282bd4c"
+      },
+      {
+        "id": "originalabstractedgangle-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedgangle/originalabstractedgangle-epilogue-3.png",
+        "bytes": 1830791,
+        "sha256": "efdc015094a089a2c81de5719d4b90e3246999d998682bb7fcef34db29127239"
+      },
+      {
+        "id": "originalabstractedkinger-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-prologue-1.png",
+        "bytes": 2168126,
+        "sha256": "60d776ac49f8af033c7ee0129af88630d9abe3086c7e276b305cba2cb7210c69"
+      },
+      {
+        "id": "originalabstractedkinger-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedkinger/originalabstractedkinger-epilogue-3.png",
+        "bytes": 1893038,
+        "sha256": "d7cde0d6470c0a2b7c5c4fc9a7bf68b63d7ccb3e10a5ac3f80148fb122395135"
+      },
+      {
+        "id": "originalabstractedzooble-prologue-1",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-prologue-1.png",
+        "bytes": 2271578,
+        "sha256": "b593552b5a37d415148dcddbad0e66a4a0ee5e6c52468f664970de013a5be586"
+      },
+      {
+        "id": "originalabstractedzooble-epilogue-3",
+        "kind": "campaign-illustration",
+        "path": "assets/encore/campaign/originalabstractedzooble/originalabstractedzooble-epilogue-3.png",
+        "bytes": 1813555,
+        "sha256": "fa813c3dab16b440f0e947609564b52915f2f74f4ae95a981307fe9aed632654"
+      }
+    ],
+    "projectileTechniques": 13,
+    "allNativeBytesMatchManifest": true
+  },
+  "newFamilyIds": [
+    "glitch-sunsetparadise-kaufmo-hommage",
+    "glitch-sunsetparadise-kaufmo-resident",
+    "glitch-sunsetparadise-kaufmo-fusion",
+    "glitch-gaslightdistrict-kaufmo-hommage",
+    "glitch-gaslightdistrict-kaufmo-resident",
+    "glitch-gaslightdistrict-kaufmo-fusion",
+    "glitch-knightsofguinevere-kaufmo-hommage",
+    "glitch-knightsofguinevere-kaufmo-resident",
+    "glitch-knightsofguinevere-kaufmo-fusion",
+    "glitch-murderdrones-max-hommage",
+    "glitch-murderdrones-max-resident",
+    "glitch-murderdrones-max-fusion",
+    "glitch-metarunner-max-hommage",
+    "glitch-metarunner-max-resident",
+    "glitch-metarunner-max-fusion",
+    "glitch-ultrajumpmania-kaufmo-hommage",
+    "glitch-ultrajumpmania-kaufmo-resident",
+    "glitch-ultrajumpmania-kaufmo-fusion",
+    "glitch-gameoverse-kaufmo-hommage",
+    "glitch-gameoverse-kaufmo-resident",
+    "glitch-gameoverse-kaufmo-fusion",
+    "glitch-lackadaisy-kaufmo-hommage",
+    "glitch-lackadaisy-kaufmo-resident",
+    "glitch-lackadaisy-kaufmo-fusion",
+    "glitch-smg4-kaufmo-hommage",
+    "glitch-smg4-kaufmo-resident",
+    "glitch-smg4-kaufmo-fusion",
+    "godcaine",
+    "evilpomni-pendantz"
+  ],
+  "offlineVersion": "0.7.0-bb75d9dcb5c0",
+  "artVersion": "ce434716e078b998",
+  "ok": true
+}

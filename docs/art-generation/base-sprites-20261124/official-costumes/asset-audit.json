@@ -1,0 +1,417 @@
+{
+  "schema": "encore-official-static-base-art/v1",
+  "createdAt": "2026-11-24T15:28:38.058129+00:00",
+  "complete": true,
+  "expected": 8,
+  "present": 8,
+  "families": [
+    {
+      "id": "contortionistzooble",
+      "fighterId": "zooble",
+      "name": "Zooble — Contorsionniste",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "presentation": "static",
+      "assetReview": {
+        "status": "verified-base-files",
+        "sha256": {
+          "stance": "049c3321b85af39607750a96c44e59d51fcf5b36d6026797dea25f273e9e1d7f",
+          "selection": "b10ef7764390e499d60a0c32f1284e08a6cd43147a72d595f4f661bcee82ac84"
+        },
+        "visibleTraits": [
+          "Assemblage entièrement replié, bas et asymétrique ; masse rose triangulaire, grand œil jaune à spirale en haut à droite et petit œil blanc sous paupière violette en bas à droite.",
+          "Étoile orange et anneau violet à gauche, aile bleue à membrane cyan, segments noirs et blancs pliés, griffe bleue sur articulation menthe et violette, anneau cyan et pointes vertes en bas.",
+          "Boule jaune et orange à embouts blancs ; conservation des chevauchements et pièces visibles sans déplier le corps ni attribuer de nouvelles articulations cachées."
+        ],
+        "identityEvidence": "GLITCH — Digital Circus Animiniz Side Show Series, Contortionist Zooble. Aucun costume contortionistzooble dans le catalogue de 484 apparences de départ. La pose officielle repliée reste entière ; ce n’est pas une tenue normale de Zooble recolorée.",
+        "framing": "Silhouette entière dans la garde ; sélection conforme au cadrage documenté. Aucun assemblage caché dévoilé.",
+        "transparency": "PNG RGBA natifs ; pixels transparents et bornes alpha > 12 mesurés. Valeurs alpha faibles natives conservées sans retouche.",
+        "proportions": "Proportions du PNG conservées. Une seule vue de référence ; aucune rotation ou pose d’action déduite.",
+        "issues": [],
+        "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues.",
+        "captureId": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json"
+      }
+    },
+    {
+      "id": "hotdogabel",
+      "fighterId": "abel",
+      "name": "Abel — Chariot à hot-dogs",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "presentation": "static",
+      "assetReview": {
+        "status": "verified-base-files",
+        "sha256": {
+          "stance": "d7c0b13f9bdea51206b600e64c08112191de3fe460f58bc219b455a8d84ab205",
+          "selection": "bd25d79ed10cfe2674e4072c8c8e2005d821f8406c855c66b6f0443e720390b5"
+        },
+        "visibleTraits": [
+          "Abel orange à tête allongée, deux yeux points noirs, sourire noir, visière grise ; main gauche de l’image levée et hot-dog tenu à droite.",
+          "Chariot turquoise à comptoir clair, trois récipients, flacons rouge et jaune, graphisme de hot-dogs et emblème Caine ; grande roue à rayons claire et petite roulette.",
+          "Personnage et chariot forment un ensemble indivisible. Le chariot conserve les jambes masquées ; seule la petite portion orange déjà visible sous le chariot demeure."
+        ],
+        "identityEvidence": "GLITCH — Digital Circus Animiniz Beach Vacation Series, Hotdog Cart Abel. Aucun costume hotdogabel dans le catalogue de départ ; ensemble personnage et chariot complet, différent d’Abel standard.",
+        "framing": "Silhouette entière dans la garde ; sélection conforme au cadrage documenté. Aucun assemblage caché dévoilé.",
+        "transparency": "PNG RGBA natifs ; pixels transparents et bornes alpha > 12 mesurés. Valeurs alpha faibles natives conservées sans retouche.",
+        "proportions": "Proportions du PNG conservées. Une seule vue de référence ; aucune rotation ou pose d’action déduite.",
+        "issues": [],
+        "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues.",
+        "captureId": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json"
+      }
+    },
+    {
+      "id": "cafejax",
+      "fighterId": "jax",
+      "name": "Jax — Café",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "presentation": "static",
+      "assetReview": {
+        "status": "verified-base-files",
+        "sha256": {
+          "stance": "399520cbd1dfb461682f0333b60afbb7a4c94c5eabb95ccfb5b59af00de65ac7",
+          "selection": "5a76b310aec47ac24aeea1692134deabd4f79b22b1c0f519d9e7272335d80791"
+        },
+        "visibleTraits": [
+          "Lapin violet très élancé, oreilles inclinées inégales, yeux et dents jaunes ; coiffe blanche à volants et grand nœud bleu nuit derrière la tête.",
+          "Robe bleu nuit et col blanc, petit cœur violet au corsage, tablier blanc à deux grands nœuds bleu nuit latéraux et ourlet festonné.",
+          "Longs bas blancs avec petits revers blancs, chaussures bleu nuit à plateformes et petits fermoirs jaunes ; plateau argenté et tasse rouge conservés dans la composition statique."
+        ],
+        "identityEvidence": "Animate Café × The Amazing Digital Circus — Jax en tenue de café. Comparé à maidjax publié : le tablier à deux grands nœuds latéraux, le gros nœud de coiffe et les fermoirs jaunes des chaussures sont distincts. Le visuel officiel isolé du panneau marchandises confirme l’assemblage visible.",
+        "framing": "Silhouette entière dans la garde ; sélection conforme au cadrage documenté. Aucun assemblage caché dévoilé.",
+        "transparency": "PNG RGBA natifs ; pixels transparents et bornes alpha > 12 mesurés. Valeurs alpha faibles natives conservées sans retouche.",
+        "proportions": "Proportions du PNG conservées. Une seule vue de référence ; aucune rotation ou pose d’action déduite.",
+        "issues": [],
+        "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues.",
+        "captureId": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json"
+      }
+    },
+    {
+      "id": "cafecaine",
+      "fighterId": "caine",
+      "name": "Caine — Café",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "presentation": "static",
+      "assetReview": {
+        "status": "verified-base-files",
+        "sha256": {
+          "stance": "5cdb20466d705131ba74dda2d3df4bd692fc97887da88fc19eff5c2c4b9fc59c",
+          "selection": "22b15aea61f1cbcf282cdf46fe8fc108154f0095acbddc78c2ecc27af431e8e3"
+        },
+        "visibleTraits": [
+          "Tête dentier à gencives rouges et rangées de dents blanches, iris bleu à gauche de l’image et vert à droite ; grand nœud bleu nuit et partie claire derrière la tête, sans haut-de-forme.",
+          "Habit de service sombre avec plastron clair et petit nœud papillon, gants blancs, jambes courtes repliées et petits souliers sombres selon la pose documentée.",
+          "Petite théière blanche à visage tenue en hauteur et filet de thé courbe conservés avec le personnage. Aucun haut-de-forme ni canne."
+        ],
+        "identityEvidence": "Animate Café × The Amazing Digital Circus — Caine en tenue de café. Distinct de ringmastercaine : grand nœud derrière le dentier et service au thé au lieu du haut-de-forme et de la canne ; silhouette flottante aux jambes repliées. Le panneau marchandises montre le même personnage isolé. La rangée supérieure de dents blanches ne constitue pas une coiffe indépendante inventée.",
+        "framing": "Silhouette entière dans la garde ; sélection conforme au cadrage documenté. Aucun assemblage caché dévoilé.",
+        "transparency": "PNG RGBA natifs ; pixels transparents et bornes alpha > 12 mesurés. Valeurs alpha faibles natives conservées sans retouche.",
+        "proportions": "Proportions du PNG conservées. Une seule vue de référence ; aucune rotation ou pose d’action déduite.",
+        "issues": [],
+        "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues.",
+        "captureId": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json"
+      }
+    }
+  ],
+  "expectedSlots": [
+    "selection",
+    "stance"
+  ],
+  "actionsOutOfScope": true,
+  "totalBytes": 8886223,
+  "assets": [
+    {
+      "id": "contortionistzooble",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-20585e9b-3c07-424b-8bcf-160bd202cfd9.png",
+      "file": "assets/encore/base-costumes/contortionistzooble/stance.png",
+      "sha256": "049c3321b85af39607750a96c44e59d51fcf5b36d6026797dea25f273e9e1d7f",
+      "bytes": 1312024,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          18,
+          63,
+          1215,
+          1214
+        ],
+        "transparentPixels": 790861,
+        "visiblePixels": 764185,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 17470
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    },
+    {
+      "id": "contortionistzooble",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-5e96fd68-2634-4138-9885-b969af2e1554.png",
+      "file": "assets/encore/base-costumes/contortionistzooble/selection.png",
+      "sha256": "b10ef7764390e499d60a0c32f1284e08a6cd43147a72d595f4f661bcee82ac84",
+      "bytes": 1269907,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          19,
+          65,
+          1217,
+          1215
+        ],
+        "transparentPixels": 787327,
+        "visiblePixels": 768359,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 16830
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "pass": 2,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-4e9ce1cd-4165-4880-9b1f-d21f7f616bb0.png",
+      "file": "assets/encore/base-costumes/hotdogabel/stance.png",
+      "sha256": "d7c0b13f9bdea51206b600e64c08112191de3fe460f58bc219b455a8d84ab205",
+      "bytes": 868289,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          273,
+          84,
+          941,
+          1194
+        ],
+        "transparentPixels": 1040503,
+        "visiblePixels": 516375,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 15638
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-55c39e89-0bcd-4875-af93-12e888e4f5a7.png",
+      "file": "assets/encore/base-costumes/hotdogabel/selection.png",
+      "sha256": "bd25d79ed10cfe2674e4072c8c8e2005d821f8406c855c66b6f0443e720390b5",
+      "bytes": 871632,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          270,
+          83,
+          943,
+          1198
+        ],
+        "transparentPixels": 1035144,
+        "visiblePixels": 523257,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 14115
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    },
+    {
+      "id": "cafejax",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-a48591c4-295c-44db-a90e-f6a97dd84f88.png",
+      "file": "assets/encore/base-costumes/cafejax/stance.png",
+      "sha256": "399520cbd1dfb461682f0333b60afbb7a4c94c5eabb95ccfb5b59af00de65ac7",
+      "bytes": 1566181,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          88,
+          23,
+          936,
+          1533
+        ],
+        "transparentPixels": 1098571,
+        "visiblePixels": 437891,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 36402
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    },
+    {
+      "id": "cafejax",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-0fca1181-52f1-48db-9bd5-6dab28a8b6ac.png",
+      "file": "assets/encore/base-costumes/cafejax/selection.png",
+      "sha256": "5a76b310aec47ac24aeea1692134deabd4f79b22b1c0f519d9e7272335d80791",
+      "bytes": 992078,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          66,
+          10,
+          1158,
+          1254
+        ],
+        "transparentPixels": 1020634,
+        "visiblePixels": 526894,
+        "edgePixelsAboveThreshold": 192,
+        "portraitLowerCropIntentional": true,
+        "lowAlphaPixelsRetainedUnmodified": 24988
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Portrait volontairement cadré sous le tablier ; jambes complètes dans stance."
+      }
+    },
+    {
+      "id": "cafecaine",
+      "slot": "stance",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-b31a6357-d93a-4006-b92b-5184364ab2ba.png",
+      "file": "assets/encore/base-costumes/cafecaine/stance.png",
+      "sha256": "5cdb20466d705131ba74dda2d3df4bd692fc97887da88fc19eff5c2c4b9fc59c",
+      "bytes": 1079993,
+      "width": 1172,
+      "height": 1342,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          93,
+          59,
+          1109,
+          1282
+        ],
+        "transparentPixels": 969023,
+        "visiblePixels": 581343,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 22458
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    },
+    {
+      "id": "cafecaine",
+      "slot": "selection",
+      "pass": 1,
+      "nativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-11734ae5-8c64-47d7-a132-ce9fcf3863a7.png",
+      "file": "assets/encore/base-costumes/cafecaine/selection.png",
+      "sha256": "22b15aea61f1cbcf282cdf46fe8fc108154f0095acbddc78c2ecc27af431e8e3",
+      "bytes": 926119,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "nativeBytesVerified": true,
+      "alpha": {
+        "threshold": 12,
+        "visibleBounds": [
+          194,
+          50,
+          1102,
+          1149
+        ],
+        "transparentPixels": 1069790,
+        "visiblePixels": 485123,
+        "edgePixelsAboveThreshold": 0,
+        "portraitLowerCropIntentional": false,
+        "lowAlphaPixelsRetainedUnmodified": 17603
+      },
+      "visualReview": {
+        "status": "accepted-static-base",
+        "sourceViewCompared": true,
+        "silhouetteReviewed": true,
+        "canonicalPixelCertification": false,
+        "notes": "Composition entière conservée dans la vue documentée ; aucune pose d’action ajoutée."
+      }
+    }
+  ],
+  "issues": [],
+  "duplicate_byte_groups": [],
+  "sourceReview": "Primary official merchandise / collaboration images inspected before generation and compared to delivered native output. The illustrated bases are fan-game adaptations, not pixel-certified official models.",
+  "postprocessing": "Byte-for-byte copy only; no image editing outside image_gen."
+}

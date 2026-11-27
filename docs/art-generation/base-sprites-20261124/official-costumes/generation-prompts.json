@@ -1,0 +1,29 @@
+{
+  "mode": "built-in image_gen",
+  "nativeOutputsOnly": true,
+  "actionsOutOfScope": true,
+  "jobs": [
+    {
+      "id": "contortionistzooble",
+      "slot": "stance",
+      "ref": "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/contortionistzooble-official.jpg",
+      "prompt": "Use case: background-extraction. Asset type: a single faithful static base sprite for Digital Circus Encore, no animation. Edit target: the supplied official Contortionist Zooble product photograph. Produce only the complete folded figure on a genuinely transparent background, preserving the exact visible original sculpture, perspective, pose, proportions, shape placement, surfaces and colors. Remove the stage curtain and floor completely. The entire figure must fit with a clear transparent margin on every side. Keep the pink folded triangular mass, the large raised yellow spiral eye, the separate lower white eye with purple eyelid, orange star, violet ring, mint/cyan hollow forms, yellow/orange ball with white sockets, black-and-white bent segment, dark blue claws and every other visible interlocked piece exactly in their source order and positions. Preserve all occlusions and hidden connections; do not unfold, stand upright, add limbs, infer anatomy, invent attachments, or relocate eyes. No drawing board, reference thumbnail, captions, watermark, background pattern or ground shadow. One object only. Match the observed official static design as closely as possible, not a new interpretation."
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "ref": "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png",
+      "prompt": "Use case: background-extraction. Asset type: one faithful static base sprite for Digital Circus Encore, no animation. Edit target: supplied official Hotdog Cart Abel product rendering. Isolate Abel AND his entire turquoise hot-dog cart together as one indivisible object on a genuinely transparent background. Keep exactly the same front three-quarter pose, orange articulated figure, gray visor, two black eyes and curved smile, raised mitten hand at image-left, other hand holding the hot dog at image-right, bun/sausage/yellow mustard, condiment bottles, light cart top with three trays, turquoise cart front, large dark wheel at image-left and small caster at image-right. Preserve the cart's printed visible logo text exactly as shown: \"CAINE'S UNEATABLS\". Preserve the small visible orange part behind/below the cart and all source occlusions. The lower body stays hidden behind the cart; never invent two exposed legs, shoes, rear anatomy, or move the cart away. Remove only the beach, trees, sky, ground and backdrop. The complete figure-cart group including both wheels and raised hand must fit with transparent margins on every side. Keep original proportions, visible details, colors and same perspective. No action, extra props, frame, captions, reference inset, new text or watermark."
+    },
+    {
+      "id": "hotdogabel",
+      "slot": "stance",
+      "pass": 2,
+      "prompt": "Make a precise cleanup and safe-canvas-margin edit of the FIRST supplied transparent Hotdog Cart Abel cutout, using the SECOND supplied official source only as verification. The entire existing character-plus-hotdog-cart group is indivisible and must keep exactly the same visible pose, proportions, colors, gray visor, orange face, arm gestures, hotdog, condiment bottles, trays, turquoise cart graphics and lettering, large spoked wheel, small caster, and small orange sliver below the cart. Do not reveal legs or hidden body parts. Remove the isolated reddish speck floating to the left of the face and every detached background speck. The large front tire currently touches the bottom edge: uniformly reduce the complete group just enough to give a clear transparent margin of at least 6% on all four sides, keeping the WHOLE wheel and all silhouettes intact. No cropping. No stretching. No redesign. Do not alter the cart logo spelling: faithfully preserve the source's existing letterforms and Caine emblem as visible. Keep the rendering consistent with the reference and keep every actual subject pixel opaque where appropriate; wheel openings should be transparent. Transparent RGBA background, no scene, shadow, ground, frame, text overlays, labels, duplicate subject or extra object. This is one STATIC BASE sprite, not animation or action.",
+      "refs": [
+        "/workspace/scratch/e51b531817b1/generated_images/exec-b66b942b-a979-4341-b872-2173e63d0ff6.png",
+        "/tmp/encore-worktree/docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png"
+      ]
+    }
+  ]
+}

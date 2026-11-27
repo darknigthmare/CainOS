@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/contortionistzooble-official.jpg",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_contortionistZooble.png?v=1773977710",
+      "sha256": "4dcf79274ebb7b47ee01f1f4881f95a8618de5dd53a3dcd5d29ba7bbe0764d29",
+      "bytes": 606053,
+      "format": "JPEG",
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "status": 200,
+      "contentType": "image/jpeg",
+      "downloadedAt": "2026-11-24T15:10:27.469417+00:00",
+      "alterations": "none; downloaded native bytes"
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_07.png?v=1765572441&width=1600",
+      "sha256": "c45a4c2dc15dc47a633a60110ec8edc15dd6f7cbf2bb6c03984bbf8f2d53e3e3",
+      "bytes": 2286575,
+      "format": "PNG",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "downloadedAt": "2026-11-24T15:10:26.752181+00:00",
+      "alterations": "none; downloaded native bytes"
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg",
+      "url": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-67383ec049776a79e04eea0c153d49e4-1000x707.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "bytes": 181618,
+      "format": "JPEG",
+      "dimensions": [
+        1000,
+        707
+      ],
+      "status": 200,
+      "contentType": "image/jpeg",
+      "downloadedAt": "2026-11-24T15:10:26.750408+00:00",
+      "alterations": "none; downloaded native bytes"
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-goods.jpg",
+      "url": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-0d14946233ef147194229260b58973f0-1000x708.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sha256": "3a300b59e47531d8bb2d1c118fd80b6c778d3849d9b572a06c2434f6deacec9c",
+      "bytes": 175497,
+      "format": "JPEG",
+      "dimensions": [
+        1000,
+        708
+      ],
+      "status": 200,
+      "contentType": "image/jpeg",
+      "downloadedAt": "2026-11-24T15:10:26.768422+00:00",
+      "alterations": "none; downloaded native bytes"
+    }
+  ]
+}

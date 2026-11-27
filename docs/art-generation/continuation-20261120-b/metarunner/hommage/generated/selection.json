@@ -1,0 +1,86 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "hommage",
+  "slot": "selection",
+  "nativeFacing": "right",
+  "prompt": "Create ONE high-quality native transparent PNG sprite for the existing Encore 2D fighting game. A single COMPLETE full-body character, clean expressive hand-drawn cel shading, bold dark outlines, no background, no floor, no drop shadow, no text, no border, no sprite sheet. Face three-quarter to the RIGHT (nose and gaze toward image right). Keep entire head, both hands and both feet inside the image with generous 8% transparent margins. At least 1024px. Reference 1 is the game Ribbit adaptation for identity and long-limbed proportions; reference 2 is official merchandise for frog face, mint muzzle and pink bow ONLY: do not include the keychain or plush texture and do not infer digit anatomy from it. Reference 3 is the official blue-and-white Tari hoodie for its colour-blocking. Reference 4 shows white cybernetic forearm material and cyan seams only; do not copy human body, gun, clothing or scenery. Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and a hot-pink fabric bow tie. Long slender limbs and torso in the existing game adaptation, not plush proportions. Wear Tari-inspired bright cyan zip-up hoodie: white hood folded DOWN, white side panels running along the sleeves, charcoal hem and cuffs, plain central white zipper, no written logos. Bow tie visible at neck above zipper. Slim navy trousers and white sneakers with cyan soles. LEFT forearm is a smooth white cybernetic prosthesis with navy joints and slim cyan indicators, ending in a rounded THREE-digit robotic frog hand; RIGHT hand biological green with exactly THREE rounded digits. Both eyes natural white/black; no electronic face visor. No hair, hat, tail, wings or weapons. POSE: character-selection full-body portrait, relaxed upright three-quarter-right pose, friendly confident smile, feet separated, both arms slightly away from body so costume and hand materials are readable. Keep it one clear character in one pose.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/tari-hoodie-official.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "ce7febfcfe83309a54d7b14125b861a52bff9776698dcc70d0bc687ca353527b",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-hommage:selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/hommage/selection.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-6bd63205-b7fd-48f5-a85d-a3c59e21ce1e.png",
+  "sourceGenerationId": "exec-6bd63205-b7fd-48f5-a85d-a3c59e21ce1e",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-hommage.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "bytes": 1085524
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/references/tari-hoodie-official.png",
+      "sha256": "335b4537caf58642ddc7501c70be6ea8f7cdc60f0881bc612fbabf2c6cbb8cdd",
+      "bytes": 1050978
+    },
+    {
+      "position": 4,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/references/metarunner-official-still-01.png",
+      "sha256": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+      "bytes": 4608274
+    }
+  ],
+  "dimensions": [
+    1081,
+    1455
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    146,
+    48,
+    946,
+    1424
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1163838,
+  "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+  "bytes": 717557,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T16:43:00.555180+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Silhouette entière orientée à droite ; sweat cyan, capuche blanche abaissée, panneaux de manches blancs, nœud rose et baskets blanches/cyan lisibles. Avant-bras gauche blanc cybernétique et main droite verte, trois doigts visibles chacun ; jambes marines distinctes, pas de fond ou de personnage supplémentaire."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

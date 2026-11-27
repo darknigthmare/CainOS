@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-27",
+  "status": "native-files-inspected",
+  "measurements": "native-receipts.json",
+  "runtimeEvidence": "runtime-review.json",
+  "reviews": {
+    "godcaine": {
+      "status": "verified-base-files",
+      "sha256": {
+        "selection": "786e73c137927c9bc181fdeb6102a8ac9844ef7206de6a7f598b3edf117ad98f",
+        "stance": "c527d916b6958e15313015c81013c641b8be54d08b6f891163a6fdb4c5b68d14"
+      },
+      "visibleTraits": [
+        "Dentier rouge largement ouvert, grand œil rouge décalé vers le haut à gauche et œil bleu plus bas ; les deux yeux gardent leurs stries horizontales.",
+        "Habit rouge, plastron blanc à boutons rouges et nœud noir ; haut-de-forme sombre incliné, canne noire à pommeau doré et petits volumes cubiques.",
+        "Déploiement de bras à gants blancs, trois globes blancs à pupille noire et pointes d’éclairs jaunes ; silhouette entière dans la garde, sans socle commercial."
+      ],
+      "identityEvidence": "Comparaison visuelle avec le produit officiel God Caine Animatez : https://glitchproductions.store/products/god-caine-animatez . Cette source de produit reste distincte des anciennes apparences monstrouscaine et badendcaine.",
+      "framing": "Garde 1254 × 1254 : marges gauche/haut/droite/bas 87/12/54/38 px au seuil alpha > 12. Portrait 1254 × 1254 : 49/32/51/33 px ; le cadrage de sélection se concentre sur le buste et les accessoires.",
+      "transparency": "Deux PNG RGBA natifs distincts. Pixels entièrement transparents : garde 49,64 %, sélection 40,75 %. Les éclats et pixels alpha faibles appartiennent aux sorties natives conservées sans retouche.",
+      "proportions": "Le dessin conserve son rapport largeur/hauteur. La vue trois quarts et la composition du produit sont traduites en illustration 2D ; le miroir gauche est une convention du jeu, sans nouvelle vue officielle revendiquée.",
+      "issues": [],
+      "scope": "Portrait et garde statiques inspectés. Il s’agit d’une adaptation illustrée du produit officiel, sans certification pixel à pixel ni du modèle animé sous toutes les vues. Aucune pose d’action ou animation supplémentaire.",
+      "captureId": "docs/art-generation/focus-20261127/bases/asset-review.json"
+    },
+    "evilpomni-pendantz": {
+      "status": "verified-base-files",
+      "sha256": {
+        "selection": "297c4e8a268201df65a544f7f9bbd9e8a7213de00ac383d8c51c641dc1ab321f",
+        "stance": "132a18e59605d1eb53bd541f0cf168eb8fbeb8998a9b0e6f66ca61a9e0edf45b"
+      },
+      "visibleTraits": [
+        "Bonnet et combinaison à quartiers rouges et jaunes ; bande de bonnet, deux pompons, col, deux boutons et liserés bleus.",
+        "Cheveux courts sombres, visage clair, paupières noires à demi fermées, iris en moulinets rouges/bleus, joues rouges et petit sourire.",
+        "Bras et jambes blancs, gant jaune à gauche de l’image et rouge à droite ; chaussures rouge et jaune dans la garde. Aucun mousqueton, ruban de porte-clés, socle ou texte."
+      ],
+      "identityEvidence": "Comparaison avec Evil Pomni du produit officiel Pomni Animiniz Pendantz et attribution de la même incarnation adverse à l’épisode 5 vers 20:50. Les archives evilpomni et rivalbaseballpomni restent des alias conservés du même PNJ.",
+      "framing": "Garde 1312 × 1199 : marges gauche/haut/droite/bas 182/75/211/44 px au seuil alpha > 12. Portrait 1312 × 1199 : 94/87/97/74 px ; cadrage de buste séparé.",
+      "transparency": "Deux PNG RGBA natifs distincts. Pixels entièrement transparents : garde 66,15 %, sélection 52,33 %. Les octets sont conservés sans détourage, recoloriage ou réencodage.",
+      "proportions": "Silhouette compacte inspirée du Pendantz et adaptée à la garde d’Encore ; le rendu utilise une échelle uniforme. Le miroir suit la convention du jeu.",
+      "issues": [],
+      "scope": "Portrait et garde statiques du PNJ Evil Pomni, représenté avec le kit de Pomni pour le jeu. Ni transformation canonique de Pomni ni personnage supplémentaire. L’illustration 2D n’est pas une certification image par image de l’épisode.",
+      "captureId": "docs/art-generation/focus-20261127/bases/asset-review.json"
+    }
+  }
+}

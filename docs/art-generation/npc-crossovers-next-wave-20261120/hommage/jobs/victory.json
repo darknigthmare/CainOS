@@ -1,0 +1,17 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "victory",
+  "prompt": "Use case: identity-preserve. Asset type: one individually drawn full-body 2D fighting-game sprite. Reference image 1 is the accepted Ribbit Uzi-homage selection sprite: it is the exact character and costume to preserve. Reference image 2 is official Iconic Ribbit for identity; image 3 is official Uzi for outfit motifs only. Change the pose as requested while keeping the same slender biological green frog, huge raised white/black eyes, pale mint muzzle, pink cheeks, pink bow tie, black pom-pom beanie behind the eyes, black hoodie with white screen/crossbones emblem, violet double sleeve bands, dark fluffy hem, long uncovered green legs, violet ankle bands and broad rounded black ankle boots with dark gray soles. Bare green hands. Keep exactly the same 2D dark outlines, flat colors, restrained cel shading, proportions and costume details as image 1. No robot head, hair, visor, mechanical limbs, pants, weapons, tools or extra accessories.\nPOSE — victory facing screen-right: upright lively celebratory stance, one green fist lifted above the head without covering the beanie or eyes, the other hand resting at the hip, both boots planted in a light asymmetric stance, wide happy smile. No trophy or effects. Portrait or square canvas.\nEntire single character only, three-quarter facing screen-right, face directed right. Preserve both eyes and both feet, with all anatomy inside the canvas and ample transparent margin on every side. Genuine transparent background with native alpha. No scenery, floor, shadow, glow, smoke, floating particles, text, labels, grid, border or duplicate figure. Output one finished sprite, not a sheet or a comparison. Redraw the pose naturally; do not merely rotate or mirror the source.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/tracker_recovery",
+  "tool": "image_gen",
+  "transparentBackground": true
+}

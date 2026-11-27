@@ -1,0 +1,11 @@
+{
+  "id": "memoryfracture",
+  "plane": "mid",
+  "slot": "mid",
+  "prompt": "Use case: precise-object-edit. Asset type: MID PARALLAX LAYER for existing 2D fighting stage, wide LANDSCAPE 16:9 same pixel composition as reference. Reference is context ONLY for art style, perspective, lighting and ground-line placement. Deliver ONLY the separately painted objects described here on TRUE TRANSPARENT background: Only two decorative broken golden ringmaster arch sections at the far LEFT and RIGHT edges (each within the outer 12% of width), draped in torn mauve-red velvet. A few small thin glass memory shards float across the TOP 22% of the image. Bottom ends of side arches stop at 78% canvas height. Keep center 76% of the image completely EMPTY TRANSPARENT, and all of the lower floor area transparent. NO mirror, NO rear curtains, NO floor, NO lighting wash, NO particles filling the center. Match the reference's clean rich hand-painted game environment style and palette exactly. No text, no UI, no characters, no tile grid. This PNG will be composited on the reference; do not repaint any part of the reference background. Keep transparent negative space genuinely empty, no atmospheric opaque or translucent gradient.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stages/memoryfracture/far.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-a8165e8a-3cfa-4e79-8c25-d856e3170ad6.png",
+  "destination": "assets/encore/stages/memoryfracture/mid.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native generation after filesystem reset; based on the new matching far plane."
+}

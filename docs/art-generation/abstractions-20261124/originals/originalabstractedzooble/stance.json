@@ -1,0 +1,14 @@
+{
+  "id": "originalabstractedzooble",
+  "state": "stance",
+  "prompt": "Use case: stylized-concept. Asset: ONE individual full-body 2D fighting-game character sprite with genuine transparent background, no scene. Original hypothetical COMPLETE abstraction form for Digital Circus Encore, clearly an original fan-game design. High-quality hand-painted angular obsidian-black polygon creature with several jewel-colored cyan, magenta, violet and yellow eyes embedded in its body. Precise sharp readable outline, subtle colored facet edges BUT ABSOLUTELY NO outer glow, mist, halo, ground, shadow, checkerboard, background color or decorative particles. No text, watermark or frame. Not a sprite sheet, not multiple views. Combat idle stance, facing RIGHT in mostly side view with slight three-quarter depth. Keep entire silhouette comfortably inside CENTRAL 76 percent of canvas, large empty alpha margin on ALL FOUR edges; no extremity touches border. Four readable ground contacts. Opaque body pixels and fully transparent empty space. Subject: fully abstracted ZOOBLE original design. An asymmetric obsidian geometric monster assembled from fused toy shapes: a large triangular slanted black head with a short curved horn on one side and an angular spike on the other, one bent spring-like black arm ending in three prongs, opposite broad rectangular forelimb, two different rear legs one segmented cylinder and one zigzag, all connected as one complete creature. Small original pastel pink, ochre, turquoise and lime geometric fragments inset in predominantly black facets. Eyes of different shapes and colors embedded irregularly. Four ground contacts, asymmetric anatomy remains intentional and coherent. Stance: broad front claw raised a little, body aimed right, no floating separate accessories. Use a square canvas and keep at least 12 percent clear padding; genuine alpha surrounds the character. Keep hand-painted shapes boldly readable.",
+  "reference": null,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "result_store_key": "originalRecoveryResult:originalabstractedzooble:stance:1",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-501debb4-829e-428e-bc88-1d3b9a66dcd9.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-501debb4-829e-428e-bc88-1d3b9a66dcd9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

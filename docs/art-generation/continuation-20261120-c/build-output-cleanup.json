@@ -1,0 +1,9 @@
+{
+  "createdAt": "2026-11-20T19:45:53.648233+00:00",
+  "removedReproducibleIgnoredDirectories": [
+    "dist",
+    "dist-combat"
+  ],
+  "reason": "Release scratch disk capacity after both builds and all native-copy comparisons completed. Native assets, source files, receipts and final integrity proof retained.",
+  "completedBuildEvidence": "docs/art-generation/continuation-20261120-c/build-integrity.json"
+}

@@ -6,6 +6,10 @@ export const STAGE_AMBIENCES = Object.freeze({
   ...Object.fromEntries(CROSSOVER_STAGES.map(stage => [stage.id, stage.ambience])),
   falseexit: 'Poussière sous les tubes fluorescents',
   undermap: 'Pulsations bleues sous la carte',
+  barnoir: 'Lueurs discrètes des enseignes',
+  softballfield: 'Halos lents des projecteurs',
+  memoryfracture: 'Poussière autour du miroir brisé',
+  abstractionthreshold: 'Regards lointains dans la faille',
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
   cellar: 'Présences du cellier', void: 'Reflets irisés', lake: 'Ondes du lac', training: 'Balayage de calibration',
   gloink: 'Formes du nid', kingdom: 'Scintillements de sucre', grounds: 'Nuages des terrains', backstage: 'Veilleuses du couloir',
@@ -84,6 +88,28 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
     // Quiet reflected light, not episode animation or a simulation effect.
     for (let i = 0; i < 3; i++) shapes.push(circle(170 + i * 470, 320 + i % 2 * 74,
       26 + wave(.22, i) * 4, 42 + wave(.19, i) * 5, '#243dcb', .025 + (wave(.31, i * 1.7) + 1) * .012));
+  } else if (id === 'barnoir') {
+    // Gentle light only, behind actors and clipped above the fixed floor.
+    for (const [i, [x, y, color]] of [[76, 328, '#6bddb8'], [1002, 309, '#f49ccf'], [1184, 309, '#eebf65']].entries()) {
+      shapes.push(circle(x, y, 30 + wave(.18, i) * 3, 36 + wave(.21, i) * 4, color, .018 + (wave(.27, i * 1.4) + 1) * .009));
+    }
+  } else if (id === 'softballfield') {
+    // Subtle original light variation, behind actors and above the fixed floor.
+    for (const [i, [x, y]] of [[385, 157], [585, 166], [787, 174], [990, 169]].entries()) {
+      shapes.push(circle(x, y, 33 + wave(.14, i) * 2, 20 + wave(.16, i) * 2,
+        '#e3efff', .018 + (wave(.19, i * 1.4) + 1) * .008));
+    }
+  } else if (id === 'memoryfracture') {
+    for (let i = 0; i < 12; i++) {
+      const x = 80 + i * 101 + wave(.24, i * 1.6) * 5;
+      const y = 110 + (i * 67 + t * 2.1) % 350;
+      shapes.push(circle(x, y, 1.3 + i % 2 * .4, 1.5, ['#cbe8ef', '#e6c7e4', '#d8c396'][i % 3], .13 + .03 * wave(.31, i)));
+    }
+  } else if (id === 'abstractionthreshold') {
+    for (let i = 0; i < 8; i++) {
+      const x = 170 + i * 133, y = 160 + i * 47 % 235;
+      shapes.push(circle(x, y, 3.2, 2.2, ['#7bd9e6', '#da87cc', '#e7d76c'][i % 3], .07 + .025 * (wave(.22, i * 1.7) + 1)));
+    }
   } else if (id === 'gloink') {
     for (let i = 0; i < 7; i++) {
       const x = 80 + i * 185, y = 170 + (i * 87 % 265), angle = t * (i % 2 ? -0.12 : 0.12) + i, radius = 9 + i % 3 * 3;

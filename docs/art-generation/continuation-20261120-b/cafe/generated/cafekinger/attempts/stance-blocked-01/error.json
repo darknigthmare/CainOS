@@ -1,0 +1,18 @@
+{
+  "schema": "encore-generation-blocked-attempt/v1",
+  "appearanceId": "cafekinger",
+  "slot": "stance",
+  "attempt": 1,
+  "method": "image_gen.imagegen",
+  "status": "blocked_no_image",
+  "requestId": "1d1129b0-7309-4640-9b3c-8aeba11f7f60",
+  "errorType": "image_generation_user_error",
+  "errorCode": "moderation_blocked",
+  "moderationStage": "output",
+  "categories": [
+    "other"
+  ],
+  "nativeSourceFile": null,
+  "scope": "No image returned; no asset accepted. A neutral open-palm ready pose is prepared as a materially less combative alternative.",
+  "originalJob": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/stance.json"
+}

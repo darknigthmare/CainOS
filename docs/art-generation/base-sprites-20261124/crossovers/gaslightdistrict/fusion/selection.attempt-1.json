@@ -1,0 +1,56 @@
+{
+  "series": "gaslightdistrict",
+  "style": "fusion",
+  "label": "Gaslight District · Fusion · Têtard des brumes",
+  "identity": "Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gaslight-district"
+  ],
+  "state": "selection",
+  "id": "glitch-gaslightdistrict-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Genuinely reimagined Ribbit as a supernatural brackish-canal amphibian, one solid opaque body. Olive/lime frog face with the same two enormous white wedge-pupil eyes, round pink cheeks and broad smile; longer low-backed teal-green tadpole torso, one broad finned tail curling behind him, slim long four-fingered arms and powerful folded hind legs with three wide webbed toes. Subtle mossy skin patches, cream rib-like belly plates shaped as a small vintage lantern cage with warm yellow opaque inset glass at center, copper rib collars around the torso as organic structural features. Two soft rose gill frills at throat reinterpret Ribbit's pink bow. Small ragged rust fabric waist sash and brass ankle rings. Body design itself changed, not a costume on standard Ribbit. Use second-reference patinated metals, ragged coastal detail and green/ochre palette, but no crocodile snout, claws, pirate hat or weapons. Tail entire inside frame, no mist or separate glow despite the name.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gaslightdistrict:fusion:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ff8f083e-a0f6-4ce0-9abb-ef53b4453e6b.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-ff8f083e-a0f6-4ce0-9abb-ef53b4453e6b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    160,
+    43,
+    1124,
+    1228
+  ],
+  "alpha12Margins": [
+    160,
+    43,
+    130,
+    26
+  ],
+  "alphaZeroFraction": 0.7222584698661254,
+  "alphaOpaqueFraction": 0.0009589727544902564,
+  "borderAlphaMax": 0,
+  "file": "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/selection.png",
+  "bytes": 950065,
+  "sha256": "39a5be66e97bf085fa1f85a8c8674d0d013155e48a1504c194836911cbdd386a",
+  "sha": "d9f63578c96f5c76ab455946287678227f03dafe",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/gaslightdistrict/ribbit/fusion/stance.png": "dd89be460f5ecb16df9f1c425978f4df4d939472676fd08cd9fc3638a8ab6929"
+  },
+  "auditPass": true
+}

@@ -1,0 +1,10 @@
+{
+  "createdAt": "2026-11-25T08:17:46.599987+00:00",
+  "command": "/usr/bin/chromium --version",
+  "exitCode": 127,
+  "stdout": "",
+  "stderr": "/usr/bin/chromium: 9: [: 5237899264: unexpected operator\n/usr/bin/chromium: 153: exec: /usr/lib/chromium/chromium: not found\n",
+  "localStatus": "not_executed",
+  "localAssertions": 0,
+  "reason": "Installed Chromium wrapper has no underlying /usr/lib/chromium/chromium executable; no browser executable found in runtime caches. Native Canvas validation is separate."
+}

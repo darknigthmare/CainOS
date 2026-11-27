@@ -1,0 +1,25 @@
+{
+  "appearanceId": "caferagatha",
+  "fighterId": "ragatha",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: one full-body transparent 2D character-selection sprite for Digital Circus Encore.\n\nCreate exactly ONE Ragatha wearing the official DECOTTO Animate Cafe outfit in image 1: Ragatha is the red-yarn-haired rag doll immediately right of tiny Pomni, second character from the left. Image 1 is the authority for costume design, color, headpiece, apron details, stockings and shoes. Image 2 is ONLY the existing game's face identity, proportions, crisp outlines and restrained two-tone cel-shaded drawing style. Replace image 2's lavender patched dress with the precise cafe outfit.\n\nRagatha keeps her beige cloth face and hands, short red yarn hair, blue stitched X-button eye on her anatomical right, large white eye with black pupil on her anatomical left, and little red triangular nose. White frilled maid headpiece with DARK NAVY bows, not red. Dark NAVY short-puffed-sleeve dress, white frills and a broad white apron with the large PALE BLUE ribbon bows and subtle pale stitched patch motifs seen in the poster. Preserve the poster's white scalloped apron hem. The front bib is white with narrow fine vertical pleats and a small pale blue neck bow. Two white-stockinged legs and two dark NAVY closed chunky platform shoes with the small pale accents seen in the poster. Her hands remain beige doll hands. No lavender patched base dress, no red headpiece bows, no huge blue button on apron, no black shoes with gold buckles.\n\nPose: relaxed welcoming selection pose, three-quarter side view facing SCREEN-RIGHT with face and gaze screen-right; one open hand raised modestly near the chest and the other hand gently beside the waist. Preserve her doll proportions and friendly face. Entire character from all hair and headpiece tips to both shoe soles, centered and occupying only 72-76 percent of canvas height, with generous transparent margins. Both arms, hands, legs and shoes visible and intact. One single character only.\n\nNative transparent RGBA background. Crisp clean flat colors, restrained cel shading, no photographic texture. No serving tray, food, drinks, props, floor, scenery, ground shadow, glow, halo, white sticker outline, text, logos, watermark, collage or duplicate character.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+    "assets/encore/selection/ragatha.webp"
+  ],
+  "referenceRoles": [
+    "Official DECOTTO Cafe outfit and full silhouette; Ragatha second from left",
+    "Existing Ragatha game style, identity and proportions only"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "generate_cafe_ragatha",
+  "definitionSha256": "7e7e4089742816d9ae310404d10ecc7ed0fd526e8be1452e604dfbbf979de654",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+    "assets/encore/selection/ragatha.webp": "ef1ef3d6a4153027f1e28263a59f6c3aa5aaa8cce9a405b64a01013a53b5b5fe"
+  }
+}

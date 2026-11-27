@@ -1,0 +1,11 @@
+{
+  "id": "abstractedjax",
+  "slot": "crouch",
+  "pose": "crouch",
+  "prompt": "Use case: identity-preserve. Asset type: SINGLE 2D UHD fighting-game state sprite, crouch. Reference is this character's approved native stance, preserve character design, topology, colored eye identities, materials and crisp rendering 1:1. Tall backward-slanted single angular spire body with its exact original colorful eye pattern and FOUR thick splayed feet. Black glossy faceted geometry. Distinct CROUCH/low guard pose facing RIGHT, lower center of mass, feet spread and forebody compressed close to ground. For limbless forms a broad low compressed coil; preserve five eyes in dark Queenie. Strict side-on fighting-game view, facing RIGHT with modest three-quarter volume. One independent newly drawn complete pose, NOT a duplicate of stance. Retain same scale and proportion relationships; fit entire subject with 8% transparent padding around extreme limbs/tendrils/spires. High detail black faceted mass legible via controlled violet/cyan rim highlights. TRUE transparent alpha outside silhouette, no black/grey background, NO environmental glow or haze, no floor, no shadow, no text/labels, no grid, no other character, no effect cloud. No extra arms, no humanoid face, no costumes beyond reference. This is an original combat adaptation of the provided project design, not an official new scene.",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-7879e101-9788-4219-ad51-9239b68758c3.png",
+  "destination": "assets/encore/abstractions/abstractedjax/crouch.png",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/abstractedjax/stance.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "Regenerated from retained prompt after local filesystem reset; this is a new image, not a byte-identical recovery."
+}

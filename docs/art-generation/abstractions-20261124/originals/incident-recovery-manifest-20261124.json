@@ -1,0 +1,825 @@
+{
+  "date": "2026-11-24",
+  "incident": "Executor filesystem replaced during disk exhaustion; do not treat previously successful tool reports as proof of current file presence.",
+  "expected_assets": 55,
+  "available_assets": 2,
+  "known_native_paths": 41,
+  "rows": [
+    {
+      "id": "originalabstractedzooble",
+      "state": "selection",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/selection.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-d703f3b1-eabb-431e-8411-17c421a41e71.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "selection",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: a distinct full-body CHARACTER SELECTION presentation. Rise taller than idle and turn upper body slightly toward the viewer while still aiming toward the RIGHT opponent, presenting silhouette proudly; limbs relaxed and evenly grounded. One full body, not head crop or portrait frame. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-d703f3b1-eabb-431e-8411-17c421a41e71.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-d703f3b1-eabb-431e-8411-17c421a41e71.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "stance",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-8244f96a-cf8d-4c4d-83f2-65fe0b6c3964.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "stance",
+        "prompt": "Use case: stylized-concept. Asset: ONE individual full-body 2D fighting-game character sprite with genuine transparent background, no scene. Original hypothetical COMPLETE abstraction form for Digital Circus Encore, clearly an original fan-game design. High-quality hand-painted angular obsidian-black polygon creature with several jewel-colored cyan, magenta, violet and yellow eyes embedded in its body. Precise sharp readable outline, subtle colored facet edges BUT ABSOLUTELY NO outer glow, mist, halo, ground, shadow, checkerboard, background color or decorative particles. No text, watermark or frame. Not a sprite sheet, not multiple views. Combat idle stance, facing RIGHT in mostly side view with slight three-quarter depth. Keep entire silhouette comfortably inside CENTRAL 78 percent of canvas, large empty alpha margin on ALL FOUR edges; no extremity touches border. Four readable ground contacts. Opaque body pixels and fully transparent empty space. Subject: fully abstracted ZOOBLE original design. An asymmetric obsidian geometric monster assembled from fused toy shapes: a large triangular slanted black head with a short curved horn on one side and an angular spike on the other, one bent spring-like black arm ending in three prongs, opposite broad rectangular forelimb, two different rear legs one segmented cylinder and one zigzag, all connected as one complete creature. Small original pastel pink, ochre, turquoise and lime geometric fragments inset in predominantly black facets. Eyes of different shapes and colors embedded irregularly. Four ground contacts, asymmetric anatomy remains intentional and coherent. Stance: broad front claw raised a little, body aimed right, no floating separate accessories.",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-8244f96a-cf8d-4c4d-83f2-65fe0b6c3964.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-8244f96a-cf8d-4c4d-83f2-65fe0b6c3964.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "intro",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/intro.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-fb2eaf21-25bd-4811-b719-53bfd00d2bcb.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "intro",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: a distinct MATCH INTRODUCTION. Head bows low toward the RIGHT and the nearest front limb slowly unfolds forward while the body remains weighted on the rear supports, as if awakening; other limbs pulled closer together. Whole-body readable theatrical entrance pose. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-fb2eaf21-25bd-4811-b719-53bfd00d2bcb.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-fb2eaf21-25bd-4811-b719-53bfd00d2bcb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "attack",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/attack.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-4e49681a-85ad-4899-a225-85a735224946.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "attack",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: LIGHT ATTACK at the ACTIVE striking moment, a quick forward lunge toward RIGHT. The leading claw/hand/ribbon thrusts clearly to the right at chest height, torso extends forward, opposite forelimb anchors the body, rear supports brace. Distinct clean readable attack silhouette, no drawn impact or projectile. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-4e49681a-85ad-4899-a225-85a735224946.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-4e49681a-85ad-4899-a225-85a735224946.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "heavy",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/heavy.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-df238a3e-4810-4287-b122-0a215baa1391.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "heavy",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: HEAVY ATTACK WINDUP before a powerful overhead slam. Rear supports hold weight, upper body rises and arches, both available foreclaws/arms/ribbon ends raised HIGH over the head to strike toward RIGHT. Show substantial anticipation and a silhouette unmistakably different from the light forward thrust. Keep all raised extremities in frame. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-df238a3e-4810-4287-b122-0a215baa1391.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-df238a3e-4810-4287-b122-0a215baa1391.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "hit",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/hit.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-029d9e0b-db97-454a-8023-29a16c475aa4.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "hit",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: HIT REACTION after being struck from the RIGHT. The whole body recoils left and backward, torso arches away, head jerks back, nearest front claw/arm/ribbon curls protectively inward, legs splay to regain balance. Eyes narrow or blink but keep original color and geometry. No injury, blood, impact flash, opponent or particle. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-029d9e0b-db97-454a-8023-29a16c475aa4.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-029d9e0b-db97-454a-8023-29a16c475aa4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "walk",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/walk.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-3568c78a-4fa9-450f-9694-af6a89cfcbb7.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "walk",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: WALK FORWARD toward RIGHT, a clear mid-stride key drawing. Leading forelimb lifted and bent ready to plant ahead, opposite rear support pushes backward, body lowered slightly and stretched horizontally. For two-legged Zooble keep two legs, one leg steps ahead while opposite arm counter-swings. For Kinger retain own multipod silhouette and swing mitten arms. No ground or motion trails. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-3568c78a-4fa9-450f-9694-af6a89cfcbb7.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-3568c78a-4fa9-450f-9694-af6a89cfcbb7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "jump",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/jump.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-386af209-9506-431d-84f8-bd7bcf50d3de.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "jump",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-386af209-9506-431d-84f8-bd7bcf50d3de.png",
+        "provenance": "Imagegen output_hint seen in functions.wait g4:14 before executor incident; native file currently unavailable."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "crouch",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/crouch.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-7c04debc-9c1c-47e6-b37c-3245394ae7f4.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedzooble",
+        "state": "crouch",
+        "prompt": "Use case: precise-object-edit. SINGLE FULL-BODY TRANSPARENT GAME SPRITE. Draw the exact original hypothetical abstraction character in the reference in ONE new state. Retain asymmetric geometry: triangular head with crescent horn and opposing spike, one spring limb with pronged claw, opposite broad block arm, segmented leg and zigzag leg, pastel insets and all eyes. POSE: LOW CROUCH / LOW GUARD. Compress the character close to an implied floor, all leg joints sharply bent, belly and head lowered, forelimbs planted wide, one claw/arm/ribbon pulled defensively before the face. The whole silhouette is distinctly shorter and wider than its idle. For tall Kinger bend the crown-bearing torso down without losing its crown; for Gangle coil ribbons tightly; for Zooble bend both knees. No ground. Preserve identity, anatomy, volume, body-eye pattern, colors, costume remnants, edge quality and hand-painted faceted obsidian 2D art style. View mainly SIDE ON facing RIGHT, slight three-quarter depth. One complete character only, each appendage contained inside central 80 percent with blank transparent padding on all sides. No extra characters, text, labels, frame, watermark, sheet, scene, backdrop, checkerboard, ground, cast shadow, glow, haze, sparks, particles or motion blur. Opaque body with genuine alpha outside. Preserve all black areas. This is a new articulated drawing, not a rotated/recolored copy of idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-7c04debc-9c1c-47e6-b37c-3245394ae7f4.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-7c04debc-9c1c-47e6-b37c-3245394ae7f4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "victory",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/victory.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_status": "Imagegen returned and prior cell reported success; path not retained after truncated output"
+    },
+    {
+      "id": "originalabstractedzooble",
+      "state": "defeat",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedzooble/defeat.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_status": "Imagegen returned and prior cell reported success; path not retained after truncated output"
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "selection",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/selection.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-63b1b74c-a8ee-4301-843c-9f8ce741902d.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "selection",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. POSE: a distinct full-body CHARACTER SELECTION presentation. Rise taller than idle and turn upper body slightly toward the viewer while still aiming toward the RIGHT opponent, presenting silhouette proudly; limbs relaxed and evenly grounded. One full body, not head crop or portrait frame. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-63b1b74c-a8ee-4301-843c-9f8ce741902d.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-63b1b74c-a8ee-4301-843c-9f8ce741902d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "stance",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-ae13e2c6-23ad-41d2-a739-af25c54b8edf.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "stance",
+        "prompt": "Use case: stylized-concept. Asset: ONE individual full-body 2D fighting-game character sprite with genuine transparent background, no scene. Original hypothetical COMPLETE abstraction form for Digital Circus Encore, clearly an original fan-game design. High-quality hand-painted angular obsidian-black polygon creature with several jewel-colored cyan, magenta, violet and yellow eyes embedded in its body. Precise sharp readable outline, subtle colored facet edges BUT ABSOLUTELY NO outer glow, mist, halo, ground, shadow, checkerboard, background color or decorative particles. No text, watermark or frame. Not a sprite sheet, not multiple views. Combat idle stance, facing RIGHT in mostly side view with slight three-quarter depth. Keep entire silhouette comfortably inside CENTRAL 78 percent of canvas, large empty alpha margin on ALL FOUR edges; no extremity touches border. Four readable ground contacts. Opaque body pixels and fully transparent empty space. Subject: fully abstracted KINGER original design. A broad tall obsidian monster whose head and shoulders preserve the stepped crown and battlements of a KING CHESS PIECE, with a short rectangular crown cross integrated into the silhouette. Four faceted limbs planted widely, black heavy body with many cyan violet yellow eyes. Torn deep purple royal robe fragments with pale ivory spotted ermine edge stay attached to the flanks, plus two floating-looking mitten-like black foreclaws connected to thin limb stalks. No normal human king, no skin or human face. Heavy defensive stance, facing right, royal head crown above a compact angular body, keep crown and robe fully visible.",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-ae13e2c6-23ad-41d2-a739-af25c54b8edf.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-ae13e2c6-23ad-41d2-a739-af25c54b8edf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "intro",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/intro.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-782a830a-90a0-4d4b-8b78-a7b202deef86.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "intro",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. POSE: a distinct MATCH INTRODUCTION. Head bows low toward the RIGHT and the nearest front limb slowly unfolds forward while the body remains weighted on the rear supports, as if awakening; other limbs pulled closer together. Whole-body readable theatrical entrance pose. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-782a830a-90a0-4d4b-8b78-a7b202deef86.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-782a830a-90a0-4d4b-8b78-a7b202deef86.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "attack",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/attack.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-1662f37b-64b9-40b6-ae2a-ee9a1b9c3c3b.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "attack",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. POSE: LIGHT ATTACK at the ACTIVE striking moment, a quick forward lunge toward RIGHT. The leading claw/hand/ribbon thrusts clearly to the right at chest height, torso extends forward, opposite forelimb anchors the body, rear supports brace. Distinct clean readable attack silhouette, no drawn impact or projectile. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-1662f37b-64b9-40b6-ae2a-ee9a1b9c3c3b.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-1662f37b-64b9-40b6-ae2a-ee9a1b9c3c3b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "heavy",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/heavy.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-20046963-bdd5-47ce-9edf-b32131eed74b.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "heavy",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. POSE: HEAVY ATTACK WINDUP before a powerful overhead slam. Rear supports hold weight, upper body rises and arches, both available foreclaws/arms/ribbon ends raised HIGH over the head to strike toward RIGHT. Show substantial anticipation and a silhouette unmistakably different from the light forward thrust. Keep all raised extremities in frame. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-20046963-bdd5-47ce-9edf-b32131eed74b.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-20046963-bdd5-47ce-9edf-b32131eed74b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "hit",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/hit.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b7a77053-19b9-4222-b84b-f181329362b9.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "hit",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. POSE: HIT REACTION after being struck from the RIGHT. The whole body recoils left and backward, torso arches away, head jerks back, nearest front claw/arm/ribbon curls protectively inward, legs splay to regain balance. Eyes narrow or blink but keep original color and geometry. No injury, blood, impact flash, opponent or particle. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-b7a77053-19b9-4222-b84b-f181329362b9.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-b7a77053-19b9-4222-b84b-f181329362b9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "walk",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/walk.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b4f3f708-7c4a-41cb-af40-bfab5cdc216e.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "walk",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain the chess-king crenellated crown and cross, massive black faceted torso and legs, small connected mitten forelimbs, purple robe with spotted ermine border and all body eyes. POSE: WALK FORWARD toward RIGHT, a clear mid-stride key drawing. Leading forelimb lifted and bent ready to plant ahead, opposite rear support pushes backward, body lowered slightly and stretched horizontally. For two-legged Zooble keep two legs, one leg steps ahead while opposite arm counter-swings. For Kinger retain own multipod silhouette and swing mitten arms. No ground or motion trails. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-b4f3f708-7c4a-41cb-af40-bfab5cdc216e.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-b4f3f708-7c4a-41cb-af40-bfab5cdc216e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "jump",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/jump.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_status": "Imagegen returned and prior cell reported success; path not retained after truncated output"
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "crouch",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/crouch.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-bc4d24db-77cc-4195-a695-9dd0b894574e.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedkinger",
+        "state": "crouch",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-bc4d24db-77cc-4195-a695-9dd0b894574e.png",
+        "provenance": "Imagegen output_hint seen in functions.wait g4:14 before executor incident; native file currently unavailable."
+      }
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "victory",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/victory.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_status": "Imagegen returned and prior cell reported success; path not retained after truncated output"
+    },
+    {
+      "id": "originalabstractedkinger",
+      "state": "defeat",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedkinger/defeat.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_status": "Imagegen returned and prior cell reported success; path not retained after truncated output"
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "selection",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/selection.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-a4bb2f7c-cb62-47ea-9c01-239aafbeecbc.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "selection",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: a distinct full-body CHARACTER SELECTION presentation. Rise taller than idle and turn upper body slightly toward the viewer while still aiming toward the RIGHT opponent, presenting silhouette proudly; limbs relaxed and evenly grounded. One full body, not head crop or portrait frame. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-a4bb2f7c-cb62-47ea-9c01-239aafbeecbc.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-a4bb2f7c-cb62-47ea-9c01-239aafbeecbc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "stance",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-64985236-a1eb-4a5a-b182-131d62914999.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "stance",
+        "prompt": "Use case: stylized-concept. Asset: ONE individual full-body 2D fighting-game character sprite with genuine transparent background, no scene. Original hypothetical COMPLETE abstraction form for Digital Circus Encore, clearly an original fan-game design. High-quality hand-painted angular obsidian-black polygon creature with several jewel-colored cyan, magenta, violet and yellow eyes embedded in its body. Precise sharp readable outline, subtle colored facet edges BUT ABSOLUTELY NO outer glow, mist, halo, ground, shadow, checkerboard, background color or decorative particles. No text, watermark or frame. Not a sprite sheet, not multiple views. Combat idle stance, facing RIGHT in mostly side view with slight three-quarter depth. Keep entire silhouette comfortably inside CENTRAL 78 percent of canvas, large empty alpha margin on ALL FOUR edges; no extremity touches border. Four readable ground contacts. Opaque body pixels and fully transparent empty space. Subject: fully abstracted GANGLE original design. A creature built from long flat black faceted ribbon loops and angular red-black strips, ribbon limbs coiled into four grounded supports, an upper crescent formed by a broken white comedy mask on one side and a broken white tragedy mask on the other, separated by a black central core of multicolored eyes. Preserve both mask fragments as recognizable hard white porcelain plates; black and dark-red ribbons spiral out of the main body without excessive loose flying strips. No normal humanoid Gangle. Slender vertical arched silhouette with four very readable curled ribbon feet. Stance: ribbon body leaning slightly right, front loops poised to lash.",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-64985236-a1eb-4a5a-b182-131d62914999.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-64985236-a1eb-4a5a-b182-131d62914999.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "intro",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/intro.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-3689b834-d10e-424c-8245-7167d5bb7617.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "intro",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: a distinct MATCH INTRODUCTION. Head bows low toward the RIGHT and the nearest front limb slowly unfolds forward while the body remains weighted on the rear supports, as if awakening; other limbs pulled closer together. Whole-body readable theatrical entrance pose. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-3689b834-d10e-424c-8245-7167d5bb7617.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-3689b834-d10e-424c-8245-7167d5bb7617.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "attack",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/attack.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-dace5146-149e-4b4c-b39e-37db7543fd29.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "attack",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: LIGHT ATTACK at the ACTIVE striking moment, a quick forward lunge toward RIGHT. The leading claw/hand/ribbon thrusts clearly to the right at chest height, torso extends forward, opposite forelimb anchors the body, rear supports brace. Distinct clean readable attack silhouette, no drawn impact or projectile. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-dace5146-149e-4b4c-b39e-37db7543fd29.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-dace5146-149e-4b4c-b39e-37db7543fd29.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "heavy",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/heavy.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-d02c628b-895c-4ac6-a03b-4e4793675c12.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "heavy",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: HEAVY ATTACK WINDUP before a powerful overhead slam. Rear supports hold weight, upper body rises and arches, both available foreclaws/arms/ribbon ends raised HIGH over the head to strike toward RIGHT. Show substantial anticipation and a silhouette unmistakably different from the light forward thrust. Keep all raised extremities in frame. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-d02c628b-895c-4ac6-a03b-4e4793675c12.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-d02c628b-895c-4ac6-a03b-4e4793675c12.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "hit",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/hit.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-12947b6f-1d26-46df-8766-af0834aeb8f8.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "hit",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: HIT REACTION after being struck from the RIGHT. The whole body recoils left and backward, torso arches away, head jerks back, nearest front claw/arm/ribbon curls protectively inward, legs splay to regain balance. Eyes narrow or blink but keep original color and geometry. No injury, blood, impact flash, opponent or particle. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-12947b6f-1d26-46df-8766-af0834aeb8f8.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-12947b6f-1d26-46df-8766-af0834aeb8f8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "walk",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/walk.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-1712745b-62e5-4284-a1d9-31e8986f1a82.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "walk",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: WALK FORWARD toward RIGHT, a clear mid-stride key drawing. Leading forelimb lifted and bent ready to plant ahead, opposite rear support pushes backward, body lowered slightly and stretched horizontally. For two-legged Zooble keep two legs, one leg steps ahead while opposite arm counter-swings. For Kinger retain own multipod silhouette and swing mitten arms. No ground or motion trails. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-1712745b-62e5-4284-a1d9-31e8986f1a82.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-1712745b-62e5-4284-a1d9-31e8986f1a82.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "jump",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/jump.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "PNG returned and copy attempted, receipt write failed: no space left. Native path was not retained."
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "crouch",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/crouch.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_status": "Imagegen returned and prior cell reported success; path not retained after truncated output"
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "victory",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/victory.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Missing native path in imagegen return"
+    },
+    {
+      "id": "originalabstractedgangle",
+      "state": "defeat",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/defeat.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-7092a641-ffcf-44ff-aa19-4c59f11240b8.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedgangle",
+        "state": "defeat",
+        "prompt": "Use case: precise-object-edit. SINGLE FULL-BODY TRANSPARENT GAME SPRITE. Draw the exact original hypothetical abstraction character in the reference in ONE new state. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. POSE: DEFEAT / KNOCKDOWN, non-graphic. Entire intact character collapsed on its left side in a LOW HORIZONTAL silhouette, head still toward RIGHT, front limbs folded limply and rear limbs lying bent, horns or crown tilted sideways. Eyes closed or softly dimmed but retain shapes and colors. Keep all identity details, both bells if present, both mask plates, robe or stitches. No body damage, blood, missing parts, floor, shadow or debris. Whole fallen figure fully in frame. Preserve identity, anatomy, volume, body-eye pattern, colors, costume remnants, edge quality and hand-painted faceted obsidian 2D art style. View mainly SIDE ON facing RIGHT, slight three-quarter depth. One complete character only, each appendage contained inside central 80 percent with blank transparent padding on all sides. No extra characters, text, labels, frame, watermark, sheet, scene, backdrop, checkerboard, ground, cast shadow, glow, haze, sparks, particles or motion blur. Opaque body with genuine alpha outside. Preserve all black areas. This is a new articulated drawing, not a rotated/recolored copy of idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-7092a641-ffcf-44ff-aa19-4c59f11240b8.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-7092a641-ffcf-44ff-aa19-4c59f11240b8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "selection",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/selection.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b4d05bb4-5a5f-4037-82da-83ea7fc66b59.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "selection",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: a distinct full-body CHARACTER SELECTION presentation. Rise taller than idle and turn upper body slightly toward the viewer while still aiming toward the RIGHT opponent, presenting silhouette proudly; limbs relaxed and evenly grounded. One full body, not head crop or portrait frame. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-b4d05bb4-5a5f-4037-82da-83ea7fc66b59.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-b4d05bb4-5a5f-4037-82da-83ea7fc66b59.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "stance",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-f4c8fa03-578f-41a1-9415-6fd54b5b13ff.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "stance",
+        "revision": 2,
+        "prompt": "Use case: background-extraction. Edit the supplied character sprite into a clean transparent cutout for a 2D fighting game. Keep exactly the same original character identity, design, all black facets, number and placement of body eyes, costume fragments, appendages, colors, pose and lighting. REMOVE ALL surrounding colored glow, haze, aura, mist, gradient and shadow so every pixel outside the solid character and its antialiased edge is fully transparent. Preserve opaque black body, do not erase black areas or translucent holes inside body. Fit the entire unchanged character within the central 78 percent of a square canvas with at least 10 percent empty transparent margin on every side; all top points and toes fully visible. Do not paint a background or checkerboard. Do not add floor, scenery, text, border, effect, extra objects or characters. This is one whole-body right-facing combat stance.",
+        "reference": "/workspace/scratch/e51b531817b1/generated_images/exec-98ffe73d-04fa-43a3-900b-d193a5ded5b8.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-f4c8fa03-578f-41a1-9415-6fd54b5b13ff.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-f4c8fa03-578f-41a1-9415-6fd54b5b13ff.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "intro",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/intro.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-de93d9f1-91e6-444c-8978-c33abad7ee9e.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "intro",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: a distinct MATCH INTRODUCTION. Head bows low toward the RIGHT and the nearest front limb slowly unfolds forward while the body remains weighted on the rear supports, as if awakening; other limbs pulled closer together. Whole-body readable theatrical entrance pose. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-de93d9f1-91e6-444c-8978-c33abad7ee9e.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-de93d9f1-91e6-444c-8978-c33abad7ee9e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "attack",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/attack.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-c8b7b4e8-90c5-40b8-884d-9f1f923332c3.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "attack",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: LIGHT ATTACK at the ACTIVE striking moment, a quick forward lunge toward RIGHT. The leading claw/hand/ribbon thrusts clearly to the right at chest height, torso extends forward, opposite forelimb anchors the body, rear supports brace. Distinct clean readable attack silhouette, no drawn impact or projectile. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-c8b7b4e8-90c5-40b8-884d-9f1f923332c3.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-c8b7b4e8-90c5-40b8-884d-9f1f923332c3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "heavy",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/heavy.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-2f77c25c-31be-4858-b171-e17a69e39861.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "heavy",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: HEAVY ATTACK WINDUP before a powerful overhead slam. Rear supports hold weight, upper body rises and arches, both available foreclaws/arms/ribbon ends raised HIGH over the head to strike toward RIGHT. Show substantial anticipation and a silhouette unmistakably different from the light forward thrust. Keep all raised extremities in frame. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-2f77c25c-31be-4858-b171-e17a69e39861.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-2f77c25c-31be-4858-b171-e17a69e39861.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "hit",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/hit.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5ede44b8-1922-4b2a-a1bb-de72234b500e.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "hit",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: HIT REACTION after being struck from the RIGHT. The whole body recoils left and backward, torso arches away, head jerks back, nearest front claw/arm/ribbon curls protectively inward, legs splay to regain balance. Eyes narrow or blink but keep original color and geometry. No injury, blood, impact flash, opponent or particle. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-5ede44b8-1922-4b2a-a1bb-de72234b500e.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-5ede44b8-1922-4b2a-a1bb-de72234b500e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "walk",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/walk.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-a8b0520c-c1e6-4a66-ae57-e65c4b1ef85f.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "walk",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: WALK FORWARD toward RIGHT, a clear mid-stride key drawing. Leading forelimb lifted and bent ready to plant ahead, opposite rear support pushes backward, body lowered slightly and stretched horizontally. For two-legged Zooble keep two legs, one leg steps ahead while opposite arm counter-swings. For Kinger retain own multipod silhouette and swing mitten arms. No ground or motion trails. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-a8b0520c-c1e6-4a66-ae57-e65c4b1ef85f.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-a8b0520c-c1e6-4a66-ae57-e65c4b1ef85f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "jump",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/jump.png",
+      "asset_available": true,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b2625eaf-d5fb-4d3e-9793-59cc082600e2.png",
+      "native_available": true,
+      "receipt": {
+        "id": "originalabstractedragatha",
+        "state": "jump",
+        "prompt": "Use case: precise-object-edit. SINGLE FULL-BODY TRANSPARENT GAME SPRITE. Draw the exact original hypothetical abstraction character in the reference in ONE new state. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: JUMP key drawing at the apex, completely AIRBORNE. Body leaping toward RIGHT with back arched slightly; knees and rear limbs tuck under the torso, front claws/arms/ribbons reach ahead but remain bent. Hair, ribbon, bells and robe follow upward movement naturally. Clearly no planted feet; all limbs, horns and robe fully visible. No shadow, ground or speed trails. Preserve identity, anatomy, volume, body-eye pattern, colors, costume remnants, edge quality and hand-painted faceted obsidian 2D art style. View mainly SIDE ON facing RIGHT, slight three-quarter depth. One complete character only, each appendage contained inside central 80 percent with blank transparent padding on all sides. No extra characters, text, labels, frame, watermark, sheet, scene, backdrop, checkerboard, ground, cast shadow, glow, haze, sparks, particles or motion blur. Opaque body with genuine alpha outside. Preserve all black areas. This is a new articulated drawing, not a rotated/recolored copy of idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-b2625eaf-d5fb-4d3e-9793-59cc082600e2.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-b2625eaf-d5fb-4d3e-9793-59cc082600e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "sha256": "af4572974f81ca28489a53b1711e9069004f6b0d062c450a445afcacc3d3fe63",
+      "bytes": 1130414,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "png_color_type": 6
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "crouch",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/crouch.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Missing native path in imagegen return"
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "victory",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/victory.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Imagegen could not read stance reference after executor reset"
+    },
+    {
+      "id": "originalabstractedragatha",
+      "state": "defeat",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/defeat.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Imagegen could not read stance reference after executor reset"
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "selection",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/selection.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-1a601cfe-424c-4887-8003-edac3f62647c.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "selection",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: a distinct full-body CHARACTER SELECTION presentation. Rise taller than idle and turn upper body slightly toward the viewer while still aiming toward the RIGHT opponent, presenting silhouette proudly; limbs relaxed and evenly grounded. One full body, not head crop or portrait frame. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-1a601cfe-424c-4887-8003-edac3f62647c.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-1a601cfe-424c-4887-8003-edac3f62647c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "stance",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-f536be0d-9058-4688-83cc-f0dc43764a17.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "stance",
+        "revision": 2,
+        "prompt": "Use case: background-extraction. Edit the supplied character sprite into a clean transparent cutout for a 2D fighting game. Keep exactly the same original character identity, design, all black facets, number and placement of body eyes, costume fragments, appendages, colors, pose and lighting. REMOVE ALL surrounding colored glow, haze, aura, mist, gradient and shadow so every pixel outside the solid character and its antialiased edge is fully transparent. Preserve opaque black body, do not erase black areas or translucent holes inside body. Fit the entire unchanged character within the central 78 percent of a square canvas with at least 10 percent empty transparent margin on every side; all top points and toes fully visible. Do not paint a background or checkerboard. Do not add floor, scenery, text, border, effect, extra objects or characters. This is one whole-body right-facing combat stance.",
+        "reference": "/workspace/scratch/e51b531817b1/generated_images/exec-22411c86-2d7f-4b15-9f57-9e8cb7fa9c91.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-f536be0d-9058-4688-83cc-f0dc43764a17.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-f536be0d-9058-4688-83cc-f0dc43764a17.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "intro",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/intro.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-7e4922f3-5822-49db-904f-b92fc213293a.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "intro",
+        "prompt": "Use case: identity-preserve. Create ONE NEW distinct full-body pose drawing of EXACTLY the original fan-game abstraction character in the supplied reference. Reference is the identity/style lock, not a background. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: a distinct MATCH INTRODUCTION. Head bows low toward the RIGHT and the nearest front limb slowly unfolds forward while the body remains weighted on the rear supports, as if awakening; other limbs pulled closer together. Whole-body readable theatrical entrance pose. Preserve anatomy, volume, proportions, colors, costume details and crisp hand-painted 2D facet rendering; still original hypothetical Encore design, no canonical claim. View mostly SIDE ON facing RIGHT, slight three-quarter depth only. All body parts, every horn, bell, ribbon and toe remain comfortably within frame with empty alpha margin on every side. Genuine transparent background with solid opaque body; no outer glow, haze, floor, cast shadow, effects, particles, text, caption, frame, watermark or duplicate characters. Do not merely repeat the idle stance; articulate the limbs for this new state. Output one character in one image, never a sheet or collage.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-7e4922f3-5822-49db-904f-b92fc213293a.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-7e4922f3-5822-49db-904f-b92fc213293a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "attack",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/attack.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-172289cc-558c-4e6c-bea2-7c7de18aa961.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "attack",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: LIGHT ATTACK at the ACTIVE striking moment, a quick forward lunge toward RIGHT. The leading claw/hand/ribbon thrusts clearly to the right at chest height, torso extends forward, opposite forelimb anchors the body, rear supports brace. Distinct clean readable attack silhouette, no drawn impact or projectile. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-172289cc-558c-4e6c-bea2-7c7de18aa961.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-172289cc-558c-4e6c-bea2-7c7de18aa961.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "heavy",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/heavy.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-91f981fb-7ba3-482b-b0b0-50c645cb7357.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "heavy",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Change the supplied original abstraction character to a NEW fully articulated combat pose. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: HEAVY ATTACK WINDUP before a powerful overhead slam. Rear supports hold weight, upper body rises and arches, both available foreclaws/arms/ribbon ends raised HIGH over the head to strike toward RIGHT. Show substantial anticipation and a silhouette unmistakably different from the light forward thrust. Keep all raised extremities in frame. Keep exact anatomy, identity, relative proportions, costume remnants, body volume, colors and sharp 2D hand-painted faceted obsidian rendering of the reference. View SIDE ON facing RIGHT with only a little three-quarter depth. One whole character only, no other subjects. Entire character fits inside central 80 percent of image with ample fully transparent padding, nothing clipped. Opaque solid character, no surrounding lighting haze or aura; no ground, cast shadow, backdrop, checkerboard, sparks, blur, particles, text or border. This is an original hypothetical fan-game form. Preserve existing transparency. Draw the limbs in the new pose, do not repeat or rotate the reference stance.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-91f981fb-7ba3-482b-b0b0-50c645cb7357.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-91f981fb-7ba3-482b-b0b0-50c645cb7357.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "hit",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/hit.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-11febafd-932e-4363-b397-961a9d5b0578.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "hit",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: HIT REACTION after being struck from the RIGHT. The whole body recoils left and backward, torso arches away, head jerks back, nearest front claw/arm/ribbon curls protectively inward, legs splay to regain balance. Eyes narrow or blink but keep original color and geometry. No injury, blood, impact flash, opponent or particle. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-11febafd-932e-4363-b397-961a9d5b0578.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-11febafd-932e-4363-b397-961a9d5b0578.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "walk",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/walk.png",
+      "asset_available": false,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-4af813e4-a029-4bbf-867d-5563bbf4dfba.png",
+      "native_available": false,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "walk",
+        "prompt": "Use case: precise-object-edit. ONE isolated production game sprite on genuine TRANSPARENT BACKGROUND. Draw the supplied original abstraction character in a NEW articulated combat state. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: WALK FORWARD toward RIGHT, a clear mid-stride key drawing. Leading forelimb lifted and bent ready to plant ahead, opposite rear support pushes backward, body lowered slightly and stretched horizontally. For two-legged Zooble keep two legs, one leg steps ahead while opposite arm counter-swings. For Kinger retain own multipod silhouette and swing mitten arms. No ground or motion trails. Preserve exact identity, anatomy, relative proportions, costume remnants, volume, colors and sharp hand-painted 2D black facet rendering. Mostly SIDE VIEW still facing RIGHT, slight three-quarter depth. One whole character, all extremities safely inside CENTRAL 80 percent of canvas with ample empty alpha margin. No outer glow, aura, haze, floor, shadow, background, grid, sparks, blur, particles, text, border or duplicate subjects. Original hypothetical Encore fan-game design. Preserve existing transparency and solid black body. Articulate this new pose, do not just rotate, recolor or repeat idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-4af813e4-a029-4bbf-867d-5563bbf4dfba.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-4af813e4-a029-4bbf-867d-5563bbf4dfba.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "jump",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/jump.png",
+      "asset_available": true,
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-48b748e9-936f-49c7-ba2c-be54762d8469.png",
+      "native_available": true,
+      "receipt": {
+        "id": "originalabstractedpomni",
+        "state": "jump",
+        "prompt": "Use case: precise-object-edit. SINGLE FULL-BODY TRANSPARENT GAME SPRITE. Draw the exact original hypothetical abstraction character in the reference in ONE new state. Retain four obsidian clawed limbs, TWO bell-tipped jester horns, exactly two large red-and-blue pinwheel irises, red-blue scraps and all characteristic body-eye placements. POSE: JUMP key drawing at the apex, completely AIRBORNE. Body leaping toward RIGHT with back arched slightly; knees and rear limbs tuck under the torso, front claws/arms/ribbons reach ahead but remain bent. Hair, ribbon, bells and robe follow upward movement naturally. Clearly no planted feet; all limbs, horns and robe fully visible. No shadow, ground or speed trails. Preserve identity, anatomy, volume, body-eye pattern, colors, costume remnants, edge quality and hand-painted faceted obsidian 2D art style. View mainly SIDE ON facing RIGHT, slight three-quarter depth. One complete character only, each appendage contained inside central 80 percent with blank transparent padding on all sides. No extra characters, text, labels, frame, watermark, sheet, scene, backdrop, checkerboard, ground, cast shadow, glow, haze, sparks, particles or motion blur. Opaque body with genuine alpha outside. Preserve all black areas. This is a new articulated drawing, not a rotated/recolored copy of idle.",
+        "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+        "path": "/workspace/scratch/e51b531817b1/generated_images/exec-48b748e9-936f-49c7-ba2c-be54762d8469.png",
+        "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-48b748e9-936f-49c7-ba2c-be54762d8469.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "sha256": "a0116bd88b1e5ed83202c13f0d006837eafb7a976042c9b68d09da42113ca879",
+      "bytes": 1059118,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "png_color_type": 6
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "crouch",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/crouch.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Imagegen could not read stance reference after executor reset"
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "victory",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/victory.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Imagegen could not read stance reference after executor reset"
+    },
+    {
+      "id": "originalabstractedpomni",
+      "state": "defeat",
+      "asset_path": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedpomni/defeat.png",
+      "asset_available": false,
+      "native_path": null,
+      "native_available": false,
+      "receipt": null,
+      "pre_incident_error": "Imagegen could not read stance reference after executor reset"
+    }
+  ],
+  "restored_rejected_reference": {
+    "path": "/workspace/scratch/e51b531817b1/generated_images/exec-22411c86-2d7f-4b15-9f57-9e8cb7fa9c91.png",
+    "accepted": false,
+    "reason": "Initial Pomni seed was superseded by revision 2 before incident. Restored from exact stored image_url bytes only as recovery reference.",
+    "sha256": "fceec1221dddd9f4d4c49907b742951ea1429348e7169f582b2c92996d2d0b90",
+    "bytes": 2053210,
+    "dimensions": [
+      1536,
+      1024
+    ]
+  }
+}

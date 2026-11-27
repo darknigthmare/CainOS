@@ -1,0 +1,526 @@
+{
+  "schema": "encore-cafe-native-final-review/v1",
+  "createdAt": "2026-11-20T17:19:52.481555+00:00",
+  "status": "accepted_with_stated_scope",
+  "reviewer": "ribbit_references",
+  "method": "Each of the 22 retained native outputs and its light/dark alpha composition were inspected; both complete family alpha contact sheets then inspected for identity, costume and pose continuity. No native image pixels were altered.",
+  "counts": {
+    "completeAppearances": 2,
+    "nativePngs": 22,
+    "newNativePngs": 22,
+    "bytes": 23978492,
+    "cumulativeAppearances": 42,
+    "cumulativeAppearancePngs": 462,
+    "equipableCostumesAtCafeActivation": 474,
+    "imagegenCalls": 24,
+    "nativeOutputs": 23,
+    "rejectedNativeOutputs": 1,
+    "blockedCallsWithoutOutput": 1
+  },
+  "files": [
+    {
+      "appearanceId": "cafekinger",
+      "slot": "selection",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.json",
+      "receiptSHA256": "5d46406c7761e43847eb3a0ade0d3fc2d3e37872ba54186150204c694ce5474e",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/selection.json",
+      "jobSHA256": "ae44c6a94f593b1e1c01e01818d234f0089c35905fd4a8515650d5a1ff8971be",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        245,
+        30,
+        762,
+        1515
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "stance",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.png",
+      "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/stance.json",
+      "receiptSHA256": "314b48bb51b6fe78b9bfa1e0b5db1f417e3c4fa15de3445534d54da899561f85",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/stance-revision-02.json",
+      "jobSHA256": "a7473e847a298ac41d7b08bd398c197a98150e4bc69410e627284659369a8297",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        180,
+        30,
+        896,
+        1517
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "intro",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.png",
+      "sha256": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/intro.json",
+      "receiptSHA256": "1b8130bdd032ef5b1b7d97039d92cd670fde8642379e8b247e7938445c2755da",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/intro.json",
+      "jobSHA256": "74e754d4701c32ce61e29ad426bb59fc400dea9dc739b9f4ecf3a988e47bbb3b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        435,
+        23,
+        1099,
+        1009
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "attack",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.png",
+      "sha256": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attack.json",
+      "receiptSHA256": "5a486c928535c7680b827dd9107ed341abe92efe99233197e1e039532bed0d01",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/attack.json",
+      "jobSHA256": "3fb9b47f5c1e1a367696f2b5d112c9ca4e3feb553c9eabccda56c6d5ea68053b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        361,
+        16,
+        1145,
+        1009
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "heavy",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.png",
+      "sha256": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/heavy.json",
+      "receiptSHA256": "8a61b5e3b8ffc02018fe6414462d6881d37dff8564a3b40a4cfe04125896596c",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/heavy.json",
+      "jobSHA256": "b4cadc1425765a373d24f2452356dae14b7b7eeb929f8771865a2553e6ba07c1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        355,
+        19,
+        1111,
+        1013
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "hit",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.png",
+      "sha256": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/hit.json",
+      "receiptSHA256": "368ff9774868b5373d1cb5931bb99ecc0eb21b32303ff61da319d3bf850d6f53",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/hit.json",
+      "jobSHA256": "ad8badea46269e14440fefaaae5838e5a7796778a70c96abbc4c7e673faecd7d",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        245,
+        24,
+        990,
+        1186
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "walk",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.png",
+      "sha256": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/walk.json",
+      "receiptSHA256": "dde9cccf0990da1c7901c81a04ecfb90c728adc0a7e199e54869585d5878fd27",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/walk.json",
+      "jobSHA256": "7948907bce5c2c22f7b036c51d67e6fe0ef302f56ba8f5a7cd64fc0fd744e224",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        424,
+        12,
+        1103,
+        1018
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "jump",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.png",
+      "sha256": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jump.json",
+      "receiptSHA256": "f85bd95115640868295ad2830d6d62aec085e5cf612f83987c4f123c21deadb2",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/jump.json",
+      "jobSHA256": "f580e4c4e375c8f060b4effd3a01979348da7b879a4550a94de7c4530fd7a9e3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        435,
+        16,
+        1142,
+        1010
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "crouch",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.png",
+      "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/crouch.json",
+      "receiptSHA256": "bca313de1b2a351a73f521c09a1f913885509519b06c1a86da92c711234174e4",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/crouch.json",
+      "jobSHA256": "2f733d90cdeac157961f288dfbee8a7ea49b9b472a7d0e16daf2ccc4fde93a0b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        334,
+        39,
+        1264,
+        1008
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "victory",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.png",
+      "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/victory.json",
+      "receiptSHA256": "bf8d99d1125ae7cac970418a84fda073e15b79beb19c0134d257dc254ab3632c",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/victory.json",
+      "jobSHA256": "140522c6d5aa56bbafbfc60c88e2a171863b0a5bae5bd6b82b2caff13f3db5c6",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        252,
+        24,
+        828,
+        1511
+      ]
+    },
+    {
+      "appearanceId": "cafekinger",
+      "slot": "defeat",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.png",
+      "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/defeat.json",
+      "receiptSHA256": "ac3940d259c67df03081437144f8f2019bd181588c6dfa3cb2d23c08151c1fdb",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/jobs/defeat-correction-02.json",
+      "jobSHA256": "0a070684491e558c269805f4566799c62da0dcacc5e0aced312ed9a569be38c9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        479,
+        147,
+        1088,
+        909
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "selection",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+      "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.json",
+      "receiptSHA256": "5a9a9c732e647e80a988912d744500232c24423c00ece1a90b4584c82541bfde",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/selection.json",
+      "jobSHA256": "ab3b3fefc57881ea4c3a8033d445ec41090e29b9676546b48e04e39c35607cfb",
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alpha12Bounds": [
+        25,
+        30,
+        933,
+        1633
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "stance",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.png",
+      "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/stance.json",
+      "receiptSHA256": "01cf862e38d7f8594ac929f82d0267033dd5cd3b3fde4a333edc01dfa395932f",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/stance.json",
+      "jobSHA256": "c72fb1fa1917d1bee4260e79ed86a59d105893cc30dbd06068e22538e98a34e1",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        301,
+        24,
+        1028,
+        1172
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "intro",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.png",
+      "sha256": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/intro.json",
+      "receiptSHA256": "45949d7226c412a170ed948d92fba79cdb0360d49496393efa7e4faf1cfaf8a0",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/intro.json",
+      "jobSHA256": "83bd9059e3baaa0a04064a7049a750bcee5214f0617f01e5936a2ae4f84c5a2d",
+      "dimensions": [
+        1314,
+        1197
+      ],
+      "alpha12Bounds": [
+        308,
+        18,
+        1048,
+        1184
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "attack",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.png",
+      "sha256": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/attack.json",
+      "receiptSHA256": "0383c7dce5b509b6a6d3e31186b18e71ea73de2b8befef78656b4b9075cba071",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/attack.json",
+      "jobSHA256": "541c20c63088c85210f9fc086503cda21f840abe5d57278adcf3ad8a49ebfa7e",
+      "dimensions": [
+        1426,
+        1103
+      ],
+      "alpha12Bounds": [
+        217,
+        13,
+        1171,
+        1087
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "heavy",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.png",
+      "sha256": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/heavy.json",
+      "receiptSHA256": "bc178da02311498467c1c856422b599b5e8c32d654204a8e86302e7bd660be35",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/heavy.json",
+      "jobSHA256": "21d4c9598c77864a6a4222c23b3c5b25a28fd2f9b7c9298f0d424e14c88e2926",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        198,
+        38,
+        1340,
+        1007
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "hit",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.png",
+      "sha256": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/hit.json",
+      "receiptSHA256": "0ec265c11edafaefd735e5098de4ee22d56c648fa98b31bc74a5fde8c8187ca1",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/hit.json",
+      "jobSHA256": "3dcaaf83a73da028d6d57b086d368f2777bf3f09965cef7ebb1bfdde3e3c4b48",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        97,
+        13,
+        1130,
+        1179
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "walk",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.png",
+      "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/walk.json",
+      "receiptSHA256": "5148749717c9ebd98ef266a2ff39c5749a6658c250f9184c150bc58ca949c06f",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/walk.json",
+      "jobSHA256": "09a54d38e4baf119219f40f99953e0dd7435ec5a54b61e442ac426f1c0fc16e0",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        266,
+        16,
+        998,
+        1186
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "jump",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.png",
+      "sha256": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jump.json",
+      "receiptSHA256": "e01f58953bf590c3c141bae180495f0c60620526f2db6666969059980f45a44d",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/jump.json",
+      "jobSHA256": "3607d487c54baccbda1ac13c18561ccb5a757a6527e7862c9d0d73f17e265ba6",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        218,
+        52,
+        1076,
+        1154
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "crouch",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.png",
+      "sha256": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/crouch.json",
+      "receiptSHA256": "1fb19d7cf67879ebd81dc8423491d237b2a6374a61d7a03cdcafefca223f624d",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/crouch.json",
+      "jobSHA256": "6c1cdabf2368fe193df914589c1792934d0b4860befd053b704dfd3096ed9e8c",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        227,
+        60,
+        1151,
+        1181
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "victory",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.png",
+      "sha256": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/victory.json",
+      "receiptSHA256": "4cab124b32ecf32152ebfd387420bf65e7fa96e1537666708400d9d3e14dcedb",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/victory.json",
+      "jobSHA256": "834b648c26c9528019d7ec1064795875b1a2822af894f87aedd8a01ea103a467",
+      "dimensions": [
+        1091,
+        1442
+      ],
+      "alpha12Bounds": [
+        77,
+        17,
+        904,
+        1427
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "slot": "defeat",
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.png",
+      "sha256": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+      "receiptFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/defeat.json",
+      "receiptSHA256": "7c98a22bc317819b814f5ecf4fbaac3e52ad2b4b16b07e2bfb242481e3790c57",
+      "jobFile": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/jobs/defeat.json",
+      "jobSHA256": "ea9905168ae1bf2faacdad2fe2e6f4cdda71022e3bb3b8d6523bafe5e99e67ab",
+      "dimensions": [
+        1362,
+        1155
+      ],
+      "alpha12Bounds": [
+        115,
+        29,
+        1248,
+        1151
+      ]
+    }
+  ],
+  "overviews": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/review/cafekinger/family-alpha-overview.jpg",
+      "sha256": "d121f0ddcc986feb11c8033b5b0c8af9e17c08489f71819f4a4905093c975fe1"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/review/cafepomni/family-alpha-overview.jpg",
+      "sha256": "136df723748f02698ac63c460f4afc6b2daed64ea24c0fcba44cd42b331c43fa"
+    }
+  ],
+  "observations": {
+    "cafekinger": [
+      "Beige chess head with cross, two blue eyes, silver monocle and chain; purple tailcoat, argyle waistcoat, flower and complete conical base remain consistent.",
+      "Exactly two floating gloves throughout; no human arms, legs, feet or shoes. Intros/victory may overlap a glove over the chest without an arm connection.",
+      "Poses change the whole chess-piece inclination and glove gesture; they remain original static game adaptations."
+    ],
+    "cafepomni": [
+      "Complete two-point red/navy hat, two yellow bells, white frilled headband, brown bob and pinwheel eyes retained.",
+      "Navy dress, white apron and gloves, blue anatomical-right and red anatomical-left apron bows retained; white legs and red/right, navy/left shoes stay consistent.",
+      "All retained poses have two arms and two legs with entire silhouettes; seated defeat and crouch keep the dress draped."
+    ],
+    "alpha": [
+      "All retained images pass strict alpha>12 internal bounds and native RGBA checks. Some native margins remain narrow; no edge contact remains.",
+      "RGB glow seen in some direct tool renderings is hidden by native transparency; the inspected light/dark composites show no diffuse halo.",
+      "One Kinger defeat failed the lower frame boundary check and was archived byte-for-byte before a native generative framing correction."
+    ]
+  },
+  "evidence": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/candidate-review.md",
+      "sha256": "074389df8618fef054c7c047641a569f9667194f044c0be874e504d1031a7c1d"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/definition-freeze.json",
+      "sha256": "597655c247a2dfbc2b468b3bc1def3272ee6a6b8774320a409c4b63d96fd5753"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/sources.json",
+      "sha256": "edaa88f37187820e9ec710358cc6cf22dbec30e21c6ad5bf8a617036e84b4513"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/anatomy-support.json",
+      "sha256": "f143ff2e8faaa8e0082c46710d56678abc33c2a5a446db9ad23a88fc9e9d3c39"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/review/root-family-cross-review.json",
+      "sha256": "f6b2dc7bd16d364460c7dc829c06f01ff2f30ad870a4a8530a1a6bcfefdeed64"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/integration-proof.json",
+      "sha256": "542ad6d69519d737a0f86150025fc61edfae274a6a5f21acc64f03aedc426e10"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/targeted-test-evidence.json",
+      "sha256": "ea5769c7fb6db9e30af00450a12bd3e079f61f4b4da1377d8a29c7edcdd852eb"
+    }
+  ],
+  "limits": [
+    "Commercial collaboration illustration and original fan-game poses, without episode attribution or 1:1 certification.",
+    "Kinger hands are not clearly shown in the Cafe poster; floating gloves rely on the inspected existing anatomy and separate official Bug Tamer reference.",
+    "Unshown backs and partly hidden Pomni bib are conservative original adaptations, as stated in the frozen definitions.",
+    "Contact sheets fit alpha bounds separately; they do not prove runtime scale, mirrored play, browser behavior, or complete animation.",
+    "Maid Ribbit Pendantz remains separate and unqualified."
+  ]
+}

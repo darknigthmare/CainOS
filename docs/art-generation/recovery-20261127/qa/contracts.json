@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-27",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "app.js"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-00.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "episodes.js"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-01.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/app.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-02.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/input.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-03.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/render.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-04.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/offline.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-05.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/base-sprite-content.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-06.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/base-sprite-continuation-20261127.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-07.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/stage-scenes-20261127.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-08.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "combat/stage-parallax.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-09.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/combat-merge-browser.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-10.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/combat-stage-art-browser.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-11.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-12.log",
+      "logSHA256": "cac027577ba09f86c9061e7fd4cdd4d567ea7e6658974f0a379802cc9ab72297"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-game-contract.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-13.log",
+      "logSHA256": "5b9f24cb085673288e8da676cfa3aeea73f98f31241831a9b6a57c628a4d09c2"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-gamedev-guides.mjs"
+      ],
+      "exitCode": 0,
+      "log": "docs/art-generation/recovery-20261127/qa/contract-14.log",
+      "logSHA256": "064c5a60adb2bc7132df8a8c186b5b77fefa19519cdfa23c7aef63b946e69ff5"
+    }
+  ],
+  "passed": 15,
+  "total": 15,
+  "ok": true
+}

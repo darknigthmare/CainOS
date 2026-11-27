@@ -1,0 +1,18 @@
+{
+  "slot": "hit",
+  "method": "image_gen.imagegen",
+  "generationId": "exec-c8739636-3807-4c63-9b0e-096ed1585d6c",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-c8739636-3807-4c63-9b0e-096ed1585d6c.png",
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/hit-correction-02/hit.png",
+  "sha256": "5cf4237971e44751e509c8ec2556e26c18f48b9b1341c935194a296428bff52e",
+  "bytes": 736597,
+  "status": "rejected_hand_digit_count",
+  "reviewedAt": "2026-11-20T15:21:45.142618+00:00",
+  "observations": [
+    "Full figure, costume, body, pose and right-facing orientation retained.",
+    "Raised hand on screen-right now has three distinct finger lobes.",
+    "Hand near the chest on screen-left has only two distinct finger lobes; the requested original-design convention is three per visible hand."
+  ],
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": false
+}

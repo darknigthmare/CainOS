@@ -197,11 +197,25 @@ export function illustratedAction(pose, attack) {
   return null;
 }
 
+/** Height requested for a resolved authored drawing, before its width ceiling. */
+export function illustratedHeightRatio(fighter, action) {
+  const base = action === 'crouch' || action === 'defeat' ? 0.74 : 1;
+  const factor = action && fighter.visual?.poseHeightFactors?.[action];
+  return base * (Number.isFinite(factor) && factor > 0 ? factor : 1);
+}
+
 /** Uniform scale plus rigid transform; lowest source support stays on actor.y. */
 export function frameGeometry(fighter, frame, idle, pose, facing = 1, heightRatio = 1) {
   const height = fighter.visual?.height || fighter.combat?.simulationBody?.height || 230;
-  const scale = height * heightRatio / Math.max(1, idle.bounds.height);
-  const anchor = frame.registration?.anchor || { x: frame.bounds.x + frame.bounds.width / 2, y: frame.bounds.y + frame.bounds.height };
+  const heightScale = height * heightRatio / Math.max(1, idle.bounds.height);
+  const maxWidth = fighter.visual?.maxIllustratedWidth;
+  // New morphologies can lower or bend without growing their whole body.
+  // A width limit reduces both axes by the same factor about the same anchor.
+  const scale = Number.isFinite(maxWidth) && maxWidth > 0
+    ? Math.min(heightScale, maxWidth / Math.max(1, frame.bounds.width)) : heightScale;
+  // Preserve measured atlas roots; asymmetric intact art can anchor its body.
+  const anchorX = Number.isFinite(fighter.visual?.anchorX) ? limit(fighter.visual.anchorX, 0, 1) : 0.5;
+  const anchor = frame.registration?.anchor || { x: frame.bounds.x + frame.bounds.width * anchorX, y: frame.bounds.y + frame.bounds.height };
   const flip = (facing < 0 ? -1 : 1) * (frame.nativeFacing ?? fighter.sprite?.nativeFacing ?? 1);
   // Large static bosses get a smaller rigid tilt, with no shape compression.
   const angle = (pose?.lean || 0) * (facing < 0 ? -1 : 1) * (fighter.visual?.width > 180 ? 0.4 : 1);

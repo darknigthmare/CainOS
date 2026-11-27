@@ -1,0 +1,18 @@
+{
+  "schema": "encore-cafe-source-scope-fix-test-v1",
+  "command": [
+    "node",
+    "--test",
+    "--test-name-pattern=review records keep source scope",
+    "tests/combat-fidelity.test.mjs"
+  ],
+  "startedAt": "2026-11-20T17:35:15.715060+00:00",
+  "endedAt": "2026-11-20T17:35:16.130878+00:00",
+  "exitCode": 0,
+  "source": "tests/combat-fidelity.test.mjs",
+  "sourceSHA256": "f4cd72a0551447143e0de003b8d679d8097c1bf23f9314fcd5d0393929d33950",
+  "sourceUnchangedDuringExecution": true,
+  "log": "fidelity-scope-fix-test.log",
+  "logSHA256": "5669659794af8f8d5af1f533daad6738bdd676623346bad7d058640236f46232",
+  "scope": "Single named source-scope contract after its three-ID correction; not a replacement for the root complete QA rerun."
+}

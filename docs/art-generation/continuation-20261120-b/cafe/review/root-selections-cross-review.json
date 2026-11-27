@@ -1,0 +1,23 @@
+{
+  "schema": "encore-cafe-seed-cross-review/v1",
+  "reviewer": "root",
+  "reviewedOn": "2026-11-20",
+  "status": "accepted_with_stated_scope",
+  "files": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/selection.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+      "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9"
+    }
+  ],
+  "method": "Root inspected the two alpha-composited diagnostics on light and dark backgrounds.",
+  "observations": [
+    "Café Kinger entier, base conique sans jambes, monocle/chaîne et deux gants flottants séparés.",
+    "Pomni entière, chapeau rouge/bleu à grelots, deux nœuds distincts, jambes et chaussures rouge/bleu visibles.",
+    "Composition et contours propres sur fonds clair et sombre."
+  ],
+  "scope": "Silhouette, alpha et cohérence du dessin. Les détails des sources restent la revue de ribbit_references. Ni certification canonique, ni animation complète, ni validation navigateur."
+}

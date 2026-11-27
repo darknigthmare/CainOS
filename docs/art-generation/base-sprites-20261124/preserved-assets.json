@@ -1,0 +1,13 @@
+{
+  "schema": "encore-published-art-preservation/v1",
+  "recordedAt": "2026-11-24T15:31:45.844422+00:00",
+  "baselineCommit": "11d2ae9d0e2d5a26568f6294b6832be78983d1a6",
+  "scope": "All existing published assets/ paths, not just Encore. New base paths are additions outside this historical set.",
+  "files": 6086,
+  "bytes": 3378162183,
+  "missing": [],
+  "different": [],
+  "pass": true,
+  "seconds": 6.373,
+  "pathAndOidListSha256": "d44d6748011f51cd3e5a6b75b80e398f885c3fc1e0d520362301d960b65f115c"
+}

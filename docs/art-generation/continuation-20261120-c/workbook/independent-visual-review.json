@@ -1,0 +1,395 @@
+{
+  "schema": "encore-tracker-continuation-c-independent-visual-review/v1",
+  "status": "accepted",
+  "reviewer": "/root/generate_cafe_ragatha",
+  "createdAt": "2026-11-20T19:51:08.166Z",
+  "workbook": "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+  "workbookSHA256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+  "plan": "update-plan.json",
+  "planSha256": "b52d17ef37419232a175b51184d3d3bc5a2a2c2fdb077d76d2e069fa6b8f21ab",
+  "method": "Every one of the 20 specified PNGs was opened and visually inspected after export completion. Supplementary read-only comparisons matched the saved workbook cell snapshots to the frozen plan and the actual native asset files.",
+  "scope": {
+    "views": 20,
+    "productionRanges": "Production!A3314:J3349",
+    "qaRanges": "QA!A2460:I2498",
+    "newProductionRows": 36,
+    "newQaRows": 39,
+    "newDrawingAssets": 33,
+    "appearanceOrder": [
+      "caferagatha",
+      "cafegangle",
+      "cafezooble"
+    ],
+    "slotsPerAppearance": 11
+  },
+  "independentChecks": {
+    "savedProductionRows": 3344,
+    "savedQaRows": 2493,
+    "productionIdsMatched": 36,
+    "qaIdsMatched": 39,
+    "assetIdsPathsHashesReceiptsAndDimensionsMatched": 33,
+    "activePngsByteIdenticalToArchives": 33,
+    "totalNativeAssetBytes": 42202157,
+    "blankYellowNoteCells": 75,
+    "qaLogObservedTests": 432,
+    "qaLogObservedPass": 432,
+    "qaLogObservedFail": 0,
+    "qaCompletedAt": "2026-11-20T19:41:26.550999+00:00",
+    "browserStatus": "not_executed",
+    "browserExecutedApplicationChecks": 0
+  },
+  "evidenceHashes": {
+    "native-reimport/manifest.json": "ca11d9a88a2ea1accbf62890fcb439f53cbe24378d0b090e336eda68cd18ae2d",
+    "native-reimport/sheet-7.json": "eead88010f581e3f0efbf903dad1af6777a723cbbec390e318e63ff86225d80f",
+    "native-reimport/sheet-10.json": "f9e65a5e533f71efbcf4fbed6d3ea9507589009dfae59c8dc204cae4d301f3cf",
+    "docs/art-generation/continuation-20261120-c/qa.log": "570018fc3f5573a7e0e863d959aec1d3634e4fea2bf0d965f20d53a3ff11dcb4",
+    "docs/art-generation/continuation-20261120-c/qa-result.json": "967278604bb56b2005f4138f954f888afb862991c8b93232d24769a7d6042ec6",
+    "docs/art-generation/continuation-20261120-c/browser-review/browser-review.json": "8dc05e1b5b2cabba995523f7fe1823ee9adb3e632c8d17dfc050ca6808ae8975"
+  },
+  "views": [
+    {
+      "file": "production-1.png",
+      "sha256": "17d1e8edd9643bc62700db5e84913f376a341e59fe08be617720aa5db9fac46b",
+      "sheet": "Production",
+      "range": "A3314:J3316",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-caferagatha",
+        "WAVE32-cafegangle",
+        "WAVE32-cafezooble"
+      ],
+      "observations": [
+        "Rows 3314–3316 contain exactly the three Café families, each marked Implémenté with selection, stance and action-directory paths.",
+        "The 11-drawing scope, official-collaboration adaptations, differences from existing variants, 20 November 2026 reference date and open animation/canonical work are readable without clipping. The yellow J notes cells are blank."
+      ]
+    },
+    {
+      "file": "production-2.png",
+      "sha256": "5cdb17bc4cf7879eec1fb60c771ec38cbec2e1ec5f2ff51d0edc8a40f70d1b7f",
+      "sheet": "Production",
+      "range": "A3317:J3320",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-caferagatha-selection",
+        "WAVE32-caferagatha-stance",
+        "WAVE32-caferagatha-intro",
+        "WAVE32-caferagatha-attack"
+      ],
+      "observations": [
+        "Rows 3317–3320 contain Ragatha selection, stance, intro and attack with their individual IDs, active PNG paths, complete SHA-256 values and receipt paths.",
+        "All four native sizes read 1024 × 1536 RGBA; wrapped receipt/hash lines remain inside their cells. Green implementation statuses and blank yellow notes are intact."
+      ]
+    },
+    {
+      "file": "production-3.png",
+      "sha256": "1cf9c60a2dd2cb845f585439c1faa25576d440db655006f777cbe9e3a143bf8f",
+      "sheet": "Production",
+      "range": "A3321:J3324",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-caferagatha-heavy",
+        "WAVE32-caferagatha-hit",
+        "WAVE32-caferagatha-walk",
+        "WAVE32-caferagatha-jump"
+      ],
+      "observations": [
+        "Rows 3321–3324 contain Ragatha heavy, hit, walk and jump in the expected order with distinct hashes and matching PNG/receipt names.",
+        "Byte counts, 1024 × 1536 dimensions and the static-pose/animation limitation remain readable. No clipping or overlap is visible; yellow notes remain blank."
+      ]
+    },
+    {
+      "file": "production-4.png",
+      "sha256": "2488d5e2582e7b75750592f30ee85164a9f2ec7f02b0fc78e9f0c96e4c5f45de",
+      "sheet": "Production",
+      "range": "A3325:J3328",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-caferagatha-crouch",
+        "WAVE32-caferagatha-victory",
+        "WAVE32-caferagatha-defeat",
+        "WAVE32-cafegangle-selection"
+      ],
+      "observations": [
+        "Rows 3325–3328 complete Ragatha crouch, victory and defeat, then introduce Gangle selection.",
+        "The transition preserves the owner and file paths; Gangle selection correctly shows its distinct 1086 × 1448 native dimensions. The full evidence text fits and yellow notes are blank."
+      ]
+    },
+    {
+      "file": "production-5.png",
+      "sha256": "8a9816bdbd97d49783a518c97200093abba419c52cc78a5417ad43c7075e4eaf",
+      "sheet": "Production",
+      "range": "A3329:J3332",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-cafegangle-stance",
+        "WAVE32-cafegangle-intro",
+        "WAVE32-cafegangle-attack",
+        "WAVE32-cafegangle-heavy"
+      ],
+      "observations": [
+        "Rows 3329–3332 contain Gangle stance, intro, attack and heavy with complete, distinct evidence.",
+        "The 1199 × 1312 heavy size is retained beside the 1086 × 1448 rows; no forced common dimensions are claimed. Hashes and receipt paths wrap without clipping; yellow notes remain blank."
+      ]
+    },
+    {
+      "file": "production-6.png",
+      "sha256": "9fa644c8de7da04a26ab0fea925c8aabb3bfe0cdbfb305a37ab31c9575ce24bd",
+      "sheet": "Production",
+      "range": "A3333:J3336",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-cafegangle-hit",
+        "WAVE32-cafegangle-walk",
+        "WAVE32-cafegangle-jump",
+        "WAVE32-cafegangle-crouch"
+      ],
+      "observations": [
+        "Rows 3333–3336 contain Gangle hit, walk, jump and crouch, with 1198 × 1313 recorded for crouch.",
+        "All four IDs, active paths, receipt paths, full hashes and implementation statuses are visible. Scope text is complete and yellow notes remain blank."
+      ]
+    },
+    {
+      "file": "production-7.png",
+      "sha256": "a618e58a89ff54d2de6e58f729f9c6e674701589bad69cb5b54e8f9a8a274784",
+      "sheet": "Production",
+      "range": "A3337:J3340",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-cafegangle-victory",
+        "WAVE32-cafegangle-defeat",
+        "WAVE32-cafezooble-selection",
+        "WAVE32-cafezooble-stance"
+      ],
+      "observations": [
+        "Rows 3337–3340 contain Gangle victory/defeat followed by Zooble selection/stance.",
+        "The owner transition, different native sizes and corresponding receipt paths remain unambiguous; all content fits, with blank yellow notes."
+      ]
+    },
+    {
+      "file": "production-8.png",
+      "sha256": "f8e95860dec5ff1a1f73c8634eb03547e71663ab15ace0075ef4044d69f6c027",
+      "sheet": "Production",
+      "range": "A3341:J3344",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-cafezooble-intro",
+        "WAVE32-cafezooble-attack",
+        "WAVE32-cafezooble-heavy",
+        "WAVE32-cafezooble-hit"
+      ],
+      "observations": [
+        "Rows 3341–3344 contain Zooble intro, attack, heavy and hit with distinct IDs and hashes.",
+        "The heavy drawing correctly retains its 1199 × 1312 dimensions while the other rows show 1024 × 1536; no clipped paths or scope text is visible. Yellow notes remain blank."
+      ]
+    },
+    {
+      "file": "production-9.png",
+      "sha256": "01bc5694c2cb3ef301717d2fcba4fab78e3844b1df8d4018680de96dbf7869de",
+      "sheet": "Production",
+      "range": "A3345:J3348",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-cafezooble-walk",
+        "WAVE32-cafezooble-jump",
+        "WAVE32-cafezooble-crouch",
+        "WAVE32-cafezooble-victory"
+      ],
+      "observations": [
+        "Rows 3345–3348 contain Zooble walk, jump, crouch and victory in the expected order.",
+        "Their 1024 × 1536 dimensions, byte counts, full hashes, active PNG names and receipt paths are readable; statuses and blank yellow notes are preserved."
+      ]
+    },
+    {
+      "file": "production-10.png",
+      "sha256": "fb1dae02419f528782836c6a3eb3695819dd0a7579e1caf825901738db4b865f",
+      "sheet": "Production",
+      "range": "A3349:J3349",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-cafezooble-defeat"
+      ],
+      "observations": [
+        "Row 3349 contains Zooble defeat, the final one of exactly 33 drawing rows.",
+        "The complete SHA-256, 1468896-byte count, 1024 × 1536 dimensions, receipt path and open animation/canonical limitation fit within the single-row view; the yellow notes cell remains blank."
+      ]
+    },
+    {
+      "file": "qa-1.png",
+      "sha256": "5b09daf95af8a3003df74540301d0f2d4dc64dd3ab709a7fabbf06cf5c4772c5",
+      "sheet": "QA",
+      "range": "A2460:I2463",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-caferagatha-selection",
+        "WAVE32-asset-caferagatha-stance",
+        "WAVE32-asset-caferagatha-intro",
+        "WAVE32-asset-caferagatha-attack"
+      ],
+      "observations": [
+        "Rows 2460–2463 cover Ragatha selection, stance, intro and attack with individual WAVE32-asset IDs, Réussi statuses and P0 priority.",
+        "Active files, accepted receipts, full hashes and native dimensions are readable. Each row states that a pose image is neither an animation cycle nor episode certification; yellow I notes are blank."
+      ]
+    },
+    {
+      "file": "qa-2.png",
+      "sha256": "e1674e115464f3915ac00416b6ead035bdf22fd3c614a8785649b7c4610de83d",
+      "sheet": "QA",
+      "range": "A2464:I2467",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-caferagatha-heavy",
+        "WAVE32-asset-caferagatha-hit",
+        "WAVE32-asset-caferagatha-walk",
+        "WAVE32-asset-caferagatha-jump"
+      ],
+      "observations": [
+        "Rows 2464–2467 cover Ragatha heavy, hit, walk and jump in the expected order with distinct hashes.",
+        "The active/archive/receipt equality statement and limits remain readable without overlap or clipping. Yellow notes are blank."
+      ]
+    },
+    {
+      "file": "qa-3.png",
+      "sha256": "15d8a16dff25977b218c348440d2deaed03fba684fa5a733ab350b05ce818f83",
+      "sheet": "QA",
+      "range": "A2468:I2471",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-caferagatha-crouch",
+        "WAVE32-asset-caferagatha-victory",
+        "WAVE32-asset-caferagatha-defeat",
+        "WAVE32-asset-cafegangle-selection"
+      ],
+      "observations": [
+        "Rows 2468–2471 cover Ragatha crouch, victory and defeat, followed by Gangle selection.",
+        "The owner transition, Gangle native dimensions and corresponding paths/hashes remain correct and visible; all four rows retain their scope limitation and blank yellow notes."
+      ]
+    },
+    {
+      "file": "qa-4.png",
+      "sha256": "11eff60ed4be32669ef7aee09b3bbd27cd56a25d00973d4c6cc8019470eccf0f",
+      "sheet": "QA",
+      "range": "A2472:I2475",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-cafegangle-stance",
+        "WAVE32-asset-cafegangle-intro",
+        "WAVE32-asset-cafegangle-attack",
+        "WAVE32-asset-cafegangle-heavy"
+      ],
+      "observations": [
+        "Rows 2472–2475 cover Gangle stance, intro, attack and heavy.",
+        "The heavy row retains the 1199 × 1312 native size, distinct from the other three rows. Full SHA-256 strings, file/receipt paths and limitations are readable; yellow notes are blank."
+      ]
+    },
+    {
+      "file": "qa-5.png",
+      "sha256": "e33b7f74a687d63a6950d82f27f0c1c62a4ad59b5644d0815977194d3ffa3e43",
+      "sheet": "QA",
+      "range": "A2476:I2479",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-cafegangle-hit",
+        "WAVE32-asset-cafegangle-walk",
+        "WAVE32-asset-cafegangle-jump",
+        "WAVE32-asset-cafegangle-crouch"
+      ],
+      "observations": [
+        "Rows 2476–2479 cover Gangle hit, walk, jump and crouch with the expected individual IDs.",
+        "The 1198 × 1313 crouch dimensions are explicit; all evidence columns and the static-pose limitation fit within their cells, with blank yellow notes."
+      ]
+    },
+    {
+      "file": "qa-6.png",
+      "sha256": "fc0179e8aadc0b08031a277cf631ce2f5a9e09b8a99b64780391ddbfab1c1d6c",
+      "sheet": "QA",
+      "range": "A2480:I2483",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-cafegangle-victory",
+        "WAVE32-asset-cafegangle-defeat",
+        "WAVE32-asset-cafezooble-selection",
+        "WAVE32-asset-cafezooble-stance"
+      ],
+      "observations": [
+        "Rows 2480–2483 cover Gangle victory/defeat and Zooble selection/stance.",
+        "The owner change, variable native dimensions and corresponding complete hashes remain unambiguous. No clipping is visible and yellow notes are blank."
+      ]
+    },
+    {
+      "file": "qa-7.png",
+      "sha256": "a6dc3d61827f8729c6e16da23726062f88a327a6676614a275377dd605c7f65c",
+      "sheet": "QA",
+      "range": "A2484:I2487",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-cafezooble-intro",
+        "WAVE32-asset-cafezooble-attack",
+        "WAVE32-asset-cafezooble-heavy",
+        "WAVE32-asset-cafezooble-hit"
+      ],
+      "observations": [
+        "Rows 2484–2487 cover Zooble intro, attack, heavy and hit with individual Réussi statuses.",
+        "The 1199 × 1312 heavy size and the other 1024 × 1536 sizes agree with Production. Full paths, hashes and scope text are visible; yellow notes are blank."
+      ]
+    },
+    {
+      "file": "qa-8.png",
+      "sha256": "92e9c551babf48bf6e0b5d62dfc3611a9134e98821f931ddb78fe8216b38e773",
+      "sheet": "QA",
+      "range": "A2488:I2491",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-cafezooble-walk",
+        "WAVE32-asset-cafezooble-jump",
+        "WAVE32-asset-cafezooble-crouch",
+        "WAVE32-asset-cafezooble-victory"
+      ],
+      "observations": [
+        "Rows 2488–2491 cover Zooble walk, jump, crouch and victory, bringing the visible asset-QA sequence to 32 rows before the final defeat row.",
+        "All four hashes, dimensions, byte counts and active/receipt paths are complete and readable. Yellow notes remain blank."
+      ]
+    },
+    {
+      "file": "qa-9.png",
+      "sha256": "44892db8ea1bd3e5e5ab2c64580f5bc77c02dca63e3ffadad291c4b2dfe0baed",
+      "sheet": "QA",
+      "range": "A2492:I2495",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-asset-cafezooble-defeat",
+        "WAVE32-art",
+        "WAVE32-canvas",
+        "WAVE32-node"
+      ],
+      "observations": [
+        "Row 2492 completes the 33rd individual asset check with Zooble defeat. Rows 2493–2495 separately record inventory, Canvas and Node/build evidence.",
+        "The summary reads 3 selections, 3 stances, 27 poses, 33 distinct native PNGs and 42202157 bytes; Canvas reads 60 checks and zero missing files.",
+        "The Node result reads 432 passed out of 432 with zero failures and two successful builds, dated 2026-11-20T19:41:26.550999+00:00. The qa.log and verification paths are complete, and the text distinguishes this dated run from historical totals. Yellow notes are blank."
+      ]
+    },
+    {
+      "file": "qa-10.png",
+      "sha256": "bd09a495abce047698ddcd1e8f28537fd3c9426b38a92f290079a5ae9896e16c",
+      "sheet": "QA",
+      "range": "A2496:I2498",
+      "status": "accepted",
+      "reviewedRows": [
+        "WAVE32-integrity",
+        "WAVE32-browser",
+        "TRACKER32-update"
+      ],
+      "observations": [
+        "Rows 2496–2498 separately show distribution/history integrity, the unexecuted browser attempt and the tracker update.",
+        "Integrity records 66 image copies, 38 module copies and 5830 historical Encore files. The browser row visibly remains Non exécuté and explains the launch failure before navigation and zero browser checks.",
+        "Tracker evidence records 42 formulas, 11 sheets and 10 tables, with no desktop-Excel-session claim. All text fits within the reduced row heights; yellow notes are blank."
+      ]
+    }
+  ],
+  "issues": [],
+  "limitations": [
+    "This independent workbook-authoring review covers only the 20 Production and QA PNGs specified above. The seven other rendered views remain under the workbook author's separate review.",
+    "No XLSX, authoring script or runtime was edited, no workbook formulas were independently recalculated, and no desktop Excel interaction was performed in this review. Saved snapshots and their manifest hash were read for supplementary exact-value comparisons.",
+    "The 432-test result and browser-launch failure were checked against existing logs and reports; those campaigns were not re-executed by this review.",
+    "Static artwork and Canvas evidence do not establish complete animation cycles or canonical 1:1 fidelity."
+  ]
+}

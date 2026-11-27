@@ -1,0 +1,32 @@
+{
+  "style": "hommage",
+  "state": "jump",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE freshly drawn individual full-body 2D fighting-game state illustration, using the provided stance image as the exact character model. Preserve the same face, limb count, body proportions, palette, costume, backpack or fins, contours and cel-shaded finish. This is an ORIGINAL Encore Ribbit / Sunset Paradise crossover design, not an official canonical appearance. Articulate the joints and expression into the requested new pose; do not repeat, flip, crop, warp or merely reposition the stance drawing. Genuine transparent alpha background, solid opaque character, clean sharp outline. Square composition with entire silhouette inside CENTRAL 76 percent and at least twelve percent empty margin on ALL edges, including hands, feet, caps, fins and tail. Character faces RIGHT in side view with slight three-quarter depth. One character only, no multiple views, sprite sheet, text, letters, watermark, border, floor, shadow, painted background, halo, haze, glow or checkerboard. JUMP pose: entirely airborne, torso rising upright with both knees tucked and both feet off ground, one hand reaching forward and the other raised for balance. Entire body and any tail remain intact and inside the frame. No floor, shadow, streak or jump effect. Identity lock: Ribbit: lime-green cartoon frog with exactly TWO huge protruding white eyes, black wedge-cut round pupils, pink circular cheeks, smiling wide frog mouth, thin long green arms and legs, exactly four rounded fingers on each hand and three broad toes on each foot. Meggy-inspired vacation adventurer HOMMAGE: small golden-yellow cap fitted between the large eyes, brown aviator goggles perched above cap and not over the eyes; white short-sleeve T-shirt edged in golden yellow with one simple orange semicircle sun over two teal wave marks, no letters; charcoal shorts and brown belt, compact orange backpack, teal canteen at hip, dark fingerless gloves allowing the green fingers to show, low orange straps around bare webbed feet. Ribbit's small bright pink bow tie remains at the collar. Adapt only the established ensemble from the second reference; do not copy Pomni's jester cap, bells, human face or body. Preserve the frog's long leg proportions and readable webbed hands and feet.",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "sunsetRibbitResult:hommage:jump:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-183c7b0a-9f2d-4bcc-8eea-ccfde5043cbe.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-183c7b0a-9f2d-4bcc-8eea-ccfde5043cbe.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/jump.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "bytes": 791796,
+  "sha256": "1c88ddf1ba6ad7712b3934255a9d85ad11279dddfa928c130370ef6b78a07ced",
+  "sha": "d1b07bc063407c7ced72e557f17c62b8c8d0dddd",
+  "alphaZeroFraction": 0.7612857357254235,
+  "alpha12BBox": [
+    271,
+    97,
+    1090,
+    1082
+  ],
+  "nativeBytesVerified": true,
+  "auditPass": true
+}

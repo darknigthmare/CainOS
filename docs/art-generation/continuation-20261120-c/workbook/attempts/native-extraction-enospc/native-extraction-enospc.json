@@ -1,0 +1,11 @@
+{
+  "schema": "encore-tracker-attempt/v1",
+  "recordedAt": "2026-11-20T19:45:52.422Z",
+  "stage": "native-reimport-extraction",
+  "status": "environment_blocked",
+  "error": "OSError: [Errno 28] No space left on device while creating native-reimport; the subsequent comparison could not find its manifest.",
+  "exportCompletedBeforeFailure": true,
+  "installedTrackerChanged": false,
+  "filesDeletedByThisAgent": false,
+  "recovery": "Root is removing verified, reproducible ignored build outputs. Preserve the exported workbook and retry native extraction and comparison once disk space is available."
+}

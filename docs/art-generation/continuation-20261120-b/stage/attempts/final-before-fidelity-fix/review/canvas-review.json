@@ -1,0 +1,194 @@
+{
+  "schema": "encore-softballfield-canvas-review-v1",
+  "createdAt": "2026-11-20T17:32:39.379Z",
+  "stage": "softballfield",
+  "method": "Node + native Skia using production loadStagePlanes, drawStagePlanes and CombatRenderer.",
+  "browserTestStatus": "not_executed",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device assertions.",
+    "Two official YouTube storyboard sheets ground the large forms and materials. Each cell is only 320 x 180; fine lettering, occluded geometry, parallax layout and ambient light remain adaptations.",
+    "Successful rendering does not replace separate visual inspection."
+  ],
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "tests/combat-softballfield.test.mjs": "df3be4bfe202aa13f0c67017f1208e5ae754ef40437b92bc65c0e20d40f8e293",
+    "tests/combat-fidelity.test.mjs": "1227cae8fb2584ce495bac27011281c692b90a8be38607c9da8e3fb6b8bada50",
+    "scripts/review-combat-softballfield-20261120-b.mjs": "f91423d2b0b21b157894c918f7063ec4c5e6d7c21cd929472914df5c6f960886"
+  },
+  "assets": [
+    {
+      "file": "assets/encore/stages/softballfield/far.png",
+      "bytes": 2071718,
+      "sha256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "pngColorType": 2,
+      "requested": true
+    },
+    {
+      "file": "assets/encore/stages/softballfield/mid.png",
+      "bytes": 907121,
+      "sha256": "66dfb01a55abd8b28b8cf404074b20021cfb5fff040d8c9efbc27efa24bf0842",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "pngColorType": 6,
+      "requested": true
+    },
+    {
+      "file": "assets/encore/stages/softballfield/near.png",
+      "bytes": 146991,
+      "sha256": "aef682f1c524798efe1e7e09080eae872d63584d3237185fe173c162969be767",
+      "nativeSize": [
+        1671,
+        941
+      ],
+      "pngColorType": 6,
+      "requested": true
+    }
+  ],
+  "cameras": [
+    {
+      "camera": -1,
+      "file": "planes-left.png",
+      "sha256": "5c2cb64a699d4e8d3ed16523c6855eabb17489ea273048001dd320b5f954e318",
+      "fullyOpaque": true,
+      "nearMaxAlphaAboveFeet": 2
+    },
+    {
+      "camera": 0,
+      "file": "planes-center.png",
+      "sha256": "894ec7c538bfc3579726b1c2dd91604e666c8b347f63c6f193f0650aeb0a660f",
+      "fullyOpaque": true,
+      "nearMaxAlphaAboveFeet": 2
+    },
+    {
+      "camera": 1,
+      "file": "planes-right.png",
+      "sha256": "a5b3da62e5149720177857e76cdaa3cb2925cfb0b56c9f4a2547f480c55d545f",
+      "fullyOpaque": true,
+      "nearMaxAlphaAboveFeet": 1
+    }
+  ],
+  "scenes": [
+    {
+      "camera": -1,
+      "file": "scene-left.png",
+      "sha256": "6a6ff33f79c31ce6b7c010e3eb31c76ee464d0261e1fe5178c9c38ed7b6544e4",
+      "actors": [
+        {
+          "id": "pomni",
+          "x": 65,
+          "y": 568
+        },
+        {
+          "id": "gummigoo",
+          "x": 191,
+          "y": 568
+        }
+      ]
+    },
+    {
+      "camera": 0,
+      "file": "scene-center.png",
+      "sha256": "842edfb8ad4abf2fe4bc800314fd82f72ec9f891bf78d5fdc96538386f5423ea",
+      "actors": [
+        {
+          "id": "pomni",
+          "x": 320,
+          "y": 568
+        },
+        {
+          "id": "gummigoo",
+          "x": 960,
+          "y": 568
+        }
+      ]
+    },
+    {
+      "camera": 1,
+      "file": "scene-right.png",
+      "sha256": "34f51fd41af2200b21a332ab1c680f37d36b7684334cb08bc75a504ac49d9f72",
+      "actors": [
+        {
+          "id": "pomni",
+          "x": 1089,
+          "y": 568
+        },
+        {
+          "id": "gummigoo",
+          "x": 1215,
+          "y": 568
+        }
+      ]
+    }
+  ],
+  "offline": {
+    "version": "0.7.0-17366238b519",
+    "artVersion": "20311abb70caa13c",
+    "images": 5874,
+    "bytes": 3173741905
+  },
+  "checks": [
+    {
+      "name": "Three published native PNGs decoded through the actual loader",
+      "pass": true
+    },
+    {
+      "name": "Procedural fallback is distinct from the circus",
+      "pass": true,
+      "file": "fallback.png",
+      "sha256": "e41a25c45e02ed2f32a73fb766a4af7eb19b91b87027150e178d023245a7f4ba"
+    },
+    {
+      "name": "Three distinct camera positions compose without transparent gaps",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion fixes the camera at zero for all three actor arrangements",
+      "pass": true
+    },
+    {
+      "name": "Ambient stadium light evolves while every floor pixel remains identical",
+      "pass": true,
+      "frames": [
+        {
+          "full": "8799b3ce17b815402fcbc8ddba7e983c2471eb50acf631b4bb191c09db0c508b",
+          "floor": "e1a7c237dbc2947a56391addca3fb268a41ede6af46100eceaffb2f0081b2f7f"
+        },
+        {
+          "full": "ad9c13173f6cadec3a46f440351abd5fff53919446f6e8cb604aab171700a8d2",
+          "floor": "e1a7c237dbc2947a56391addca3fb268a41ede6af46100eceaffb2f0081b2f7f"
+        }
+      ]
+    },
+    {
+      "name": "Rendering keeps stage definitions and actor review states unchanged",
+      "pass": true
+    }
+  ],
+  "overview": "three-cameras.png",
+  "requestedFiles": [
+    "assets/encore/stages/softballfield/far.png",
+    "assets/encore/stages/softballfield/mid.png",
+    "assets/encore/stages/softballfield/near.png",
+    "assets/encore/stance/gummigoo.webp",
+    "assets/encore/stance/pomni.webp",
+    "assets/images/cainos-pixel-cast-sheet.png",
+    "assets/images/cainos-pomni-animation-sheet.png"
+  ]
+}

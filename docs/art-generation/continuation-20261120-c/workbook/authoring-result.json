@@ -1,0 +1,10 @@
+{
+  "status": "exported-awaiting-native-comparison-reimport-visual-review",
+  "sha256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+  "planSha256": "b52d17ef37419232a175b51184d3d3bc5a2a2c2fdb077d76d2e069fa6b8f21ab",
+  "trackerDataSha256": "770c112140dd5ec4442cb0f61053b807e2aad52b8e0f6cfafa0e859f9eefb962",
+  "method": "Workbook.create from constrained native snapshot via public APIs",
+  "formulas": 42,
+  "errors": 0,
+  "representativeStatusRecalculationPassed": true
+}

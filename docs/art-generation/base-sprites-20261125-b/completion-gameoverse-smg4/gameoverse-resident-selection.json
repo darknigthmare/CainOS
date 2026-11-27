@@ -1,0 +1,11 @@
+{
+  "asset": "gameoverse/resident/selection",
+  "prompt": "Use case: identity-preserve. Create ONE character-selection bust portrait from the referenced Queenie full-body sprite. EXACTLY preserve this original Gameoverse resident character's crown contour and finial, face, eyelids, eye colors and direction, black lashes, materials, palette, chest costume and gloves with identical details. The only change is framing/composition into a generous clean portrait: complete crown and finial plus upper torso to below chest and the same two detached gloves inside frame. Three-quarter facing right, calm half-lidded expression. Lower robe/base are outside portrait framing. Do not add anatomy, arms, legs, hair, effects, glow or objects. Preserve crisp 2D cel-shaded rendering. True transparent RGBA background, no scenery/ground, no checkerboard painted in, no text, no labels, no watermark. Single portrait, no panels or duplication. Square composition 1024x1024, crown top safely 60px from edge and all gloves inside frame.",
+  "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-10c49c25-81c4-4b2f-8584-70e4bcf42bce.png",
+  "output": "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "references": [
+    "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/gameoverse/queenie/resident/stance.png"
+  ]
+}

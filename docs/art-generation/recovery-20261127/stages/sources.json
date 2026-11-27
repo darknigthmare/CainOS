@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-27",
+  "sources": [
+    {
+      "path": "docs/art-generation/recovery-20261127/stages/references/glitch-gallery-26.png",
+      "url": "https://static.wixstatic.com/media/84ed6a_bd08976f81644a659cbc9a8e112fb5dc~mv2.png",
+      "pageUrl": "https://www.glitchprod.com/digital-circus",
+      "bytes": 5714973,
+      "sha256": "104212ea6f161a781ac6fe2090158bcc6d69d1bfac5e0fc42f494942b8f79d8a",
+      "primary": true,
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/stages/references/glitch-gallery-29.png",
+      "url": "https://static.wixstatic.com/media/84ed6a_0558e3b65a3146b5b04b7828da5b4d0e~mv2.png",
+      "pageUrl": "https://www.glitchprod.com/digital-circus",
+      "bytes": 1689859,
+      "sha256": "4eae2300134a6fe0ae30daf90e9384fe848ff1762e6f9ae797d5a371f53e5c2f",
+      "primary": true,
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/stages/references/glitch-gallery-30.png",
+      "url": "https://static.wixstatic.com/media/84ed6a_3fb3c4ec9e8947e5a659c4cf10657ecc~mv2.png",
+      "pageUrl": "https://www.glitchprod.com/digital-circus",
+      "bytes": 5651638,
+      "sha256": "4ab992cf7e44a005bf6928d4574004911a4717b4a6903bc60ea84447d47d99ae",
+      "primary": true,
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/stages/references/spudsy-netflix-official.jpg",
+      "url": "https://occ-0-3012-114.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY7TJYmplbg8lnHqbjKLMs9jVNbYeIHivWTdEufLA0d-90FfapefydK8i59MTeahWLBWGxlNMM4radrd0MARwM-FxSHl7ekrwgfjyuQ1bbOZIBhn7QqT5PHh.jpg?r=b1e",
+      "pageUrl": "https://qr.netflix.com/gb/title/81936142",
+      "primary": true,
+      "visuallyInspected": true,
+      "bytes": 20556,
+      "sha256": "09d7efa80e5c9325c661e8d0ba2d90edd9be374c2e4168ece0aa33022bb8a3f9",
+      "scope": "Image de distribution : architecture observée ; cadrage élargi et continuité du sol adaptés pour Encore."
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/stages/references/spudsy-episode-counter.jpg",
+      "url": "https://image.tmdb.org/t/p/original/eSJ8Fa7bd9mvZdUXhdyWUZ7Jjix.jpg",
+      "pageUrl": "https://watch.plex.tv/show/the-amazing-digital-circus/season/1/episode/4",
+      "primary": false,
+      "visuallyInspected": true,
+      "bytes": 278622,
+      "sha256": "2c64f2e7a015c92b8faa267576acc27e57217fcd2cdf7040f26a0fca756ed77c",
+      "scope": "Image de distribution : architecture observée ; cadrage élargi et continuité du sol adaptés pour Encore."
+    }
+  ],
+  "notInstalledCandidate": {
+    "path": "docs/art-generation/recovery-20261127/stages/spudsy-first-candidate.png",
+    "sha256": "de9fd2f8a16324624df1d3e1610457e89807f925a5623586a95da1c8333f8cea",
+    "reason": "Sol trop court pour la ligne d’appui des combattants ; remplacé par une correction native du cadrage via imagegen."
+  },
+  "scope": "Reconstruction visuelle depuis références publiées ; caméra et parties occultées adaptées pour Encore, pas de certification canonique 1:1."
+}

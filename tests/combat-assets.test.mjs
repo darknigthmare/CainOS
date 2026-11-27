@@ -4,9 +4,28 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import {deflateSync} from 'node:zlib';
-import {auditCombatAssets} from '../scripts/audit-combat-assets.mjs';
+import {auditCombatAssets, assetPath} from '../scripts/audit-combat-assets.mjs';
 import {FIGHTERS} from '../combat/data.mjs';
 import {ANIMATION_REGISTRATION, POSE_PRESENTATION} from '../combat/render-poses.mjs';
+
+test('only declared abstraction portraits and stances extend the asset audit allowlist', async () => {
+  const relative = 'assets/encore/abstractions/abstractedqueenie/stance.png';
+  const file = path.join(root, relative);
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  await fs.writeFile(file, png(8, 8, (x, y) => [90, 60, 160, x >= 2 && x < 6 && y >= 2 && y < 6 ? 255 : 0]));
+  const source = '../' + relative;
+  assert.equal(assetPath(source), relative);
+  const report = await run({ archive: [{ id: 'abstractedqueenie', sprite: { src: source, cols: 1, rows: 1, col: 0, row: 0, matteMode: 'native-alpha' } }] });
+  assert.equal(report.pass, true, JSON.stringify(report.errors));
+  assert.equal(report.references[0].alpha.visible_pixels, 16);
+  for (const invalid of [
+    '../assets/encore/abstractions/unknown/stance.png',
+    '../assets/encore/abstractions/abstractedqueenie/heavy.png',
+    '../assets/encore/other/stance.png',
+    'https://example.com/stance.png', '../../../outside.png',
+  ]) assert.throws(() => assetPath(invalid), invalid);
+});
+
 
 // Small actual PNG files exercise decoding and crop alpha, not fabricated reports.
 const crc32 = bytes => {

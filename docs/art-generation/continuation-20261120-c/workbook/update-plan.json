@@ -1,0 +1,2226 @@
+{
+  "schema": "encore-tracker-continuation-c-plan/v1",
+  "createdAt": "2026-11-20T19:43:13.005Z",
+  "baselineHashes": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+    "docs/combat-tracker-data.json": "839790a0a128e09573e0c1578ccecc46e1dc20819c75108650c666a2aeabb352",
+    "docs/combat-workbook-verification.json": "024bcd3c67b272eccd789af0ed89b6bc0b8a7e3da7f44e6ea2386ce7c1573127",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+  },
+  "baselineSnapshotHashes": {
+    "manifest.json": "1b9972851d74d572762f81eabd02a666e0f89e7eb2fab17e99cb82faa39ebb26",
+    "sheet-1.json": "1ec06fec327bb7bd605be64ea1063cd238d12872531486efae3677d36dfdeb4c",
+    "sheet-2.json": "17a09390fae11968270686467ac5a67abf562b6d3fa9025cd4f5eb1db0ad495e",
+    "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
+    "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
+    "sheet-5.json": "858b4c5320abe79568082baeb5bebe65df1995102c8ca18212eaf457dccc3fed",
+    "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
+    "sheet-7.json": "cebaa31a8a9d535f2d17f77f1b8709a0c607051e55a3a6ce4aca898bb2056a43",
+    "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
+    "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
+    "sheet-10.json": "65b1d0c1b5d3adb2b486f804ef69c8e390e4f5ebba46cf0e3ecc684d8f5da5f5",
+    "sheet-11.json": "4896b64f0bdb54787b41f5ffc6b34340ca97362c1667bc0dd463425c87348a03"
+  },
+  "historicalCellsConstrained": 82697,
+  "approvedChangedCells": [
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G62",
+      "before": [
+        "string",
+        "477 tenues équipables : 51 variantes d’archive, 42 tenues Circus et 384 crossovers dans 9 collections. Le joueur et le rival peuvent utiliser des apparences différentes.",
+        null
+      ],
+      "value": "480 tenues équipables : 51 variantes d’archive, 45 tenues Circus et 384 crossovers dans 9 collections. Le joueur et le rival peuvent utiliser des apparences différentes.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G95",
+      "before": [
+        "string",
+        "Documenter 54 combattants, 540 techniques, 25 arènes, 51 variantes historiques, 42 tenues Circus et 384 crossovers, avec leurs repères et limites de référence.",
+        null
+      ],
+      "value": "Documenter 54 combattants, 540 techniques, 25 arènes, 51 variantes historiques, 45 tenues Circus et 384 crossovers, avec leurs repères et limites de référence.",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "E64",
+      "before": [
+        "string",
+        "5 874 images et 3 173 741 905 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+        null
+      ],
+      "value": "5 907 images et 3 215 944 062 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B7",
+      "before": [
+        "number",
+        54,
+        "=COUNTA('Combattants'!A6:A59)"
+      ],
+      "value": 54,
+      "formula": "=COUNTA('Combattants'!A6:A59)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B8",
+      "before": [
+        "number",
+        540,
+        "=COUNTA('Techniques'!A6:A545)"
+      ],
+      "value": 540,
+      "formula": "=COUNTA('Techniques'!A6:A545)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B9",
+      "before": [
+        "number",
+        25,
+        "=COUNTA('Arènes'!A6:A30)"
+      ],
+      "value": 25,
+      "formula": "=COUNTA('Arènes'!A6:A30)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B10",
+      "before": [
+        "number",
+        179,
+        "=COUNTA('Atlas'!A6:A184)"
+      ],
+      "value": 179,
+      "formula": "=COUNTA('Atlas'!A6:A184)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B11",
+      "before": [
+        "number",
+        477,
+        "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3313,\"Costume crossover\")+COUNTIFS('Production'!B6:B3313,\"Tenue Circus\")"
+      ],
+      "value": 480,
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3349,\"Costume crossover\")+COUNTIFS('Production'!B6:B3349,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B12",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!B6:B3313,\"Arrangement d’arène\")"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B15",
+      "before": [
+        "number",
+        85,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)"
+      ],
+      "value": 85,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C15",
+      "before": [
+        "number",
+        7,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)"
+      ],
+      "value": 7,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D15",
+      "before": [
+        "number",
+        12,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)"
+      ],
+      "value": 12,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E15",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F15",
+      "before": [
+        "number",
+        106,
+        "=COUNTA('Fonctionnalités'!A6:A111)"
+      ],
+      "value": 106,
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B16",
+      "before": [
+        "number",
+        2128,
+        "=COUNTIFS('Production'!E$6:E$3313,B$14)"
+      ],
+      "value": 2164,
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C16",
+      "before": [
+        "number",
+        957,
+        "=COUNTIFS('Production'!E$6:E$3313,C$14)"
+      ],
+      "value": 957,
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D16",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!E$6:E$3313,D$14)"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E16",
+      "before": [
+        "number",
+        169,
+        "=COUNTIFS('Production'!E$6:E$3313,E$14)"
+      ],
+      "value": 169,
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F16",
+      "before": [
+        "number",
+        3308,
+        "=COUNTA('Production'!A6:A3313)"
+      ],
+      "value": 3344,
+      "formula": "=COUNTA('Production'!A6:A3349)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B17",
+      "before": [
+        "number",
+        343,
+        "=COUNTIFS('Scénarios'!H$6:H$353,B$14)"
+      ],
+      "value": 343,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C17",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Scénarios'!H$6:H$353,C$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D17",
+      "before": [
+        "number",
+        4,
+        "=COUNTIFS('Scénarios'!H$6:H$353,D$14)"
+      ],
+      "value": 4,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E17",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('Scénarios'!H$6:H$353,E$14)"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F17",
+      "before": [
+        "number",
+        348,
+        "=COUNTA('Scénarios'!A6:A353)"
+      ],
+      "value": 348,
+      "formula": "=COUNTA('Scénarios'!A6:A353)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B18",
+      "before": [
+        "number",
+        105,
+        "=COUNTIFS('Atlas'!E$6:E$184,B$14)"
+      ],
+      "value": 105,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C18",
+      "before": [
+        "number",
+        74,
+        "=COUNTIFS('Atlas'!E$6:E$184,C$14)"
+      ],
+      "value": 74,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D18",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Atlas'!E$6:E$184,D$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E18",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Atlas'!E$6:E$184,E$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F18",
+      "before": [
+        "number",
+        179,
+        "=COUNTA('Atlas'!A6:A184)"
+      ],
+      "value": 179,
+      "formula": "=COUNTA('Atlas'!A6:A184)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H19",
+      "before": [
+        "string",
+        "54 routes et 324 tableaux",
+        "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3313,\"Tableau d’histoire\")&\" tableaux\""
+      ],
+      "value": "54 routes et 324 tableaux",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3349,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H20",
+      "before": [
+        "string",
+        "216 briefings de rencontre",
+        "=COUNTIFS('Production'!B6:B3313,\"Briefing illustré\")&\" briefings de rencontre\""
+      ],
+      "value": "216 briefings de rencontre",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H21",
+      "before": [
+        "string",
+        "25 thèmes musicaux d’arènes",
+        "=COUNTIFS('Production'!B6:B3313,\"Arène\",'Production'!D6:D3313,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+      ],
+      "value": "25 thèmes musicaux d’arènes",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Arène\",'Production'!D6:D3349,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B22",
+      "before": [
+        "number",
+        2435,
+        "=COUNTIFS('QA'!D6:D2459,B21)"
+      ],
+      "value": 2473,
+      "formula": "=COUNTIFS('QA'!D6:D2498,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C22",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('QA'!D6:D2459,C21)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('QA'!D6:D2498,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D22",
+      "before": [
+        "number",
+        16,
+        "=COUNTIFS('QA'!D6:D2459,D21)"
+      ],
+      "value": 17,
+      "formula": "=COUNTIFS('QA'!D6:D2498,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E22",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('QA'!D6:D2459,E21)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('QA'!D6:D2498,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F22",
+      "before": [
+        "number",
+        2454,
+        "=COUNTA('QA'!A6:A2459)"
+      ],
+      "value": 2493,
+      "formula": "=COUNTA('QA'!A6:A2498)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H22",
+      "before": [
+        "string",
+        "26 motifs sonores synthétiques",
+        "=COUNTIFS('Production'!B6:B3313,\"Motif sonore\")&\" motifs sonores synthétiques\""
+      ],
+      "value": "26 motifs sonores synthétiques",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B23",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('QA'!D6:D2459,\"Partiel\")"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('QA'!D6:D2498,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H23",
+      "before": [
+        "string",
+        "270 séquences de présentation",
+        "=COUNTIFS('Production'!B6:B3313,\"Présentation individuelle\")&\" séquences de présentation\""
+      ],
+      "value": "270 séquences de présentation",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H24",
+      "before": [
+        "string",
+        "25 ambiances visuelles animées",
+        "=COUNTIFS('Production'!B6:B3313,\"Animation d’arène\")&\" ambiances visuelles animées\""
+      ],
+      "value": "25 ambiances visuelles animées",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H25",
+      "before": [
+        "string",
+        "20 costumes historiques redessinés",
+        "=COUNTIFS('Production'!B6:B3313,\"Costume\")&\" costumes historiques redessinés\""
+      ],
+      "value": "20 costumes historiques redessinés",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H27",
+      "before": [
+        "string",
+        "712 fiches, hors tenues crossover",
+        "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3313,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+      ],
+      "value": "715 fiches, hors tenues crossover",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3349,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H31",
+      "before": [
+        "string",
+        "162 présentations de KO",
+        "=COUNTIFS('Production'!B6:B3313,\"Finition visuelle\")&\" présentations de KO\""
+      ],
+      "value": "162 présentations de KO",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H32",
+      "before": [
+        "string",
+        "25 ambiances sonores originales",
+        "=COUNTIFS('Production'!B6:B3313,\"Arène\",'Production'!D6:D3313,\"Ambiance sonore\",'Production'!E6:E3313,\"Implémenté\")&\" ambiances sonores originales\""
+      ],
+      "value": "25 ambiances sonores originales",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Arène\",'Production'!D6:D3349,\"Ambiance sonore\",'Production'!E6:E3349,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H2",
+      "before": [
+        "string",
+        "Version 0.7.0 · continuation B · 20 novembre 2026",
+        null
+      ],
+      "value": "Version 0.7.0 · continuation C · 20 novembre 2026",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H8",
+      "before": [
+        "string",
+        "42 tenues Circus · 462 dessins individuels",
+        null
+      ],
+      "value": "45 tenues Circus · 495 dessins individuels",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H13",
+      "before": [
+        "string",
+        "431 tests Node dans la preuve finale du lot",
+        null
+      ],
+      "value": "432 tests Node dans la preuve finale du lot",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H14",
+      "before": [
+        "string",
+        "Navigateur non exécuté ; antécédent historique lié",
+        null
+      ],
+      "value": "Navigateur local non exécuté pour cette continuation",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H15",
+      "before": [
+        "string",
+        "Classeur recalculé et réimporté ; historique conservé",
+        null
+      ],
+      "value": "Classeur recalculé et réimporté ; historique conservé",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H16",
+      "before": [
+        "string",
+        "2 tenues · 3 crossovers · 55 dessins · 1 arène",
+        null
+      ],
+      "value": "3 tenues Café · 33 dessins individuels",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H30",
+      "before": [
+        "string",
+        "105 ensembles de base + 42 tenues (462 PNG)",
+        null
+      ],
+      "value": "105 ensembles de base + 45 tenues (495 PNG)",
+      "formula": null
+    }
+  ],
+  "approvedRowHeightChanges": [],
+  "coverageChanges": {
+    "featureIds": [
+      "PRE-03",
+      "PRD-11"
+    ],
+    "sourceIds": [],
+    "promotedNpcFamilies": 6,
+    "remainingNpcFamilies": 1074,
+    "noHistoricalProductionRowChanged": true,
+    "allStageAndCrossoverDataPreserved": true
+  },
+  "appendedProductionIds": [
+    "WAVE32-caferagatha",
+    "WAVE32-cafegangle",
+    "WAVE32-cafezooble",
+    "WAVE32-caferagatha-selection",
+    "WAVE32-caferagatha-stance",
+    "WAVE32-caferagatha-intro",
+    "WAVE32-caferagatha-attack",
+    "WAVE32-caferagatha-heavy",
+    "WAVE32-caferagatha-hit",
+    "WAVE32-caferagatha-walk",
+    "WAVE32-caferagatha-jump",
+    "WAVE32-caferagatha-crouch",
+    "WAVE32-caferagatha-victory",
+    "WAVE32-caferagatha-defeat",
+    "WAVE32-cafegangle-selection",
+    "WAVE32-cafegangle-stance",
+    "WAVE32-cafegangle-intro",
+    "WAVE32-cafegangle-attack",
+    "WAVE32-cafegangle-heavy",
+    "WAVE32-cafegangle-hit",
+    "WAVE32-cafegangle-walk",
+    "WAVE32-cafegangle-jump",
+    "WAVE32-cafegangle-crouch",
+    "WAVE32-cafegangle-victory",
+    "WAVE32-cafegangle-defeat",
+    "WAVE32-cafezooble-selection",
+    "WAVE32-cafezooble-stance",
+    "WAVE32-cafezooble-intro",
+    "WAVE32-cafezooble-attack",
+    "WAVE32-cafezooble-heavy",
+    "WAVE32-cafezooble-hit",
+    "WAVE32-cafezooble-walk",
+    "WAVE32-cafezooble-jump",
+    "WAVE32-cafezooble-crouch",
+    "WAVE32-cafezooble-victory",
+    "WAVE32-cafezooble-defeat"
+  ],
+  "appendedQaIds": [
+    "WAVE32-asset-caferagatha-selection",
+    "WAVE32-asset-caferagatha-stance",
+    "WAVE32-asset-caferagatha-intro",
+    "WAVE32-asset-caferagatha-attack",
+    "WAVE32-asset-caferagatha-heavy",
+    "WAVE32-asset-caferagatha-hit",
+    "WAVE32-asset-caferagatha-walk",
+    "WAVE32-asset-caferagatha-jump",
+    "WAVE32-asset-caferagatha-crouch",
+    "WAVE32-asset-caferagatha-victory",
+    "WAVE32-asset-caferagatha-defeat",
+    "WAVE32-asset-cafegangle-selection",
+    "WAVE32-asset-cafegangle-stance",
+    "WAVE32-asset-cafegangle-intro",
+    "WAVE32-asset-cafegangle-attack",
+    "WAVE32-asset-cafegangle-heavy",
+    "WAVE32-asset-cafegangle-hit",
+    "WAVE32-asset-cafegangle-walk",
+    "WAVE32-asset-cafegangle-jump",
+    "WAVE32-asset-cafegangle-crouch",
+    "WAVE32-asset-cafegangle-victory",
+    "WAVE32-asset-cafegangle-defeat",
+    "WAVE32-asset-cafezooble-selection",
+    "WAVE32-asset-cafezooble-stance",
+    "WAVE32-asset-cafezooble-intro",
+    "WAVE32-asset-cafezooble-attack",
+    "WAVE32-asset-cafezooble-heavy",
+    "WAVE32-asset-cafezooble-hit",
+    "WAVE32-asset-cafezooble-walk",
+    "WAVE32-asset-cafezooble-jump",
+    "WAVE32-asset-cafezooble-crouch",
+    "WAVE32-asset-cafezooble-victory",
+    "WAVE32-asset-cafezooble-defeat",
+    "WAVE32-art",
+    "WAVE32-canvas",
+    "WAVE32-node",
+    "WAVE32-integrity",
+    "WAVE32-browser",
+    "TRACKER32-update"
+  ],
+  "appendedSourceIds": [
+    "animate-cafe-ragatha",
+    "animate-cafe-gangle",
+    "animate-cafe-zooble"
+  ],
+  "appendedStageId": null,
+  "evidenceHashes": {
+    "docs/art-generation/continuation-20261120-c/verification.json": "926a001b97c9171d538b3b645017fa9a1e55c507e68e02c107e62186a7d50204",
+    "docs/art-generation/continuation-20261120-c/cafe/integration-proof.json": "3212e47a836f5e081cca91f7a4c27deab3bd202d048030915c300cf50ba698ba",
+    "docs/art-generation/continuation-20261120-c/cafe/generation-completion.json": "76bf053e41892848dca80b3b467e0070252400967aa15415e5f840eda435990c",
+    "docs/art-generation/continuation-20261120-c/cafe/asset-inventory.json": "cf6ccfab4e4d049aab9547721a4408a6260a527c84418ac882742c63addeabbc",
+    "docs/art-generation/continuation-20261120-c/canvas/canvas-review.json": "cd202ec3825953e800bc968793ca75e74bccece14181dc313a4683afa6429a1d",
+    "docs/art-generation/continuation-20261120-c/baseline.json": "2493bf0950134d03a63a6ab925c773fd97ecce20860a3ff5954c32a44d442387",
+    "docs/art-generation/continuation-20261120-c/qa.log": "570018fc3f5573a7e0e863d959aec1d3634e4fea2bf0d965f20d53a3ff11dcb4",
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "2df4a7f20dff74db43168a61c3b6285c34e7d2c9f2bfa64c8355b6c622aad62d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0",
+    "scripts/render-combat-character-review.mjs": "daa67f57a0c3a996bd8e91d2425010c13d238d6ac5d143ed091c24e78ba72443",
+    "docs/art-generation/continuation-20261120-c/browser-review/report.json": "7d95527ccb47ed2f429120600e9fe73e68e3076bdab9cad5cad2cc89b60dcae5",
+    "docs/art-generation/continuation-20261120-c/browser-review/run.log": "d6d1a4575a83b08de64ee2d09eab57f676221746357f98a51f89a4fc96c24021",
+    "docs/art-generation/continuation-20261120-c/browser-review/launch-preflight.json": "c4e17fa94ed1e4fb46c703e6928ec8adc5e5a10381a2825fb6fdf5c60edede7a",
+    "docs/art-generation/continuation-20261120-c/canvas/visual-review.json": "ed4f1f980d0416e3ca260d2d118a308a88a2193655aef022127245ade1165632",
+    "docs/art-generation/continuation-20261120-c/runtime-counts.json": "178a3e06c1bc449401d4b68a63362d6c3e3a7dba064c6fafaaa6b3d7d42b1437",
+    "docs/art-generation/continuation-20261120-c/qa-result.json": "967278604bb56b2005f4138f954f888afb862991c8b93232d24769a7d6042ec6",
+    "docs/art-generation/continuation-20261120-c/build-integrity.json": "bd10bfa70e0f9e1aa30d0c7034ad31525278989e408a97c8bf35db4775617e5e",
+    "docs/art-generation/continuation-20261120-c/browser-review/browser-review.json": "8dc05e1b5b2cabba995523f7fe1823ee9adb3e632c8d17dfc050ca6808ae8975",
+    "docs/art-generation/continuation-20261120-c/root-visual-review.json": "c1306383e917a7582138722f13a42ddabbb05f476547faf23ec6892874588ebc",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/caferagatha.json": "7e7e4089742816d9ae310404d10ecc7ed0fd526e8be1452e604dfbbf979de654",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.json": "22495257981b036a8e856f187b36138e8c69a46ce6a4d88ac6ce1806ebc3c231",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/selection.json": "77b25c6000cae66f25ab30a97a25a2af73c9a48ed8fbb81b17ef054f7c5f264e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attempts/selection-initial/native.png": "9623578081cd56ef87e5cf4c7e33855d665bf3f60b27e89ad434d7505d6dfca3",
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.json": "4258f9c2477611505731b8811be3986b833de707714522d3ea58eec94023b0bd",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/stance.json": "6d1b9734f5f1f340fd7b9886588cdeb7bd2b51a1443c45a39d725aaee768ab95",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.png": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.json": "38c29c4bfcbe7c022c73a7f6121ad0e5c25ddd4f664f03089f5f09dea7e1c7ff",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/intro.json": "fe6fc4e887c0d76a90d0e9e44ccbdac5232f60697db94baa1e17ecd183905493",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.png": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.json": "e7074c4b0945d2515d82006c4a291779087e2606a167209601193f353134b82d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/attack.json": "b0557c0a5e130dd06fb12239f43461a8f3468452482efc51b7978031b82cb44a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.png": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.json": "e015174f4620de05b03937df8b3dbfbc7f027e00d62de57a827dfecf08e432f3",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/heavy.json": "ab96ff9775e1f2558fb8eafe10c6ad5e1da92d3146ecc69052720abce115cbe4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.png": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.json": "135c34c4bb833efef128b5bcb8c262b78a2c7d641c657c8681f251abefb8ffea",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/hit.json": "68be45ec316c162e656240aa386ebdc97c8733266067de371516b8907a326da4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.png": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.json": "af48372d4a2a7dae93196c94dfaac64a6a8ab0d158768e8a31651ee75137710a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/walk.json": "d6fc62f3c5f4abd790e85118236a1521510aded1c243072f3555280e7b2109f9",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.png": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.json": "2c7a1f068a89ac25225f5ce1e45bacf82f28c9bb998643fda517031e23f69dbe",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/jump.json": "454f9c3852b30aa0132239cb1341d6fa6caa47ee07c1b22583e228acf85d6b3e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.png": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.json": "7f4cd66a13dc1514c0fc99392f31b0502838ac2f5487faa8978a007b7b49022f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/crouch.json": "b0667f7a81119cbe1d27d48ede79ae1fea7baa2ee688b9a5b1603c1b5106c224",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.png": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.json": "2908d9c3bf9b333a0338490105f6b7a563dd8d9e93eaffcebfd6fb84d5a840d7",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/victory.json": "736a4a6c405f3b8ab5ac0998a7407176e3505ec5bdfa95ab550d052161bfdb5d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.png": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.json": "8b046e17510cbe08441488d218f8c06142f7b731c53b6874272685b1b4052fcd",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/defeat.json": "5aa5547880bd2c85783562b17dd6c2db670dfda0ec4ccf6e11c409b5afaa425d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.png": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/cafegangle.json": "67d8e5543ce2904c4a97c025f3f97a112320e7eba941863cbeffae53bd1f6d9e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.json": "4f47699c07df95af3f977139a30db1a731818a80bb1952e1ed449571705a0788",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/selection.json": "0d1f57c2f5dcb1726750c230997976786df47cee10f1ada1e54bef981176314f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+    "assets/encore/stance/cafepomni.png": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.json": "10a2f5f17d349d7dd58dd7f15b97a3f69f50df439c9d502f768521f202580591",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/stance.json": "acb9c2daeff576c3f90ef7006da367f10207c6a3279c3e0115ffe774931d226c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.png": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.json": "60ffe58732b1d4c98c44b24faafc1dbd178c2542c606191f8a1b0f9ce7d1bc45",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/intro.json": "8b2a039fc526e7459beee4d44c366e6661afd7505686da36c222f0cdee86a179",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.png": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.json": "9aa332b45a3354b77ce5e8919d598333e83f2a680fb3ea6547b0054ca75d600e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/attack.json": "d388ef398e293dd7ba181dcc3669c4238f89b9a84ed93bf201c73df87f2a461c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.png": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.json": "5096fdde729ef3eb8fd6a2f594fd50ce57e71ccecaa34846be184df1d64a0fea",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/heavy.json": "e49c42671c7773c525617c6ccb888653ce45f5bd3f635eba1d4253647cddb79a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.png": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.json": "9560dbd8df34239250c376753cb4802441fc139aa69506b0b96a5c64eb89eb8e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/hit.json": "1f97af492e32840a3189cea40710d8eae8575d4a1d51d6dc05b6db76474ed3ba",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.json": "90e6234500bd5531f0a6798a2bd2ae8d5f91ad0f1f32e39bb13023a0218308f4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/walk.json": "8bda4df90c33ac21c07c39f3a170833cf1a6946172365411c9dcfc1d4a91d710",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.png": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.json": "02cb9b03e93ffe16d629a5f4368686666ed815c515ed8afe09049155d6a3db81",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/jump.json": "17b12d518135a8c734835aa7baafea7b14f32c0aa8ba9dafc3c25eebc30f62a4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.png": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.json": "3a7e2f18058b92d71511d05cddba883eea047cea9d1eb8a8881a1e9bfbfed7a5",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/crouch.json": "e14b7602169085cbd2c8b14a3a7478321c534bfe8b2f1458269aaef50d58ff69",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.png": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.json": "64abd2786886f7b136081a68de874cef6a2ee9487764bf2fa7859b6f409ee744",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/victory.json": "051bf7bd69fc602b948f8a31abdc4324900e882382707128c56b7522815800b2",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.png": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.json": "e6656bb62e8cf07275ae72f6d021c2f318d3797c12f9bee4c78ef53b6f157735",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/defeat.json": "3513ec4faa1a8695693aa61175da8f69fe5efbf65350f372714ab1048f8c8dfc",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.png": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/cafezooble.json": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.json": "442103f2f55d8d485f2bbdd8f452970945b9212b29a509d7f4e918f9b0a636ab",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/selection-correction.json": "9764555ababede86c0bea058094d951a0a3d16d6a8dd14c230be5fbb7c02192e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attempts/selection-halo/native.png": "d073adc2b7db8e8e8186bda0a66ddff04c64a302746ea8bb71800a5b7084d111",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.json": "b250668877ab2325fd9cd5dbfb7254eb4f3b88892fb4cb13b0428e44e97e0283",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/stance.json": "b474ca574fb76cbb316182a933b29840c6d3ef1d3f224a24f673594ffe65bd18",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.png": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.json": "0ad13a2b38a8c0931e18da9b8030d202ba354b3b229fcc686a1999bbb8ef1191",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/intro.json": "7db5708184d2004a57b6290ce29e2e747c2e7cab35214978f567f9592e73f0f4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.png": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.json": "13dc87a491bc9a26f9160515864bac37e79fe0784dad1daca136eadda1614f9c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/attack.json": "acc1c3ad88f7d863bed1129116565905ca3954cd4eebec714850054b54900834",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.png": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.json": "69153f99988dc477eba37841a1d987c2dd83ba23ac98bb6aa6c5086493d8b230",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/heavy.json": "08e2b70bfbc2f75e905f56cdbb5a08a68449805eb337c7786d6810c7b9c8df14",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.png": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.json": "02dfbe02b147f293c18770e19a8eed7dc81ea16bdf3aa28cf720608eca9f50c8",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/hit.json": "47af8ddcae0d0d65d46cee7fb777fe24e28a62edcd749825bb1aee5e805eb49f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.png": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.json": "8310874ccc70dd9e360d04e7c56760e53dd8499fcf70c69c973e7f233842d0cd",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/walk.json": "3765a40ffc534e7dc5656cf9dfe85a6e4207666f2d6e9f5892029c6f1d6c565a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.png": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.json": "d69a26f3fb96e289167bb5014d7e7d8e381d00751139211e6b426ca838f69536",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/jump.json": "85e9a97d344f6300828db32d1b7b8c69a1dd9b34b9596c7bd3de925ace71b892",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.png": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.json": "677b587e36a66430d8046426b8925859500c885f18669449a640ff5690fe029e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/crouch.json": "5e2bb03ef46fef6135e23332ab11b7289f8eca422fa59d8f790442a4fa1264fe",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.png": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.json": "f084fa15b6183d1d8ca9150f45f904a1c175a18dd9e2a22f4df48c21425b503c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/victory.json": "f9fd4103e8c1fae1b2dc548cf49df7e0b91276c22736afe9859d0f5a4e675bac",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.png": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.json": "f716a89d01f7e9efdf425f9eb7b487abed85bd225c3d34b3d2361f6a1b80e5b7",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/defeat.json": "4d3b0a38d6e0dec472487fdacc211276ae4a7b876f34d83b1c43a2212e59767f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.png": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559"
+  },
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-274a8da5b442",
+    "artVersion": "6a11a21a795ee221",
+    "artFiles": 5907,
+    "artBytes": 3215944062,
+    "sha256": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0"
+  },
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 25,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 480,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 25,
+    "soundEffects": 26,
+    "offlineImages": 5907,
+    "offlineBytes": 3215944062,
+    "features": 106,
+    "production": 3344,
+    "scenarios": 348,
+    "qa": 2493,
+    "presentationSequences": 270,
+    "animatedStages": 25,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 25,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54,
+    "costumeAdditions": 45,
+    "pendingCostumeAdditions": 0,
+    "pendingCostumeArtFiles": 0,
+    "crossovers": 384,
+    "sheets": 11,
+    "nativeTables": 10,
+    "sources": 164,
+    "addedProductionRows": 36,
+    "addedQaRows": 39,
+    "addedSourceRows": 3,
+    "addedStageRows": 0,
+    "costumePngs": 495,
+    "crossoverCostumes": 384,
+    "crossoverDrawings": 3847,
+    "newIndividualDrawingRows": 33,
+    "historicalCells": 82697,
+    "totalNativeCells": 83423
+  },
+  "formulas": [
+    {
+      "cell": "B7",
+      "formula": "=COUNTA('Combattants'!A6:A59)",
+      "value": 54
+    },
+    {
+      "cell": "B8",
+      "formula": "=COUNTA('Techniques'!A6:A545)",
+      "value": 540
+    },
+    {
+      "cell": "B9",
+      "formula": "=COUNTA('Arènes'!A6:A30)",
+      "value": 25
+    },
+    {
+      "cell": "B10",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3349,\"Costume crossover\")+COUNTIFS('Production'!B6:B3349,\"Tenue Circus\")",
+      "value": 480
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Arrangement d’arène\")",
+      "value": 54
+    },
+    {
+      "cell": "B15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)",
+      "value": 85
+    },
+    {
+      "cell": "C15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)",
+      "value": 7
+    },
+    {
+      "cell": "D15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)",
+      "value": 12
+    },
+    {
+      "cell": "E15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)",
+      "value": 2
+    },
+    {
+      "cell": "F15",
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)",
+      "value": 106
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,B$14)",
+      "value": 2164
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,C$14)",
+      "value": 957
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,D$14)",
+      "value": 54
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3349,E$14)",
+      "value": 169
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3349)",
+      "value": 3344
+    },
+    {
+      "cell": "B17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)",
+      "value": 343
+    },
+    {
+      "cell": "C17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)",
+      "value": 0
+    },
+    {
+      "cell": "D17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)",
+      "value": 4
+    },
+    {
+      "cell": "E17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)",
+      "value": 1
+    },
+    {
+      "cell": "F17",
+      "formula": "=COUNTA('Scénarios'!A6:A353)",
+      "value": 348
+    },
+    {
+      "cell": "B18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)",
+      "value": 105
+    },
+    {
+      "cell": "C18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)",
+      "value": 74
+    },
+    {
+      "cell": "D18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)",
+      "value": 0
+    },
+    {
+      "cell": "E18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)",
+      "value": 0
+    },
+    {
+      "cell": "F18",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3349,\"Tableau d’histoire\")&\" tableaux\"",
+      "value": "54 routes et 324 tableaux"
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "value": "216 briefings de rencontre"
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Arène\",'Production'!D6:D3349,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "value": "25 thèmes musicaux d’arènes"
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2498,B21)",
+      "value": 2473
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2498,C21)",
+      "value": 0
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2498,D21)",
+      "value": 17
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2498,E21)",
+      "value": 2
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2498)",
+      "value": 2493
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "value": "26 motifs sonores synthétiques"
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2498,\"Partiel\")",
+      "value": 1
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "value": "270 séquences de présentation"
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "value": "25 ambiances visuelles animées"
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Costume\")&\" costumes historiques redessinés\"",
+      "value": "20 costumes historiques redessinés"
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3349,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "value": "715 fiches, hors tenues crossover"
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Finition visuelle\")&\" présentations de KO\"",
+      "value": "162 présentations de KO"
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3349,\"Arène\",'Production'!D6:D3349,\"Ambiance sonore\",'Production'!E6:E3349,\"Implémenté\")&\" ambiances sonores originales\"",
+      "value": "25 ambiances sonores originales"
+    }
+  ],
+  "statusMutationCell": "E3314",
+  "scopes": [
+    [
+      "Synthèse",
+      "A1:H18",
+      "summary-top"
+    ],
+    [
+      "Synthèse",
+      "A19:H35",
+      "summary-bottom"
+    ],
+    [
+      "Fonctionnalités",
+      "A62:I62",
+      "feature-pre-03"
+    ],
+    [
+      "Fonctionnalités",
+      "A95:I95",
+      "feature-prd-11"
+    ],
+    [
+      "Production",
+      "A3314:J3316",
+      "production-1"
+    ],
+    [
+      "Production",
+      "A3317:J3320",
+      "production-2"
+    ],
+    [
+      "Production",
+      "A3321:J3324",
+      "production-3"
+    ],
+    [
+      "Production",
+      "A3325:J3328",
+      "production-4"
+    ],
+    [
+      "Production",
+      "A3329:J3332",
+      "production-5"
+    ],
+    [
+      "Production",
+      "A3333:J3336",
+      "production-6"
+    ],
+    [
+      "Production",
+      "A3337:J3340",
+      "production-7"
+    ],
+    [
+      "Production",
+      "A3341:J3344",
+      "production-8"
+    ],
+    [
+      "Production",
+      "A3345:J3348",
+      "production-9"
+    ],
+    [
+      "Production",
+      "A3349:J3349",
+      "production-10"
+    ],
+    [
+      "QA",
+      "A2460:I2463",
+      "qa-1"
+    ],
+    [
+      "QA",
+      "A2464:I2467",
+      "qa-2"
+    ],
+    [
+      "QA",
+      "A2468:I2471",
+      "qa-3"
+    ],
+    [
+      "QA",
+      "A2472:I2475",
+      "qa-4"
+    ],
+    [
+      "QA",
+      "A2476:I2479",
+      "qa-5"
+    ],
+    [
+      "QA",
+      "A2480:I2483",
+      "qa-6"
+    ],
+    [
+      "QA",
+      "A2484:I2487",
+      "qa-7"
+    ],
+    [
+      "QA",
+      "A2488:I2491",
+      "qa-8"
+    ],
+    [
+      "QA",
+      "A2492:I2495",
+      "qa-9"
+    ],
+    [
+      "QA",
+      "A2496:I2498",
+      "qa-10"
+    ],
+    [
+      "Références",
+      "A167:E169",
+      "references-new"
+    ],
+    [
+      "Références",
+      "A64:E64",
+      "references-offline"
+    ],
+    [
+      "Références",
+      "A170:E180",
+      "references-footer"
+    ]
+  ],
+  "historicalFooterShift": 3,
+  "assetSlotChecks": [
+    {
+      "appearanceId": "caferagatha",
+      "slot": "selection",
+      "file": "assets/encore/selection/caferagatha.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.json",
+      "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+      "bytes": 1531705,
+      "productionId": "WAVE32-caferagatha-selection",
+      "qaId": "WAVE32-asset-caferagatha-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        192,
+        178,
+        816,
+        1494
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "stance",
+      "file": "assets/encore/stance/caferagatha.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.json",
+      "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+      "bytes": 1524985,
+      "productionId": "WAVE32-caferagatha-stance",
+      "qaId": "WAVE32-asset-caferagatha-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        152,
+        178,
+        859,
+        1432
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "intro",
+      "file": "assets/encore/poses/caferagatha/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.json",
+      "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+      "bytes": 1507690,
+      "productionId": "WAVE32-caferagatha-intro",
+      "qaId": "WAVE32-asset-caferagatha-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        162,
+        176,
+        859,
+        1455
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "attack",
+      "file": "assets/encore/poses/caferagatha/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.json",
+      "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+      "bytes": 1560043,
+      "productionId": "WAVE32-caferagatha-attack",
+      "qaId": "WAVE32-asset-caferagatha-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        103,
+        172,
+        956,
+        1433
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "heavy",
+      "file": "assets/encore/poses/caferagatha/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.json",
+      "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+      "bytes": 1536729,
+      "productionId": "WAVE32-caferagatha-heavy",
+      "qaId": "WAVE32-asset-caferagatha-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        46,
+        207,
+        955,
+        1427
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "hit",
+      "file": "assets/encore/poses/caferagatha/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.json",
+      "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+      "bytes": 1485446,
+      "productionId": "WAVE32-caferagatha-hit",
+      "qaId": "WAVE32-asset-caferagatha-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        84,
+        229,
+        887,
+        1441
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "walk",
+      "file": "assets/encore/poses/caferagatha/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.json",
+      "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+      "bytes": 1576424,
+      "productionId": "WAVE32-caferagatha-walk",
+      "qaId": "WAVE32-asset-caferagatha-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        131,
+        131,
+        890,
+        1446
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "jump",
+      "file": "assets/encore/poses/caferagatha/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.json",
+      "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+      "bytes": 1552602,
+      "productionId": "WAVE32-caferagatha-jump",
+      "qaId": "WAVE32-asset-caferagatha-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        157,
+        172,
+        931,
+        1407
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "crouch",
+      "file": "assets/encore/poses/caferagatha/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.json",
+      "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+      "bytes": 1500321,
+      "productionId": "WAVE32-caferagatha-crouch",
+      "qaId": "WAVE32-asset-caferagatha-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        114,
+        294,
+        955,
+        1380
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "victory",
+      "file": "assets/encore/poses/caferagatha/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.json",
+      "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+      "bytes": 1520099,
+      "productionId": "WAVE32-caferagatha-victory",
+      "qaId": "WAVE32-asset-caferagatha-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        190,
+        160,
+        829,
+        1469
+      ]
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "defeat",
+      "file": "assets/encore/poses/caferagatha/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.json",
+      "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+      "bytes": 1455459,
+      "productionId": "WAVE32-caferagatha-defeat",
+      "qaId": "WAVE32-asset-caferagatha-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        44,
+        294,
+        981,
+        1362
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafegangle.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.json",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+      "bytes": 891954,
+      "productionId": "WAVE32-cafegangle-selection",
+      "qaId": "WAVE32-asset-cafegangle-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        182,
+        32,
+        875,
+        1422
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafegangle.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.json",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+      "bytes": 860381,
+      "productionId": "WAVE32-cafegangle-stance",
+      "qaId": "WAVE32-asset-cafegangle-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        165,
+        80,
+        902,
+        1393
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafegangle/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.json",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+      "bytes": 883421,
+      "productionId": "WAVE32-cafegangle-intro",
+      "qaId": "WAVE32-asset-cafegangle-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        101,
+        65,
+        993,
+        1406
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafegangle/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.json",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+      "bytes": 887721,
+      "productionId": "WAVE32-cafegangle-attack",
+      "qaId": "WAVE32-asset-cafegangle-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        109,
+        83,
+        1004,
+        1400
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafegangle/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.json",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+      "bytes": 954409,
+      "productionId": "WAVE32-cafegangle-heavy",
+      "qaId": "WAVE32-asset-cafegangle-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        60,
+        60,
+        1161,
+        1267
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafegangle/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.json",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+      "bytes": 920043,
+      "productionId": "WAVE32-cafegangle-hit",
+      "qaId": "WAVE32-asset-cafegangle-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        188,
+        55,
+        961,
+        1412
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafegangle/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.json",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+      "bytes": 898347,
+      "productionId": "WAVE32-cafegangle-walk",
+      "qaId": "WAVE32-asset-cafegangle-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        162,
+        88,
+        925,
+        1391
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafegangle/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.json",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+      "bytes": 984748,
+      "productionId": "WAVE32-cafegangle-jump",
+      "qaId": "WAVE32-asset-cafegangle-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        111,
+        81,
+        1018,
+        1313
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafegangle/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.json",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+      "bytes": 992524,
+      "productionId": "WAVE32-cafegangle-crouch",
+      "qaId": "WAVE32-asset-cafegangle-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1198,
+        1313
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        135,
+        93,
+        1031,
+        1249
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafegangle/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.json",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+      "bytes": 897634,
+      "productionId": "WAVE32-cafegangle-victory",
+      "qaId": "WAVE32-asset-cafegangle-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        202,
+        35,
+        875,
+        1425
+      ]
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafegangle/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.json",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+      "bytes": 937073,
+      "productionId": "WAVE32-cafegangle-defeat",
+      "qaId": "WAVE32-asset-cafegangle-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        157,
+        77,
+        1106,
+        1255
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafezooble.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.json",
+      "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+      "bytes": 1414609,
+      "productionId": "WAVE32-cafezooble-selection",
+      "qaId": "WAVE32-asset-cafezooble-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        208,
+        71,
+        783,
+        1496
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafezooble.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.json",
+      "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+      "bytes": 1453219,
+      "productionId": "WAVE32-cafezooble-stance",
+      "qaId": "WAVE32-asset-cafezooble-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        101,
+        96,
+        913,
+        1447
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafezooble/intro.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.json",
+      "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+      "bytes": 1422045,
+      "productionId": "WAVE32-cafezooble-intro",
+      "qaId": "WAVE32-asset-cafezooble-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        203,
+        49,
+        859,
+        1503
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafezooble/attack.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.json",
+      "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+      "bytes": 1438638,
+      "productionId": "WAVE32-cafezooble-attack",
+      "qaId": "WAVE32-asset-cafezooble-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        50,
+        100,
+        970,
+        1432
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafezooble/heavy.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.json",
+      "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+      "bytes": 842534,
+      "productionId": "WAVE32-cafezooble-heavy",
+      "qaId": "WAVE32-asset-cafezooble-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        60,
+        94,
+        1101,
+        1252
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafezooble/hit.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.json",
+      "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+      "bytes": 1418943,
+      "productionId": "WAVE32-cafezooble-hit",
+      "qaId": "WAVE32-asset-cafezooble-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        138,
+        38,
+        799,
+        1511
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafezooble/walk.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.json",
+      "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+      "bytes": 1487567,
+      "productionId": "WAVE32-cafezooble-walk",
+      "qaId": "WAVE32-asset-cafezooble-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        94,
+        63,
+        904,
+        1469
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafezooble/jump.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.json",
+      "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+      "bytes": 1517991,
+      "productionId": "WAVE32-cafezooble-jump",
+      "qaId": "WAVE32-asset-cafezooble-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        145,
+        39,
+        935,
+        1464
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafezooble/crouch.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.json",
+      "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+      "bytes": 1482236,
+      "productionId": "WAVE32-cafezooble-crouch",
+      "qaId": "WAVE32-asset-cafezooble-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        55,
+        167,
+        963,
+        1365
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafezooble/victory.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.json",
+      "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+      "bytes": 1395721,
+      "productionId": "WAVE32-cafezooble-victory",
+      "qaId": "WAVE32-asset-cafezooble-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        156,
+        41,
+        817,
+        1502
+      ]
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafezooble/defeat.png",
+      "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.png",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.json",
+      "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559",
+      "bytes": 1468896,
+      "productionId": "WAVE32-cafezooble-defeat",
+      "qaId": "WAVE32-asset-cafezooble-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        52,
+        166,
+        971,
+        1426
+      ]
+    }
+  ],
+  "activeAssetDigests": [
+    {
+      "file": "assets/encore/selection/caferagatha.png",
+      "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+      "bytes": 1531705
+    },
+    {
+      "file": "assets/encore/stance/caferagatha.png",
+      "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+      "bytes": 1524985
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/intro.png",
+      "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+      "bytes": 1507690
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/attack.png",
+      "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+      "bytes": 1560043
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/heavy.png",
+      "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+      "bytes": 1536729
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/hit.png",
+      "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+      "bytes": 1485446
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/walk.png",
+      "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+      "bytes": 1576424
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/jump.png",
+      "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+      "bytes": 1552602
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/crouch.png",
+      "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+      "bytes": 1500321
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/victory.png",
+      "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+      "bytes": 1520099
+    },
+    {
+      "file": "assets/encore/poses/caferagatha/defeat.png",
+      "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+      "bytes": 1455459
+    },
+    {
+      "file": "assets/encore/selection/cafegangle.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+      "bytes": 891954
+    },
+    {
+      "file": "assets/encore/stance/cafegangle.png",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+      "bytes": 860381
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/intro.png",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+      "bytes": 883421
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/attack.png",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+      "bytes": 887721
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/heavy.png",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+      "bytes": 954409
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/hit.png",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+      "bytes": 920043
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/walk.png",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+      "bytes": 898347
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/jump.png",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+      "bytes": 984748
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/crouch.png",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+      "bytes": 992524
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/victory.png",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+      "bytes": 897634
+    },
+    {
+      "file": "assets/encore/poses/cafegangle/defeat.png",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+      "bytes": 937073
+    },
+    {
+      "file": "assets/encore/selection/cafezooble.png",
+      "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+      "bytes": 1414609
+    },
+    {
+      "file": "assets/encore/stance/cafezooble.png",
+      "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+      "bytes": 1453219
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/intro.png",
+      "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+      "bytes": 1422045
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/attack.png",
+      "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+      "bytes": 1438638
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/heavy.png",
+      "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+      "bytes": 842534
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/hit.png",
+      "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+      "bytes": 1418943
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/walk.png",
+      "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+      "bytes": 1487567
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/jump.png",
+      "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+      "bytes": 1517991
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/crouch.png",
+      "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+      "bytes": 1482236
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/victory.png",
+      "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+      "bytes": 1395721
+    },
+    {
+      "file": "assets/encore/poses/cafezooble/defeat.png",
+      "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559",
+      "bytes": 1468896
+    }
+  ],
+  "qaEvidence": {
+    "tests": 432,
+    "failures": 0,
+    "bothBuildsPassed": true,
+    "costumeCanvasDrawChecks": 60,
+    "stageCanvasChecks": 0,
+    "nativeDistributionComparisons": 66,
+    "moduleComparisons": 38,
+    "historicalEncoreFiles": 5830
+  }
+}

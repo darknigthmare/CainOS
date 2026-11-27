@@ -1,0 +1,26 @@
+{
+  "appearanceId": "cafezooble",
+  "slot": "walk",
+  "useCase": "identity-preserve",
+  "prompt": "Use case: identity-preserve.\nCreate exactly ONE new full-body 2D sprite pose of Cafe Zooble. Image 1 is the accepted game selection: lock this exact character design, face identity, limb assembly, palette, proportions, clothing and crisp flat linework. Image 2 is the official Cafe poster: only Zooble at center-right supports costume details, do not add any other character.\nINVARIANTS: pink triangular head with NO mouth; large yellow spiral eye and smaller white eye, purple lids and three black lashes under small eye; cyan lightning antenna and separate black/white striped spring antenna, small pink shoulder wing. Exactly two arms, GREEN forearm ending in YELLOW mitten and RED arm ending in pale GRAY claw; retain both white cuffs. White short sleeves and bib with tiny dark buttons, purple tailored vest and bow tie, long NAVY apron with purple trim and side sash. Exactly two asymmetrical legs, gray fabric on both, one ending in YELLOW SPIRAL foot and the other in NAVY laced closed shoe. No gold shoe strip, no second normal shoe, no bare dotted torso, no mouth. Preserve the same shoulder and leg sides as the seed, do not mirror the outfit.\nPOSE: One walking stride to SCREEN RIGHT: navy dress shoe planted forward with bent knee, yellow spiral foot lifted slightly behind, arms counter-swing mildly, apron follows the stride. Head and eyes right, no motion streaks, both hands and both feet visible as the same asymmetric parts.\nFlat cel shading, no rendered lighting effects, entire character occupies around 72 percent of a portrait canvas with clear transparent margins at top/bottom/sides. If a pose is wide, zoom out to include it fully. Native transparent RGBA; outside silhouette alpha zero, clean outlines and solid painted interior. No environment, ground, cast shadow, glowing aura, trails, text, watermark, panel, duplicate figure, food, glass, tray or extra limbs. One character, one pose, one image. Original static game pose with official outfit.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg"
+  ],
+  "referenceRoles": [
+    "Accepted Cafe Zooble selection identity/assembly/palette anchor",
+    "Official Cafe costume reference; only Zooble"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "definitionSha256": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b"
+  },
+  "jobPath": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/walk.json"
+}
+

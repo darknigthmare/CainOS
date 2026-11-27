@@ -1,0 +1,233 @@
+{
+  "schema": "encore-static-base-canvas-blobs/v1",
+  "date": "2026-11-24",
+  "repository": "darknigthmare/CainOS",
+  "complete": true,
+  "count": 26,
+  "imageCount": 25,
+  "textReportCount": 1,
+  "imageBytes": 1958172,
+  "totalBytes": 2256561,
+  "preservation": "Exact existing JPEG and UTF-8 report bytes; no render, encoding change, image mutation or test run.",
+  "verification": "Every transfer was matched to the disk byte length, SHA-256 and Git blob SHA, then to the SHA returned by GitHub create_blob. Sources were read again and matched before writing this manifest.",
+  "publication": "Immutable blobs only; no tree, commit or ref created by this task.",
+  "rows": [
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-cafecaine.jpg",
+      "bytes": 72438,
+      "sha": "2e0658f9b240ab0fe03f30c3b08b5b535a57de1b",
+      "sha256": "2b9131f47251e5a84cfe8bf3c4397d30e29623a8510996f8e9640b3d17ace196",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-cafejax.jpg",
+      "bytes": 60689,
+      "sha": "fffd3427557cd40ee0af191e83394ba468db6459",
+      "sha256": "403e6a16d0c15a2c8667bb37866d45df5ce4fabe7a0dab0a8964a9f82a5db26e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-cocktailzooble.jpg",
+      "bytes": 71148,
+      "sha": "5eaff6e504caae1c16e4fba535b09bb23d776707",
+      "sha256": "a77849fc970e94def4d64529702cff529ad5ddd64ad453a0d76f413e81927968",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-contortionistzooble.jpg",
+      "bytes": 65933,
+      "sha": "5a12254cb5ba96d80d7d53081498b4fc042e4a0c",
+      "sha256": "3d72b6a5cdc2b2a965075fae7774e81c0cb25d6e6f378edc723028d4815fdf3e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gameoverse-ribbit-fusion.jpg",
+      "bytes": 57949,
+      "sha": "0445929bf45f9922bd13e3d383d4551c00515cef",
+      "sha256": "b45a5cd0a4b39818162c44373df2231cc7cb05b5091ba90e0e2f0375c798d288",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gameoverse-ribbit-hommage.jpg",
+      "bytes": 57318,
+      "sha": "b452b5160e8dea2e51b0c2324c1acee9782699ad",
+      "sha256": "5aa82e8681f453696fe99342e23608d27b7abbadba2fa4774b50c3994c1b9c0a",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gameoverse-ribbit-resident.jpg",
+      "bytes": 59202,
+      "sha": "de319f5614373cd9c47bc94ce94aef6769b79790",
+      "sha256": "8919425caeb8505837b48162d9a4e534137aded73b5c1c3410ff06c3d385a66f",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gaslightdistrict-ribbit-fusion.jpg",
+      "bytes": 62837,
+      "sha": "46c36cb0bcf6f967fb66f831910d17064ecae26e",
+      "sha256": "235a52047418d2333bbe42f7b18071be91298cda2977d67a879523daeb5f070b",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gaslightdistrict-ribbit-hommage.jpg",
+      "bytes": 52601,
+      "sha": "78319441249e5b9884bf1b6f5ef68e8757b7ab2b",
+      "sha256": "db3b5e08913739ff9de2509d101a22c1edcc9a3fc52c23135147457736179dac",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-gaslightdistrict-ribbit-resident.jpg",
+      "bytes": 55118,
+      "sha": "066042863966d1b9b1413ddef3a80ad690785acf",
+      "sha256": "3cc0e238c4aa73e7c07f1ab1c754ebd4d1385a473b7f9452db2098e773de6669",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-knightsofguinevere-ribbit-fusion.jpg",
+      "bytes": 60472,
+      "sha": "ceb82b7cee118191b915bc48174c6a4f61ce90e4",
+      "sha256": "706bac893f76166fd2cb51888dcb27ee7469bf8bdb636af6607345ae57bbe432",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-knightsofguinevere-ribbit-hommage.jpg",
+      "bytes": 57193,
+      "sha": "692abfa0e7d6e9c22eeae887676a4a6eca409228",
+      "sha256": "0f28a0cd9b740ab25f85d2952c2923224688e679abf7c63f28a05c612109c4ca",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-knightsofguinevere-ribbit-resident.jpg",
+      "bytes": 56663,
+      "sha": "dd2481ebf74261ee3e5da4a636a7cb86462a73b2",
+      "sha256": "93a7f2005751753781f7cfb95fa2f91993ee6f9e482fd7d1b5833f6141b377fe",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-lackadaisy-ribbit-fusion.jpg",
+      "bytes": 55604,
+      "sha": "61c72d76341e15c0da703bf9776c2819f62a759a",
+      "sha256": "fafd15a32cbe048089bd44f8a71164c61bf3f461fee5402585d2c85c0029ad29",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-lackadaisy-ribbit-hommage.jpg",
+      "bytes": 53699,
+      "sha": "6db1b8697bd9135e15b4ada32d3057fbfdf5ae40",
+      "sha256": "190d8990872a46bfcb995b3bf9a856df23429a178603e5b265e42602f06646c9",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-lackadaisy-ribbit-resident.jpg",
+      "bytes": 52916,
+      "sha": "f58507cf4c62d361ac6c267b9051d021f4ff9587",
+      "sha256": "c2f7260ee9ed6facdba386521c85a12a7b7b2944970c2311c8468ba592f73eb7",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-smg4-ribbit-fusion.jpg",
+      "bytes": 54660,
+      "sha": "50f7a2c6cbc84ddc873048822ebc23196df60714",
+      "sha256": "253d5ab4bac3f739282ddcd0270966555830cc9c922acc52b5960689afe53eac",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-smg4-ribbit-hommage.jpg",
+      "bytes": 52372,
+      "sha": "0106962d824341d347bf472d9c9d46523bbc3767",
+      "sha256": "3cc8aa4cf59f5fe709422dfea0908671fe10dc9a063dd0cb9bdd46932fca4b23",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-smg4-ribbit-resident.jpg",
+      "bytes": 55452,
+      "sha": "d0aeb95513a2a9b87622c479334ffbb3bf2b4b73",
+      "sha256": "2cfec223c340665d89fabd2171961a3fe847c2b1edf5d51bf436339d847d0d69",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-ultrajumpmania-ribbit-fusion.jpg",
+      "bytes": 64075,
+      "sha": "baaf649de83691ce1f29260ad4b670d93bd59d31",
+      "sha256": "a9f83170509893eb0f177e068578cac302a4a042e596ca528e79a7e68f5ce3e4",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-ultrajumpmania-ribbit-hommage.jpg",
+      "bytes": 63800,
+      "sha": "c36039f833f68a692454d957d38fcdc2c9d215ef",
+      "sha256": "245c4523be35d6b636a944a329bc2977cd6ddc181a0969ef533aff5d30fdc3dc",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-glitch-ultrajumpmania-ribbit-resident.jpg",
+      "bytes": 63541,
+      "sha": "527c0ef9f02f3fa3b28565c4eb04cbad92bb768c",
+      "sha256": "28fdec88ab4442a3ffa45120a6433dc90ec7ca210fade2deba443df7d796e90b",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-hotdogabel.jpg",
+      "bytes": 61435,
+      "sha": "139a1846fa8c339bd00bd1d28e10ca067de0b8fd",
+      "sha256": "132377289380490546d4c3b964e62ffc19c409c69b3303267f8e13ae171e9677",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-ribbitsuitjax.jpg",
+      "bytes": 77862,
+      "sha": "1ffe0f2c760eabc5cb88272813e527acdbf8ab2d",
+      "sha256": "c322941e0a87c4720305e550238b08144262aaaad45cb32a57e6fcd467b77da5",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/bases-overview.jpg",
+      "bytes": 513195,
+      "sha": "207493084b2453f4b1998e7884fa92681a8966e6",
+      "sha256": "1089cf8703bbc56501a6fabab38ae6a106223ad3abb13f4f73db5a624488e712",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/canvas/base-canvas-review.json",
+      "bytes": 298389,
+      "sha": "5340de86516cdc5c8229f23c144d73476620c474",
+      "sha256": "0b5fbc939aa28ef26692a6907bb904daf828121c1cef3977f663f083db957c5e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "encoding": "utf-8"
+    }
+  ],
+  "additionalAuthorReview": {
+    "path": "docs/art-generation/base-sprites-20261124/crossovers/canvas-visual-review.md",
+    "bytes": 6999,
+    "sha": "35cdaf90414763933ea1771b0a09a2cc9a9e95d5",
+    "sha256": "24aa81577f78e3dc3f45a8d55260ad367f4fd14be8b1b6daf0c557adf028e57e",
+    "gitBlobSHAEqualsLocal": true,
+    "scope": "18 crossover family sheets and overview visually inspected; three Ultra portraits remain intentional upper-body selections."
+  }
+}

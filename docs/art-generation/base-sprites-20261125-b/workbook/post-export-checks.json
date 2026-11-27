@@ -1,0 +1,176 @@
+{
+  "schema": "encore-workbook-post-export-checks/v1",
+  "createdAt": "2026-11-25T08:29:28.965121+00:00",
+  "status": "passed",
+  "scope": "Targeted existing tracker and filesystem publication tests after installation, installed three-file coherence, frozen evidence and local README references. No workbook re-export or runtime/test mutation.",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/combat-art-tracker-formats.test.mjs",
+        "tests/combat-workbook-publication.test.mjs"
+      ],
+      "cwd": "/workspace/scratch/6f9ceeefa959/CainOS",
+      "startedAt": "2026-11-25T08:28:35.655996+00:00",
+      "exitCode": 0,
+      "summary": [
+        "ℹ tests 14",
+        "ℹ suites 0",
+        "ℹ pass 14",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 562.935105"
+      ],
+      "outputBytes": 1455,
+      "outputSha256": "b5340bc2f7403fe1df216c2894ee05475f4d16f3c60f4f6f710d5eee33f6a2b4",
+      "command": "node --test tests/combat-art-tracker-formats.test.mjs tests/combat-workbook-publication.test.mjs",
+      "stdoutAndStderr": "✔ published PNG art updates real tracker paths without closing animation or reference reviews (5.432976ms)\n✔ a mixed-format crossover counts its actual PNG heavy and preserves editorial notes (1.505339ms)\n✔ a declared static base needs only portrait and stance and preserves its review note (1.886809ms)\n✔ workbook publication commits every file for all eight previous presence combinations (114.132248ms)\n✔ failure of the first replacement restores every previous file or absence (59.315679ms)\n✔ failure of the second replacement restores every previous file or absence (66.930581ms)\n✔ failure of the third replacement restores every previous file or absence (76.602081ms)\n✔ a partially copied source aborts before replacements and cleans only private files (4.933492ms)\n✔ a partial backup failure preserves all originals and performs no replacement (9.135354ms)\n✔ all originals are backed up and journaled before the first replacement (7.644871ms)\n✔ a failed restoration retains every backup and blocks another writer (7.724297ms)\n✔ failure to restore a prior absence retains recovery data and records that absence (10.153717ms)\n✔ destinations that are symlinks are rejected before any replacement (6.08917ms)\n✔ invalid duplicate traversal and reserved filenames fail before filesystem changes (13.817842ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 562.935105\n",
+      "totals": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "--test-name-pattern=^the production tracker counts individual published poses and preserves notes across an update$",
+        "tests/combat-crossovers.test.mjs"
+      ],
+      "cwd": "/workspace/scratch/6f9ceeefa959/CainOS",
+      "startedAt": "2026-11-25T08:28:36.314528+00:00",
+      "exitCode": 0,
+      "summary": [
+        "ℹ tests 1",
+        "ℹ suites 0",
+        "ℹ pass 1",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 178.73623"
+      ],
+      "outputBytes": 225,
+      "outputSha256": "093d9f405de862950ff3d9c55c1e31346bc66be2be2590678d77faa4c1a0ef57",
+      "command": "node --test '--test-name-pattern=^the production tracker counts individual published poses and preserves notes across an update$' tests/combat-crossovers.test.mjs",
+      "stdoutAndStderr": "✔ the production tracker counts individual published poses and preserves notes across an update (2.506847ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 178.73623\n",
+      "totals": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/workspace/scratch/6f9ceeefa959/CainOS",
+      "startedAt": "2026-11-25T08:28:36.577816+00:00",
+      "exitCode": 0,
+      "summary": [],
+      "outputBytes": 0,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": "git diff --check",
+      "stdoutAndStderr": "",
+      "totals": {}
+    }
+  ],
+  "targetedTests": {
+    "tests": 15,
+    "pass": 15,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "canonicalFiles": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "sha256": "51048246e2baf909e301eeba8e8d6a73b67b4b1205c4f651831b32a430bff277",
+      "bytes": 861286,
+      "matchesPublication": true
+    },
+    "docs/combat-tracker-data.json": {
+      "sha256": "bf3f7cc6ee0bbbe86859d0118122c18f9e7a4a3234a8b0c6f6b25808d9c49365",
+      "bytes": 7391443,
+      "matchesPublication": true
+    },
+    "docs/combat-workbook-verification.json": {
+      "sha256": "56c2d5685ffc43cc041fd7358de603eb7e94a5d8fea7602aa8d88a7caffce267",
+      "bytes": 125491,
+      "matchesPublication": true
+    }
+  },
+  "installedConsistency": {
+    "publicationHashesMatch": true,
+    "workbookAndCompanionHashesMatchReview": true,
+    "countsMatchInstalledReview": true,
+    "allRecordedSourceDigestsCurrent": true,
+    "sourceDigestsChecked": 164,
+    "gameVerificationUnchanged": true,
+    "historicalQaEvidenceUnchanged": true
+  },
+  "readmeReferences": {
+    "file": "docs/art-generation/base-sprites-20261125-b/workbook/README.md",
+    "sha256": "dbd52cb230dd83301cb3926ddcde22129b1b2ba98cf9bafee2403fb88abaa9b3",
+    "markdownLinks": 0,
+    "plainFileReferences": 4,
+    "verifiedLocalReferences": [
+      {
+        "reference": "visual-review.json",
+        "resolvedFile": "docs/art-generation/base-sprites-20261125-b/workbook/visual-review.json",
+        "exists": true,
+        "sha256": "9ff8e4f23230bc9df7a0023f022754a895f41a9cacb24f131bce02a482244535"
+      },
+      {
+        "reference": "../verification.json",
+        "resolvedFile": "docs/art-generation/base-sprites-20261125-b/verification.json",
+        "exists": true,
+        "sha256": "a779ec3dbca91a83acb085ec5cedd20a4c4841cae233ec04bf98212a165a75cc"
+      },
+      {
+        "reference": "workbook-review.json",
+        "resolvedFile": "docs/art-generation/base-sprites-20261125-b/workbook/workbook-review.json",
+        "exists": true,
+        "sha256": "56c2d5685ffc43cc041fd7358de603eb7e94a5d8fea7602aa8d88a7caffce267"
+      },
+      {
+        "reference": "publication.json",
+        "resolvedFile": "docs/art-generation/base-sprites-20261125-b/workbook/publication.json",
+        "exists": true,
+        "sha256": "469a95837f5d3d7243672066a4c74142584c8b388b5808723bf76fe20a61847a"
+      }
+    ],
+    "issues": []
+  },
+  "currentSourceHashes": {
+    "tests/combat-art-tracker-formats.test.mjs": "243b1877d3f5a21edb75ac6e37cb0b1285533b96b198845020b365154bfdd7ca",
+    "tests/combat-workbook-publication.test.mjs": "b56f6c5f7c627d397a359b30c3fd3346a3adfaa8b3fc6620cb70aa1ca9b9ae0a",
+    "tests/combat-crossovers.test.mjs": "aedcbb8a6a8248eb2470efda8b040f9cb9a251beff9909dc59e1d300264dc420",
+    "scripts/combat-illustrated-tracker.mjs": "98d0122ea2cf7cfefe1425659959e4e4149febdb402ee7d2c3c24a9030975a8e",
+    "scripts/combat-crossover-tracker.mjs": "18c828fcf0156a8ecaed78edd8b9d03bffd80025688ef25e15dc1a7ba694fd42",
+    "scripts/workbook-publication.mjs": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e",
+    "docs/art-generation/base-sprites-20261125-b/verification.json": "a779ec3dbca91a83acb085ec5cedd20a4c4841cae233ec04bf98212a165a75cc",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+    "docs/art-generation/base-sprites-20261125-b/workbook/README.md": "dbd52cb230dd83301cb3926ddcde22129b1b2ba98cf9bafee2403fb88abaa9b3",
+    "docs/art-generation/base-sprites-20261125-b/workbook/publication.json": "469a95837f5d3d7243672066a4c74142584c8b388b5808723bf76fe20a61847a",
+    "docs/art-generation/base-sprites-20261125-b/workbook/update-plan.json": "413f9b77292098aa266051c631c9f2fbc9d7fedd7ac49337deb3ac197411b4e6"
+  },
+  "addedFiles": [
+    "docs/art-generation/base-sprites-20261125-b/workbook/post-export-checks.json"
+  ],
+  "modifiedExistingFiles": [],
+  "limitations": [
+    "These 15 targeted checks are recorded separately from the frozen 469-test game gate; no additional browser or release validation is claimed."
+  ]
+}

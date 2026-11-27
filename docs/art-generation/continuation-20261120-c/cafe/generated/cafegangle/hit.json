@@ -1,0 +1,87 @@
+{
+  "appearanceId": "cafegangle",
+  "slot": "hit",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game action sprite for Digital Circus Encore.\nImage 1 is the approved Cafe Gangle game design: preserve her EXACT identity, proportions, mask, palette, clothes, line weight and all decorative details. Image 2 is the official cafe costume reference. Draw only the same Gangle in ONE new pose. Change the pose only; no replacement costume or anatomy.\n\nLocks: elongated smooth white mask, very large BLACK vertical arched eyes and small w-shaped mouth; white frilled headband, navy band, two white triangular COSTUME ears with pink centers, navy side bows with pale lines and red accents. Navy puff-sleeve dress, white finely pleated bib and scalloped apron, red neck bow on navy backing with yellow HEART, navy apron-side bows with red tails, muted lilac vertical skirt panel on anatomical LEFT, pale fine hem trim and white scalloped underskirt. TWO red flexible RIBBON arms with small pale LAVENDER-GRAY mitten hands and white cuffs. Exactly TWO lower red ribbon strips ending in forked tips, with no human legs, feet, shoes or skin. Mittens are simple and consistent with the approved design. No serving props: tray, food, glass, green ring, stirrer and shaker all excluded.\n\nPOSE: Hit reaction pose: receive an unseen impact from SCREEN-RIGHT. The mask still points right while torso recoils and tilts left, both red ribbon arms bend up protectively with their pale lavender-gray mittens. The white mask stays intact with its same two large black eyes and small w mouth; no cracked face, tear drops, horror transformation or injury. Skirt tilts with the body, two lower ribbons curl separately.\n\nCrisp dark contours, clean flat color and restrained cel shading, matching approved image 1. Full figure centered with GENEROUS transparent padding on all sides; about 75 percent height; every costume ear, bow, hand, ribbon and forked tip entirely in frame. Transparent native RGBA. No background, ground, cast shadow, glow, halo, white sticker border, text, logo, watermark, panels, sprite sheet, duplicate subject, extra limbs or cropped edge. This is a new original action drawing preserving the illustrated merchandise costume.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png"
+  ],
+  "referenceRoles": [
+    "Approved Cafe Gangle native seed: visual identity, costume, palette and proportions",
+    "Official cafe outfit; serving accessories excluded"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "audit_missing_assets",
+  "definitionSha256": "67d8e5543ce2904c4a97c025f3f97a112320e7eba941863cbeffae53bd1f6d9e",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2"
+  },
+  "schema": "encore-native-continuation-c-cafe-art/v1",
+  "id": "cafegangle:hit",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png",
+  "targetFile": "assets/encore/poses/cafegangle/hit.png",
+  "nativeSourceFile": "/workspace/scratch/0c4db74bdd9c/generated_images/exec-bed0a0e3-c345-4e4c-853d-2ce4cbcad124.png",
+  "sourceGenerationId": "exec-bed0a0e3-c345-4e4c-853d-2ce4cbcad124",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+      "bytes": 891954
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+      "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+      "bytes": 129216
+    }
+  ],
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    188,
+    55,
+    961,
+    1412
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1047881,
+  "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+  "bytes": 920043,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T19:28:49.900645+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "audit_missing_assets",
+    "observations": [
+      "Réaction au coup : buste incliné en arrière vers la gauche, regard du masque vers la droite, deux petites mains protectrices et deux rubans bas repliés ; masque intact, tenue sans transformation.",
+      "Inspection native et composition sur fonds clair/sombre : transparence réelle, masque et toutes extrémités dans le cadre, cœur jaune, motifs et couleurs maintenus. Aucun pixel natif retouché."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T19:36:53.843910+00:00",
+    "targetFile": "assets/encore/poses/cafegangle/hit.png",
+    "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

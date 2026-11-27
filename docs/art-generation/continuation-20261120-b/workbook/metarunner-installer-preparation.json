@@ -1,0 +1,49 @@
+{
+  "schema": "encore-metarunner-installer-preparation/v1",
+  "recordedAt": "2026-11-20T17:06:47.929690+00:00",
+  "status": "prepared_not_executed",
+  "installer": {
+    "file": "scripts/integrate-combat-metarunner-20261120-b.py",
+    "sha256": "9149f9e5344fa60020a2a68d329382e0c664ba3ae59f4fe5f6e8759da527594a",
+    "syntax": "ast_parse_passed"
+  },
+  "historicalTest": {
+    "file": "tests/combat-crossovers.test.mjs",
+    "sha256": "680fec3166dc3eeb888cc30480858413264edf5a89cb69b2fb80e946228fb327"
+  },
+  "newMetaTestDraft": {
+    "file": "../outputs/tracker-continuation-b-20261120/runtime-draft/combat-metarunner.test.mjs",
+    "sha256": "be593644262135b805d8316b557c64d5e195b231b979f56fe78dabf4651c694f",
+    "syntax": "node_check_passed",
+    "executed": false,
+    "installedInTestGlob": false
+  },
+  "baselineSHA256": "a069c06ef34541b965169f12db4169e40fe16fbbf2381bbffa99b32ce29058cd",
+  "requiredPrerequisiteIds": [
+    "cafekinger",
+    "cafepomni"
+  ],
+  "requiredMetaSlots": 33,
+  "historicalPrefixRecords": 472,
+  "historicalCrossovers": 381,
+  "historicalNpcDefinitions": 3,
+  "activationExecuted": false,
+  "globalQaExecuted": false,
+  "workbookExported": false,
+  "historicalTargetedTests": {
+    "command": "$CODEX_PRIMARY_RUNTIME_NODE --test tests/combat-costume-order.test.mjs tests/combat-crossovers.test.mjs",
+    "exitCode": 0,
+    "tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 2854.740747,
+    "scope": "Current published prefix and historical MD compatibility after narrowing the historical test; no Meta Runner assets activated or tested yet.",
+    "evidenceCapture": "Observed stdout from exec_command and completion; no raw log file created.",
+    "testSourceDigests": {
+      "tests/combat-costume-order.test.mjs": "9fbf58113e480a154e2e9257843497af728d72e0b59811a82453aa48ff20d24c",
+      "tests/combat-crossovers.test.mjs": "680fec3166dc3eeb888cc30480858413264edf5a89cb69b2fb80e946228fb327"
+    }
+  }
+}

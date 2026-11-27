@@ -1,0 +1,22 @@
+{
+  "fighters": 64,
+  "moves": 640,
+  "sharedStages": 27,
+  "dedicatedArrangements": 64,
+  "costumes": 508,
+  "archiveVariants": 52,
+  "illustratedCircusCostumes": 51,
+  "crossoverCostumes": 405,
+  "crossoverFiles": 3916,
+  "newBaseFamilies": 24,
+  "archiveEntries": 184,
+  "ribbitCrossovers": 27,
+  "ribbitCrossoverFiles": 135,
+  "offline": {
+    "version": "0.7.0-2c7a9febcca9",
+    "artVersion": "f986ec464440ab01",
+    "files": 6130,
+    "bytes": 3414702166,
+    "coreFiles": 64
+  }
+}

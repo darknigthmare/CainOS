@@ -1,0 +1,224 @@
+[
+  {
+    "id": "backstage-wide",
+    "source": "docs/art-generation/completion-20261127/stages/references/pilot-L3-M8.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/backstage-wide.png",
+    "page": 8,
+    "cellIndexZero": 2,
+    "approxTimestampSeconds": 740,
+    "crop": [
+      640,
+      0,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "6c092e2a7896e9e5ce0cedf9186f8bbe4621b01e9e01a4ae70628a37e8f62c5e"
+  },
+  {
+    "id": "backstage-front",
+    "source": "docs/art-generation/completion-20261127/stages/references/pilot-L3-M7.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/backstage-front.png",
+    "page": 7,
+    "cellIndexZero": 2,
+    "approxTimestampSeconds": 650,
+    "crop": [
+      640,
+      0,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "57b67aac9cce891bb4d2fa9aeacf82b6ad9a88e64b94bc852a86222edfdc93a8"
+  },
+  {
+    "id": "gloink-wide",
+    "source": "docs/art-generation/completion-20261127/stages/references/pilot-L3-M11.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/gloink-wide.png",
+    "page": 11,
+    "cellIndexZero": 0,
+    "approxTimestampSeconds": 990,
+    "crop": [
+      0,
+      0,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "69bbd0101ade8eae44562496360bfe4b3dc5f9baa0ccb00bcbd7b2781d361a9e"
+  },
+  {
+    "id": "gloink-side",
+    "source": "docs/art-generation/completion-20261127/stages/references/pilot-L3-M11.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/gloink-side.png",
+    "page": 11,
+    "cellIndexZero": 2,
+    "approxTimestampSeconds": 1010,
+    "crop": [
+      640,
+      0,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "fa1db1c2902f571da409dc3a5707fcd9de51f421eabdac8c05f741cf7db2e7a6"
+  },
+  {
+    "id": "grounds-wide",
+    "source": "docs/art-generation/completion-20261127/stages/references/pilot-L3-M2.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/grounds-wide.png",
+    "page": 2,
+    "cellIndexZero": 5,
+    "approxTimestampSeconds": 230,
+    "crop": [
+      640,
+      180,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "4ae3f12a2ba30a849093c62ded5affb029dca45756d3b42bb9f86dd46ea9fc9e"
+  },
+  {
+    "id": "grounds-second",
+    "source": "docs/art-generation/completion-20261127/stages/references/pilot-L3-M2.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/grounds-second.png",
+    "page": 2,
+    "cellIndexZero": 8,
+    "approxTimestampSeconds": 260,
+    "crop": [
+      640,
+      360,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "cb19c264333558c436a991472f0b2afc7b388d7d61b12ef174331fc4c4f87887"
+  },
+  {
+    "id": "candy-road",
+    "source": "docs/art-generation/completion-20261127/stages/references/canyon-L3-M4.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/candy-road.png",
+    "page": 4,
+    "cellIndexZero": 6,
+    "approxTimestampSeconds": 420,
+    "crop": [
+      0,
+      360,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "b59564d7de5c17980482cb798577c2bd6f82b2aefabf5bdc4aac28598577e4ee"
+  },
+  {
+    "id": "candy-route-wide",
+    "source": "docs/art-generation/completion-20261127/stages/references/canyon-L3-M5.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/candy-route-wide.png",
+    "page": 5,
+    "cellIndexZero": 0,
+    "approxTimestampSeconds": 450,
+    "crop": [
+      0,
+      0,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": false,
+    "sha256": "83be6e3e5c0a96c2c528dccfd274607262fdc3d77e0a3fb09ad5277c7c40dbed"
+  },
+  {
+    "id": "manor-hall",
+    "source": "docs/art-generation/completion-20261127/stages/references/manor-L3-M2.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/manor-hall.png",
+    "page": 2,
+    "cellIndexZero": 0,
+    "approxTimestampSeconds": 180,
+    "crop": [
+      0,
+      0,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "291f8edecac2b9694c15a7f2cf81fe127363fcc083d60210f81292a279c262bb"
+  },
+  {
+    "id": "manor-walls",
+    "source": "docs/art-generation/completion-20261127/stages/references/manor-L3-M2.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/manor-walls.png",
+    "page": 2,
+    "cellIndexZero": 4,
+    "approxTimestampSeconds": 220,
+    "crop": [
+      320,
+      180,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": true,
+    "sha256": "8f9412ff7ac4d3a69031ca05f3e4c42c2f67ddeb0966bb2a5b0715f4b21e8ca0"
+  },
+  {
+    "id": "lake-shore",
+    "source": "docs/art-generation/completion-20261127/stages/references/lake-L3-M3.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/lake-shore.png",
+    "page": 3,
+    "cellIndexZero": 5,
+    "approxTimestampSeconds": 320,
+    "crop": [
+      640,
+      180,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": false,
+    "sha256": "237b49f771368b6688023f85a8d0387ebe33bbb0e5e5452c8b6eec473e042c59"
+  },
+  {
+    "id": "lake-backdrop",
+    "source": "docs/art-generation/completion-20261127/stages/references/lake-L3-M1.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/lake-backdrop.png",
+    "page": 1,
+    "cellIndexZero": 8,
+    "approxTimestampSeconds": 170,
+    "crop": [
+      640,
+      360,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "usedForGeneration": false,
+    "sha256": "478d45ddbdf87cfcd6b89f85d1a0192aaa4bfa67019c33e50b7cddd86eac8151"
+  },
+  {
+    "id": "candy-route-520",
+    "source": "docs/art-generation/completion-20261127/stages/references/canyon-L3-M5.jpg",
+    "path": "docs/art-generation/completion-20261127/stages/references/candy-route-500.png",
+    "page": 5,
+    "cellIndexZero": 7,
+    "approxTimestampSeconds": 520,
+    "crop": [
+      320,
+      360,
+      320,
+      180
+    ],
+    "purpose": "Unaltered source pixels cropped for inspection, not a runtime asset",
+    "filenameCaveat": "Historical local filename says 500; page 5 / cell 7 corresponds to approximately 520 seconds.",
+    "usedForGeneration": true,
+    "sha256": "a7ee3a7de89c40453427ae61610782afbad8512c04cf383c22f9e30bbf99ffa5"
+  }
+]

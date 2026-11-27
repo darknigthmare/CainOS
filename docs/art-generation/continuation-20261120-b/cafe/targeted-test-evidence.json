@@ -1,0 +1,38 @@
+{
+  "schema": "encore-cafe-targeted-tests/v1",
+  "createdAt": "2026-11-20T17:18:37.336156+00:00",
+  "status": "passed",
+  "command": [
+    "node",
+    "--test",
+    "--test-skip-pattern=offline pack",
+    "tests/combat-costume-additions.test.mjs",
+    "tests/combat-costume-order.test.mjs"
+  ],
+  "exitCode": 0,
+  "logFile": "docs/art-generation/continuation-20261120-b/cafe/targeted-tests.log",
+  "logSHA256": "20b906c4801755b12f7cf38ef36f6db11d1b90b97e565f9206b85904da3478e2",
+  "sources": [
+    {
+      "file": "tests/combat-costume-additions.test.mjs",
+      "sha256": "8a6769575b9fc74e7a7a94b3e7aab29f2308741016f49a82695883f654be059b"
+    },
+    {
+      "file": "tests/combat-costume-order.test.mjs",
+      "sha256": "9fbf58113e480a154e2e9257843497af728d72e0b59811a82453aa48ff20d24c"
+    },
+    {
+      "file": "combat/costume-continuation-20261120-b.mjs",
+      "sha256": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994"
+    },
+    {
+      "file": "combat/costume-additions.mjs",
+      "sha256": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d"
+    },
+    {
+      "file": "combat/costume-order.mjs",
+      "sha256": "2277ed97caf826a6c2c4e41ade8c26571e3f2ff233a52a0bf6e357184ff7b2a0"
+    }
+  ],
+  "scope": "Targeted owner, native provenance, historical prefix and ordering checks. Offline-pack publication test intentionally not run before the separately owned manifest rebuild; no global QA or build."
+}

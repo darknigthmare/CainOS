@@ -1,0 +1,13 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "stance",
+  "prompt": "Use the attached approved selection image as the exact identity, proportions, costume, materials, color and 2D cel-shading reference. Draw ONE new full-body pose of the SAME original Encore crossover Ribbit. Keep the ENTIRE mechanical frog design: separate glossy black optical domes with magenta LED pupils, green shell, mint muzzle and belly, pink cheek LEDs and metal bow, round dark pivots with tiny purple accents, green/mint long limbs, three-digit robot hands and three-lobed robot feet. No organic skin, clothes, hair, wings, tail or extra weapons. COMBAT STANCE: standing in a broad balanced right-facing guard, both knees slightly bent, left rear hand held in a small fist near chest, forward right hand open at shoulder height, both feet planted apart. Ready for action, distinctly lower and more guarded than the selection reference. Three-quarter side view, native facing RIGHT. Clean black contours, gentle upper-left highlights, restrained cel shading matching the reference. One character only, full head-to-toes including raised hands and all feet, with comfortable transparent margin around the ENTIRE silhouette. Use a canvas wide enough for this pose (portrait 1024x1536 or square 1536x1536 if needed); never crop or squeeze limbs. Native true transparent RGBA, clean alpha edges, no scene/background/ground/halo/text/grid/watermark. This is a separate action drawing, not a transformation, crop or composited duplicate of the selection.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root"
+}

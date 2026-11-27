@@ -1,0 +1,831 @@
+{
+  "schema": "encore-abstraction-stage-canvas-review/v1",
+  "createdAt": "2026-11-24T14:16:24.936Z",
+  "method": "Production stage loader, camera, planes, CombatEngine and CombatRenderer executed with native Skia.",
+  "limitations": [
+    "The two arenas are original fan-game locations, with no canonical 1:1 claim.",
+    "These are initialized duel snapshots, not played matches.",
+    "No browser, DOM, input, audio playback or service-worker verification follows from this report.",
+    "Aquatic trailing tendrils are decorative outside its 195 × 200 collision body."
+  ],
+  "sourceHashes": {
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/abstractions-narrative.mjs": "8a7c4ba6a8a5ba05789ae9f7c5aa7bddbdc6dcab66c43eca920a9081e6a18018",
+    "combat/app.mjs": "15877928f8efa1bc97f28779a21aaea29a7412e6f5266b588cf7999a2cd7a724",
+    "combat/audio-ambiences.mjs": "cb822a6e2fbe4f6c359c0f986647a924680e8b47ef661accc0ff44908157c30b",
+    "combat/audio.mjs": "35edb1c4486adf3324ee182e60325d5b838e3b673c722eb9fd519cb76c597c47",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/catalog-history.mjs": "dc1a40f1d3d3d3bb07485b2530db5d5949184f7fc6d482f46ac90cc14436fc54",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-fidelity.mjs": "4321b91147455c55e8e07ec86d8b5434144dd69de112b5e98354b27f5676c25a",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "c141fa3cc90a18996582c593b1eb6f824412c4a583fdaa95839819b5f74dc1d1",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/crossover-designs.mjs": "10823e3ae1857472b3ccecdfff9018026d1e73c356fc13496e9d3096fb194935",
+    "combat/crossover-fusions.mjs": "2af5a8490395331a92b95f567c155b7237e7355b5cac03a0c45a8d2e1b19241b",
+    "combat/crossover-npc-additions.mjs": "f56896170b3da27f4479797f1314e339d2918dbcd76cc3850c465369c356eba5",
+    "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
+    "combat/crossover-sunset-recovery-20261124.mjs": "fb2e7d6a5c2cb7cdf7f05416b5e2a6ed30276c996d2dee82c94151eef33d876c",
+    "combat/crossover-visits.mjs": "fc173219e61473341930bad12e52aefea45b69acfb7f029a03296b4ca8a0efbc",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/data.mjs": "4ee02d45615773a0cec0f42c6ffe627d4ffbb719fac42b8fb32b4fb7a0b1e0ec",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "643c41ee1832bf73a304b0acd00724e3404a4b7c04c17a8767686eee27edd284",
+    "combat/finisher-catalog.mjs": "f741daefc7acb7e63a8aae481f9a1ceb378a2cc31be08f2328db4470352d9b18",
+    "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+    "combat/finishers.mjs": "cf41cd5f1137ea8b1b04629980c6985b5b74c9f43e75ebd064a1f1ef37857d38",
+    "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+    "combat/offline-manifest.mjs": "a9f9c4cee6795da2e182d18d408f2f31838c2c47c4da51d5ab4c88560c581e16",
+    "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+    "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+    "combat/projectile-art.mjs": "c1c870adf588879a08e239a2cf7c9f7dcea1fd9975c00b79aafd9ac4f85ad6cd",
+    "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+    "combat/render-finishers.mjs": "7834ffe5ec5c90d1665ac3e71a036cf24618c755d7bb956eeaeaabc74806b4a6",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-stage-motion.mjs": "22a0ecdca8bd3f5eaf1e759ac30dabd41fa117c00e0844665c89ea5f7c057d3a",
+    "combat/render-stage-scenery.mjs": "0b4edde9d16659675651b6daa114ec03b8a8cf7434c47eb09dd2645eb53ca544",
+    "combat/render.mjs": "b58a56d5438170b6f6a40fdc9912cb791edbafced966d779eb11baae81c89507",
+    "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/sprite-catalog.mjs": "f1d3aabb923df18d8616363840aca370dd3472a9ad92ac51c84d49430a3251fe",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+    "combat/story-presentation.mjs": "900ad5dfefc205f868561a7624352152f2d7f51300b5197c16c677bb7692fd54",
+    "combat/tournament-lore.mjs": "ff18e3fdcc6a5fe46f442452d74fd1744ae135c6c76a117696470bd17c6ad21a",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece",
+    "scripts/render-combat-abstraction-stage-review.mjs": "e5d5cf21f7e7f6a129203b2fe1276ce9c8c0c4b9bef1e58cbfd218987f706c25"
+  },
+  "planes": [
+    {
+      "id": "memoryfracture",
+      "plane": "far",
+      "file": "assets/encore/stages/memoryfracture/far.png",
+      "sha256": "b5753e5bb5d47d643ef394fb80fa10fae5803ca0584768040d1b935146992e5a",
+      "bytes": 2075201,
+      "nativeFileUnmodified": true,
+      "width": 1672,
+      "height": 941,
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "transparentFraction": 0,
+      "opaqueFraction": 1,
+      "visiblePixelsThreshold12": 1573352,
+      "visibleBoundsThreshold12": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "centerVisibleFraction": 1,
+      "centerVisiblePixels": 492200,
+      "centerPixels": 492200,
+      "upper85VisiblePixels": 1335928,
+      "upper85Pixels": 1335928
+    },
+    {
+      "id": "memoryfracture",
+      "plane": "mid",
+      "file": "assets/encore/stages/memoryfracture/mid.png",
+      "sha256": "6a8a08ca4247a090f79fd69e349635fe7e60e4c8afb5970702d81c5680204a45",
+      "bytes": 462271,
+      "nativeFileUnmodified": true,
+      "width": 1672,
+      "height": 941,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.8943281605133498,
+      "opaqueFraction": 0.00018686218977062983,
+      "visiblePixelsThreshold12": 138036,
+      "visibleBoundsThreshold12": [
+        0,
+        0,
+        1672,
+        685
+      ],
+      "centerVisibleFraction": 0,
+      "centerVisiblePixels": 0,
+      "centerPixels": 492200,
+      "upper85VisiblePixels": 138036,
+      "upper85Pixels": 1335928
+    },
+    {
+      "id": "memoryfracture",
+      "plane": "near",
+      "file": "assets/encore/stages/memoryfracture/near.png",
+      "sha256": "152f7abe3ab4a431d608c0840a16823b4d6243dab9c7417312528d5d34833dfe",
+      "bytes": 126867,
+      "nativeFileUnmodified": true,
+      "width": 1671,
+      "height": 941,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.9840665067848037,
+      "opaqueFraction": 0.00008712734774813965,
+      "visiblePixelsThreshold12": 15981,
+      "visibleBoundsThreshold12": [
+        59,
+        824,
+        1618,
+        921
+      ],
+      "centerVisibleFraction": 0,
+      "centerVisiblePixels": 0,
+      "centerPixels": 491740,
+      "upper85VisiblePixels": 0,
+      "upper85Pixels": 1335129
+    },
+    {
+      "id": "abstractionthreshold",
+      "plane": "far",
+      "file": "assets/encore/stages/abstractionthreshold/far.png",
+      "sha256": "d5e080cd28e168caf6fd347f4cf216720ba45b6311d43e5230ad1e086eeb2482",
+      "bytes": 1945317,
+      "nativeFileUnmodified": true,
+      "width": 1672,
+      "height": 941,
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "transparentFraction": 0,
+      "opaqueFraction": 1,
+      "visiblePixelsThreshold12": 1573352,
+      "visibleBoundsThreshold12": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "centerVisibleFraction": 1,
+      "centerVisiblePixels": 492200,
+      "centerPixels": 492200,
+      "upper85VisiblePixels": 1335928,
+      "upper85Pixels": 1335928
+    },
+    {
+      "id": "abstractionthreshold",
+      "plane": "mid",
+      "file": "assets/encore/stages/abstractionthreshold/mid.png",
+      "sha256": "e6ddbf3ad9f5e51f3927074454e6c3171ddd8bdb10f9af9f6be016b4f3c9f03e",
+      "bytes": 255176,
+      "nativeFileUnmodified": true,
+      "width": 1672,
+      "height": 941,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.931446364195679,
+      "opaqueFraction": 0.0003127081543100336,
+      "visiblePixelsThreshold12": 93707,
+      "visibleBoundsThreshold12": [
+        0,
+        91,
+        1672,
+        720
+      ],
+      "centerVisibleFraction": 0,
+      "centerVisiblePixels": 0,
+      "centerPixels": 492200,
+      "upper85VisiblePixels": 93707,
+      "upper85Pixels": 1335928
+    },
+    {
+      "id": "abstractionthreshold",
+      "plane": "near",
+      "file": "assets/encore/stages/abstractionthreshold/near.png",
+      "sha256": "7d3752af03f2f76757de07bae1b54f81aa3095140ece96ff1a2ea4ca290f7ea8",
+      "bytes": 141528,
+      "nativeFileUnmodified": true,
+      "width": 1671,
+      "height": 941,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.9727017936150282,
+      "opaqueFraction": 0.00012210548005578694,
+      "visiblePixelsThreshold12": 32226,
+      "visibleBoundsThreshold12": [
+        0,
+        834,
+        1671,
+        922
+      ],
+      "centerVisibleFraction": 0,
+      "centerVisiblePixels": 0,
+      "centerPixels": 491740,
+      "upper85VisiblePixels": 0,
+      "upper85Pixels": 1335129
+    }
+  ],
+  "stages": [
+    {
+      "id": "memoryfracture",
+      "publishedAndLoaded": true,
+      "exactNativeSources": [
+        "assets/encore/stages/memoryfracture/far.png",
+        "assets/encore/stages/memoryfracture/mid.png",
+        "assets/encore/stages/memoryfracture/near.png"
+      ],
+      "cameraChecks": [
+        {
+          "camera": -1,
+          "hash": "531a5b9d39018e9df481a6f5312b4e12c22d7577ab36febe439a76e326e28bf6",
+          "opaque": true,
+          "planesDrawn": [
+            {
+              "file": "assets/encore/stages/memoryfracture/far.png",
+              "coordinates": [
+                -26,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/memoryfracture/mid.png",
+              "coordinates": [
+                -15,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/memoryfracture/near.png",
+              "coordinates": [
+                -1,
+                -28
+              ]
+            }
+          ]
+        },
+        {
+          "camera": 0,
+          "hash": "93a5c3c69bb05fe123449fdabcfb70c82d62dd25833387d680e9f4be3f40e0df",
+          "opaque": true,
+          "planesDrawn": [
+            {
+              "file": "assets/encore/stages/memoryfracture/far.png",
+              "coordinates": [
+                -32,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/memoryfracture/mid.png",
+              "coordinates": [
+                -32,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/memoryfracture/near.png",
+              "coordinates": [
+                -32,
+                -28
+              ]
+            }
+          ]
+        },
+        {
+          "camera": 1,
+          "hash": "9199ef0c80943a177882b22f2869abc550ceda52f1f6073a3e9adb612bee9d07",
+          "opaque": true,
+          "planesDrawn": [
+            {
+              "file": "assets/encore/stages/memoryfracture/far.png",
+              "coordinates": [
+                -38,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/memoryfracture/mid.png",
+              "coordinates": [
+                -49,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/memoryfracture/near.png",
+              "coordinates": [
+                -63,
+                -28
+              ]
+            }
+          ]
+        }
+      ],
+      "reducedMotion": {
+        "frame0": "212903dcdd7218f7f3a1378b3b141f58a0ce41c17f1f80a50e5c27e5ae7049c1",
+        "frame600": "212903dcdd7218f7f3a1378b3b141f58a0ce41c17f1f80a50e5c27e5ae7049c1",
+        "pixelsEqual": true
+      },
+      "actorAndStageUnchanged": true
+    },
+    {
+      "id": "abstractionthreshold",
+      "publishedAndLoaded": true,
+      "exactNativeSources": [
+        "assets/encore/stages/abstractionthreshold/far.png",
+        "assets/encore/stages/abstractionthreshold/mid.png",
+        "assets/encore/stages/abstractionthreshold/near.png"
+      ],
+      "cameraChecks": [
+        {
+          "camera": -1,
+          "hash": "a55a1e241ef28a69de82345e66606d497e8d862f003cd2a773499794296ee22f",
+          "opaque": true,
+          "planesDrawn": [
+            {
+              "file": "assets/encore/stages/abstractionthreshold/far.png",
+              "coordinates": [
+                -26,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/abstractionthreshold/mid.png",
+              "coordinates": [
+                -15,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/abstractionthreshold/near.png",
+              "coordinates": [
+                -1,
+                -28
+              ]
+            }
+          ]
+        },
+        {
+          "camera": 0,
+          "hash": "5f723425c13c09daad053ff15d7950d226a96bb7cab1786c58d7249ea3c2cdcf",
+          "opaque": true,
+          "planesDrawn": [
+            {
+              "file": "assets/encore/stages/abstractionthreshold/far.png",
+              "coordinates": [
+                -32,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/abstractionthreshold/mid.png",
+              "coordinates": [
+                -32,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/abstractionthreshold/near.png",
+              "coordinates": [
+                -32,
+                -28
+              ]
+            }
+          ]
+        },
+        {
+          "camera": 1,
+          "hash": "43afe732abd317cbbf3094cc82e3e24765c6f59a2fccf38ad7fb475219a8b028",
+          "opaque": true,
+          "planesDrawn": [
+            {
+              "file": "assets/encore/stages/abstractionthreshold/far.png",
+              "coordinates": [
+                -38,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/abstractionthreshold/mid.png",
+              "coordinates": [
+                -49,
+                -28
+              ]
+            },
+            {
+              "file": "assets/encore/stages/abstractionthreshold/near.png",
+              "coordinates": [
+                -63,
+                -28
+              ]
+            }
+          ]
+        }
+      ],
+      "reducedMotion": {
+        "frame0": "13b8b0a1c4e2e84c6d2c5c71fd690db9f503aea017d15ab40ed60000ba20824b",
+        "frame600": "13b8b0a1c4e2e84c6d2c5c71fd690db9f503aea017d15ab40ed60000ba20824b",
+        "pixelsEqual": true
+      },
+      "actorAndStageUnchanged": true
+    }
+  ],
+  "duels": [
+    {
+      "stage": "memoryfracture",
+      "fighters": [
+        {
+          "id": "originalabstractedpomni",
+          "costume": null
+        },
+        {
+          "id": "jax",
+          "costume": null
+        }
+      ],
+      "positions": [
+        380,
+        900
+      ],
+      "simulationBodies": [
+        {
+          "x": 297.5,
+          "y": 308,
+          "w": 165,
+          "h": 260
+        },
+        {
+          "x": 861,
+          "y": 308,
+          "w": 78,
+          "h": 260
+        }
+      ],
+      "simulationUnchangedByRendering": true,
+      "captures": [
+        {
+          "file": "duel-memoryfracture.jpg",
+          "hitboxes": false,
+          "hash": "477691405e1bce7a2fb283fa15a9d2da9a89aa95d0ac28c0be1e69fbdbf76ba5",
+          "nativeDraws": [
+            {
+              "actor": 0,
+              "file": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+              "matrix": {
+                "a": 0.7715133428573608,
+                "b": 0,
+                "c": 0,
+                "d": 0.7715133428573608,
+                "e": 121.54302978515625,
+                "f": 193.8160400390625,
+                "m11": 0.7715133428573608,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.7715133428573608,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 121.54302978515625,
+                "m42": 193.8160400390625,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            },
+            {
+              "actor": 1,
+              "file": "assets/encore/stance/jax.webp",
+              "matrix": {
+                "a": -0.415335476398468,
+                "b": 0,
+                "c": 0,
+                "d": 0.415335476398468,
+                "e": 1005.2875366210938,
+                "f": 305.0926513671875,
+                "m11": -0.415335476398468,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.415335476398468,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 1005.2875366210938,
+                "m42": 305.0926513671875,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "file": "duel-memoryfracture-hitboxes.jpg",
+          "hitboxes": true,
+          "hash": "7d7e20efb936a4a334141a626debe2a7b4325babf2e42a36e9345044566aeedb",
+          "nativeDraws": [
+            {
+              "actor": 0,
+              "file": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+              "matrix": {
+                "a": 0.7715133428573608,
+                "b": 0,
+                "c": 0,
+                "d": 0.7715133428573608,
+                "e": 121.54302978515625,
+                "f": 193.8160400390625,
+                "m11": 0.7715133428573608,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.7715133428573608,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 121.54302978515625,
+                "m42": 193.8160400390625,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            },
+            {
+              "actor": 1,
+              "file": "assets/encore/stance/jax.webp",
+              "matrix": {
+                "a": -0.415335476398468,
+                "b": 0,
+                "c": 0,
+                "d": 0.415335476398468,
+                "e": 1005.2875366210938,
+                "f": 305.0926513671875,
+                "m11": -0.415335476398468,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.415335476398468,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 1005.2875366210938,
+                "m42": 305.0926513671875,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "abstractionthreshold",
+      "fighters": [
+        {
+          "id": "aquaticabstraction",
+          "costume": null
+        },
+        {
+          "id": "abstractedqueenie",
+          "costume": "abstractedqueeniedark"
+        }
+      ],
+      "positions": [
+        380,
+        900
+      ],
+      "simulationBodies": [
+        {
+          "x": 282.5,
+          "y": 368,
+          "w": 195,
+          "h": 200
+        },
+        {
+          "x": 810,
+          "y": 283,
+          "w": 180,
+          "h": 285
+        }
+      ],
+      "simulationUnchangedByRendering": true,
+      "captures": [
+        {
+          "file": "duel-abstractionthreshold.jpg",
+          "hitboxes": false,
+          "hash": "976d6d4eea06ec92509e4288d18346ea9baebce5f5698fd0b0a49ee4664759de",
+          "nativeDraws": [
+            {
+              "actor": 0,
+              "file": "assets/encore/abstractions/aquaticabstraction/stance.png",
+              "matrix": {
+                "a": 0.790513813495636,
+                "b": 0,
+                "c": 0,
+                "d": 0.790513813495636,
+                "e": 3.9051513671875,
+                "f": 343.49407958984375,
+                "m11": 0.790513813495636,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.790513813495636,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 3.9051513671875,
+                "m42": 343.49407958984375,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            },
+            {
+              "actor": 1,
+              "file": "assets/encore/abstractions/abstractedqueeniedark/stance.png",
+              "matrix": {
+                "a": -0.49393415451049805,
+                "b": 0,
+                "c": 0,
+                "d": 0.49393415451049805,
+                "e": 1000.515625,
+                "f": 262.2547607421875,
+                "m11": -0.49393415451049805,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.49393415451049805,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 1000.515625,
+                "m42": 262.2547607421875,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "file": "duel-abstractionthreshold-hitboxes.jpg",
+          "hitboxes": true,
+          "hash": "df88f04e9a7cabba280f0a04d073bb998a8567c6c74e9a62d7bdb3f5a8a7d6cc",
+          "nativeDraws": [
+            {
+              "actor": 0,
+              "file": "assets/encore/abstractions/aquaticabstraction/stance.png",
+              "matrix": {
+                "a": 0.790513813495636,
+                "b": 0,
+                "c": 0,
+                "d": 0.790513813495636,
+                "e": 3.9051513671875,
+                "f": 343.49407958984375,
+                "m11": 0.790513813495636,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.790513813495636,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 3.9051513671875,
+                "m42": 343.49407958984375,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            },
+            {
+              "actor": 1,
+              "file": "assets/encore/abstractions/abstractedqueeniedark/stance.png",
+              "matrix": {
+                "a": -0.49393415451049805,
+                "b": 0,
+                "c": 0,
+                "d": 0.49393415451049805,
+                "e": 1000.515625,
+                "f": 262.2547607421875,
+                "m11": -0.49393415451049805,
+                "m12": 0,
+                "m13": 0,
+                "m14": 0,
+                "m21": 0,
+                "m22": 0.49393415451049805,
+                "m23": 0,
+                "m24": 0,
+                "m31": 0,
+                "m32": 0,
+                "m33": 1,
+                "m34": 0,
+                "m41": 1000.515625,
+                "m42": 262.2547607421875,
+                "m43": 0,
+                "m44": 1,
+                "is2D": true,
+                "isIdentity": false
+              },
+              "coordinates": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outputImages": [
+    "camera-memoryfracture.jpg",
+    "camera-abstractionthreshold.jpg",
+    "duel-memoryfracture.jpg",
+    "duel-memoryfracture-hitboxes.jpg",
+    "duel-abstractionthreshold.jpg",
+    "duel-abstractionthreshold-hitboxes.jpg",
+    "stages-overview.jpg"
+  ],
+  "counts": {
+    "stages": 2,
+    "nativePlanes": 6,
+    "cameraCompositions": 6,
+    "initializedDuels": 2,
+    "duelCaptures": 4
+  },
+  "ok": true
+}

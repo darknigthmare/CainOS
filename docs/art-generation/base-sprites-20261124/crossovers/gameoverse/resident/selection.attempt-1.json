@@ -1,0 +1,56 @@
+{
+  "series": "gameoverse",
+  "style": "resident",
+  "label": "Gameoverse · Résident · Cartographe des portails",
+  "identity": "Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/ribbit/resident/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gameoverse"
+  ],
+  "state": "selection",
+  "id": "glitch-gameoverse-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original videogame-world portal cartographer, retaining Ribbit's normal long-limbed lime frog body. Teal short explorer hood-cape with crisp golden angular trim, hood resting behind the huge exposed eyes, small orange star clasp next to pink bow tie; navy short tunic, charcoal knee shorts, narrow brown belt, small brown map satchel with geometric star badge and rolled cream map secured at hip. A small gold lantern-shaped blue-violet opaque crystal case hangs from belt; no aura or glow. Green four-finger hands and bare three-toed webbed feet, teal ankle wraps. Practical scout clothing, no oversized yellow gauntlets, no crown or mechanical body. Use second-reference material/palette continuity without Pomni's human head, jester horns, bells or red-blue anatomy.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gameoverse:resident:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-5f912133-c953-48b0-918b-1c05df9159e2.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-5f912133-c953-48b0-918b-1c05df9159e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    289,
+    40,
+    1002,
+    1223
+  ],
+  "alpha12Margins": [
+    289,
+    40,
+    252,
+    31
+  ],
+  "alphaZeroFraction": 0.7558962834082451,
+  "alphaOpaqueFraction": 0.0008699434536755111,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gameoverse/ribbit/resident/selection.png",
+  "bytes": 722121,
+  "sha256": "19db0b8a135b8511e6c5af3a410f911801f1bffcab74f7078d69bdabb45d25e1",
+  "sha": "8e7df0f0b6e0b0f6479d49f3237b27e6bfb75959",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/gameoverse/ribbit/resident/stance.png": "818ca927d546defab35ecf16300c5047c00630567fc3210fef6301711e4df700"
+  },
+  "auditPass": true
+}

@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-27",
+  "method": "Production Canvas2D renderer under native Skia; individual sheets visually inspected.",
+  "browserTestStatus": "not_executed",
+  "families": [
+    {
+      "id": "godcaine",
+      "report": "canvas/families/godcaine.json",
+      "summary": {
+        "appearances": 1,
+        "authoredDrawings": 2,
+        "sourceAndFacingChecks": 20,
+        "actualStateDraws": 60,
+        "portraits": 1,
+        "peakRSSBytes": 139546624,
+        "pass": true
+      },
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/godcaine/selection.png",
+          "bytes": 1622278,
+          "sha256": "786e73c137927c9bc181fdeb6102a8ac9844ef7206de6a7f598b3edf117ad98f",
+          "bounds": {
+            "x": 15,
+            "y": 10,
+            "width": 353,
+            "height": 364
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/godcaine/stance.png",
+          "bytes": 1404251,
+          "sha256": "c527d916b6958e15313015c81013c641b8be54d08b6f891163a6fdb4c5b68d14",
+          "bounds": {
+            "x": 45,
+            "y": 6,
+            "width": 568,
+            "height": 615
+          },
+          "nativeFacing": 1
+        }
+      },
+      "visibleWidth": 226.27642703056335,
+      "visibleHeight": 245.00000461935997,
+      "inspectedImage": "canvas/base-godcaine.jpg"
+    },
+    {
+      "id": "evilpomni-pendantz",
+      "report": "canvas/families/evilpomni-pendantz.json",
+      "summary": {
+        "appearances": 1,
+        "authoredDrawings": 2,
+        "sourceAndFacingChecks": 20,
+        "actualStateDraws": 60,
+        "portraits": 1,
+        "peakRSSBytes": 137605120,
+        "pass": true
+      },
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/evilpomni-pendantz/selection.png",
+          "bytes": 1079376,
+          "sha256": "297c4e8a268201df65a544f7f9bbd9e8a7213de00ac383d8c51c641dc1ab321f",
+          "bounds": {
+            "x": 27,
+            "y": 26,
+            "width": 329,
+            "height": 303
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/evilpomni-pendantz/stance.png",
+          "bytes": 848629,
+          "sha256": "132a18e59605d1eb53bd541f0cf168eb8fbeb8998a9b0e6f66ca61a9e0edf45b",
+          "bounds": {
+            "x": 88,
+            "y": 37,
+            "width": 449,
+            "height": 527
+          },
+          "nativeFacing": 1
+        }
+      },
+      "visibleWidth": 170.3984847664833,
+      "visibleHeight": 200.00000327825546,
+      "inspectedImage": "canvas/base-evilpomni-pendantz.jpg"
+    }
+  ],
+  "aliases": {
+    "report": "archive-portrait-review.json",
+    "image": "evil-archive-aliases.jpg",
+    "summary": {
+      "cards": 3,
+      "historicalAliases": 2,
+      "nativeDecodes": 1,
+      "historicalBytesRetained": true,
+      "pass": true
+    }
+  },
+  "summary": {
+    "families": 2,
+    "authoredDrawings": 4,
+    "sourceAndFacingChecks": 40,
+    "actualStateDraws": 120,
+    "archivePortraits": 3,
+    "archiveNativeDecodes": 1,
+    "pass": true
+  },
+  "limitations": [
+    "Portrait and static stance only; no authored action animation.",
+    "The left-facing view is the game mirror of the right-facing drawing.",
+    "Native Canvas does not establish browser navigation or canonical pixel-for-pixel fidelity."
+  ]
+}

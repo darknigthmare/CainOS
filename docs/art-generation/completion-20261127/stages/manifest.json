@@ -1,0 +1,722 @@
+{
+  "schema": "encore-complete-stage-completion/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "productionTool": "Built-in image_gen.imagegen, one complete painting per asset",
+  "newNativePaintings": 9,
+  "newNativeBytes": 16445751,
+  "previousUnpublishedImagesRecovered": 0,
+  "canonicalOneToOneCertified": false,
+  "references": [
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/backstage-front.png",
+      "bytes": 82836,
+      "sha256": "57b67aac9cce891bb4d2fa9aeacf82b6ad9a88e64b94bc852a86222edfdc93a8",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+      "sourcePageSha256": "25b4dff1bd90ba1e63a1a174f7ff311abc51e33be67e82d45ddca2c6731a256f",
+      "approxTimestampSeconds": 650,
+      "crop": [
+        640,
+        0,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/backstage-wide.png",
+      "bytes": 80815,
+      "sha256": "6c092e2a7896e9e5ce0cedf9186f8bbe4621b01e9e01a4ae70628a37e8f62c5e",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M8.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+      "sourcePageSha256": "3d791a6f387c88656a8504756da261d98d049763356f12074b2b8fa8792f991c",
+      "approxTimestampSeconds": 740,
+      "crop": [
+        640,
+        0,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/bigtop-primary.png",
+      "bytes": 796845,
+      "sha256": "c9876b6b680a891972a74502375d63d7d403843b45d9aadd4335b3362a5534db",
+      "url": "https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png",
+      "publisherPage": "https://www.glitchprod.com/digital-circus",
+      "kind": "Official GLITCH promotional still"
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/candy-road.png",
+      "bytes": 58306,
+      "sha256": "b59564d7de5c17980482cb798577c2bd6f82b2aefabf5bdc4aac28598577e4ee",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "sourcePageUrl": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig",
+      "sourcePageSha256": "29158660650810b15a23f28bc13f5ca66c723c8a326cbb2e47e00579ac332914",
+      "approxTimestampSeconds": 420,
+      "crop": [
+        0,
+        360,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/candy-route-500.png",
+      "bytes": 72194,
+      "sha256": "a7ee3a7de89c40453427ae61610782afbad8512c04cf383c22f9e30bbf99ffa5",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "sourcePageUrl": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig",
+      "sourcePageSha256": "61552f2456fb47d7dbdfd5bab35d9a920169ab49f7fec801d763f2d9ce62fad5",
+      "approxTimestampSeconds": 520,
+      "crop": [
+        320,
+        360,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/cellar-primary.jpg",
+      "bytes": 808860,
+      "sha256": "e2eec569fc9791e44eaa765be8009ca99d50189f7bb3a7220aee022edd6e3bb4",
+      "url": "https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg",
+      "publisherPage": "https://www.glitchprod.com/digital-circus",
+      "kind": "Official GLITCH promotional still"
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/gloink-side.png",
+      "bytes": 79860,
+      "sha256": "fa1db1c2902f571da409dc3a5707fcd9de51f421eabdac8c05f741cf7db2e7a6",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+      "sourcePageSha256": "9cb07a9f837511af0602161bd2c506468ee74dc28791e49739dafdfaed1719eb",
+      "approxTimestampSeconds": 1010,
+      "crop": [
+        640,
+        0,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/gloink-wide.png",
+      "bytes": 84888,
+      "sha256": "69bbd0101ade8eae44562496360bfe4b3dc5f9baa0ccb00bcbd7b2781d361a9e",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+      "sourcePageSha256": "9cb07a9f837511af0602161bd2c506468ee74dc28791e49739dafdfaed1719eb",
+      "approxTimestampSeconds": 990,
+      "crop": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/grounds-second.png",
+      "bytes": 103872,
+      "sha256": "cb19c264333558c436a991472f0b2afc7b388d7d61b12ef174331fc4c4f87887",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+      "sourcePageSha256": "15c574ed9cd0698a8544cbf809c39425452a4da84a03b8fb70ea3a94703b7229",
+      "approxTimestampSeconds": 260,
+      "crop": [
+        640,
+        360,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/grounds-wide.png",
+      "bytes": 102222,
+      "sha256": "4ae3f12a2ba30a849093c62ded5affb029dca45756d3b42bb9f86dd46ea9fc9e",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+      "sourcePageSha256": "15c574ed9cd0698a8544cbf809c39425452a4da84a03b8fb70ea3a94703b7229",
+      "approxTimestampSeconds": 230,
+      "crop": [
+        640,
+        180,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/manor-hall.png",
+      "bytes": 50601,
+      "sha256": "291f8edecac2b9694c15a7f2cf81fe127363fcc083d60210f81292a279c262bb",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "sourcePageUrl": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ",
+      "sourcePageSha256": "b0cb065de9a29620fa78942017d080fa055bcd12674fd302d2eead391fc11ff7",
+      "approxTimestampSeconds": 180,
+      "crop": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/manor-walls.png",
+      "bytes": 71665,
+      "sha256": "8f9412ff7ac4d3a69031ca05f3e4c42c2f67ddeb0966bb2a5b0715f4b21e8ca0",
+      "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+      "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "sourcePageUrl": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ",
+      "sourcePageSha256": "b0cb065de9a29620fa78942017d080fa055bcd12674fd302d2eead391fc11ff7",
+      "approxTimestampSeconds": 220,
+      "crop": [
+        320,
+        180,
+        320,
+        180
+      ],
+      "cellDimensions": [
+        320,
+        180
+      ]
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/stages/references/void-primary.png",
+      "bytes": 5189472,
+      "sha256": "9409632e17649f5d731beb086503f7213fb5c113a1aa9c7854e631b81c39c608",
+      "url": "https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png",
+      "publisherPage": "https://www.glitchprod.com/digital-circus",
+      "kind": "Official GLITCH promotional still"
+    }
+  ],
+  "stages": [
+    {
+      "id": "bigtop",
+      "path": "assets/encore/stages/bigtop/scene-20261127.png",
+      "bytes": 1576107,
+      "sha256": "ba3425ee5abdcd1fe966655cfb7fab1499ef7517721612f20f4c3dd23c53e573",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-eccba837-ebb7-47cb-8a5f-228939e65625.png",
+      "sourceId": "glitch-cast",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/bigtop-primary.png",
+          "bytes": 796845,
+          "sha256": "c9876b6b680a891972a74502375d63d7d403843b45d9aadd4335b3362a5534db",
+          "url": "https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png",
+          "publisherPage": "https://www.glitchprod.com/digital-circus",
+          "kind": "Official GLITCH promotional still"
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "candy",
+      "path": "assets/encore/stages/candy/scene-20261127.png",
+      "bytes": 2067904,
+      "sha256": "582e9508c8044ab3f258e4cec81b2dd42eb4856e5e3decdedfee6fb0badd3905",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-26104ea4-1015-4bd0-bd4b-9edc1994f08e.png",
+      "sourceId": "glitch-canyon-storyboards-20261127",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/candy-road.png",
+          "bytes": 58306,
+          "sha256": "b59564d7de5c17980482cb798577c2bd6f82b2aefabf5bdc4aac28598577e4ee",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+          "sourcePageUrl": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig",
+          "sourcePageSha256": "29158660650810b15a23f28bc13f5ca66c723c8a326cbb2e47e00579ac332914",
+          "approxTimestampSeconds": 420,
+          "crop": [
+            0,
+            360,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/candy-route-500.png",
+          "bytes": 72194,
+          "sha256": "a7ee3a7de89c40453427ae61610782afbad8512c04cf383c22f9e30bbf99ffa5",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+          "sourcePageUrl": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig",
+          "sourcePageSha256": "61552f2456fb47d7dbdfd5bab35d9a920169ab49f7fec801d763f2d9ce62fad5",
+          "approxTimestampSeconds": 520,
+          "crop": [
+            320,
+            360,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "manor",
+      "path": "assets/encore/stages/manor/scene-20261127.png",
+      "bytes": 1681422,
+      "sha256": "f05fd1704c130e3000752231c1eaf369ed97f4780076e60c423ba3bc3c92d305",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-9a0e54e4-856d-4799-8dcc-9cd1c2e02763.png",
+      "sourceId": "glitch-manor-storyboards-20261127",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/manor-hall.png",
+          "bytes": 50601,
+          "sha256": "291f8edecac2b9694c15a7f2cf81fe127363fcc083d60210f81292a279c262bb",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+          "sourcePageUrl": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ",
+          "sourcePageSha256": "b0cb065de9a29620fa78942017d080fa055bcd12674fd302d2eead391fc11ff7",
+          "approxTimestampSeconds": 180,
+          "crop": [
+            0,
+            0,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/manor-walls.png",
+          "bytes": 71665,
+          "sha256": "8f9412ff7ac4d3a69031ca05f3e4c42c2f67ddeb0966bb2a5b0715f4b21e8ca0",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+          "sourcePageUrl": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ",
+          "sourcePageSha256": "b0cb065de9a29620fa78942017d080fa055bcd12674fd302d2eead391fc11ff7",
+          "approxTimestampSeconds": 220,
+          "crop": [
+            320,
+            180,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "cellar",
+      "path": "assets/encore/stages/cellar/scene-20261127.png",
+      "bytes": 1399311,
+      "sha256": "1db8368ee6936a9c0f3dc1f7baeabcd0b85c3f5b3caa99b08e4eb630130f9ce5",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-a2b2c930-f8cb-4f6a-851c-fb2719ada666.png",
+      "sourceId": "glitch-cellar",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/cellar-primary.jpg",
+          "bytes": 808860,
+          "sha256": "e2eec569fc9791e44eaa765be8009ca99d50189f7bb3a7220aee022edd6e3bb4",
+          "url": "https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg",
+          "publisherPage": "https://www.glitchprod.com/digital-circus",
+          "kind": "Official GLITCH promotional still"
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "void",
+      "path": "assets/encore/stages/void/scene-20261127.png",
+      "bytes": 1504842,
+      "sha256": "f015f4092bca03aee8a05e4e70074d0e70fa316cf937bf371c78ebdff59aeb38",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-f9e11661-04e5-46d9-b14e-e844512c87a6.png",
+      "sourceId": "glitch-void",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/void-primary.png",
+          "bytes": 5189472,
+          "sha256": "9409632e17649f5d731beb086503f7213fb5c113a1aa9c7854e631b81c39c608",
+          "url": "https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png",
+          "publisherPage": "https://www.glitchprod.com/digital-circus",
+          "kind": "Official GLITCH promotional still"
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "lake",
+      "path": "assets/encore/stages/lake/scene-20261127.png",
+      "bytes": 2199628,
+      "sha256": "df9950511c5b30959d2bde8d55c54f23c48bc431d53b4af35e964779d52c02b9",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-81b2a0ce-82cf-4243-809c-dcbe7942a031.png",
+      "sourceId": "glitch-pilot-locations-20261127",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/grounds-wide.png",
+          "bytes": 102222,
+          "sha256": "4ae3f12a2ba30a849093c62ded5affb029dca45756d3b42bb9f86dd46ea9fc9e",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "15c574ed9cd0698a8544cbf809c39425452a4da84a03b8fb70ea3a94703b7229",
+          "approxTimestampSeconds": 230,
+          "crop": [
+            640,
+            180,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/grounds-second.png",
+          "bytes": 103872,
+          "sha256": "cb19c264333558c436a991472f0b2afc7b388d7d61b12ef174331fc4c4f87887",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "15c574ed9cd0698a8544cbf809c39425452a4da84a03b8fb70ea3a94703b7229",
+          "approxTimestampSeconds": 260,
+          "crop": [
+            640,
+            360,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "gloink",
+      "path": "assets/encore/stages/gloink/scene-20261127.png",
+      "bytes": 1930226,
+      "sha256": "999ab491bb7f9dfd7c42240318b14a7915748026b2ec85d62b4ad43619c83cfa",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-73bf41bf-e088-45d5-8e19-65c0a0747f7c.png",
+      "sourceId": "glitch-pilot-locations-20261127",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/gloink-wide.png",
+          "bytes": 84888,
+          "sha256": "69bbd0101ade8eae44562496360bfe4b3dc5f9baa0ccb00bcbd7b2781d361a9e",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "9cb07a9f837511af0602161bd2c506468ee74dc28791e49739dafdfaed1719eb",
+          "approxTimestampSeconds": 990,
+          "crop": [
+            0,
+            0,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/gloink-side.png",
+          "bytes": 79860,
+          "sha256": "fa1db1c2902f571da409dc3a5707fcd9de51f421eabdac8c05f741cf7db2e7a6",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "9cb07a9f837511af0602161bd2c506468ee74dc28791e49739dafdfaed1719eb",
+          "approxTimestampSeconds": 1010,
+          "crop": [
+            640,
+            0,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "grounds",
+      "path": "assets/encore/stages/grounds/scene-20261127.png",
+      "bytes": 1808408,
+      "sha256": "2f525302f3f21845c474f9929d4b0ffa751cc1544d4d719b5867d5640edcbfc1",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-57d239be-fd19-43bb-a974-91e1da907929.png",
+      "sourceId": "glitch-pilot-locations-20261127",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/grounds-wide.png",
+          "bytes": 102222,
+          "sha256": "4ae3f12a2ba30a849093c62ded5affb029dca45756d3b42bb9f86dd46ea9fc9e",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "15c574ed9cd0698a8544cbf809c39425452a4da84a03b8fb70ea3a94703b7229",
+          "approxTimestampSeconds": 230,
+          "crop": [
+            640,
+            180,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/grounds-second.png",
+          "bytes": 103872,
+          "sha256": "cb19c264333558c436a991472f0b2afc7b388d7d61b12ef174331fc4c4f87887",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "15c574ed9cd0698a8544cbf809c39425452a4da84a03b8fb70ea3a94703b7229",
+          "approxTimestampSeconds": 260,
+          "crop": [
+            640,
+            360,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    },
+    {
+      "id": "backstage",
+      "path": "assets/encore/stages/backstage/scene-20261127.png",
+      "bytes": 2277903,
+      "sha256": "4c532c80111b964bef23e1330eac33f7581281aaf371a2be10dad48621e39afe",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "fullyOpaque": true,
+      "nativePixelsUnmodified": true,
+      "nativeOutput": "exec-62b8f3dd-2a06-4408-b410-45ca0f70d4aa.png",
+      "sourceId": "glitch-pilot-locations-20261127",
+      "references": [
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/backstage-wide.png",
+          "bytes": 80815,
+          "sha256": "6c092e2a7896e9e5ce0cedf9186f8bbe4621b01e9e01a4ae70628a37e8f62c5e",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M8.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "3d791a6f387c88656a8504756da261d98d049763356f12074b2b8fa8792f991c",
+          "approxTimestampSeconds": 740,
+          "crop": [
+            640,
+            0,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "path": "docs/art-generation/completion-20261127/stages/references/backstage-front.png",
+          "bytes": 82836,
+          "sha256": "57b67aac9cce891bb4d2fa9aeacf82b6ad9a88e64b94bc852a86222edfdc93a8",
+          "kind": "Official YouTube storyboard cell, original pixels cropped for reference",
+          "episodeUrl": "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+          "sourcePageUrl": "https://i.ytimg.com/sb/HwAPLk_sQ3w/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCOGmoakG&sigh=rs$AOn4CLAfVflO3hAD2GKxs6ehZ0nffHOO9A",
+          "sourcePageSha256": "25b4dff1bd90ba1e63a1a174f7ff311abc51e33be67e82d45ddca2c6731a256f",
+          "approxTimestampSeconds": 650,
+          "crop": [
+            640,
+            0,
+            320,
+            180
+          ],
+          "cellDimensions": [
+            320,
+            180
+          ]
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCompletePainting": true,
+        "charactersRemoved": true,
+        "clearContinuousForeground": true,
+        "hiddenContinuityIsOriginalAdaptation": true
+      },
+      "cameraAdaptation": "Viewpoint, field of view and cleared foreground adapted for Encore; no surveyed geography or canonical 1:1 claim."
+    }
+  ],
+  "referenceLimitations": [
+    "Storyboard images are 320 × 180 source cells, not the full video stream.",
+    "The episode 7 beach was inspected and rejected for lake; the final lake derives from the pilot panorama.",
+    "candy-route-wide.png at 450 seconds was inspected but not used; the second candy reference is the 520-second cell.",
+    "Characters and occluding objects are removed; hidden walls, ground and widened camera continuity are Encore adaptations."
+  ],
+  "superseded": [
+    {
+      "path": "docs/art-generation/completion-20261127/stages/backstage-first-candidate.png",
+      "reason": "At the outer edges the wall/floor junction sat below the playable foot line. A native imagegen correction raised the junction and extended the carpet.",
+      "runtimeUsed": false
+    }
+  ]
+}

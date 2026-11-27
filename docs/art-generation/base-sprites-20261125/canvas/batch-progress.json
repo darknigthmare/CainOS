@@ -1,0 +1,105 @@
+{
+  "schema": "encore-static-base-canvas-batch/v1",
+  "complete": true,
+  "expected": 14,
+  "execution": [
+    {
+      "id": "bunnyjax",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 138207232
+    },
+    {
+      "id": "maidribbit",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137977856
+    },
+    {
+      "id": "ghostlyvacuum",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137965568
+    },
+    {
+      "id": "mingtrophy",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137519104
+    },
+    {
+      "id": "disappearingguymicrophone",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 138293248
+    },
+    {
+      "id": "glitch-murderdrones-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134766592
+    },
+    {
+      "id": "glitch-murderdrones-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 136261632
+    },
+    {
+      "id": "glitch-murderdrones-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134762496
+    },
+    {
+      "id": "glitch-metarunner-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 135516160
+    },
+    {
+      "id": "glitch-metarunner-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134950912
+    },
+    {
+      "id": "glitch-metarunner-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 134828032
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-hommage",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 137162752
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-resident",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 136060928
+    },
+    {
+      "id": "glitch-sunsetparadise-queenie-fusion",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "peakRSSBytes": 138194944
+    }
+  ]
+}

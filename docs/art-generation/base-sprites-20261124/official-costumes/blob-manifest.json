@@ -1,0 +1,69 @@
+{
+  "schema": "encore-official-base-immutable-blobs/v1",
+  "createdAt": "2026-11-24T15:31:06.289Z",
+  "repository": "darknigthmare/CainOS",
+  "complete": true,
+  "expected": 8,
+  "present": 8,
+  "files": [
+    {
+      "file": "assets/encore/base-costumes/cafecaine/selection.png",
+      "sha": "af65d49967712b5ca7f226c4b93e4c4079ed428b",
+      "sha256": "22b15aea61f1cbcf282cdf46fe8fc108154f0095acbddc78c2ecc27af431e8e3",
+      "bytes": 926119,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/cafecaine/stance.png",
+      "sha": "4179272a9f2159b0114ec42a21eec0acffdd52ee",
+      "sha256": "5cdb20466d705131ba74dda2d3df4bd692fc97887da88fc19eff5c2c4b9fc59c",
+      "bytes": 1079993,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/cafejax/selection.png",
+      "sha": "cdb085e5babe17427a15254f99477993141309fe",
+      "sha256": "5a76b310aec47ac24aeea1692134deabd4f79b22b1c0f519d9e7272335d80791",
+      "bytes": 992078,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/cafejax/stance.png",
+      "sha": "d5422004109e48c818451a8e17080267cef3a669",
+      "sha256": "399520cbd1dfb461682f0333b60afbb7a4c94c5eabb95ccfb5b59af00de65ac7",
+      "bytes": 1566181,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/contortionistzooble/selection.png",
+      "sha": "11619f4648961c457cd79d8daf5df04581f18935",
+      "sha256": "b10ef7764390e499d60a0c32f1284e08a6cd43147a72d595f4f661bcee82ac84",
+      "bytes": 1269907,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/contortionistzooble/stance.png",
+      "sha": "f3036841b6e384710e8dab775ed5ed24c87fb869",
+      "sha256": "049c3321b85af39607750a96c44e59d51fcf5b36d6026797dea25f273e9e1d7f",
+      "bytes": 1312024,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/hotdogabel/selection.png",
+      "sha": "c28e74fef90854e9dbc6279e8ca6a4b8869324f8",
+      "sha256": "bd25d79ed10cfe2674e4072c8c8e2005d821f8406c855c66b6f0443e720390b5",
+      "bytes": 871632,
+      "nativeBytesVerified": true
+    },
+    {
+      "file": "assets/encore/base-costumes/hotdogabel/stance.png",
+      "sha": "d7c2df06d9f0fa2d2ee3fa1579a27546fb250bc5",
+      "sha256": "d7c0b13f9bdea51206b600e64c08112191de3fe460f58bc219b455a8d84ab205",
+      "bytes": 868289,
+      "nativeBytesVerified": true
+    }
+  ],
+  "errors": [],
+  "refsModified": false,
+  "treesCreated": false
+}

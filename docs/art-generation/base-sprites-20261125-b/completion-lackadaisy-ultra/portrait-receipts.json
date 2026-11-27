@@ -1,0 +1,20 @@
+[
+  {
+    "style": "hommage",
+    "prompt": "Use case: stylized-concept. Asset type: separate fighter-selection portrait for the existing Digital Circus Encore 2D game. Edit the reference into ONE clean close-up upper-body selection portrait of exactly the same Queenie hommage design, facing slightly toward screen right. Preserve her exact crown/finial, eye shapes, red-orange irises, lower lashes, costume palette, collar and all visible accessories from the supplied source; keep the distinctive face and recognizable chess-queen proportions unchanged. No human face, no mouth, no nose, no cat features. Frame the entire head and crown with comfortable transparent margin, the two detached gloves and upper chest; gently crop only the lower torso at the bottom. Keep crisp finely inked outlines and the reference's polished hand-painted cel shading. Transparent background with genuine alpha; only a single character, no text, no label, no border, no scenery, no shadow or effects. Square portrait composition, high resolution. This is an original crossover design for Encore, no claim of an official canonical appearance. Do not output a contact sheet or multiple views.",
+    "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-53beb64e-60c8-45ae-8e6b-c33598fbeb01.png",
+    "target": "assets/encore/crossovers/lackadaisy/queenie/hommage/selection.png"
+  },
+  {
+    "style": "resident",
+    "prompt": "Use case: stylized-concept. Asset type: separate fighter-selection portrait for the existing Digital Circus Encore 2D game. Edit the reference into ONE clean close-up upper-body selection portrait of exactly the same Queenie resident design, facing slightly toward screen right. Preserve her exact crown/finial, eye shapes, red-orange irises, lower lashes, costume palette, collar and all visible accessories from the supplied source; keep the distinctive face and recognizable chess-queen proportions unchanged. No human face, no mouth, no nose, no cat features. Frame the entire head and crown with comfortable transparent margin, the two detached gloves and upper chest; gently crop only the lower torso at the bottom. Keep crisp finely inked outlines and the reference's polished hand-painted cel shading. Transparent background with genuine alpha; only a single character, no text, no label, no border, no scenery, no shadow or effects. Square portrait composition, high resolution. This is an original crossover design for Encore, no claim of an official canonical appearance. Do not output a contact sheet or multiple views.",
+    "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-7e6c217e-e87f-4d0d-b8c0-ec0538811457.png",
+    "target": "assets/encore/crossovers/lackadaisy/queenie/resident/selection.png"
+  },
+  {
+    "style": "fusion",
+    "prompt": "Use case: stylized-concept. Asset type: separate fighter-selection portrait for the existing Digital Circus Encore 2D game. Edit the reference into ONE clean close-up upper-body selection portrait of exactly the same Queenie fusion design, facing slightly toward screen right. Preserve her exact crown/finial, eye shapes, red-orange irises, lower lashes, costume palette, collar and all visible accessories from the supplied source; keep the distinctive face and recognizable chess-queen proportions unchanged. Preserve both feline ears, small muzzle/whiskers, fur ruff and green bow. Frame the entire head and crown with comfortable transparent margin, the two detached gloves and upper chest; gently crop only the lower torso at the bottom. Keep crisp finely inked outlines and the reference's polished hand-painted cel shading. Transparent background with genuine alpha; only a single character, no text, no label, no border, no scenery, no shadow or effects. Square portrait composition, high resolution. This is an original crossover design for Encore, no claim of an official canonical appearance. Do not output a contact sheet or multiple views.",
+    "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-18dcff45-ee2d-4dda-bb8e-e3ef7a693268.png",
+    "target": "assets/encore/crossovers/lackadaisy/queenie/fusion/selection.png"
+  }
+]

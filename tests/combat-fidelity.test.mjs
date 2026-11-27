@@ -31,7 +31,58 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'smg4.store', 'www.tvmaze.com', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com', 'prtimes.jp'].includes(url.hostname), `Unreviewed source host: ${url.hostname}`);
+    if (url.hostname === 'smg4.store') {
+      // The official store's terms identify Glitch Productions as operator.
+      // This product reference supports only these three original crossovers.
+      assert.equal(url.pathname, '/products/smg4-plush');
+      assert.ok(['hommage', 'resident', 'fusion'].some(style =>
+        source.id === `encore-kaufmo-smg4-${style}-20261127-completion`));
+      assert.equal(source.kind, 'Création originale pour Encore avec références officielles');
+      assert.match(source.scope, /créations Encore, non des apparitions officielles/);
+    }
+    if (url.hostname === 'www.tvmaze.com') {
+      assert.equal(source.id, 'max-tvmaze-reproduction-20261127');
+      assert.equal(url.pathname, '/characters/1304195/the-amazing-digital-circus-max');
+      assert.equal(source.kind, 'Reproduction sur un hébergement tiers');
+      assert.match(source.scope, /reproduction secondaire complète les cellules officielles/);
+      assert.match(source.scope, /ne devient pas une source primaire et ne mesure pas les proportions du modèle/);
+    }
+    if (url.hostname === 'prtimes.jp') {
+      // Animate Holdings' own release for its official Digital Circus café collaboration.
+      assert.equal(url.pathname, '/main/html/rd/p/000008857.000016756.html');
+      assert.equal(source.kind, 'Illustration officielle de collaboration commerciale');
+      const reviewedCafeScopes = {
+        'animate-cafe-ribbit': [/Pendantz Maid/, /ne qualifie pas le bas encore masqué de maidribbit/],
+        'animate-cafe-kinger': [/corps conique et sa base entière/, /mains ne sont pas clairement attribuables à Kinger/, /gants flottants/, /sans ajout de bras/],
+        'animate-cafe-pomni': [/silhouette entière, les deux jambes et les deux chaussures/, /mains croisées.*masquent une partie du haut du plastron/, /dos non montré/, /Distincte de maidpomni/],
+        'animate-cafe-ragatha': [/grands nœuds bleus du tablier/, /distincte de maidragatha/, /surfaces arrière non visibles/, /Aucune présence en épisode/],
+        'animate-cafe-gangle': [/Distinct de maidgangle/, /appendices gris lilas/, /anatomie des doigts et le dos masqué ne sont pas certifiés/, /aucune anatomie animale ou humaine supplémentaire/],
+        'animate-cafe-zooble': [/Distincte de noirzooble/, /attaches partiellement masquées/, /aucune apparition en épisode/, /correspondance 1:1/],
+        'animate-cafe-jax': [/Collaboration officielle DECOTTO/, /aucune tenue en épisode affirmée/],
+        'animate-cafe-caine': [/Collaboration officielle DECOTTO/, /aucune tenue en épisode affirmée/],
+      };
+      assert.ok(Object.hasOwn(reviewedCafeScopes, source.id), 'Unreviewed Animate Café source');
+      for (const scope of reviewedCafeScopes[source.id]) assert.match(source.scope, scope, source.id);
+    }
+    if (source.kind === 'Vignettes de l’épisode officiel') {
+      const reviewedStoryboards = {
+        'glitch-barnoir-storyboards': { video: 'L4p2gN2CzsA', time: '690', limits: [/Aucun visionnage du flux complet revendiqué/] },
+        'glitch-softballfield-storyboards': { video: 'L4p2gN2CzsA', time: '1120', limits: [/Aucun visionnage du flux complet revendiqué/] },
+        'glitch-pilot-locations-20261127': { video: 'HwAPLk_sQ3w', time: null, limits: [/230\/260 s/, /650\/740 s/, /990\/1010 s/, /Horodatages approximatifs/, /Aucun visionnage du flux complet, mesure de décor ni détail occulté certifié/] },
+        'glitch-canyon-storyboards-20261127': { video: '4ofJpOEXrZs', time: '420', limits: [/420 et 520 s/, /Les véhicules masquent une partie du sol/, /La cour du palais ne sert pas de référence à cette route/] },
+        'glitch-manor-storyboards-20261127': { video: 'bKjfw77cxeQ', time: '180', limits: [/180\/220 s/, /détails, objets occultés et géométrie complète restent partiels/] },
+        'glitch-max-episode2-storyboards-20261127': { video: '4ofJpOEXrZs', time: '1220', limits: [/340, 420, 1220 et 1240 s/, /ni un visionnage continu ni une mesure du modèle 3D/, /episode2-storyboards\.json/] },
+      };
+      assert.ok(Object.hasOwn(reviewedStoryboards, source.id), `Unreviewed episode storyboard source: ${source.id}`);
+      const reviewed = reviewedStoryboards[source.id];
+      assert.equal(url.hostname, 'www.youtube.com');
+      assert.equal(url.pathname, '/watch');
+      assert.equal(url.searchParams.get('v'), reviewed.video);
+      assert.equal(url.searchParams.get('t'), reviewed.time);
+      assert.match(source.scope, /320 × 180/);
+      for (const limit of reviewed.limits) assert.match(source.scope, limit, source.id);
+    }
     if (['static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname)) {
       assert.equal(source.kind, 'Copie sur un hébergement tiers');
       assert.match(source.scope, /tiers|republiée/);
@@ -50,7 +101,7 @@ test('review records keep source scope, observations and invented combat separat
     if (item.reviewStatus === 'Épisode à revoir') assert.deepEqual(item.observedTraits, []);
     if (item.reviewStatus === 'Référence visuelle consultée') {
       assert.ok(item.observedTraits.length > 0);
-      assert.ok(getFidelitySources(item.sourceIds).some(s => s.kind === 'Visuel officiel'));
+      assert.ok(getFidelitySources(item.sourceIds).some(s => ['Visuel officiel', 'Vignettes de l’épisode officiel'].includes(s.kind)), `Unreviewed visual source: ${item.sourceIds.join(', ')}`);
     }
   }
   for (const move of Object.values(MOVE_FIDELITY)) {
@@ -59,7 +110,10 @@ test('review records keep source scope, observations and invented combat separat
   }
   assert.deepEqual(STAGE_FIDELITY.training.sourceIds, []);
   assert.equal(STAGE_FIDELITY.training.reviewStatus, 'Création originale');
-  assert.equal(STAGE_FIDELITY.lake.reviewStatus, 'Source primaire à identifier');
+  assert.equal(STAGE_FIDELITY.lake.reviewStatus, 'Référence visuelle consultée — comparaison partielle');
+  assert.deepEqual(STAGE_FIDELITY.lake.sourceIds, ['ep1', 'glitch-pilot-locations-20261127']);
+  assert.match(STAGE_FIDELITY.lake.reviewScope, /forme précise de la rive et les détails de la tour restent des adaptations/);
+  assert.match(STAGE_FIDELITY.lake.reviewScope, /Aucune certification canonique 1:1 ni géographie mesurée/);
 });
 
 test('the forty promoted NPCs keep an open episode review with an individual atlas sprite record', () => {
@@ -110,7 +164,7 @@ test('the nine episode references retain later costumes without claiming to have
     assert.equal(source.kind, 'Épisode officiel');
     assert.match(source.url, /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/);
   }
-  assert.equal(VARIANTS.length, 51);
+  assert.equal(VARIANTS.length, 52);
   for (const variant of VARIANTS) {
     assert.equal(variant.fidelity, getCostumeFidelity(variant.id));
     assert.notEqual(variant.fidelity, getFighterFidelity(variant.baseFighterId), 'a base appearance review must not certify its costumes');
@@ -125,10 +179,21 @@ test('the Void, cellar and resident corridor cannot borrow an unrelated visual a
   assert.ok(!STAGE_FIDELITY.void.sourceIds.includes('glitch-false-exit'));
   assert.ok(STAGE_FIDELITY.cellar.sourceIds.includes('glitch-cellar'));
   assert.ok(!STAGE_FIDELITY.backstage.sourceIds.includes('glitch-false-exit'));
-  assert.equal(STAGE_FIDELITY.backstage.observedTraits.length, 3);
-  assert.match(STAGE_FIDELITY.backstage.reviewStatus, /copies du pilote à confirmer/);
-  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Aucune frame directe ni aucun horodatage canonique/);
-  assert.equal(getFidelitySources(STAGE_FIDELITY.backstage.sourceIds).filter(source => source.kind === 'Copie sur un hébergement tiers').length, 2);
+  assert.deepEqual(STAGE_FIDELITY.backstage.sourceIds, ['ep1', 'glitch-pilot-locations-20261127']);
+  assert.deepEqual(STAGE_FIDELITY.backstage.observedTraits, [
+    'Couloir à bandes verticales roses, saumon et violettes, fines moulures claires et tapis rouge.',
+    'Petites portes brunes à médaillons, images abstraites encadrées, plafonniers clairs et arche au fond.',
+  ]);
+  assert.match(STAGE_FIDELITY.backstage.reviewStatus, /comparaison partielle/);
+  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Deux cellules officielles du pilote/);
+  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Ordre et nombre des chambres.*ne sont pas certifiés/);
+  const corridorSources = getFidelitySources(STAGE_FIDELITY.backstage.sourceIds);
+  assert.equal(corridorSources.filter(source => source.kind === 'Copie sur un hébergement tiers').length, 0);
+  const pilot = corridorSources.find(source => source.id === 'glitch-pilot-locations-20261127');
+  assert.equal(pilot.url, 'https://www.youtube.com/watch?v=HwAPLk_sQ3w');
+  assert.equal(pilot.kind, 'Vignettes de l’épisode officiel');
+  assert.match(pilot.scope, /650\/740 s/);
+  assert.match(pilot.scope, /Horodatages approximatifs/);
   assert.match(STAGES.find(s => s.id === 'cellar').description, /yeux multicolores/);
   assert.match(STAGES.find(s => s.id === 'void').description, /blanc et irisé/);
 });
@@ -150,7 +215,7 @@ test('unknown IDs fail closed and shared review data cannot be mutated by a cons
   assert.throws(() => COSTUME_FIDELITY.workgangle.assetReview.issues.push('mutation'), TypeError);
 });
 
-test('all 51 costumes have an individual technical review independent of canonical evidence', () => {
+test('all 52 costumes have an individual technical review independent of canonical evidence', () => {
   assert.deepEqual(Object.keys(COSTUME_FIDELITY).sort(), VARIANTS.map(v => v.id).sort());
   for (const [id, item] of Object.entries(COSTUME_FIDELITY)) {
     assert.ok(Array.isArray(item.sourceIds) && Array.isArray(item.observedTraits), id);
@@ -158,6 +223,16 @@ test('all 51 costumes have an individual technical review independent of canonic
     assert.ok(item.combatAdaptation.includes('mêmes dix techniques'), id);
     assert.ok(item.reviewStatus && item.reviewScope.length > 30, id);
     const review = item.assetReview;
+    if (id === 'abstractedqueeniedark') {
+      assert.equal(item.sourceKind, 'official-identity');
+      assert.deepEqual(item.observedTraits, []);
+      assert.match(item.reviewStatus, /comparaison visuelle ouverte/);
+      assert.match(review.status, /^Revue technique (?:à reprendre|partielle)/);
+      assert.ok(review.visibleTraits.length >= 1 && review.visibleTraits.every(t => t.length > 15));
+      for (const field of ['identityEvidence', 'framing', 'transparency', 'proportions']) assert.ok(review[field].length > 35, id + ':' + field);
+      assert.ok(Array.isArray(review.issues) && review.issues.length >= 2);
+      continue;
+    }
     assert.match(review.status, /^Revue technique (?:0\.6\.0 )?effectuée/, id);
     assert.ok(review.visibleTraits.length >= 2 && review.visibleTraits.every(t => t.length > 15), id);
     for (const field of ['identityEvidence', 'framing', 'transparency', 'proportions']) assert.ok(review[field].length > 35, `${id}:${field}`);

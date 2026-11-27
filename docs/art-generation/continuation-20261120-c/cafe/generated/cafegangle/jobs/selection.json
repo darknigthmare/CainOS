@@ -1,0 +1,25 @@
+{
+  "appearanceId": "cafegangle",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE full-body transparent 2D selection sprite for Digital Circus Encore.\n\nImage 1 is the authoritative official Animate Cafe costume of GANGLE, the ribbon character wearing the dark navy maid uniform in the center. Recreate ONLY that one character, removing all serving accessories and neighboring characters. Image 2 supplies ONLY the established game drawing style: clean dark outlines, flat colors and restrained cel shading. Do NOT borrow Pomni’s face, hat, human limbs, shoes or body.\n\nGangle has a smooth elongated WHITE comedy mask, two very large BLACK vertically arched eye openings and a very small curved w-shaped catlike mouth. Her white frilled headband has a DARK NAVY band, TWO small WHITE triangular costume cat ears with PINK centers, and large DARK NAVY bows with long neat ribbon tails on both sides. These are costume decorations; no fur, hair, animal tail or second face.\n\nExact cafe clothes: DARK NAVY short puff sleeves and bell-shaped knee-length skirt; WHITE tall finely pleated bib with small discreet buttons, white frilled bib shoulders and a wide scalloped white apron. Neck bow is RED over a navy backing, with a small YELLOW HEART in its middle. Large navy bows with small red accent tails at each apron side. One muted LILAC vertical skirt panel on her anatomical LEFT, and fine pale trim above the scalloped white underskirt hem. Her underlying body is RED RIBBON: two narrow flexible red ribbon arms and two separated red lower ribbon strips with forked tapered ends. No human torso shape, legs, feet, shoes or skin. Small simple PALE LAVENDER-GRAY mittenlike hands and WHITE cuffs at the wrists; retain simple rounded fingers without elaborate fingernails. The green ring and silver shaker in the reference are serving props and must not be incorporated into her hands or costume.\n\nSelection pose: full figure in a relaxed welcoming three-quarter pose facing SCREEN-RIGHT, mask pointed right, one mitten gently raised and the other held beside the apron. Two red ribbon arms and two lower ribbon ends all visible. Keep the mask tall but proportional to the costume, and keep every detail of the official uniform. No tray, food, glass, stirrer or shaker.\n\nClean crisp hand-drawn 2D UHD game art, moderate cel shading. Entire subject centered with at least 8 percent transparent margins around headband, ears, both hands, skirt and ribbon tips. Body occupies about 75 percent of canvas height. Native transparent RGBA. No background, floor, cast shadow, glow, halo, white sticker border, text, labels, logo, duplicate figure, panel, sheet or cropped extremity.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+    "assets/encore/stance/cafepomni.png"
+  ],
+  "referenceRoles": [
+    "Official cafe Gangle costume and silhouette, cropped for inspection; serving accessories omitted",
+    "Existing Encore cafe drawing style only; no Pomni anatomy or costume transfer"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "audit_missing_assets",
+  "definitionSha256": "67d8e5543ce2904c4a97c025f3f97a112320e7eba941863cbeffae53bd1f6d9e",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+    "assets/encore/stance/cafepomni.png": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b"
+  }
+}

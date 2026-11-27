@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "createdOn": "2026-11-24",
+  "catalogMutation": false,
+  "families": [
+    {
+      "id": "contortionistzooble",
+      "fighterId": "zooble",
+      "name": "Zooble — Contorsionniste",
+      "officialSourceName": "Contortionist Zooble",
+      "sourceId": "glitch-side-show-contortionist-zooble",
+      "sourceTitle": "GLITCH — Digital Circus Animiniz Side Show Series, Contortionist Zooble",
+      "sourceUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_contortionistZooble.png?v=1773977710",
+      "sourceKind": "Rendu officiel de figurine GLITCH",
+      "sourceScope": "Apparence commerciale officielle ; aucune nouvelle apparition en épisode affirmée.",
+      "traits": [
+        "Assemblage entièrement replié, bas et asymétrique ; masse rose triangulaire, grand œil jaune à spirale en haut à droite et petit œil blanc sous paupière violette en bas à droite.",
+        "Étoile orange et anneau violet à gauche, aile bleue à membrane cyan, segments noirs et blancs pliés, griffe bleue sur articulation menthe et violette, anneau cyan et pointes vertes en bas.",
+        "Boule jaune et orange à embouts blancs ; conservation des chevauchements et pièces visibles sans déplier le corps ni attribuer de nouvelles articulations cachées."
+      ],
+      "distinction": "Aucun costume contortionistzooble dans le catalogue de 484 apparences de départ. La pose officielle repliée reste entière ; ce n’est pas une tenue normale de Zooble recolorée.",
+      "references": [
+        "contortionistzooble-official.jpg"
+      ],
+      "staticConstraint": "Conserver l’amas complet dans une seule pose. Ne jamais produire une version debout ni une action à partir de l’amas.",
+      "visualRecommendation": {
+        "maxIllustratedWidth": 240
+      },
+      "introducedOn": "2026-11-24",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "directory": "assets/encore/base-costumes/contortionistzooble",
+      "referenceReviewStatus": "primary-images-inspected; two-native-bases-visually-reviewed",
+      "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues."
+    },
+    {
+      "id": "hotdogabel",
+      "fighterId": "abel",
+      "name": "Abel — Chariot à hot-dogs",
+      "officialSourceName": "Hotdog Cart Abel",
+      "sourceId": "glitch-beach-hotdog-cart-abel",
+      "sourceTitle": "GLITCH — Digital Circus Animiniz Beach Vacation Series, Hotdog Cart Abel",
+      "sourceUrl": "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_07.png?v=1765572441&width=1600",
+      "sourceKind": "Rendu officiel de figurine GLITCH",
+      "sourceScope": "Apparence commerciale officielle ; aucune nouvelle apparition en épisode affirmée.",
+      "traits": [
+        "Abel orange à tête allongée, deux yeux points noirs, sourire noir, visière grise ; main gauche de l’image levée et hot-dog tenu à droite.",
+        "Chariot turquoise à comptoir clair, trois récipients, flacons rouge et jaune, graphisme de hot-dogs et emblème Caine ; grande roue à rayons claire et petite roulette.",
+        "Personnage et chariot forment un ensemble indivisible. Le chariot conserve les jambes masquées ; seule la petite portion orange déjà visible sous le chariot demeure."
+      ],
+      "distinction": "Aucun costume hotdogabel dans le catalogue de départ ; ensemble personnage et chariot complet, différent d’Abel standard.",
+      "references": [
+        "hotdogabel-official.png"
+      ],
+      "staticConstraint": "Ne pas retirer le chariot pour montrer ou inventer les jambes. Maintenir les accessoires et les roues dans chaque base.",
+      "visualRecommendation": {
+        "maxIllustratedWidth": 240
+      },
+      "introducedOn": "2026-11-24",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "directory": "assets/encore/base-costumes/hotdogabel",
+      "referenceReviewStatus": "primary-images-inspected; two-native-bases-visually-reviewed",
+      "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues."
+    },
+    {
+      "id": "cafejax",
+      "fighterId": "jax",
+      "name": "Jax — Café",
+      "officialSourceName": "Jax — illustration DECOTTO by animate cafe",
+      "sourceId": "animate-cafe-jax",
+      "sourceTitle": "Animate Café × The Amazing Digital Circus — Jax en tenue de café",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+      "imageUrl": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-67383ec049776a79e04eea0c153d49e4-1000x707.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sourceKind": "Illustration officielle de collaboration commerciale",
+      "sourceScope": "Collaboration officielle DECOTTO ; aucune tenue en épisode affirmée.",
+      "traits": [
+        "Lapin violet très élancé, oreilles inclinées inégales, yeux et dents jaunes ; coiffe blanche à volants et grand nœud bleu nuit derrière la tête.",
+        "Robe bleu nuit et col blanc, petit cœur violet au corsage, tablier blanc à deux grands nœuds bleu nuit latéraux et ourlet festonné.",
+        "Longs bas blancs avec petits revers blancs, chaussures bleu nuit à plateformes et petits fermoirs jaunes ; plateau argenté et tasse rouge conservés dans la composition statique."
+      ],
+      "distinction": "Comparé à maidjax publié : le tablier à deux grands nœuds latéraux, le gros nœud de coiffe et les fermoirs jaunes des chaussures sont distincts. Le visuel officiel isolé du panneau marchandises confirme l’assemblage visible.",
+      "references": [
+        "animate-cafe-main.jpg",
+        "animate-cafe-goods.jpg",
+        "cafejax-reference-detail.png",
+        "cafejax-isolated-goods-detail.png"
+      ],
+      "staticConstraint": "Reprendre la pose documentée et le plateau. Ne pas générer d’actions ; ne pas emprunter les membres de Ragatha superposés dans l’affiche.",
+      "visualRecommendation": {
+        "maxIllustratedWidth": 180
+      },
+      "introducedOn": "2026-11-24",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "directory": "assets/encore/base-costumes/cafejax",
+      "referenceReviewStatus": "primary-images-inspected; two-native-bases-visually-reviewed",
+      "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues."
+    },
+    {
+      "id": "cafecaine",
+      "fighterId": "caine",
+      "name": "Caine — Café",
+      "officialSourceName": "Caine — illustration DECOTTO by animate cafe",
+      "sourceId": "animate-cafe-caine",
+      "sourceTitle": "Animate Café × The Amazing Digital Circus — Caine en tenue de café",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+      "imageUrl": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-67383ec049776a79e04eea0c153d49e4-1000x707.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sourceKind": "Illustration officielle de collaboration commerciale",
+      "sourceScope": "Collaboration officielle DECOTTO ; aucune tenue en épisode affirmée.",
+      "traits": [
+        "Tête dentier à gencives rouges et rangées de dents blanches, iris bleu à gauche de l’image et vert à droite ; grand nœud bleu nuit et partie claire derrière la tête, sans haut-de-forme.",
+        "Habit de service sombre avec plastron clair et petit nœud papillon, gants blancs, jambes courtes repliées et petits souliers sombres selon la pose documentée.",
+        "Petite théière blanche à visage tenue en hauteur et filet de thé courbe conservés avec le personnage. Aucun haut-de-forme ni canne."
+      ],
+      "distinction": "Distinct de ringmastercaine : grand nœud derrière le dentier et service au thé au lieu du haut-de-forme et de la canne ; silhouette flottante aux jambes repliées. Le panneau marchandises montre le même personnage isolé. La rangée supérieure de dents blanches ne constitue pas une coiffe indépendante inventée.",
+      "references": [
+        "animate-cafe-main.jpg",
+        "animate-cafe-goods.jpg",
+        "cafecaine-full-reference-detail.png",
+        "cafecaine-isolated-goods-detail.png"
+      ],
+      "staticConstraint": "Garder Caine et ses objets de service comme une composition statique. Ne pas reprendre le gâteau, Gangle ou Ribbit voisins ; pas de jambes rallongées ou d’angle arrière inventé.",
+      "visualRecommendation": {
+        "maxIllustratedWidth": 220
+      },
+      "introducedOn": "2026-11-24",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "directory": "assets/encore/base-costumes/cafecaine",
+      "referenceReviewStatus": "primary-images-inspected; two-native-bases-visually-reviewed",
+      "scope": "Deux dessins de base uniquement : sélection et garde statique. Les neuf poses d’action sont explicitement hors périmètre de cette passe, sans dette de livraison pour cette famille. Source officielle qualifiée et comparaison visuelle de face ; aucune certification de correspondance pixel à pixel ou de modèle complet à toutes les vues."
+    }
+  ]
+}

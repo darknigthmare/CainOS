@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: identity-preserve. Asset: one fighter-selection bust portrait for Digital Circus Encore. The reference is Queenie Reine des profondeurs, an original Gaslight District crossover. Create ONE separate bust portrait showing the complete coral-tipped chess queen crown down to below the inset amber lantern on the chest. Keep precisely the reference identity: blue-gray weathered driftwood scalloped chess crown and neck, protruding white half-lidded eyes with orange irises and short black lower lashes, tiny barnacles, dark teal seaweed cloak, brass lantern inset into chest with amber solid glass, two pale sea-glass detached gloves. Preserve all proportions, shapes, palette, detailed hand-painted 2D cel shading and outline style. One figure facing three-quarter right, gloves fully visible beside chest, no arms, legs, mouth, nose or human anatomy. Full crown and coral with margin; intentional bust framing below lantern. Real transparent RGBA background without any fog, glow, black vignette, ground shadow, scenery, extra creature, text or frame. The original crossover remains a chess piece; no transformation into a humanoid.",
+  "source": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png",
+  "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-664576a1-26a9-4bd5-ad46-1069a369acb9.png",
+  "installed": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+  "editsAfterGeneration": "none",
+  "visualReview": "Bust preserves driftwood, coral finial, sea-glass gloves, barnacles and inset lantern. Original transformed anatomy remains a chess queen without human limbs.",
+  "sha256": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613",
+  "bytes": 1635594
+}

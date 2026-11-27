@@ -1,0 +1,60 @@
+{
+  "series": "knightsofguinevere",
+  "style": "resident",
+  "label": "Knights of Guinevere · Résident · Réparateur des automates",
+  "identity": "Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/knights-of-guinevere"
+  ],
+  "state": "selection",
+  "id": "glitch-knightsofguinevere-ribbit-resident",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:knightsofguinevere:resident:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b25e1b11-5b85-4f70-8909-8b1259793f6b.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-b25e1b11-5b85-4f70-8909-8b1259793f6b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    354,
+    31,
+    965,
+    1224
+  ],
+  "alpha12Margins": [
+    354,
+    31,
+    289,
+    30
+  ],
+  "alphaZeroFraction": 0.7914723920138174,
+  "alphaOpaqueFraction": 0.0007650160634295613,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/selection.png",
+  "bytes": 683406,
+  "sha256": "579dc415bb1ba8413b9b79a5ea51783ab291287c4e897578e9cb0c5dd14b68cd",
+  "sha": "96cdf5319c94938e033b5baf0b72caddd7106a49",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png": "f8d5a53457dc2705ee3d1e79e79e8510602a9ec6c951bb74220d7529133763e3"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

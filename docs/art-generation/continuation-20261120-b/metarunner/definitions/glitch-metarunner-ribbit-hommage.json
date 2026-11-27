@@ -1,0 +1,36 @@
+{
+  "id": "glitch-metarunner-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "hommage",
+  "name": "Meta Runner · Hommage · Tari",
+  "title": "Hommage · Tari",
+  "introducedOn": "2026-11-20",
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "bodyProportions": "Adaptation élancée déjà utilisée dans le jeu ; trois doigts choisis pour ce crossover original, sans attribution au Pendantz.",
+  "nativeFacing": "right",
+  "requiredSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "referenceSourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://www.glitchprod.com/meta-runner",
+    "https://glitchproductions.store/products/tari-hoodie"
+  ],
+  "design": "Ribbit biologique verte, grands yeux blancs et pupilles noires, museau menthe, joues et nœud roses. Sweat bleu cyan de Tari, capuche blanche abaissée, panneaux blancs le long des manches, zip central, poignets et ourlet anthracite ; pantalon fuselé marine et baskets blanches à semelle cyan. Avant-bras gauche cybernétique blanc à jointures marine et lignes cyan, main à trois doigts arrondis ; main droite biologique verte à trois doigts. Pas de cheveux, de bonnet, de queue ni de personnage humain.",
+  "generationDesign": "Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and a hot-pink fabric bow tie. Long slender limbs and torso in the existing game adaptation, not plush proportions. Wear Tari-inspired bright cyan zip-up hoodie: white hood folded DOWN, white side panels running along the sleeves, charcoal hem and cuffs, plain central white zipper, no written logos. Bow tie visible at neck above zipper. Slim navy trousers and white sneakers with cyan soles. LEFT forearm is a smooth white cybernetic prosthesis with navy joints and slim cyan indicators, ending in a rounded THREE-digit robotic frog hand; RIGHT hand biological green with exactly THREE rounded digits. Both eyes natural white/black; no electronic face visor. No hair, hat, tail, wings or weapons.",
+  "spriteDirectory": "assets/encore/crossovers/metarunner/ribbit/hommage",
+  "fidelityScope": "Identité de Ribbit et motifs officiels Meta Runner sourcés ; assemblage du costume, anatomie cybernétique, rôle et poses originaux. Ni costume canonique ni modèle 1:1 revendiqué."
+}

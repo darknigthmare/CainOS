@@ -1,0 +1,39 @@
+{
+  "schema": "encore-tracker-baseline-visual-review/v1",
+  "status": "accepted_as_baseline",
+  "workbookSHA256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+  "reviewedAt": "2026-11-24",
+  "findings": [
+    "La Synthèse affiche correctement 54 combattants, 540 techniques, 25 arènes, 480 costumes et les statuts historiques.",
+    "Les deux dernières lignes de Combattants conservent leurs colonnes de simulation, leurs limites de fidélité et les notes jaunes.",
+    "Les lignes de production Café conservent les chemins, empreintes, ressources et critères ; le texte se répartit sur plusieurs lignes.",
+    "Les lignes Atlas et le pied de Références sont lisibles, sans contenu tronqué dans les vues inspectées.",
+    "Les tableaux historiques larges sont conservés ; les nouvelles revues seront rendues par blocs de colonnes pour garder des aperçus lisibles."
+  ],
+  "views": [
+    {
+      "file": "baseline-summary.png",
+      "sha256": "78a1a337c022a8469950bff487e7427199b5032a35338f02ae4c06f3b69d6d61"
+    },
+    {
+      "file": "baseline-roster.png",
+      "sha256": "2c3dadb84311e18976dea45d46a2d922bb414368093943a44e769768214f8a17"
+    },
+    {
+      "file": "baseline-roster-review.png",
+      "sha256": "81391983e813a6ca50c28f49fd6cc9c57105c9f20753fd6867c54ce7beedb3d4"
+    },
+    {
+      "file": "baseline-production.png",
+      "sha256": "0cb8af06093f88114106557d41f5c61b52196365b8b296f272b83a93a9092b4e"
+    },
+    {
+      "file": "baseline-atlas.png",
+      "sha256": "f0455c159acd6dc55d6ce518a04c11c2ddf6d9456684bf57518a790634f720f9"
+    },
+    {
+      "file": "baseline-references.png",
+      "sha256": "eec90d12bee9da693468f8beafeb8463dc199adca94f20c81e199435fb540d7e"
+    }
+  ]
+}

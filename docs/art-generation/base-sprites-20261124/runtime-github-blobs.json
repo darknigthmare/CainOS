@@ -1,0 +1,105 @@
+{
+  "schema": "encore-runtime-github-blobs/v1",
+  "scope": "Exact recovered runtime and tests; final sequential-process Canvas collector.",
+  "offlineVersion": "0.7.0-2c7a9febcca9",
+  "records": [
+    {
+      "file": "combat/base-sprite-content.mjs",
+      "bytes": 67587,
+      "sha": "6e6d8b08d398878137c995b4b5f53caa297ec5d9",
+      "sha256": "21b91894350052bf8bb3e11d62c562fc7c765381e22e54f425fa8b180543aa8b",
+      "verified": true
+    },
+    {
+      "file": "combat/data.mjs",
+      "bytes": 47690,
+      "sha": "ef64ed6cddaf260cef16959c948aada8889d726c",
+      "sha256": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+      "verified": true
+    },
+    {
+      "file": "combat/crossovers.mjs",
+      "bytes": 4160,
+      "sha": "c5f727ec2b6cbc313ea3f247710ae9565f692dbd",
+      "sha256": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+      "verified": true
+    },
+    {
+      "file": "combat/illustrations.mjs",
+      "bytes": 7258,
+      "sha": "c9b70ee4181ef5c17ede58bf8bf578d78721ebc8",
+      "sha256": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+      "verified": true
+    },
+    {
+      "file": "combat/render.mjs",
+      "bytes": 57191,
+      "sha": "b15d43bb3994f74e8f4cee4b9ccc3ea50a108412",
+      "sha256": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+      "verified": true
+    },
+    {
+      "file": "combat/fidelity.mjs",
+      "bytes": 75661,
+      "sha": "02edede5bd4d787e5bfd62ee731a95d7909be473",
+      "sha256": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+      "verified": true
+    },
+    {
+      "file": "tests/combat-base-sprites.test.mjs",
+      "bytes": 12148,
+      "sha": "c156b45ee2f8c8b37d96f5311bda210be127eb49",
+      "sha256": "ff1a83830b0ec169448ee1f7398a557414a6f87271865f3e2de5c66fdc1e0840",
+      "verified": true
+    },
+    {
+      "file": "tests/combat-crossovers.test.mjs",
+      "bytes": 11435,
+      "sha": "d11826ea25a2b3d7586cfe632b5c8a57786d9d57",
+      "sha256": "aedcbb8a6a8248eb2470efda8b040f9cb9a251beff9909dc59e1d300264dc420",
+      "verified": true
+    },
+    {
+      "file": "tests/combat-costume-order.test.mjs",
+      "bytes": 4018,
+      "sha": "01ad6b0e357eb1e2fec2010f3c0969adc7c76ecd",
+      "sha256": "8f81d64965cf5e67324e73e004dc3b01ce9201e97427253207f87c2e4e0809c2",
+      "verified": true
+    },
+    {
+      "file": "tests/combat-crossovers-browser.mjs",
+      "bytes": 16333,
+      "sha": "61c7fbef517eefd7ab6a03b42e8446fdca9a0a83",
+      "sha256": "c5f48a42ec4c85968c029a7f324950e2b7a6a7bb331627b162223c86444423a4",
+      "verified": true
+    },
+    {
+      "file": "scripts/render-combat-base-sprite-review.mjs",
+      "bytes": 21243,
+      "sha": "11824e0f46123ede247657870c5705d5d9175ee0",
+      "sha256": "de0b6fe03f22ce9a01eddc712f26f4071046c275e7d2cde638fe85ef3863c6d9",
+      "verified": true
+    },
+    {
+      "file": "scripts/render-combat-character-review.mjs",
+      "bytes": 21969,
+      "sha": "b34a4938fe086dbedf183da0feabeea1d8ffa343",
+      "sha256": "beb1deaad08ff1dc63830386574515d63175b5a81893398c3ca99ee6fef95976",
+      "verified": true
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/integration-baseline.json",
+      "bytes": 37677,
+      "sha": "f98abeac3e81cc8356c9b02349ed8cbe87a3a630",
+      "sha256": "9076a438ee9fb8f69023a3bfe7aea53234a5ee26ec1fd9d42f63b529e76e6ebc",
+      "verified": true
+    },
+    {
+      "file": "combat/offline-manifest.mjs",
+      "bytes": 408486,
+      "sha": "eea097fb29caa3e6df085c7a5d957bcc230c3cac",
+      "sha256": "b72d0be09ce28693b728d92518df1563ebd0b2ffb9565732fd895d780073a321",
+      "verified": true
+    }
+  ]
+}

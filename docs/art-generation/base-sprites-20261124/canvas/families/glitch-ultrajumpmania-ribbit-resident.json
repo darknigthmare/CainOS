@@ -1,0 +1,494 @@
+{
+  "schema": "encore-static-base-canvas-review/v1",
+  "createdAt": "2026-11-24T16:02:40.643Z",
+  "offlineVersion": "0.7.0-2c7a9febcca9",
+  "method": "Production Canvas2D renderer, native Skia; exact source path, uniform scale, facing, anchor and static reuse checked.",
+  "selectedId": "glitch-ultrajumpmania-ribbit-resident",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "authoredDrawings": 2,
+  "browserTestStatus": "not_executed",
+  "sources": {
+    "combat/base-sprite-content.mjs": "21b91894350052bf8bb3e11d62c562fc7c765381e22e54f425fa8b180543aa8b",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "b72d0be09ce28693b728d92518df1563ebd0b2ffb9565732fd895d780073a321",
+    "scripts/render-combat-base-sprite-review.mjs": "de0b6fe03f22ce9a01eddc712f26f4071046c275e7d2cde638fe85ef3863c6d9"
+  },
+  "appearances": [
+    {
+      "id": "glitch-ultrajumpmania-ribbit-resident",
+      "fighterId": "ribbit",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/selection.png",
+          "bytes": 1033705,
+          "sha256": "1e0d350342f8c3f64dc008f5f78eb877b57a41dd8745f954b962373c9bbb9b9c",
+          "bounds": {
+            "x": 78,
+            "y": 15,
+            "width": 246,
+            "height": 361
+          },
+          "nativeFacing": 1
+        },
+        "stance": {
+          "file": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "bytes": 760515,
+          "sha256": "cd09f1ac7ceab57f263dc3571af644d604fca7673f86a700270e5a10b305dd4d",
+          "bounds": {
+            "x": 106,
+            "y": 16,
+            "width": 405,
+            "height": 606
+          },
+          "nativeFacing": 1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": 0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 543.2755737304688,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/crossovers/ultrajumpmania/ribbit/resident/stance.png",
+          "matrix": {
+            "a": -0.3135313391685486,
+            "b": 0,
+            "c": 0,
+            "d": 0.3135313391685486,
+            "e": 736.7244262695312,
+            "f": 372.9835205078125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 126.98019236326218,
+      "visibleHeight": 189.99999153614044,
+      "maxIllustratedWidth": null,
+      "uniqueRequestedFiles": 2
+    }
+  ],
+  "sheets": [
+    "base-glitch-ultrajumpmania-ribbit-resident.jpg"
+  ],
+  "limitations": [
+    "A repeated stance is one authored base, not nine action drawings or frame-by-frame animation.",
+    "Native Canvas does not exercise DOM, input, audio, service workers or a physical device.",
+    "Technical rendering checks do not certify canonical 1:1 identity or hidden anatomy."
+  ],
+  "summary": {
+    "appearances": 1,
+    "authoredDrawings": 2,
+    "sourceAndFacingChecks": 20,
+    "actualStateDraws": 60,
+    "portraits": 1,
+    "peakRSSBytes": 138113024,
+    "pass": true
+  }
+}

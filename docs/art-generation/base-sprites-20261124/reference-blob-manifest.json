@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "repository": "darknigthmare/CainOS",
+  "complete": true,
+  "count": 38,
+  "totalBytes": 47876081,
+  "imageFolders": [
+    "docs/art-generation/base-sprites-20261124/reference-review/",
+    "docs/art-generation/base-sprites-20261124/archive-references/",
+    "docs/art-generation/base-sprites-20261124/crossovers/references/"
+  ],
+  "extensions": [
+    "png",
+    "jpg",
+    "jpeg",
+    "webp"
+  ],
+  "preservation": "Exact source bytes; no re-encoding, resizing, cropping or image generation.",
+  "verification": "Source bytes were hashed from disk, matched against the native view_image payload, and matched against the SHA returned by GitHub create_blob. Disk hashes are checked again before this manifest is installed.",
+  "publication": "Immutable blobs only; no tree, commit or ref created by this task.",
+  "rows": [
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/kaufmo-plush-1.png",
+      "bytes": 3088448,
+      "sha": "2b993c5097559ff1212294297b96a8875cddd2bd",
+      "sha256": "ce4eb564c2d6ab4551783b61c6938c38b636cf852ad165861a74a7504e78ab2f",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/kaufmo-plush-2.png",
+      "bytes": 5278712,
+      "sha": "6dcf72a9be1174ae315f89fff2214e5a547728ea",
+      "sha256": "249d405cf28f20e791db13ebcf3f8f947e6ac12f5ed450d88fc2e75f78c3109d",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/official-circus-cast.png",
+      "bytes": 796845,
+      "sha": "de78f2931714dbaa87e854b97b8f0f11e919bd24",
+      "sha256": "c9876b6b680a891972a74502375d63d7d403843b45d9aadd4335b3362a5534db",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/official-circus-props.png",
+      "bytes": 6974515,
+      "sha": "54570e9f3548614d34bd004efd0a1d43c667e68e",
+      "sha256": "d4de54c3aa5517cc28187e923bff17e8e274bc00f66ece2ec2c7cbcc052f9ae1",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/queenie-plush-1.png",
+      "bytes": 2503718,
+      "sha": "8bbda6bb3320635555e111b18c4338d5594b7af5",
+      "sha256": "5ebadf88bc6e128268a759c99e73db2f19f46af55f75cfd97dc69e374890d963",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/queenie-plush-2.png",
+      "bytes": 447088,
+      "sha": "9233da8a0d5c47a6e4de6f37bace85d67447d641",
+      "sha256": "b999e24901be5caac9816c3b71decd2550127f65071554be128b693a6a76c37b",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/ribbit-suit-jax-plush-1.png",
+      "bytes": 3727752,
+      "sha": "19a24cdc9037ddd6d50c7aef8403a9ca0c2078bd",
+      "sha256": "58f1130b006fed65e9bd127a769bf788293649163c2b4dfb1b8bdae3fca2d7a5",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/ribbit-suit-jax-plush-2.png",
+      "bytes": 3995739,
+      "sha": "7d5649893fd09d87035545ced69b224f42151865",
+      "sha256": "47ba73164378bc1508e899b2e7fabcc49bb1e40a3b4e7639d7b7b7cb714f35b2",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/water3.png",
+      "bytes": 1551800,
+      "sha": "a975de1790d35d51c896274e69160099ef425d70",
+      "sha256": "2fde497514796ef4f47d78342fa9e5c310d6b26ebe2641859a0e6f2e0277e336",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/archive-references/water4.png",
+      "bytes": 1129254,
+      "sha": "e6f99faf31712a7d53eba12b025a5d3ba774b03c",
+      "sha256": "df38531d10f567574a247acde14e1e5d380aa2d316e874d928b7114add9cbaaf",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/gameoverse-kit-official.png",
+      "bytes": 699956,
+      "sha": "199b8c9708066e5b868270c2bd91eb54e30db86a",
+      "sha256": "03fa216a1543719a618164546997893dcc40867654eeaafdcdcf3ad9f443b8e8",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-mel-official-figure.png",
+      "bytes": 142117,
+      "sha": "6eea81729db8430281b13c6707776c04beb40210",
+      "sha256": "0be012598b4234e4743c7f0188efe6dc556b5298b290157bbf182aefc99ed79e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-official-banner.png",
+      "bytes": 2543670,
+      "sha": "18c15b5493dcd32793079264f5a08b807ab17e15",
+      "sha256": "0b4c726763729483beae35ba1907804d17d0ba667a2e6c57314e3b3fc090d006",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/gaslightdistrict-official-cast.png",
+      "bytes": 3048405,
+      "sha": "dee30f2c9eda68137bee9cc5ec4cc8f9116282f2",
+      "sha256": "e01baba3cdf3a715fca8c7f538aadb217afd7fe9653ba999927a60d65162c1c0",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/knightsofguinevere-official-banner.png",
+      "bytes": 554376,
+      "sha": "a066bf42b3e77314d1bb53d218df4919140f79d1",
+      "sha256": "28ceb4ccfec01961d6c64dbbb64cabb0efdf26dab91c47aaeed9277c5c1e6719",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/lackadaisy-official-banner.png",
+      "bytes": 4480799,
+      "sha": "7db7c4e12c2d09bd09847fea749eb75481463a8b",
+      "sha256": "ca5272882c48fbabb7ad9346b7bf526460a99b89b74f0252b75ebf34d5424f8e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/lackadaisy-rocky-official-standee.png",
+      "bytes": 230514,
+      "sha": "141a0a05aa72c61c3a4f12bd1385f5914836a08e",
+      "sha256": "ca11ba42e8f888d180f5bae9c71d5dac857a7346e7e389a5e2b04b4833396fb4",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/smg4-official-2023-model.jpg",
+      "bytes": 1117124,
+      "sha": "d6a278f8b858e17f4503bc1e22ada3be73bda747",
+      "sha256": "e321a50951a6b702ec31b5257196cb789c907d145c9169eed47b938aab136d52",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/crossovers/references/ultrajumpmania-official-pilot-thumbnail.jpg",
+      "bytes": 203681,
+      "sha": "fbd720eab939c387a69c1e99a6be2d688688ed25",
+      "sha256": "f6f48dbb0c682e8dff49108295982c8c67e763b75d1982d9147cc35c34115754",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-goods.jpg",
+      "bytes": 175497,
+      "sha": "7a12d47b36d6144ec88c053af2d18ed47315e6d7",
+      "sha256": "3a300b59e47531d8bb2d1c118fd80b6c778d3849d9b572a06c2434f6deacec9c",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg",
+      "bytes": 181618,
+      "sha": "7043d54003eb90b09810c2b880d997cf45b32766",
+      "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/cafecaine-full-reference-detail.png",
+      "bytes": 117035,
+      "sha": "e872a0f0a3dc5801ac83c77056caae7fbbcfc31b",
+      "sha256": "f2b59ec6bee5f913ffb4240e35a799f24bca0914b38726720ee6902173ba2ebd",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/cafecaine-isolated-goods-detail.png",
+      "bytes": 8180,
+      "sha": "7629da024153c6d3728bb627238ce1db99cfda49",
+      "sha256": "e8fea2a082007f964627dfa5ae5be96ebcde6784a7faf483ea969e9ff7c8cabf",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/cafecaine-reference-detail.png",
+      "bytes": 94981,
+      "sha": "d8f4bb48954470c42eb3eaa3c9703565289c3044",
+      "sha256": "15fa138c7e13a09f33400e202abd3722ad8bc09385f74d78e5a6bc3145bf361e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/cafejax-isolated-goods-detail.png",
+      "bytes": 9002,
+      "sha": "d0541db672289078fbd23254724b3f59722a9b29",
+      "sha256": "6df05cfa8ff6ad51c2dfbfce62027c532a98baa61c8bc0df8e50c6354151bb3c",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/cafejax-reference-detail.png",
+      "bytes": 215947,
+      "sha": "e62326a82bea892761f6d346a153cc930d633533",
+      "sha256": "8fec93f1a6ab40182d8834cdbeff61ea5339ebf4e0605f9da937e4c6ae800889",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/contortionistzooble-official.jpg",
+      "bytes": 606053,
+      "sha": "c2ae719779fe07f42f409d0b08eef61f0adba1f0",
+      "sha256": "4dcf79274ebb7b47ee01f1f4881f95a8618de5dd53a3dcd5d29ba7bbe0764d29",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/existing-maidjax-detail.png",
+      "bytes": 627427,
+      "sha": "0cc70a6b6ee3de4bfb7f662cbb418bce29507327",
+      "sha256": "a219da8d32e1148e3200d2b441b463899d75b0f09d10383fa2b16c079fdb7b1d",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/hotdogabel-official.png",
+      "bytes": 2286575,
+      "sha": "963f9016fb0dc455b8dc12d9e3c7747a022d43d0",
+      "sha256": "c45a4c2dc15dc47a633a60110ec8edc15dd6f7cbf2bb6c03984bbf8f2d53e3e3",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-artbook-cocktail-detail.png",
+      "bytes": 419327,
+      "sha": "625efd9b75f68476131a694e5a9ceb3b59ea4638",
+      "sha256": "b70d20881e69abeb3a578f96ca16bd1339ffeec8f8d050471fc66d8cf17c52eb",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep3-trailer-36s.png",
+      "bytes": 59480,
+      "sha": "e663da613bd0ea37052f3e0dcad5c4ad4d86daac",
+      "sha256": "e10aed71ff982cd9533c6b5258902b04af41472bb531edf29bc7d3410bf3bc44",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep4-trailer-29s.png",
+      "bytes": 91962,
+      "sha": "0f0a70b12de0539e78415ec89672160240c20252",
+      "sha256": "d6693d638f40832336b3d72344a9d79fa816234f81682a4997284e1ea27605f9",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep6-trailer-30s.png",
+      "bytes": 93065,
+      "sha": "a46f94d5722d8bc9e1f6ea248095a0d1dde83bf9",
+      "sha256": "1684cae6229cfb3948c070ac0ca8025fd743f9a189b966cd62dedc6bff238180",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep6-trailer-32s.png",
+      "bytes": 93958,
+      "sha": "28db2196e63da91b754ec971f564c73db2c64a12",
+      "sha256": "7156ec1c3d38d9b2983fb9a387cb1c5e389520aa4cceaf34497cc045a2faf124",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep6-trailer-41s.png",
+      "bytes": 68306,
+      "sha": "b4a3d3eca33caf7d87608a6acc205a309dee43a1",
+      "sha256": "d9a05dca374b8174a8b0944902bcaad46ede74388f1c229669b9a5151d6d0f7e",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep6-trailer-46s.png",
+      "bytes": 72711,
+      "sha": "8895346dbeb1688e8eb325b45326d9c79a9367da",
+      "sha256": "1dfcaabc539c307f8e783bd11d6c34b91f19f53afd4ff7c9a179a37c4ef85dd3",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep8-trailer-39s.png",
+      "bytes": 36648,
+      "sha": "23f36aafa66516b90ff83e463017caa504dfe4b2",
+      "sha256": "be4039a6914acc39e78ce0f034b1faeded213148ea6d39cc12bf92daf98ad8c6",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    },
+    {
+      "path": "docs/art-generation/base-sprites-20261124/reference-review/zooble-ep8-trailer-40s.png",
+      "bytes": 103796,
+      "sha": "714667e2c8e3956114491c494dea9e75aac8d443",
+      "sha256": "7f8b6c796098eac3c2b1817a7fd816213562631aae1eb87be2214c4cbb7dc927",
+      "nativeBytesVerified": true,
+      "gitBlobSHAEqualsLocal": true,
+      "transfer": "view_image native bytes"
+    }
+  ]
+}

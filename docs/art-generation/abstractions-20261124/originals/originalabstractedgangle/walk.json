@@ -1,0 +1,15 @@
+{
+  "id": "originalabstractedgangle",
+  "state": "walk",
+  "prompt": "Use case: precise-object-edit. ONE FULL-BODY TRANSPARENT FIGHTING-GAME CHARACTER ASSET. Draw the EXACT original hypothetical abstraction creature shown in the reference in ONE newly articulated state. Retain flat red/black ribbon anatomy, four coiled ribbon supports, the two separated white broken comedy and tragedy mask plates, and all characteristic eye placements. WALK forward pose: one dynamic mid-stride step toward the RIGHT, opposing limbs swing, one front support reaches ahead and opposite hind support lifts, compact moving body and head directed right. Grounded gait transition, not the idle stance and not a running leap. Preserve character identity, limb anatomy, body volume, characteristic eye arrangement, costume remnants, proportions, and the reference's crisp hand-painted faceted obsidian 2D rendering. View mainly SIDE ON, facing RIGHT, slight three-quarter depth. One complete character only, every appendage and costume extremity contained inside the CENTRAL 76 PERCENT of a square canvas with generous blank transparent margins on ALL sides. Do not crop. The opaque black character is surrounded by genuine alpha transparency. No scene, background color, checkerboard, floor, shadow, glow, halo, haze, particles, motion blur, text, labels, frame, watermark, additional characters or sprite sheet. This is an original fan-game design and not an official canon form. Create a distinctly new articulated drawing, not a transformed copy of idle.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/abstractions/originalabstractedgangle/stance.png",
+  "revision": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "regeneration_after_executor_loss": true,
+  "byte_identical_to_lost_asset": false,
+  "result_store_key": "originalRecoveryResult:originalabstractedgangle:walk:1",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-55eefbd8-5613-478f-9a6e-ed1cf91cf3fe.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-55eefbd8-5613-478f-9a6e-ed1cf91cf3fe.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

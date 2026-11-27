@@ -1,0 +1,144 @@
+{
+  "schema": "encore-native-base-review/v1",
+  "createdOn": "2026-11-25",
+  "complete": true,
+  "scope": "Four individual static original projectile accessories; no animation.",
+  "assets": [
+    {
+      "id": "ghostly-wisp",
+      "owner": "ghostly",
+      "name": "Flamme spectrale de Ghostly",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-22249ddd-169e-42a4-9e87-c1eeb90a8914.png",
+      "file": "assets/encore/projectiles/ghostly-wisp.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "a1c33623c887a1974ae458acd6e58b33c7841599557b8c4fee2e37ade352a072",
+      "bytes": 375002,
+      "width": 1774,
+      "height": 887,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        136,
+        51,
+        1718,
+        671
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        349,
+        253,
+        1423,
+        665
+      ],
+      "transparentFraction": 0.830849969940351,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory."
+    },
+    {
+      "id": "orbsman-orb",
+      "owner": "orbsman",
+      "name": "Orbe d’Orbsman",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-0ed43cef-31a6-4253-ab40-0fe223b66ff2.png",
+      "file": "assets/encore/projectiles/orbsman-orb.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "69e3ada5e8794f6aa9bdccb4dd1604d492cc651dbcd893ee74cd2726946607ab",
+      "bytes": 775388,
+      "width": 1263,
+      "height": 1246,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1223,
+        1246
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        194,
+        202,
+        1052,
+        1084
+      ],
+      "transparentFraction": 0.6191334042490999,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory."
+    },
+    {
+      "id": "oyster-pearl",
+      "owner": "oyster",
+      "name": "Perle de l’Huître",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-1e8ded86-4ea8-4e0c-8b5e-82d2991d23ac.png",
+      "file": "assets/encore/projectiles/oyster-pearl.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "e8ca85a34d1fcf774259aa002e7bbaf325b465b96dcc2ceda26e3eeae6fdf337",
+      "bytes": 773164,
+      "width": 1263,
+      "height": 1246,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        37,
+        1190,
+        1246
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        230,
+        238,
+        1023,
+        1040
+      ],
+      "transparentFraction": 0.6654002229144347,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory."
+    },
+    {
+      "id": "abel-program",
+      "owner": "abel",
+      "name": "Programme d’Abel",
+      "slot": "projectile",
+      "source": "/workspace/scratch/0259e839f9d6/generated_images/exec-e28910c2-c1fa-4084-a280-461f460359ea.png",
+      "file": "assets/encore/projectiles/abel-program.png",
+      "reviewPath": "docs/art-generation/base-sprites-20261125-b/projectiles-manifest.json",
+      "sha256": "de5831b5684dfe7964ac43785a84b201b61dd8fa188a747d677add71985ee8f1",
+      "bytes": 734452,
+      "width": 1402,
+      "height": 1122,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1293,
+        1122
+      ],
+      "visibleAlphaThreshold": 12,
+      "visibleBounds": [
+        313,
+        185,
+        1060,
+        960
+      ],
+      "transparentFraction": 0.6574920981231295,
+      "nativeBytesVerified": true,
+      "accepted": true,
+      "visualReview": "Entire single object inspected at native size; visible silhouette has margins and no cropping. Very low alpha residuals outside visible silhouette retained with native PNG, ignored by runtime threshold12. Original Encore accessory."
+    }
+  ]
+}

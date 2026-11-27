@@ -1,0 +1,440 @@
+{
+  "date": "2026-11-27",
+  "generator": "image_gen.imagegen built-in",
+  "scope": "Dessins natifs statiques ; mesures techniques et inspection visuelle, sans certification canonique 1:1.",
+  "items": [
+    {
+      "owner": "cellarabstraction",
+      "id": "abstraction-cellar-eye",
+      "name": "Œil du cellier",
+      "slots": [
+        "special"
+      ],
+      "width": 42,
+      "height": 38,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/cellarabstraction/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One thick pointed teardrop-like armored scale of dark burgundy-black faceted material. The pointed front faces right. A large glossy yellow eye with vertical black slit occupies the center. One tiny white slit eye sits behind and above it inside the same connected shell. Three short angular serrations along the upper back, chunky lower edge, burgundy highlights and one muted bronze facet from the reference. Compact jagged eye-scale silhouette. No limbs or creature body.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-6f2208c8-28b2-4396-b13b-b534f0baab1e.png",
+      "targetPath": "assets/encore/projectiles/abstraction-cellar-eye.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "617728ee2bbddeed03333960b9a6d7a394a462d4dd85a04d80c3ffaea8247e23",
+      "bytes": 919089,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8160991668701172,
+      "alphaPartialFraction": 0.1839008331298828,
+      "boundsAtAlpha12": [
+        324,
+        212,
+        1221,
+        786
+      ],
+      "marginsAtAlpha12": [
+        324,
+        212,
+        315,
+        238
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "ea415180bb031c040f0187b81cb9f1e5240d4b0362ef2f7b18c8d517a6010d0e",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/cellarabstraction/stance.png"
+    },
+    {
+      "owner": "aquaticabstraction",
+      "id": "abstraction-aquatic-foam",
+      "name": "Écume abstraite",
+      "slots": [
+        "special",
+        "super"
+      ],
+      "width": 50,
+      "height": 28,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/aquaticabstraction/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One compact horizontal curl of dark purple-black faceted liquid: blunt wave head at right, two short thin connected tapered tendrils curling backward left. One dominant cyan outer iris with cobalt middle ring and yellow central iris with black slit in the wave head, one small white slit eye on the upper trailing fold. Sweeping outer contour and crisp polygonal inner facets. Narrow turquoise underside highlight. No separate droplets, rings, splashes or creature body.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-73bb7bb3-d845-4cb1-8fe5-d4083baccdb7.png",
+      "targetPath": "assets/encore/projectiles/abstraction-aquatic-foam.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "ee58e218d3fe201cc31d4e8f8539be61a13d3b6a87d85c6564653337a2fc6b51",
+      "bytes": 440213,
+      "imageSize": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8285367115379483,
+      "alphaPartialFraction": 0.170844301186244,
+      "boundsAtAlpha12": [
+        317,
+        245,
+        1460,
+        642
+      ],
+      "marginsAtAlpha12": [
+        317,
+        245,
+        314,
+        245
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "0d21d6dc9344823049cfc68d36d79bb6d28b39c95e46e79b539b0edfa162b310",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/aquaticabstraction/stance.png"
+    },
+    {
+      "owner": "abstractedjax",
+      "id": "abstraction-jax-shard",
+      "name": "Éclat du contour",
+      "slots": [
+        "special"
+      ],
+      "width": 46,
+      "height": 30,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/abstractedjax/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One long angular black-violet arrowhead shard pointing right, built from three connected sharply folded triangular facets. Narrow bright magenta eye with vertical black pupil in the broad rear facet. Two very short backward-facing hooks break the upper and lower rear contour. Fine violet/magenta edge lines, one tiny cyan edge accent and one small yellow triangular reflection. Sleek asymmetrical shard. No key, rabbit, creature body or round energy shell.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-6e9d15f0-76f5-454e-b0c4-43d6ba544a5d.png",
+      "targetPath": "assets/encore/projectiles/abstraction-jax-shard.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "23b8f45d5f652d5c2c49ebb8b3b1a5e08530470fa7c46c07fac88d53052bfa98",
+      "bytes": 1046257,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8661766052246094,
+      "alphaPartialFraction": 0.13382339477539062,
+      "boundsAtAlpha12": [
+        228,
+        316,
+        1329,
+        742
+      ],
+      "marginsAtAlpha12": [
+        228,
+        316,
+        207,
+        282
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "fef47e9ecbe06b3776d2d0f1f5beb3cbb16fd23ffb745e38cccd67272d6d2d08",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/abstractedjax/stance.png"
+    },
+    {
+      "owner": "abstractedqueenie",
+      "id": "abstraction-queenie-watch",
+      "name": "Éclat de veille",
+      "slots": [
+        "special"
+      ],
+      "width": 38,
+      "height": 44,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/abstractedqueenie/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One small upright kite-shaped black-violet shield fragment tilted slightly right, with three unequal pointed prongs along the top. Central large almond-shaped violet-magenta eye with vertical slit, smaller cyan eye lower in the same connected surface. Lower end is a sharp diamond tip. Thin purple rims, a small yellow facet highlight and cyan right edge echo the reference. Dense protective silhouette. No royal crown prop, chess piece or creature body.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-3c815374-54bc-45c3-8693-84492dd77646.png",
+      "targetPath": "assets/encore/projectiles/abstraction-queenie-watch.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "a19600a5663d200bb8a7316e64623bff867b9bebf4ddc16fdae660398b93fb23",
+      "bytes": 471886,
+      "imageSize": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8577879940600908,
+      "alphaPartialFraction": 0.14216877886043247,
+      "boundsAtAlpha12": [
+        407,
+        88,
+        944,
+        1002
+      ],
+      "marginsAtAlpha12": [
+        407,
+        88,
+        368,
+        197
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "669355161a9d95b31add94ba6235bcc640710fe888d8c254a3142a9397a1ecb0",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/abstractedqueenie/stance.png"
+    },
+    {
+      "owner": "abstractedribbit",
+      "id": "abstraction-ribbit-skip",
+      "name": "Éclat du rebond",
+      "slots": [
+        "special"
+      ],
+      "width": 46,
+      "height": 31,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/abstractedribbit/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One bent zigzag wedge of glossy black-violet faceted material, like a compressed angular spring with two solid connected bends, leading tip pointing right and slightly upward. Round golden-yellow iris with round black pupil inside central elbow; small cyan circular eye near rear bend. Thin purple edge reflections. Make the two angular changes in direction clear. No frog, leaf, lily, bubbles, limbs or separate pebbles.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-3ecf1c37-a859-482a-971d-315320009f7e.png",
+      "targetPath": "assets/encore/projectiles/abstraction-ribbit-skip.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "83e328668ac16d3a06e568fc9ee117295accd7bd1c860bae7a7ae65905489f64",
+      "bytes": 1141377,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8692652384440104,
+      "alphaPartialFraction": 0.1307347615559896,
+      "boundsAtAlpha12": [
+        211,
+        247,
+        1391,
+        802
+      ],
+      "marginsAtAlpha12": [
+        211,
+        247,
+        145,
+        222
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "429f3f01129a96c8fc9237df18016bf49bc1be636ea2a6bbe7279e45c94d8661",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/abstractedribbit/stance.png"
+    },
+    {
+      "owner": "originalabstractedpomni",
+      "id": "abstraction-pomni-door",
+      "name": "Éclat de la fausse porte",
+      "slots": [
+        "special"
+      ],
+      "width": 44,
+      "height": 39,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedpomni/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One compact broken arch-shaped shard of black-violet faceted material with an open notch underneath, suggesting a false doorway only by silhouette. Thick upper arch has a small red-and-blue pinwheel eye disc on its right side. Two small torn red and cobalt cloth patches wrap its top corners. Tiny integrated gold bell hangs attached from the left corner inside the same compact silhouette. Violet highlights. No EXIT sign, letters, door handle, complete jester head, face, body or background architecture.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-9e472b86-feb1-4464-9741-9930a31c0612.png",
+      "targetPath": "assets/encore/projectiles/abstraction-pomni-door.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "033cdab267ddc0dff8896b6154ac752bf1dff45239e5614a3d92362d29704a38",
+      "bytes": 1143827,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8707605997721354,
+      "alphaPartialFraction": 0.1292394002278646,
+      "boundsAtAlpha12": [
+        337,
+        287,
+        1187,
+        778
+      ],
+      "marginsAtAlpha12": [
+        337,
+        287,
+        349,
+        246
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/originalabstractedpomni/stance.png"
+    },
+    {
+      "owner": "originalabstractedragatha",
+      "id": "abstraction-ragatha-needle",
+      "name": "Aiguille de signal",
+      "slots": [
+        "special"
+      ],
+      "width": 52,
+      "height": 24,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One horizontal black-violet faceted needle dart with sharp point facing right. Thick rear has one small glossy blue button-like disk stitched with beige thread across two holes. Short red twisted yarn strand forms one compact loop behind and reconnects to the body. Two visible beige stitch bridges cross a small lavender fabric patch on upper shaft; tiny yellow slit eye inset near front. Clear long needle silhouette. No doll body, hands, huge button shield, multiple needles or detached threads.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-5af87a58-cf6f-4e43-9517-89303f4d86ec.png",
+      "targetPath": "assets/encore/projectiles/abstraction-ragatha-needle.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "fbe78a018bad5288e56a50615326f4002133e5bff45a7d6b4b1000ebdd9ebbff",
+      "bytes": 737632,
+      "imageSize": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.781760324776411,
+      "alphaPartialFraction": 0.21727880203087005,
+      "boundsAtAlpha12": [
+        272,
+        166,
+        1903,
+        588
+      ],
+      "marginsAtAlpha12": [
+        272,
+        166,
+        269,
+        136
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/originalabstractedragatha/stance.png"
+    },
+    {
+      "owner": "originalabstractedgangle",
+      "id": "abstraction-gangle-ribbon",
+      "name": "Ruban détaché",
+      "slots": [
+        "special",
+        "super"
+      ],
+      "width": 48,
+      "height": 32,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedgangle/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One short folded S-shaped ribbon, black-violet upper face and deep red underside, pointing right. Widest front fold contains one yellow slit eye; small cyan eye on rear fold. One small cracked ivory mask sliver attaches to leading tip, a curved white fragment with one short black mark, never a full face. Keep one open gap between folds, sharp polygonal edges. No humanoid figure, long trail, separate masks or multiple projectiles.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-95f44a8e-4663-48eb-8342-678f97f8ad6b.png",
+      "targetPath": "assets/encore/projectiles/abstraction-gangle-ribbon.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "3e6806cb23b71f004b77e6605d1108caa9a17339211367bc2e54fdebac9d891e",
+      "bytes": 993432,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8771959940592448,
+      "alphaPartialFraction": 0.1228040059407552,
+      "boundsAtAlpha12": [
+        381,
+        287,
+        1180,
+        747
+      ],
+      "marginsAtAlpha12": [
+        381,
+        287,
+        356,
+        277
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "44f67bba0d055c94fdac488291a8068b1cc563c07a9c3fb908bb9e66f9e94f50",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/originalabstractedgangle/stance.png"
+    },
+    {
+      "owner": "originalabstractedkinger",
+      "id": "abstraction-kinger-bastion",
+      "name": "Éclat du bastion",
+      "slots": [
+        "special"
+      ],
+      "width": 40,
+      "height": 42,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedkinger/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One heavy compact black-violet bastion fragment, a trapezoid with two blunt square battlements on top and angular forward point at right. Bold diamond-shaped cyan eye with vertical slit at center, tiny yellow triangular eye near lower right. Short deep-purple fabric corner with off-white spotted trim attaches flush to rear edge. Sharp planes, restrained purple/yellow rim accents. No complete crown, chess king, cross, creature legs or loose debris.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-7e9ed65f-dafd-4c62-beec-a834462645f3.png",
+      "targetPath": "assets/encore/projectiles/abstraction-kinger-bastion.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "356024b00fb956edd454e43a443ee0813c2f9d4ad9b115af552f7d38b6b0e65b",
+      "bytes": 1216372,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8119277954101562,
+      "alphaPartialFraction": 0.18807220458984375,
+      "boundsAtAlpha12": [
+        306,
+        266,
+        1195,
+        764
+      ],
+      "marginsAtAlpha12": [
+        306,
+        266,
+        341,
+        260
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "b5f633dce6d22fe16b8ff1d051de4dab2fcf7c186686bc740cce68cd0f56589c",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/originalabstractedkinger/stance.png"
+    },
+    {
+      "owner": "originalabstractedzooble",
+      "id": "abstraction-zooble-fragment",
+      "name": "Fragment dissident",
+      "slots": [
+        "special",
+        "super"
+      ],
+      "width": 43,
+      "height": 36,
+      "motion": "fixed",
+      "reference": "/workspace/scratch/8db10b0df53d/CainOS/assets/encore/abstractions/originalabstractedzooble/stance.png",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent 2D fighting-game projectile sprite for Circus Encore. Input image: existing stance is a MATERIAL, COLOR AND STYLE REFERENCE, not the edit target. Design only the specified original accessory; do not reproduce the whole character. Match the reference's clean faceted black-purple surfaces, controlled bright eyes and crisp illustration. One isolated compact projectile, right-facing leading tip, readable at 40–50 pixels. Center the entire object with generous fully clear alpha margins on all four sides. Native transparent background. No character body, anatomy, scenery, floor, cast shadow, labels, typography, border, contact sheet, repeated frames, motion trail, dust, full-frame aura or extra loose objects. Keep every feature entirely inside frame. This is an original game accessory, not a canonical power.\nSubject: One asymmetric connected geometric fragment, thick black triangular center with sharp corner leading right. Front face has golden-yellow slit eye in a pink triangular inset, cyan facet at tip. Short curved pink-black crescent joins rear upper corner, small yellow zigzag fin joins rear lower corner. One compact dark spring-like connector partly visible inside center, not extending beyond silhouette. Matte facets and crisp colored patches. No full Zooble body/head, arms, multiple floating pieces or orb.",
+      "output": "/workspace/scratch/442af69066d4/generated_images/exec-08480d8e-7dc3-4d8c-babd-0995b5187872.png",
+      "targetPath": "assets/encore/projectiles/abstraction-zooble-fragment.png",
+      "sourceKind": "original-encore-projectile",
+      "sha256": "f81a92cbeaadcbd74dd515e274f1a6cf8c110c80f51654c597e504b328b773ea",
+      "bytes": 1078682,
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZeroFraction": 0.8513100941975912,
+      "alphaPartialFraction": 0.14868990580240884,
+      "boundsAtAlpha12": [
+        351,
+        187,
+        1189,
+        839
+      ],
+      "marginsAtAlpha12": [
+        351,
+        187,
+        347,
+        185
+      ],
+      "nativeBytesUnchanged": true,
+      "installation": "hard-link",
+      "transparentBackgroundRequested": true,
+      "referenceSHA256": "4b34fa8cf0a0006058f64ccda5de10e951595554f67a73cf9c68546979722c84",
+      "visualReview": "Un seul motif compact, orienté à droite, sans texte ni planche de poses. Les formes et couleurs reprennent la stance indiquée ; accessoire de combat original pour Encore. Inspection individuelle du PNG natif le 27 novembre 2026.",
+      "referenceFile": "assets/encore/abstractions/originalabstractedzooble/stance.png"
+    }
+  ]
+}

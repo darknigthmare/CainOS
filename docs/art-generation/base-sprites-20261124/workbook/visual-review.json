@@ -1,0 +1,329 @@
+{
+  "schema": "encore-tracker-static-base-visual-review/v1",
+  "createdAt": "2026-11-24T17:19:37.555874+00:00",
+  "status": "accepted",
+  "workbookSHA256": "b3ffd3b5b62f40e0e7cbdbcc553a706f9aacbfa0d167d46a73b3efc2fb68832f",
+  "planSha256": "2e9715c6f54db590a783386b03e89a83b9c7e45aa249d266e02c80194cdb8c20",
+  "reviewContext": "Recovery of the unchanged 48-PNG export. Existing hash-linked rendered views inspected during this recovery; no new spreadsheet authoring or formula recalculation is claimed by this visual review.",
+  "views": [
+    {
+      "file": "summary-top.png",
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "sha256": "10d549ddc60f5d7d18987adfeb17143d6a40b19bb384c76776ba657b08326f21",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "summary-bottom.png",
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "sha256": "a02a18a22c908b5b8675911f5ddc8f9a8dcb962d13b79aef25703603bd014518",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "feature-int-11.png",
+      "sheet": "Fonctionnalités",
+      "range": "A16:I16",
+      "sha256": "22d3b4ea5bd5bf4b35cbdd30367daa423f518a9253976169dac7c7ecfdf589e1",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "feature-pre-03.png",
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "sha256": "a2481d0ea3d09ff61f1ac36c94f3460bd56d592d4745e60323f8d20b4cd37ff4",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "feature-prd-11.png",
+      "sheet": "Fonctionnalités",
+      "range": "A95:I95",
+      "sha256": "279f6e951ee82aeb184899f8c078a354ed3e24cba0648e3b5078b9660f1b0651",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "feature-static-bases.png",
+      "sheet": "Fonctionnalités",
+      "range": "A112:I112",
+      "sha256": "a737c7d522a8bb21684921015f3969cd2f124adb72991a73b157383034f438c2",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-knightsofguinevere-ribbit-hommage.png",
+      "sheet": "Production",
+      "range": "A3745:J3747",
+      "sha256": "c7744d6ac64305602229bed5d64110e6e1ab85aa3e4b6b3cbd0a878b54f7423d",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-knightsofguinevere-ribbit-resident.png",
+      "sheet": "Production",
+      "range": "A3748:J3750",
+      "sha256": "70a2446e1abfc84702aa62108d51762c9c2d98b1c1fd9afc86b5702a67b83dd4",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-knightsofguinevere-ribbit-fusion.png",
+      "sheet": "Production",
+      "range": "A3751:J3753",
+      "sha256": "0c3c669b018dec55881d9654fa32801d4760f2d756563a9d522b8c1a12d174e9",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-gaslightdistrict-ribbit-hommage.png",
+      "sheet": "Production",
+      "range": "A3754:J3756",
+      "sha256": "70b6f9da7154f7d74a5ebcaccf79758374276ab57dc61c5411b78299682b98af",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-gaslightdistrict-ribbit-resident.png",
+      "sheet": "Production",
+      "range": "A3757:J3759",
+      "sha256": "93f5529839c08f0ce41ab71d5345ba9cd3d784dd92db3580f84dd43bb54a5fe5",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-gaslightdistrict-ribbit-fusion.png",
+      "sheet": "Production",
+      "range": "A3760:J3762",
+      "sha256": "1190deb2dff4a94760b9f1dd62698c527bbb12385a51f9207d844a2f920b1850",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-gameoverse-ribbit-hommage.png",
+      "sheet": "Production",
+      "range": "A3763:J3765",
+      "sha256": "2184317bc251445d3641d1ec2d79494d9a234536937f091a6771a6f0618acd22",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-gameoverse-ribbit-resident.png",
+      "sheet": "Production",
+      "range": "A3766:J3768",
+      "sha256": "edb5cfafe36ed00873f40a61784b2c8c5c852bf0b27f8d16d18be95fe2fc66ed",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-gameoverse-ribbit-fusion.png",
+      "sheet": "Production",
+      "range": "A3769:J3771",
+      "sha256": "b985a34a1d23bf76ca7063237c72a315674684508ff7f39f29eaf212918dc2c8",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-lackadaisy-ribbit-hommage.png",
+      "sheet": "Production",
+      "range": "A3772:J3774",
+      "sha256": "b33344acb83c44128bc8d2ada73d307e23171d2534e44982265154fd3c0f3acc",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-lackadaisy-ribbit-resident.png",
+      "sheet": "Production",
+      "range": "A3775:J3777",
+      "sha256": "d7a7d56d1e98abb3eeb939a84043805aa477954f64a8c612910f58809a5b1b72",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-lackadaisy-ribbit-fusion.png",
+      "sheet": "Production",
+      "range": "A3778:J3780",
+      "sha256": "2f761eaa815fea9e8ee5a44a3e45dfcaa20e4fd75283c805122d9cc23178840d",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-smg4-ribbit-hommage.png",
+      "sheet": "Production",
+      "range": "A3781:J3783",
+      "sha256": "c6383b1f278c12bde0bf17411a1ac2525ff32af7e1d0720d62ac410f5100207d",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-smg4-ribbit-resident.png",
+      "sheet": "Production",
+      "range": "A3784:J3786",
+      "sha256": "e707d88f4b3e61bd93621aeae307a1f193f1364926b01c2edc235179dae16e60",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-smg4-ribbit-fusion.png",
+      "sheet": "Production",
+      "range": "A3787:J3789",
+      "sha256": "e5d9e5b3b69ed690baff4da6adef4b831c2f7bd5f878faa9d1e52ed404f84a4e",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-ultrajumpmania-ribbit-hommage.png",
+      "sheet": "Production",
+      "range": "A3790:J3792",
+      "sha256": "76af7b1045c4fda7ccb40bef9113a5f930077c8ec2e62a074b3aeee66558648c",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-ultrajumpmania-ribbit-resident.png",
+      "sheet": "Production",
+      "range": "A3793:J3795",
+      "sha256": "0e9658ef12a2a94262cee34f8b610011c1d006041a5b5069442ae2f4535dfdb7",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-glitch-ultrajumpmania-ribbit-fusion.png",
+      "sheet": "Production",
+      "range": "A3796:J3798",
+      "sha256": "ddb9fe0a58438a3e04872106fd46aaf85d6eafcef97cb68e1bfb67996e42b047",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-contortionistzooble.png",
+      "sheet": "Production",
+      "range": "A3799:J3801",
+      "sha256": "3ce45af3b4b5d291952644a3cae5328f25b7840a97df99eb936eb9e576b8ba85",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-hotdogabel.png",
+      "sheet": "Production",
+      "range": "A3802:J3804",
+      "sha256": "89cdcee4fc745dd3f0d55f6dc764350446b47614a75200fd8842faf950aadc2b",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-cafejax.png",
+      "sheet": "Production",
+      "range": "A3805:J3807",
+      "sha256": "12f7ca07ee488f87e7a3d7d64c6e8ceedd18dc756a34062edd4aa9fb17455da8",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-cafecaine.png",
+      "sheet": "Production",
+      "range": "A3808:J3810",
+      "sha256": "298922634194d354cb27132b74d25452b40d5c3a5dfbd14261121b4eb7ccce9f",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-ribbitsuitjax.png",
+      "sheet": "Production",
+      "range": "A3811:J3813",
+      "sha256": "b3ce3f6f2152bff146c4ba69a61cf19e3213d29c5257f4e344fa370967c5ac62",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "base-family-cocktailzooble.png",
+      "sheet": "Production",
+      "range": "A3814:J3816",
+      "sha256": "5b0b409cc8d24281dbd888bf961de2006ad4ad861f9de44c2b5a826263d16885",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "qa-1.png",
+      "sheet": "QA",
+      "range": "A2505:I2506",
+      "sha256": "0b00f025e8fc29b5c5abfb4cea71d3ee915e43d81046ab1c8a528f34d0172067",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "qa-2.png",
+      "sheet": "QA",
+      "range": "A2507:I2508",
+      "sha256": "b581d81d2a649d00b9e610f9e5d977601336111176d20cff6adef62d966958b1",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "qa-3.png",
+      "sheet": "QA",
+      "range": "A2509:I2510",
+      "sha256": "00a5d568ad1a85f48389daf1eca6482ce4981e829d8f3b0bda13489559e33dd9",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "qa-4.png",
+      "sheet": "QA",
+      "range": "A2511:I2512",
+      "sha256": "06521d0efcce29b4bdcc38db9f09437dc53a124afe1117f5c0a6d5185e499d99",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "references-1.png",
+      "sheet": "Références",
+      "range": "A176:E178",
+      "sha256": "bd515b523c285c0b105874fb2bc12ce153b37db60af2820c99bafd243871c189",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "references-2.png",
+      "sheet": "Références",
+      "range": "A179:E181",
+      "sha256": "78ba2fbcb56d10c604794fce9e92fa81b8368a884de8ca295b7622c2149563cf",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "references-3.png",
+      "sheet": "Références",
+      "range": "A182:E184",
+      "sha256": "1cb2979b51589fcce4e14f4b797c9e03d5e6d30f4ec8f62fc8695e2dde4cf5e1",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "references-4.png",
+      "sheet": "Références",
+      "range": "A185:E187",
+      "sha256": "c33d68d58eca89d730d10868ed928ffddb1d45398f580df035e126eadf39542a",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    },
+    {
+      "file": "references-footer.png",
+      "sheet": "Références",
+      "range": "A188:E198",
+      "sha256": "350aba95f38cee317e7849927f9a924665a717c173f5fe3a6ebb3637ce9eaaa9",
+      "status": "accepted",
+      "reviewedDuringRecovery": true
+    }
+  ],
+  "findings": [
+    "All 39 planned final views inspected: two summary panels, four feature rows, 24 three-row base families, four QA groups and five references groups including the footer.",
+    "The existing violet/white banding, green and open QA status colours, yellow notes columns and wrapped text are preserved. Long identifiers wrap within their columns; no content overlap or hidden status was observed.",
+    "Summary counts show 508 appearances and 6130 offline images. Each of the 24 added families has two static bases; no new action drawing is required.",
+    "QA separates the recorded 467 Node checks and builds from the unexecuted complete browser and physical-device campaign. The references distinguish six documented official designs from eighteen original crossover designs.",
+    "This review concerns workbook presentation and evidence traceability; it does not certify canonical pixel fidelity or create a new game-test result."
+  ]
+}

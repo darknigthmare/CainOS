@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-27",
+  "runtimeChanged": false,
+  "reason": "Global QA exposed stale test fixture expectations after the approved stage-reference metadata update and the new portrait-loader dependency.",
+  "historicalFixture": {
+    "path": "tests/fixtures/abstractions-recovery-20261124.json",
+    "sha256": "9420acea552c2aefe843328c9db791852ed50f5477f0c65d1217c90d5d4bc40f",
+    "gitBlob": "196dac45fc49838bd8398fd86c73a59f29498b2a",
+    "baselineCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+    "unchanged": true
+  },
+  "dedicatedStageMetadata": {
+    "field": "fidelity",
+    "exactGroups": [
+      {
+        "ids": [
+          "home-pomni",
+          "home-jax",
+          "home-ragatha",
+          "home-gangle",
+          "home-zooble",
+          "home-caine",
+          "home-bubble",
+          "home-gloinkqueen",
+          "home-abstractedkaufmo",
+          "home-queenie",
+          "home-kaufmo",
+          "home-ribbit",
+          "home-scratch",
+          "home-wormo",
+          "home-bizco",
+          "home-rattie",
+          "home-spike",
+          "home-pinkcyclops",
+          "home-yellowclown",
+          "home-oyster",
+          "home-bulbcreature",
+          "home-abel",
+          "home-ming",
+          "home-disappearingguy",
+          "home-committeemember",
+          "home-chineseroomnpc",
+          "home-blueai",
+          "home-barrelmonkey",
+          "home-jeffery",
+          "home-redmannequin",
+          "home-orangemannequin",
+          "home-yellowmannequin",
+          "home-magentamannequin"
+        ],
+        "beforeSHA256": "422b43d6359ff45a8c739539432415d9ae6920bd8c227f615ceae9cb0cdb2dc0",
+        "afterSHA256": "ef7c581f1992a80666646b716daabc3cf742fd73898d1f1816661e47e99ca664"
+      },
+      {
+        "ids": [
+          "home-kinger",
+          "home-baronmildenhall",
+          "home-orbsman",
+          "home-marthamildenhall",
+          "home-ghostly",
+          "home-angel",
+          "home-mildenhallsouls"
+        ],
+        "beforeSHA256": "6b22eee27aafbb4afefb6b327423920af0a082111c9943a34384508cdbc3f6cc",
+        "afterSHA256": "33b1ea0fe78457d56c07204fe7beaefc8ebbe7a7145ad776cc2d7cc659cf0013"
+      },
+      {
+        "ids": [
+          "home-gummigoo",
+          "home-loolilalu",
+          "home-fudge",
+          "home-max",
+          "home-chad",
+          "home-shrimpnpc",
+          "home-cookiebutterfly",
+          "home-gummyelephant",
+          "home-giantcentipede",
+          "home-candyguardcyan",
+          "home-candyguardblue",
+          "home-candyguardpurple",
+          "home-gummyworm"
+        ],
+        "beforeSHA256": "2e0f39068f3c0e7a73784c2e3bdef76a43259a9e32a04e168ad54184adbc47c5",
+        "afterSHA256": "32b96c167e43dbe0fe8281af49552102232cc56d239d8ec9e98f138004e24261"
+      }
+    ],
+    "changedArrangements": 53,
+    "baselineWholeRecordSHA256": "f7126656cba6c4836244fecec54e2bab2523a1def1a8a1699c8a4062cff94b1a",
+    "method": "Require the exact after object on every explicitly named arrangement; restore only its recorded before fidelity field; retain the historical hash of all 54 complete records. Fighters, costumes and story hashes are still checked unchanged."
+  },
+  "isolatedLoaderFixture": {
+    "file": "tests/combat-illustration-formats.test.mjs",
+    "addedDependency": "base-sprite-focus-20261127.mjs",
+    "method": "Copy the real new module beside the isolated real loader; no runtime stubbing or assertion removal."
+  },
+  "validation": {
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "skipped": 0,
+    "log": "baseline-and-isolated-loader-recheck.log"
+  }
+}

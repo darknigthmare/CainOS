@@ -1,0 +1,279 @@
+{
+  "schema": "encore-bowling-reference-retrieval-v1",
+  "source": "Official GLITCH episode 5 public YouTube storyboard stills",
+  "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+  "storyboardSpec": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L$L/$N.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG|48#27#100#10#10#0#default#rs$AOn4CLDM6chHYyO2XHI4zA7FO7TR2ZFx2w|80#45#155#10#10#10000#M$M#rs$AOn4CLBjLJqlJQ31N1-uYYOLrp2p-TJ44w|160#90#155#5#5#10000#M$M#rs$AOn4CLCrs_BLIPUa2f9XU-XBXNCzaMDXkA|320#180#155#3#3#10000#M$M#rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+  "originManifest": "docs/art-generation/stage-next-wave-20261120/reference-retrieval.json",
+  "originManifestSHA256": "7da54fc2177a1dd79fb76501fbe8fce89be710984259c0933ae74d24469001f8",
+  "downloads": [
+    {
+      "path": "references/episode5-storyboard-L3-M1.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "a36ccebaae9334c9558458d9de3ddc676a18efd6c727c77551ec8697edb8a1f6",
+      "bytes": 64418,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 1,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 90
+      },
+      "downloadedAt": "2026-11-20T16:30:09.975267+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M2.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "9eee14de7dcd5759af7ebcb0f409598cb1989603a5d51d02ebe7e98efc01eb26",
+      "bytes": 63916,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 2,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 180
+      },
+      "downloadedAt": "2026-11-20T16:30:10.010066+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M3.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "fa631a612140c210cf53d12aa4d3fb92e23a2c4ae9c66f84b9bef35f13324387",
+      "bytes": 56463,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 3,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 270
+      },
+      "downloadedAt": "2026-11-20T16:30:09.973057+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M4.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "9afddcb3ff43d18cde545c17b022b8b0cc25d62c885386daa73b9287119ad97f",
+      "bytes": 62641,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 4,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 360
+      },
+      "downloadedAt": "2026-11-20T16:30:13.735912+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M5.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "0ccbf7619105298e07ae49dc00285fa3837e49f2faacc3b9139953ead083f871",
+      "bytes": 39218,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 5,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 450
+      },
+      "downloadedAt": "2026-11-20T16:30:13.741449+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M6.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M6.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "c41c43cb920320f19389dd21727b998717138ed8343fef617283faad91bc9cb2",
+      "bytes": 39012,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 6,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 540
+      },
+      "downloadedAt": "2026-11-20T16:30:13.648381+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M12.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M12.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "497b0548a2ecb43c771414c28171ce889560c8830d89932ec7671069816090b5",
+      "bytes": 60587,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 12,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 1080
+      },
+      "downloadedAt": "2026-11-20T16:30:54.915654+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M13.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M13.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "d091c57ff597c33b3c7d4b5db05b0f254ba5f2338aa814e27e8ddc4b85771409",
+      "bytes": 65005,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 13,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 1170
+      },
+      "downloadedAt": "2026-11-20T16:30:54.873226+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M14.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M14.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "444860514ac6b78caecee59897d501356b6bbfb5baa5d068da79d2ffef62df4d",
+      "bytes": 52567,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 14,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 1260
+      },
+      "downloadedAt": "2026-11-20T16:30:54.815399+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M15.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M15.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a",
+      "bytes": 65175,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 15,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 1350
+      },
+      "downloadedAt": "2026-11-20T16:30:58.434591+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M16.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M16.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "700bdae64302339bbf47aa89c6b9c73cce5c9713bc0156a3e9bd0eeb17dff757",
+      "bytes": 63127,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 16,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 1440
+      },
+      "downloadedAt": "2026-11-20T16:30:58.436812+00:00"
+    }
+  ],
+  "limits": [
+    "Each source cell is 320 x 180 and sampled every 10 seconds.",
+    "Page-derived times are approximate. No full episode stream viewing is claimed.",
+    "Fine lettering, hidden geometry and off-camera architecture are not established."
+  ]
+}

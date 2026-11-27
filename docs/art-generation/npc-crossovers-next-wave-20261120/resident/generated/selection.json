@@ -1,0 +1,79 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "selection",
+  "prompt": "Create one complete, entire head-to-toes character for the existing Digital Circus — Encore 2D fighting game. An ORIGINAL fan-game crossover redesign, not canonical merchandise. Clean polished 2D cel shading, confident dark contour, gentle warm upper-left highlights, 3/4 view facing RIGHT. Keep the slender long-legged frog silhouette and friendly identity of the first image, whose game proportions are intentionally an adaptation. The second reference establishes Ribbit identity only; never draw the keychain ring or strap. One single character, no duplicate, no grid, no caption, no text or watermark, no scenery, no floor or cast shadow. Native true transparent RGBA. Tall 1024x1536 composition, entire figure including all toes with generous clear margins on every side, no cropping. RIBBIT — TECHNICIENNE DES CONDUITES, an original resident of a Murder Drones bunker. Keep Ribbit BIOLOGICAL: green frog skin, huge separate protruding white eyes with black oval pupils and small white highlights, mint oval muzzle, cheerful simple mouth, round pink cheeks, pink bow tie at throat, long slim arms and legs. Outfit is a charcoal maintenance jumpsuit with muted olive panels, short rolled sleeves exposing green forearms, slim charcoal trouser legs stopping above ankles. Rounded olive knee pads, narrow amber reflective bands at ankles, dark belt with two small olive pouches and compact wrench and screwdriver secured in the pouches. Bare green hands with three rounded digits and wide bare green three-lobed frog feet. No boots, no gloves, no hat or hood, no visor, no hair, no wings or tail. Amber lamp as a small rectangular badge on the chest. The third image is ONLY a palette/workwear style reference; do not copy Pomni's hat, eyes, boots or body. SELECTION portrait pose: relaxed confident upright stance, one green hand resting on the belt, other hand raised in a small friendly open greeting, both entire green feet flat and visible; looking to the right with slight smile. Clear clothing silhouette, no held separate object.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "assets/encore/crossovers/murderdrones/pomni/resident/selection.webp"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-resident:selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-67bcb304-3e0c-42f6-bd32-b1cff46cf962.png",
+  "sourceGenerationId": "exec-67bcb304-3e0c-42f6-bd32-b1cff46cf962",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-resident.json",
+  "definitionSHA256": "3a2fc2646759c1d3c2e895eb6c907c29ed171bf834554938338a985348fcc973",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "bytes": 1085524
+    },
+    {
+      "position": 3,
+      "file": "assets/encore/crossovers/murderdrones/pomni/resident/selection.webp",
+      "sha256": "356c3c5dd37ce1843cf260a0c8a99412b44176bf9ad35e1088fae4a928cab8dc",
+      "bytes": 311102
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    112,
+    43,
+    948,
+    1501
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1107417,
+  "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+  "bytes": 1524779,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T14:42:06.691952+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Figure entière orientée à droite ; identité de Ribbit, combinaison anthracite/olive, genouillères, outils rangés, nœud rose et deux pieds à trois lobes cohérents. Contrôle sur damier : fond réellement transparent, pas de halo visible."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

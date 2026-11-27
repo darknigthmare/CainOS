@@ -1,0 +1,40 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: A powerful two-handed forward shove toward image right: both arms extended forward at chest level, hands clearly separate and palms aimed right, deep forward lunge with front knee strongly bent and rear leg braced. Determined frog expression. Keep each hand material on its correct anatomical side; no duplicated limbs or impact effects.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+  "status": "superseded_native_variant",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-da873634-eef4-436c-bd5a-8342db2cbe84",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-da873634-eef4-436c-bd5a-8342db2cbe84.png",
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/rejected/heavy-attempt01.png",
+  "sha256": "88d3b0de0e4ba9b3a825b2f114beb409c45db9b89034a19c4d4540a3a8e7d159",
+  "bytes": 1562867,
+  "mode": "RGBA",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "reason": "Ancienne poussée à paumes ouvertes remplacée par la fente à poings fermés finalement sélectionnée. Le halo initialement soupçonné n’est pas confirmé en composition alpha ; aucun défaut de transparence revendiqué.",
+  "includedInRuntime": false,
+  "initialReviewReason": "Halo flou extérieur étendu incompatible avec une découpe nette.",
+  "alphaReassessment": {
+    "reviewer": "root",
+    "reviewedAt": "2026-11-20T17:13:44.993401+00:00",
+    "diagnostic": "docs/art-generation/continuation-20261120-b/metarunner/review/rejected-attempts-alpha.png",
+    "diagnosticSHA256": "302795db28d9e9010958e4b8098e139472db929dac36a1b9e95b3f125a86b2b4",
+    "observation": "Toutes les cinq tentatives ont une composition alpha sans halo diffus. Les écarts de doigts sont évalués séparément ; deux variantes correctes restent simplement non retenues."
+  }
+}

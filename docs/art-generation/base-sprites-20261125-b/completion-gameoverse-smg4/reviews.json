@@ -1,0 +1,130 @@
+{
+  "appearances": [
+    {
+      "id": "glitch-gameoverse-queenie-hommage",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "bbce59ed12230154f333ceceac21a04ce7ad37ce0b18da769c78207f42ed2d0d",
+        "stance": "bbe9231665fee26ef4e3cfb23ffc62a815c3486c315dacaffc42a849bae9d8ef"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/gameoverse/queenie/hommage/selection.png",
+        "stance": "assets/encore/crossovers/gameoverse/queenie/hommage/stance.png"
+      },
+      "observations": [
+        "Couronne et bois de Queenie, deux yeux mi-clos rouge-orange, cils noirs inférieurs préservés.",
+        "Gilet jaune, robe continue jaune/charbon, gants mécaniques jaunes à anneaux rouges et cristal violet.",
+        "Portrait reprend le même bandeau, cristal, fermeture et palette; silhouette de garde entière sans jambes ni bras.",
+        "Un personnage par PNG, deux fichiers de base seulement, aucune animation créée.",
+        "RGBA native contrôlée et octets identiques à la sortie image_gen; contours de garde et portraits entièrement dans les bornes au seuil alpha > 12."
+      ],
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-gameoverse-queenie-resident",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "064593c9e00f3e9c0693a9dd5e647c6f516993fdeb3e9e282585e45cd9718cf2",
+        "stance": "063df29e6e55c53fa7e7d6e50bbd9196749d4e651d91ee9e5efba7fa214639cd"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/gameoverse/queenie/resident/selection.png",
+        "stance": "assets/encore/crossovers/gameoverse/queenie/resident/stance.png"
+      },
+      "observations": [
+        "Manteau prune à liserés jade et broderies géométriques, fermoir cuivré et deux capsules à la ceinture.",
+        "Anatomie continue de reine d’échecs, bois naturel, deux gants blancs flottants à poignets jade.",
+        "Portrait cohérent avec le col, le fermoir, le visage et les gants de la garde.",
+        "Un personnage par PNG, deux fichiers de base seulement, aucune animation créée.",
+        "RGBA native contrôlée et octets identiques à la sortie image_gen; contours de garde et portraits entièrement dans les bornes au seuil alpha > 12."
+      ],
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-gameoverse-queenie-fusion",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "263d34d77223c96204b1ed6ca0ce6a012315126987b7e871776bc7942105c56d",
+        "stance": "69b856c6a8c9dfa59a2d3b043bb77e3353b9994d0f45cc9ec5468fea2a41afd4"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/gameoverse/queenie/fusion/selection.png",
+        "stance": "assets/encore/crossovers/gameoverse/queenie/fusion/stance.png"
+      },
+      "observations": [
+        "Reine en cristal violet facetté, finial ambre et noyau jade incrusté au torse, base hexagonale intégrée.",
+        "Deux gants lilas détachés aux anneaux dorés; yeux blancs orange et cils de Queenie reconnaissables.",
+        "Portrait conserve facettes, noyau et couronne; fusion corporelle originale, aucun costume canonique revendiqué.",
+        "Un personnage par PNG, deux fichiers de base seulement, aucune animation créée.",
+        "RGBA native contrôlée et octets identiques à la sortie image_gen; contours de garde et portraits entièrement dans les bornes au seuil alpha > 12."
+      ],
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-smg4-queenie-hommage",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "e370a570ddf0a9737477b8448c6d734cdbbcdd2ea100bd6346da6b5826cc58c9",
+        "stance": "a66f37ea42a39de9f9e10af6d0bfd9fa9742d147beeb83ec9c07e9e08c622b92"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/smg4/queenie/hommage/selection.png",
+        "stance": "assets/encore/crossovers/smg4/queenie/hommage/stance.png"
+      },
+      "observations": [
+        "Salopette blanche transformée en robe de pièce d’échecs, panneaux et casquette bleus, boutons hexagonaux dorés et caméra à la ceinture.",
+        "Couronne et finial restent visibles, deux gants détachés et aucun membre humain.",
+        "Nœud rose de la première proposition retiré par édition native; portrait produit depuis la garde corrigée.",
+        "Un personnage par PNG, deux fichiers de base seulement, aucune animation créée.",
+        "RGBA native contrôlée et octets identiques à la sortie image_gen; contours de garde et portraits entièrement dans les bornes au seuil alpha > 12."
+      ],
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-smg4-queenie-resident",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "dd7c74cd7457fde5035b9b579123c8857459f0b885259f5e26f34e69c81a1247",
+        "stance": "b96ee9e2efbb5c477f7ec154a3f950b3e6048c43038fbf41fb2156a6a3168193"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/smg4/queenie/resident/selection.png",
+        "stance": "assets/encore/crossovers/smg4/queenie/resident/stance.png"
+      },
+      "observations": [
+        "Gilet prune, liserés cyan, casque autour du cou, sifflet doré, broche étoile magenta et crayon jaune.",
+        "Couronne bois, corps continu, deux gants détachés dont un tenant le crayon.",
+        "Portrait reprend le casque, la broche, le sifflet et le crayon; pose statique vers la droite.",
+        "Un personnage par PNG, deux fichiers de base seulement, aucune animation créée.",
+        "RGBA native contrôlée et octets identiques à la sortie image_gen; contours de garde et portraits entièrement dans les bornes au seuil alpha > 12."
+      ],
+      "issues": [],
+      "nativeFacing": 1
+    },
+    {
+      "id": "glitch-smg4-queenie-fusion",
+      "status": "reviewed",
+      "sha256": {
+        "selection": "da49d1c93249c28e688929f0b58d2694b20f8c4502a778270026594fc0781524",
+        "stance": "f35335e0078d3c35c3b80a30c2a528e45a7ac1a96ea29c68e71295416554c1a3"
+      },
+      "reviewedFiles": {
+        "selection": "assets/encore/crossovers/smg4/queenie/fusion/selection.png",
+        "stance": "assets/encore/crossovers/smg4/queenie/fusion/stance.png"
+      },
+      "observations": [
+        "Tête-couronne en facettes orange, corps mécanique blanc/cobalt et objectif cyan incrusté, cape bordeaux.",
+        "Base circulaire intégrée et deux gants blancs détachés avec bracelets cobalt/dorés; sans jambes ni bras.",
+        "Portrait préserve les mêmes modules et le visage; création originale de fusion pour Encore.",
+        "Un personnage par PNG, deux fichiers de base seulement, aucune animation créée.",
+        "RGBA native contrôlée et octets identiques à la sortie image_gen; contours de garde et portraits entièrement dans les bornes au seuil alpha > 12."
+      ],
+      "issues": [],
+      "nativeFacing": 1
+    }
+  ]
+}

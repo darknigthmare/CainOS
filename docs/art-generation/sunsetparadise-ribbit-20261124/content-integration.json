@@ -1,0 +1,193 @@
+{
+  "schema": "encore-sunset-recovery-integration/v1",
+  "status": "native-families-integrated",
+  "ids": [
+    "glitch-sunsetparadise-ribbit-hommage",
+    "glitch-sunsetparadise-ribbit-resident",
+    "glitch-sunsetparadise-ribbit-fusion"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "files": [
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/selection.png",
+      "sha256": "9d794490aa35bfb45eef7cfff6c1f957245443ca373b344022380e963423c7fe",
+      "bytes": 651593
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/stance.png",
+      "sha256": "4dde1b150a900c1ad11a272cd9003e95e31d3d1f205d1b793a5fa83bc468fb7d",
+      "bytes": 774797
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/intro.png",
+      "sha256": "4a9f2ddac8771443b7078a05a42826e18d71d95982088fbbf0e848ff7b2d1f5b",
+      "bytes": 810291
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/attack.png",
+      "sha256": "e96a5970579172f1c15511fc33c72421534ef5d5100df005cf91b3b2c57273f3",
+      "bytes": 764690
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/heavy.png",
+      "sha256": "28d666126bf3b43d4d294abb7d2e1dc3d6ac707033c6796eae357bb3235ed8e6",
+      "bytes": 721796
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/hit.png",
+      "sha256": "38ce9b80734d0253f08c2cbddfd51f36cd90e4374c8c269a4d994878cc9eab85",
+      "bytes": 755398
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/walk.png",
+      "sha256": "9b0a67c6ea975f962f6d81457accda9478e3a3e8034bab9488a17c7bcc560eef",
+      "bytes": 705491
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/jump.png",
+      "sha256": "1c88ddf1ba6ad7712b3934255a9d85ad11279dddfa928c130370ef6b78a07ced",
+      "bytes": 791796
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/crouch.png",
+      "sha256": "2c8c87cc6b432da323c004dc198c9d7b2e4bb0bbf4c0895fa9023ee9d716c1a1",
+      "bytes": 867596
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/victory.png",
+      "sha256": "2bee53200bd9898af006bd5bc6cb83f84de86860db4da0e9134ccc7bd9f5838b",
+      "bytes": 721052
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/hommage/defeat.png",
+      "sha256": "c29922160ccc5d3f7317773ba0ca5ae834c59b9af7482b2c1c7b7ab0f0964ee8",
+      "bytes": 831676
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/selection.png",
+      "sha256": "696d417d1cdc05c4288b3970632604c4ea978ccce2cadc782e6aba86a8334a91",
+      "bytes": 589593
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/stance.png",
+      "sha256": "2b73cb2f54e78d5ba5122318dfaa7b97dd02c9dd7457fb83e06a89103be1e66d",
+      "bytes": 686638
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/intro.png",
+      "sha256": "8adfdd0d413827239ea5acc6082ec6e08cf1153cda32d9dfff1d4e50b8e5bbbd",
+      "bytes": 696053
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/attack.png",
+      "sha256": "3242d28e28f013ef5f2be82f1c3ba862d787dbce74d6d58b5016471499ea8b98",
+      "bytes": 647650
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/heavy.png",
+      "sha256": "7e2176cc28e0954e7504aaeb76e77b67c3b6c1c530df4f9c4c491649e656a561",
+      "bytes": 635090
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/hit.png",
+      "sha256": "c5194acd483de0d4eef69e7c94d1a3113adec5786f2475e53a450e9d2172c444",
+      "bytes": 650246
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/walk.png",
+      "sha256": "9c6bbe310d8755e0912644ca7b4542225c17ed1f84e725e4c5afef0bfe76e6db",
+      "bytes": 648969
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/jump.png",
+      "sha256": "11fd216c236aa30d562d3d4d0bc07183fe125dfe08a6c86d9391c0ddf63b6055",
+      "bytes": 696526
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/crouch.png",
+      "sha256": "e4635b5e428a10d75f20617ca4679a36a79bbc1ac44f5208a0b9a69d9f324b0e",
+      "bytes": 695616
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/victory.png",
+      "sha256": "4360042db9e1d7ac99a6e3618ce7130feb2af552f2e83b4f42ccfa796c4536b0",
+      "bytes": 723803
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/resident/defeat.png",
+      "sha256": "d889c549be4a07371d5f19760da50cf4fbfc6a140a4efb624e48f7a8347d043f",
+      "bytes": 687971
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/selection.png",
+      "sha256": "9ccde87698bf2bda2f16cc223eda26426a6b5774d61b84d77d723acbc7ebeb2d",
+      "bytes": 817543
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/stance.png",
+      "sha256": "eef802e9bc168a7c33c343627f8c81590d33dbd7f9d7c1300c54027a6edffd87",
+      "bytes": 1009355
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/intro.png",
+      "sha256": "77d05f5482f962cbf207df1568f3747d7454aa55b6f510c610f368d93a73620e",
+      "bytes": 922848
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/attack.png",
+      "sha256": "e18055dd4552ae5468a496ab84662fc50c9edcd34b03bccd838677ac6dc8b3a0",
+      "bytes": 871167
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/heavy.png",
+      "sha256": "b20f069f957080541c70f519c54c6c7e4936ea97a96252aee2522de57b69491c",
+      "bytes": 804193
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/hit.png",
+      "sha256": "e5af0ea8a9b35f932a98353130b545a7339b95142880fd5e2d435b91b49686bb",
+      "bytes": 837186
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/walk.png",
+      "sha256": "fe97ccb8604ac79555e7e2ec7170a6becada023f795c7bcbf025b93143067ea7",
+      "bytes": 809742
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/jump.png",
+      "sha256": "0b7f922207a262a2efb0bd17167aac2fbc6d2b9c9a9fc31007a86d5956ac6ef3",
+      "bytes": 941907
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/crouch.png",
+      "sha256": "7d9ae97ee8212a9647fccfefa738d601b70551bef5d2c4148198e169a650f5b0",
+      "bytes": 844625
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/victory.png",
+      "sha256": "2f4d7be795b9baa2c2f525311eba7cac81981843d0f1c59ee9ee2cd15ada1a8d",
+      "bytes": 884110
+    },
+    {
+      "file": "assets/encore/crossovers/sunsetparadise/ribbit/fusion/defeat.png",
+      "sha256": "0c5ec3adb5386606993797ecbb9af7dc73f36a4017b82e2791925692a2bd399b",
+      "bytes": 894023
+    }
+  ],
+  "preservedCostumePrefix": 480,
+  "mechanicsChanged": false,
+  "canonicalCostumeClaim": false,
+  "gitPublished": false
+}

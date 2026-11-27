@@ -1,0 +1,375 @@
+{
+  "schema": "encore-continuation-c-build-integrity/v1",
+  "status": "passed",
+  "complete": true,
+  "baseCommit": "d0b1c092120b2c472354b67ffbf136f6a58004c5",
+  "newNativePNG": 33,
+  "newNativeBytes": 42202157,
+  "nativeBuildCopies": 66,
+  "nativeAssetComparisons": 66,
+  "moduleComparisons": 38,
+  "copies": [
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/caferagatha.png",
+      "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/caferagatha.png",
+      "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/intro.png",
+      "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/attack.png",
+      "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/heavy.png",
+      "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/hit.png",
+      "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/walk.png",
+      "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/jump.png",
+      "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/crouch.png",
+      "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/victory.png",
+      "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferagatha/defeat.png",
+      "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/cafegangle.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/cafegangle.png",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/intro.png",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/attack.png",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/heavy.png",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/hit.png",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/walk.png",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/jump.png",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/crouch.png",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/victory.png",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafegangle/defeat.png",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/cafezooble.png",
+      "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/cafezooble.png",
+      "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/intro.png",
+      "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/attack.png",
+      "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/heavy.png",
+      "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/hit.png",
+      "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/walk.png",
+      "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/jump.png",
+      "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/crouch.png",
+      "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/victory.png",
+      "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/cafezooble/defeat.png",
+      "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/caferagatha.png",
+      "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/caferagatha.png",
+      "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/intro.png",
+      "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/attack.png",
+      "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/heavy.png",
+      "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/hit.png",
+      "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/walk.png",
+      "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/jump.png",
+      "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/crouch.png",
+      "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/victory.png",
+      "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferagatha/defeat.png",
+      "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/cafegangle.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/cafegangle.png",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/intro.png",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/attack.png",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/heavy.png",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/hit.png",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/walk.png",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/jump.png",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/crouch.png",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/victory.png",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafegangle/defeat.png",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/cafezooble.png",
+      "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/cafezooble.png",
+      "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/intro.png",
+      "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/attack.png",
+      "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/heavy.png",
+      "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/hit.png",
+      "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/walk.png",
+      "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/jump.png",
+      "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/crouch.png",
+      "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/victory.png",
+      "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/cafezooble/defeat.png",
+      "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559"
+    }
+  ],
+  "historicalAssetsCompared": 5830,
+  "historicalAssetsUnchanged": true,
+  "historicalInventorySHA256": "391f14917b57a06b7db09a3f31299813904af1f263ac79884ff681f700eb1aa8",
+  "preservedRuntimeModules": {
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94"
+  },
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-order.mjs": "2df4a7f20dff74db43168a61c3b6285c34e7d2c9f2bfa64c8355b6c622aad62d",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+  }
+}

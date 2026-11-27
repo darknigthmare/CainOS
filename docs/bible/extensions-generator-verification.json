@@ -1,0 +1,441 @@
+{
+  "schema": "encore-combat-extensions-generator-verification/v1",
+  "asOf": "2026-11-27",
+  "scope": "Document reconstruction and read-only validation after the runtime/art freeze; browser suites syntax only.",
+  "checks": [
+    {
+      "command": [
+        "node",
+        "scripts/build-combat-guide-associations.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "result": {
+        "status": "ok",
+        "mode": "check",
+        "counts": {
+          "fighters": 64,
+          "moves": 640,
+          "routes": 64,
+          "chapters": 256,
+          "panels": 384,
+          "dedicatedPanelImages": 84,
+          "composedPanels": 300,
+          "finishers": 192,
+          "friendships": 64,
+          "dedicatedStageArrangements": 64,
+          "projectileMoves": 73,
+          "usedProjectileMotifs": 23,
+          "runtimeCastIssues": 40,
+          "newImagesProduced": 0,
+          "plannedGlobalChapters": 12,
+          "plannedGlobalScenes": 36
+        }
+      }
+    },
+    {
+      "command": [
+        "node",
+        "scripts/build-combat-guide.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "result": {
+        "status": "checked",
+        "sections": 30,
+        "requirements": 100,
+        "characterAssociations": 64,
+        "globalCampaigns": 1,
+        "globalChapters": 12,
+        "globalSceneBriefs": 36,
+        "plannedStageLinks": 6,
+        "bossContracts": 4,
+        "generatedImages": 0,
+        "implementedNewModes": 0,
+        "implementedStageLinks": 0,
+        "runtimeCounts": {
+          "fighters": 64,
+          "moves": 640,
+          "modes": 9,
+          "archiveEntries": 184,
+          "costumes": 546,
+          "archiveCostumes": 52,
+          "additionalCircusCostumes": 56,
+          "crossoverCostumes": 438,
+          "stages": 27,
+          "nonCrossoverStages": 18,
+          "crossoverStages": 9,
+          "dedicatedArrangements": 64,
+          "allStageDefinitions": 91,
+          "storyRoutes": 64,
+          "storyEncounters": 256,
+          "storyPanels": 384,
+          "dedicatedIntroOutroPaintings": 84,
+          "composedIntroOutroPanels": 300,
+          "finishers": 192,
+          "friendships": 64,
+          "projectileMotifs": 23,
+          "imagesDeclaredInOfflineManifest": 6218,
+          "bytesDeclaredInOfflineManifest": 3528752273
+        },
+        "sourceGuideSha256": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7",
+        "files": [
+          "docs/bible/guide-integration.json",
+          "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md",
+          "docs/bible/CAMPAGNE_GLOBALE.md",
+          "docs/bible/ARENES_TRANSITIONS_BOSS.md",
+          "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md",
+          "docs/bible/MODELES_ET_CRITERES.md",
+          "docs/bible/README.md"
+        ]
+      }
+    },
+    {
+      "command": [
+        "node",
+        "scripts/build-combat-extensions.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "result": {
+        "mode": "check",
+        "generatedFiles": 11,
+        "counts": {
+          "sections": 38,
+          "requirements": 114,
+          "characterProfiles": 64,
+          "tauntBriefs": 64,
+          "selectionBriefs": 64,
+          "deselectionBriefs": 64,
+          "teams": 12,
+          "teamSupers": 12,
+          "teamFinales": 12,
+          "bonusStages": 8,
+          "hubZones": 5,
+          "hubReciprocalLinks": 4,
+          "accessRules": 9,
+          "proposedRewards": 8,
+          "supportBenefitsInactive": 3,
+          "clashContracts": 2,
+          "documentedEntitySlots": 133,
+          "teamAcceptanceScenarios": 18,
+          "rightsAcceptanceScenarios": 22,
+          "workbookProfiles": 254,
+          "imagesProducedByThisDocumentationPass": 0,
+          "animationsProducedByThisDocumentationPass": 0,
+          "newRuntimeModesImplementedByThisDocumentationPass": 0
+        },
+        "validation": {
+          "sourceBytesAndHashes": true,
+          "sectionCoverage": true,
+          "uniqueRequirementIds": true,
+          "characterRosterCoverage": true,
+          "uniqueCharacterExits": true,
+          "teamMembersAndMovesResolved": true,
+          "bonusStageIdsResolved": true,
+          "hubConnectedAndThresholdsOnPerimeter": true,
+          "accessDependenciesResolved": true,
+          "conditionLeavesResolved": true,
+          "supportDisabled": true,
+          "runtimeScenariosExecuted": false,
+          "newArtVisuallyReviewed": false,
+          "canonicalFidelityCertified": false
+        }
+      }
+    },
+    {
+      "command": [
+        "node",
+        "scripts/build-combat-extensions.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "result": {
+        "mode": "check",
+        "generatedFiles": 11,
+        "counts": {
+          "sections": 38,
+          "requirements": 114,
+          "characterProfiles": 64,
+          "tauntBriefs": 64,
+          "selectionBriefs": 64,
+          "deselectionBriefs": 64,
+          "teams": 12,
+          "teamSupers": 12,
+          "teamFinales": 12,
+          "bonusStages": 8,
+          "hubZones": 5,
+          "hubReciprocalLinks": 4,
+          "accessRules": 9,
+          "proposedRewards": 8,
+          "supportBenefitsInactive": 3,
+          "clashContracts": 2,
+          "documentedEntitySlots": 133,
+          "teamAcceptanceScenarios": 18,
+          "rightsAcceptanceScenarios": 22,
+          "workbookProfiles": 254,
+          "imagesProducedByThisDocumentationPass": 0,
+          "animationsProducedByThisDocumentationPass": 0,
+          "newRuntimeModesImplementedByThisDocumentationPass": 0
+        },
+        "validation": {
+          "sourceBytesAndHashes": true,
+          "sectionCoverage": true,
+          "uniqueRequirementIds": true,
+          "characterRosterCoverage": true,
+          "uniqueCharacterExits": true,
+          "teamMembersAndMovesResolved": true,
+          "bonusStageIdsResolved": true,
+          "hubConnectedAndThresholdsOnPerimeter": true,
+          "accessDependenciesResolved": true,
+          "conditionLeavesResolved": true,
+          "supportDisabled": true,
+          "runtimeScenariosExecuted": false,
+          "newArtVisuallyReviewed": false,
+          "canonicalFidelityCertified": false
+        }
+      }
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/combat-merge-browser.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/combat-stage-art-browser.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "scripts/run-combat-ci.mjs",
+        "scripts/combat-ci-suites.mjs"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "generatedFilesCompared": 20,
+  "sha256AndMtimePreserved": true,
+  "generatedFiles": {
+    "docs/bible/character-associations.json": {
+      "sha256": "d1d9e84d94fb5446e4d4dc6b19ccfbef8e19eeb9d4c385e4fa98375b0b9cab09",
+      "bytes": 2595481,
+      "mtimeNs": "1795758456911005003"
+    },
+    "docs/bible/ASSOCIATIONS_PERSONNAGES.md": {
+      "sha256": "1a21b6728d4656f770b09af61cd5f177b5a17837b32fa93aeb333db6fed42395",
+      "bytes": 19142,
+      "mtimeNs": "1795758456915004964"
+    },
+    "docs/bible/guide-integration.json": {
+      "sha256": "9f33c3a15056e881a403c907a1d9c4c509407cfa2ebabdd71f958b872daa4b65",
+      "bytes": 49514,
+      "mtimeNs": "1795758457558998556"
+    },
+    "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md": {
+      "sha256": "0a2b7daf5d77f9203a476860d9c88bf3238d0a5953dfb4507fa0aab81c3e514b",
+      "bytes": 40450,
+      "mtimeNs": "1795758457562998516"
+    },
+    "docs/bible/CAMPAGNE_GLOBALE.md": {
+      "sha256": "8b6ce920fef925f221c4bb78664abca35401180299f7cfd775e8ccc75ad5caf7",
+      "bytes": 43361,
+      "mtimeNs": "1795758457562998516"
+    },
+    "docs/bible/ARENES_TRANSITIONS_BOSS.md": {
+      "sha256": "bd7c96d3460d6716d92d8a59952b4e4091b99d540f672dd12163914f47031830",
+      "bytes": 12824,
+      "mtimeNs": "1795758457562998516"
+    },
+    "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md": {
+      "sha256": "2029fc288c1a56f337bd49e3b34f3f61ed26178681aaa866142782bc82af943a",
+      "bytes": 5721,
+      "mtimeNs": "1795758457562998516"
+    },
+    "docs/bible/MODELES_ET_CRITERES.md": {
+      "sha256": "af4a0ad37b198f47ed2e71427324386a43c8321746bea50f72d9919f2b38df80",
+      "bytes": 7193,
+      "mtimeNs": "1795758457562998516"
+    },
+    "docs/bible/README.md": {
+      "sha256": "041a06d1d2be0d341a9c073d6e7a16cdffa0c3d8fab0108be09bdc4e48829060",
+      "bytes": 4077,
+      "mtimeNs": "1795758457562998516"
+    },
+    "docs/bible/extensions-design.json": {
+      "sha256": "a3abf35673884b75069961a70b66468edafebc966359d130030ea56c4ec11af4",
+      "bytes": 121759,
+      "mtimeNs": "1795758457953209410"
+    },
+    "docs/bible/extensions-characters.json": {
+      "sha256": "01135e8d4dad9007643823adbd95d2e82bf2d584aed8be6f6b00a738eb0ca507",
+      "bytes": 458003,
+      "mtimeNs": "1795758457956407354"
+    },
+    "docs/bible/extensions-teams-bonus.json": {
+      "sha256": "b09de7d337bc627332ec13c891b2e0a3858d1064666bdbdb2bd176a52b5d125e",
+      "bytes": 229382,
+      "mtimeNs": "1795758457962994513"
+    },
+    "docs/bible/extensions-access.json": {
+      "sha256": "96028dd5a48d8d2eac368e03d380c27284623bab099375a68ef07a98ff0d32ba",
+      "bytes": 358744,
+      "mtimeNs": "1795758457974994392"
+    },
+    "docs/bible/extensions-integration.json": {
+      "sha256": "5b988fa7a676f75d0cc4dea89ac8501b67a924a21bdfcc05895e5145a2f3c114",
+      "bytes": 5586,
+      "mtimeNs": "1795758457978994353"
+    },
+    "docs/bible/extensions-workbook-data.json": {
+      "sha256": "1326667db2f287e6235f892a521a3f3af0afe3d6c3148d8be147026be1dc6557",
+      "bytes": 175611,
+      "mtimeNs": "1795758457978994353"
+    },
+    "docs/bible/references/combat-guides-provenance.json": {
+      "sha256": "089c11127c46a88a4768678af47a622f3f5a2fe33a9901f39e2bf84a0e70ac13",
+      "bytes": 2111,
+      "mtimeNs": "1795758457982994312"
+    },
+    "docs/bible/EXTENSIONS_COMBAT_INTEGRATION.md": {
+      "sha256": "cc952f7ecf815ef8ff1dc9f58cbd7f02282f26f83a68f97b88a51106854e3e6c",
+      "bytes": 60118,
+      "mtimeNs": "1795758457986994272"
+    },
+    "docs/bible/PERSONNALITE_SELECTION_ET_EQUIPES.md": {
+      "sha256": "256a0f470f3c05a9e8332d195224d795513d34a6dafffdf0a476ef4f1c865e73",
+      "bytes": 79746,
+      "mtimeNs": "1795758457986994272"
+    },
+    "docs/bible/BONUS_ARCHIVES_ET_DEBLOCAGES.md": {
+      "sha256": "56e6626dfb0fd3f0e55aa5a8bc8f3929128d953053e7171c81fc800a9d6af387",
+      "bytes": 24338,
+      "mtimeNs": "1795758457990994232"
+    },
+    "docs/bible/CONTRATS_DROITS_ET_SAUVEGARDE.md": {
+      "sha256": "f8cfd953cd66efa05b9deb7cdc8c0569f99a9305d6f311b19f222a0591877bbc",
+      "bytes": 14941,
+      "mtimeNs": "1795758457990994232"
+    }
+  },
+  "localMarkdownLinksChecked": 287,
+  "missingLinks": [],
+  "runtimeFilesUnchanged": true,
+  "runtimeSourceHashes": {
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/abstractions-narrative.mjs": "ca3a9f21b14a226f20946dddbf2d1dae9c04bebc3f3beb3f60503d6a63683abe",
+    "combat/app.mjs": "15877928f8efa1bc97f28779a21aaea29a7412e6f5266b588cf7999a2cd7a724",
+    "combat/audio-ambiences.mjs": "cb822a6e2fbe4f6c359c0f986647a924680e8b47ef661accc0ff44908157c30b",
+    "combat/audio.mjs": "35edb1c4486adf3324ee182e60325d5b838e3b673c722eb9fd519cb76c597c47",
+    "combat/base-sprite-content.mjs": "32d7ce1b726febeb916df12dd99dc806848a309067cb82dac2914234953910e6",
+    "combat/base-sprite-continuation-20261125-b.mjs": "62f1da85c2f2b834b8d4e6a6417caaecbf7df80998affe63bf917a7b25dbd7e1",
+    "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+    "combat/base-sprite-continuation-20261127.mjs": "3c168e042de4a84cbc46a3951833f85cf22799120a42233c27188add22f14472",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/catalog-history.mjs": "dc1a40f1d3d3d3bb07485b2530db5d5949184f7fc6d482f46ac90cc14436fc54",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-fidelity.mjs": "4321b91147455c55e8e07ec86d8b5434144dd69de112b5e98354b27f5676c25a",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "c141fa3cc90a18996582c593b1eb6f824412c4a583fdaa95839819b5f74dc1d1",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/crossover-designs.mjs": "10823e3ae1857472b3ccecdfff9018026d1e73c356fc13496e9d3096fb194935",
+    "combat/crossover-fusions.mjs": "2af5a8490395331a92b95f567c155b7237e7355b5cac03a0c45a8d2e1b19241b",
+    "combat/crossover-npc-additions.mjs": "f56896170b3da27f4479797f1314e339d2918dbcd76cc3850c465369c356eba5",
+    "combat/crossover-stages.mjs": "bf3550b7b824c5d06c8a360fb27b9bd2786367111b92e726dbbc87e4b41db4ad",
+    "combat/crossover-sunset-recovery-20261124.mjs": "fb2e7d6a5c2cb7cdf7f05416b5e2a6ed30276c996d2dee82c94151eef33d876c",
+    "combat/crossover-visits.mjs": "fc173219e61473341930bad12e52aefea45b69acfb7f029a03296b4ca8a0efbc",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/finisher-catalog.mjs": "f741daefc7acb7e63a8aae481f9a1ceb378a2cc31be08f2328db4470352d9b18",
+    "combat/finisher-gallery.mjs": "52a5cd22cead9021702bbc2220aadc13997ee67e979e992d10b951f27e1602a3",
+    "combat/finishers.mjs": "cf41cd5f1137ea8b1b04629980c6985b5b74c9f43e75ebd064a1f1ef37857d38",
+    "combat/friendship-catalog.mjs": "866d49255ee9ae352428b86d24a2af3c1381f6ba53415280011891609e89e0be",
+    "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/index.html": "da82a06a72d3bbea1b0d743b939c747b1545d1a9d2234b06d2e8e2203ed12bd8",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+    "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+    "combat/offline-manifest.mjs": "7275eaf815b54def24b6542c6a2894cf8cb8eb9c2356abeee5800cb8665d4647",
+    "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+    "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+    "combat/projectile-art.mjs": "6052cb1d58bebd4a4bff05ea114edc50ec3586be74e0d6c1bac4080a113a11c6",
+    "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+    "combat/render-finishers.mjs": "7834ffe5ec5c90d1665ac3e71a036cf24618c755d7bb956eeaeaabc74806b4a6",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-stage-motion.mjs": "22a0ecdca8bd3f5eaf1e759ac30dabd41fa117c00e0844665c89ea5f7c057d3a",
+    "combat/render-stage-scenery.mjs": "0b4edde9d16659675651b6daa114ec03b8a8cf7434c47eb09dd2645eb53ca544",
+    "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+    "combat/roster-expansion.mjs": "58b0e260ac44233aee7e3ef0a056f3a59848f2b05e9cbf035201c4770f97082f",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/sprite-catalog.mjs": "f1d3aabb923df18d8616363840aca370dd3472a9ad92ac51c84d49430a3251fe",
+    "combat/stage-parallax.mjs": "22dfae75cf842c484d1de9189ce56f23b0018e9d7620450304ae6bc5fb882b0f",
+    "combat/stage-scenes-20261127.mjs": "13058461fdadf39fc238174539c46015e8577dbb7466a5fca746bd5e396f00ac",
+    "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+    "combat/story-presentation.mjs": "900ad5dfefc205f868561a7624352152f2d7f51300b5197c16c677bb7692fd54",
+    "combat/style.css": "adc88414a74d24bee7a1e8b08ca31fb9e8d5270d47199dc64eb4914815a36df7",
+    "combat/sw.js": "b10302d7cacdbb4301cb0dbba59d146484cca5516633a1be2adf14497ded6a49",
+    "combat/tournament-lore.mjs": "ff18e3fdcc6a5fe46f442452d74fd1744ae135c6c76a117696470bd17c6ad21a",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+  },
+  "originalSourceHashesVerified": [
+    {
+      "filename": "Combat_Games_Guide_General_v1.0.txt",
+      "bytes": 55172,
+      "sha256": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7"
+    },
+    {
+      "filename": "Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "bytes": 60589,
+      "sha256": "330fb7485a7a52b2a20f855646c940aaac0fcd9510032bc84b2e17c518edd25f"
+    },
+    {
+      "filename": "Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "bytes": 47334,
+      "sha256": "08b57ea542e83c487fef3276997a612d4657f2ee9ed4f8e46b0bf65a2778038b"
+    }
+  ],
+  "kaufmoAddedCostumeAssociations": [
+    "glitch-murderdrones-kaufmo-hommage",
+    "glitch-murderdrones-kaufmo-resident",
+    "glitch-murderdrones-kaufmo-fusion",
+    "glitch-metarunner-kaufmo-hommage",
+    "glitch-metarunner-kaufmo-resident",
+    "glitch-metarunner-kaufmo-fusion"
+  ],
+  "browserSuites": {
+    "tests/combat-merge-browser.mjs": {
+      "sha256": "a1ed82d4d8fb4e405d08d6174a8181b5b14a0bf51f64e887e27e122a296512a2",
+      "syntaxPassed": true,
+      "runtimeExecutedLocally": false
+    },
+    "tests/combat-stage-art-browser.mjs": {
+      "sha256": "cd08ef4a7035b3e34a430d1aa6f609d7ba2e881c45d1a03fdf562355ad4dc431",
+      "syntaxPassed": true,
+      "runtimeExecutedLocally": false
+    }
+  },
+  "browserLimitation": "Chromium binary absent. /usr/bin/chromium is a launcher whose /usr/lib/chromium/chromium target is missing. No browser assertion is claimed by this validation.",
+  "ciCollectorAndSuiteRegistryUnchanged": true
+}

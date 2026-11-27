@@ -4,6 +4,7 @@
  * Neither a completed technical review nor an episode label certifies a costume.
  */
 import { COSTUME_REFINEMENTS, REFINED_COSTUME_SPRITES } from './costume-refinements.mjs';
+import { ABSTRACTION_CALM_ID, ABSTRACTION_CALM_FIDELITY, abstractionSprite } from './abstractions-content.mjs';
 
 const freeze = value => {
   if (value && typeof value === 'object' && !Object.isFrozen(value)) {
@@ -39,6 +40,7 @@ export const COSTUME_SPRITE_OVERRIDES = freeze({
   shadowragatha: { matteMode: 'preserve-source' },
   shadowcaine: { matteMode: 'preserve-source' },
   ...REFINED_COSTUME_SPRITES,
+  [ABSTRACTION_CALM_ID]: abstractionSprite(ABSTRACTION_CALM_ID),
 });
 
 const names = { pomni: 'Pomni', jax: 'Jax', ragatha: 'Ragatha', gangle: 'Gangle', zooble: 'Zooble', kinger: 'Kinger', caine: 'Caine', bubble: 'Bubble', gummigoo: 'Gummigoo', gloinkqueen: 'la reine des Gloinks' };
@@ -185,7 +187,7 @@ const specificIssues = {
   inertbubble: ['Le remplissage violet opaque du dessin n’imite pas une bulle entièrement transparente ; l’alpha autour du sprite est distinct.'],
 };
 
-export const COSTUME_FIDELITY = freeze(Object.fromEntries(designs.map(([id, baseFighterId, visibleTraits, identityEvidence, shape], index) => {
+export const COSTUME_FIDELITY = freeze({ ...Object.fromEntries(designs.map(([id, baseFighterId, visibleTraits, identityEvidence, shape], index) => {
   const refinement = COSTUME_REFINEMENTS[id];
   const comparison = comparisons[id];
   const sourceIds = comparison?.sourceIds || episodeTargets[id] || [];
@@ -221,7 +223,7 @@ export const COSTUME_FIDELITY = freeze(Object.fromEntries(designs.map(([id, base
       captureId: refinement ? `costumes-0.6.0#${id}` : `costumes-0.4.0-page-${Math.floor(index / 12) + 1}#${id}`,
     },
   }];
-})));
+})), [ABSTRACTION_CALM_ID]: ABSTRACTION_CALM_FIDELITY });
 
 export function getCostumeFidelity(id) {
   return Object.hasOwn(COSTUME_FIDELITY, id) ? COSTUME_FIDELITY[id] : null;

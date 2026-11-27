@@ -1,0 +1,69 @@
+{
+  "schema": "encore-npc-crossover-reference-audit/v1",
+  "retrievedAt": "2026-11-20T14:37:06.176175+00:00",
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "sourcePages": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/products/uzi-v2-animatez",
+    "https://www.glitchprod.com/murder-drones"
+  ],
+  "references": [
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/AniMatez_Uzi_Front.png?v=1776905008&width=1600",
+      "bytes": 1280711,
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "sourceKind": "Official GLITCH merchandise product photo",
+      "sourcePage": "https://glitchproductions.store/products/uzi-v2-animatez",
+      "role": "Uzi outfit and worker-drone visual language, not Ribbit identity or proportions"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-back.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/AniMatez_Uzi_Back.png?v=1776905008&width=1600",
+      "bytes": 1360487,
+      "sha256": "f2d4f34a8f7c33af3acd7407de05a97e9cad161518e62d29bd04008c5e493c0d",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "sourceKind": "Official GLITCH merchandise product photo",
+      "sourcePage": "https://glitchproductions.store/products/uzi-v2-animatez",
+      "role": "Uzi outfit and worker-drone visual language, not Ribbit identity or proportions"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "copiedFrom": "docs/art-generation/ribbit-candidates-20261120/references/official-iconic-ribbit.png",
+      "bytes": 1085524,
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "sourceKind": "Official GLITCH merchandise product photo",
+      "role": "Ribbit identity and complete front silhouette including both feet",
+      "url": "https://glitchproductions.store/cdn/shop/files/Iconic_1.png?v=1785347149&width=1600",
+      "sourcePage": "https://glitchproductions.store/products/ribbit-pendantz-blindbox"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/game-ribbit-stance.png",
+      "copiedFrom": "assets/encore/stance/ribbit.png",
+      "bytes": 615267,
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "sourceKind": "Existing Encore original fan-game drawing",
+      "role": "Game proportions, clean 2D contours and native-facing stance only"
+    }
+  ],
+  "scope": "Original fan-game costume using official merchandise references. No canonical Ribbit crossover, episode presence, exact series proportions or full animation-cycle certification is claimed."
+}

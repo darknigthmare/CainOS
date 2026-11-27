@@ -1,0 +1,212 @@
+{
+  "schema": "encore-completion-preservation/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "counts": {
+    "fighters": 64,
+    "techniques": 640,
+    "costumes": 573,
+    "crossovers": 465,
+    "staticBaseFamilies": 89,
+    "declaredStaticBaseFamilies": 91,
+    "stages": 27,
+    "dedicatedArrangements": 64,
+    "illustrations": 6281,
+    "illustrationBytes": 3603498876,
+    "newRuntimeImages": 63,
+    "newAppearanceFamilies": 27
+  },
+  "preserved": {
+    "fighterFieldsSHA256": "c87ed066d9484e971b447728d171a76331a1a655e423c279632ba7dadd7b001d",
+    "archiveFieldsSHA256": "bb42365a602e3ae12ec3cc5b6a5aa0b3dad33309390bec99355bdeacebcb9e81",
+    "costumePrefixCount": 546,
+    "costumePrefixSHA256": "5f72c40db50ce198c4fa2b423902ce2875c7a246590db3558bd5d1ff12c86cb4",
+    "crossoverPrefixCount": 438,
+    "crossoverPrefixSHA256": "fb6e4a30d5fad931d8b2c264fa0305acf728fdbcd144163428bc1c790af317de",
+    "originalImages": 6218,
+    "originalImageBytes": 3528752273,
+    "allOriginalImageGitBlobsMatch": true,
+    "stageAndArrangementMechanicalFields": true,
+    "sourceHashes": {
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+      "combat/progression.mjs": "e83699afd481220211dc51fee48dc200a1c514bfe5975bd88d95bc851effd4f7",
+      "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+      "combat/stories.mjs": "330b555a35e32cd18f29a1deec533ab88115e6b5fac8fc016384d50db5933b40",
+      "combat/render.mjs": "5d103c824bfcf9718e2d56f138ef0be87bc4ec7b802cfd695de618ad8a7c9a2b",
+      "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+      "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+      "combat/stage-parallax.mjs": "22dfae75cf842c484d1de9189ce56f23b0018e9d7620450304ae6bc5fb882b0f"
+    }
+  },
+  "permittedStageMetadataUpdates": [
+    {
+      "id": "bigtop",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "candy",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "manor",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "cellar",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "void",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "lake",
+      "changedMetadata": [
+        "fidelity",
+        "description",
+        "sourceId",
+        "sourceStatus"
+      ]
+    },
+    {
+      "id": "gloink",
+      "changedMetadata": [
+        "fidelity",
+        "description"
+      ]
+    },
+    {
+      "id": "grounds",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    },
+    {
+      "id": "backstage",
+      "changedMetadata": [
+        "fidelity"
+      ]
+    }
+  ],
+  "permittedArchiveMetadataUpdates": [
+    {
+      "id": "evilpomni",
+      "fields": [
+        "provenance",
+        "status",
+        "identityId",
+        "archiveAliases",
+        "referenceUrls",
+        "supersededArtwork"
+      ],
+      "before": {
+        "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+        "status": "Visuel CainOS existant",
+        "identityId": null,
+        "archiveAliases": null,
+        "referenceUrls": null,
+        "supersededArtwork": null
+      },
+      "after": {
+        "provenance": "Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.",
+        "status": "Alias du même PNJ ; ancienne illustration remplacée après validation de la paire",
+        "identityId": "evilpomni-big-top",
+        "archiveAliases": [
+          "evilpomni",
+          "rivalbaseballpomni"
+        ],
+        "referenceUrls": [
+          "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s"
+        ],
+        "supersededArtwork": {
+          "selection": "../assets/encore/selection/evilpomni.png",
+          "replacementAppearanceId": "evilpomni-pendantz",
+          "preserved": true,
+          "reason": "L’ancienne création noire/rouge à boutons en croix ne reproduit pas le costume officiel rouge/jaune à accents bleus."
+        }
+      }
+    },
+    {
+      "id": "rivalbaseballpomni",
+      "fields": [
+        "provenance",
+        "status",
+        "identityId",
+        "archiveAliases",
+        "referenceUrls",
+        "supersededArtwork"
+      ],
+      "before": {
+        "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+        "status": "Visuel CainOS existant",
+        "identityId": null,
+        "archiveAliases": null,
+        "referenceUrls": null,
+        "supersededArtwork": null
+      },
+      "after": {
+        "provenance": "Evil Pomni, PNJ adverse des Big Top : les archives evilpomni et rivalbaseballpomni désignent la même incarnation, pas une transformation de Pomni. Références : épisode 5 vers 20 min 50 s et Pendantz officiel rouge/jaune à accents bleus. Les anciens dessins incorrects restent conservés ; le portrait corrigé est partagé après validation de sa paire.",
+        "status": "Alias du même PNJ ; ancienne illustration remplacée après validation de la paire",
+        "identityId": "evilpomni-big-top",
+        "archiveAliases": [
+          "evilpomni",
+          "rivalbaseballpomni"
+        ],
+        "referenceUrls": [
+          "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1250s"
+        ],
+        "supersededArtwork": {
+          "selection": "../assets/encore/selection/rivalbaseballpomni.png",
+          "replacementAppearanceId": "evilpomni-pendantz",
+          "preserved": true,
+          "reason": "L’ancienne création à étoiles, lunettes et yeux jaunes ne reproduit pas la Pomni adverse de l’épisode 5."
+        }
+      }
+    }
+  ],
+  "newFamilyIds": [
+    "glitch-sunsetparadise-kaufmo-hommage",
+    "glitch-sunsetparadise-kaufmo-resident",
+    "glitch-sunsetparadise-kaufmo-fusion",
+    "glitch-gaslightdistrict-kaufmo-hommage",
+    "glitch-gaslightdistrict-kaufmo-resident",
+    "glitch-gaslightdistrict-kaufmo-fusion",
+    "glitch-knightsofguinevere-kaufmo-hommage",
+    "glitch-knightsofguinevere-kaufmo-resident",
+    "glitch-knightsofguinevere-kaufmo-fusion",
+    "glitch-murderdrones-max-hommage",
+    "glitch-murderdrones-max-resident",
+    "glitch-murderdrones-max-fusion",
+    "glitch-metarunner-max-hommage",
+    "glitch-metarunner-max-resident",
+    "glitch-metarunner-max-fusion",
+    "glitch-ultrajumpmania-kaufmo-hommage",
+    "glitch-ultrajumpmania-kaufmo-resident",
+    "glitch-ultrajumpmania-kaufmo-fusion",
+    "glitch-gameoverse-kaufmo-hommage",
+    "glitch-gameoverse-kaufmo-resident",
+    "glitch-gameoverse-kaufmo-fusion",
+    "glitch-lackadaisy-kaufmo-hommage",
+    "glitch-lackadaisy-kaufmo-resident",
+    "glitch-lackadaisy-kaufmo-fusion",
+    "glitch-smg4-kaufmo-hommage",
+    "glitch-smg4-kaufmo-resident",
+    "glitch-smg4-kaufmo-fusion"
+  ],
+  "offlineVersion": "0.7.0-394729ec32c2",
+  "artVersion": "3f67c9015c6880ed",
+  "ok": true
+}

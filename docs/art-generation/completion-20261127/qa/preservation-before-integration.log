@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+0 !== 27
+
+    at file:///workspace/scratch/8db10b0df53d/CainOS/docs/art-generation/completion-20261127/verify-preservation.mjs:30:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 27,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.3

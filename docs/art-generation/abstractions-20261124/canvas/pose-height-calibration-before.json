@@ -1,0 +1,722 @@
+{
+  "schema": "encore-pose-height-calibration/v1",
+  "basedOnReportSha256": "b8bd2901ae259ccfeb4978728c287c2a7ae3e54e6bc34b7855bcc6d15d936c3e",
+  "basedOnCaptureAt": "2026-11-24T13:59:38.296Z",
+  "sourceHashes": {
+    "combat/data.mjs": "4ee02d45615773a0cec0f42c6ffe627d4ffbb719fac42b8fb32b4fb7a0b1e0ec",
+    "combat/abstractions-content.mjs": "5f4d77f7fef8953721757a03b9463e829d58371cd11c5c55263dc54dfefd49fb",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "b60b35d7529a784bd8ef278f0ea738645b23497ba3d5fce9b2a8af528ced9449",
+    "combat/render-poses.mjs": "4adf6d1baa6c96a4a2d53db6d8cf3aec4143ff8c7c16acb255d8fe0e0a8c018f",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/render-presentation.mjs": "e196fb79ed9c2f5cc639fef7ad8e616f6cc998b67cb6a8ca1d95dec0e20a1b2f",
+    "combat/projectile-art.mjs": "c1c870adf588879a08e239a2cf7c9f7dcea1fd9975c00b79aafd9ac4f85ad6cd",
+    "combat/offline-manifest.mjs": "d31208ff529d4c39ac1f54038113fe55dd55b72ca7457e7c8b23677896402336",
+    "scripts/render-combat-abstraction-review.mjs": "a08f0d841abaaad4cd63ce4db04273135e402d875938f05bce7c4ac1c34e33be"
+  },
+  "method": "Five raised-body drawings identified by visual review against their stance; these values record the width-limited production rendering before per-pose height correction.",
+  "stances": [
+    {
+      "id": "originalabstractedpomni",
+      "file": "assets/encore/abstractions/originalabstractedpomni/stance.png",
+      "sha256": "84fcc67fb07474b8efb11d5f40f3687f456cb182a53e64d6a5bc1db38476e84e",
+      "bytes": 884987,
+      "nativeFacing": 1,
+      "visibleBounds": {
+        "x": 51,
+        "y": 148,
+        "width": 568,
+        "height": 337
+      },
+      "visibleHeight": 259.9999965429306,
+      "visibleWidth": 438.21957874298096,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "maxIllustratedWidth": 530,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 335,
+            "y": 485
+          },
+          "anchorWorld": {
+            "x": 639.9999996423721,
+            "y": 568.0000113248825
+          },
+          "visibleWorldBounds": {
+            "left": 420.89021027088165,
+            "right": 859.1097890138626,
+            "top": 308.0000147819519,
+            "bottom": 568.0000113248825
+          },
+          "visibleHeight": 259.9999965429306,
+          "visibleWidth": 438.21957874298096,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 438.21958456973294,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.7715133428573608,
+            "b": 0,
+            "c": 0,
+            "d": 0.7715133428573608,
+            "e": 381.54302978515625,
+            "f": 193.8160400390625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 335,
+            "y": 485
+          },
+          "anchorWorld": {
+            "x": 640.0000003576279,
+            "y": 568.0000113248825
+          },
+          "visibleWorldBounds": {
+            "left": 420.8902109861374,
+            "right": 859.1097897291183,
+            "top": 308.0000147819519,
+            "bottom": 568.0000113248825
+          },
+          "visibleHeight": 259.9999965429306,
+          "visibleWidth": 438.21957874298096,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 438.21958456973294,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.7715133428573608,
+            "b": 0,
+            "c": 0,
+            "d": 0.7715133428573608,
+            "e": 898.4569702148438,
+            "f": 193.8160400390625
+          }
+        }
+      ]
+    },
+    {
+      "id": "originalabstractedragatha",
+      "file": "assets/encore/abstractions/originalabstractedragatha/stance.png",
+      "sha256": "1d3355efacc94908d587e4f2b4656bee51eb2007fa411f4e9e26c76203de1694",
+      "bytes": 1279866,
+      "nativeFacing": 1,
+      "visibleBounds": {
+        "x": 43,
+        "y": 87,
+        "width": 555,
+        "height": 467
+      },
+      "visibleHeight": 275.00000232458115,
+      "visibleWidth": 326.82013124227524,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "maxIllustratedWidth": 395,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 320.5,
+            "y": 554
+          },
+          "anchorWorld": {
+            "x": 640.000002771616,
+            "y": 568.0000039339066
+          },
+          "visibleWorldBounds": {
+            "left": 476.58993715047836,
+            "right": 803.4100683927536,
+            "top": 293.0000016093254,
+            "bottom": 568.0000039339066
+          },
+          "visibleHeight": 275.00000232458115,
+          "visibleWidth": 326.82013124227524,
+          "requestedHeight": 275,
+          "unconstrainedWidth": 326.8201284796574,
+          "maxIllustratedWidth": 395,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.5888651013374329,
+            "b": 0,
+            "c": 0,
+            "d": 0.5888651013374329,
+            "e": 451.26873779296875,
+            "f": 241.76873779296875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 320.5,
+            "y": 554
+          },
+          "anchorWorld": {
+            "x": 639.999997228384,
+            "y": 568.0000039339066
+          },
+          "visibleWorldBounds": {
+            "left": 476.5899316072464,
+            "right": 803.4100628495216,
+            "top": 293.0000016093254,
+            "bottom": 568.0000039339066
+          },
+          "visibleHeight": 275.00000232458115,
+          "visibleWidth": 326.82013124227524,
+          "requestedHeight": 275,
+          "unconstrainedWidth": 326.8201284796574,
+          "maxIllustratedWidth": 395,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.5888651013374329,
+            "b": 0,
+            "c": 0,
+            "d": 0.5888651013374329,
+            "e": 828.7312622070312,
+            "f": 241.76873779296875
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "originalabstractedpomni",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/abstractions/originalabstractedpomni/intro.png",
+      "sha256": "cfb3cb4d3e8a26ac762d1199c16a9e26e07fa8e3916c03d9d7373d21bac7d865",
+      "bytes": 1045458,
+      "visibleBounds": {
+        "x": 67,
+        "y": 69,
+        "width": 534,
+        "height": 483
+      },
+      "nativeFacing": 1,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "anchorVerified": true,
+      "visibleWidth": 287.4534294605255,
+      "visibleHeight": 260.00001204013824,
+      "unconstrainedWidth": 287.45341614906835,
+      "maxIllustratedWidth": 530,
+      "widthLimited": false,
+      "sheetScale": 0.6,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 334,
+            "y": 552
+          },
+          "anchorWorld": {
+            "x": 640.0000002384186,
+            "y": 567.9999876022339
+          },
+          "visibleWorldBounds": {
+            "left": 496.2732855081558,
+            "right": 783.7267149686813,
+            "top": 307.99997556209564,
+            "bottom": 567.9999876022339
+          },
+          "visibleHeight": 260.00001204013824,
+          "visibleWidth": 287.4534294605255,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 287.45341614906835,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.5383023023605347,
+            "b": 0,
+            "c": 0,
+            "d": 0.5383023023605347,
+            "e": 460.20703125,
+            "f": 270.85711669921875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 334,
+            "y": 552
+          },
+          "anchorWorld": {
+            "x": 639.9999997615814,
+            "y": 567.9999876022339
+          },
+          "visibleWorldBounds": {
+            "left": 496.27328503131866,
+            "right": 783.7267144918442,
+            "top": 307.99997556209564,
+            "bottom": 567.9999876022339
+          },
+          "visibleHeight": 260.00001204013824,
+          "visibleWidth": 287.4534294605255,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 287.45341614906835,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.5383023023605347,
+            "b": 0,
+            "c": 0,
+            "d": 0.5383023023605347,
+            "e": 819.79296875,
+            "f": 270.85711669921875
+          }
+        }
+      ]
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/abstractions/originalabstractedpomni/hit.png",
+      "sha256": "6fd54d706ed1d41ca568bdb8bdd6a4defc99cb54d2d6475fefdb42aa8dd6165e",
+      "bytes": 989763,
+      "visibleBounds": {
+        "x": 49,
+        "y": 100,
+        "width": 537,
+        "height": 440
+      },
+      "nativeFacing": 1,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "anchorVerified": true,
+      "visibleWidth": 317.31816185284754,
+      "visibleHeight": 259.9999836410669,
+      "unconstrainedWidth": 317.3181818181818,
+      "maxIllustratedWidth": 530,
+      "widthLimited": false,
+      "sheetScale": 0.6,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 317.5,
+            "y": 540
+          },
+          "anchorWorld": {
+            "x": 639.9999757111073,
+            "y": 553.7664704844356
+          },
+          "visibleWorldBounds": {
+            "left": 458.6146092414856,
+            "right": 798.0169209837914,
+            "top": 280.55872824788094,
+            "bottom": 568.026518419385
+          },
+          "visibleHeight": 259.9999836410669,
+          "visibleWidth": 317.31816185284754,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 317.3181818181818,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.5885174870491028,
+            "b": -0.05311004817485809,
+            "c": 0.05311004817485809,
+            "d": 0.5885174870491028,
+            "e": 424.46624755859375,
+            "f": 252.8294677734375
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 317.5,
+            "y": 540
+          },
+          "anchorWorld": {
+            "x": 640.0000242888927,
+            "y": 553.7664704844356
+          },
+          "visibleWorldBounds": {
+            "left": 481.98307901620865,
+            "right": 821.3853907585144,
+            "top": 280.55872824788094,
+            "bottom": 568.026518419385
+          },
+          "visibleHeight": 259.9999836410669,
+          "visibleWidth": 317.31816185284754,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 317.3181818181818,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.5885174870491028,
+            "b": -0.05311004817485809,
+            "c": -0.05311004817485809,
+            "d": 0.5885174870491028,
+            "e": 855.5337524414062,
+            "f": 252.8294677734375
+          }
+        }
+      ]
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/abstractions/originalabstractedpomni/victory.png",
+      "sha256": "a21327fe653daebe7a3f5139d615e4bb7a69b6ae7c2e95ff9631380df8d7ff99",
+      "bytes": 973134,
+      "visibleBounds": {
+        "x": 62,
+        "y": 83,
+        "width": 515,
+        "height": 480
+      },
+      "nativeFacing": 1,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "anchorVerified": true,
+      "visibleWidth": 278.95833575852595,
+      "visibleHeight": 260.00000226037366,
+      "unconstrainedWidth": 278.9583333333333,
+      "maxIllustratedWidth": 530,
+      "widthLimited": false,
+      "sheetScale": 0.6,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 319.5,
+            "y": 563
+          },
+          "anchorWorld": {
+            "x": 640.0000038184226,
+            "y": 564.5065973456949
+          },
+          "visibleWorldBounds": {
+            "left": 500.5644209124148,
+            "right": 785.9349099732935,
+            "top": 301.1012247428298,
+            "bottom": 567.9932134635746
+          },
+          "visibleHeight": 260.00000226037366,
+          "visibleWidth": 278.95833575852595,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 278.9583333333333,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.5414974093437195,
+            "b": 0.013540256768465042,
+            "c": -0.013540256768465042,
+            "d": 0.5414974093437195,
+            "e": 474.61474609375,
+            "f": 255.31744384765625
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 319.5,
+            "y": 563
+          },
+          "anchorWorld": {
+            "x": 639.9999961815774,
+            "y": 564.5065973456949
+          },
+          "visibleWorldBounds": {
+            "left": 494.06509002670646,
+            "right": 779.4355790875852,
+            "top": 301.1012247428298,
+            "bottom": 567.9932134635746
+          },
+          "visibleHeight": 260.00000226037366,
+          "visibleWidth": 278.95833575852595,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 278.9583333333333,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.5414974093437195,
+            "b": 0.013540256768465042,
+            "c": 0.013540256768465042,
+            "d": 0.5414974093437195,
+            "e": 805.38525390625,
+            "f": 255.31744384765625
+          }
+        }
+      ]
+    },
+    {
+      "id": "originalabstractedpomni",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedpomni/heavy.png",
+      "sha256": "58d8d72f65931c0c6f8368e019183ef6cf10975b809ca70d910752f325656248",
+      "bytes": 1132744,
+      "visibleBounds": {
+        "x": 48,
+        "y": 81,
+        "width": 493,
+        "height": 486
+      },
+      "nativeFacing": 1,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "anchorVerified": true,
+      "visibleWidth": 263.7448455099213,
+      "visibleHeight": 259.999989691322,
+      "unconstrainedWidth": 263.7448559670782,
+      "maxIllustratedWidth": 530,
+      "widthLimited": false,
+      "sheetScale": 0.6,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 294.5,
+            "y": 567
+          },
+          "anchorWorld": {
+            "x": 640.0000051576644,
+            "y": 561.3957536118105
+          },
+          "visibleWorldBounds": {
+            "left": 508.2923885900527,
+            "right": 784.7022051345557,
+            "top": 295.1298221051693,
+            "bottom": 567.9866277072579
+          },
+          "visibleHeight": 259.999989691322,
+          "visibleWidth": 263.7448455099213,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 263.7448559670782,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.5343108177185059,
+            "b": 0.026737825945019722,
+            "c": -0.026737825945019722,
+            "d": 0.5343108177185059,
+            "e": 497.8058166503906,
+            "f": 250.56723022460938
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 294.5,
+            "y": 567
+          },
+          "anchorWorld": {
+            "x": 640.0000253599137,
+            "y": 561.3957536118105
+          },
+          "visibleWorldBounds": {
+            "left": 495.2978253830224,
+            "right": 771.7076419275254,
+            "top": 295.1298221051693,
+            "bottom": 567.9866277072579
+          },
+          "visibleHeight": 259.999989691322,
+          "visibleWidth": 263.7448455099213,
+          "requestedHeight": 260,
+          "unconstrainedWidth": 263.7448559670782,
+          "maxIllustratedWidth": 530,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.5343108177185059,
+            "b": 0.026737825945019722,
+            "c": 0.026737825945019722,
+            "d": 0.5343108177185059,
+            "e": 782.1942138671875,
+            "f": 250.56723022460938
+          }
+        }
+      ]
+    },
+    {
+      "id": "originalabstractedragatha",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/abstractions/originalabstractedragatha/heavy.png",
+      "sha256": "786abc0f0a627fafea5861df7f7db8dcbccd9358292a2eefa3dc47c29a4804da",
+      "bytes": 1108582,
+      "visibleBounds": {
+        "x": 68,
+        "y": 84,
+        "width": 428,
+        "height": 492
+      },
+      "nativeFacing": 1,
+      "authoredAnchorX": null,
+      "effectiveAnchorX": 0.5,
+      "anchorVerified": true,
+      "visibleWidth": 239.22765492196103,
+      "visibleHeight": 275.0000145364599,
+      "unconstrainedWidth": 239.22764227642276,
+      "maxIllustratedWidth": 395,
+      "widthLimited": false,
+      "sheetScale": 0.7905882352941176,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true,
+      "drawChecks": [
+        {
+          "face": 1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 282,
+            "y": 576
+          },
+          "anchorWorld": {
+            "x": 639.9999862909317,
+            "y": 565.602309409529
+          },
+          "visibleWorldBounds": {
+            "left": 520.4100807905197,
+            "right": 765.0895245596766,
+            "top": 288.26517633348703,
+            "bottom": 567.9944261014462
+          },
+          "visibleHeight": 275.0000145364599,
+          "visibleWidth": 239.22765492196103,
+          "requestedHeight": 275,
+          "unconstrainedWidth": 239.22764227642276,
+          "maxIllustratedWidth": 395,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": 0.5588313341140747,
+            "b": 0.011178115382790565,
+            "c": -0.011178115382790565,
+            "d": 0.5588313341140747,
+            "e": 488.84814453125,
+            "f": 240.563232421875
+          }
+        },
+        {
+          "face": -1,
+          "sourceVerified": true,
+          "uniformScale": true,
+          "anchorVerified": true,
+          "effectiveAnchorX": 0.5,
+          "sourceAnchor": {
+            "x": 282,
+            "y": 576
+          },
+          "anchorWorld": {
+            "x": 640.0000137090683,
+            "y": 565.602309409529
+          },
+          "visibleWorldBounds": {
+            "left": 514.9104754403234,
+            "right": 759.5899192094803,
+            "top": 288.26517633348703,
+            "bottom": 567.9944261014462
+          },
+          "visibleHeight": 275.0000145364599,
+          "visibleWidth": 239.22765492196103,
+          "requestedHeight": 275,
+          "unconstrainedWidth": 239.22764227642276,
+          "maxIllustratedWidth": 395,
+          "widthLimited": false,
+          "initialFramingProjection": null,
+          "matrix": {
+            "a": -0.5588313341140747,
+            "b": 0.011178115382790565,
+            "c": 0.011178115382790565,
+            "d": 0.5588313341140747,
+            "e": 791.15185546875,
+            "f": 240.563232421875
+          }
+        }
+      ]
+    }
+  ]
+}

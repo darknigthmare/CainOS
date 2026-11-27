@@ -1,0 +1,314 @@
+{
+  "schema": "encore-focus-document-links/v1",
+  "documents": 28,
+  "checkedLinks": 1155,
+  "failures": [],
+  "historicalPathsPresentInGitButNotMaterializedLocally": [
+    {
+      "source": "README.md",
+      "target": "docs/art-generation/base-sprites-20261125-b/canvas-all/bases-overview.jpg",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/images/costumes-0.6.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/images/encore-stage-comparison-0.6.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/images/expansion-sprites-review-0.7.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusion-copper9-pomni-jax.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-metarunner-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-metarunner.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-sunsetparadise-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-sunsetparadise.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-murderdrones-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-murderdrones.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-gaslightdistrict-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-gaslightdistrict.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-knightsofguinevere-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-knightsofguinevere.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-gameoverse-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-gameoverse.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-lackadaisy-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-lackadaisy.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-smg4-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-smg4.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/crossover-ultrajumpmania-vestiaire.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_CROSSOVERS_GLITCH.md",
+      "target": "images/fusions-ultrajumpmania.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusion-copper9-pomni-jax.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-pomni-neuf-univers.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-metarunner.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-sunsetparadise.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-murderdrones.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-gaslightdistrict.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-knightsofguinevere.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-gameoverse.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-lackadaisy.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-smg4.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/COMBAT_GALERIE_FUSIONS.md",
+      "target": "images/fusions-ultrajumpmania.webp",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/expansion-sprites-review-0.7.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/finishers-0.7.0-a.jpg",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/finishers-0.7.0-b.jpg",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-story-14-routes-0.6.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-poses-crouch.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-poses-outcomes.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-poses-attacks.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-jax-palette.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-outcome-sequences.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-stages-0.6.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/encore-stage-comparison-0.6.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    },
+    {
+      "source": "docs/DIGITAL_CIRCUS_ENCORE.md",
+      "target": "images/costumes-0.6.0.png",
+      "existsLocally": false,
+      "presentInBaselineTree": true
+    }
+  ],
+  "sourceHashes": {
+    "README.md": "c338be9f3ae91423072528663814868d71c25a53e56619904d4f79cbcc791def",
+    "docs/COMBAT_CROSSOVERS_GLITCH.md": "d5f02b8c6c1996d0ba2fc491d1d9a245556d06a0edaccb1abf28d8a64d34dab6",
+    "docs/COMBAT_GALERIE_FUSIONS.md": "234ba4fe0492e24f4553c5639a3d3157b6c696040e51d3013dbc132bb753cf26",
+    "docs/DIGITAL_CIRCUS_ENCORE.md": "9d4e112a3e58de6fbb0bd02af20622705c4d30ba595d38afbae91f1ebca05e15",
+    "docs/art-generation/completion-20261127/README.md": "a0a0057aa74e3f6933d4d6ec2364fe1b7aaaa556b09759e52d17fb365536fba0",
+    "docs/art-generation/completion-20261127/gameoverse/README.md": "7a05fcdc5de0d94abe677401c0597621e0ef3e105ceda465ba0e311e05a5fb9a",
+    "docs/art-generation/completion-20261127/kaufmo/README.md": "05e6db617a7bb68084309a28593dc60cfe808b8db0c750f9e1abdb59bb3d37e2",
+    "docs/art-generation/completion-20261127/kaufmo/independent-code-review.md": "0883a237e0803b0c30f7d7278086d23058514c81ba052e2b024604cb5744b516",
+    "docs/art-generation/completion-20261127/max/README.md": "72ac3ce09bc9463c921e4994d01611e7c52916f6112f97b20b96fe060b2cb4b8",
+    "docs/art-generation/completion-20261127/remaining-work.md": "758866bba38f4a7df15ab1293069e8725cbe550fe3638883b09bf77201d55d5b",
+    "docs/art-generation/completion-20261127/selection/README.md": "d6d8e7cbd13a23f262a44fc42ef6e6c051bfc6cede62eb0075df9a95faa63531",
+    "docs/art-generation/completion-20261127/stages/README.md": "a49cb870a96b2a72525f198c69c8a2f2879eed4d61d43b818fcfb973b36aee3c",
+    "docs/art-generation/completion-20261127/ultrajumpmania/README.md": "f3ba3c3eb215de4d23dd4b4e5515b9e8d1e82aae06e52dd25bb41f8ab8fc0b65",
+    "docs/art-generation/focus-20261127/README.md": "5de2248a34ada14733e4e903aa6530380d6fc0afb5f0c7b8c80d03f39702e548",
+    "docs/art-generation/focus-20261127/gallery.md": "ab7db853b32398cfff5d446bfde5341bf9c321a34ffc6e6b1540abd645d74724",
+    "docs/art-generation/focus-20261127/references.md": "d65d75a856e0440b2f4f35768bdd0036d4fc705ea69c921fcd74ef6ec19c0aec",
+    "docs/art-generation/focus-20261127/remaining-work.md": "009b6d0cc0ccaf3711e8c85cbdf29b8418755f35d5e3a3bee522d6913f673d5d",
+    "docs/bible/ARENES_TRANSITIONS_BOSS.md": "bd7c96d3460d6716d92d8a59952b4e4091b99d540f672dd12163914f47031830",
+    "docs/bible/ASSOCIATIONS_PERSONNAGES.md": "d912053b6916664b17958f1e62505da3c53cc85ccf88ed8f32cf13f9a0f63fc7",
+    "docs/bible/BONUS_ARCHIVES_ET_DEBLOCAGES.md": "56e6626dfb0fd3f0e55aa5a8bc8f3929128d953053e7171c81fc800a9d6af387",
+    "docs/bible/CAMPAGNE_GLOBALE.md": "8b6ce920fef925f221c4bb78664abca35401180299f7cfd775e8ccc75ad5caf7",
+    "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md": "95b8c6fdd774d6272f159f17a17f3a2faf0c2a951b79d65a2038d9ece216efbc",
+    "docs/bible/CONTRATS_DROITS_ET_SAUVEGARDE.md": "f8cfd953cd66efa05b9deb7cdc8c0569f99a9305d6f311b19f222a0591877bbc",
+    "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md": "7e2de1801fd2b0c3ba38333d97cdde257bf5a2017cc8278d133ce356eeaa1117",
+    "docs/bible/EXTENSIONS_COMBAT_INTEGRATION.md": "1109d8798f2121ebbfc29b72d3b292e93fe18af01289d0a2dabd8cb76cbcee42",
+    "docs/bible/MODELES_ET_CRITERES.md": "af4a0ad37b198f47ed2e71427324386a43c8321746bea50f72d9919f2b38df80",
+    "docs/bible/PERSONNALITE_SELECTION_ET_EQUIPES.md": "256a0f470f3c05a9e8332d195224d795513d34a6dafffdf0a476ef4f1c865e73",
+    "docs/bible/README.md": "0e94ce3b934ef541282ed883ddb5c76f1bc3498f0958122ce94b644463ca16fb"
+  }
+}

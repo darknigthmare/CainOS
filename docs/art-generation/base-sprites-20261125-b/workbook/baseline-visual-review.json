@@ -1,0 +1,67 @@
+{
+  "status": "accepted_as_baseline",
+  "workbookSHA256": "b3ffd3b5b62f40e0e7cbdbcc553a706f9aacbfa0d167d46a73b3efc2fb68832f",
+  "method": "Visual inspection of all six rendered scopes before editing; preservation baseline only.",
+  "views": [
+    {
+      "file": "baseline-summary-top.png",
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "sha256": "69011882b14775875a0c1e82bf1c5f40009a394e6ef10d21816f7fcd0a61ea9f",
+      "observations": [
+        "Titre et sections alignés, comptes 64 combattants et 508 costumes lisibles, statuts colorés distincts. Le socle précède bien le lot A."
+      ],
+      "issues": []
+    },
+    {
+      "file": "baseline-summary-bottom.png",
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "sha256": "969d236fa7d2181b54834fa73e251df4bddc27c9617dd63668d854395ecfacaf",
+      "observations": [
+        "Totaux QA, avertissement de portée, références et extension PNJ lisibles sans coupe ; dispositions et formules conservées comme socle."
+      ],
+      "issues": []
+    },
+    {
+      "file": "baseline-costumes-feature.png",
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "sha256": "21346f3cafb33d2f2832ef360cd59f47ce78d367882a0cb7d4c32d6af3992495",
+      "observations": [
+        "La ligne PRE-03 affiche le total historique 508 avec ses critères et notes ; texte long enveloppé et notes vides conservées."
+      ],
+      "issues": []
+    },
+    {
+      "file": "baseline-production.png",
+      "sheet": "Production",
+      "range": "A3815:J3816",
+      "sha256": "6a7ad37768a3a28f30a50574871e5a8f30e346f7b3cc9839e090cb203a43aa68",
+      "observations": [
+        "Les deux derniers dessins historiques sont lisibles sur lignes alternées ; les colonnes statut, chemins, preuve et notes restent distinctes."
+      ],
+      "issues": []
+    },
+    {
+      "file": "baseline-qa.png",
+      "sheet": "QA",
+      "range": "A2511:I2512",
+      "sha256": "ecad44e5c9093e07bdba8511f0939c7513d774845492592d5442a9aa15721995",
+      "observations": [
+        "Les statuts Non exécuté et Réussi ainsi que leurs preuves sont lisibles ; les anciens constats QA restent historiques."
+      ],
+      "issues": []
+    },
+    {
+      "file": "baseline-references.png",
+      "sheet": "Références",
+      "range": "A185:E192",
+      "sha256": "cc12cb0f4ff018d34a23fa95c57beef3b9012fcd4f8b9b4ca7eab6037b3ee66c",
+      "observations": [
+        "Les trois dernières références, URL, scopes et début de la légende de statuts sont lisibles ; renvois et pied de tableau conservés."
+      ],
+      "issues": []
+    }
+  ]
+}

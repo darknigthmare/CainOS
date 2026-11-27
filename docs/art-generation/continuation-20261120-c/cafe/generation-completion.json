@@ -1,0 +1,1493 @@
+{
+  "schema": "encore-continuation-c-cafe-completion/v1",
+  "status": "complete_active",
+  "createdAt": "2026-11-20T19:36:53.843910+00:00",
+  "baseCommit": "d0b1c092120b2c472354b67ffbf136f6a58004c5",
+  "order": [
+    "caferagatha",
+    "cafegangle",
+    "cafezooble"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "appearances": [
+    {
+      "id": "caferagatha",
+      "name": "Ragatha — Café",
+      "fighterId": "ragatha",
+      "files": [
+        {
+          "appearanceId": "caferagatha",
+          "slot": "selection",
+          "file": "assets/encore/selection/caferagatha.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.json",
+          "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+          "bytes": 1531705,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            192,
+            178,
+            816,
+            1494
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-1a30fd11-ad5d-4e51-81ba-4c527ba835f3",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attempts/selection-initial/native.png",
+              "sha256": "9623578081cd56ef87e5cf4c7e33855d665bf3f60b27e89ad434d7505d6dfca3",
+              "bytes": 1575229
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/selection.json",
+          "jobSHA256": "77b25c6000cae66f25ab30a97a25a2af73c9a48ed8fbb81b17ef054f7c5f264e",
+          "receiptSHA256": "22495257981b036a8e856f187b36138e8c69a46ce6a4d88ac6ce1806ebc3c231"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "stance",
+          "file": "assets/encore/stance/caferagatha.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.json",
+          "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+          "bytes": 1524985,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            152,
+            178,
+            859,
+            1432
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-de9f9651-f2ab-4362-8b0f-9aab2cae5e55",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/stance.json",
+          "jobSHA256": "6d1b9734f5f1f340fd7b9886588cdeb7bd2b51a1443c45a39d725aaee768ab95",
+          "receiptSHA256": "4258f9c2477611505731b8811be3986b833de707714522d3ea58eec94023b0bd"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "intro",
+          "file": "assets/encore/poses/caferagatha/intro.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.json",
+          "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+          "bytes": 1507690,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            162,
+            176,
+            859,
+            1455
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a647359a-e135-45f5-a2b4-6b0fc309c0b1",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/intro.json",
+          "jobSHA256": "fe6fc4e887c0d76a90d0e9e44ccbdac5232f60697db94baa1e17ecd183905493",
+          "receiptSHA256": "38c29c4bfcbe7c022c73a7f6121ad0e5c25ddd4f664f03089f5f09dea7e1c7ff"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "attack",
+          "file": "assets/encore/poses/caferagatha/attack.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.json",
+          "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+          "bytes": 1560043,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            103,
+            172,
+            956,
+            1433
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-d55f82ab-0b0b-4fe8-ac4c-7bb97023fee9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/attack.json",
+          "jobSHA256": "b0557c0a5e130dd06fb12239f43461a8f3468452482efc51b7978031b82cb44a",
+          "receiptSHA256": "e7074c4b0945d2515d82006c4a291779087e2606a167209601193f353134b82d"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "heavy",
+          "file": "assets/encore/poses/caferagatha/heavy.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.json",
+          "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+          "bytes": 1536729,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            46,
+            207,
+            955,
+            1427
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-19443eca-1e50-4e88-96b2-be56ccec612f",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/heavy.json",
+          "jobSHA256": "ab96ff9775e1f2558fb8eafe10c6ad5e1da92d3146ecc69052720abce115cbe4",
+          "receiptSHA256": "e015174f4620de05b03937df8b3dbfbc7f027e00d62de57a827dfecf08e432f3"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "hit",
+          "file": "assets/encore/poses/caferagatha/hit.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.json",
+          "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+          "bytes": 1485446,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            84,
+            229,
+            887,
+            1441
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-727ede7a-37ed-4ffa-bb3b-3982bfabd511",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/hit.json",
+          "jobSHA256": "68be45ec316c162e656240aa386ebdc97c8733266067de371516b8907a326da4",
+          "receiptSHA256": "135c34c4bb833efef128b5bcb8c262b78a2c7d641c657c8681f251abefb8ffea"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "walk",
+          "file": "assets/encore/poses/caferagatha/walk.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.json",
+          "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+          "bytes": 1576424,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            131,
+            131,
+            890,
+            1446
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-129baefe-f6c7-46d9-a89b-eb5034b14c29",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/walk.json",
+          "jobSHA256": "d6fc62f3c5f4abd790e85118236a1521510aded1c243072f3555280e7b2109f9",
+          "receiptSHA256": "af48372d4a2a7dae93196c94dfaac64a6a8ab0d158768e8a31651ee75137710a"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "jump",
+          "file": "assets/encore/poses/caferagatha/jump.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.json",
+          "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+          "bytes": 1552602,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            157,
+            172,
+            931,
+            1407
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-bb05a259-1bd4-4d5a-a448-bef5825796e3",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/jump.json",
+          "jobSHA256": "454f9c3852b30aa0132239cb1341d6fa6caa47ee07c1b22583e228acf85d6b3e",
+          "receiptSHA256": "2c7a1f068a89ac25225f5ce1e45bacf82f28c9bb998643fda517031e23f69dbe"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "crouch",
+          "file": "assets/encore/poses/caferagatha/crouch.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.json",
+          "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+          "bytes": 1500321,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            114,
+            294,
+            955,
+            1380
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b0624f44-2d85-4d54-a58c-598a5d6145ea",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/crouch.json",
+          "jobSHA256": "b0667f7a81119cbe1d27d48ede79ae1fea7baa2ee688b9a5b1603c1b5106c224",
+          "receiptSHA256": "7f4cd66a13dc1514c0fc99392f31b0502838ac2f5487faa8978a007b7b49022f"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "victory",
+          "file": "assets/encore/poses/caferagatha/victory.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.json",
+          "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+          "bytes": 1520099,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            190,
+            160,
+            829,
+            1469
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-62fe602c-7dde-40af-bdbc-12f3e7ccc552",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/victory.json",
+          "jobSHA256": "736a4a6c405f3b8ab5ac0998a7407176e3505ec5bdfa95ab550d052161bfdb5d",
+          "receiptSHA256": "2908d9c3bf9b333a0338490105f6b7a563dd8d9e93eaffcebfd6fb84d5a840d7"
+        },
+        {
+          "appearanceId": "caferagatha",
+          "slot": "defeat",
+          "file": "assets/encore/poses/caferagatha/defeat.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.json",
+          "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+          "bytes": 1455459,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            44,
+            294,
+            981,
+            1362
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b418ffe2-0bcf-4bb0-904f-c3395c2cf77c",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+              "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+              "bytes": 1531705
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/defeat.json",
+          "jobSHA256": "5aa5547880bd2c85783562b17dd6c2db670dfda0ec4ccf6e11c409b5afaa425d",
+          "receiptSHA256": "8b046e17510cbe08441488d218f8c06142f7b731c53b6874272685b1b4052fcd"
+        }
+      ]
+    },
+    {
+      "id": "cafegangle",
+      "name": "Gangle — Café",
+      "fighterId": "gangle",
+      "files": [
+        {
+          "appearanceId": "cafegangle",
+          "slot": "selection",
+          "file": "assets/encore/selection/cafegangle.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.json",
+          "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+          "bytes": 891954,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            182,
+            32,
+            875,
+            1422
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b66c95a2-4342-4317-8688-2837492f2578",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/stance/cafepomni.png",
+              "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+              "bytes": 795027
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/selection.json",
+          "jobSHA256": "0d1f57c2f5dcb1726750c230997976786df47cee10f1ada1e54bef981176314f",
+          "receiptSHA256": "4f47699c07df95af3f977139a30db1a731818a80bb1952e1ed449571705a0788"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "stance",
+          "file": "assets/encore/stance/cafegangle.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.json",
+          "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+          "bytes": 860381,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            165,
+            80,
+            902,
+            1393
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-989caf0d-2554-45fe-a6fd-0c1fd70b0caa",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/stance.json",
+          "jobSHA256": "acb9c2daeff576c3f90ef7006da367f10207c6a3279c3e0115ffe774931d226c",
+          "receiptSHA256": "10a2f5f17d349d7dd58dd7f15b97a3f69f50df439c9d502f768521f202580591"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "intro",
+          "file": "assets/encore/poses/cafegangle/intro.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.json",
+          "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+          "bytes": 883421,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            101,
+            65,
+            993,
+            1406
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-32266cd7-9cde-4a43-adc8-ed249ddf02a3",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/intro.json",
+          "jobSHA256": "8b2a039fc526e7459beee4d44c366e6661afd7505686da36c222f0cdee86a179",
+          "receiptSHA256": "60ffe58732b1d4c98c44b24faafc1dbd178c2542c606191f8a1b0f9ce7d1bc45"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "attack",
+          "file": "assets/encore/poses/cafegangle/attack.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.json",
+          "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+          "bytes": 887721,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            109,
+            83,
+            1004,
+            1400
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-ca4b86ae-3adc-4ebb-b3d3-d6f127c1ffc8",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/attack.json",
+          "jobSHA256": "d388ef398e293dd7ba181dcc3669c4238f89b9a84ed93bf201c73df87f2a461c",
+          "receiptSHA256": "9aa332b45a3354b77ce5e8919d598333e83f2a680fb3ea6547b0054ca75d600e"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "heavy",
+          "file": "assets/encore/poses/cafegangle/heavy.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.json",
+          "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+          "bytes": 954409,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            60,
+            60,
+            1161,
+            1267
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b3be6d84-1e00-4c2a-8c50-fe5772be0caa",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/heavy.json",
+          "jobSHA256": "e49c42671c7773c525617c6ccb888653ce45f5bd3f635eba1d4253647cddb79a",
+          "receiptSHA256": "5096fdde729ef3eb8fd6a2f594fd50ce57e71ccecaa34846be184df1d64a0fea"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "hit",
+          "file": "assets/encore/poses/cafegangle/hit.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.json",
+          "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+          "bytes": 920043,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            188,
+            55,
+            961,
+            1412
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-bed0a0e3-c345-4e4c-853d-2ce4cbcad124",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/hit.json",
+          "jobSHA256": "1f97af492e32840a3189cea40710d8eae8575d4a1d51d6dc05b6db76474ed3ba",
+          "receiptSHA256": "9560dbd8df34239250c376753cb4802441fc139aa69506b0b96a5c64eb89eb8e"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "walk",
+          "file": "assets/encore/poses/cafegangle/walk.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.json",
+          "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+          "bytes": 898347,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            162,
+            88,
+            925,
+            1391
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-bd3834ef-c7f9-476f-9c83-38c9af1d2797",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/walk.json",
+          "jobSHA256": "8bda4df90c33ac21c07c39f3a170833cf1a6946172365411c9dcfc1d4a91d710",
+          "receiptSHA256": "90e6234500bd5531f0a6798a2bd2ae8d5f91ad0f1f32e39bb13023a0218308f4"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "jump",
+          "file": "assets/encore/poses/cafegangle/jump.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.json",
+          "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+          "bytes": 984748,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            111,
+            81,
+            1018,
+            1313
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-061aabd5-ed9b-4da1-9aaf-96c032016765",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/jump.json",
+          "jobSHA256": "17b12d518135a8c734835aa7baafea7b14f32c0aa8ba9dafc3c25eebc30f62a4",
+          "receiptSHA256": "02cb9b03e93ffe16d629a5f4368686666ed815c515ed8afe09049155d6a3db81"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "crouch",
+          "file": "assets/encore/poses/cafegangle/crouch.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.json",
+          "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+          "bytes": 992524,
+          "dimensions": [
+            1198,
+            1313
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            135,
+            93,
+            1031,
+            1249
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-8c93a202-2058-4b13-ba15-a7670f704d56",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/crouch.json",
+          "jobSHA256": "e14b7602169085cbd2c8b14a3a7478321c534bfe8b2f1458269aaef50d58ff69",
+          "receiptSHA256": "3a7e2f18058b92d71511d05cddba883eea047cea9d1eb8a8881a1e9bfbfed7a5"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "victory",
+          "file": "assets/encore/poses/cafegangle/victory.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.json",
+          "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+          "bytes": 897634,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            202,
+            35,
+            875,
+            1425
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-d7f3cae1-54a3-4e8d-9393-8f921e9808fa",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/victory.json",
+          "jobSHA256": "051bf7bd69fc602b948f8a31abdc4324900e882382707128c56b7522815800b2",
+          "receiptSHA256": "64abd2786886f7b136081a68de874cef6a2ee9487764bf2fa7859b6f409ee744"
+        },
+        {
+          "appearanceId": "cafegangle",
+          "slot": "defeat",
+          "file": "assets/encore/poses/cafegangle/defeat.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.json",
+          "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+          "bytes": 937073,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            157,
+            77,
+            1106,
+            1255
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-7ff47a78-2a59-4efd-bd3d-c52bcf83d600",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+              "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+              "bytes": 891954
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png",
+              "sha256": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+              "bytes": 129216
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/defeat.json",
+          "jobSHA256": "3513ec4faa1a8695693aa61175da8f69fe5efbf65350f372714ab1048f8c8dfc",
+          "receiptSHA256": "e6656bb62e8cf07275ae72f6d021c2f318d3797c12f9bee4c78ef53b6f157735"
+        }
+      ]
+    },
+    {
+      "id": "cafezooble",
+      "name": "Zooble — Café",
+      "fighterId": "zooble",
+      "files": [
+        {
+          "appearanceId": "cafezooble",
+          "slot": "selection",
+          "file": "assets/encore/selection/cafezooble.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.json",
+          "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+          "bytes": 1414609,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            208,
+            71,
+            783,
+            1496
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-0ed1f6fd-e906-467f-97a4-797c6ffc78fc",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attempts/selection-halo/native.png",
+              "sha256": "d073adc2b7db8e8e8186bda0a66ddff04c64a302746ea8bb71800a5b7084d111",
+              "bytes": 1403619
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/selection-correction.json",
+          "jobSHA256": "9764555ababede86c0bea058094d951a0a3d16d6a8dd14c230be5fbb7c02192e",
+          "receiptSHA256": "442103f2f55d8d485f2bbdd8f452970945b9212b29a509d7f4e918f9b0a636ab"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "stance",
+          "file": "assets/encore/stance/cafezooble.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.json",
+          "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+          "bytes": 1453219,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            101,
+            96,
+            913,
+            1447
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-d032886f-dceb-4d19-813e-53624525f512",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/stance.json",
+          "jobSHA256": "b474ca574fb76cbb316182a933b29840c6d3ef1d3f224a24f673594ffe65bd18",
+          "receiptSHA256": "b250668877ab2325fd9cd5dbfb7254eb4f3b88892fb4cb13b0428e44e97e0283"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "intro",
+          "file": "assets/encore/poses/cafezooble/intro.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.json",
+          "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+          "bytes": 1422045,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            203,
+            49,
+            859,
+            1503
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-460d1660-435d-48fe-82c1-dcc636f3a3fc",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/intro.json",
+          "jobSHA256": "7db5708184d2004a57b6290ce29e2e747c2e7cab35214978f567f9592e73f0f4",
+          "receiptSHA256": "0ad13a2b38a8c0931e18da9b8030d202ba354b3b229fcc686a1999bbb8ef1191"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "attack",
+          "file": "assets/encore/poses/cafezooble/attack.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.json",
+          "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+          "bytes": 1438638,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            50,
+            100,
+            970,
+            1432
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-acd1335c-df56-42f6-8270-7e1faf1c6aa0",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/attack.json",
+          "jobSHA256": "acc1c3ad88f7d863bed1129116565905ca3954cd4eebec714850054b54900834",
+          "receiptSHA256": "13dc87a491bc9a26f9160515864bac37e79fe0784dad1daca136eadda1614f9c"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "heavy",
+          "file": "assets/encore/poses/cafezooble/heavy.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.json",
+          "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+          "bytes": 842534,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            60,
+            94,
+            1101,
+            1252
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-0da14f93-a909-4b95-82c4-1bcdd1386fa5",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/heavy.json",
+          "jobSHA256": "08e2b70bfbc2f75e905f56cdbb5a08a68449805eb337c7786d6810c7b9c8df14",
+          "receiptSHA256": "69153f99988dc477eba37841a1d987c2dd83ba23ac98bb6aa6c5086493d8b230"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "hit",
+          "file": "assets/encore/poses/cafezooble/hit.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.json",
+          "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+          "bytes": 1418943,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            138,
+            38,
+            799,
+            1511
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-7b97fdf9-9659-41b9-bbc2-2e9d53ac764d",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/hit.json",
+          "jobSHA256": "47af8ddcae0d0d65d46cee7fb777fe24e28a62edcd749825bb1aee5e805eb49f",
+          "receiptSHA256": "02dfbe02b147f293c18770e19a8eed7dc81ea16bdf3aa28cf720608eca9f50c8"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "walk",
+          "file": "assets/encore/poses/cafezooble/walk.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.json",
+          "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+          "bytes": 1487567,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            94,
+            63,
+            904,
+            1469
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-bb964259-0150-40e6-ac63-dc7a25eb3a9f",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/walk.json",
+          "jobSHA256": "3765a40ffc534e7dc5656cf9dfe85a6e4207666f2d6e9f5892029c6f1d6c565a",
+          "receiptSHA256": "8310874ccc70dd9e360d04e7c56760e53dd8499fcf70c69c973e7f233842d0cd"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "jump",
+          "file": "assets/encore/poses/cafezooble/jump.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.json",
+          "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+          "bytes": 1517991,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            145,
+            39,
+            935,
+            1464
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-5a3bfd08-8319-475d-a076-d11630224c84",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/jump.json",
+          "jobSHA256": "85e9a97d344f6300828db32d1b7b8c69a1dd9b34b9596c7bd3de925ace71b892",
+          "receiptSHA256": "d69a26f3fb96e289167bb5014d7e7d8e381d00751139211e6b426ca838f69536"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "crouch",
+          "file": "assets/encore/poses/cafezooble/crouch.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.json",
+          "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+          "bytes": 1482236,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            55,
+            167,
+            963,
+            1365
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-b6281de4-3743-4b54-b355-b2202b40e6c9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/crouch.json",
+          "jobSHA256": "5e2bb03ef46fef6135e23332ab11b7289f8eca422fa59d8f790442a4fa1264fe",
+          "receiptSHA256": "677b587e36a66430d8046426b8925859500c885f18669449a640ff5690fe029e"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "victory",
+          "file": "assets/encore/poses/cafezooble/victory.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.json",
+          "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+          "bytes": 1395721,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            156,
+            41,
+            817,
+            1502
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-49693669-6e87-49a9-bf9c-ea9e2874b22d",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/victory.json",
+          "jobSHA256": "f9fd4103e8c1fae1b2dc548cf49df7e0b91276c22736afe9859d0f5a4e675bac",
+          "receiptSHA256": "f084fa15b6183d1d8ca9150f45f904a1c175a18dd9e2a22f4df48c21425b503c"
+        },
+        {
+          "appearanceId": "cafezooble",
+          "slot": "defeat",
+          "file": "assets/encore/poses/cafezooble/defeat.png",
+          "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.png",
+          "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.json",
+          "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559",
+          "bytes": 1468896,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            52,
+            166,
+            971,
+            1426
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-21ae849f-0535-4464-ac5a-48fac0bbe7d9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+              "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+              "bytes": 1414609
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+              "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+              "bytes": 181618
+            }
+          ],
+          "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/defeat.json",
+          "jobSHA256": "4d3b0a38d6e0dec472487fdacc211276ae4a7b876f34d83b1c43a2212e59767f",
+          "receiptSHA256": "f716a89d01f7e9efdf425f9eb7b487abed85bd225c3d34b3d2361f6a1b80e5b7"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "completeAppearances": 3,
+    "nativePngs": 33,
+    "newNativePngs": 33,
+    "bytes": 42202157,
+    "cumulativeAppearances": 45,
+    "cumulativeAppearancePngs": 495,
+    "equipableCostumesAtCafeActivation": 480,
+    "acceptedImagegenOutputs": 33,
+    "archivedSupersededOutputs": 2
+  },
+  "historicalPrefix": {
+    "manifest": "docs/art-generation/continuation-20261120-c/baseline.json",
+    "sha256": "2493bf0950134d03a63a6ab925c773fd97ecce20860a3ff5954c32a44d442387",
+    "costumesPreserved": 477,
+    "circusAppearancesPreserved": 42,
+    "extensionIdsPreserved": 48,
+    "costumesSHA256": "fe0cc2b77e851e5a2df45c6682c180148fd60a13d40488b12ad2e292e084419d",
+    "definitionsAndOrderPreserved": true
+  },
+  "limitations": [
+    "Official commercial illustration comparison and original fan-game static poses; no episode or 1:1 certification.",
+    "The unshown backs, partly hidden attachments and small Gangle hand details remain original adaptations described in the frozen definitions.",
+    "Eleven independent static images per family are not full animation cycles or browser validation.",
+    "Maid Ribbit Pendantz remains a separate unqualified candidate.",
+    "Offline manifest, global QA, builds and workbook reconciliation are later independent steps."
+  ]
+}

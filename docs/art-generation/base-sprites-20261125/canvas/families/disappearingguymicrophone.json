@@ -1,0 +1,495 @@
+{
+  "schema": "encore-static-base-canvas-review/v1",
+  "createdAt": "2026-11-25T06:12:15.033Z",
+  "offlineVersion": "0.7.0-4ad2d50212cf",
+  "method": "Production Canvas2D renderer, native Skia; exact source path, uniform scale, facing, anchor and static reuse checked.",
+  "selectedId": "disappearingguymicrophone",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "authoredDrawings": 2,
+  "browserTestStatus": "not_executed",
+  "sources": {
+    "combat/base-sprite-content.mjs": "c6a890b9ad613bb9ed41269f2900cecd2d89cecaf7dd5f4fe28c773ffcdb6a63",
+    "combat/base-sprite-continuation-20261125.mjs": "458b8e89d2723d260a3c7758fb9eb6fd6198e85316ed07284de78aeb7b52bf54",
+    "combat/data.mjs": "0ff389e60be29512d412d2ea4406e30e7e8912b19ccd1305a6695c6234228142",
+    "combat/crossovers.mjs": "daa24c5e5ac6b33f349767802293eb1bf9c4da456fe39571403b9996a8cd88df",
+    "combat/fidelity.mjs": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+    "combat/illustrations.mjs": "2839e49a0f5c8e9afe7d6ae871ecef7e4c670e9dfe3bfed7bd4121161d2a58ac",
+    "combat/render.mjs": "01dda5e32d85321b9f30b6dfbc0eb3b9c5fd853649bd66a877476f1d5ed38afb",
+    "combat/render-poses.mjs": "487045e3518b9c7d80cf9242186313ce0917d980bf66e308bb6d7df81386b202",
+    "combat/render-sequences.mjs": "d41222e5c00f35583857d38b27ab56d69cb68799774728a5bf6c231153abfebd",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "571872f93c90b33e9014886da375f3e29ff2c846b3e015f79f76ec51013f0db7",
+    "scripts/render-combat-base-sprite-review.mjs": "8b00c3cdc4867bad457c8150cf5a35fc969259b0bac62ae84f7a5adf9eed2368"
+  },
+  "appearances": [
+    {
+      "id": "disappearingguymicrophone",
+      "fighterId": "disappearingguy",
+      "authoredDrawings": 2,
+      "reusedGuardStates": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": {
+        "selection": {
+          "file": "assets/encore/base-costumes/disappearingguymicrophone/selection.png",
+          "bytes": 672095,
+          "sha256": "bbd06345a29f25b1e18bc5f32c1a9f1089274671d6aeee0c51cac67352e7ee5a",
+          "bounds": {
+            "x": 70,
+            "y": 25,
+            "width": 239,
+            "height": 338
+          },
+          "nativeFacing": -1
+        },
+        "stance": {
+          "file": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "bytes": 749405,
+          "sha256": "a9f22def848a7e2cb1fc218194f135ed81acd0c1e323a3402642222622e4e26a",
+          "bounds": {
+            "x": 106,
+            "y": 10,
+            "width": 430,
+            "height": 611
+          },
+          "nativeFacing": -1
+        }
+      },
+      "drawChecks": [
+        {
+          "state": "stance",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "stance",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "intro",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "attack",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "heavy",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "hit",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "walk",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "jump",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "crouch",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "victory",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": 1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": -0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 747.7005004882812,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        },
+        {
+          "state": "defeat",
+          "face": -1,
+          "source": "assets/encore/base-costumes/disappearingguymicrophone/stance.png",
+          "matrix": {
+            "a": 0.335515558719635,
+            "b": 0,
+            "c": 0,
+            "d": 0.335515558719635,
+            "e": 532.2994995117188,
+            "f": 359.64483642578125
+          },
+          "timeSamples": [
+            0,
+            600
+          ],
+          "reducedMotion": true,
+          "uniformScale": true,
+          "anchorVerified": true
+        }
+      ],
+      "portraitSourceVerified": true,
+      "visibleWidth": 144.27169024944305,
+      "visibleHeight": 205.000006377697,
+      "maxIllustratedWidth": 220,
+      "uniqueRequestedFiles": 2
+    }
+  ],
+  "sheets": [
+    "base-disappearingguymicrophone.jpg"
+  ],
+  "limitations": [
+    "A repeated stance is one authored base, not nine action drawings or frame-by-frame animation.",
+    "Native Canvas does not exercise DOM, input, audio, service workers or a physical device.",
+    "Technical rendering checks do not certify canonical 1:1 identity or hidden anatomy."
+  ],
+  "summary": {
+    "appearances": 1,
+    "authoredDrawings": 2,
+    "sourceAndFacingChecks": 20,
+    "actualStateDraws": 60,
+    "portraits": 1,
+    "peakRSSBytes": 138293248,
+    "pass": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "encore-costume-order-targeted-tests/v1",
+  "recordedAt": "2026-11-20T16:37:21.347843+00:00",
+  "status": "passed",
+  "command": "$CODEX_PRIMARY_RUNTIME_NODE --test tests/combat-costume-order.test.mjs tests/combat-crossovers.test.mjs",
+  "exitCode": 0,
+  "tests": 8,
+  "passed": 8,
+  "failed": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "durationMs": 2250.555938,
+  "evidenceCapture": "Observed stdout from exec_command and its completion; no separate raw log file was created.",
+  "sourceDigests": {
+    "combat/costume-order.mjs": "fe651d9b8da55a5dc4e1f1e58c8e50a369fd93f149743ac1beaf411ada61e827",
+    "combat/data.mjs": "d414e1e8b673c6b6ae18b71c53a8057b9bd341b5ae8e6ba2799c97c4467ce5ad",
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
+    "tests/combat-costume-order.test.mjs": "9fbf58113e480a154e2e9257843497af728d72e0b59811a82453aa48ff20d24c",
+    "tests/combat-crossovers.test.mjs": "8ee2e50ff5ed2a333987be0d150ed01bd30ae652a2eea91c70cc6fca40124ed2"
+  },
+  "baselineFile": "docs/art-generation/continuation-20261120-b/workbook/costume-prefix-baseline.json",
+  "baselineSHA256": "a069c06ef34541b965169f12db4169e40fe16fbbf2381bbffa99b32ce29058cd",
+  "publishedExtensionIds": 43,
+  "runtimeCostumeCount": 472,
+  "scope": [
+    "Complete 472-record JSON prefix and ordered IDs preserved.",
+    "Two successive simulated mixed Circus and NPC batches append without shifting any already published object.",
+    "Missing, duplicate and unlisted IDs are refused.",
+    "Existing crossover coverage, costume ownership, replay/profile/campaign compatibility and native PNG/WebP checks passed."
+  ],
+  "newActiveCostumeIds": [],
+  "gameQaReexecuted": false
+}

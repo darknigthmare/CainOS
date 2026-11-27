@@ -1,0 +1,61 @@
+{
+  "series": "gameoverse",
+  "style": "fusion",
+  "label": "Gameoverse · Fusion · Grenouille de cartouche",
+  "identity": "True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/pomni/fusion/stance.webp"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gameoverse"
+  ],
+  "state": "stance",
+  "id": "glitch-gameoverse-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. True body redesign as a coherent cartridge-world digital amphibian. Retain Ribbit's two gigantic white eye bulges, wedge-cut black pupils, pink cheeks and wide frog smile. Lime-green body formed from crisp beveled polygonal cartridge blocks with royal-blue seam rails, a compact broad torso and articulated angular arms; chunky elongated springless segmented hind legs, broad three-toed geometric feet, four rounded block fingers. Cream belly resembles an inset cartridge label with a simple pink bow-shaped emblem and a small magenta star gem; no words, digits or labels. Small connected square notches on silhouette, a few mint/cyan inset accents, opaque solid body with no floating pixel fragments. A small rectangular cartridge ridge built into the upper back, no real console branding. This is a transformed body rather than armor or an outfit; no jester hat, portals, energy clouds, human skin, cat ears or new weapon.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gameoverse:fusion:stance:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-6b1973de-c51e-4464-a3a3-8ebeed07c904.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-6b1973de-c51e-4464-a3a3-8ebeed07c904.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    178,
+    63,
+    1085,
+    1196
+  ],
+  "alpha12Margins": [
+    178,
+    63,
+    169,
+    58
+  ],
+  "alphaZeroFraction": 0.7488095510633914,
+  "alphaOpaqueFraction": 0.0009869533918891763,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gameoverse/ribbit/fusion/stance.png",
+  "bytes": 790077,
+  "sha256": "2025c0a1cbe76d1bb0fc22c3dbcc0599371408797665949a907429e6ca870db7",
+  "sha": "ae37e0ee5fab7bfa26551ea86c20e95db9e4f102",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "assets/encore/crossovers/gameoverse/pomni/fusion/stance.webp": "3fc1c54d615e734a3e483878230256ebb0db8fc0d67a37867cffbe0b01df5954"
+  },
+  "auditPass": true,
+  "nativeFacing": "right",
+  "visualReviewNotes": "All three complete stances inspected. Yellow Kit-inspired clothing, teal/gold cartographer outfit and hard geometric cartridge anatomy are distinct. Complete eyes, hands, toes and accessories. Facing right.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

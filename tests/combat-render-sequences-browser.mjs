@@ -1,4 +1,5 @@
-import { STAGES } from '../combat/data.mjs';
+import { FIGHTERS, STAGES } from '../combat/data.mjs';
+import { SEQUENCE_EVENTS } from '../combat/render-sequences.mjs';
 /** Native Canvas presentation fixtures; not a played duel or canonical-art certification. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -30,8 +31,15 @@ try {
     const { CombatRenderer } = await import('/combat/render.mjs');
     const { FIGHTERS, STAGES } = await import('/combat/data.mjs');
     const { FIGHTER_SEQUENCES, SEQUENCE_EVENTS, sequencePose } = await import('/combat/render-sequences.mjs');
+    const { warmCombatPoses } = await import('/combat/illustrations.mjs');
     const canvas = document.getElementById('fixture'), renderer = new CombatRenderer(canvas), ctx = canvas.getContext('2d', { willReadFrequently: true });
-    const loaded = await renderer.preload(FIGHTERS);
+    const loaded = { ok: true, errors: [], fighters: [] };
+    const loadCurrent = async f => {
+      const current = await renderer.preload([f], []);
+      if (!current.ok) throw new Error(JSON.stringify(current));
+      if (f.sprite?.crossoverDirectory) await warmCombatPoses([f], () => true);
+      return current;
+    };
     const hash = (y = 0, h = canvas.height, x = 0, w = canvas.width) => {
       const pixels = ctx.getImageData(x, y, w, h).data; let value = 2166136261;
       for (const byte of pixels) value = Math.imul(value ^ byte, 16777619);
@@ -46,6 +54,7 @@ try {
     };
     const results = { loaded, sequences: [], stages: [], draws: [], unchanged: true };
     for (const f of FIGHTERS) {
+      await loadCurrent(f); loaded.fighters.push(f.id);
       const a = actor(f), before = JSON.stringify(a);
       for (const event of SEQUENCE_EVENTS) {
         const spec = FIGHTER_SEQUENCES[f.id][event];
@@ -66,41 +75,51 @@ try {
       ctx.clearRect(0, 0, 1280, 720); ctx.drawImage(renderer.background(stage), 0, 0); const baselineFloor = hash(568, 152);
       results.stages.push({ id: stage.id, first, later, floor, floorLater, baselineFloor, fixed, fixedLater, unchanged: before === JSON.stringify(state) });
     }
-    window.sequenceFixture = { canvas, ctx, renderer, FIGHTERS, STAGES, FIGHTER_SEQUENCES, SEQUENCE_EVENTS, actor, options };
+    window.sequenceFixture = { canvas, ctx, renderer, FIGHTERS, STAGES, FIGHTER_SEQUENCES, SEQUENCE_EVENTS, actor, options, loadCurrent };
     return results;
   });
   report.measurements = measurements;
-  assert.equal(measurements.loaded.ok, true); assert.equal(measurements.sequences.length, 70);
-  checked('Les 14 bases chargent leurs images et exécutent les 70 présentations', '14 combattants × introduction, victoire/défaite de round et victoire/défaite finale.');
+  const sequenceCount = FIGHTERS.length * SEQUENCE_EVENTS.length;
+  assert.equal(measurements.loaded.ok, true); assert.equal(measurements.loaded.fighters.length, FIGHTERS.length);
+  assert.equal(measurements.sequences.length, sequenceCount);
+  checked(`Les ${FIGHTERS.length} combattants chargent leurs images et exécutent les ${sequenceCount} présentations`, `${FIGHTERS.length} combattants × introduction, victoire/défaite de round et victoire/défaite finale.`);
   assert.ok(measurements.sequences.every(row => row.first !== row.middle));
   checked('Chaque séquence produit un mouvement Canvas visible avec une horloge de simulation figée', 'Pixels comparés à la première image et au premier temps fort ; simulation fixe à 4000.');
   assert.ok(measurements.sequences.every(row => row.settled === row.later));
-  checked('Les 70 séquences se stabilisent exactement à leur durée prévue', 'Égalité des pixels à la fin puis 600 images plus tard ; aucune boucle de fin infinie.');
+  checked(`Les ${sequenceCount} séquences se stabilisent exactement à leur durée prévue`, 'Égalité des pixels à la fin puis 600 images plus tard ; aucune boucle de fin infinie.');
   assert.ok(measurements.sequences.every(row => row.reducedStart === row.reducedLater && row.reducedStart === row.settled));
-  checked('Le mouvement réduit fige les 70 séquences sur leur présentation finale', 'Comparaison Canvas à 0 et 600 images ; état identique au dernier dessin normal.');
+  checked(`Le mouvement réduit fige les ${sequenceCount} séquences sur leur présentation finale`, 'Comparaison Canvas à 0 et 600 images ; état identique au dernier dessin normal.');
   assert.ok(measurements.draws.every(row => row.first === row.later && row.neutral));
-  checked('Une égalité garde les 14 combattants dans une pose neutre stable', 'Aucune séquence de victoire ou de défaite attribuée à une égalité.');
+  checked(`Une égalité garde les ${FIGHTERS.length} combattants dans une pose neutre stable`, 'Aucune séquence de victoire ou de défaite attribuée à une égalité.');
   assert.equal(measurements.stages.length, STAGES.length); assert.ok(measurements.stages.every(row => row.first !== row.later && row.floor === row.floorLater && row.floor === row.baselineFloor));
   checked('Les arènes s’animent au-dessus du sol sans modifier les pixels de la piste', 'Couche d’ambiance à 0/123 images ; égalité RGBA du sol y568–719 avec le fond statique.');
   assert.ok(measurements.unchanged && measurements.stages.every(row => row.unchanged && row.fixed === row.fixedLater));
   checked('Rendu sans mutation des acteurs et des arènes, ambiances figées en mouvement réduit', 'Instantanés avant/après strictement égaux ; Canvas complet identique en mouvement réduit.');
 
-  await page.evaluate(() => {
-    const { canvas, ctx, renderer, FIGHTERS, FIGHTER_SEQUENCES, SEQUENCE_EVENTS, actor, options } = window.sequenceFixture;
-    canvas.width = 1820; canvas.height = 2090;
+  await page.evaluate(async () => {
+    const { canvas, ctx, renderer, FIGHTERS, FIGHTER_SEQUENCES, SEQUENCE_EVENTS, actor, options, loadCurrent } = window.sequenceFixture;
+    canvas.width = 1820; canvas.height = 90 + Math.ceil(FIGHTERS.length / 7) * SEQUENCE_EVENTS.length * 200;
     ctx.fillStyle = '#142033'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#f5eddf'; ctx.font = 'bold 27px system-ui'; ctx.fillText('70 séquences · illustrations existantes, mouvement procédural', 20, 38);
-    ctx.fillStyle = '#becadb'; ctx.font = '17px system-ui'; ctx.fillText('Introduction / résultats de round / résultats de match. Dessins de combat dédiés encore à produire.', 20, 67);
-    FIGHTERS.forEach((f, index) => SEQUENCE_EVENTS.forEach((event, row) => {
-      const left = index % 7 * 260, top = 90 + (Math.floor(index / 7) * 5 + row) * 200, ground = top + 181;
+    ctx.fillStyle = '#f5eddf'; ctx.font = 'bold 27px system-ui'; ctx.fillText(`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences · illustrations existantes, mouvement procédural`, 20, 38);
+    ctx.fillStyle = '#becadb'; ctx.font = '17px system-ui'; ctx.fillText('Introduction / résultats de round / résultats de match. Présentations procédurales finies.', 20, 67);
+    for (const [index, f] of FIGHTERS.entries()) {
+      await loadCurrent(f);
+      for (const [row, event] of SEQUENCE_EVENTS.entries()) {
+      const left = index % 7 * 260, top = 90 + (Math.floor(index / 7) * SEQUENCE_EVENTS.length + row) * 200, ground = top + 181;
       ctx.strokeStyle = '#3b506a'; ctx.strokeRect(left + 2, top, 256, 196);
       ctx.fillStyle = '#e7eaf5'; ctx.font = '13px system-ui'; ctx.textAlign = 'center'; ctx.fillText(`${f.name} · ${event}`, left + 130, top + 21);
       const idle = renderer.getFrame(f, 'idle', 0), height = f.visual?.height || 230;
-      const scale = Math.min(0.55, 190 / (idle.bounds.width * height / idle.bounds.height), 149 / height);
-      ctx.save(); ctx.beginPath(); ctx.rect(left + 3, top + 28, 254, 166); ctx.clip(); ctx.translate(left + 130 - 640 * scale, ground - 568 * scale); ctx.scale(scale, scale);
+      if (!idle?.bounds) throw new Error(f.id + ': standing drawing missing after preload');
+      const maxPoseFactor = Math.max(1, ...Object.values(f.visual?.poseHeightFactors || {}).filter(value => Number.isFinite(value) && value > 0));
+      const illustratedWidth = f.visual?.maxIllustratedWidth || idle.bounds.width * height / idle.bounds.height;
+      const scale = Math.min(0.55, 190 / illustratedWidth, 149 / (height * maxPoseFactor));
+      const anchorX = Number.isFinite(f.visual?.anchorX) ? f.visual.anchorX : .5;
+      const anchorCenter = (anchorX - .5) * idle.bounds.width * height / idle.bounds.height;
+      ctx.save(); ctx.beginPath(); ctx.rect(left + 3, top + 28, 254, 166); ctx.clip(); ctx.translate(left + 130 - (640 - anchorCenter) * scale, ground - 568 * scale); ctx.scale(scale, scale);
       renderer.drawActor(actor(f), 4000, false, options(event, FIGHTER_SEQUENCES[f.id][event].keys[1].at)); ctx.restore();
       ctx.strokeStyle = '#8098ad'; ctx.beginPath(); ctx.moveTo(left + 15, ground); ctx.lineTo(left + 245, ground); ctx.stroke();
-    }));
+      }
+    }
   });
   await page.locator('canvas').screenshot({ path: path.join(output, 'encore-outcome-sequences.png') }); report.screenshots.push('encore-outcome-sequences.png');
   await page.evaluate(() => {

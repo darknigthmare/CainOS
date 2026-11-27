@@ -1,0 +1,57 @@
+{
+  "schema": "encore-tracker-visual-review/v1",
+  "status": "accepted",
+  "reviewer": "/root/resume_publication",
+  "createdAt": "2026-11-20T19:48:25.646684+00:00",
+  "workbookSHA256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+  "planSha256": "b52d17ef37419232a175b51184d3d3bc5a2a2c2fdb077d76d2e069fa6b8f21ab",
+  "method": "Inspection directe des sept PNG réimportés par tools.view_image, sans recadrage ni modification des rendus.",
+  "views": [
+    {
+      "file": "summary-top.png",
+      "sha256": "78a1a337c022a8469950bff487e7427199b5032a35338f02ae4c06f3b69d6d61",
+      "status": "accepted",
+      "observations": "Synthèse, en-tête et totaux lisibles : 480 costumes, 45 tenues Circus et 495 PNG ; 3 344 lignes Production. Les 432 tests du lot sont datés et le navigateur local reste indiqué non exécuté. Aucune collision ni coupure de texte observée."
+    },
+    {
+      "file": "summary-bottom.png",
+      "sha256": "d95ea47b87bf94bcf098063cc0d6a88603072206ed56a2cbc3b3d0cfc032309f",
+      "status": "accepted",
+      "observations": "Le tableau QA affiche 2 493 lignes : 2 473 réussites, 17 non exécutées, 2 à vérifier, plus le constat historique partiel distinct. Le rappel 105 ensembles de base + 45 tenues (495 PNG) est lisible. Notes et limites de finition conservées."
+    },
+    {
+      "file": "feature-pre-03.png",
+      "sha256": "4272024fff5069537332bd4d8b24eeb87d2bf8d74a1c2529df5650cce17aff35",
+      "status": "accepted",
+      "observations": "La ligne PRE-03 conserve ses colonnes et son statut. Le total 480 est détaillé en 51 archives, 45 Circus et 384 crossovers ; les limites des 39 autres PNJ et sept séries de Ribbit restent explicites. Texte visible dans les cellules concernées."
+    },
+    {
+      "file": "feature-prd-11.png",
+      "sha256": "1a8a7a7cdce3a600a4363247a03f8e59d1984bf87caa434f4574ebfb8fad8fec",
+      "status": "accepted",
+      "observations": "La ligne PRD-11 présente 54 combattants, 540 techniques, 25 arènes, 51 variantes historiques, 45 Circus et 384 crossovers. Le périmètre des références et les réserves graphiques restent lisibles ; aucune colonne écrasée."
+    },
+    {
+      "file": "references-new.png",
+      "sha256": "5ce12a12201935b462cbf7ad626d2a25ecbc896b443273699a7b53cfaa3f50eb",
+      "status": "accepted",
+      "observations": "Les trois sources Café apparaissent dans le bon ordre, Ragatha, Gangle, Zooble. Titres, URL et paragraphes de portée sont complets dans les cellules avec retour à la ligne. Distinctions des anciennes tenues et réserves sur le canon, les parties cachées et les animations conservées."
+    },
+    {
+      "file": "references-offline.png",
+      "sha256": "3321cf0227d5b2b0050175c866fbbbecf3c24a23bc12e58f7ca01c2242556cb5",
+      "status": "accepted",
+      "observations": "La référence hors ligne affiche 5 907 images et 3 215 944 062 octets. Le texte sépare clairement le manifeste local et la publication GitHub ; la ligne reste lisible."
+    },
+    {
+      "file": "references-footer.png",
+      "sha256": "3584169f82ee61f983bec8faa82c50eed12b354a8eeae8c701e41a50b14255be",
+      "status": "accepted",
+      "observations": "Le pied de Références est décalé de trois lignes, avec les onze lignes de légende 170 à 180. Définitions, notes utilisateur et limites QA restent visibles, dans leur ordre et sans collision."
+    }
+  ],
+  "limitations": [
+    "Cette revue couvre les sept vues de synthèse, fonctionnalités et références ; les vingt vues Production/QA sont confiées à la revue indépendante.",
+    "La revue porte sur la mise en page et les informations affichées ; elle ne constitue pas une session Excel de bureau ni une validation canonique des dessins."
+  ]
+}

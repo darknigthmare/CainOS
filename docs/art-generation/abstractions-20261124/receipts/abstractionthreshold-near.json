@@ -1,0 +1,11 @@
+{
+  "id": "abstractionthreshold",
+  "plane": "near",
+  "slot": "near",
+  "prompt": "Use case: precise-object-edit. Asset type: NEAR PARALLAX LAYER for existing 2D fighting stage, wide LANDSCAPE 16:9 same pixel composition as reference. Reference is context ONLY for art style, perspective, lighting and ground-line placement. Deliver ONLY the separately painted objects described here on TRUE TRANSPARENT background: Only very low faceted obsidian chips and two thin fractured mineral ledges along BOTTOM LEFT and BOTTOM RIGHT, cyan/violet bevel highlights, all confined to bottom 10% of canvas, no obstacle above y=86%. Upper 86% and main central floor gap are entirely TRANSPARENT. Do not paint a solid floor across image, no abyss scenery, no big crystals, no pillars, no eyes, no fog. Match the reference's clean rich hand-painted game environment style and palette exactly. No text, no UI, no characters, no tile grid. This PNG will be composited on the reference; do not repaint any part of the reference background. Keep transparent negative space genuinely empty, no atmospheric opaque or translucent gradient.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stages/abstractionthreshold/far.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-f51189bd-ae5f-4426-9b3a-03714d5495c5.png",
+  "destination": "assets/encore/stages/abstractionthreshold/near.png",
+  "generatedWith": "image_gen builtin",
+  "recovery": "New native generation after filesystem reset; based on the new matching far plane."
+}

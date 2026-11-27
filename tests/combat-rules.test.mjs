@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { CombatEngine, CQCCombat, ENGINE_RULES_VERSION, ENGINE_RULES_VERSIONS, FIXED_DT } from '../combat/engine.mjs';
 import { FIGHTERS, STAGES, GAME, getFighter, getReplayFighter } from '../combat/data.mjs';
 import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, validateReplay, replayInputs } from '../combat/session.mjs';
+import { ABSTRACTION_IDS } from '../combat/abstractions-content.mjs';
 
 // Captured from the published engine before applying the 0.5.0 corrections.
 // Each digest covers every serialized frame of a 900-frame seeded CPU duel,
@@ -691,9 +692,12 @@ test('all 56 captured legacy CPU duels preserve every frame fingerprint', () => 
   }
 });
 
-test('all ten authored low traps bypass standing guard and respect crouching guard in 0.5', () => {
+test('the ten historical and ten abstraction low traps bypass standing guard and respect crouching guard in 0.5', () => {
   const artists = FIGHTERS.filter(fighter => fighter.moves.specialDown.kind === 'trap' && fighter.moves.specialDown.level === 'low');
-  assert.equal(artists.length, 10);
+  const historicalIds = ['jax', 'gangle', 'zooble', 'caine', 'gummigoo', 'loolilalu', 'gloinkqueen', 'fudge', 'abstractedkaufmo', 'baronmildenhall'];
+  assert.equal(ABSTRACTION_IDS.length, 10);
+  assert.deepEqual(artists.map(fighter => fighter.id), [...historicalIds, ...ABSTRACTION_IDS]);
+  assert.equal(artists.length, 20);
   for (const artist of artists) {
     const standing = trapEncounter(artist.id, '0.5.0');
     const crouching = trapEncounter(artist.id, '0.5.0', true);

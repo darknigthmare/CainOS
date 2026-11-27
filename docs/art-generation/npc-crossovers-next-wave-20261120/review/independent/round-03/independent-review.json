@@ -1,0 +1,59 @@
+{
+  "createdAt": "2026-11-20T15:27:00.190073+00:00",
+  "files": [
+    {
+      "variant": "hommage",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+      "receiptSha256": "43f27748eb3c41eee25f52524d3ec0593dd05109ddd663baf59e7b961253e806",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/hommage-hit-alpha.jpg",
+      "diagnosticSha256": "d98ff404b9f57dd9eb57b43f5274e4e193fb3bef38a8d0217933995998d480de",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "La correction native présente trois lobes sur les mains visées. Pose et costume préservés ; composition alpha claire et sombre propre, silhouette entière."
+      ]
+    },
+    {
+      "variant": "hommage",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+      "receiptSha256": "7fd1ff95dd4046ba0548a441d0bbf41e163e8b4c4423dfe99a717e30ba734f17",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/hommage-jump-alpha.jpg",
+      "diagnosticSha256": "4cfd1cc0002164afe5f50e9b6c73d01ce1016611174089a943f9344b669a8767",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "La correction native présente trois lobes sur les mains visées. Pose et costume préservés ; composition alpha claire et sombre propre, silhouette entière."
+      ]
+    },
+    {
+      "variant": "hommage",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+      "receiptSha256": "1bde07a7a1b04bc9663eccd8d3b559501f1d3724111d01815c9bb3b7aeb3af09",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/hommage-crouch-alpha.jpg",
+      "diagnosticSha256": "5827081a604474ceb5c23cbbd18d1419988c52fe66d968a47f4a7c70189fbd9d",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "La correction native présente trois lobes sur les mains visées. Pose et costume préservés ; composition alpha claire et sombre propre, silhouette entière."
+      ]
+    }
+  ],
+  "schema": "encore-independent-npc-visual-review/v1",
+  "reviewer": "ribbit_references",
+  "reviewedAt": "2026-11-20T15:27:42.848794+00:00",
+  "status": "partial_cross_review_no_new_defect_observed",
+  "inspectedAcceptedPngs": 3,
+  "scope": "Independent cross-review of audit_github’s three accepted Hommage hand corrections.",
+  "concreteDefects": [],
+  "limits": [
+    "The reviewer produced selection/stance/intro/attack corrections; those four are covered by author review elsewhere, not claimed independent in this round.",
+    "Hommage defeat and Fusion victory were not yet available in this snapshot.",
+    "Three visible hand lobes are a harmonization choice for original designs, not a canonical anatomy claim."
+  ]
+}

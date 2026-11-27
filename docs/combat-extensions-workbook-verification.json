@@ -1,0 +1,1574 @@
+{
+  "schema": "encore-extensions-workbook-review/v1",
+  "asOf": "2026-11-27",
+  "sourceCommit": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+  "inputWorkbookSHA256": "60666f8ee0aa47d196829273afcf13ed4aafdb8e9301b7caa9725275d8e91f1a",
+  "inputTrackerSHA256": "d816960aa66428ec8b8db49ecca974c6502d4b157e8d3ecf8667e6601d16b72c",
+  "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+  "trackerDataSHA256": "95f073493d12f46b07f6f5bd3ba81653abfc3bc3dfae7ad56fe92dbd021d92cd",
+  "sourceDataSHA256": "1326667db2f287e6235f892a521a3f3af0afe3d6c3148d8be147026be1dc6557",
+  "addedSheets": [
+    {
+      "name": "Extensions combat",
+      "rows": 38,
+      "notesColumn": "J"
+    },
+    {
+      "name": "Fiches extensions",
+      "rows": 254,
+      "notesColumn": "J"
+    }
+  ],
+  "allowedExistingChanges": [
+    {
+      "sheet": "Arènes",
+      "row": 27,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/falseexit/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/falseexit/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 27,
+      "column": 17,
+      "before": "La piste est élargie pour accueillir deux combattants. Le mobilier, les plafonniers et les distances entre les plans sont recomposés pour Encore.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli. La piste logique reste à y568 ; les proportions, le cadrage et la profondeur de ce décor sont une adaptation pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 27,
+      "column": 18,
+      "before": "Référence visuelle consultée",
+      "beforeFormula": null,
+      "after": "Référence visuelle consultée — reconstruction du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 27,
+      "column": 19,
+      "before": "Le visuel officiel renseigne la porte et la palette du couloir. La géométrie du duel est une adaptation.",
+      "beforeFormula": null,
+      "after": "Référence officielle : https://static.wixstatic.com/media/84ed6a_3fb3c4ec9e8947e5a659c4cf10657ecc~mv2.png. Le fichier et son intégration sont traçables ; les régions hors cadrage et la fidélité pixel à pixel ne sont pas certifiées. Les ambiances audio existantes restent actives.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2691,
+      "column": 7,
+      "before": "assets/encore/stages/falseexit/far.png",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/falseexit/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2691,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/falseexit/mid.png",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2691,
+      "column": 9,
+      "before": "Comparer la composition aux références de la fiche Arènes.",
+      "beforeFormula": null,
+      "after": "Comparer les repères du décor à la source officielle et vérifier la lisibilité en duel. Un seul PNG complet, pas trois plans indépendants.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2692,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/falseexit/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2692,
+      "column": 8,
+      "before": "Décor du jeu ; revue visuelle détaillée à poursuivre.",
+      "beforeFormula": null,
+      "after": "Sol inclus dans la scène complète. Ligne logique y568 conservée ; ancrage vertical spécifique pour Sous la carte.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2692,
+      "column": 9,
+      "before": "Aligner les pieds, les ombres et la ligne de combat.",
+      "beforeFormula": null,
+      "after": "Contrôler la lecture des pieds, des ombres et du sol à différents cadrages, sans étirer le PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2693,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2693,
+      "column": 7,
+      "before": "assets/encore/stages/falseexit/near.png",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/falseexit/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2693,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture complète. Ancien near.png conservé comme repli ; aucun plan séparé utilisé pour la scène actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2693,
+      "column": 9,
+      "before": "Conserver une lecture claire des attaques et des déplacements.",
+      "beforeFormula": null,
+      "after": "Maintenir la lisibilité des combattants. La présence du dessin ne vaut pas livraison de trois couches de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2696,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2696,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2696,
+      "column": 7,
+      "before": "assets/encore/stages/falseexit/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2696,
+      "column": 8,
+      "before": "Poussière sous les tubes fluorescents",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la scène complète est chargée ; léger déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 2696,
+      "column": 9,
+      "before": "Effets derrière les acteurs. Le réglage de mouvements réduits fige les effets.",
+      "beforeFormula": null,
+      "after": "Aucune boucle visuelle additionnelle revendiquée pour la scène complète. Les effets historiques restent disponibles avec le décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 28,
+      "column": 14,
+      "before": "Trois PNG natifs 1672 × 941, sans réencodage · assets/encore/stages/undermap/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/undermap/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 28,
+      "column": 17,
+      "before": "Les personnages du visuel sont retirés ; trois plans séparés, une piste horizontale à y568 et des reflets de premier plan composent une arène originale pour Encore. La disposition de la grille et la profondeur sont adaptées au duel.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli. La piste logique reste à y568 ; les proportions, le cadrage et la profondeur de ce décor sont une adaptation pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 28,
+      "column": 18,
+      "before": "Référence visuelle consultée",
+      "beforeFormula": null,
+      "after": "Référence visuelle consultée — reconstruction du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 28,
+      "column": 19,
+      "before": "Palette, grille et matière du sol comparées au visuel officiel GLITCH de Pomni et Gummigoo sous la carte. Un seul plan de référence est consulté : aucune géographie complète, mesure du lieu ni animation canonique n’est certifiée. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences.",
+      "beforeFormula": null,
+      "after": "Référence officielle : https://static.wixstatic.com/media/84ed6a_0558e3b65a3146b5b04b7828da5b4d0e~mv2.png. Le fichier et son intégration sont traçables ; les régions hors cadrage et la fidélité pixel à pixel ne sont pas certifiées. Les ambiances audio existantes restent actives.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3188,
+      "column": 7,
+      "before": "assets/encore/stages/undermap/far.png\nassets/encore/stages/undermap/mid.png",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/undermap/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3188,
+      "column": 8,
+      "before": "Fond indigo quadrillé et plan médian séparés, copiés depuis les trois PNG natifs. Preuve : docs/art-generation/stage-next-missing-20261120/asset-inventory.json.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3188,
+      "column": 9,
+      "before": "Palette, grille et matière du sol comparées au visuel officiel GLITCH de Pomni et Gummigoo sous la carte. Un seul plan de référence est consulté : aucune géographie complète, mesure du lieu ni animation canonique n’est certifiée. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences.",
+      "beforeFormula": null,
+      "after": "Comparer les repères du décor à la source officielle et vérifier la lisibilité en duel. Un seul PNG complet, pas trois plans indépendants.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3189,
+      "column": 7,
+      "before": "assets/encore/stages/undermap/mid.png\ncombat/data.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/undermap/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3189,
+      "column": 8,
+      "before": "Piste logique à y568, limites 65–1215, vérifiée dans les vues Canvas avec acteurs sur le manifeste final.",
+      "beforeFormula": null,
+      "after": "Sol inclus dans la scène complète. Ligne logique y568 conservée ; ancrage vertical spécifique pour Sous la carte.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3189,
+      "column": 9,
+      "before": "La perspective illustrée est adaptée au duel. La revue ne certifie aucune géométrie canonique ni essai sur périphérique physique.",
+      "beforeFormula": null,
+      "after": "Contrôler la lecture des pieds, des ombres et du sol à différents cadrages, sans étirer le PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3190,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3190,
+      "column": 7,
+      "before": "assets/encore/stages/undermap/near.png",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/undermap/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3190,
+      "column": 8,
+      "before": "Reflets de premier plan en RGBA natif, alpha maximal 90, gardés derrière la lecture des acteurs. Preuve : docs/art-generation/stage-next-missing-20261120/verification.json.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture complète. Ancien near.png conservé comme repli ; aucun plan séparé utilisé pour la scène actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3190,
+      "column": 9,
+      "before": "Troisième plan du même décor ; aucune nouvelle arène ni obstacle de collision supplémentaire.",
+      "beforeFormula": null,
+      "after": "Maintenir la lisibilité des combattants. La présence du dessin ne vaut pas livraison de trois couches de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3193,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3193,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3193,
+      "column": 7,
+      "before": "combat/render-stage-motion.mjs\ncombat/stage-parallax.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3193,
+      "column": 8,
+      "before": "Pulsations bleues sous la carte. Effets derrière les acteurs ; le réglage de mouvements réduits fige les effets.",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la scène complète est chargée ; léger déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 3193,
+      "column": 9,
+      "before": "Pulsation et composition originales pour Encore. Animation canonique de la salle non certifiée.",
+      "beforeFormula": null,
+      "after": "Aucune boucle visuelle additionnelle revendiquée pour la scène complète. Les effets historiques restent disponibles avec le décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 15,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/kingdom/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/kingdom/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 15,
+      "column": 17,
+      "before": "La façade générique à deux tours pointues devient une cour recomposée : piliers de premier plan, arcades latérales, ouvertures en retrait, portail large et volutes de glaçage. Les marches de fond restent au-dessus de y568 et ne modifient pas la piste. La symétrie, les proportions, les ornements secondaires et les joints du sol sont des choix lisibles pour le duel.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli. La piste logique reste à y568 ; les proportions, le cadrage et la profondeur de ce décor sont une adaptation pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 15,
+      "column": 18,
+      "before": "Référence visuelle consultée — comparaison partielle",
+      "beforeFormula": null,
+      "after": "Référence visuelle consultée — reconstruction du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 15,
+      "column": 19,
+      "before": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène.",
+      "beforeFormula": null,
+      "after": "Référence officielle : https://static.wixstatic.com/media/84ed6a_bd08976f81644a659cbc9a8e112fb5dc~mv2.png. Le fichier et son intégration sont traçables ; les régions hors cadrage et la fidélité pixel à pixel ne sont pas certifiées. Les ambiances audio existantes restent actives.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 331,
+      "column": 7,
+      "before": "assets/encore/stages/kingdom/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/kingdom/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 331,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/kingdom/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 331,
+      "column": 9,
+      "before": "Référence visuelle consultée — comparaison partielle. Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène.",
+      "beforeFormula": null,
+      "after": "Comparer les repères du décor à la source officielle et vérifier la lisibilité en duel. Un seul PNG complet, pas trois plans indépendants.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 332,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/kingdom/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 332,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol inclus dans la scène complète. Ligne logique y568 conservée ; ancrage vertical spécifique pour Sous la carte.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 332,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Contrôler la lecture des pieds, des ombres et du sol à différents cadrages, sans étirer le PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 333,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 333,
+      "column": 7,
+      "before": "assets/encore/stages/kingdom/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/kingdom/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 333,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture complète. Ancien near.png conservé comme repli ; aucun plan séparé utilisé pour la scène actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 333,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "Maintenir la lisibilité des combattants. La présence du dessin ne vaut pas livraison de trois couches de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 614,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 614,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 614,
+      "column": 7,
+      "before": "assets/encore/stages/kingdom/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 614,
+      "column": 8,
+      "before": "Scintillements de sucre",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la scène complète est chargée ; léger déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 614,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune boucle visuelle additionnelle revendiquée pour la scène complète. Les effets historiques restent disponibles avec le décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 9,
+      "column": 14,
+      "before": "Trois plans illustrés pour le duel · assets/encore/stages/spudsy/",
+      "beforeFormula": null,
+      "after": "Un PNG complet natif, sans réencodage · assets/encore/stages/spudsy/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 9,
+      "column": 17,
+      "before": "Recomposition frontale : comptoir blanc/rouge continu, passe de cuisine, hotte, gril, paniers de cuisson, distributeur et caisse. Les cinq panneaux et les mots français lisibles décrivent des catégories du jeu ; ils ne transcrivent pas les offres de la série. La vapeur décorative est rattachée à la surface de cuisson, au-dessus du sol fixe.",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli. La piste logique reste à y568 ; les proportions, le cadrage et la profondeur de ce décor sont une adaptation pour Encore.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 9,
+      "column": 18,
+      "before": "Référence visuelle consultée — comparaison partielle",
+      "beforeFormula": null,
+      "after": "Référence visuelle consultée — reconstruction du 27 novembre",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Arènes",
+      "row": 9,
+      "column": 19,
+      "before": "Comparaison avec la vignette officielle du distributeur Netflix de l’épisode 4. Faible résolution 300 × 169 : couleurs et grandes masses observées, texte fin et mesures non certifiés. Le placement exact des équipements, le nombre de menus et le plan du restaurant complet restent à revoir dans la vidéo.",
+      "beforeFormula": null,
+      "after": "Référence officielle : https://www.youtube.com/watch?v=Q9KWcWKo2T8. Le fichier et son intégration sont traçables ; les régions hors cadrage et la fidélité pixel à pixel ne sont pas certifiées. Les ambiances audio existantes restent actives.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 301,
+      "column": 7,
+      "before": "assets/encore/stages/spudsy/far.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/spudsy/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 301,
+      "column": 8,
+      "before": "Fond et plan médian séparés. assets/encore/stages/spudsy/mid.webp",
+      "beforeFormula": null,
+      "after": "Scène complète PNG 1672 × 941, mise à l’échelle uniforme ; léger déplacement de caméra de 6 px. Aucun effet visuel procédural additionnel. Les plans historiques restent disponibles en repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 301,
+      "column": 9,
+      "before": "Référence visuelle consultée — comparaison partielle. Comparaison avec la vignette officielle du distributeur Netflix de l’épisode 4. Faible résolution 300 × 169 : couleurs et grandes masses observées, texte fin et mesures non certifiés. Le placement exact des équipements, le nombre de menus et le plan du restaurant complet restent à revoir dans la vidéo.",
+      "beforeFormula": null,
+      "after": "Comparer les repères du décor à la source officielle et vérifier la lisibilité en duel. Un seul PNG complet, pas trois plans indépendants.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 302,
+      "column": 7,
+      "before": "combat/render.mjs",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/spudsy/scene-20261127.png · combat/stage-parallax.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 302,
+      "column": 8,
+      "before": "Dessin procédural livré",
+      "beforeFormula": null,
+      "after": "Sol inclus dans la scène complète. Ligne logique y568 conservée ; ancrage vertical spécifique pour Sous la carte.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 302,
+      "column": 9,
+      "before": "Aligner les pieds, ombres et ligne de combat.",
+      "beforeFormula": null,
+      "after": "Contrôler la lecture des pieds, des ombres et du sol à différents cadrages, sans étirer le PNG.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 303,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 303,
+      "column": 7,
+      "before": "assets/encore/stages/spudsy/near.webp",
+      "beforeFormula": null,
+      "after": "assets/encore/stages/spudsy/scene-20261127.png",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 303,
+      "column": 8,
+      "before": "Premier plan détouré et défilement différentiel.",
+      "beforeFormula": null,
+      "after": "Premier plan inclus dans la peinture complète. Ancien near.png conservé comme repli ; aucun plan séparé utilisé pour la scène actuelle.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 303,
+      "column": 9,
+      "before": "Ajouter des détails sans masquer les attaques.",
+      "beforeFormula": null,
+      "after": "Maintenir la lisibilité des combattants. La présence du dessin ne vaut pas livraison de trois couches de parallaxe.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 608,
+      "column": 4,
+      "before": "Ambiance visuelle animée",
+      "beforeFormula": null,
+      "after": "Ambiance visuelle procédurale",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 608,
+      "column": 5,
+      "before": "Implémenté",
+      "beforeFormula": null,
+      "after": "Partiel",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 608,
+      "column": 7,
+      "before": "assets/encore/stages/spudsy/ · combat/stage-parallax.mjs · combat/render-stage-motion.mjs",
+      "beforeFormula": null,
+      "after": "combat/render.mjs · combat/stage-scenes-20261127.mjs",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 608,
+      "column": 8,
+      "before": "Vapeur du comptoir En 0.6.0, vapeur rattachée à la surface de cuisson.",
+      "beforeFormula": null,
+      "after": "Effets procéduraux désactivés quand la scène complète est chargée ; léger déplacement de caméra 6 px seulement. Ambiance audio conservée.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Production",
+      "row": 608,
+      "column": 9,
+      "before": "Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.",
+      "beforeFormula": null,
+      "after": "Aucune boucle visuelle additionnelle revendiquée pour la scène complète. Les effets historiques restent disponibles avec le décor de repli.",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 11,
+      "column": 2,
+      "before": 540,
+      "beforeFormula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3920,\"Costume crossover\")+COUNTIFS('Production'!B6:B3920,\"Tenue Circus\")",
+      "after": 546,
+      "afterFormula": "=COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3942,\"Costume crossover\")+COUNTIFS('Production'!B6:B3942,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 12,
+      "column": 2,
+      "before": 64,
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Arrangement d’arène\")",
+      "after": 64,
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 2,
+      "before": 2705,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3920,B$14)",
+      "after": 2719,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$3942,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 3,
+      "before": 987,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3920,C$14)",
+      "after": 995,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$3942,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 4,
+      "before": 54,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3920,D$14)",
+      "after": 54,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$3942,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 5,
+      "before": 169,
+      "beforeFormula": "=COUNTIFS('Production'!E$6:E$3920,E$14)",
+      "after": 169,
+      "afterFormula": "=COUNTIFS('Production'!E$6:E$3942,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 6,
+      "before": 3915,
+      "beforeFormula": "=COUNTA('Production'!A6:A3920)",
+      "after": 3937,
+      "afterFormula": "=COUNTA('Production'!A6:A3942)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 19,
+      "column": 8,
+      "before": "64 routes et 384 tableaux",
+      "beforeFormula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3920,\"Tableau d’histoire\")&\" tableaux\"",
+      "after": "64 routes et 384 tableaux",
+      "afterFormula": "=COUNTIFS('Scénarios'!B6:B413,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3942,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 20,
+      "column": 8,
+      "before": "256 briefings de rencontre",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "after": "256 briefings de rencontre",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 21,
+      "column": 8,
+      "before": "27 thèmes musicaux d’arènes",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Arène\",'Production'!D6:D3920,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "after": "27 thèmes musicaux d’arènes",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Arène\",'Production'!D6:D3942,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 8,
+      "before": "26 motifs sonores synthétiques",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "after": "26 motifs sonores synthétiques",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 23,
+      "column": 8,
+      "before": "320 séquences de présentation",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "after": "320 séquences de présentation",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 24,
+      "column": 8,
+      "before": "27 ambiances visuelles animées",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "after": "23 ambiances visuelles procédurales actives",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Animation d’arène\",'Production'!E6:E3942,\"Implémenté\")&\" ambiances visuelles procédurales actives\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 25,
+      "column": 8,
+      "before": "20 costumes historiques redessinés",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Costume\")&\" costumes historiques redessinés\"",
+      "after": "20 costumes historiques redessinés",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 27,
+      "column": 8,
+      "before": "839 fiches, hors tenues crossover",
+      "beforeFormula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3920,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "after": "839 fiches, hors tenues crossover",
+      "afterFormula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C189,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3942,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 31,
+      "column": 8,
+      "before": "192 présentations de KO",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Finition visuelle\")&\" présentations de KO\"",
+      "after": "192 présentations de KO",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 32,
+      "column": 8,
+      "before": "27 ambiances sonores originales",
+      "beforeFormula": "=COUNTIFS('Production'!B6:B3920,\"Arène\",'Production'!D6:D3920,\"Ambiance sonore\",'Production'!E6:E3920,\"Implémenté\")&\" ambiances sonores originales\"",
+      "after": "27 ambiances sonores originales",
+      "afterFormula": "=COUNTIFS('Production'!B6:B3942,\"Arène\",'Production'!D6:D3942,\"Ambiance sonore\",'Production'!E6:E3942,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 2,
+      "before": 2493,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2523,B21)",
+      "after": 2501,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2532,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 3,
+      "before": 0,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2523,C21)",
+      "after": 0,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2532,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 4,
+      "before": 20,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2523,D21)",
+      "after": 21,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2532,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 5,
+      "before": 2,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2523,E21)",
+      "after": 2,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2532,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 22,
+      "column": 6,
+      "before": 2518,
+      "beforeFormula": "=COUNTA('QA'!A6:A2523)",
+      "after": 2527,
+      "afterFormula": "=COUNTA('QA'!A6:A2532)"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 23,
+      "column": 2,
+      "before": 3,
+      "beforeFormula": "=COUNTIFS('QA'!D6:D2523,\"Partiel\")",
+      "after": 3,
+      "afterFormula": "=COUNTIFS('QA'!D6:D2532,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 2,
+      "column": 8,
+      "before": "Version 0.7.0 · bases statiques · 25 novembre 2026",
+      "beforeFormula": null,
+      "after": "Version 0.7.0 · extensions du guide · 27 novembre 2026",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 7,
+      "column": 8,
+      "before": "Sprites de base et motifs dédiés",
+      "beforeFormula": null,
+      "after": "Extensions du guide : rubriques 30–67",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 8,
+      "column": 8,
+      "before": "5 apparences de référence · 27 créations de Queenie",
+      "beforeFormula": null,
+      "after": "254 fiches de conception associées",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 13,
+      "column": 8,
+      "before": "469 tests Node et deux builds validés",
+      "beforeFormula": null,
+      "after": "473 tests Node · 2 builds · Canvas ciblé réussi",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 15,
+      "column": 8,
+      "before": "Classeur recalculé, réimporté et comparé au socle",
+      "beforeFormula": null,
+      "after": "Extensions : conception, assets, intégration et tests séparés",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 16,
+      "column": 8,
+      "before": "32 familles · 64 bases · 8 projectiles natifs",
+      "beforeFormula": null,
+      "after": "6 familles de Kaufmo · 12 bases · 4 décors complets",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 17,
+      "column": 8,
+      "before": null,
+      "beforeFormula": null,
+      "after": "79 PNG annoncés le 26/11 : non récupérés, exclus des ajouts",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 30,
+      "column": 8,
+      "before": "56 familles statiques au total · aucune nouvelle animation",
+      "beforeFormula": null,
+      "after": "62 familles statiques au total · aucune nouvelle animation",
+      "afterFormula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "row": 14,
+      "column": 8,
+      "before": "Navigateur et périphériques physiques : validation ouverte",
+      "beforeFormula": null,
+      "after": "Navigateur local bloqué · CI à suivre sur la PR",
+      "afterFormula": null
+    }
+  ],
+  "appended": {
+    "Production": {
+      "before": 3915,
+      "after": 3937,
+      "rows": 22
+    },
+    "QA": {
+      "before": 2518,
+      "after": 2527,
+      "rows": 9
+    }
+  },
+  "appendedControls": {
+    "Production": {
+      "validation": {
+        "range": "E3921:E3942",
+        "values": [
+          "Implémenté",
+          "Partiel",
+          "Prévu",
+          "À vérifier",
+          "Hors périmètre"
+        ]
+      },
+      "rules": [
+        {
+          "range": "E3921:E3942",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "E3921:E3942",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          }
+        },
+        {
+          "range": "E3921:E3942",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        },
+        {
+          "range": "E3921:E3942",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          }
+        },
+        {
+          "range": "E3921:E3942",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "E3921:E3942",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          }
+        },
+        {
+          "range": "E3921:E3942",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        }
+      ]
+    },
+    "QA": {
+      "validation": {
+        "range": "D2524:D2532",
+        "values": [
+          "Réussi",
+          "Échec",
+          "Non exécuté",
+          "À vérifier",
+          "Partiel"
+        ]
+      },
+      "rules": [
+        {
+          "range": "D2524:D2532",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "D2524:D2532",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          }
+        },
+        {
+          "range": "D2524:D2532",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        },
+        {
+          "range": "D2524:D2532",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          }
+        },
+        {
+          "range": "D2524:D2532",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          }
+        },
+        {
+          "range": "D2524:D2532",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          }
+        },
+        {
+          "range": "D2524:D2532",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          }
+        }
+      ]
+    }
+  },
+  "nativePreservation": {
+    "status": "passed",
+    "cellsChecked": 93392,
+    "sheetsChecked": 12,
+    "differences": [],
+    "checked": [
+      "Existing IDs, row order, values, formulas and notes",
+      "Effective cell styles, existing dimensions, panes, tables, filters, validations, conditional formats, margins and theme"
+    ],
+    "approvedCellChanges": 108
+  },
+  "formulas": {
+    "before": 42,
+    "after": 42,
+    "recalculated": true,
+    "errorMatches": 0,
+    "exportReimportChecked": true,
+    "desktopExcelOpened": false
+  },
+  "renders": [
+    "docs/verification/extensions-workbook-20261127/summary.png",
+    "docs/verification/extensions-workbook-20261127/extensions-overview.png",
+    "docs/verification/extensions-workbook-20261127/extensions-detail.png",
+    "docs/verification/extensions-workbook-20261127/profiles-overview.png",
+    "docs/verification/extensions-workbook-20261127/profiles-status.png",
+    "docs/verification/extensions-workbook-20261127/access-overview.png",
+    "docs/verification/extensions-workbook-20261127/long-section-details.png",
+    "docs/verification/extensions-workbook-20261127/duo-profiles.png",
+    "docs/verification/extensions-workbook-20261127/bonus-profiles.png",
+    "docs/verification/extensions-workbook-20261127/access-profiles.png",
+    "docs/verification/extensions-workbook-20261127/access-status.png",
+    "docs/verification/extensions-workbook-20261127/summary-detail.png",
+    "docs/verification/extensions-workbook-20261127/stage-falseexit.png",
+    "docs/verification/extensions-workbook-20261127/stage-undermap.png",
+    "docs/verification/extensions-workbook-20261127/stage-kingdom.png",
+    "docs/verification/extensions-workbook-20261127/stage-spudsy.png",
+    "docs/verification/extensions-workbook-20261127/stage-production-falseexit.png",
+    "docs/verification/extensions-workbook-20261127/stage-production-undermap.png",
+    "docs/verification/extensions-workbook-20261127/production-added-overview.png",
+    "docs/verification/extensions-workbook-20261127/production-added-detail.png",
+    "docs/verification/extensions-workbook-20261127/qa-added-overview.png",
+    "docs/verification/extensions-workbook-20261127/qa-added-detail.png"
+  ],
+  "renderRequests": [
+    {
+      "name": "summary.png",
+      "sheetName": "Synthèse",
+      "range": "A1:H18",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "extensions-overview.png",
+      "sheetName": "Extensions combat",
+      "range": "A1:F10",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "extensions-detail.png",
+      "sheetName": "Extensions combat",
+      "range": "G5:J8",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "profiles-overview.png",
+      "sheetName": "Fiches extensions",
+      "range": "A1:D9",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "profiles-status.png",
+      "sheetName": "Fiches extensions",
+      "range": "E5:J9",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "access-overview.png",
+      "sheetName": "Extensions combat",
+      "range": "A35:F43",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "long-section-details.png",
+      "sheetName": "Extensions combat",
+      "range": "G14:J18",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "duo-profiles.png",
+      "sheetName": "Fiches extensions",
+      "range": "A198:D201",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "bonus-profiles.png",
+      "sheetName": "Fiches extensions",
+      "range": "A210:D213",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "access-profiles.png",
+      "sheetName": "Fiches extensions",
+      "range": "A232:D238",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "access-status.png",
+      "sheetName": "Fiches extensions",
+      "range": "E223:J226",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "summary-detail.png",
+      "sheetName": "Synthèse",
+      "range": "A19:H34",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-falseexit.png",
+      "sheetName": "Arènes",
+      "range": "N27:S27",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-undermap.png",
+      "sheetName": "Arènes",
+      "range": "N28:S28",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-kingdom.png",
+      "sheetName": "Arènes",
+      "range": "N15:S15",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-spudsy.png",
+      "sheetName": "Arènes",
+      "range": "N9:S9",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-production-falseexit.png",
+      "sheetName": "Production",
+      "range": "G2691:J2693",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "stage-production-undermap.png",
+      "sheetName": "Production",
+      "range": "G3188:J3190",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "production-added-overview.png",
+      "sheetName": "Production",
+      "range": "A3921:F3924",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "production-added-detail.png",
+      "sheetName": "Production",
+      "range": "G3921:J3924",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "qa-added-overview.png",
+      "sheetName": "QA",
+      "range": "A2524:F2527",
+      "scale": 1,
+      "format": "png"
+    },
+    {
+      "name": "qa-added-detail.png",
+      "sheetName": "QA",
+      "range": "G2524:I2527",
+      "scale": 1,
+      "format": "png"
+    }
+  ],
+  "renderRecords": {
+    "summary.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "da07b645ce1630f2c30420b87fc2290ff2bfefa7dc9f73bda63d04e1a2a991b5",
+      "sheetName": "Synthèse",
+      "range": "A1:H18"
+    },
+    "extensions-overview.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "08bc8023ec4a5d1af99c1b54836e4150dcf8388b69f3304fb81f1e2fc7c063d7",
+      "sheetName": "Extensions combat",
+      "range": "A1:F10"
+    },
+    "extensions-detail.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "b043cd02b5e0116b2615ac39096f379cb0f24d658d996713133f434eeb8507a6",
+      "sheetName": "Extensions combat",
+      "range": "G5:J8"
+    },
+    "profiles-overview.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "d8280efbb4248fcfcf0a24a6f29832ea41e84f741e4b0b4edaea5bba8e8b6987",
+      "sheetName": "Fiches extensions",
+      "range": "A1:D9"
+    },
+    "profiles-status.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "0846131e347ebf67afcb9a0a126bdf81aee8675889b46e32605fe72df6ab8441",
+      "sheetName": "Fiches extensions",
+      "range": "E5:J9"
+    },
+    "access-overview.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "65cbf2d02f85690d47a52ff8c9853a5f7facb036c7cb3731fd09ca20954d04fa",
+      "sheetName": "Extensions combat",
+      "range": "A35:F43"
+    },
+    "long-section-details.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "e4c579845752c3180ecc562262694fe5e0d2829a0b074dd2057db8c2234569bc",
+      "sheetName": "Extensions combat",
+      "range": "G14:J18"
+    },
+    "duo-profiles.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "9cf1b81ec3617efae51aa9f5bcff0d2fdf9ec8e22e50dcc32a511799b61e6bfa",
+      "sheetName": "Fiches extensions",
+      "range": "A198:D201"
+    },
+    "bonus-profiles.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "8278c0f7a72b6022b82c43aa5098dd0e21874a4090f7439c3260b61bfa199316",
+      "sheetName": "Fiches extensions",
+      "range": "A210:D213"
+    },
+    "access-profiles.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "51dfbe1a9c0d5ae86e0d268372faa556e645da0bf444d0a6394d3c88dc87bdff",
+      "sheetName": "Fiches extensions",
+      "range": "A232:D238"
+    },
+    "access-status.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "beda8816d89dbb29e03c0c2987b75f37b2f7b45816cb7cc827adde96b7b73c11",
+      "sheetName": "Fiches extensions",
+      "range": "E223:J226"
+    },
+    "summary-detail.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "ad1afc1c69dc954315a1d77705af4775cdfaffc28e24e775190c2b3460c64cea",
+      "sheetName": "Synthèse",
+      "range": "A19:H34"
+    },
+    "stage-falseexit.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "c98fd6ccc762a23796815c518642e14e0c4dc1e2a6cb4a1c64ce02a95ef7099e",
+      "sheetName": "Arènes",
+      "range": "N27:S27"
+    },
+    "stage-undermap.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "8f2b8af576d73b2b3c61dd1fdf0f4aca61e5327f60aedfa9c6e952980530b27e",
+      "sheetName": "Arènes",
+      "range": "N28:S28"
+    },
+    "stage-kingdom.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "adc1c2b5e3dac7508cd7ddee6baf093160612004482e26b8c954e27b70829729",
+      "sheetName": "Arènes",
+      "range": "N15:S15"
+    },
+    "stage-spudsy.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "8c0389674bf93a054ef5f70b2b28871cc81ee3dcc7933652bd785855b0380d00",
+      "sheetName": "Arènes",
+      "range": "N9:S9"
+    },
+    "stage-production-falseexit.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "f1a1342e4d4e2320eb26474d868239adaf3ceb2469e36da22f805e7e3792b0ad",
+      "sheetName": "Production",
+      "range": "G2691:J2693"
+    },
+    "stage-production-undermap.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "31d6f2ca899b462952d95e4071988cb1a0a788098b17ff18c73cde2484499e7b",
+      "sheetName": "Production",
+      "range": "G3188:J3190"
+    },
+    "production-added-overview.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "8f63a9124f62a119212c53268a5ecaee207f2e8d88e706aa598337286e63ca3c",
+      "sheetName": "Production",
+      "range": "A3921:F3924"
+    },
+    "production-added-detail.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "3411b158c798977a16fa05a5ea40c179177e11c92e2e433ffe90c651ae8f504c",
+      "sheetName": "Production",
+      "range": "G3921:J3924"
+    },
+    "qa-added-overview.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "e3fdb7998d96188f6fff7facfd9e1a6596c3b22b085e3c58f2c4e0aeb4971e68",
+      "sheetName": "QA",
+      "range": "A2524:F2527"
+    },
+    "qa-added-detail.png": {
+      "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+      "sha256": "b7a6c43f074f926333d1b577e320f21bf00fca41ba44cfe77974d09d1271ed73",
+      "sheetName": "QA",
+      "range": "G2524:I2527"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "reviewedAt": "2026-11-27T05:59:12.099Z",
+    "renderedViews": 22,
+    "workbookSHA256": "745f9e5f4d7e42c7934864df2f8f71e0b78a83ef3de578221438c3ab1ab14495",
+    "primary": {
+      "files": [
+        "summary.png",
+        "extensions-overview.png",
+        "extensions-detail.png",
+        "access-overview.png",
+        "summary-detail.png",
+        "stage-falseexit.png",
+        "stage-undermap.png",
+        "stage-kingdom.png",
+        "stage-spudsy.png",
+        "stage-production-falseexit.png",
+        "stage-production-undermap.png",
+        "production-added-overview.png",
+        "production-added-detail.png",
+        "qa-added-overview.png",
+        "qa-added-detail.png"
+      ],
+      "result": "Titres, totaux, retours à la ligne, états, couleurs, listes de statut et notes vérifiés. Aucun chevauchement ni texte tronqué observé dans ces vues."
+    },
+    "independent": {
+      "files": [
+        "profiles-overview.png",
+        "profiles-status.png",
+        "duo-profiles.png",
+        "bonus-profiles.png",
+        "access-profiles.png",
+        "access-status.png",
+        "long-section-details.png"
+      ],
+      "result": "Descriptions longues et sources lisibles ; titres et types cohérents. Les statuts visibles restent spécifié, non intégré et à exécuter ; aucun statut documentaire promu en fonctionnalité testée.",
+      "note": "Les vues de fiches d’accès et de statuts montrent des lignes complémentaires ; elles ne prétendent pas montrer les mêmes fiches."
+    },
+    "scope": "Revue des vues listées. Les 93 392 cellules historiques et les tableaux complets sont contrôlés séparément par comparaison native et réimportation ; aucune session Excel bureau."
+  },
+  "gameTestsExecutedByWorkbookUpdate": false,
+  "releaseReviewed": false,
+  "limitations": [
+    "Les contrôles de jeu historiques restent datés ; aucune campagne QA du jeu n’est exécutée par ce générateur de classeur.",
+    "Excel bureau et périphériques physiques non vérifiés. La fidélité 1:1 n’est pas certifiée par la présence de fichiers."
+  ],
+  "executionEvidence": {
+    "runtime": "CODEX_PRIMARY_RUNTIME_NODE with @oai/artifact-tool",
+    "builderSHA256": "650cd1423d0ce15f8457075320cfc7ca01dda631e0137a2d91da10a8d34be610",
+    "nativeInspectorSHA256": "44d1a662c0f87804689fb090424eb700ab709b1f1335f7097bd3673f92764c8b",
+    "publicationHelperSHA256": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e",
+    "rendering": "Batches of at most four views in isolated processes to bound memory usage."
+  },
+  "publication": {
+    "method": "scripts/workbook-publication.mjs",
+    "canonicalFiles": [
+      "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+      "combat-tracker-data.json",
+      "combat-workbook-verification.json",
+      "combat-extensions-workbook-verification.json"
+    ],
+    "guarantee": "Staging, sauvegardes et restauration sur erreur interceptée ; renommages individuels atomiques, groupe non atomique."
+  }
+}

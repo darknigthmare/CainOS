@@ -1,0 +1,60 @@
+{
+  "series": "gameoverse",
+  "style": "hommage",
+  "label": "Gameoverse · Hommage · Kit",
+  "identity": "Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/gameoverse"
+  ],
+  "state": "selection",
+  "id": "glitch-gameoverse-ribbit-hommage",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Kit in the official yellow adventurer ensemble. Brown fabric hood with two short triangular cat-ear points and a golden headband, fitted BEHIND Ribbit's two huge frog eyes so neither is hidden; yellow sleeveless tunic with narrow off-white angular center stripe over charcoal short sleeves; charcoal shorts with yellow hems, two large yellow gauntlet cuffs each with a magenta star-shaped crystal inset inside dark circular coral-red ring, green four-finger hands emerging from cuffs. Yellow ankle cuffs over bare green three-toed webbed feet, small pink bow at collar. Crystals are opaque decorative inserts, no glow. Keep long thin frog limbs, frog face, smooth green skin; no cat tail, human hair, human face or new biological cat ears. Adapt Kit's costume, not her body.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:gameoverse:hommage:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-466431e4-0d03-4856-a11a-8427e3ff83f2.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-466431e4-0d03-4856-a11a-8427e3ff83f2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    363,
+    31,
+    959,
+    1222
+  ],
+  "alpha12Margins": [
+    363,
+    31,
+    295,
+    32
+  ],
+  "alphaZeroFraction": 0.7846870874445793,
+  "alphaOpaqueFraction": 0.001425740660190421,
+  "borderAlphaMax": 1,
+  "file": "assets/encore/crossovers/gameoverse/ribbit/hommage/selection.png",
+  "bytes": 652543,
+  "sha256": "c4efcadd5ace1d0f2ab7573f3a018a2d13e3d00fb06f89431223f842eb2e1052",
+  "sha": "d9676cd0519afc7c1bb5d76a453c9b0f21784196",
+  "nativeBytesVerified": true,
+  "visualReview": "accepted",
+  "referencesSHA256": {
+    "assets/encore/crossovers/gameoverse/ribbit/hommage/stance.png": "dbb21ae1869e362c68db9bdf9636737557da4c6eefb97e905f461698c27e748d"
+  },
+  "auditPass": true,
+  "visualReviewNotes": "Distinct upright portrait; the verified stance costume, shape language, colors and accessories are preserved. Whole body visible, no image composition or crop.",
+  "fullBodyVisible": true,
+  "distinctBaseDrawing": true,
+  "framing": "full-body"
+}

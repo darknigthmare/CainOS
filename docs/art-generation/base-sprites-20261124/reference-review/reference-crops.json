@@ -1,0 +1,92 @@
+{
+  "records": [
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/cafejax-reference-detail.png",
+      "sourceFile": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg",
+      "sourceSha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "cropRectangle": [
+        190,
+        100,
+        455,
+        585
+      ],
+      "dimensions": [
+        265,
+        485
+      ],
+      "sha256": "8fec93f1a6ab40182d8834cdbeff61ea5339ebf4e0605f9da937e4c6ae800889",
+      "alterations": "Rectangular reference extract only. No resizing, recoloring, reconstruction or background removal; not a game asset."
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/cafecaine-reference-detail.png",
+      "sourceFile": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg",
+      "sourceSha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "cropRectangle": [
+        695,
+        0,
+        920,
+        245
+      ],
+      "dimensions": [
+        225,
+        245
+      ],
+      "sha256": "15fa138c7e13a09f33400e202abd3722ad8bc09385f74d78e5a6bc3145bf361e",
+      "alterations": "Rectangular reference extract only. No resizing, recoloring, reconstruction or background removal; not a game asset."
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/cafecaine-full-reference-detail.png",
+      "sourceFile": "docs/art-generation/base-sprites-20261124/reference-review/animate-cafe-main.jpg",
+      "sourceSha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "cropRectangle": [
+        695,
+        0,
+        925,
+        285
+      ],
+      "dimensions": [
+        230,
+        285
+      ],
+      "sha256": "f2b59ec6bee5f913ffb4240e35a799f24bca0914b38726720ee6902173ba2ebd",
+      "alterations": "Exact rectangular reference extract only. No resizing, recoloring, reconstruction or background removal; not a new game asset.",
+      "scope": "Primary Animate illustration, complete Caine composition."
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/existing-maidjax-detail.png",
+      "sourceFile": "assets/images/cainos-costumes-uniforms-0.6.0.png",
+      "sourceSha256": "a26595eedb2c504cc2537c0bd0c72ec208ae8a0b6aaffda1aa5e6ac8c6909526",
+      "cropRectangle": [
+        40,
+        15,
+        517,
+        1000
+      ],
+      "dimensions": [
+        477,
+        985
+      ],
+      "sha256": "a219da8d32e1148e3200d2b441b463899d75b0f09d10383fa2b16c079fdb7b1d",
+      "alterations": "Exact rectangular reference extract only. No resizing, recoloring, reconstruction or background removal; not a new game asset.",
+      "scope": "Existing Encore sprite comparison only; not a primary official source."
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/zooble-artbook-cocktail-detail.png",
+      "sourceUrl": "https://glitchproductions.store/cdn/shop/files/Tier2_3_Stickers_1.webp?v=1789097565&width=1600",
+      "productUrl": "https://glitchproductions.store/products/digital-circus-artbook",
+      "sourceSha256": "a69055cad456c2f0d6f44f7d29cbabd18bf2f369229fdb7a701a48854f5b169b",
+      "cropRectangle": [
+        235,
+        110,
+        685,
+        665
+      ],
+      "dimensions": [
+        450,
+        555
+      ],
+      "sha256": "b70d20881e69abeb3a578f96ca16bd1339ffeec8f8d050471fc66d8cf17c52eb",
+      "alterations": "Exact rectangular reference extract; native dimensions retained. Not a game asset."
+    }
+  ]
+}

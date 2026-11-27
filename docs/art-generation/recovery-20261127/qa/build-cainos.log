@@ -1,0 +1,11 @@
+Offline manifest: 0.7.0-b6d11b136010 / 6218 illustrations / 3528752273 bytes / art 4ff4b4b0442d97b2.
+copied index.html -> dist/index.html
+copied index.css -> dist/index.css
+copied app.js -> dist/app.js
+copied episodes.js -> dist/episodes.js
+copied cloud-account.js -> dist/cloud-account.js
+copied favicon.png -> dist/favicon.png
+copied assets -> dist/assets
+copied combat -> dist/combat
+CainOS ready: /workspace/scratch/8db10b0df53d/CainOS/dist
+{"type":"cainos","output":"/workspace/scratch/8db10b0df53d/CainOS/dist","report":"docs/art-generation/recovery-20261127/qa/build-cainos.json","expectedIllustrations":6218,"verifiedIllustrations":6218,"expectedCombatFiles":66,"verifiedCombatFiles":66,"expectedEntryFiles":6,"verifiedEntryFiles":6,"expectedFiles":6290,"verifiedFiles":6290,"verifiedBytes":3532957627,"failures":0,"verifiedDigest":"2950c3a526906e632a6828a1b1c5f10126804b03ee0ea03213d081905b078c26","ok":true}

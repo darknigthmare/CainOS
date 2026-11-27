@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-11-20T17:29:24.336041+00:00",
+  "completedAt": "2026-11-20T17:29:28.023119+00:00",
+  "seconds": 3.687,
+  "command": [
+    "scripts/integrate-combat-metarunner-20261120-b.py",
+    "--check-only"
+  ],
+  "exitCode": 0,
+  "stdout": "{\"status\": \"ready\", \"families\": 3, \"nativePNG\": 33, \"bytes\": 28018143, \"alreadyActive\": false, \"runtimeTouched\": false}\n",
+  "stderr": "",
+  "runtimeBefore": {
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
+    "combat/costume-order.mjs": "2277ed97caf826a6c2c4e41ade8c26571e3f2ff233a52a0bf6e357184ff7b2a0",
+    "combat/offline-manifest.mjs": "fadef68870a9f6de11e52fe9fd1c886eb5b55cf6b76d93ba2df75e1961f98ffc"
+  },
+  "runtimeAfter": {
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
+    "combat/costume-order.mjs": "2277ed97caf826a6c2c4e41ade8c26571e3f2ff233a52a0bf6e357184ff7b2a0",
+    "combat/offline-manifest.mjs": "fadef68870a9f6de11e52fe9fd1c886eb5b55cf6b76d93ba2df75e1961f98ffc"
+  }
+}

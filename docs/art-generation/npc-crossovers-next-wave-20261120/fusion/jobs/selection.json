@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "selection",
+  "prompt": "Create one complete, entire head-to-toes character for the existing Digital Circus — Encore 2D fighting game. An ORIGINAL fan-game crossover redesign, not canonical merchandise. Clean polished 2D cel shading, confident dark contour, gentle warm upper-left highlights, 3/4 view facing RIGHT. Keep the slender long-legged frog silhouette and friendly identity of the first image, whose game proportions are intentionally an adaptation. The second reference establishes Ribbit identity only; never draw the keychain ring or strap. One single character, no duplicate, no grid, no caption, no text or watermark, no scenery, no floor or cast shadow. Native true transparent RGBA. Tall 1024x1536 composition, entire figure including all toes with generous clear margins on every side, no cropping. RIBBIT — AUTOMATE AMPHIBIEN, an original full-body fusion with the industrial robot language of Murder Drones. Transform the ENTIRE body into an elegant slim green mechanical amphibian, keeping Ribbit's long limb proportions and recognizable frog head. Head has two separate huge protruding glossy BLACK oval optical domes, each with one bright magenta LED oval pupil and a tiny pale highlight; they remain separate frog eyes, never a single human visor. Green head shell and light mint oval muzzle shell with small friendly black smile seam. Two round pink cheek light panels. Pink bow tie becomes a faceted metal chest plate at throat. Torso is green segmented shell around one large mint belly panel with a tiny violet status light. Slender green arms and legs, dark charcoal ROUND pivot joints at shoulders, elbows, hips and knees, mint forearm and shin panels, small violet indicator lines. Both hands have three rounded mechanical digits, both large frog feet have three rounded mechanical toes. No organic skin. No clothing, hoodie, hat, hair, weapon, wings, spikes or tail. Third image is only for LED/segmented-metal design language; NEVER copy Uzi's human head, hairstyle, black hoodie or gun. SELECTION portrait pose: upright welcoming confident three-quarter stance facing right, one hand loosely at chest and the other held outward open as if introducing herself, legs slightly apart, both entire feet visible. Robot has the charming friendly demeanor of Ribbit. Clearly readable polished 2D illustration, restrained gloss, no luminous aura outside the body.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root"
+}

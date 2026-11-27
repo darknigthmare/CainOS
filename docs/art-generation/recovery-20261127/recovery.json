@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27",
+  "project": "Digital Circus / CainOS Combat",
+  "repository": "darknigthmare/CainOS",
+  "pullRequest": 14,
+  "verifiedRemoteHead": "6e44ab75b9c82b4d6fe62a0051287275abc97753",
+  "announcedButNotRecovered": [
+    {"category": "Kaufmo crossover static bases", "pngCount": 54, "pairs": 27, "universes": 9},
+    {"category": "Max crossover static bases", "pngCount": 12, "universes": ["Murder Drones", "Meta Runner"]},
+    {"category": "Corrected actual series locations", "pngCount": 13},
+    {"category": "Associated runtime code and updated workbook", "fileCount": null}
+  ],
+  "recoveredFiles": [],
+  "searches": [
+    {"surface": "local", "locations": ["/workspace/scratch", "/workspace/library-files", "/home/agent/.codex/generated_images", "/mnt/data"], "query": "Targeted filenames CainOS, cainos, Kaufmo, kaufmo, max, 20261126", "outcome": "No matching earlier CainOS source or asset found"},
+    {"surface": "Library", "query": "Recursive files created after 2026-11-25T00:00:00Z", "outcome": "Empty result"},
+    {"surface": "Library", "query": ["CainOS", "Kaufmo", "Digital Circus Encore", "Max Murder Drones"], "outcome": "No target batch; older content only"},
+    {"surface": "Library", "query": "Title-only CainOS / Kaufmo / encore", "outcome": "Only earlier relevant archive CainOS_Encore_168_visuels.zip (18 November)"},
+    {"surface": "Drive", "query": ["CainOS", "Kaufmo", "Digital Circus", "Encore"], "outcome": "No source batch; CainOS/Circus only in global project dashboard"},
+    {"surface": "Drive", "query": "Images named Kaufmo/kaufmo/CainOS/encore and folders named Circus/CainOS/ENCORE/Encore", "outcome": "Empty results"},
+    {"surface": "Personal Context", "query": "Root search for precise 25–26 November local paths or download URLs", "outcome": "Announcements confirmed, no recoverable URL or current local path; old /workspace/scratch/468468f2b047/CainOS no longer exists", "reportedBy": "root"}
+  ],
+  "excludedOlderArchive": {
+    "name": "CainOS_Encore_168_visuels.zip",
+    "createdAt": "2026-11-18T09:25:03.664187Z",
+    "sizeBytes": 74345964,
+    "libraryFileId": "libfile_fde3_f-074a36ca7ba081918afb20e1f404380c_b6040bcabe388191b426902484aff67a",
+    "downloaded": false,
+    "reason": "Predates the target batch"
+  },
+  "conclusion": "The source bytes for the announced 79 PNG and associated local edits were not recovered. Treat these as unverified missing local work, not as present assets. This does not establish that the original generation never occurred.",
+  "mutations": {"repositoryChanges": 0, "remoteWrites": 0, "deletions": 0, "newGenerations": 0}
+}

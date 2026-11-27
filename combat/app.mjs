@@ -1,7 +1,7 @@
 import { CROSSOVER_VISITS, visitCostumes, visitIllustration } from './crossover-visits.mjs';
 import { CROSSOVER_SERIES, CROSSOVER_STYLES, crossoverStylesFor, matchesCostumeFilter } from './crossovers.mjs';
 import { FIGHTERS, STAGES, ALL_STAGES, COSTUMES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, equipCostume as costume, getFighter, getReplayFighter, getStage, getDedicatedStage } from './data.mjs';
-import { getFidelitySources } from './fidelity.mjs';
+import { getFidelitySources, getIllustratedFighterFidelity } from './fidelity.mjs';
 import { CombatEngine, FIXED_DT } from './engine.mjs';
 import { CombatRenderer, drawPortrait } from './render.mjs';
 import { archiveSelectionParts, warmCombatPoses } from './illustrations.mjs';
@@ -13,6 +13,7 @@ import { createStoryPresentation, stepStoryPresentation, skipStoryPresentation, 
 import { TOURNAMENT_NOTICE, getTournamentLore } from './tournament-lore.mjs';
 import { CombatAudio, selectCombatCue } from './audio.mjs';
 import { menuItems, rememberFocus, restoreFocus, moveMenuFocus, navigateKeyboardGroup } from './menu-navigation.mjs';
+import { SelectionPresentation, selectionPortraitStatus } from './selection-presentation.mjs';
 import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
 import { selectMatchFinisher, selectMatchFriendship } from './finishers.mjs';
 import { loadFinisherBackdrop } from './render-finishers.mjs';
@@ -35,6 +36,8 @@ let profile = initialProfile.profile;
 let profileRecovered = initialProfile.source === 'backup' ? 'backup' : null;
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
+const selectionChoices = () => selection.fighters.map((fighterId, side) => ({ fighterId, variantId: selection.variants[side] }));
+const selectionPresentation = new SelectionPresentation(selectionChoices());
 let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer, searchTimer;
 let currentObserver, bindingCapture = null, osVisible = true, storyReader = null, finisherGallery = null, dialogReturnFocus = null;
 const PROGRAM_MODES = ['arcade', 'boss', 'survival', 'story', 'tournament'];
@@ -105,6 +108,7 @@ function prepareMenuGroups(scope) {
 }
 function setScreen(next) {
   if (next !== 'archives') { clearTimeout(searchTimer); searchTimer = null; }
+  if (screen === 'select' && next !== 'select') resetSelectionPresentation();
   const changed = screen !== next;
   const previousFocus = changed ? null : rememberFocus(main);
   screen = next; currentObserver?.disconnect();
@@ -150,9 +154,17 @@ async function paintPortrait(canvas) {
   const item = COSTUMES.find(f => f.id === canvas.dataset.portrait) || ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
   // Keep the selected costume's identity when loading its portrait.
   const fighter = FIGHTERS.find(f => f.id === item.id) || item;
+  const selected = screen === 'select' && canvas.closest('[data-selection-artist]');
+  const side = selected ? Number(selected.dataset.selectionArtist) : null;
+  const choice = selected ? { fighterId: fighter.fighterId || fighter.id, variantId: fighter.fighterId ? fighter.id : '' } : null;
+  const request = selected ? selectionPresentation.beginPortrait(side, choice) : null;
+  if (request !== null) updateSelectionPortraitStatus(side);
+  let available = false;
   try {
-    if (!await drawPortrait(canvas, fighter, { selection: ['select', 'home', 'archives'].includes(screen) })) throw new Error('Portrait indisponible');
+    available = await drawPortrait(canvas, fighter, { selection: ['select', 'home', 'archives'].includes(screen) || (screen === 'codex' && fighter.id === 'max') });
+    if (!available) throw new Error('Portrait indisponible');
   } catch { canvas.setAttribute('aria-label', `${fighter.name} — illustration indisponible`); }
+  if (selected && canvas.isConnected && screen === 'select' && selectionPresentation.finishPortrait(side, request, available)) updateSelectionPortraitStatus(side);
 }
 function portraits() {
   const nodes = main.querySelectorAll('canvas[data-portrait]');
@@ -196,6 +208,7 @@ function playVisit(world) {
 function chooseMode(mode) {
   if (!MODES.some(m=>m.id===mode)) return;
   selection.mode = mode; selection.side = 0;
+  resetSelectionPresentation();
   if (mode === 'challenge') renderChallenges(); else renderSelect();
 }
 function renderChallenges() {
@@ -203,6 +216,7 @@ function renderChallenges() {
   main.innerHTML = `${title('LES DÉFIS DE CAINE','Une petite démonstration ?','Chaque défi est un exercice indépendant de 60 secondes. Toutes les techniques restent disponibles dès le départ.')}<div class="challenge-list">${CHALLENGES.map((c,i)=>`<button class="challenge-card" data-challenge="${c.id}"><span class="eyebrow">EXERCICE 0${i+1}</span><h3>${c.name}</h3><p>${c.text}</p><span class="badge ${profile.challenges.includes(c.id)?'success':''}">${profile.challenges.includes(c.id)?'✦ RÉUSSI':'ENTRER EN PISTE ↗'}</span></button>`).join('')}</div>`;
 }
 function renderSelect() {
+  selectionPresentation.reconcile(selectionChoices());
   setScreen('select');
   const mode = MODES.find(m=>m.id===selection.mode), selected = selection.fighters.map(getFighter);
   const single = [...PROGRAM_MODES,'challenge'].includes(selection.mode);
@@ -211,7 +225,7 @@ function renderSelect() {
   const homeStages = [...new Set(selection.fighters)].map(getDedicatedStage).filter(Boolean);
   main.innerHTML = `${title(mode.eyebrow,selection.mode==='challenge'?challenge.name:'Qui entre en scène ?',selection.mode==='challenge'?challenge.text:mode.description)}
     <div class="pick-header"><h2>Les artistes</h2><div class="pick-side"><button data-side="0" class="${selection.side===0?'active':''}">JOUEUR 1</button>${single?'':`<button data-side="1" class="${selection.side===1?'active':''}">${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</button>`}</div></div>
-    <div class="roster">${FIGHTERS.map(f=>`<button class="fighter-card ${selection.fighters[0]===f.id?'selected':''} ${!single&&selection.fighters[1]===f.id?'rival':''}" data-fighter="${f.id}" aria-label="Choisir ${escapeHTML(f.name)}" aria-pressed="${selection.fighters[selection.side]===f.id}">${portraitMarkup(f.id)}<strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small>${selection.fighters[0]===f.id?'<span class="fighter-chip">J1</span>':!single&&selection.fighters[1]===f.id?'<span class="fighter-chip p2">J2</span>':''}</button>`).join('')}</div>
+    <div class="roster">${FIGHTERS.map(f=>`<button class="fighter-card ${selection.fighters[0]===f.id?'selected':''} ${!single&&selection.fighters[1]===f.id?'rival':''}" data-fighter="${f.id}" aria-label="Choisir ${escapeHTML(f.name)}" aria-pressed="${selection.fighters[selection.side]===f.id}">${portraitMarkup(f.id)}<strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small><span class="fighter-chips">${selection.fighters[0]===f.id?'<span class="fighter-chip">J1</span>':''}${!single&&selection.fighters[1]===f.id?'<span class="fighter-chip p2">J2</span>':''}</span></button>`).join('')}</div>
     <div class="selection-summary">${selectionArtist(0)}<div class="selection-vs" aria-hidden="true">VS</div>${single?`<div class="selection-program"><h3>${selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin'}</h3><p>Une succession de défis préparée par Caine.</p></div>`:selectionArtist(1)}</div>
     ${selection.mode==='story'?storyLibraryMarkup(selected[0].id):''}<div class="selection-controls">${costumePicker(selected[0], 'variant-0', 'Apparence joueur 1', selection.variants[0])}${single ? '' : costumePicker(selected[1], 'variant-1', selection.mode === 'local' ? 'Apparence joueur 2' : 'Apparence adversaire', selection.variants[1])}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
     <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>${stage.series ? escapeHTML(CROSSOVER_SERIES.find(series=>series.id===stage.series)?.name || stage.series) : 'SCÈNE '+String(i+1).padStart(2,'0')}</span></button>`).join('')}${homeStages.map(stage=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE DÉDIÉE · ${escapeHTML(getFighter(stage.dedicatedTo).name)}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">La garde-robe réunit les archives de CainOS et les tenues crossover créées pour Encore. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
@@ -246,10 +260,45 @@ function costumePicker(fighter, id, label, selected, original = '') {
     <label class="field"><span>Interprétation</span><select data-costume-filter="style" ${filter.series === 'circus' ? 'disabled' : ''}>${interpretationOptions(filter)}</select></label></details></div>`;
 }
 
+function resetSelectionPresentation() {
+  selectionPresentation.reset(selectionChoices());
+  $('#selection-status').textContent = '';
+}
+function selectionSideName(side) { return side === 0 ? 'Joueur 1' : selection.mode === 'local' ? 'Joueur 2' : 'Adversaire'; }
+function announceSelection(side, restored = false) {
+  const fighter = getFighter(selection.fighters[side]);
+  const variant = COSTUMES.find(item => item.id === selection.variants[side] && item.fighterId === fighter.id);
+  $('#selection-status').textContent = `${selectionSideName(side)} : ${fighter.name}, ${variant?.name || 'apparence originale'}. ${restored ? 'Choix précédent rétabli.' : 'Choix retenu.'}`;
+}
+function updateSelectionPortraitStatus(side) {
+  const card = main.querySelector(`[data-selection-artist="${side}"]`);
+  if (!card) return;
+  const state = selectionPresentation.snapshot(side);
+  card.dataset.portraitState = state.portrait;
+  card.querySelector('canvas').setAttribute('aria-busy', String(state.portrait === 'loading'));
+  card.querySelector('[data-selection-portrait-status]').textContent = selectionPortraitStatus(state.portrait);
+}
+function selectArtist(side, fighterId, variantId = '') {
+  if (!FIGHTERS.some(item => item.id === fighterId)) return false;
+  if (variantId && !COSTUMES.some(item => item.id === variantId && item.fighterId === fighterId)) return false;
+  const changed = selectionPresentation.choose(side, { fighterId, variantId });
+  selection.fighters[side] = fighterId; selection.variants[side] = variantId;
+  return changed;
+}
+function undoSelection(side) {
+  const previous = selectionPresentation.undo(side);
+  if (!previous) return;
+  selection.fighters[side] = previous.fighterId; selection.variants[side] = previous.variantId;
+  selection.side = side;
+  renderSelect(); announceSelection(side, true);
+  // The undo button becomes disabled. Return focus to this side's restored card.
+  queueMicrotask(() => { if (screen === 'select') main.querySelector(`[data-fighter="${previous.fighterId}"]`)?.focus({ preventScroll: true }); });
+}
 function selectionArtist(side) {
   const fighter = getFighter(selection.fighters[side]);
   const appearance = COSTUMES.find(v=>v.id===selection.variants[side] && v.fighterId===fighter.id) || fighter;
-  return `<div class="selected-artist" data-selection-artist="${side}" data-appearance-id="${appearance.id}">${portraitMarkup(appearance.id,'selected-portrait',240,280)}<div><span class="eyebrow">${side===0?'JOUEUR 1':selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><h3>${escapeHTML(fighter.name)}</h3><p class="selected-costume">${escapeHTML(appearance===fighter?'Apparence originale':appearance.name)}</p><p>${escapeHTML(fighter.role)} · 10 techniques</p><button class="text-button" data-appearance="${appearance.id}" aria-label="Comparer l’apparence de ${escapeHTML(fighter.name)}">Voir la tenue ↗</button></div></div>`;
+  const state = selectionPresentation.snapshot(side);
+  return `<div class="selected-artist" data-selection-artist="${side}" data-appearance-id="${appearance.id}" data-selection-brief="${state.selectionBriefId}" data-portrait-state="${state.portrait}">${portraitMarkup(appearance.id,'selected-portrait',240,280)}<div><span class="eyebrow">${selectionSideName(side).toUpperCase()}</span><h3>${escapeHTML(fighter.name)}</h3><p class="selected-costume">${escapeHTML(appearance===fighter?'Apparence originale':appearance.name)}</p><p>${escapeHTML(fighter.role)} · 10 techniques</p><p class="selection-choice-status" data-selection-portrait-status>${selectionPortraitStatus(state.portrait)}</p><div class="selection-artist-actions"><button class="text-button" data-appearance="${appearance.id}" aria-label="Comparer l’apparence de ${escapeHTML(fighter.name)}">Voir la tenue ↗</button><button class="text-button" id="undo-selection-${side}" data-undo-selection="${side}" aria-label="Annuler le dernier choix — ${selectionSideName(side)}" ${state.previous?'':'disabled'}>Annuler le dernier choix</button></div></div></div>`;
 }
 function refreshSelectionArtist(side) {
   const current = main.querySelector(`[data-selection-artist="${side}"]`);
@@ -292,7 +341,7 @@ function moveTable(fighter) {
 }
 function renderCodex() {
   setScreen('codex'); const fighter=getFighter(codexId);
-  main.innerHTML=`${title('LE PROGRAMME','Les artistes et leurs techniques','Chaque combattant possède ses dix techniques, une ressource de stabilité et un grand final. Les dégâts ci-dessous précèdent les modificateurs de puissance, de combo et de garde.')}<div class="codex-layout"><aside class="codex-list" aria-label="Liste des combattants">${FIGHTERS.map(f=>`<button data-codex="${f.id}" class="${f.id===codexId?'active':''}">${portraitMarkup(f.id,'',100,120)}<span><strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small></span></button>`).join('')}</aside><section><div class="codex-head">${portraitMarkup(fighter.id)}<div><span class="eyebrow">${escapeHTML(fighter.role)}</span><h2>${escapeHTML(fighter.name)}</h2><p>${escapeHTML(fighter.title)}<br>Vie : 10 000 · Puissance ×${fighter.power} · Vitesse ×${fighter.speed}</p><button class="secondary" data-practice="${fighter.id}">Répéter avec ${escapeHTML(fighter.name)}</button><button class="secondary" data-finale-fighter="${fighter.id}">Les trois finales de spectacle</button></div></div>${fidelityDetails(fighter.fidelity,`Repères de ${fighter.name}`,'fighter-fidelity')}${moveTable(fighter)}<p class="small-note">Enchaînements sur touche confirmée : léger → fort ; bas → spécial ; fort → spécial avant. Les projectiles, boucliers, parades et déplacements varient selon l’artiste. Le labo permet de voir les zones de contact.</p><p class="small-note">Les techniques sont des créations pour le jeu. Leurs fiches indiquent les repères visuels et les références qui ont servi à leur adaptation.</p></section></div>`;
+  main.innerHTML=`${title('LE PROGRAMME','Les artistes et leurs techniques','Chaque combattant possède ses dix techniques, une ressource de stabilité et un grand final. Les dégâts ci-dessous précèdent les modificateurs de puissance, de combo et de garde.')}<div class="codex-layout"><aside class="codex-list" aria-label="Liste des combattants">${FIGHTERS.map(f=>`<button data-codex="${f.id}" class="${f.id===codexId?'active':''}">${portraitMarkup(f.id,'',100,120)}<span><strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small></span></button>`).join('')}</aside><section><div class="codex-head">${portraitMarkup(fighter.id)}<div><span class="eyebrow">${escapeHTML(fighter.role)}</span><h2>${escapeHTML(fighter.name)}</h2><p>${escapeHTML(fighter.title)}<br>Vie : 10 000 · Puissance ×${fighter.power} · Vitesse ×${fighter.speed}</p><button class="secondary" data-practice="${fighter.id}">Répéter avec ${escapeHTML(fighter.name)}</button><button class="secondary" data-finale-fighter="${fighter.id}">Les trois finales de spectacle</button></div></div>${fidelityDetails(getIllustratedFighterFidelity(fighter.id),`Repères de ${fighter.name}`,'fighter-fidelity')}${moveTable(fighter)}<p class="small-note">Enchaînements sur touche confirmée : léger → fort ; bas → spécial ; fort → spécial avant. Les projectiles, boucliers, parades et déplacements varient selon l’artiste. Le labo permet de voir les zones de contact.</p><p class="small-note">Les techniques sont des créations pour le jeu. Leurs fiches indiquent les repères visuels et les références qui ont servi à leur adaptation.</p></section></div>`;
   portraits();
 }
 async function showFinisherGallery(fighterId, finisherId = '', variantId = '') {
@@ -489,6 +538,7 @@ function requestStart() {
   return startMatch();
 }
 async function startMatch(options={}) {
+  resetSelectionPresentation();
   closeDialog(); controls.clear();
   const mode = options.mode || selection.mode;
   const run = options.replay ? null : options.run || (PROGRAM_MODES.includes(mode) ? createProgram(mode,selection.fighters[0],FIGHTERS,STAGES,{
@@ -830,7 +880,8 @@ async function handleClick(event){
     if(button.dataset.mode){chooseMode(button.dataset.mode);return;}
     if(button.dataset.challenge){selection.challenge=button.dataset.challenge;selection.mode='challenge';selection.side=0;renderSelect();return;}
     if(button.dataset.side){selection.side=Number(button.dataset.side);renderSelect();return;}
-    if(button.dataset.fighter){selection.fighters[selection.side]=button.dataset.fighter;selection.variants[selection.side]='';renderSelect();return;}
+    if(button.dataset.fighter){const changed=selectArtist(selection.side,button.dataset.fighter);renderSelect();if(changed)announceSelection(selection.side);return;}
+    if(button.dataset.undoSelection!==undefined){undoSelection(Number(button.dataset.undoSelection));return;}
     if(button.dataset.stage){selection.stage=button.dataset.stage;renderSelect();return;}
     if(button.dataset.finaleFighter){await showFinisherGallery(button.dataset.finaleFighter);return;}
     if(button.dataset.finaleId){await showFinisherGallery(button.dataset.finaleArtist,button.dataset.finaleId,$('#finale-costume')?.value||'');return;}
@@ -943,7 +994,7 @@ document.addEventListener('change',event=>{
     select.innerHTML = costumeOptions(getFighter(picker.dataset.owner), select.value, picker.dataset.original, filter);
     return;
   }
-  if(target.id.startsWith('variant-')){const side=Number(target.id.at(-1));selection.variants[side]=target.value;refreshSelectionArtist(side);}
+  if(target.id.startsWith('variant-')){const side=Number(target.id.at(-1));const changed=selectArtist(side,selection.fighters[side],target.value);refreshSelectionArtist(side);if(changed)announceSelection(side);}
   if(target.id==='finale-costume'&&finisherGallery){const entry=finisherGallery.entry;void showFinisherGallery(entry.fighterId,entry.id,target.value).catch(error=>toast(error.message));return;}
   if(target.id==='wardrobe-variant'){void showAppearance(target.value,true).catch(()=>toast('Cette apparence ne peut pas être affichée.'));return;}
   if(target.id==='select-difficulty'){profile.settings.difficulty=target.value;persist();}

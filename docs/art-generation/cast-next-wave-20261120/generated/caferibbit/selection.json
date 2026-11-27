@@ -1,0 +1,78 @@
+{
+  "appearanceId": "caferibbit",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: one production-ready transparent full-body 2D character selection sprite for the existing Digital Circus Encore fan-game.\n\nCreate exactly ONE Ribbit in the official Animate Cafe outfit. Input image 1 is the official cafe illustration detail and is the authority for costume, skin colors and accessory placement. Input image 2 is only the existing game's clean outline, elongated frog proportions and cel-shaded drawing style; do not copy its bare body, huge pink bow, olive tint or surrounding glow. No other character from the poster.\n\nIdentity and clothes: bright fresh green frog head and exposed arms and legs, paler mint muzzle; two huge white eyes with black pie-cut pupils, slightly lowered dark navy upper lids and a small gentle smile. No hair, human nose or rabbit ears. White frilled maid headband with the dark navy side bows visible in reference 1. The neck has a slim pink ribbon, not the oversized bow of reference 2. Short dark navy dress, white high bib with a small dark navy heart, white ruffled apron with dark navy decorative bows, white frill trim along the hem, and white scalloped wrist cuffs. Keep green frog hands. Two long white socks with scalloped top cuffs and tiny pink accents; two closed rounded dark navy shoes with low chunky berry-pink sole edges. Keep the complete cafe costume coherent; no green lily-pad emblem, no sheer lace bodice, no different Pendantz maid outfit.\n\nSelection pose: full upright relaxed three-quarter stance facing SCREEN-RIGHT, gaze screen-right. One green frog hand raised in a small welcoming open-palm gesture and the other resting lightly beside the waist. Both legs and shoes separately readable. Only one intact head, two arms with two hands, two legs with two feet. Elegant friendly silhouette, no exaggerated human anatomy. The reference's serving tray and dessert are display props: OMIT both, leave hands empty.\n\nComposition: center the whole body on a tall portrait canvas, at least 8 percent transparent breathing room around every outer extremity, including headband bows and shoe soles; body occupies about 80 percent of height. Crisp dark contour, restrained two-tone cel shading and clear flat colors matching the existing assets. No scenery, floor, cast shadow, surface reflection, text, logos, watermark, frame, duplicate body, extra limbs, cropped shapes, white sticker border, halo, bloom or glow. Genuine native transparent RGBA background; do not paint a checkerboard or any solid backdrop.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+    "assets/encore/selection/ribbit.png"
+  ],
+  "referenceRoles": [
+    "Official cafe costume and visible complete anatomy",
+    "Existing game drawing style and proportions only"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "caferibbit:selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+  "targetFile": "assets/encore/selection/caferibbit.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-a533b04f-d92e-4a67-bf03-86730ee41e13.png",
+  "sourceGenerationId": "exec-a533b04f-d92e-4a67-bf03-86730ee41e13",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+      "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+      "bytes": 139654
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/selection/ribbit.png",
+      "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+      "bytes": 1352678
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    96,
+    21,
+    770,
+    1523
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1073071,
+  "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+  "bytes": 1495892,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T14:40:54.009836+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Inspection du rendu natif et de sa composition alpha sur deux fonds : silhouette complète, deux bras, deux jambes, coiffe et semelles intactes ; aucun halo visible composé.",
+      "Robe bleu nuit, plastron à cœur, deux nœuds de tablier, manchettes et chaussettes à revers festonnés conformes à la qualification café. Joues roses et dessin élancé issus de la référence de jeu ; adaptation statique, sans affirmation 1:1.",
+      "Orientation écran droit. Limites alpha > 12 [96,21,770,1523] internes ; faibles valeurs alpha 1 à certains bords, non assimilées à une opacité pleine. RGB caché conservé sans retouche."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "module",
+    "tool": "image_gen.imagegen",
+    "pass": "recovery-v2-correction-1",
+    "transparent_background": true,
+    "prompt": "Edit the supplied game sprite. Keep ONE compact connected asymmetric accessory formed from a pink triangular block, yellow rectangular block, cyan bent piece and purple round joint. REMOVE ALL FACE FEATURES, EYES, PUPILS, SPIRALS, EYELASHES, EMOTIONS and remove all external glow or diffuse aura. It must be an inanimate modular toy part, not a head or character. Make the broad block faces simple flat colored planes with clean cel shading and narrow dark outlines. Light upper-left. Actual transparent PNG background: all pixels outside the hard clean object silhouette must be fully alpha zero, with only antialiasing on the edge. Preserve full silhouette inside safe empty transparent margins on every side. No scene, no floor, no cast shadow, no text, no tiny decorative patterns. Crisp readable at 32–80px.",
+    "destination": "assets/encore/projectiles/module.png",
+    "referenced_image_paths": [
+      "/workspace/scratch/e51b531817b1/generated_images/exec-b0938938-c546-4333-8b95-c17ddf67158b.png"
+    ],
+    "rejectedNativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-b0938938-c546-4333-8b95-c17ddf67158b.png",
+    "rejectionReason": "First pass added a character face; the current accessory is an inanimate geometric module. Only the corrected PNG is shipped.",
+    "acceptedNativeSource": "/workspace/scratch/e51b531817b1/generated_images/exec-6f98394a-3c2c-4bfb-909e-e3611a31c9a2.png"
+  }
+]
+

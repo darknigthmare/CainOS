@@ -1,0 +1,114 @@
+{
+  "mode": "built-in image_gen",
+  "newNativePngCount": 8,
+  "existingStancesPreserved": 4,
+  "reviewedAppearances": 6,
+  "pixelEdits": "none",
+  "totalNewBytes": 12516313,
+  "assets": [
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: identity-preserve. Asset: one fighter-selection bust portrait for Digital Circus Encore. The reference is Queenie Reine des profondeurs, an original Gaslight District crossover. Create ONE separate bust portrait showing the complete coral-tipped chess queen crown down to below the inset amber lantern on the chest. Keep precisely the reference identity: blue-gray weathered driftwood scalloped chess crown and neck, protruding white half-lidded eyes with orange irises and short black lower lashes, tiny barnacles, dark teal seaweed cloak, brass lantern inset into chest with amber solid glass, two pale sea-glass detached gloves. Preserve all proportions, shapes, palette, detailed hand-painted 2D cel shading and outline style. One figure facing three-quarter right, gloves fully visible beside chest, no arms, legs, mouth, nose or human anatomy. Full crown and coral with margin; intentional bust framing below lantern. Real transparent RGBA background without any fog, glow, black vignette, ground shadow, scenery, extra creature, text or frame. The original crossover remains a chess piece; no transformation into a humanoid.",
+      "source": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/stance.png",
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-664576a1-26a9-4bd5-ad46-1069a369acb9.png",
+      "installed": "assets/encore/crossovers/gaslightdistrict/queenie/fusion/selection.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Bust preserves driftwood, coral finial, sea-glass gloves, barnacles and inset lantern. Original transformed anatomy remains a chess queen without human limbs.",
+      "sha256": "64a73d9493669ca8b84ff83f77c3e8f66def7da50d555c57230e8408bc05f613",
+      "bytes": 1635594
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: identity-preserve. Asset type: fighter-selection portrait PNG for Digital Circus Encore. Use the supplied full-body Queenie Gaslight District homage sprite as the exact design reference. Create ONE isolated bust portrait of the SAME original crossover design. Frame from complete crown orb down to mid-torso; both floating white gloves visible near the torso and fully inside frame; lower body intentionally ends below the mid torso. Preserve warm wooden queen-chess-piece head, scalloped crown with orb, sleepy white eyes with orange irises, black lower eyelashes, cream rolled scarf, copper-brown asymmetrical sleeveless leather wrap mantle with diagonal panels and broad copper glove cuffs. Facing slight three-quarter to screen right; calm confident expression. Polished detailed hand-painted 2D cel shading and fine dark outlines matching reference. Preserve the same anatomy without arms, legs, mouth or nose. Actual transparent RGBA background: empty alpha outside character, NO dark vignette, ambient haze, glow, ground, shadow, scene, text, labels or second figure. Crown and fingers must not touch the frame. One portrait only, not a sheet.",
+      "source": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/stance.png",
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-f388f817-3353-4761-a1fb-2a510dff3968.png",
+      "installed": "assets/encore/crossovers/gaslightdistrict/queenie/hommage/selection.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Complete crown and two detached gloves; wood, orange eyes, scarf and copper wrap match the reference. Bust framing.",
+      "sha256": "95c93e653417788852072374ce8559981e19701ad4b60a4b0fa314c8dd7e2d55",
+      "bytes": 1284867
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: identity-preserve. Asset: one fighter-selection bust portrait for Digital Circus Encore. The reference is Queenie as Dame des écluses, an original Gaslight District crossover. Create a separate high-quality selection portrait from complete wooden crown orb to waist, preserving exactly the same warm turned-wood chess queen head, protruding half-lidded white eyes with orange irises and black lower lashes, sleeveless petrol-blue oilskin mantle, raised charcoal collar, brass scallop-shell brooch, copper sash and chart pouches, cream ermine front, and two detached white gloves. Slight three-quarter right-facing angle. One figure only, clean hand-painted 2D cel shading matching reference. The floating gloves are fully framed near the bust; NO arms, legs, mouth, nose or human anatomy. Full crown clear with margin. Intentional bust end at waist, no lower skirt. Actual transparent alpha everywhere outside character; no background gradient, glow, haze, ground shadow, labels, text, or frame. Do not copy the ambient surround in the reference. Preserve costume design, materials and colors 1:1 with supplied sprite.",
+      "source": "assets/encore/crossovers/gaslightdistrict/queenie/resident/stance.png",
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-b8c2c2ca-769a-4cd2-a68b-e57604b5dbed.png",
+      "installed": "assets/encore/crossovers/gaslightdistrict/queenie/resident/selection.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Bust preserves shell brooch, charcoal collar, petrol mantle, copper sash and two chart pouches; complete head and both floating gloves.",
+      "sha256": "2e4909118a9a06ddb90d97cd48c7b199e2ab4085fcb482bff84057061c5f3772",
+      "bytes": 1422922
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: identity-preserve. Asset: ONE selection bust portrait for Digital Circus Encore. Create the exact same original Queenie porcelain automaton from the supplied full-body sprite in enlarged bust framing. Show complete ivory scalloped crown with royal-blue enamel edge and brass orb; prominent half-lidded white eyes with orange irises and black lower lash pieces; brass mechanical neck; ivory/lavender upper body with navy floral filigree, gold seams, round brass inspection hatch; gold waist tabs. Both detached white porcelain gloves with gold wrist rings fully in frame, matching reference. End torso below waist tabs, no lower skirt. Preserve material colors, proportions, all facial shapes and details. Fine dark outlines, intricate high-quality hand-painted 2D cel shading matching reference. One calm static figure in slight three-quarter right. No arms, legs, human anatomy, mouth, nose, weapon, text, labels, frame, duplicate, grid, ground, shadow, haze or glow. Real transparent RGBA background with empty alpha outside silhouette and generous crown/glove margin.",
+      "source": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-f716568e-c0d6-4b88-8b97-698916683dc2.png",
+      "installed": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/selection.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Bust preserves ivory porcelain crown, brass orb/neck, orange eyes, two floating porcelain gloves, floral upper panels and round brass hatch. Matches the full-body automaton design.",
+      "sha256": "4cff9282f26193dfacc7a3463ec6a67c736e5a2c0764227e31d3b62847d3298b",
+      "bytes": 1517530
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: identity-preserve. Asset: ONE selection bust portrait for Digital Circus Encore, transparent PNG. Make a bust portrait of the exact Queenie Guinevere-homage crossover in the supplied reference, preserving her wooden chess-queen head, full scalloped crown with orb, half-lidded white eyes with orange irises, short black lower lashes, royal blue headpiece BEHIND crown with two round side pieces and lavender four-point stars, lavender sleeveless dress, white front panel, gold edging, spotted ivory ermine collar and detached white gloves with lavender cuffs. Show complete crown and both side star pieces, full gloves floating beside bust; end below gold waist tabs. Slight three-quarter right. Fine dark outlines and high-detail 2D hand-painted cel shading matching reference; same design, no extra accessories. No arms or legs, no human anatomy, no hair, nose or mouth. True transparent alpha outside character with no glow, haze, vignette, gradient, scene, ground shadow, label, text or frame. One static portrait, not animation or sprite sheet.",
+      "sources": [
+        "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png"
+      ],
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-bb14bdd9-0fc0-4274-9e29-6a1e23656765.png",
+      "installed": "assets/encore/crossovers/knightsofguinevere/queenie/hommage/selection.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Bust preserves exact royal-blue starred headpiece, wooden crown and face, cream ermine collar, lavender outfit and two floating gloves.",
+      "sha256": "1b0e012377ee7a6a327069afe3b1d97018db5f4dd7cb9c627ff5ecf4d5846564",
+      "bytes": 1275253
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: identity-preserve. Asset: ONE selection bust portrait for Digital Circus Encore. Use the supplied Queenie backstage-warden full-body sprite as exact design reference. Show complete crown orb down to below the maroon sash and its key/pouches, framing as an enlarged bust. Preserve identical warm honey-brown wooden chess head, protruding half-lidded white eyes with orange irises, black lower lashes, navy pointed collar, small amber badge, cream sleeveless vest with brass buttons, slate-blue robe section, maroon sash, small brass winding key and two cream pouches. Both detached white gloves fully in frame beside bust, same relaxed guard gesture. Detailed polished 2D cel shading and thin dark outlines, same proportions. No arms, legs, mouth, nose, human face, hat or extra props. One figure slightly facing screen right. Real transparent RGBA alpha background, clean outside silhouette without glow, haze, vignette, scene, ground shadow, text, label or grid. Portrait/bust only, no full lower skirt; complete crown and fingers with margin.",
+      "source": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-3348e4be-e3f2-4abb-ace5-9c5699a1e26b.png",
+      "installed": "assets/encore/crossovers/knightsofguinevere/queenie/resident/selection.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Bust preserves natural wooden head, cream vest, navy collar, amber badge, maroon sash with key and pouches. Two white detached gloves fully visible; no extra anatomy.",
+      "sha256": "f82bfff7b94c7763657bcda53125cf3ff5c5e3d514c7a2ffea4d63e0f15fc18f",
+      "bytes": 1435198
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: stylized-concept. Asset: ONE full-body static 2D fighting-game sprite, original Queenie x Knights of Guinevere queen-automaton physical fusion for Encore. First reference is 2D style and proportions; second is recognizable Queenie chess-piece identity only, exclude commercial stand. Transform the body itself into a theme-park chess automaton while preserving the continuous tapered chess queen silhouette and distinct Queenie sleepy face. Scalloped IVORY PORCELAIN crown/head with subtle royal blue enamel rim, small BRASS orb at top, two prominent half-lidded white eye domes with orange irises and two short black lower lash pieces per eye; NO mouth or nose. Narrow exposed brass neck column. Continuous mechanical bell/skirt torso built from four overlapping tapered ivory and lavender panels, precise gold seams, subtle navy floral filigree and a small round brass inspection hatch at the upper torso; full integrated circular chess base. Exactly two detached articulated white porcelain gloves with gold wrist rings floating near chest in calm guard, no connecting arms. Whole full figure in slight three-quarter view facing right, vertically standing, centered with crown and base completely inside frame. Fine dark outlines, intricate polished hand-painted 2D cel shading matching first reference; clean porcelain and metal materials. No human legs, feet, hair, extra key behind silhouette, weapons, scenery, floor, shadow, glow, vignette, text, label or grid. Real transparent RGBA alpha everywhere outside silhouette, no ambient haze. One character and one static pose only.",
+      "sources": [
+        "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+        "docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png"
+      ],
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-614c5f79-f650-4da6-90c6-6f40cc490973.png",
+      "installed": "assets/encore/crossovers/knightsofguinevere/queenie/fusion/stance.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Complete porcelain-and-brass queen automaton with chess crown, orange eyes, visible brass neck, floral lavender/ivory body panels, round hatch and two floating porcelain gloves. No human anatomy.",
+      "sha256": "1b191efda4bf963aaad638e989fa04ca7fbe30e8e63108e6da21f42050d1c9ed",
+      "bytes": 2023659
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: stylized-concept. Asset: ONE full-body static 2D fighting-game sprite, original Queenie x Knights of Guinevere backstage-warden design for Encore. First reference establishes polished 2D art style and full chess-queen proportions; second establishes Queenie identity only, exclude the commercial display stand. Keep the natural honey-brown turned-wood head, tall scalloped queen chess crown with round orb, two protruding half-lidded white eyes with orange irises, two black lower lashes per eye, no mouth or nose. One continuous tapered queen-chess torso without arms or legs. NEW CLOTHING: cream sleeveless work waistcoat over muted slate-blue tapered robe, brass buttons, navy pointed collar, narrow maroon velvet sash carrying a small brass wind-up key and two cream tool pouches, small amber solid-glass badge below collar, pale spotted ermine at full rounded base. Exactly two white floating gloves independent of torso, in a calm guard posture at chest height, one open one curled. Entire figure visible with generous margin, standing vertical in slight three-quarter view facing screen right, no perspective tilt. Fine dark outlines, detailed hand-painted 2D cel shading, clean textile and brass materials, not simple vector. No hat or star headpiece from first reference: crown fully visible. Truly transparent RGBA background, hard clean silhouette with antialiasing only, no halo, glow, shadow, vignette, ground, text, labels, scene, second figure or animation grid. One full character per image.",
+      "sources": [
+        "assets/encore/crossovers/knightsofguinevere/queenie/hommage/stance.png",
+        "docs/art-generation/base-sprites-20261125/queenie-two-worlds/references/queenie-animatez.png"
+      ],
+      "nativeOutput": "/workspace/scratch/6f9ceeefa959/generated_images/exec-41175880-6663-4ee5-83d7-7d0f41a8e5fb.png",
+      "installed": "assets/encore/crossovers/knightsofguinevere/queenie/resident/stance.png",
+      "editsAfterGeneration": "none",
+      "visualReview": "Complete static queen-chess silhouette; cream waistcoat, slate robe, navy collar, amber badge, maroon sash, brass key and two pouches. Full detached gloves and no human limbs.",
+      "sha256": "7110de7b6c58bc144e5d2a6bec056919e07d666021710654d2f2eb73fcc75089",
+      "bytes": 1921290
+    }
+  ]
+}

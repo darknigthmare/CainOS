@@ -1,0 +1,110 @@
+{
+  "schema": "encore-guide-final-verification/v1",
+  "checkedAt": "2026-11-25T13:49:36.228315+01:00",
+  "baselineCommit": "abb53b227c76c47832f44810aab1aa102286388c",
+  "scope": "Integration documentaire du guide, associations et classeur ; aucun changement du runtime ou des assets de jeu.",
+  "commands": [
+    {
+      "command": "node --check scripts/build-combat-guide.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check scripts/build-combat-guide-associations.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check scripts/update-combat-workbook-guide.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/build-combat-guide-associations.mjs --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/build-combat-guide.mjs --check",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "counts": {
+    "sections": 30,
+    "requirements": 100,
+    "characterAssociations": 64,
+    "globalCampaigns": 1,
+    "globalChapters": 12,
+    "globalSceneBriefs": 36,
+    "plannedStageLinks": 6,
+    "bossContracts": 4,
+    "generatedImages": 0,
+    "implementedNewModes": 0,
+    "implementedStageLinks": 0
+  },
+  "runtimeCounts": {
+    "fighters": 64,
+    "moves": 640,
+    "modes": 9,
+    "archiveEntries": 184,
+    "costumes": 540,
+    "archiveCostumes": 52,
+    "additionalCircusCostumes": 56,
+    "crossoverCostumes": 432,
+    "stages": 27,
+    "nonCrossoverStages": 18,
+    "crossoverStages": 9,
+    "dedicatedArrangements": 64,
+    "allStageDefinitions": 91,
+    "storyRoutes": 64,
+    "storyEncounters": 256,
+    "storyPanels": 384,
+    "dedicatedIntroOutroPaintings": 84,
+    "composedIntroOutroPanels": 300,
+    "finishers": 192,
+    "friendships": 64,
+    "projectileMotifs": 23,
+    "imagesDeclaredInOfflineManifest": 6202,
+    "bytesDeclaredInOfflineManifest": 3510209132
+  },
+  "markdownLinksChecked": 171,
+  "brokenLocalLinks": 0,
+  "originalGuideByteIdentical": true,
+  "workbookEvidenceHashesMatch": true,
+  "historicWorkbookEvidencePreservedByteIdentical": true,
+  "runtimeChangedFiles": [],
+  "independentReview": "Associations et comptes comparés aux imports du runtime ; morphologies, statuts et limites relus.",
+  "sourceHashes": {
+    "docs/bible/ARENES_TRANSITIONS_BOSS.md": "bd7c96d3460d6716d92d8a59952b4e4091b99d540f672dd12163914f47031830",
+    "docs/bible/ASSOCIATIONS_PERSONNAGES.md": "1a21b6728d4656f770b09af61cd5f177b5a17837b32fa93aeb333db6fed42395",
+    "docs/bible/CAMPAGNE_GLOBALE.md": "8b6ce920fef925f221c4bb78664abca35401180299f7cfd775e8ccc75ad5caf7",
+    "docs/bible/COMBAT_GAMES_GUIDE_INTEGRATION.md": "2a5060e5ef192287217b98d216d89efe04497fb5eb4d3cb543051f342c8abfb0",
+    "docs/bible/DIRECTION_ARTISTIQUE_ET_DERNIERS_ACTES.md": "2029fc288c1a56f337bd49e3b34f3f61ed26178681aaa866142782bc82af943a",
+    "docs/bible/MODELES_ET_CRITERES.md": "af4a0ad37b198f47ed2e71427324386a43c8321746bea50f72d9919f2b38df80",
+    "docs/bible/README.md": "f14219f137b77ea9841613b7a45ac9562b86ff2cacd463afeb7f07c286c97393",
+    "docs/bible/character-associations.json": "3775c9358258fb6cc00d896097aa1e75b39c19f6a084b8d383a3d89982fe8e09",
+    "docs/bible/guide-design.json": "fea75ee763d1d44e02665dbb9dad47c9e0bd1c43f260ea35b7da557fdbb2a3a4",
+    "docs/bible/guide-integration.json": "c5fc353911838c9e94d48dc909e0a87e575db2b9845cc8c385ca39ca97cd0248",
+    "docs/bible/references/Combat_Games_Guide_General_v1.0.txt": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7",
+    "README.md": "fe7014a8b540f94b2c30e3a7c6bb556302d47e28cdfc3d60f04355d3f658d89c",
+    "docs/DIGITAL_CIRCUS_ENCORE.md": "5b5c9fcac0c5192a10ae1aca5a75cdb6d9a3b9c1bbc2549267c19a97b8ad8523",
+    "docs/GAMEDEV_WORKFLOW.md": "7b1acf6ad92e0e467ace52c6f8e2290f493963c2c013e2b9c6966ac0049092a4",
+    "docs/COMBAT_WORKBOOK_PUBLICATION.md": "4f81e40047c700d042e81826dbfc13b299c7feeaae9e900ebb79344909342055",
+    "docs/combat-guide-workbook-verification.json": "af9dac30470f9cd99d74042b33ef3edaafd16116b4d8db4ce5c8bbfc9d1bc106",
+    "docs/combat-workbook-verification.json": "4fdf8d5cc0c8c885793fafc9f342f413148820558b345973b60a86d8f94d8101",
+    "scripts/build-combat-guide.mjs": "be81f2c445a2911455ce277ad78a4c6815deead1dc6dd2914d56d82c73c7df08",
+    "scripts/build-combat-guide-associations.mjs": "b7c6c8189a3b691618b4937abe92c269ef292204a0e2fc76de5fb20b2ca1434f",
+    "scripts/update-combat-workbook-guide.mjs": "c4f7858adac8478643c23f1caf119c814c80e277e295d35417e500425a0991fc"
+  },
+  "workbookVerification": "docs/combat-guide-workbook-verification.json",
+  "limitations": [
+    "Pas de nouvelle campagne de tests du jeu, de build ni de navigation navigateur pour cette passe documentaire.",
+    "Campagne globale, connexions et phases de boss documentées, non intégrées.",
+    "Aucune nouvelle image ou animation ; comparaison canonique globale non certifiée."
+  ],
+  "publicationTarget": {
+    "branch": "feat/encore-abstractions-projectiles-20261124",
+    "pullRequest": "https://github.com/darknigthmare/CainOS/pull/14",
+    "runtimeRelease": false
+  }
+}

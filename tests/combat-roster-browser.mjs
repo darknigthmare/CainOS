@@ -127,7 +127,7 @@ async function completeWithKeyboard() {
 }
 
 try {
-  assert.equal(GAME_VERSION, '0.7.0'); assert.equal(FIGHTERS.length, 54);
+  assert.equal(GAME_VERSION, '0.7.0'); assert.equal(FIGHTERS.length, 64); assert.equal(STAGES.length, 27);
   browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage', '--single-process', '--no-zygote'] });
   report.browserVersion = browser.version();
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true, serviceWorkers: 'block' });

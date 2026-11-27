@@ -1,0 +1,126 @@
+{
+  "schema": "encore-stage-native-definition-v1",
+  "id": "softballfield",
+  "name": "Le stade de softball",
+  "status": "native-planes-integrated-final-canvas-accepted",
+  "source": {
+    "publisher": "GLITCH",
+    "title": "THE AMAZING DIGITAL CIRCUS — Ep 5: Untitled",
+    "url": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+    "primaryReferences": [
+      {
+        "path": "references/episode5-storyboard-L3-M12.jpg",
+        "sha256": "497b0548a2ecb43c771414c28171ce889560c8830d89932ec7671069816090b5",
+        "cells": [
+          0,
+          1,
+          4
+        ],
+        "approximateSeconds": [
+          1080,
+          1090,
+          1120
+        ],
+        "observed": "Terrain vert, terre ocre, grandes tribunes et gradins sous auvent, barrières et projecteurs rectangulaires blancs."
+      },
+      {
+        "path": "references/episode5-storyboard-L3-M15.jpg",
+        "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a",
+        "cells": [
+          4,
+          5,
+          8
+        ],
+        "approximateSeconds": [
+          1390,
+          1400,
+          1430
+        ],
+        "observed": "Vue large du terrain et des tribunes ; tableau vert montrant un score propre à l’épisode, masses bleu nuit du ciel et hauts projecteurs."
+      }
+    ]
+  },
+  "catalogue": {
+    "sharedBefore": 24,
+    "sharedPlanesBefore": 72,
+    "dedicatedReuseBefore": 54,
+    "idAvailable": true,
+    "existingCainOSZone": 12,
+    "note": "La zone CainOS 12 représente déjà le stade dans l’exploration. Aucun STAGES Encore, plan d’arène Encore ni arrangement dédié n’utilise ce décor : ajout au duel partagé, pas découverte d’un lieu absent de tout CainOS."
+  },
+  "rejectedPriority": {
+    "candidate": "Bowling de l’épisode 5",
+    "status": "not-qualified",
+    "reason": "Les planches publiques inspectées ne fournissent aucun plan de salle de bowling. Le scénario local rattache le gag de quilles à l’épisode 8 ; cette indication secondaire ne sert pas à inventer un nouveau décor. La tenue Bowling Pin Ragatha est déjà produite et ne prouve pas l’existence d’une arène indépendante."
+  },
+  "observed": [
+    "Grandes tribunes en courbes ou pans avec sièges bruns/rouges, auvents et structures bleues.",
+    "Terrain herbeux vert et zones de terre ocre, lignes de jeu claires par endroits.",
+    "Projecteurs rectangulaires blancs sur hauts mâts, ciel bleu froid sombre.",
+    "Tableau d’affichage et panneaux de couleur visibles ; leur texte fin et les chiffres d’un instant ne seront pas reproduits comme interfaces actives."
+  ],
+  "adaptation": [
+    "Vue frontale large et piste de duel dégagée à y568 dans le canevas logique 1280×720.",
+    "Les trois plans, les distances, le point de vue, la géométrie du sol et les proportions sont des adaptations originales du fan-game.",
+    "Retrait de tous les personnages, accessoires portés, public individualisé et signes lisibles ; sièges et masses de tribunes conservent une densité faible.",
+    "Ambiance musicale originale et animation légère éventuelle des lumières, sans reprise audio de l’épisode."
+  ],
+  "limits": [
+    "Cellules 320×180 échantillonnées toutes les dix secondes ; horodatages déduits de la grille.",
+    "Aucun visionnage intégral du flux revendiqué.",
+    "Les coulisses, géométrie complète du stade, textes fins, mesures et revers masqués ne sont pas établis.",
+    "Le candidat ne requalifie pas les costumes cachés ni les anciens statuts de fidélité partielle."
+  ],
+  "loader": {
+    "module": "combat/stage-parallax.mjs",
+    "logicalSize": [
+      1280,
+      720
+    ],
+    "floorY": 568,
+    "overscan": 32,
+    "travel": [
+      6,
+      17,
+      31
+    ],
+    "requiredNames": [
+      "far.png",
+      "mid.png",
+      "near.png"
+    ],
+    "format": "native PNG outputs kept without retouch, resizing or reencoding",
+    "targetAspect": "16:9 landscape; actual native dimensions recorded after generation"
+  },
+  "planes": [
+    {
+      "id": "far",
+      "transparent": false,
+      "role": "Ciel bleu nuit, tribunes, auvents et projecteurs. Fond opaque couvrant tout le canevas, herbe lointaine sobre."
+    },
+    {
+      "id": "mid",
+      "transparent": true,
+      "role": "Bas du terrain vert et bande de terre ocre de duel, sur alpha natif au-dessus. Aucune barrière devant les combattants."
+    },
+    {
+      "id": "near",
+      "transparent": true,
+      "role": "Très légères herbes et ombres au bord inférieur, visibles sous la ligne des pieds seulement."
+    }
+  ],
+  "preservation": {
+    "fixture": "tests/fixtures/combat-pre-softballfield.json",
+    "proof": "before-addition-proof.json",
+    "historicalCostumes": 472,
+    "storyRoutes": 54,
+    "programs": 75,
+    "checkpoints": 450,
+    "replays": 4,
+    "replayFrames": 1052,
+    "unchangedRuntimeModulesAtCapture": 48
+  },
+  "integration": "Three native planes installed in the existing catalogue and loader. Targeted tests 111/111 passed at their recorded time. Final production-loader Canvas review accepted at three camera positions on manifest 0.7.0-17366238b519. Runtime remains frozen; global QA is separately recorded by the main wave.",
+  "preliminaryVerification": "preliminary/verification.json",
+  "finalVerification": "verification.json"
+}

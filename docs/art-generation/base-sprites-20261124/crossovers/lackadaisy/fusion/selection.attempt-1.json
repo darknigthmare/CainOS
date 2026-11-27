@@ -1,0 +1,57 @@
+{
+  "series": "lackadaisy",
+  "style": "fusion",
+  "label": "Lackadaisy · Fusion · Chat des bayous",
+  "identity": "An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+  "references": [
+    "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png"
+  ],
+  "sourceUrls": [
+    "https://www.glitchprod.com/lackadaisy",
+    "https://lackadaisy.com/characters.php"
+  ],
+  "state": "selection",
+  "id": "glitch-lackadaisy-ribbit-fusion",
+  "sourceKind": "original",
+  "baseOnly": true,
+  "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: An ORIGINAL physical frog-and-cat fusion, not a frog wearing a cat costume. Keep unmistakable Ribbit identity with two enormous protruding white frog eyes with black wedge-cut pupils, round pink cheeks, friendly wide cream frog muzzle and small pink bow. Rebuild the body as a slim moss-green short-furred feline-amphibian with two small triangular cat ears BEHIND the frog eyes, a few neat whiskers, elongated digitigrade frog-cat hind legs, broad three-toed webbed paws, four-fingered pawlike hands, and one long attached curved green striped feline tail fully inside the frame. Green fur and cream belly; do not use Jax's purple skin, long rabbit ears, yellow eyes or rabbit muzzle. Dress this reimagined anatomy in a cream rolled-sleeve 1920s shirt, dark brown pinstriped trousers ending below the knees, dark suspenders, pink bow tie. The silhouette must visibly differ anatomically from standard tall thin Ribbit while retaining frog eyes, pink cheeks, mouth and bow. No floating effects, claws out, body horror or extra limbs.",
+  "viewedReferences": true,
+  "attempt": 1,
+  "seedValidated": true,
+  "nativeFacing": "right",
+  "date": "2026-11-24",
+  "tool": "image_gen__imagegen",
+  "transparent_background": true,
+  "result_store_key": "ribbitBaseResult:lackadaisy:fusion:selection:1",
+  "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-48d9dba5-2b8e-41b2-ac6f-979ba2407043.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-48d9dba5-2b8e-41b2-ac6f-979ba2407043.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "format": "PNG",
+  "alpha12BBox": [
+    263,
+    50,
+    987,
+    1203
+  ],
+  "alpha12Margins": [
+    263,
+    50,
+    267,
+    51
+  ],
+  "alphaZeroFraction": 0.7934602891162952,
+  "alphaOpaqueFraction": 0.001446726138239611,
+  "borderAlphaMax": 0,
+  "file": "assets/encore/crossovers/lackadaisy/ribbit/fusion/selection.png",
+  "bytes": 685322,
+  "sha256": "270ce93ddd2ef106f1de75a647f8f42231d735ca72d28e51ae28ec02b35d7998",
+  "sha": "b5342966effe8fe3226e84aacf35c6bd178c9151",
+  "nativeBytesVerified": true,
+  "visualReview": "pending",
+  "referencesSHA256": {
+    "assets/encore/crossovers/lackadaisy/ribbit/fusion/stance.png": "5434f2164688c15d5233c1e39658dcf9499225a99fcde36ea443832548835d28"
+  },
+  "auditPass": true
+}

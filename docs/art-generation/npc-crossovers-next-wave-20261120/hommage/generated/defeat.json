@@ -1,0 +1,82 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "defeat",
+  "prompt": "Use case: precise local correction of a transparent game sprite. Edit REFERENCE IMAGE 1. Preserve the same full-body Ribbit Uzi-homage sprite, screen-right facing, pose, body proportions, expression, enormous raised white/black eyes, mint muzzle, pink cheeks and bow tie, black pom-pom beanie, black hoodie, white screen-and-crossbones emblem, two violet sleeve stripes, fluffy dark hem, long slim green legs, violet ankle cuffs, black rounded boots, outlines, flat colors and cel shading. Reference image 2 is the existing game Ribbit stance for identity only, NOT a guide for the finger count. This three-digit convention is an original design choice harmonizing this new crossover collection, not a canonical claim.\nKeep the exact dejected kneeling defeat pose and sad expression: one knee down, the other raised, one hand hanging low and the other resting on the raised knee. ONLY CORRECT THE HAND AT SCREEN RIGHT THAT RESTS ON THE RAISED KNEE. It currently has four digit tips. Redraw just that hand as exactly THREE rounded visible digit lobes TOTAL, including the thumb: one short bent thumb at its left side and TWO longer relaxed fingers draped over the knee. Both long fingers and the thumb must be separately readable. No third long finger, no fourth nub. Keep the same wrist, cuff, green skin, relaxed hand position and contact with the knee. The hanging hand at SCREEN LEFT already has three lobes; preserve it unchanged.\nAll anatomy other than the requested hand corrections must remain as close as possible to reference 1. Keep both hands naturally attached to their existing wrists and sleeve cuffs. No new accessories, body changes, pose changes, costume changes, direction changes or effects. Output one complete sprite on genuine transparent background with native alpha, approximately square canvas matching the source composition, with every body part and both boots inside safe transparent margins. No floor, shadow, text, labels, border, checkerboard, background or duplicate figure.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/audit_github",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "correction": {
+    "attempt": 2,
+    "replaces": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.json",
+    "reason": "Harmonize the new original crossover design to three visible digit lobes total per hand, including the thumb. No canonical anatomy claim.",
+    "scope": "Hands only; preserve costume, body, original pose, facing and framing."
+  },
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-hommage:defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e65e23ea-06fa-4a03-9908-a56e9c106166.png",
+  "sourceGenerationId": "exec-e65e23ea-06fa-4a03-9908-a56e9c106166",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+  "definitionSHA256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.png",
+      "sha256": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+      "bytes": 760321
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    }
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    178,
+    51,
+    1016,
+    1223
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1063392,
+  "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+  "bytes": 775116,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:27:35.879382+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "/root/audit_github",
+    "observations": [
+      "La main au genou levé montre exactement trois lobes : un pouce court replié et deux doigts longs détendus. La main pendante conserve ses trois lobes.",
+      "Choix anatomique original pour harmoniser les nouveaux crossovers ; aucune preuve canonique ou officielle du nombre de doigts revendiquée.",
+      "Défaite à genou orientée à droite, expression triste, corps, membres, tenue Uzi et deux bottes conservés. Figure entière, contact de la main sur le genou et marges transparentes inspectés."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

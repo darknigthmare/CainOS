@@ -1,0 +1,66 @@
+{
+  "schema": "encore-official-reference-audit/v1",
+  "retrievedAt": "2026-11-20T14:35:38.081864+00:00",
+  "publisher": "Animate Holdings / Animate Cafe",
+  "sourcePage": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+  "officialEventPage": "https://www.animatecafe.jp/event/ac000791",
+  "sourceKind": "Official collaboration merchandise illustration",
+  "episodeClaim": false,
+  "downloads": [
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/animate-press-main.jpg",
+      "url": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-67383ec049776a79e04eea0c153d49e4-1000x707.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+      "contentType": "image/jpeg",
+      "bytes": 181618,
+      "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "dimensions": [
+        1000,
+        707
+      ],
+      "visuallyInspected": true,
+      "alterations": "none; downloaded JPEG bytes copied unchanged"
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/animate-press-goods.jpg",
+      "url": "https://prcdn.freetls.fastly.net/release_image/16756/8857/16756-8857-0d14946233ef147194229260b58973f0-1000x708.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85,75&width=1950",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+      "contentType": "image/jpeg",
+      "bytes": 175497,
+      "sha256": "3a300b59e47531d8bb2d1c118fd80b6c778d3849d9b572a06c2434f6deacec9c",
+      "dimensions": [
+        1000,
+        708
+      ],
+      "visuallyInspected": true,
+      "alterations": "none; downloaded JPEG bytes copied unchanged"
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+      "sourceFile": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/animate-press-main.jpg",
+      "sourceSha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "cropRectangle": [
+        805,
+        170,
+        990,
+        580
+      ],
+      "dimensions": [
+        185,
+        410
+      ],
+      "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+      "bytes": 139654,
+      "alterations": "rectangular reference extract only; no resizing, recoloring, reconstruction or background removal",
+      "visuallyInspected": true,
+      "observation": "Ribbit au bord droit de l’affiche, corps entier : jambes vertes, chaussettes claires à revers festonnés et deux chaussures bleu nuit à bord de semelle rose. Le plateau reste un accessoire de présentation."
+    }
+  ],
+  "unavailableAttempts": [
+    {
+      "url": "https://cdn.animatecafe.jp/cafeweb/images/E1HwTYsgGWbbKKpjzSfNEUuntocftqXR.jpg",
+      "status": "HTTP 403; no repeated request",
+      "result": "no bytes archived from this host"
+    }
+  ]
+}

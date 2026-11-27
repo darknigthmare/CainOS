@@ -1,0 +1,13 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "attack",
+  "prompt": "Use the attached approved selection image as the exact identity, proportions, costume, materials, color and 2D cel-shading reference. Draw ONE new full-body pose of the SAME original Encore crossover Ribbit. Keep the BIOLOGICAL green frog identity, huge white-and-black eyes, mint muzzle, pink cheeks and bow; charcoal/olive jumpsuit, short rolled sleeves, chest amber lamp, two belt pouches with tools secured, round knee pads, ankle amber bands, bare green three-digit hands and three-lobed feet. No change of outfit, no hat, no boots, no gloves, no robot conversion. LIGHT ATTACK POSE: strong straight rightward forward punch with the forward arm fully extending horizontally, rear fist by chest, rightward lunge with front knee bent and rear leg stretched behind; eyes focused toward screen right. No impact flash, weapon or motion trail. Three-quarter side view, native facing RIGHT. Clean black contours, gentle upper-left highlights, restrained cel shading matching the reference. One character only, full head-to-toes including raised hands and all feet, with comfortable transparent margin around the ENTIRE silhouette. Use a canvas wide enough for this pose (portrait 1024x1536 or square 1536x1536 if needed); never crop or squeeze limbs. Native true transparent RGBA, clean alpha edges, no scene/background/ground/halo/text/grid/watermark. This is a separate action drawing, not a transformation, crop or composited duplicate of the selection.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root"
+}

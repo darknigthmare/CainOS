@@ -1,0 +1,11 @@
+{
+  "id": "originalabstractedragatha",
+  "state": "jump",
+  "prompt": "Use case: precise-object-edit. SINGLE FULL-BODY TRANSPARENT GAME SPRITE. Draw the exact original hypothetical abstraction character in the reference in ONE new state. Retain four bulky stitched obsidian limbs, the large blue four-hole face button, red yarn strands, blue collar bow and lavender scraps, with all characteristic eye placements. POSE: JUMP key drawing at the apex, completely AIRBORNE. Body leaping toward RIGHT with back arched slightly; knees and rear limbs tuck under the torso, front claws/arms/ribbons reach ahead but remain bent. Hair, ribbon, bells and robe follow upward movement naturally. Clearly no planted feet; all limbs, horns and robe fully visible. No shadow, ground or speed trails. Preserve identity, anatomy, volume, body-eye pattern, colors, costume remnants, edge quality and hand-painted faceted obsidian 2D art style. View mainly SIDE ON facing RIGHT, slight three-quarter depth. One complete character only, each appendage contained inside central 80 percent with blank transparent padding on all sides. No extra characters, text, labels, frame, watermark, sheet, scene, backdrop, checkerboard, ground, cast shadow, glow, haze, sparks, particles or motion blur. Opaque body with genuine alpha outside. Preserve all black areas. This is a new articulated drawing, not a rotated/recolored copy of idle.",
+  "reference": "/workspace/scratch/e51b531817b1/CainOS/assets/encore/abstractions/originalabstractedragatha/stance.png",
+  "path": "/workspace/scratch/e51b531817b1/generated_images/exec-b2625eaf-d5fb-4d3e-9793-59cc082600e2.png",
+  "output_hint": "Generated images are saved to /workspace/scratch/e51b531817b1/generated_images as /workspace/scratch/e51b531817b1/generated_images/exec-b2625eaf-d5fb-4d3e-9793-59cc082600e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "survived_executor_loss": true,
+  "regeneration_after_executor_loss": false,
+  "byte_identical_to_pre_incident_asset": true
+}

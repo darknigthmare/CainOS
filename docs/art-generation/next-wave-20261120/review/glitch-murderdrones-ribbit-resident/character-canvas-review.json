@@ -1,0 +1,249 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T15:32:57.335Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": false,
+  "crossoversOnly": true,
+  "introducedOn": null,
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "sources": {
+    "combat/data.mjs": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6",
+    "combat/costume-additions.mjs": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e",
+    "scripts/render-combat-character-review.mjs": "265fdadec6edd0251241c08b768c35066f2e7f755e7f5f41723bccbbcdc2d7c4"
+  },
+  "actions": [
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+      "bytes": 1487206,
+      "visibleBounds": {
+        "x": 43,
+        "y": 16,
+        "width": 352,
+        "height": 606
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+      "bytes": 1385550,
+      "visibleBounds": {
+        "x": 50,
+        "y": 6,
+        "width": 504,
+        "height": 417
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+      "bytes": 1603205,
+      "visibleBounds": {
+        "x": 14,
+        "y": 33,
+        "width": 373,
+        "height": 589
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+      "bytes": 1576067,
+      "visibleBounds": {
+        "x": 29,
+        "y": 20,
+        "width": 376,
+        "height": 588
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+      "bytes": 1461010,
+      "visibleBounds": {
+        "x": 104,
+        "y": 4,
+        "width": 450,
+        "height": 413
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+      "bytes": 1475759,
+      "visibleBounds": {
+        "x": 84,
+        "y": 6,
+        "width": 464,
+        "height": 414
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+      "bytes": 1523489,
+      "visibleBounds": {
+        "x": 54,
+        "y": 17,
+        "width": 334,
+        "height": 614
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+      "bytes": 1519080,
+      "visibleBounds": {
+        "x": 60,
+        "y": 7,
+        "width": 511,
+        "height": 419
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+      "bytes": 1509732,
+      "visibleBounds": {
+        "x": 20,
+        "y": 29,
+        "width": 387,
+        "height": 595
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+      "bytes": 948345,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "archiveId": null,
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-glitch-murderdrones-ribbit-resident.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "complete": true
+}

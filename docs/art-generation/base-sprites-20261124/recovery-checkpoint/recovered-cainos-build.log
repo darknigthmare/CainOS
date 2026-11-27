@@ -1,0 +1,15 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> cainos@1.0.0 build
+> node scripts/build-static.js
+
+Offline manifest: 0.7.0-2c7a9febcca9 / 6130 illustrations / 3414702166 bytes / art f986ec464440ab01.
+copied index.html -> dist/index.html
+copied index.css -> dist/index.css
+copied app.js -> dist/app.js
+copied episodes.js -> dist/episodes.js
+copied cloud-account.js -> dist/cloud-account.js
+copied favicon.png -> dist/favicon.png
+copied assets -> dist/assets
+copied combat -> dist/combat
+CainOS ready: /workspace/library-files/cainos-static-builds-20261124/recovered-cainos

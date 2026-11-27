@@ -1,0 +1,22 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "hit",
+  "prompt": "Use case: precise local correction of a transparent game sprite. Edit reference image 1, the complete Ribbit Uzi-homage HIT reaction sprite. Preserve its full-body recoiling pose, placement, screen-right facing, surprised expression, huge raised eyes, mint muzzle, pink cheeks and bow, black pom-pom beanie, black hoodie, white screen-and-crossbones emblem, two violet sleeve stripes, fluffy dark hem, long slim green legs, violet ankle cuffs, black boots, outlines, flat colors and cel shading. Reference image 2 supplies the existing game identity of Ribbit only; it must not replace the costume or pose.\nONLY CORRECT BOTH OPEN GREEN HANDS. The original has four rounded finger lobes on each open hand. Replace each hand with a clean three-digit cartoon frog hand: EXACTLY THREE visible rounded digit tips TOTAL PER HAND, including the thumb — one thumb plus two fingers, never three fingers plus a thumb. Each hand must have only three outer finger lobes, with clean gaps; no fourth nub, duplicated fingertip, little finger, knuckle that looks like a digit, or extra protrusion. Keep the same wrists, sleeve cuffs, palm positions and open-palmed recoil gesture. Both hands remain naturally readable and separate from the torso. Preserve every non-hand feature and the composition as closely as possible. Do not change body, outfit, proportions, facial details, legs, boots, direction or action. No added objects or effects.\nOutput one finished sprite on a genuinely transparent background with native alpha. Keep the entire character inside the image with safe transparent margins on every side. No floor, cast shadow, glow, text, border, checkerboard or duplicate figure. Do not mirror the sprite. Return an approximately square canvas matching the original framing.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/audit_github",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "correction": {
+    "attempt": 2,
+    "replaces": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.json",
+    "reason": "Both hands showed four digit lobes. The new original crossover collection is being harmonized to exactly three digits total per visible hand; this is an original design choice, not a canonical claim or a claim about the historical Ribbit stance.",
+    "scope": "Hands only; preserve the original costume, body, pose, orientation and framing."
+  }
+}

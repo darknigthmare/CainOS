@@ -1,0 +1,29 @@
+{
+  "schema": "encore-workbook-native-baseline/v1",
+  "capturedAt": "2026-11-20T16:34:55.061277+00:00",
+  "status": "extracted_read_only",
+  "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+  "cells": 81412,
+  "formulas": 42,
+  "tables": 10,
+  "sheets": 11,
+  "snapshotHashes": {
+    "manifest.json": "a044ea166d0892449022ae66372c6c6236f0e9e4c144fdb05298926f4dde9a34",
+    "sheet-1.json": "8f57faec4cd03e63850ba6d42e7a3f5c594def2f021ec9067d75650ae0eea0df",
+    "sheet-10.json": "1d848a3009f6284756e89836346ce1809bb678656657b1610f163bdd36fa438e",
+    "sheet-11.json": "bb424ae4f2d3e1bd8392104ab62b5cc1066bf16deeae745be234263cb7100e00",
+    "sheet-2.json": "68264328e58c0d062f1d1606ffcd45f898bab97eb5455a8922aab0a833f4950f",
+    "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
+    "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
+    "sheet-5.json": "a80a7f078045195230b6f6d2bf65785aba4507a6aab1d963f738ac0e16d9678c",
+    "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
+    "sheet-7.json": "dd91e3e4e5e88f18d1cc1b06450e543fc0c5ddff4464b3a0658af499bba03dd5",
+    "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
+    "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350"
+  },
+  "inspector": {
+    "file": "scripts/inspect-combat-workbook-native.py",
+    "sha256": "44d1a662c0f87804689fb090424eb700ab709b1f1335f7097bd3673f92764c8b"
+  },
+  "workbookModified": false
+}

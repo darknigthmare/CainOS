@@ -1,0 +1,23 @@
+{
+  "schema": "encore-metarunner-preflight-attempt/v1",
+  "recordedAt": "2026-11-20T17:26:31.271092+00:00",
+  "attempt": 1,
+  "command": "$CODEX_PRIMARY_RUNTIME_PYTHON scripts/integrate-combat-metarunner-20261120-b.py --check-only",
+  "exitCode": 1,
+  "status": "blocked_on_initial_job_assumption",
+  "installerSHA256": "9149f9e5344fa60020a2a68d329382e0c664ba3ae59f4fe5f6e8759da527594a",
+  "observedError": "ValueError: Receipt no longer matches its job: prompt",
+  "runtimeTouched": false,
+  "reason": "The initial slot-name job was retained as history, while the accepted victory receipt came from a subsequent recorded correction job.",
+  "resolvedExactJobs": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/jobs/victory-correction-02.json",
+      "sha256": "d7e7da61ef484e41b132a0eba8f7755df5ff3392402f00ece6d9e09b5a0e2a07"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/jobs/victory-correction-03.json",
+      "sha256": "a18f00fd814d986e65329f8366173e7fbfa42fdd820fa75d7cbcb31642dd64aa"
+    }
+  ],
+  "resolution": "Resolve exactly one job matching every job field against the receipt; reject zero or ambiguous matches. Definition hashes, prompt, ordered references and native measurements are still mandatory. No job, image or receipt was edited."
+}

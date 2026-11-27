@@ -1,0 +1,295 @@
+{
+  "schema": "encore-calm-abstraction-current-asset-review/v1",
+  "createdAt": "2026-11-24T13:33:26.338288+00:00",
+  "status": "technical_review_complete_with_open_canonical_comparison",
+  "files": [
+    {
+      "slot": "selection",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/selection.png",
+      "sha256": "bdedffebf1cc1642013e4b5b014669231fd326c54c6b5459b59a36a4a56aad28",
+      "bytes": 1021557,
+      "width": 724,
+      "height": 2172,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        98,
+        165,
+        626,
+        2047
+      ],
+      "transparentFraction": 0.5416812927973301,
+      "marginsAlpha12": [
+        98,
+        165,
+        98,
+        125
+      ]
+    },
+    {
+      "slot": "stance",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/stance.png",
+      "sha256": "8a921d8a7bf447e6ae3ea2f09ff0b540427ad682f47eaec5ba5224083eab20e4",
+      "bytes": 1314915,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        256,
+        101,
+        719,
+        1486
+      ],
+      "transparentFraction": 0.7128327687581381,
+      "marginsAlpha12": [
+        256,
+        101,
+        305,
+        50
+      ]
+    },
+    {
+      "slot": "intro",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/intro.png",
+      "sha256": "a0d93dc5f34e845846c7b6abc8389b33859b1256b61e55ee268606d2b51ad9f7",
+      "bytes": 1615282,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        133,
+        28,
+        830,
+        1523
+      ],
+      "transparentFraction": 0.5935033162434896,
+      "marginsAlpha12": [
+        133,
+        28,
+        194,
+        13
+      ]
+    },
+    {
+      "slot": "attack",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/attack.png",
+      "sha256": "7a626857fe88862ccdf6972211fdc4d767bb72ca34c778b2361f2341bbe3e825",
+      "bytes": 1503959,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        46,
+        85,
+        1484,
+        993
+      ],
+      "transparentFraction": 0.6573053995768229,
+      "marginsAlpha12": [
+        46,
+        85,
+        52,
+        31
+      ]
+    },
+    {
+      "slot": "heavy",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/heavy.png",
+      "sha256": "2c90dd1ef9276460d618735c52e6b89eff18c484dcb2cbbf5276ec8ded5e33a5",
+      "bytes": 1627714,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        55,
+        110,
+        1474,
+        951
+      ],
+      "transparentFraction": 0.6499983469645182,
+      "marginsAlpha12": [
+        55,
+        110,
+        62,
+        73
+      ]
+    },
+    {
+      "slot": "hit",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/hit.png",
+      "sha256": "9f48f545ac59dad2979cd0b69e2982b1c01f96dca4cf3209ebc87505b345fb72",
+      "bytes": 1500044,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        80,
+        69,
+        931,
+        1489
+      ],
+      "transparentFraction": 0.6255512237548828,
+      "marginsAlpha12": [
+        80,
+        69,
+        93,
+        47
+      ]
+    },
+    {
+      "slot": "walk",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/walk.png",
+      "sha256": "ea9f2eb4a903e9ce50261c45c5ab0dd18c8d30167a7f666fc293e7410aaa2dc0",
+      "bytes": 1470241,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        95,
+        115,
+        928,
+        1411
+      ],
+      "transparentFraction": 0.7097180684407552,
+      "marginsAlpha12": [
+        95,
+        115,
+        96,
+        125
+      ]
+    },
+    {
+      "slot": "jump",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/jump.png",
+      "sha256": "1cd541e3d1bb3fb3aa340c8e974d2dd122ac5d56b84a1b1b170c99cd3583b019",
+      "bytes": 1357293,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        132,
+        79,
+        864,
+        1304
+      ],
+      "transparentFraction": 0.7372055053710938,
+      "marginsAlpha12": [
+        132,
+        79,
+        160,
+        232
+      ]
+    },
+    {
+      "slot": "crouch",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/crouch.png",
+      "sha256": "8fe760489faba7854b79bcb5cf5e2d38f125db5748df22f1162f5493e8523c9b",
+      "bytes": 1508578,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        112,
+        109,
+        1406,
+        975
+      ],
+      "transparentFraction": 0.607323964436849,
+      "marginsAlpha12": [
+        112,
+        109,
+        130,
+        49
+      ]
+    },
+    {
+      "slot": "victory",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/victory.png",
+      "sha256": "3fa12741fa2312f5ecab10ebf81a1d7d99a7e4a89ad68cf2f3be7a5a474bcca7",
+      "bytes": 1469032,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        187,
+        28,
+        774,
+        1500
+      ],
+      "transparentFraction": 0.6654961903889974,
+      "marginsAlpha12": [
+        187,
+        28,
+        250,
+        36
+      ]
+    },
+    {
+      "slot": "defeat",
+      "file": "assets/encore/abstractions/abstractedqueeniedark/defeat.png",
+      "sha256": "eff58e192a2e24e483e69858694b18104cda426da40ba0607e19afc14083e7d2",
+      "bytes": 953860,
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "boundsAlpha12": [
+        107,
+        169,
+        1648,
+        814
+      ],
+      "transparentFraction": 0.6012883069871843,
+      "marginsAlpha12": [
+        107,
+        169,
+        126,
+        73
+      ]
+    }
+  ],
+  "selectionSource": "assets/encore/selection/abstractedqueeniedark.png",
+  "selectionBytesPreserved": true,
+  "minimumAlpha12Margin": 13,
+  "uniqueImages": 11,
+  "imageTransforms": 0,
+  "visualReview": {
+    "reviewedSlots": [
+      "selection",
+      "stance",
+      "intro",
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "observations": [
+      "Silhouette noire fuselée et facettée ; les gestes courbent ou inclinent la même masse sans membres humains ajoutés.",
+      "Cinq yeux violet, cyan, jaune, rouge et blanc gardent leurs pupilles verticales et leur ordre.",
+      "Les reflets cyan, violets et jaunes et les lueurs périphériques douces sont propres aux images natives.",
+      "Introduction, attaque forte, impact, marche, saut, accroupissement et issues sont des dessins distincts ; les poses basses et horizontales gardent la silhouette entière."
+    ],
+    "canonicalComparison": "open",
+    "completeAnimationCycles": false
+  },
+  "sourceHashes": {
+    "combat/abstractions-content.mjs": "085dc7f8a0d5489c37680e0937e245ce212918b1a98e67c43c140f761e43503d",
+    "combat/data.mjs": "4ee02d45615773a0cec0f42c6ffe627d4ffbb719fac42b8fb32b4fb7a0b1e0ec"
+  },
+  "scope": "Current files inspected after restoration. No measurements or visual approval are inherited from the lost filesystem.",
+  "sourceHashesAtVisualReview": {
+    "combat/abstractions-content.mjs": "03e14df2eda3e6026984857b1cb659be00a0d0f3412f96c8b1dfe9b4b4a0f635"
+  },
+  "integrityRecheckedAt": "2026-11-24T14:13:10.080984+00:00",
+  "renderGeometry": {
+    "maxIllustratedWidth": 315,
+    "scaleMode": "uniform",
+    "collisionWidth": 180,
+    "collisionHeight": 285,
+    "crouchHeight": 160,
+    "nativeImagesChanged": false,
+    "evidence": "combat/abstractions-content.mjs / combat/data.mjs; renderer verification reported separately"
+  }
+}

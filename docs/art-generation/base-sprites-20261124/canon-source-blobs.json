@@ -1,0 +1,149 @@
+{
+  "schema": "encore-base-sprite-source-safety-copy/v1",
+  "recordedAt": "2026-11-24",
+  "repository": "darknigthmare/CainOS",
+  "files": [
+    {
+      "file": "combat/fidelity.mjs",
+      "bytes": 75661,
+      "sha256": "c91915cae9b26d61c87798b405b68d202c4b85c217bc97b0e7ebde4f677ed630",
+      "sha": "02edede5bd4d787e5bfd62ee731a95d7909be473",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/asset-audit.json",
+      "bytes": 19122,
+      "sha256": "eef9732c258b8cea84cd4d9625c143b4803568339216018a3e46f3216a3e0b23",
+      "sha": "1dbfbc4df40af572c4a371c80d5d9e38d51733b1",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/blob-manifest.json",
+      "bytes": 2527,
+      "sha256": "0ce3aac665dc2116367a5ca438615780e98fa8774e8a5b150a8059926099a8f4",
+      "sha": "9ac573b47e582a0457ddbc95576109554c9bd79b",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/catalog-proposals.json",
+      "bytes": 10527,
+      "sha256": "c6a5f3fe4fd95c652b01125524afd66626a2d4dd0d01e25d494e0c1c5bda16ec",
+      "sha": "ee8c0f66d1bbddf46c82087eff3d706272df4a84",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/generation-prompts.json",
+      "bytes": 4734,
+      "sha256": "fd2de25ab50562979a239e4a052058ba954cf11ae2286671faee7601f6c54f7c",
+      "sha": "62451c73f3ea0362f3b622635da7545d2b4cbf36",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/generation-receipt.json",
+      "bytes": 19928,
+      "sha256": "3f39a57c615c9eb5435316ee77efaa9d9cb5ee815464fbcf134a421dcaef9f3b",
+      "sha": "be2db6c6d4fa7ad44b0d57c8d1d563ad5f9f3ca7",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/official-costumes/README.md",
+      "bytes": 3731,
+      "sha256": "96c28f59e93bec21343b752c14b545b978e2a88f854557abf674ddba32851535",
+      "sha": "eb8e17f66ba2942d5a61e330968731fd610af577",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/downloads.json",
+      "bytes": 2569,
+      "sha256": "c458f34b69c31342aa7f9e9ceb9730fe82e14b1ea29de45b7622d107a690710e",
+      "sha": "e9a7af91bbde8bad184da3b59591906e8bb1b399",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/event-image-downloads.json",
+      "bytes": 20,
+      "sha256": "6c1db664439054b14cf5baade95beb5c1b194266ecf60003a2aab24c85fd8359",
+      "sha": "aa38702b8836631ee440235128a8f09ce74897d0",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/isolated-cafe-crops.json",
+      "bytes": 757,
+      "sha256": "c79c55c1c683c5b1e496e5bb2836bff51568c6db01693ea02db63129eb949132",
+      "sha": "000bd425e7f27bb51d5b1e29cb6905c73076257f",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/README.md",
+      "bytes": 3549,
+      "sha256": "c228fd347a880ebafc5e0559f01153b53ebcc3e40b78dca0fb0755f4a0e1368e",
+      "sha": "fd1c1496c70c4772cab421e7cde8785bf68a7518",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/reference-crops.json",
+      "bytes": 3635,
+      "sha256": "3237ce40f4d0993cdf4af57d567dee0f44a1192125aa857797907beab94ef70f",
+      "sha": "5f58d5f1de81af96c960b6501d50316bdca90dec",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "docs/art-generation/base-sprites-20261124/reference-review/zooble-reference-retrieval.json",
+      "bytes": 10130,
+      "sha256": "c1332e488430ede14d2d875d9a2379f60f506a6328c23e7ab74629500c2578e7",
+      "sha": "979143a1d5025b1cec57154383e699ed3ce20b26",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "scripts/combat-crossover-tracker.mjs",
+      "bytes": 10759,
+      "sha256": "18c828fcf0156a8ecaed78edd8b9d03bffd80025688ef25e15dc1a7ba694fd42",
+      "sha": "16e1ade1b71bfbcba088efad8809da42ff7e5d5d",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "scripts/prepare-combat-base-sprites-tracker-20261124.mjs",
+      "bytes": 41048,
+      "sha256": "300743ae307f3f164f2cf66f7b072a7650b641177627c6bebddd3cbf39156c19",
+      "sha": "30fef44a5eddf85864277ffddaf7612a46ef03d0",
+      "source": "preserved-complete-source",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "scripts/publish-combat-base-sprites-workbook-20261124.mjs",
+      "bytes": 11776,
+      "sha256": "5662c5b5c6da2068b944905eb922681a790593a6d8a0c68c5e2d095811323d9b",
+      "sha": "84cf22b63a6f73deee8b5ea72b128c07fbf7b226",
+      "source": "preserved-complete-source",
+      "newExecutionVerified": false
+    },
+    {
+      "file": "tests/combat-art-tracker-formats.test.mjs",
+      "bytes": 6085,
+      "sha256": "243b1877d3f5a21edb75ac6e37cb0b1285533b96b198845020b365154bfdd7ca",
+      "sha": "4633335e7f36a28865714c7337efbf210ec7902f",
+      "source": "preserved-disk-bytes",
+      "newExecutionVerified": false
+    }
+  ],
+  "complete": true,
+  "refsModified": false,
+  "treesModified": false,
+  "workbookExported": false,
+  "workbookBaselineSHA256": "d6c042f01697a21ab8b6144ecd6220e56ab95c63a4d0808f38589b1dc051e9da",
+  "note": "Immutable source preservation after a memory-related executor outage. These source files were compared with preserved disk bytes. The new workbook export and final execution checks remain open."
+}

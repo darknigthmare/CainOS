@@ -1,0 +1,49 @@
+{
+  "schema": "encore-focus-base-generation-plan/v1",
+  "date": "2026-11-27",
+  "status": "generated-pending-installation-review",
+  "families": [
+    {
+      "id": "godcaine",
+      "fighterId": "caine",
+      "referenceUrl": "https://glitchproductions.store/products/god-caine-animatez",
+      "sourceImage": "https://glitchproductions.store/cdn/shop/files/Animatez_GodCaine_01.png?v=1773723373&width=1600",
+      "stanceFile": "/workspace/scratch/442af69066d4/generated_images/exec-4d62eac2-208d-4c78-b5e7-0d5f195fd5c9.png",
+      "selectionFile": "/workspace/scratch/442af69066d4/generated_images/exec-71114ce3-5073-44e3-9f02-71a6225bb343.png",
+      "stanceBrief": "God Caine from official Animatez front and side imagery: compact floating red denture mouth, red upper eye and blue lower eye, small skewed black top hat, red six-arm jacket with white gloved hands, three floating white eyes with black pupils, black cane with gold tip, red/black/gold cuboid glitches and bounded yellow lightning. Full body, single static ready pose, transparent background, no figurine plinth. Precise observed official product design translated into the existing 2D game style.",
+      "selectionPrompt": {
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "/workspace/scratch/442af69066d4/generated_images/exec-4d62eac2-208d-4c78-b5e7-0d5f195fd5c9.png",
+          "/home/agent/cainos-focus-references/Animatez_GodCaine_01.png"
+        ],
+        "prompt": "Use case: identity-preserve. Create a separate illustrated selection portrait of the SAME God Caine as image1, with exact design reference image2. One character only, transparent background. This is an independent upper-body composition, not a second figure or montage. Preserve the two enlarged red/blue displaced primary eyes (not normal white blue/green eyes), red denture head, open mouth, ivory block teeth, skewed black hat red band, red jacket, white shirt black bow tie, gold-topped black cane, six arms with white gloves, THREE white eyeballs near hands, red and black cube glitches, bounded yellow lightning. Preserve the compact official collectible proportions and face design. Portrait framed from below the waist upward, slightly more frontal than image1; all hat, cane, head and visible hands/white eye spheres should fit with 10% transparent margin. No legs needed for portrait. Crisp polished hand-drawn 2D game cel-shading matching image1, no product stand, floor, shadows, text, border, logo or background. Keep detached eye placement, colors, cane and 3 orbital eyes exact. No added teeth heads, no humanoid face. Palette stays bright red, ivory, black and yellow. Original source-based God Caine Animatez representation."
+      },
+      "stanceBriefStatus": "Reconstructed production brief; the exact original stance prompt was not retained in the receipt. Native output bytes and reference identities are independently recorded.",
+      "animation": false,
+      "baseOnly": true,
+      "nativePixelsUnmodified": true
+    },
+    {
+      "id": "evilpomni-pendantz",
+      "fighterId": "pomni",
+      "referenceUrl": "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+      "sourceImage": "https://glitchproductions.store/cdn/shop/files/Pomni-Evil.png?v=1765582743&width=1600",
+      "stanceFile": "/workspace/scratch/442af69066d4/generated_images/exec-f24cef56-4c21-4746-aa69-0b94f9f0a1e5.png",
+      "selectionFile": "/workspace/scratch/442af69066d4/generated_images/exec-3c77b1ca-3d0d-4297-95ce-6c504a6a0f07.png",
+      "stanceBrief": "Evil Pomni from the official Pendantz reference: petite red/yellow jester suit with blue hat trim, pompoms, collar, chest buttons and shorts edging; white face, brown bob hair, half-lidded red/blue pinwheel eyes, closed-mouth smirk, left yellow and right red gloves, red and yellow boots. Full body in static ready posture, three-quarter facing right, transparent background, one character. No stitched black-and-red fan costume, button eyes, gold trim, stars, or goggles.",
+      "selectionPrompt": {
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "/workspace/scratch/442af69066d4/generated_images/exec-f24cef56-4c21-4746-aa69-0b94f9f0a1e5.png",
+          "/home/agent/cainos-focus-references/Pomni-Evil.png"
+        ],
+        "prompt": "Use case: identity-preserve. Create one separate upper-body selection portrait of Evil Pomni, precisely the SAME character/costume and drawing style as image1, matched to the official image2. Frame waist-up with the complete jester hat tips and blue pompoms visible, 10% clear transparent margin. Face almost front, subtly turned right, both gloves raised gently near waist, smug small closed-mouth smile, relaxed half-lidded red/blue pinwheel irises and angled eyebrows. White face, brown bob and blunt fringe. RED/YELLOW jester hat and outfit, BLUE hat band, TWO BLUE soft pompom tips, BLUE pointed collar, TWO BLUE chest buttons, BLUE waist trim; red/yellow gloves. No black costume, stitches, button eyes, gold trim, bells, stars, goggles or new accessories. Polished cel-shaded high-resolution 2D game artwork with clean contour, matches approved image1 exactly in visual identity and material. One character, one portrait, no grid, body montage, text, background, floor, shadow, ring, strap, watermark or borders. Use true transparency."
+      },
+      "stanceBriefStatus": "Reconstructed production brief; the exact original stance prompt was not retained in the receipt. Native output bytes and reference identities are independently recorded.",
+      "animation": false,
+      "baseOnly": true,
+      "nativePixelsUnmodified": true
+    }
+  ]
+}

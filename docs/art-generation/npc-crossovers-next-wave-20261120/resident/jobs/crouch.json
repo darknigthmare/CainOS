@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "crouch",
+  "prompt": "Edit only the FIRST attached image. Keep this entire crouching Ribbit character and every detail of its pose, face, head, costume, tools, colors, shading, feet and composition unchanged, EXCEPT the open green hand resting on the invisible ground at the bottom RIGHT of the image. That hand currently has four rounded digits. It must have EXACTLY THREE rounded digits total, as in the second reference image. Preserve the low left-pointing thumb-like lobe and only TWO rounded fingers extending rightward; naturally remove the uppermost extra rightward finger and merge that contour into the palm. The remaining three digits must be clearly separated by two notches. Do not change the wrist attachment, arm or posture. Do not crop: output the complete head-to-toes character with native true transparent RGBA, no background, no floor, no shadow, no text, no effects. One character only.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png"
+}

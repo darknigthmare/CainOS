@@ -20,7 +20,7 @@ function damage(slot = 'light') {
 }
 
 test('every playable artist owns a dedicated arrangement beside the shared and crossover arenas', () => {
-  assert.equal(FIGHTERS.length, 54);
+  assert.equal(FIGHTERS.length, 64);
   assert.equal(sharedStageIds.size, STAGES.length);
   for (const id of ['bigtop','candy','manor','spudsy','cellar','void','lake','training','gloink','kingdom','grounds','backstage',
     'silicacity','portaurora','coppernine','gaslightwharf','parkplanet','gameoverse','littledaisy','showgrounds','simpleflipisland']) {
@@ -33,7 +33,7 @@ test('every playable artist owns a dedicated arrangement beside the shared and c
   const sourceThemes = {ep1:'bigtop',ep2:'candy',ep3:'manor',ep4:'spudsy',cainos:'lake',adaptation:'training'};
   for (const fighter of FIGHTERS) {
     const stage = getDedicatedStage(fighter.id);
-    assert.equal(stage.theme, sourceThemes[fighter.loreSource] || 'bigtop', fighter.id + ': source episode scenery');
+    assert.equal(stage.theme, fighter.homeStage || sourceThemes[fighter.loreSource] || 'bigtop', fighter.id + ': declared home or source episode scenery');
     assert.ok(stage, fighter.id + ': dedicated stage');
     assert.equal(stage.dedicatedTo, fighter.id);
     assert.equal(stage.id, 'home-' + fighter.id);
@@ -60,7 +60,9 @@ test('every playable artist has one distinct friendship number replacing the fin
     assert.equal(entry.beats[0].frame, 0);
     assert.ok(entry.beats[2].frame < entry.durationFrames);
     assert.ok(entry.title.length > 3 && entry.adaptation.length > 40 && entry.remainingArtWork.length > 20);
-    assert.ok(entry.sourceIds.length && entry.motif);
+    assert.ok(entry.motif);
+    if (fighter.sourceKind === 'original-encore') assert.deepEqual(entry.sourceIds, []);
+    else assert.ok(entry.sourceIds.length);
     assert.ok(Object.isFrozen(entry) && Object.isFrozen(entry.beats));
     const settled = sampleFinisherPresentation(entry, entry.durationFrames);
     assert.equal(settled.done, true);
@@ -87,7 +89,7 @@ test('friendship selection is opt-in and never replaces the knockout finale by i
   assert.equal(FINISHER_CATALOG.filter(entry => entry.fighterId === 'queenie').length, 3);
 });
 
-test('all fifty-four rivals belong to their own four-chapter route', () => {
+test('all sixty-four rivals belong to their own four-chapter route', () => {
   assert.equal(Object.keys(STORY_ROUTES).length, FIGHTERS.length);
   for (const fighter of FIGHTERS) {
     const rivalId = STORY_RIVALS[fighter.id];
@@ -124,7 +126,8 @@ test('every story route ships four chapters plus intro and ending illustration l
     }
     assert.ok(route.intro.length > 60 && route.ending.length > 60);
     assert.ok(route.writingApproach.length > 40);
-    assert.ok(route.referenceIds.length >= 1);
+    if (fighter.sourceKind === 'original-encore') assert.deepEqual(route.referenceIds, []);
+    else assert.ok(route.referenceIds.length >= 1);
     for (const referenceId of route.referenceIds) assert.ok(STORY_REFERENCES[referenceId], `${fighter.id}: reference ${referenceId}`);
     assert.ok(getStoryRival(fighter.id).index < route.chapters.length);
   }

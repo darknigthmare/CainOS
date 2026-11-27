@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-24T16:07:50.207815+00:00",
+  "reviewer": "runtime_audit",
+  "method": "Opened the two individual production Canvas sheets and the global overview at their stored resolution; no image edit or new render.",
+  "status": "accepted-for-static-base-rendering",
+  "appearanceCount": 2,
+  "individualSheetsInspected": 2,
+  "individualViewsInspected": 6,
+  "overviewInspected": true,
+  "appearances": [
+    {
+      "id": "ribbitsuitjax",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-ribbitsuitjax.jpg",
+        "bytes": 77862,
+        "sha256": "c322941e0a87c4720305e550238b08144262aaaad45cb32a57e6fcd467b77da5"
+      },
+      "observations": [
+        "Own portrait remains clearly distinct from the full seated guard.",
+        "Frog hood, ribbon, long ears and both feet remain contained and readable in both facing directions.",
+        "Left-facing view is the intentional mirror of the same complete guard; no visible stretch or accessory crop."
+      ]
+    },
+    {
+      "id": "cocktailzooble",
+      "sheet": {
+        "file": "docs/art-generation/base-sprites-20261124/canvas/base-cocktailzooble.jpg",
+        "bytes": 71148,
+        "sha256": "a77849fc970e94def4d64529702cff529ad5ddd64ad453a0d76f413e81927968"
+      },
+      "observations": [
+        "Own upper-body portrait is deliberately framed; the full guard preserves the complete composition.",
+        "Three arms and the shaker, tray, drink and other visible accessories remain legible and contained in both facing directions.",
+        "Both complete guards retain their proportions; no visible crop, ghost fragment or nonuniform stretching."
+      ]
+    }
+  ],
+  "overview": {
+    "file": "docs/art-generation/base-sprites-20261124/canvas/bases-overview.jpg",
+    "bytes": 513195,
+    "sha256": "1089cf8703bbc56501a6fabab38ae6a106223ad3abb13f4f73db5a624488e712"
+  },
+  "overviewObservations": [
+    "All 24 static families are visible and distinguishable at overview scale.",
+    "No apparent truncation of a guard silhouette in the overview.",
+    "Intentional portrait crops are distinct from the complete guards; this overview review does not substitute for the other 22 individual sheet reviews."
+  ],
+  "numericEvidence": {
+    "file": "docs/art-generation/base-sprites-20261124/canvas/base-canvas-review.json",
+    "bytes": 298389,
+    "sha256": "0b5fbc939aa28ef26692a6907bb904daf828121c1cef3977f663f083db957c5e"
+  },
+  "limitations": [
+    "Review concerns readability and preservation of the accepted native compositions in the production renderer.",
+    "No claim of canonical pixel-perfect fidelity or of new action drawings.",
+    "Mirrored static compositions are a game presentation convention, not newly documented official viewpoints.",
+    "No browser was launched for this review."
+  ]
+}

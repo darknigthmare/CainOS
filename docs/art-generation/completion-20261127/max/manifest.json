@@ -1,0 +1,572 @@
+{
+  "schema": "encore-max-static-bases-completion/v1",
+  "date": "2026-11-27",
+  "baseCommit": "cc972c8412bddb5278ef7c609dd82897325a2922",
+  "productionTool": "Built-in image_gen.imagegen, one image per asset",
+  "phase": "static-bases-only",
+  "previousUnpublishedImagesRecovered": 0,
+  "newNativeImages": 12,
+  "newAppearanceFamilies": 6,
+  "generationCalls": 13,
+  "references": [
+    {
+      "path": "assets/encore/stance/max.png",
+      "bytes": 992938,
+      "sha256": "7aeaaa6fc010ca52215485bcb95f4796c49670805638f96fa0d0cdbcb545aed4",
+      "reusedWithoutCopy": true
+    },
+    {
+      "path": "assets/encore/selection/max.png",
+      "bytes": 992772,
+      "sha256": "cb96f2f5ae5e8cd7883c1867107d89df840cb40c4ef141a7fa7660dd19328308",
+      "reusedWithoutCopy": true
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/official-uzi-front.png",
+      "bytes": 1280711,
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "reusedWithoutCopy": true
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/tari-hoodie-official.png",
+      "bytes": 1050978,
+      "sha256": "335b4537caf58642ddc7501c70be6ea8f7cdc60f0881bc612fbabf2c6cbb8cdd",
+      "reusedWithoutCopy": true
+    },
+    {
+      "path": "docs/art-generation/recovery-20261127/kaufmo/references/metarunner-official-still-01.png",
+      "bytes": 4608274,
+      "sha256": "24e54888e62ed0d308ac9135d7546b29193564f3624707fbf3ae330af13dad5e",
+      "reusedWithoutCopy": true
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M12.jpg",
+      "bytes": 52584,
+      "sha256": "515ab889dbd424ed8cd44e0aa0597e49da98a33d22c4df89a9098bb97bbbbb50",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M13.jpg",
+      "bytes": 57257,
+      "sha256": "0f4ae950972f14b67874029b643d1d7681fd148b310b1ae826170830bbb325b9",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M14.jpg",
+      "bytes": 74498,
+      "sha256": "988b2978bc2de0518460f7d979ac7b0252fd9e33198a12170e0a2953a149427b",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M3.jpg",
+      "bytes": 72413,
+      "sha256": "79a69ebeb190974f939f3a204059404bcfe704eb5ece1e4e0b37d5b1822e31e8",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M4.jpg",
+      "bytes": 63504,
+      "sha256": "29158660650810b15a23f28bc13f5ca66c723c8a326cbb2e47e00579ac332914",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M5.jpg",
+      "bytes": 59686,
+      "sha256": "61552f2456fb47d7dbdfd5bab35d9a920169ab49f7fec801d763f2d9ce62fad5",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/episode2-official-L3-M6.jpg",
+      "bytes": 38192,
+      "sha256": "eb0850bc2ee02d8ba776374fb778af6de815e2ebc2a96f1a258996ac1d040c6c",
+      "reusedWithoutCopy": false
+    },
+    {
+      "path": "docs/art-generation/completion-20261127/max/references/max-episode-reproduction-tvmaze.jpg",
+      "bytes": 8034,
+      "sha256": "a4c46abfb9415e03e9613341b21a3c9c8ebfa70006590b1c9ddb91f860452909",
+      "reusedWithoutCopy": false
+    }
+  ],
+  "families": [
+    {
+      "id": "glitch-murderdrones-max-hommage",
+      "fighterId": "max",
+      "series": "murderdrones",
+      "seriesTitle": "Murder Drones",
+      "style": "hommage",
+      "label": "Hommage · Uzi",
+      "traits": [
+        "Caïman violet et rose, museau long à dessous blanc en zigzag, œil blanc et chapeau melon brun à bande rouge.",
+        "Hoodie charbon à capuche violette et motif blanc inspiré de la tenue officielle Uzi ; membres courts et queue de confiserie conservés."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/murderdrones/max/hommage/selection.png",
+          "bytes": 1056736,
+          "sha256": "a592362b77a9cd1a0b171f1feaf34e4ebcad9bb2546fbf7e84cc341a83e86d86",
+          "width": 1358,
+          "height": 1159,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            220,
+            11,
+            1074,
+            1153
+          ],
+          "fullyTransparentPixels": 877116,
+          "visiblePixelsOver12": 687658,
+          "lowAlphaEdgePixels": 9148,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/murderdrones/max/hommage/stance.png",
+          "bytes": 968958,
+          "sha256": "017a13f9856f848e1add930fab9332177d2b2fa4a671cacfc9d99dfe7b4bcdd0",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            118,
+            26,
+            1130,
+            1129
+          ],
+          "fullyTransparentPixels": 931227,
+          "visiblePixelsOver12": 630945,
+          "lowAlphaEdgePixels": 10730,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": {
+        "selection": [
+          "prompts/murderdrones-hommage-selection.txt",
+          "prompts/murderdrones-hommage-selection-short-arms.txt"
+        ],
+        "stance": [
+          "prompts/murderdrones-hommage-stance.txt"
+        ]
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+        "https://www.glitchprod.com/murder-drones",
+        "https://glitchproductions.store/products/uzi-v2-animatez"
+      ],
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Fichiers natifs et cohérence des paires inspectés ; rendu de production vérifié séparément."
+      }
+    },
+    {
+      "id": "glitch-murderdrones-max-resident",
+      "fighterId": "max",
+      "series": "murderdrones",
+      "seriesTitle": "Murder Drones",
+      "style": "resident",
+      "label": "Résident · Convoyeur des abris",
+      "traits": [
+        "Identité de Max conservée : petit corps de caïman violet et rose, ventre blanc, membres courts et chapeau melon.",
+        "Veste matelassée ocre, col crème, épaules charbon, bandes noires et jaunes, deux boîtiers attachés à la ceinture et voyant violet."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/murderdrones/max/resident/selection.png",
+          "bytes": 1178134,
+          "sha256": "8f6931e4ab1bb3048262fe0c81bd79d26d9ce18034f50ae58ad054c07b0dae50",
+          "width": 1366,
+          "height": 1152,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            109,
+            15,
+            1200,
+            1137
+          ],
+          "fullyTransparentPixels": 780116,
+          "visiblePixelsOver12": 785497,
+          "lowAlphaEdgePixels": 8019,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/murderdrones/max/resident/stance.png",
+          "bytes": 1096485,
+          "sha256": "6b1699624d02fb0b8a81370cb752306ce929a34ec8bc467765287e6aac76bd67",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            103,
+            23,
+            1130,
+            1134
+          ],
+          "fullyTransparentPixels": 896323,
+          "visiblePixelsOver12": 667498,
+          "lowAlphaEdgePixels": 9081,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": {
+        "selection": [
+          "prompts/murderdrones-resident-selection.txt"
+        ],
+        "stance": [
+          "prompts/murderdrones-resident-stance.txt"
+        ]
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+        "https://www.glitchprod.com/murder-drones",
+        "https://glitchproductions.store/products/uzi-v2-animatez"
+      ],
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Fichiers natifs et cohérence des paires inspectés ; rendu de production vérifié séparément."
+      }
+    },
+    {
+      "id": "glitch-murderdrones-max-fusion",
+      "fighterId": "max",
+      "series": "murderdrones",
+      "seriesTitle": "Murder Drones",
+      "style": "fusion",
+      "label": "Fusion · Drone du convoi",
+      "traits": [
+        "Corps entièrement mécanique : tête reptilienne violette, visière noire à œil blanc-violet et mâchoire blanche en zigzag.",
+        "Ventre blanc segmenté, articulations noires, petites mains mécaniques, pieds roses, queue de plaques, melon métallique brun riveté et voyant ambre."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/murderdrones/max/fusion/selection.png",
+          "bytes": 1163658,
+          "sha256": "29c37f1dc509b5ec868d3e372064fd9d83d29cf5884ce02d5a52c9f88710631b",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            279,
+            15,
+            1159,
+            1143
+          ],
+          "fullyTransparentPixels": 897551,
+          "visiblePixelsOver12": 664669,
+          "lowAlphaEdgePixels": 10682,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/murderdrones/max/fusion/stance.png",
+          "bytes": 1157248,
+          "sha256": "8c53dfec9311e972bd913cdf265b91818132da98b877cfc5945337bb03880a5d",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            98,
+            25,
+            1135,
+            1137
+          ],
+          "fullyTransparentPixels": 943291,
+          "visiblePixelsOver12": 617087,
+          "lowAlphaEdgePixels": 12524,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": {
+        "selection": [
+          "prompts/murderdrones-fusion-selection.txt"
+        ],
+        "stance": [
+          "prompts/murderdrones-fusion-stance.txt"
+        ]
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+        "https://www.glitchprod.com/murder-drones",
+        "https://glitchproductions.store/products/uzi-v2-animatez"
+      ],
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Fichiers natifs et cohérence des paires inspectés ; rendu de production vérifié séparément."
+      }
+    },
+    {
+      "id": "glitch-metarunner-max-hommage",
+      "fighterId": "max",
+      "series": "metarunner",
+      "seriesTitle": "Meta Runner",
+      "style": "hommage",
+      "label": "Hommage · Tari",
+      "traits": [
+        "Corps de Max violet et rose avec ventre blanc et chapeau melon brun à bande rouge ; bras courts et longue queue conservés.",
+        "Hoodie cyan inspiré du vêtement officiel Tari : capuche et trim blancs, zigzags bleu marine aux épaules, panneaux blancs sous les bras, fermeture blanche et bordures sombres."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/metarunner/max/hommage/selection.png",
+          "bytes": 1059741,
+          "sha256": "53cca787b5e4ca3c255268ed9745512f7b4539cd211b79cbf2628b4632b9cbce",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            255,
+            42,
+            1170,
+            1143
+          ],
+          "fullyTransparentPixels": 882833,
+          "visiblePixelsOver12": 681113,
+          "lowAlphaEdgePixels": 8956,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/metarunner/max/hommage/stance.png",
+          "bytes": 984018,
+          "sha256": "7351d50a4c49b5140210fe1739f3e913f6b7c40d3cc57bcb24f4f7a6e63712db",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            114,
+            24,
+            1132,
+            1128
+          ],
+          "fullyTransparentPixels": 923394,
+          "visiblePixelsOver12": 640179,
+          "lowAlphaEdgePixels": 9329,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": {
+        "selection": [
+          "prompts/metarunner-hommage-selection.txt"
+        ],
+        "stance": [
+          "prompts/metarunner-hommage-stance.txt"
+        ]
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+        "https://www.glitchprod.com/meta-runner",
+        "https://glitchproductions.store/cdn/shop/files/Tari-Hoodie-Default.png?v=1701236208&width=1600",
+        "https://static.wixstatic.com/media/84ed6a_98410c9a4f234883a5602147648a42b4~mv2.png"
+      ],
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Fichiers natifs et cohérence des paires inspectés ; rendu de production vérifié séparément."
+      }
+    },
+    {
+      "id": "glitch-metarunner-max-resident",
+      "fighterId": "max",
+      "series": "metarunner",
+      "seriesTitle": "Meta Runner",
+      "style": "resident",
+      "label": "Résident · Courrier de Silica City",
+      "traits": [
+        "Caïman de confiserie violet et rose avec son melon, gilet bleu marine à bordure cyan et bande orange à l’épaule.",
+        "Avant-bras et main à droite de l’image mécaniques blancs et cyan, autre main violette ; casque de communication et écran attaché à la ceinture."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/metarunner/max/resident/selection.png",
+          "bytes": 1055197,
+          "sha256": "6f867ad01619f601e9ec883c6f67156799ec09ae1e75b4bfd8adc75a51552bca",
+          "width": 1327,
+          "height": 1185,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            259,
+            22,
+            1143,
+            1153
+          ],
+          "fullyTransparentPixels": 894355,
+          "visiblePixelsOver12": 670995,
+          "lowAlphaEdgePixels": 7145,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/metarunner/max/resident/stance.png",
+          "bytes": 1059339,
+          "sha256": "1ff7a51563d8418277f1ed7eb00e2f0ecf2ebbfed67d506b1747e1b26c47244d",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            94,
+            22,
+            1126,
+            1142
+          ],
+          "fullyTransparentPixels": 919656,
+          "visiblePixelsOver12": 641600,
+          "lowAlphaEdgePixels": 11646,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": {
+        "selection": [
+          "prompts/metarunner-resident-selection.txt"
+        ],
+        "stance": [
+          "prompts/metarunner-resident-stance.txt"
+        ]
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+        "https://www.glitchprod.com/meta-runner",
+        "https://glitchproductions.store/cdn/shop/files/Tari-Hoodie-Default.png?v=1701236208&width=1600",
+        "https://static.wixstatic.com/media/84ed6a_98410c9a4f234883a5602147648a42b4~mv2.png"
+      ],
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Fichiers natifs et cohérence des paires inspectés ; rendu de production vérifié séparément."
+      }
+    },
+    {
+      "id": "glitch-metarunner-max-fusion",
+      "fighterId": "max",
+      "series": "metarunner",
+      "seriesTitle": "Meta Runner",
+      "style": "fusion",
+      "label": "Fusion · Avatar du circuit",
+      "traits": [
+        "Corps numérique entièrement facetté : tête violette, mâchoire blanche en zigzag, œil blanc et chapeau melon polygonal cuivré à bande rouge.",
+        "Torse blanc et cobalt, noyau hexagonal cyan, membres et queue anguleux, pistes cyan contenues dans les surfaces et pieds corail."
+      ],
+      "files": {
+        "selection": {
+          "path": "assets/encore/crossovers/metarunner/max/fusion/selection.png",
+          "bytes": 1018962,
+          "sha256": "f30ecd27b2798fc8d2341936ab3f5d6b6c4f9d4c5d120620ff2318408fb83e92",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            235,
+            11,
+            1190,
+            1144
+          ],
+          "fullyTransparentPixels": 868648,
+          "visiblePixelsOver12": 695510,
+          "lowAlphaEdgePixels": 8744,
+          "nativePixelsUnmodified": true
+        },
+        "stance": {
+          "path": "assets/encore/crossovers/metarunner/max/fusion/stance.png",
+          "bytes": 1006104,
+          "sha256": "a9c3ef34ca9780ed4d92d81951939d34409c3d3e4a5f51242782cb34f83b40e0",
+          "width": 1363,
+          "height": 1154,
+          "mode": "RGBA",
+          "alphaBounds12": [
+            72,
+            12,
+            1161,
+            1142
+          ],
+          "fullyTransparentPixels": 920123,
+          "visiblePixelsOver12": 643282,
+          "lowAlphaEdgePixels": 9497,
+          "nativePixelsUnmodified": true
+        }
+      },
+      "prompts": {
+        "selection": [
+          "prompts/metarunner-fusion-selection.txt"
+        ],
+        "stance": [
+          "prompts/metarunner-fusion-stance.txt"
+        ]
+      },
+      "sourceUrls": [
+        "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+        "https://www.glitchprod.com/meta-runner",
+        "https://glitchproductions.store/cdn/shop/files/Tari-Hoodie-Default.png?v=1701236208&width=1600",
+        "https://static.wixstatic.com/media/84ed6a_98410c9a4f234883a5602147648a42b4~mv2.png"
+      ],
+      "canonicalCostumeClaim": false,
+      "nativeFacing": 1,
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "oneCharacterPerImage": true,
+        "stanceFullBody": true,
+        "selectionIntentionalWaistPortrait": true,
+        "identityAndCostumeMatch": true,
+        "issues": [],
+        "scope": "Fichiers natifs et cohérence des paires inspectés ; rendu de production vérifié séparément."
+      }
+    }
+  ],
+  "scope": "Création originale de crossover pour Encore. Un portrait de sélection et une garde statique, un personnage par image. La même garde est réutilisée dans les états sans dessin dédié. Aucune animation ni apparition canonique ajoutée.",
+  "canonicalOneToOneCertified": false,
+  "nativeBytes": 12804580,
+  "rejectedCandidate": {
+    "generationKey": "max_md_hommage_selection",
+    "reason": "Bras levé trop long ; correction native acceptée avec main baissée. Candidate non livré au runtime."
+  }
+}

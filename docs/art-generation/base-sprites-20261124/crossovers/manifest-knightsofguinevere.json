@@ -1,0 +1,509 @@
+{
+  "complete": true,
+  "series": "knightsofguinevere",
+  "baseOnly": true,
+  "presentation": "static",
+  "authoredSlots": [
+    "selection",
+    "stance"
+  ],
+  "count": 6,
+  "appearances": [
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "series": "knightsofguinevere",
+      "style": "hommage",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/selection.png",
+        "stance": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Knights of Guinevere · Hommage · Guinevere",
+      "identity": "Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-resident",
+      "series": "knightsofguinevere",
+      "style": "resident",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/selection.png",
+        "stance": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Knights of Guinevere · Résident · Réparateur des automates",
+      "identity": "Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-fusion",
+      "series": "knightsofguinevere",
+      "style": "fusion",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "presentation": "static",
+      "authoredSlots": [
+        "selection",
+        "stance"
+      ],
+      "paths": {
+        "selection": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/selection.png",
+        "stance": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png"
+      },
+      "framing": {
+        "selection": "full-body",
+        "stance": "full-body"
+      },
+      "name": "Knights of Guinevere · Fusion · Automate des bassins",
+      "identity": "A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "complete": true,
+      "distinctImages": true
+    }
+  ],
+  "records": [
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "series": "knightsofguinevere",
+      "style": "hommage",
+      "state": "selection",
+      "label": "Knights of Guinevere · Hommage · Guinevere",
+      "identity": "Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png": "b6376f1ebece192ca6123520d096f877cbaabf0e4b36e3899e69acf9ccbe91cc"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-07b5a82b-b125-42aa-8f06-1797db00fdec.png",
+      "result_store_key": "ribbitBaseResult:knightsofguinevere:hommage:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/selection.png",
+      "sha256": "a7fce57acd0152b4aa0d1e0b280530bbc74791e168189836cf2fbeb1cae66e33",
+      "sha": "e9b48cd429e8c407b14af495065b467ef17bddea",
+      "bytes": 683093,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        336,
+        25,
+        980,
+        1220
+      ],
+      "alpha12Margins": [
+        336,
+        25,
+        274,
+        34
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7845821600543333,
+      "alpha240Fraction": 0.19907714770469745,
+      "accepted": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-hommage",
+      "series": "knightsofguinevere",
+      "style": "hommage",
+      "state": "stance",
+      "label": "Knights of Guinevere · Hommage · Guinevere",
+      "identity": "Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/pomni/hommage/selection.webp",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/docs/art-generation/base-sprites-20261124/crossovers/references/knightsofguinevere-official-banner.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/knightsofguinevere/pomni/hommage/selection.webp": "8affaa8f26176b2362888e10874f66ae058bf83b059546471e2a35df2fa674f9",
+        "docs/art-generation/base-sprites-20261124/crossovers/references/knightsofguinevere-official-banner.png": "28ceb4ccfec01961d6c64dbbb64cabb0efdf26dab91c47aaeed9277c5c1e6719"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-43018f19-b419-453f-ada7-4b9f4f68a86d.png",
+      "result_store_key": "ribbitBaseResult:knightsofguinevere:hommage:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Clothing-only homage to Guinevere: small golden crown between the eyes; a royal-blue headpiece with two round side buns carrying pale lavender four-point stars, fitted BEHIND the huge unobstructed frog eyes. Pale lavender puff sleeves, a light periwinkle/lavender princess dress with white pointed center panel, golden waist tabs and narrow gold edging. The split skirt ends above ankles and shows Ribbit's long green legs and bare three-toed webbed feet; golden ankle bands. Ribbit's pink bow at neckline, green four-fingered hands. No jester horns, human hair, bells, mechanical body or skin recoloring. The costume evokes the second reference while Ribbit stays a tall thin frog.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/hommage/stance.png",
+      "sha256": "b6376f1ebece192ca6123520d096f877cbaabf0e4b36e3899e69acf9ccbe91cc",
+      "sha": "e0cc72f469c8baf0b9ae5b46ab899193a482c36c",
+      "bytes": 784146,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        211,
+        19,
+        1019,
+        1218
+      ],
+      "alpha12Margins": [
+        211,
+        19,
+        235,
+        36
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7514575368390528,
+      "alpha240Fraction": 0.22984503814269616,
+      "accepted": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-resident",
+      "series": "knightsofguinevere",
+      "style": "resident",
+      "state": "selection",
+      "label": "Knights of Guinevere · Résident · Réparateur des automates",
+      "identity": "Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png": "f8d5a53457dc2705ee3d1e79e79e8510602a9ec6c951bb74220d7529133763e3"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-b25e1b11-5b85-4f70-8909-8b1259793f6b.png",
+      "result_store_key": "ribbitBaseResult:knightsofguinevere:resident:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/selection.png",
+      "sha256": "579dc415bb1ba8413b9b79a5ea51783ab291287c4e897578e9cb0c5dd14b68cd",
+      "sha": "96cdf5319c94938e033b5baf0b72caddd7106a49",
+      "bytes": 683406,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        354,
+        31,
+        965,
+        1224
+      ],
+      "alpha12Margins": [
+        354,
+        31,
+        289,
+        30
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7914723920138174,
+      "alpha240Fraction": 0.1941163078785844,
+      "accepted": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-resident",
+      "series": "knightsofguinevere",
+      "style": "resident",
+      "state": "stance",
+      "label": "Knights of Guinevere · Résident · Réparateur des automates",
+      "identity": "Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/pomni/resident/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/knightsofguinevere/pomni/resident/stance.webp": "4fc6675140219de8ae2d6e98a2573e346215248b0ed6ba1181efd23db32e91ec"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-f6d8508f-adb7-4fbe-8daf-9da009afef96.png",
+      "result_store_key": "ribbitBaseResult:knightsofguinevere:resident:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. Original amusement-park automaton maintenance worker, retaining Ribbit's natural lime frog body and long thin limbs. Cream work cap between/behind the eyes, brass goggles resting on its top; short slate-blue work jacket with rolled cream cuffs, cream shirt open over belly, pink bow tie, navy knee-length overalls with brass fasteners, small brown utility belt with one winding key and cream pouch, tidy slate-blue ankle cuffs with bare frog toes. A small amber indicator on cap is solid glass, not a glowing effect. This is practical park-worker clothing, not princess dress and not robot anatomy. Adapt second-reference costume materials without copying Pomni's jester cap, bells, red/blue body or face.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/resident/stance.png",
+      "sha256": "f8d5a53457dc2705ee3d1e79e79e8510602a9ec6c951bb74220d7529133763e3",
+      "sha": "23990463bfb12563230b92d0c0e1c701dcdebdb4",
+      "bytes": 789669,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        202,
+        33,
+        1019,
+        1228
+      ],
+      "alpha12Margins": [
+        202,
+        33,
+        235,
+        26
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7664971294409723,
+      "alpha240Fraction": 0.2170890471066749,
+      "accepted": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-fusion",
+      "series": "knightsofguinevere",
+      "style": "fusion",
+      "state": "selection",
+      "label": "Knights of Guinevere · Fusion · Automate des bassins",
+      "identity": "A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png"
+      ],
+      "referencesSHA256": {
+        "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png": "5a7f5d5ad70616fe88b8d5210b67ac9b06a490d3cc613c48a656a594a5fe0763"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-894ea4b3-878f-4c19-9862-5a16aaf96aa2.png",
+      "result_store_key": "ribbitBaseResult:knightsofguinevere:fusion:selection:1",
+      "prompt": "Use case: identity-preserve. Create ONE NEW full-body character-selection portrait drawing of EXACTLY the same original Encore crossover Ribbit design in the reference. Match every costume item, color, eye shape, limb proportion, anatomy, surface material and line/shading style of the reference. This is an original fan-game design, not a canonical costume. Change the pose naturally to a calm welcoming portrait: upright posture, weight balanced on two feet close together, torso slightly three-quarter toward the viewer and RIGHT, one hand resting at the waist and the other raised in an open-palm greeting. Both huge white eyes and wedge-cut black pupils, pink cheeks and pink bow motif remain. This is a still BASE portrait, no action or animation. Draw the whole body and every accessory with generous 10 percent transparent empty margin on all sides of a square canvas. One single figure, genuine transparent alpha, solid clean silhouette, no scene, floor, shadow, glow, haze, effects, words, logo overlay, frame, checkerboard, watermark, collage or contact sheet. Do not copy the stance pose; draw an actually distinct comfortable standing portrait. Preserve the visible design exactly: A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/selection.png",
+      "sha256": "54dba5e300c525c27563ccf6dce703a8c3637be3ac6ebb66b5655515aaae9b34",
+      "sha": "95836b9871717a8615737c1779d5b91747c2f80e",
+      "bytes": 796521,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        311,
+        43,
+        999,
+        1200
+      ],
+      "alpha12Margins": [
+        311,
+        43,
+        255,
+        54
+      ],
+      "borderAlphaMax": 0,
+      "alphaZeroFraction": 0.7916758875585368,
+      "alpha240Fraction": 0.18932080818255587,
+      "accepted": true
+    },
+    {
+      "id": "glitch-knightsofguinevere-ribbit-fusion",
+      "series": "knightsofguinevere",
+      "style": "fusion",
+      "state": "stance",
+      "label": "Knights of Guinevere · Fusion · Automate des bassins",
+      "identity": "A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+      "sourceKind": "original",
+      "baseOnly": true,
+      "references": [
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/stance/ribbit.png",
+        "/workspace/scratch/e51b531817b1/CainOS-restored/assets/encore/crossovers/knightsofguinevere/pomni/fusion/stance.webp"
+      ],
+      "referencesSHA256": {
+        "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+        "assets/encore/crossovers/knightsofguinevere/pomni/fusion/stance.webp": "a39f30f22c09947a970c4c9ce904eb4b17574953a724462db68fa95a91cfc0df"
+      },
+      "sourceUrls": [
+        "https://www.glitchprod.com/knights-of-guinevere"
+      ],
+      "nativeFacing": "right",
+      "native_path": "/workspace/scratch/e51b531817b1/generated_images/exec-4d313a75-14b3-4ed7-ab98-681da9af6bfa.png",
+      "result_store_key": "ribbitBaseResult:knightsofguinevere:fusion:stance:1",
+      "prompt": "Use case: stylized-concept / identity-preserve. Draw ONE full-body individual sprite for Digital Circus Encore, a polished 2D hand-painted cartoon fighting game. This is an ORIGINAL Encore crossover fan design, not an official or canonical Ribbit costume. Use the first reference strictly for Ribbit identity and the later references for clothing/material/world continuity only. Match crisp dark ink contours, clean cel shading, readable lively cartoon shapes. RIBBIT IDENTITY: lime-green frog, exactly TWO huge protruding white eyes with black wedge-cut round pupils, two pink circular cheeks, a wide friendly frog mouth, pale cream oval belly, a bright pink bow motif. Exactly four rounded fingers on each hand and three wide webbed toes on each foot. No human face, no crocodile snout. Stand still in a relaxed ready guard facing RIGHT, side view with gentle three-quarter depth, both feet fully visible on the same level. This is a BASE stance, no attack, intro, jump, walk, effect, or animation sequence. One character only, no contact sheet, no other figure, text, watermark, scene, ground, floor shadow, glow, haze, detached effect, checkerboard or frame. Genuine transparent background, with empty transparent pixels around an opaque clean silhouette. Keep ENTIRE headgear, both hands and feet, tail if specified, all costume parts within the central 76 percent of a square canvas, with generous fully empty margin on all four sides. Preserve thin long arms and especially long legs unless the explicit FUSION redesign changes anatomy. A genuinely redesigned frog-shaped amusement-park automaton. Ribbit's recognizable two immense white eyes and wedge pupils sit in round lime enamel housings above an elegant lime porcelain frog face with pink cheek discs and wide smile. The body is built from cream and mint porcelain shell segments with royal-blue floral motifs, exposed brass ring joints at elbows/knees, dark inner mechanical links; slim curved arms, sturdy elongated spring-jointed frog legs and broad articulated three-toed paddle feet. Small wind-up key mounted behind torso, a cream oval belly hatch bordered brass, pink bow-shaped enamel collar. The two spring coils inside rear-leg joints are structural; no detached pieces. Rounded blue shoulder shells and tasteful brass trim. Reimagine the anatomy as one coherent frog machine, not a frog wearing armor. No human face, jester cap, bells or knight sword. Entire key and all toes in frame.",
+      "framing": "full-body",
+      "fullBodyVisible": true,
+      "visualReviewNotes": "Entire character, headpiece/accessories, hands and feet visible. Identity preserved. Hommage clothing, resident workwear and porcelain/brass fusion are visually distinct. Portrait is upright with greeting and close feet; stance remains relaxed guard. Facing right.",
+      "file": "assets/encore/crossovers/knightsofguinevere/ribbit/fusion/stance.png",
+      "sha256": "5a7f5d5ad70616fe88b8d5210b67ac9b06a490d3cc613c48a656a594a5fe0763",
+      "sha": "fb8973200a9f22eacf147fb4c5d9e8ecbb30febf",
+      "bytes": 906557,
+      "nativeBytesVerified": true,
+      "noPostProcessing": true,
+      "checks": {
+        "nativeExists": true,
+        "sha256MatchesReceipt": true,
+        "gitSHAMatchesReceipt": true,
+        "nativeBytesVerified": true,
+        "visuallyAccepted": true,
+        "sourceKindOriginal": true,
+        "baseOnly": true,
+        "nativeFacingConfirmed": true,
+        "framingMatchesIntended": true,
+        "formatPNG": true,
+        "modeRGBA": true,
+        "genuineTransparency": true,
+        "positiveAlpha12Margins": true,
+        "noVisibleBorder": true,
+        "referenceHashesUnchanged": true
+      },
+      "width": 1254,
+      "height": 1254,
+      "alpha12BBox": [
+        155,
+        70,
+        1043,
+        1183
+      ],
+      "alpha12Margins": [
+        155,
+        70,
+        211,
+        71
+      ],
+      "borderAlphaMax": 1,
+      "alphaZeroFraction": 0.7638612262132786,
+      "alpha240Fraction": 0.20446532817472127,
+      "accepted": true
+    }
+  ]
+}

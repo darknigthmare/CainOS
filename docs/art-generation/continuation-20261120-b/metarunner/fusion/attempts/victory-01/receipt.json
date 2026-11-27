@@ -1,0 +1,26 @@
+{
+  "schema": "encore-rejected-native-generation-v1",
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "slot": "victory",
+  "status": "rejected_four_digit_raised_fist",
+  "includedInRuntime": false,
+  "reviewer": "audit_github",
+  "recordedAt": "2026-11-20T17:13:53.076045+00:00",
+  "nativeSource": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-7adf4def-5354-4eeb-b186-ae7acef31554.png",
+  "nativeFile": "victory.png",
+  "sha256": "a3bbd73cac4e8eb28181d88fc1852f4d052bc4b86ca34b1d1d619975b156c5e3",
+  "bytes": 880909,
+  "job": "job.json",
+  "jobSHA256": "1c884555684b6eca8792964d1b000e9d9bc500b49bdd189006f31581c330f937",
+  "diagnostics": [
+    {
+      "file": "victory-alpha.jpg",
+      "sha256": "11404ccae6b953faaa05a188f38d0f4bedead37cfa4ee1f1fbf1fc5ab98674fb"
+    },
+    {
+      "file": "victory-hands.jpg",
+      "sha256": "727f6d2f375999d304c538651eba3ba23c044a53a62a7fa17036dba4f95edc68"
+    }
+  ],
+  "observation": "Native alpha composition is clean on light and dark backgrounds. Raised fist visibly contains three curled fingers plus a thumb (four total); the original design for this wave specifies three total. No canonical claim."
+}

@@ -1,0 +1,12 @@
+{
+  "asset": "smg4/resident/selection",
+  "prompt": "Use case: identity-preserve. Create ONE static character-selection bust portrait from this Queenie SMG4 resident full-body sprite. Preserve EXACTLY her crown silhouette, complete spherical finial, eye placement, red-orange iris colors, wooden eyelids and black lower lashes, materials, palette, chest details, garment/armor and her TWO detached gloves. Only framing changes: square portrait from crown finial through lower chest, same right-facing three-quarter guard. Include the entirety of crown and both gloves with clear margins. Keep the character identity and original crossover costume intact; no human arms, hair, mouth, legs or new anatomy. Preserve 2D cel-shaded style. Transparent RGBA background with absolutely no glow, shadow, scenery, ground, text, frame, labels or extra characters. Square composition, lower body outside portrait frame, final bust ends smoothly below chest.",
+  "source": "/workspace/scratch/6f9ceeefa959/generated_images/exec-64c1c674-0cef-4526-9465-094dedead407.png",
+  "output": "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/smg4/queenie/resident/selection.png",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "references": [
+    "/workspace/scratch/6f9ceeefa959/CainOS/assets/encore/crossovers/smg4/queenie/resident/stance.png"
+  ],
+  "change": "Portrait dérivé de la garde."
+}
